@@ -1,0 +1,67 @@
+{
+  "header": "#include \"_IncludeAll.h\"",
+  "parameterprefix": "f2a",
+  "functionentry": "F2A_TRY_STATEMENT", 
+  "functionexit": "F2A_CATCH_STATEMENT", 
+  "functionexitreturn": "F2A_CATCH_STATEMENT_RETURN",
+  "typemapping": {
+    "AtParamValue": {
+        "ctype": "AtParamValue*",
+        "from": "KlParamValue_to_AtParamValue", 
+        "methodop": "->",
+        "to": "AtParamValue_to_KLParamValue"
+    },
+    "AtArray": {
+        "ctype": "AtArray*",
+        "from": "KlArray_to_AtArray",
+        "methodop": "->",
+        "to": "AtArray_to_KLArray"
+    },
+    "AtLicenseInfo": {
+        "ctype": "AtLicenseInfo*",
+        "from": "KlAtLicenseInfo_to_AtLicenseInfo",
+        "methodop": "->",
+        "to": "AtLicenseInfo_to_KLAtLicenseInfo"
+    },
+    "AtRay": {
+        "ctype": "AtRay",
+        "from": "KlAtRay_to_AtRay",
+        "methodop": ".",
+        "to": "AtRay_to_KLAtRay"
+    },
+    "AtTextureParams": {
+        "ctype": "AtTextureParams*",
+        "from": "KlAtTextureParams_to_AtTextureParams",
+        "methodop": "->",
+        "to": "AtTextureParams_to_KLAtTextureParams"
+    },
+    "AtMetaDataEntry": {
+        "ctype": "AtMetaDataEntry*",
+        "from": "KlAtMetaDataEntry_to_AtMetaDataEntry",
+        "methodop": "->",
+        "to": "AtMetaDataEntry_to_KLAtMetaDataEntry"
+    },
+    "AtAOVEntry": {
+        "ctype": "AtAOVEntry*",
+        "from": "KlAtAOVEntry_to_AtAOVEntry",
+        "methodop": "->",
+        "to": "AtAOVEntry_to_KLAtAOVEntry"
+    }
+  },
+
+  "functionbodies": {
+    "_fe_AtParamValueAsUInt8"   : "  AtByte f2a_result = f2aThis_->BYTE;\n  KL::UInt8 _result;\n  AtByte_to_UInt8(f2a_result, _result);\n  return _result;\n",
+    "_fe_AtParamValueAsSInt32"  : "  int f2a_result = f2aThis_->INT;\n  KL::SInt32 _result;\n  int_to_SInt32(f2a_result, _result);\n  return _result;\n",
+    "_fe_AtParamValueAsUInt32"  : "  AtUInt32 f2a_result = f2aThis_->UINT;\n  KL::UInt32 _result;\n  AtUInt32_to_UInt32(f2a_result, _result);\n  return _result;\n",
+    "_fe_AtParamValueAsFloat32" : "  float f2a_result = f2aThis_->FLT;\n  KL::Float32 _result;\n  float_to_Float32(f2a_result, _result);\n  return _result;\n",
+    "_fe_AtParamValueAsVec3"    : "  AtVector f2a_result = f2aThis_->VEC;\n  AtPoint_to_Vec3(f2a_result, _result);\n",
+    "_fe_AtParamValueAsMat44"   : "  AtMatrix_to_Mat44(*f2aThis_->pMTX, _result);\n",
+    "_fe_AtParamValueAsString"  : "  const char* f2a_result = f2aThis_->STR;\n  char_to_String(f2a_result, _result);\n",
+    "_fe_AtParamValueAsAtArray" : "  const AtArray* parr = f2aThis_->ARRAY;\n AtArray_to_KLArray(parr, _result);\n",
+    "_fe_AiArrayGetMtxFunc"     : "  AtMatrix mtx;\n  AiArrayGetMtx(f2aA, f2aI, mtx);\n  AtMatrix_to_Mat44(mtx, _result);\n",
+    "_fe_AiMetaDataGetStrAtString": "  bool f2a_result = AiMetaDataGetStrAtString(f2aEntry, f2aParam, f2aName, const_cast<const char**>(&f2aValue));\n  Fabric::EDK::KL::Boolean _result;\n  bool_to_Boolean(f2a_result, _result);\n"
+  },
+  "parameterconversionstoskip": [
+  ]
+}
+
