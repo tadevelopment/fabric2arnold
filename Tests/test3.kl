@@ -1,43 +1,61 @@
-//
-// Copyright (c) 2014, Steven Caron <steven@steven-caron.com> All rights reserved.
-//
-// FabricArnold Extension
 
 require Fabric2ArnoldWrapper;
 
 operator entry() {
-
-  String filename = 'C:\\temp\\test2.jpg';
   UInt64 start = getCurrentTicks();
   AiBegin();
 
-  // create a sphere
-  AtNode sphere = AiNode("sphere");
-  AiNodeSetStr(sphere, "name", "mysphere");
-  AiNodeSetFlt(sphere, "radius", 5.0);
+  String filename = "c:\\temp\\test3.jpg";
 
-  // create a lambert shader
-  AtNode lambert = AiNode("lambert");
-  AiNodeSetStr(lambert, "name", "myshader");
-  AiNodeSetRGB(lambert, "Kd_color", 0.0, 1.0, 0.0);
+  const Integer nbSpheres = 100000;
+  const Float32 radius = 2.0;
 
-  // assign the sphere's shader
-  AiNodeSetPtr(sphere, "shader", lambert._handle);
+  for (Index i; i<nbSpheres; i++)
+  {
+    Float32 step = Float32(i)/Float32(nbSpheres);
+    Float32 theta = TWO_PI * step;
+
+    Float32 x = radius * cos(theta);
+    Float32 z = radius * sin(theta);
+
+    // create a sphere
+    AtNode sphere = AiNode("sphere");
+    String name = "mysphere_" + String(i);
+    AiNodeSetStr(sphere, "name", name);
+    AiNodeSetFlt(sphere, "radius", step*0.5);
+    AiNodeSetPnt(sphere, "center", x, theta, z);
+
+    // create a lambert shader
+    AtNode lambert = AiNode("lambert");
+    name = "myshader_" + String(i);
+    AiNodeSetStr(lambert, "name", name);
+    AiNodeSetRGB(lambert, "Kd_color", 0.0, 1.0, 0.0);
+
+    // assign the sphere's shader
+    AiNodeSetPtr(sphere, "shader", lambert._handle);
+  }
 
   // create a perspective camera
   AtNode camera = AiNode("persp_camera");
   AiNodeSetStr(camera, "name", "mycamera");
-  AiNodeSetPnt(camera, "position", 0.0, 0.0, 20.0);
+  AiNodeSetPnt(camera, "position", 0.0, 5.0, 20.0);
+  AiNodeSetPnt(camera, "look_at", 0.0, 5.0, 0.0);
 
   // create a point light
   AtNode light = AiNode("point_light");
   AiNodeSetStr(light, "name", "mylight");
-  AiNodeSetFlt(light, "exposure", 7.5);
-  AiNodeSetPnt(light, "position", 0.0, 10.0, 10.0);
+  AiNodeSetFlt(light, "exposure", 10.5);
+  AiNodeSetPnt(light, "position", 0.0, 20.0, 0.0);
+
+  // create a point light
+  AtNode light1 = AiNode("point_light");
+  AiNodeSetStr(light1, "name", "mylight_1");
+  AiNodeSetFlt(light1, "exposure", 10.5);
+  AiNodeSetPnt(light1, "position", 0.0, -20.0, 0.0);
 
   // set render options
   AtNode options = AiUniverseGetOptions();
-  AiNodeSetInt(options, "AA_samples", 1);
+  AiNodeSetInt(options, "AA_samples", 4);
   AiNodeSetInt(options, "xres", 320);
   AiNodeSetInt(options, "yres", 240);
   AiNodeSetPtr(options, "camera", camera._handle);
@@ -63,24 +81,6 @@ operator entry() {
     report("[FabricArnold::TestSuite] Error " + String(result));
   }
 
-  // get scene bounds doesn't work unless the render is called
-  Box3 bounds = AiUniverseGetSceneBounds();
-
-  // remove the sphere, create a box the size of the bounds
-  AiNodeDestroy(sphere);
-  AtNode box = AiNode("box");
-  AiNodeSetStr(box, "name", "mybox");
-  AiNodeSetPtr(box, "shader", lambert._handle);
-
-  AiNodeSetPnt(box, "min", bounds.min.x, bounds.min.y, bounds.min.z);
-  AiNodeSetPnt(box, "max", bounds.max.x, bounds.max.y, bounds.max.z);
-
-  // render the box now
-  result = AiRender(AI_RENDER_MODE_CAMERA);
-  if (result != AI_SUCCESS)
-  {
-    report("[FabricArnold::TestSuite] Error " + String(result));
-  }
   AiEnd();
   UInt64 end = getCurrentTicks();
   report("Elapsed time: " + getSecondsBetweenTicks(start, end) + " seconds");

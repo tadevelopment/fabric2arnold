@@ -65,3 +65,34 @@ function Data AiNodeGetPtrA(AtNode node, AtString param) { return AiNodeGetPtrAt
 function AtArray AiNodeGetArrayA(AtNode node, AtString param) { return AiNodeGetArrayAtString(node, param); }
 function AtString AiNodeGetStrA(AtNode node, AtString param) { return AiNodeGetStrAtString(node, param); }
 function AiNodeGetMatrix(AtNode node, AtString param, Mat44 matrix) { AiNodeGetMatrixAtString(node, param, matrix); }
+
+
+function Boolean AiArraySetBool(io AtArray a, UInt32 i, Boolean val)   { return AiArraySetBoolFunc(a, i, val, 'F2AWrapper', 0); }
+function Boolean AiArraySetByte(io AtArray a, UInt32 i, UInt8 val)     { return AiArraySetByteFunc(a, i, val, 'F2AWrapper', 0); }
+function Boolean AiArraySetInt(io AtArray a, UInt32 i, SInt32 val)     { return AiArraySetIntFunc(a, i, val, 'F2AWrapper', 0); }
+function Boolean AiArraySetUInt(io AtArray a, UInt32 i, UInt32 val)    { return AiArraySetUIntFunc(a, i, val, 'F2AWrapper', 0); }
+function Boolean AiArraySetFlt(io AtArray a, UInt32 i, Float32 val)    { return AiArraySetFltFunc(a, i, val, 'F2AWrapper', 0); }
+function Boolean AiArraySetRGB(io AtArray a, UInt32 i, RGB val)        { return AiArraySetRGBFunc(a, i, val, 'F2AWrapper', 0); }
+function Boolean AiArraySetRGBA(io AtArray a, UInt32 i, Color val)     { return AiArraySetRGBAFunc(a, i, val, 'F2AWrapper', 0); }
+function Boolean AiArraySetPnt(io AtArray a, UInt32 i, Vec3 val)       { return AiArraySetPntFunc(a, i, val, 'F2AWrapper', 0); }
+function Boolean AiArraySetPnt2(io AtArray a, UInt32 i, Vec2 val)      { return AiArraySetPnt2Func(a, i, val, 'F2AWrapper', 0); }
+function Boolean AiArraySetVec(io AtArray a, UInt32 i, Vec3 val)       { return AiArraySetVecFunc(a, i, val, 'F2AWrapper', 0); }
+function Boolean AiArraySetMtx(io AtArray a, UInt32 i, Mat44 val)      { return AiArraySetMtxFunc(a, i, val, 'F2AWrapper', 0); }
+function Boolean AiArraySetStr(io AtArray a, UInt32 i, String val)     { return AiArraySetStrFunc(a, i, val, 'F2AWrapper', 0); }
+function Boolean AiArraySetPtr(io AtArray a, UInt32 i, io Data val)       { return AiArraySetPtrFunc(a, i, val, 'F2AWrapper', 0); }
+function Boolean AiArraySetArray(io AtArray a, UInt32 i, io AtArray val)  { return AiArraySetArrayFunc(a, i, val, 'F2AWrapper', 0); }
+
+function Boolean AiArrayGetBoolFunc(AtArray a, UInt32 i)  { return AiArrayGetBoolFunc(a, i, 'F2AWrapper', 0); }
+function UInt8 AiArrayGetByteFunc(AtArray a, UInt32 i)    { return AiArrayGetByteFunc(a, i, 'F2AWrapper', 0); }
+function SInt32 AiArrayGetIntFunc(AtArray a, UInt32 i)    { return AiArrayGetIntFunc(a, i, 'F2AWrapper', 0); }
+function UInt32 AiArrayGetUIntFunc(AtArray a, UInt32 i)   { return AiArrayGetUIntFunc(a, i, 'F2AWrapper', 0); }
+function Float32 AiArrayGetFltFunc(AtArray a, UInt32 i)   { return AiArrayGetFltFunc(a, i, 'F2AWrapper', 0); }
+function RGB AiArrayGetRGBFunc(AtArray a, UInt32 i)    { return AiArrayGetRGBFunc(a, i, 'F2AWrapper', 0); }
+function Color AiArrayGetRGBAFunc(AtArray a, UInt32 i) { return AiArrayGetRGBAFunc(a, i, 'F2AWrapper', 0); }
+function Vec3 AiArrayGetPntFunc(AtArray a, UInt32 i)   { return AiArrayGetPntFunc(a, i, 'F2AWrapper', 0); }
+function Vec2 AiArrayGetPnt2Func(AtArray a, UInt32 i)  { return AiArrayGetPnt2Func(a, i, 'F2AWrapper', 0); }
+function Vec3 AiArrayGetVecFunc(AtArray a, UInt32 i)   { return AiArrayGetVecFunc(a, i, 'F2AWrapper', 0); }
+function String AiArrayGetStrFunc(AtArray a, UInt32 i) { return AiArrayGetStrFunc(a, i, 'F2AWrapper', 0); }
+function Data AiArrayGetPtrFunc(AtArray a, UInt32 i)   { return AiArrayGetPtrFunc(a, i, 'F2AWrapper', 0); }
+function AtArray AiArrayGetArrayFunc(AtArray a, UInt32 i)   { return AiArrayGetArrayFunc(a, i, 'F2AWrapper', 0); }
+function Mat44 AiArrayGetMtx(AtArray a, UInt32 i)           { return AiArrayGetMtxFunc(a, i); }
