@@ -30,9 +30,9 @@
         "to": "AtRay_to_KLAtRay"
     },
     "AtTextureParams": {
-        "ctype": "AtTextureParams*",
+        "ctype": "AtTextureParams",
         "from": "KlAtTextureParams_to_AtTextureParams",
-        "methodop": "->",
+        "methodop": ".",
         "to": "AtTextureParams_to_KLAtTextureParams"
     },
     "AtMetaDataEntry": {

@@ -9,6 +9,9 @@
 
 inline bool Vec3_to_AtPoint(const Fabric::EDK::KL::Vec3 & from, AtPoint & to);
 inline bool String_to_AtString(const Fabric::EDK::KL::AtString & from, AtString & to);
+inline bool AtString_to_String(const AtString & from, Fabric::EDK::KL::AtString & to);
+inline bool AtParamValue_to_KLParamValue(const AtParamValue* const & from, Fabric::EDK::KL::AtParamValue & to);
+inline bool AtPoint_to_Vec3(const AtPoint & from, Fabric::EDK::KL::Vec3 & to);
 
 inline bool StringArr_to_AtEnum(const Fabric::EDK::KL::VariableArray< Fabric::EDK::KL::String > & from, AtEnum & to) { 
   #pragma message("Implement Me")
@@ -156,7 +159,40 @@ inline bool KlAtRay_to_AtRay(const Fabric::EDK::KL::AtRay & from, AtRay & to) {
 }
 
 inline bool AtRay_to_KLAtRay(const AtRay & from, Fabric::EDK::KL::AtRay & to) {
-  #pragma message("Implement Me")
+  to.type = from.type;
+  to.tid = from.tid;
+  to.level = from.level;
+  to.diff_bounces = from.diff_bounces;
+  to.gloss_bounces = from.gloss_bounces;
+  to.refl_bounces = from.refl_bounces;
+  to.refr_bounces = from.refr_bounces;
+  to.x = from.x;
+  to.y = from.y;
+  to.sx = from.sx;
+  to.sy = from.sy;
+  to.px = from.px;
+  to.py = from.py;
+  AtPoint_to_Vec3(from.origin, to.origin);
+  AtPoint_to_Vec3(from.dir, to.dir);
+
+  to.mindist = from.mindist;
+  to.maxdist = from.maxdist;
+
+  CPAtShaderGlobals_to_KLAtShaderGlobals(from.psg, to.psg);
+  
+  to.light_source = from.light_source;
+  CPAtBucket_to_KLAtBucket(from.bucket, to.bucket);
+  to.weight = from.weight;
+  to.time = from.time;
+  AtPoint_to_Vec3(from.dOdx, to.dOdx);
+  AtPoint_to_Vec3(from.dOdy, to.dOdy);
+  AtPoint_to_Vec3(from.dDdx, to.dDdx);
+  AtPoint_to_Vec3(from.dDdy, to.dDdy);
+
+  AtString_to_String(from.traceset, to.traceset);
+  to.inclusive_traceset = from.inclusive_traceset;
+  to.sindex = from.sindex;
+
   return true; 
 }
 
@@ -246,29 +282,45 @@ inline bool double_to_Float64(const double & from, Fabric::EDK::KL::Float64 & to
   return true; 
 }
 
-inline bool KlAtTextureParams_to_AtTextureParams(const Fabric::EDK::KL::AtTextureParams & from, AtTextureParams* & to) { 
-  #pragma message("Implement Me")
+inline bool KlAtTextureParams_to_AtTextureParams(const Fabric::EDK::KL::AtTextureParams & from, AtTextureParams& to) { 
+  to.filter = from.filter;
+  to.mipmap_mode = from.mipmap_mode;
+  to.mipmap_bias = from.mipmap_bias;
+  to.single_channel = from.single_channel;
+  to.start_channel = from.start_channel;
+  to.fill = from.fill;
+  to.flip_s = from.flip_s;
+  to.flip_t = from.flip_t;
+  to.swap_st = from.swap_st;
+  to.scale_s = from.scale_s;
+  to.scale_t = from.scale_t;
+  to.wrap_s = from.wrap_s;
+  to.wrap_t = from.wrap_t;
+  to.width_s = from.width_s;
+  to.width_t = from.width_t;
+  to.blur_s = from.blur_s;
+  to.blur_t = from.blur_t;
   return true;
 }
 
-inline bool AtTextureParams_to_KLAtTextureParams(const AtTextureParams* const & from, Fabric::EDK::KL::AtTextureParams & to) {
-	to.filter = from->filter;
-	to.mipmap_mode = from->mipmap_mode;
-	to.mipmap_bias = from->mipmap_bias;
-	to.single_channel = from->single_channel;
-	to.start_channel = from->start_channel;
-	to.fill = from->fill;
-	to.flip_s = from->flip_s;
-	to.flip_t = from->flip_t;
-	to.swap_st = from->swap_st;
-	to.scale_s = from->scale_s;
-	to.scale_t = from->scale_t;
-	to.wrap_s = from->wrap_s;
-	to.wrap_t = from->wrap_t;
-	to.width_s = from->width_s;
-	to.width_t = from->width_t;
-	to.blur_s = from->blur_s;
-	to.blur_t = from->blur_t;
+inline bool AtTextureParams_to_KLAtTextureParams(const AtTextureParams & from, Fabric::EDK::KL::AtTextureParams & to) {
+	to.filter = from.filter;
+	to.mipmap_mode = from.mipmap_mode;
+	to.mipmap_bias = from.mipmap_bias;
+	to.single_channel = from.single_channel;
+	to.start_channel = from.start_channel;
+	to.fill = from.fill;
+	to.flip_s = from.flip_s;
+	to.flip_t = from.flip_t;
+	to.swap_st = from.swap_st;
+	to.scale_s = from.scale_s;
+	to.scale_t = from.scale_t;
+	to.wrap_s = from.wrap_s;
+	to.wrap_t = from.wrap_t;
+	to.width_s = from.width_s;
+	to.width_t = from.width_t;
+	to.blur_s = from.blur_s;
+	to.blur_t = from.blur_t;
   return true; 
 }
 
