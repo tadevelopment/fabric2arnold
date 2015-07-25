@@ -1,0 +1,67 @@
+/**
+ * A lot of functions in Arnold were named with an AtString post-fix for some reason
+ * In C++ these functions had convenience functions to allow calling withtout the postfix
+ * This wrapper does essentially the same thing (creates nice names for these functions)
+ */
+
+ require Fabric2Arnold;
+
+/**
+E:\dev\OpusTech\fabric2arnold\stage\Fabric2Arnold\ai_metadata.kl:
+*/
+
+function Boolean AiMetaDataGetBool(AtNodeEntry entry, AtString param, AtString name, io Boolean value) { return AiMetaDataGetBoolAtString(entry, param, name, value); }
+function Boolean AiMetaDataGetInt(AtNodeEntry entry, AtString param, AtString name, io SInt32 value)  { return AiMetaDataGetIntAtString(entry, param, name, value); }
+function Boolean AiMetaDataGetFlt(AtNodeEntry entry, AtString param, AtString name, io Float32 value) { return AiMetaDataGetFltAtString(entry, param, name, value); }
+function Boolean AiMetaDataGetRGB(AtNodeEntry entry, AtString param, AtString name, io RGB value)     { return AiMetaDataGetRGBAtString(entry, param, name, value); }
+function Boolean AiMetaDataGetVec(AtNodeEntry entry, AtString param, AtString name, io Vec3 value)    { return AiMetaDataGetVecAtString(entry, param, name, value); }
+function Boolean AiMetaDataGetPnt(AtNodeEntry entry, AtString param, AtString name, io Vec3 value)    { return AiMetaDataGetPntAtString(entry, param, name, value); }
+function Boolean AiMetaDataGetPnt2(AtNodeEntry entry, AtString param, AtString name, io Vec2 value)   { return AiMetaDataGetPnt2AtString(entry, param, name, value); }
+function Boolean AiMetaDataGetStr(AtNodeEntry entry, AtString param, AtString name, String value)     { return AiMetaDataGetStrAtString(entry, param, name, value); }
+
+/**
+OpusTech\fabric2arnold\stage\Fabric2Arnold\ai_node_entry.kl:
+*/
+
+function AtNodeEntry AiNodeEntryLookUp(AtString name) { return AiNodeEntryLookUpAtString(name); }
+function AtParamEntry AiNodeEntryLookUpParameter(AtNodeEntry nentry, AtString param) { return AiNodeEntryLookUpParameterAtString(nentry, param); }
+
+/**
+OpusTech\fabric2arnold\stage\Fabric2Arnold\ai_nodes.kl:
+*/
+
+function AtNode AiNode(AtString name) { return AiNodeAtString(name); }
+function AtNode AiNodeLookUpByName(AtString name) { return AiNodeLookUpByNameAtString(name); }
+
+function Boolean AiNodeDeclare(io AtNode node, AtString param, String declaration) { return AiNodeDeclareAtString(node, param, declaration); }
+function AtUserParamEntry AiNodeLookUpUserParameter(AtNode node, AtString param) { return AiNodeLookUpUserParameterAtString(node, param); }
+
+function AiNodeSetByte(io AtNode node, AtString param, UInt8 val)  { AiNodeSetByteAtString(node, param, val); }
+function AiNodeSetInt(io AtNode node, AtString param, SInt32 val)  { AiNodeSetIntAtString(node, param, val); }
+function AiNodeSetUInt(io AtNode node, AtString param, UInt32 val)  { AiNodeSetUIntAtString(node, param, val); }
+function AiNodeSetBool(io AtNode node, AtString param, Boolean val)  { AiNodeSetBoolAtString(node, param, val); }
+function AiNodeSetFlt(io AtNode node, AtString param, Float32 val)  { AiNodeSetFltAtString(node, param, val); }
+function AiNodeSetPtr(io AtNode node, AtString param, io Data val)  { AiNodeSetPtrAtString(node, param, val); }
+function AiNodeSetArray(io AtNode node, AtString param, io AtArray val)  { AiNodeSetArrayAtString(node, param, val); }
+function AiNodeSetMatrix(io AtNode node, AtString param, Mat44 val)  { AiNodeSetMatrixAtString(node, param, val); }
+function AiNodeSetStr(io AtNode node, AtString param, AtString str)  { AiNodeSetStrAtString(node, param, str); }
+function AiNodeSetRGB(io AtNode node, AtString param, Float32 r, Float32 g, Float32 b)  { AiNodeSetRGBAtString(node, param, r, g, b); }
+function AiNodeSetRGBA(io AtNode node, AtString param, Float32 r, Float32 g, Float32 b, Float32 a)  { AiNodeSetRGBAAtString(node, param, r, g, b, a); }
+function AiNodeSetVec(io AtNode node, AtString param, Float32 x, Float32 y, Float32 z)  { AiNodeSetVecAtString(node, param, x, y, z); }
+function AiNodeSetPnt(io AtNode node, AtString param, Float32 x, Float32 y, Float32 z)  { AiNodeSetPntAtString(node, param, x, y, z); }
+function AiNodeSetPnt2(io AtNode node, AtString param, Float32 x, Float32 y)  { AiNodeSetPnt2AtString(node, param, x, y); }
+
+function UInt8 AiNodeGetByteA(AtNode node, AtString param) { return AiNodeGetByteAtString(node, param); }
+function SInt32 AiNodeGetIntA(AtNode node, AtString param) { return AiNodeGetIntAtString(node, param); }
+function UInt32 AiNodeGetUIntA(AtNode node, AtString param) { return AiNodeGetUIntAtString(node, param); }
+function Boolean AiNodeGetBoolA(AtNode node, AtString param) { return AiNodeGetBoolAtString(node, param); }
+function Float32 AiNodeGetFltA(AtNode node, AtString param) { return AiNodeGetFltAtString(node, param); }
+function RGB AiNodeGetRGBA(AtNode node, AtString param) { return AiNodeGetRGBAtString(node, param); }
+function Color AiNodeGetRGBAA(AtNode node, AtString param) { return AiNodeGetRGBAAtString(node, param); }
+function Vec3 AiNodeGetVecA(AtNode node, AtString param) { return AiNodeGetVecAtString(node, param); }
+function Vec3 AiNodeGetPntA(AtNode node, AtString param) { return AiNodeGetPntAtString(node, param); }
+function Vec2 AiNodeGetPnt2A(AtNode node, AtString param) { return AiNodeGetPnt2AtString(node, param); }
+function Data AiNodeGetPtrA(AtNode node, AtString param) { return AiNodeGetPtrAtString(node, param); }
+function AtArray AiNodeGetArrayA(AtNode node, AtString param) { return AiNodeGetArrayAtString(node, param); }
+function AtString AiNodeGetStrA(AtNode node, AtString param) { return AiNodeGetStrAtString(node, param); }
+function AiNodeGetMatrix(AtNode node, AtString param, Mat44 matrix) { AiNodeGetMatrixAtString(node, param, matrix); }

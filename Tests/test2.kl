@@ -3,7 +3,7 @@
 //
 // FabricArnold Extension
 
-require Fabric2Arnold;
+require Fabric2ArnoldWrapper;
 
 operator entry() {
 
@@ -12,49 +12,49 @@ operator entry() {
   AiBegin();
 
   // create a sphere
-  AtNode sphere = AiNodeAtString("sphere");
-  AiNodeSetStrAtString(sphere, "name", "mysphere");
-  AiNodeSetFltAtString(sphere, "radius", 5.0);
+  AtNode sphere = AiNode("sphere");
+  AiNodeSetStr(sphere, "name", "mysphere");
+  AiNodeSetFlt(sphere, "radius", 5.0);
 
   // create a lambert shader
-  AtNode lambert = AiNodeAtString("lambert");
-  AiNodeSetStrAtString(lambert, "name", "myshader");
-  AiNodeSetRGBAtString(lambert, "Kd_color", 0.0, 1.0, 0.0);
+  AtNode lambert = AiNode("lambert");
+  AiNodeSetStr(lambert, "name", "myshader");
+  AiNodeSetRGB(lambert, "Kd_color", 0.0, 1.0, 0.0);
 
   // assign the sphere's shader
-  AiNodeSetPtrAtString(sphere, "shader", lambert._handle);
+  AiNodeSetPtr(sphere, "shader", lambert._handle);
 
   // create a perspective camera
-  AtNode camera = AiNodeAtString("persp_camera");
-  AiNodeSetStrAtString(camera, "name", "mycamera");
-  AiNodeSetPntAtString(camera, "position", 0.0, 0.0, 20.0);
+  AtNode camera = AiNode("persp_camera");
+  AiNodeSetStr(camera, "name", "mycamera");
+  AiNodeSetPnt(camera, "position", 0.0, 0.0, 20.0);
 
   // create a point light
-  AtNode light = AiNodeAtString("point_light");
-  AiNodeSetStrAtString(light, "name", "mylight");
-  AiNodeSetFltAtString(light, "exposure", 7.5);
-  AiNodeSetPntAtString(light, "position", 0.0, 10.0, 10.0);
+  AtNode light = AiNode("point_light");
+  AiNodeSetStr(light, "name", "mylight");
+  AiNodeSetFlt(light, "exposure", 7.5);
+  AiNodeSetPnt(light, "position", 0.0, 10.0, 10.0);
 
   // set render options
   AtNode options = AiUniverseGetOptions();
-  AiNodeSetIntAtString(options, "AA_samples", 1);
-  AiNodeSetIntAtString(options, "xres", 320);
-  AiNodeSetIntAtString(options, "yres", 240);
-  AiNodeSetPtrAtString(options, "camera", camera._handle);
+  AiNodeSetInt(options, "AA_samples", 1);
+  AiNodeSetInt(options, "xres", 320);
+  AiNodeSetInt(options, "yres", 240);
+  AiNodeSetPtr(options, "camera", camera._handle);
 
   // create an output driver
-  AtNode driver = AiNodeAtString("driver_jpeg");
-  AiNodeSetStrAtString(driver, "name", "mydriver");
-  AiNodeSetStrAtString(driver, "filename", filename);
+  AtNode driver = AiNode("driver_jpeg");
+  AiNodeSetStr(driver, "name", "mydriver");
+  AiNodeSetStr(driver, "filename", filename);
 
   // create a gaussian filter node
-  AtNode gfilter = AiNodeAtString("gaussian_filter");
-  AiNodeSetStrAtString(gfilter, "name", "myfilter");
+  AtNode gfilter = AiNode("gaussian_filter");
+  AiNodeSetStr(gfilter, "name", "myfilter");
 
   // assign th driver and the filter to the outputs
   AtArray outputs_array = AiArrayAllocate(1, 1, AI_TYPE_STRING);
   AiArraySetStrFunc(outputs_array, 0, "RGB RGB myfilter mydriver", "Tester", 0);
-  AiNodeSetArrayAtString(options, "outputs", outputs_array);
+  AiNodeSetArray(options, "outputs", outputs_array);
 
   // render the scene
   Integer result = AiRender(AI_RENDER_MODE_CAMERA);
@@ -68,12 +68,12 @@ operator entry() {
 
   // remove the sphere, create a box the size of the bounds
   AiNodeDestroy(sphere);
-  AtNode box = AiNodeAtString("box");
-  AiNodeSetStrAtString(box, "name", "mybox");
-  AiNodeSetPtrAtString(box, "shader", lambert._handle);
+  AtNode box = AiNode("box");
+  AiNodeSetStr(box, "name", "mybox");
+  AiNodeSetPtr(box, "shader", lambert._handle);
 
-  AiNodeSetPntAtString(box, "min", bounds.min.x, bounds.min.y, bounds.min.z);
-  AiNodeSetPntAtString(box, "max", bounds.max.x, bounds.max.y, bounds.max.z);
+  AiNodeSetPnt(box, "min", bounds.min.x, bounds.min.y, bounds.min.z);
+  AiNodeSetPnt(box, "max", bounds.max.x, bounds.max.y, bounds.max.z);
 
   // render the box now
   result = AiRender(AI_RENDER_MODE_CAMERA);
