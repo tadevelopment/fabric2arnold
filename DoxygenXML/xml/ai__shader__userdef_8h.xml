@@ -1,0 +1,2344 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="ai__shader__userdef_8h" kind="file" language="C++">
+    <compoundname>ai_shader_userdef.h</compoundname>
+    <includes refid="ai__shaderglobals_8h" local="yes">ai_shaderglobals.h</includes>
+    <includes refid="ai__array_8h" local="yes">ai_array.h</includes>
+    <includes refid="ai__color_8h" local="yes">ai_color.h</includes>
+    <includes refid="ai__matrix_8h" local="yes">ai_matrix.h</includes>
+    <includes refid="ai__vector_8h" local="yes">ai_vector.h</includes>
+    <includes refid="ai__types_8h" local="yes">ai_types.h</includes>
+    <includes refid="ai__nodes_8h" local="yes">ai_nodes.h</includes>
+    <includes refid="ai__string_8h" local="yes">ai_string.h</includes>
+    <includedby refid="ai_8h" local="yes">ai.h</includedby>
+    <incdepgraph>
+      <node id="643">
+        <label>ai_constants.h</label>
+        <link refid="ai__constants_8h"/>
+      </node>
+      <node id="642">
+        <label>ai_api.h</label>
+        <link refid="ai__api_8h"/>
+      </node>
+      <node id="644">
+        <label>cmath</label>
+      </node>
+      <node id="647">
+        <label>ai_vector.h</label>
+        <link refid="ai__vector_8h"/>
+        <childnode refid="643" relation="include">
+        </childnode>
+        <childnode refid="641" relation="include">
+        </childnode>
+        <childnode refid="642" relation="include">
+        </childnode>
+        <childnode refid="648" relation="include">
+        </childnode>
+      </node>
+      <node id="652">
+        <label>ai_node_entry.h</label>
+        <link refid="ai__node__entry_8h"/>
+        <childnode refid="638" relation="include">
+        </childnode>
+        <childnode refid="650" relation="include">
+        </childnode>
+      </node>
+      <node id="651">
+        <label>ai_nodes.h</label>
+        <link refid="ai__nodes_8h"/>
+        <childnode refid="652" relation="include">
+        </childnode>
+        <childnode refid="638" relation="include">
+        </childnode>
+        <childnode refid="642" relation="include">
+        </childnode>
+        <childnode refid="650" relation="include">
+        </childnode>
+      </node>
+      <node id="641">
+        <label>ai_types.h</label>
+        <link refid="ai__types_8h"/>
+        <childnode refid="642" relation="include">
+        </childnode>
+        <childnode refid="643" relation="include">
+        </childnode>
+        <childnode refid="644" relation="include">
+        </childnode>
+        <childnode refid="645" relation="include">
+        </childnode>
+      </node>
+      <node id="639">
+        <label>ai_array.h</label>
+        <link refid="ai__array_8h"/>
+        <childnode refid="640" relation="include">
+        </childnode>
+        <childnode refid="646" relation="include">
+        </childnode>
+        <childnode refid="647" relation="include">
+        </childnode>
+        <childnode refid="641" relation="include">
+        </childnode>
+        <childnode refid="642" relation="include">
+        </childnode>
+      </node>
+      <node id="638">
+        <label>ai_params.h</label>
+        <link refid="ai__params_8h"/>
+        <childnode refid="639" relation="include">
+        </childnode>
+        <childnode refid="640" relation="include">
+        </childnode>
+        <childnode refid="649" relation="include">
+        </childnode>
+        <childnode refid="646" relation="include">
+        </childnode>
+        <childnode refid="647" relation="include">
+        </childnode>
+        <childnode refid="641" relation="include">
+        </childnode>
+        <childnode refid="642" relation="include">
+        </childnode>
+      </node>
+      <node id="637">
+        <label>ai_shaderglobals.h</label>
+        <link refid="ai__shaderglobals_8h"/>
+        <childnode refid="638" relation="include">
+        </childnode>
+        <childnode refid="639" relation="include">
+        </childnode>
+        <childnode refid="640" relation="include">
+        </childnode>
+        <childnode refid="646" relation="include">
+        </childnode>
+        <childnode refid="647" relation="include">
+        </childnode>
+        <childnode refid="650" relation="include">
+        </childnode>
+        <childnode refid="641" relation="include">
+        </childnode>
+        <childnode refid="642" relation="include">
+        </childnode>
+      </node>
+      <node id="636">
+        <label>ai_shader_userdef.h</label>
+        <link refid="ai_shader_userdef.h"/>
+        <childnode refid="637" relation="include">
+        </childnode>
+        <childnode refid="639" relation="include">
+        </childnode>
+        <childnode refid="640" relation="include">
+        </childnode>
+        <childnode refid="646" relation="include">
+        </childnode>
+        <childnode refid="647" relation="include">
+        </childnode>
+        <childnode refid="641" relation="include">
+        </childnode>
+        <childnode refid="651" relation="include">
+        </childnode>
+        <childnode refid="650" relation="include">
+        </childnode>
+      </node>
+      <node id="640">
+        <label>ai_color.h</label>
+        <link refid="ai__color_8h"/>
+        <childnode refid="641" relation="include">
+        </childnode>
+        <childnode refid="643" relation="include">
+        </childnode>
+        <childnode refid="642" relation="include">
+        </childnode>
+      </node>
+      <node id="648">
+        <label>math.h</label>
+      </node>
+      <node id="645">
+        <label>cstdlib</label>
+      </node>
+      <node id="646">
+        <label>ai_matrix.h</label>
+        <link refid="ai__matrix_8h"/>
+        <childnode refid="647" relation="include">
+        </childnode>
+        <childnode refid="642" relation="include">
+        </childnode>
+      </node>
+      <node id="650">
+        <label>ai_string.h</label>
+        <link refid="ai__string_8h"/>
+        <childnode refid="642" relation="include">
+        </childnode>
+        <childnode refid="641" relation="include">
+        </childnode>
+      </node>
+      <node id="649">
+        <label>ai_enum.h</label>
+        <link refid="ai__enum_8h"/>
+        <childnode refid="642" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="653">
+        <label>ai_shader_userdef.h</label>
+        <link refid="ai_shader_userdef.h"/>
+        <childnode refid="654" relation="include">
+        </childnode>
+      </node>
+      <node id="654">
+        <label>ai.h</label>
+        <link refid="ai_8h"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="user-defined">
+      <header>User-Data parameter</header>
+      <description><para>This macro is used to retrieve the user-data parameter from within the shaders.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>a string with the name of the user-data value to query </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the parameter for the user data, or NULL if not found </para></simplesect>
+</para></description>
+      <memberdef kind="define" id="group__ai__shader__userdef_1ga3b076a98439b4fa77737e3027aad93c9" prot="public" static="no">
+        <name>AiUDataGetParameter</name>
+        <param><defname>_name</defname></param>
+        <initializer><ref refid="ai__shader__userdef_8h_1aab2fd6e4db7a77654ce475e795b7be74" kindref="member">AiUserGetParameterFunc</ref>(<ref refid="ai__deprecated_8h_1aec321dc1beac683ff60b65608dab6c9b" kindref="member">_name</ref>, sg)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_userdef.h" line="61" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_userdef.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>User-Data Readers</header>
+      <description><para>These macros are used to retrieve user-data values from within shaders. If a varying-type user-data is requested, then the user-data will be correctly interpolated across the face of the primitive.</para><para>In the case of reading constant-type user-data, the usual node-parameter reading functions, such as <ref refid="group__ai__nodes_1gabd10f260c76b7475e58c83914c52f637" kindref="member">AiNodeGetInt()</ref>, may also be used.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>a string with the name of the user-data value to read </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>_val</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>a pointer to the value in which to store the contents of the read operation </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>a boolean indicating whether the operation was successful</para></simplesect>
+Please refer to <ref refid="ai__shader__userdef_8h" kindref="compound">ai_shader_userdef.h</ref> for a description of the userdef-data reading functions called by these macros. </para></description>
+      <memberdef kind="define" id="group__ai__shader__userdef_1gae2a57cfe4ec473c86c96008bf9199425" prot="public" static="no">
+        <name>AiUDataGetBool</name>
+        <param><defname>_name</defname></param>
+        <param><defname>_val</defname></param>
+        <initializer><ref refid="ai__shader__userdef_8h_1aeaeaa2b35e1d27a4b1ecf95e47f18850" kindref="member">AiUserGetBoolFunc</ref>  (<ref refid="ai__deprecated_8h_1aec321dc1beac683ff60b65608dab6c9b" kindref="member">_name</ref>, sg, _val)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_userdef.h" line="84" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_userdef.h" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__shader__userdef_1ga120f2e742bd44ee4f84126a543edd4e4" prot="public" static="no">
+        <name>AiUDataGetByte</name>
+        <param><defname>_name</defname></param>
+        <param><defname>_val</defname></param>
+        <initializer><ref refid="ai__shader__userdef_8h_1a4b9e0749502d8ae10811b5a640f386fd" kindref="member">AiUserGetByteFunc</ref>  (<ref refid="ai__deprecated_8h_1aec321dc1beac683ff60b65608dab6c9b" kindref="member">_name</ref>, sg, _val)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_userdef.h" line="85" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_userdef.h" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__shader__userdef_1gae3b6416a65cae2a12fdd2e1033324e2e" prot="public" static="no">
+        <name>AiUDataGetInt</name>
+        <param><defname>_name</defname></param>
+        <param><defname>_val</defname></param>
+        <initializer><ref refid="ai__shader__userdef_8h_1a08965cd3b2864618d939809122d665fe" kindref="member">AiUserGetIntFunc</ref>   (<ref refid="ai__deprecated_8h_1aec321dc1beac683ff60b65608dab6c9b" kindref="member">_name</ref>, sg, _val)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_userdef.h" line="86" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_userdef.h" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__shader__userdef_1ga160d618bfba5c6498023ed741dbb2ca0" prot="public" static="no">
+        <name>AiUDataGetUInt</name>
+        <param><defname>_name</defname></param>
+        <param><defname>_val</defname></param>
+        <initializer><ref refid="ai__shader__userdef_8h_1a02798a9731db217dad92462290e8619c" kindref="member">AiUserGetUIntFunc</ref>  (<ref refid="ai__deprecated_8h_1aec321dc1beac683ff60b65608dab6c9b" kindref="member">_name</ref>, sg, _val)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_userdef.h" line="87" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_userdef.h" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__shader__userdef_1ga9396e0d21d5d597d46762d84b2a47c6c" prot="public" static="no">
+        <name>AiUDataGetFlt</name>
+        <param><defname>_name</defname></param>
+        <param><defname>_val</defname></param>
+        <initializer><ref refid="ai__shader__userdef_8h_1ac8426a82eab150896ea7cc8c07a71290" kindref="member">AiUserGetFltFunc</ref>   (<ref refid="ai__deprecated_8h_1aec321dc1beac683ff60b65608dab6c9b" kindref="member">_name</ref>, sg, _val)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_userdef.h" line="88" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_userdef.h" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__shader__userdef_1ga97266b2c0e7d855f2a7e51ff0c8d0f3f" prot="public" static="no">
+        <name>AiUDataGetRGB</name>
+        <param><defname>_name</defname></param>
+        <param><defname>_val</defname></param>
+        <initializer><ref refid="ai__shader__userdef_8h_1ab85042aaf9c5bb50326ee37b36887594" kindref="member">AiUserGetRGBFunc</ref>   (<ref refid="ai__deprecated_8h_1aec321dc1beac683ff60b65608dab6c9b" kindref="member">_name</ref>, sg, _val)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_userdef.h" line="89" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_userdef.h" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__shader__userdef_1ga8267f5fc9e6a3ca61f8417586f5092d3" prot="public" static="no">
+        <name>AiUDataGetRGBA</name>
+        <param><defname>_name</defname></param>
+        <param><defname>_val</defname></param>
+        <initializer><ref refid="ai__shader__userdef_8h_1af0fb154ab524fb4536e4b7b2cc5643f3" kindref="member">AiUserGetRGBAFunc</ref>  (<ref refid="ai__deprecated_8h_1aec321dc1beac683ff60b65608dab6c9b" kindref="member">_name</ref>, sg, _val)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_userdef.h" line="90" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_userdef.h" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__shader__userdef_1gab61244268925f48485c5e2912b1d24df" prot="public" static="no">
+        <name>AiUDataGetVec</name>
+        <param><defname>_name</defname></param>
+        <param><defname>_val</defname></param>
+        <initializer><ref refid="ai__shader__userdef_8h_1ae8816bdcbbb24e83b748bf982558731b" kindref="member">AiUserGetVecFunc</ref>   (<ref refid="ai__deprecated_8h_1aec321dc1beac683ff60b65608dab6c9b" kindref="member">_name</ref>, sg, _val)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_userdef.h" line="91" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_userdef.h" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__shader__userdef_1ga2742e42dffab454749ab4402f2a663a5" prot="public" static="no">
+        <name>AiUDataGetPnt</name>
+        <param><defname>_name</defname></param>
+        <param><defname>_val</defname></param>
+        <initializer><ref refid="ai__shader__userdef_8h_1ae4b3338ebe7cbc03727d7a2bfaa519cd" kindref="member">AiUserGetPntFunc</ref>   (<ref refid="ai__deprecated_8h_1aec321dc1beac683ff60b65608dab6c9b" kindref="member">_name</ref>, sg, _val)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_userdef.h" line="92" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_userdef.h" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__shader__userdef_1gaffec8204136cfe3f222e5873fc39d747" prot="public" static="no">
+        <name>AiUDataGetPnt2</name>
+        <param><defname>_name</defname></param>
+        <param><defname>_val</defname></param>
+        <initializer><ref refid="ai__shader__userdef_8h_1ae98dba2cc4a9d082f96c440d19d3eb0a" kindref="member">AiUserGetPnt2Func</ref>  (<ref refid="ai__deprecated_8h_1aec321dc1beac683ff60b65608dab6c9b" kindref="member">_name</ref>, sg, _val)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_userdef.h" line="93" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_userdef.h" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__shader__userdef_1ga27fbd2bb7b884ce1ee4471b3f139d4a6" prot="public" static="no">
+        <name>AiUDataGetStr</name>
+        <param><defname>_name</defname></param>
+        <param><defname>_val</defname></param>
+        <initializer><ref refid="ai__shader__userdef_8h_1a01cd7ccdb61d649d90e82ac1a26e2502" kindref="member">AiUserGetStrFunc</ref>   (<ref refid="ai__deprecated_8h_1aec321dc1beac683ff60b65608dab6c9b" kindref="member">_name</ref>, sg, _val)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_userdef.h" line="94" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_userdef.h" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__shader__userdef_1gafd3b89d27b4fc7c600158a4090e7b92c" prot="public" static="no">
+        <name>AiUDataGetPtr</name>
+        <param><defname>_name</defname></param>
+        <param><defname>_val</defname></param>
+        <initializer><ref refid="ai__shader__userdef_8h_1a11df511572483731f2caaf6bc38614e9" kindref="member">AiUserGetPtrFunc</ref>   (<ref refid="ai__deprecated_8h_1aec321dc1beac683ff60b65608dab6c9b" kindref="member">_name</ref>, sg, _val)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_userdef.h" line="95" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_userdef.h" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__shader__userdef_1gacc09a1051f7c9dbe6b1af9afdd2735b1" prot="public" static="no">
+        <name>AiUDataGetNode</name>
+        <param><defname>_name</defname></param>
+        <param><defname>_val</defname></param>
+        <initializer><ref refid="ai__shader__userdef_8h_1a6ce5c4343514535de0c4a56499f0ba01" kindref="member">AiUserGetNodeFunc</ref>  (<ref refid="ai__deprecated_8h_1aec321dc1beac683ff60b65608dab6c9b" kindref="member">_name</ref>, sg, _val)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_userdef.h" line="96" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_userdef.h" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__shader__userdef_1gae9b06733c5258bf469d03d2b40c0d1b5" prot="public" static="no">
+        <name>AiUDataGetArray</name>
+        <param><defname>_name</defname></param>
+        <param><defname>_val</defname></param>
+        <initializer><ref refid="ai__shader__userdef_8h_1a0127c45dfcc9262ae77bdbc9aa5d8e27" kindref="member">AiUserGetArrayFunc</ref> (<ref refid="ai__deprecated_8h_1aec321dc1beac683ff60b65608dab6c9b" kindref="member">_name</ref>, sg, _val)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_userdef.h" line="97" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_userdef.h" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__shader__userdef_1ga8c1bd3390125afc4ec389460f0b85e43" prot="public" static="no">
+        <name>AiUDataGetMatrix</name>
+        <param><defname>_name</defname></param>
+        <param><defname>_val</defname></param>
+        <initializer><ref refid="ai__shader__userdef_8h_1a6fe6f383f800340ad190481d4e2a5d37" kindref="member">AiUserGetMatrixFunc</ref>(<ref refid="ai__deprecated_8h_1aec321dc1beac683ff60b65608dab6c9b" kindref="member">_name</ref>, sg, _val)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_userdef.h" line="98" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_userdef.h" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>User-Data Derivatives with respect to screen X and Y</header>
+      <description><para>These macros are used to retrieve user-data derivatives w.r.t. X and Y from within shaders. If a varying-type user-data is requested, then the user-data derivatives will be correctly interpolated across the face of the primitive. These derivatives can be useful in determining filter sizes to match pixel footprints, such as when texture mapping.</para><para>In the case of reading constant-type user-data, the derivatives are zero.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>a string with the name of the user-data value to read </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>_dx_val</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>a pointer to the value in which to store the contents of the computed derivatives with respect to the X pixel direction </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>_dy_val</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>a pointer to the value in which to store the contents of the computed derivatives with respect to the Y pixel direction </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>a boolean indicating whether the operation was successful</para></simplesect>
+Please refer to <ref refid="ai__shader__userdef_8h" kindref="compound">ai_shader_userdef.h</ref> for a description of the userdef-data reading functions called by these macros. </para></description>
+      <memberdef kind="define" id="group__ai__shader__userdef_1gaa8a705b4230d489a090e74294ddf63d2" prot="public" static="no">
+        <name>AiUDataGetDxyDerivativesFlt</name>
+        <param><defname>_name</defname></param>
+        <param><defname>_dx_val</defname></param>
+        <param><defname>_dy_val</defname></param>
+        <initializer><ref refid="ai__shader__userdef_8h_1a0d71b4226fcd94fcd40d54d95da0e13f" kindref="member">AiUserGetDxyDerivativesFltFunc</ref>   (<ref refid="ai__deprecated_8h_1aec321dc1beac683ff60b65608dab6c9b" kindref="member">_name</ref>, sg, _dx_val, _dy_val)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_userdef.h" line="125" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_userdef.h" bodystart="125" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__shader__userdef_1ga132d58e495801785eee2d9a5575ca580" prot="public" static="no">
+        <name>AiUDataGetDxyDerivativesRGB</name>
+        <param><defname>_name</defname></param>
+        <param><defname>_dx_val</defname></param>
+        <param><defname>_dy_val</defname></param>
+        <initializer><ref refid="ai__shader__userdef_8h_1a8ab01aa6f4fffabb010ddab86ff15f82" kindref="member">AiUserGetDxyDerivativesRGBFunc</ref>   (<ref refid="ai__deprecated_8h_1aec321dc1beac683ff60b65608dab6c9b" kindref="member">_name</ref>, sg, _dx_val, _dy_val)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_userdef.h" line="126" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_userdef.h" bodystart="126" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__shader__userdef_1ga2a8568cfd47e3ef1fd78b8071589a952" prot="public" static="no">
+        <name>AiUDataGetDxyDerivativesRGBA</name>
+        <param><defname>_name</defname></param>
+        <param><defname>_dx_val</defname></param>
+        <param><defname>_dy_val</defname></param>
+        <initializer><ref refid="ai__shader__userdef_8h_1a595633c8ef1c32adec85a499d1f517d4" kindref="member">AiUserGetDxyDerivativesRGBAFunc</ref>  (<ref refid="ai__deprecated_8h_1aec321dc1beac683ff60b65608dab6c9b" kindref="member">_name</ref>, sg, _dx_val, _dy_val)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_userdef.h" line="127" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_userdef.h" bodystart="127" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__shader__userdef_1ga3c9531fc6a59b774af186cfdcd1e2ad3" prot="public" static="no">
+        <name>AiUDataGetDxyDerivativesVec</name>
+        <param><defname>_name</defname></param>
+        <param><defname>_dx_val</defname></param>
+        <param><defname>_dy_val</defname></param>
+        <initializer><ref refid="ai__shader__userdef_8h_1a368c379bf680c891923cd2a4110833c2" kindref="member">AiUserGetDxyDerivativesVecFunc</ref>   (<ref refid="ai__deprecated_8h_1aec321dc1beac683ff60b65608dab6c9b" kindref="member">_name</ref>, sg, _dx_val, _dy_val)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_userdef.h" line="128" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_userdef.h" bodystart="128" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__shader__userdef_1ga621bd84829270efb2ee1cd156022be2c" prot="public" static="no">
+        <name>AiUDataGetDxyDerivativesPnt</name>
+        <param><defname>_name</defname></param>
+        <param><defname>_dx_val</defname></param>
+        <param><defname>_dy_val</defname></param>
+        <initializer><ref refid="ai__shader__userdef_8h_1af3ad00345399b140b2efc00e25e3f76d" kindref="member">AiUserGetDxyDerivativesPntFunc</ref>   (<ref refid="ai__deprecated_8h_1aec321dc1beac683ff60b65608dab6c9b" kindref="member">_name</ref>, sg, _dx_val, _dy_val)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_userdef.h" line="129" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_userdef.h" bodystart="129" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__shader__userdef_1ga3c799c85f5b53b54b0827a57e2a09756" prot="public" static="no">
+        <name>AiUDataGetDxyDerivativesPnt2</name>
+        <param><defname>_name</defname></param>
+        <param><defname>_dx_val</defname></param>
+        <param><defname>_dy_val</defname></param>
+        <initializer><ref refid="ai__shader__userdef_8h_1a7d1cd7d3e2d7b93e70a4ceae81c930e2" kindref="member">AiUserGetDxyDerivativesPnt2Func</ref>  (<ref refid="ai__deprecated_8h_1aec321dc1beac683ff60b65608dab6c9b" kindref="member">_name</ref>, sg, _dx_val, _dy_val)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_userdef.h" line="130" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_userdef.h" bodystart="130" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__shader__userdef_1gae109fde7dae2de4f5c367d43cc8ac5c3" prot="public" static="no">
+        <name>AiUDataGetDxyDerivativesArray</name>
+        <param><defname>_name</defname></param>
+        <param><defname>_dx_val</defname></param>
+        <param><defname>_dy_val</defname></param>
+        <initializer><ref refid="ai__shader__userdef_8h_1a285d101738c3050841d1e58f68173155" kindref="member">AiUserGetDxyDerivativesArrayFunc</ref> (<ref refid="ai__deprecated_8h_1aec321dc1beac683ff60b65608dab6c9b" kindref="member">_name</ref>, sg, _dx_val, _dy_val)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_userdef.h" line="131" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_userdef.h" bodystart="131" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__shader__userdef_1ga35fe1e64671946c0050d6d681b3dda0c" prot="public" static="no">
+        <name>AiUDataGetDxyDerivativesMatrix</name>
+        <param><defname>_name</defname></param>
+        <param><defname>_dx_val</defname></param>
+        <param><defname>_dy_val</defname></param>
+        <initializer><ref refid="ai__shader__userdef_8h_1aa7b964c83be5087e33203166f025f945" kindref="member">AiUserGetDxyDerivativesMatrixFunc</ref>(<ref refid="ai__deprecated_8h_1aec321dc1beac683ff60b65608dab6c9b" kindref="member">_name</ref>, sg, _dx_val, _dy_val)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_userdef.h" line="132" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_userdef.h" bodystart="132" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="ai__shader__userdef_8h_1a86ebadfe916b63a9b5d0a16d46a91bb1" prot="public" static="no">
+        <name>AiCreateFuncs</name>
+        <param><defname>_name</defname></param>
+        <param><defname>_type</defname></param>
+        <initializer><ref refid="ai__api_8h_1a4b9d3c7c64877dda42d97f936f023a96" kindref="member">AI_API</ref> <ref refid="ai__api_8h_1a19d077fa951fe893bfc989f548855f96" kindref="member">AI_DEPRECATED</ref> bool AiUserGet##<ref refid="ai__deprecated_8h_1aec321dc1beac683ff60b65608dab6c9b" kindref="member">_name</ref>##Func         (const char*,        const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref>*,    _type*); \
+<ref refid="ai__api_8h_1a4b9d3c7c64877dda42d97f936f023a96" kindref="member">AI_API</ref>               bool AiUserGet##<ref refid="ai__deprecated_8h_1aec321dc1beac683ff60b65608dab6c9b" kindref="member">_name</ref>##FuncAtString (const <ref refid="class_at_string" kindref="compound">AtString</ref>,     const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref>*,    _type*); \
+inline               bool AiUserGet##<ref refid="ai__deprecated_8h_1aec321dc1beac683ff60b65608dab6c9b" kindref="member">_name</ref>##Func         (const <ref refid="class_at_string" kindref="compound">AtString</ref> str, const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref>* sg, _type* x)\
+{                                                                                                                 \
+   return AiUserGet##<ref refid="ai__deprecated_8h_1aec321dc1beac683ff60b65608dab6c9b" kindref="member">_name</ref>##FuncAtString(str, sg, x);                                                             \
+}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_userdef.h" line="142" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_userdef.h" bodystart="168" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ai__shader__userdef_8h_1aeea456d355868d968eb29c230ed381c8" prot="public" static="no">
+        <name>AiCreateFuncs</name>
+        <param><defname>_name</defname></param>
+        <param><defname>_type</defname></param>
+        <initializer><ref refid="ai__api_8h_1a4b9d3c7c64877dda42d97f936f023a96" kindref="member">AI_API</ref> <ref refid="ai__api_8h_1a19d077fa951fe893bfc989f548855f96" kindref="member">AI_DEPRECATED</ref> bool AiUserGetDxyDerivatives##<ref refid="ai__deprecated_8h_1aec321dc1beac683ff60b65608dab6c9b" kindref="member">_name</ref>##Func         (const char*,        const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref>*,    _type*,    _type*);  \
+<ref refid="ai__api_8h_1a4b9d3c7c64877dda42d97f936f023a96" kindref="member">AI_API</ref>               bool AiUserGetDxyDerivatives##<ref refid="ai__deprecated_8h_1aec321dc1beac683ff60b65608dab6c9b" kindref="member">_name</ref>##FuncAtString (const <ref refid="class_at_string" kindref="compound">AtString</ref>,     const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref>*,    _type*,    _type*);  \
+inline               bool AiUserGetDxyDerivatives##<ref refid="ai__deprecated_8h_1aec321dc1beac683ff60b65608dab6c9b" kindref="member">_name</ref>##Func         (const <ref refid="class_at_string" kindref="compound">AtString</ref> str, const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref>* sg, _type* dx, _type* dy)\
+{                                                                                                                                           \
+   return AiUserGetDxyDerivatives##<ref refid="ai__deprecated_8h_1aec321dc1beac683ff60b65608dab6c9b" kindref="member">_name</ref>##FuncAtString(str, sg, dx, dy);                                                                    \
+}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_userdef.h" line="168" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_userdef.h" bodystart="168" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="ai__shader__userdef_8h_1ac75dc74304680c030fca7af596df6729" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DEPRECATED const AtUserParamEntry *</type>
+        <definition>DEPRECATED const AtUserParamEntry* AiUserGetParameterFunc</definition>
+        <argsstring>(const char *, const AtShaderGlobals *)</argsstring>
+        <name>AiUserGetParameterFunc</name>
+        <param>
+          <type>const char *</type>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_userdef.h" line="138" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__userdef_8h_1aff4043ed703a8f197137847afc61a38d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const AtUserParamEntry *</type>
+        <definition>const AtUserParamEntry* AiUserGetParameterFuncAtString</definition>
+        <argsstring>(const AtString, const AtShaderGlobals *)</argsstring>
+        <name>AiUserGetParameterFuncAtString</name>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_userdef.h" line="139" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__userdef_8h_1aab2fd6e4db7a77654ce475e795b7be74" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>const AtUserParamEntry *</type>
+        <definition>const AtUserParamEntry* AiUserGetParameterFunc</definition>
+        <argsstring>(const AtString name, const AtShaderGlobals *sg)</argsstring>
+        <name>AiUserGetParameterFunc</name>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_userdef.h" line="140" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_userdef.h" bodystart="140" bodyend="140"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__userdef_8h_1a5ff89e83fd97f8065c1d48df870ba970" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DEPRECATED bool</type>
+        <definition>DEPRECATED bool AiUserGetBoolFunc</definition>
+        <argsstring>(const char *, const AtShaderGlobals *, bool *)</argsstring>
+        <name>AiUserGetBoolFunc</name>
+        <param>
+          <type>const char *</type>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+        </param>
+        <param>
+          <type>bool *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_userdef.h" line="151" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__userdef_8h_1a2ec8f095f8489e453f7a22b3c143a66c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiUserGetBoolFuncAtString</definition>
+        <argsstring>(const AtString, const AtShaderGlobals *, bool *)</argsstring>
+        <name>AiUserGetBoolFuncAtString</name>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+        </param>
+        <param>
+          <type>bool *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_userdef.h" line="151" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__userdef_8h_1aeaeaa2b35e1d27a4b1ecf95e47f18850" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiUserGetBoolFunc</definition>
+        <argsstring>(const AtString str, const AtShaderGlobals *sg, bool *x)</argsstring>
+        <name>AiUserGetBoolFunc</name>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>str</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type>bool *</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_userdef.h" line="151" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_userdef.h" bodystart="151" bodyend="151"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__userdef_8h_1a5178cb7cb8b89c98b7a29eef3c37445f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DEPRECATED bool</type>
+        <definition>DEPRECATED bool AiUserGetByteFunc</definition>
+        <argsstring>(const char *, const AtShaderGlobals *, AtByte *)</argsstring>
+        <name>AiUserGetByteFunc</name>
+        <param>
+          <type>const char *</type>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+        </param>
+        <param>
+          <type><ref refid="group__ai__types_1ga41f7f394ad3ef67901cce4d05bdabf89" kindref="member">AtByte</ref> *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_userdef.h" line="152" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__userdef_8h_1adefbcf22a9eb4984ec0a7a4d8d82724e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiUserGetByteFuncAtString</definition>
+        <argsstring>(const AtString, const AtShaderGlobals *, AtByte *)</argsstring>
+        <name>AiUserGetByteFuncAtString</name>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+        </param>
+        <param>
+          <type><ref refid="group__ai__types_1ga41f7f394ad3ef67901cce4d05bdabf89" kindref="member">AtByte</ref> *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_userdef.h" line="152" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__userdef_8h_1a4b9e0749502d8ae10811b5a640f386fd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiUserGetByteFunc</definition>
+        <argsstring>(const AtString str, const AtShaderGlobals *sg, AtByte *x)</argsstring>
+        <name>AiUserGetByteFunc</name>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>str</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type><ref refid="group__ai__types_1ga41f7f394ad3ef67901cce4d05bdabf89" kindref="member">AtByte</ref> *</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_userdef.h" line="152" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_userdef.h" bodystart="152" bodyend="152"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__userdef_8h_1acb0a58ba4f8429e89e3c58204b2c4d5e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DEPRECATED bool</type>
+        <definition>DEPRECATED bool AiUserGetIntFunc</definition>
+        <argsstring>(const char *, const AtShaderGlobals *, int *)</argsstring>
+        <name>AiUserGetIntFunc</name>
+        <param>
+          <type>const char *</type>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+        </param>
+        <param>
+          <type>int *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_userdef.h" line="153" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__userdef_8h_1a8c7ae01eda7755a0d78fd997eeb714a4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiUserGetIntFuncAtString</definition>
+        <argsstring>(const AtString, const AtShaderGlobals *, int *)</argsstring>
+        <name>AiUserGetIntFuncAtString</name>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+        </param>
+        <param>
+          <type>int *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_userdef.h" line="153" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__userdef_8h_1a08965cd3b2864618d939809122d665fe" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiUserGetIntFunc</definition>
+        <argsstring>(const AtString str, const AtShaderGlobals *sg, int *x)</argsstring>
+        <name>AiUserGetIntFunc</name>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>str</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_userdef.h" line="153" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_userdef.h" bodystart="153" bodyend="153"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__userdef_8h_1ad958a6ccc8c5b0eefd59471bad0b6d0a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DEPRECATED bool</type>
+        <definition>DEPRECATED bool AiUserGetUIntFunc</definition>
+        <argsstring>(const char *, const AtShaderGlobals *, unsigned int *)</argsstring>
+        <name>AiUserGetUIntFunc</name>
+        <param>
+          <type>const char *</type>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+        </param>
+        <param>
+          <type>unsigned int *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_userdef.h" line="154" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__userdef_8h_1a5b8d1d00fbfb03a85b15c2d425d84cc0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiUserGetUIntFuncAtString</definition>
+        <argsstring>(const AtString, const AtShaderGlobals *, unsigned int *)</argsstring>
+        <name>AiUserGetUIntFuncAtString</name>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+        </param>
+        <param>
+          <type>unsigned int *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_userdef.h" line="154" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__userdef_8h_1a02798a9731db217dad92462290e8619c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiUserGetUIntFunc</definition>
+        <argsstring>(const AtString str, const AtShaderGlobals *sg, unsigned int *x)</argsstring>
+        <name>AiUserGetUIntFunc</name>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>str</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type>unsigned int *</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_userdef.h" line="154" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_userdef.h" bodystart="154" bodyend="154"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__userdef_8h_1a3b79baf1ad1f6cd2aaa3a7eada4f2a56" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DEPRECATED bool</type>
+        <definition>DEPRECATED bool AiUserGetFltFunc</definition>
+        <argsstring>(const char *, const AtShaderGlobals *, float *)</argsstring>
+        <name>AiUserGetFltFunc</name>
+        <param>
+          <type>const char *</type>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+        </param>
+        <param>
+          <type>float *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_userdef.h" line="155" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__userdef_8h_1a11c8567186f371b2851fb101a8885957" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiUserGetFltFuncAtString</definition>
+        <argsstring>(const AtString, const AtShaderGlobals *, float *)</argsstring>
+        <name>AiUserGetFltFuncAtString</name>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+        </param>
+        <param>
+          <type>float *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_userdef.h" line="155" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__userdef_8h_1ac8426a82eab150896ea7cc8c07a71290" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiUserGetFltFunc</definition>
+        <argsstring>(const AtString str, const AtShaderGlobals *sg, float *x)</argsstring>
+        <name>AiUserGetFltFunc</name>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>str</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_userdef.h" line="155" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_userdef.h" bodystart="155" bodyend="155"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__userdef_8h_1a144ac5b2795ca0885fab839bf1a99fdf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DEPRECATED bool</type>
+        <definition>DEPRECATED bool AiUserGetRGBFunc</definition>
+        <argsstring>(const char *, const AtShaderGlobals *, AtRGB *)</argsstring>
+        <name>AiUserGetRGBFunc</name>
+        <param>
+          <type>const char *</type>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+        </param>
+        <param>
+          <type><ref refid="struct_at_r_g_b" kindref="compound">AtRGB</ref> *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_userdef.h" line="156" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__userdef_8h_1acbf3abed46dcbfe4c0f08c6d8e18d823" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiUserGetRGBFuncAtString</definition>
+        <argsstring>(const AtString, const AtShaderGlobals *, AtRGB *)</argsstring>
+        <name>AiUserGetRGBFuncAtString</name>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+        </param>
+        <param>
+          <type><ref refid="struct_at_r_g_b" kindref="compound">AtRGB</ref> *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_userdef.h" line="156" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__userdef_8h_1ab85042aaf9c5bb50326ee37b36887594" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiUserGetRGBFunc</definition>
+        <argsstring>(const AtString str, const AtShaderGlobals *sg, AtRGB *x)</argsstring>
+        <name>AiUserGetRGBFunc</name>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>str</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_at_r_g_b" kindref="compound">AtRGB</ref> *</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_userdef.h" line="156" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_userdef.h" bodystart="156" bodyend="156"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__userdef_8h_1a97fb3ce5e42a7bc200d9f0357f6602a7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DEPRECATED bool</type>
+        <definition>DEPRECATED bool AiUserGetRGBAFunc</definition>
+        <argsstring>(const char *, const AtShaderGlobals *, AtRGBA *)</argsstring>
+        <name>AiUserGetRGBAFunc</name>
+        <param>
+          <type>const char *</type>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+        </param>
+        <param>
+          <type><ref refid="struct_at_r_g_b_a" kindref="compound">AtRGBA</ref> *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_userdef.h" line="157" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__userdef_8h_1acf882a2350c016cfd9711bdf9ad5f117" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiUserGetRGBAFuncAtString</definition>
+        <argsstring>(const AtString, const AtShaderGlobals *, AtRGBA *)</argsstring>
+        <name>AiUserGetRGBAFuncAtString</name>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+        </param>
+        <param>
+          <type><ref refid="struct_at_r_g_b_a" kindref="compound">AtRGBA</ref> *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_userdef.h" line="157" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__userdef_8h_1af0fb154ab524fb4536e4b7b2cc5643f3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiUserGetRGBAFunc</definition>
+        <argsstring>(const AtString str, const AtShaderGlobals *sg, AtRGBA *x)</argsstring>
+        <name>AiUserGetRGBAFunc</name>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>str</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_at_r_g_b_a" kindref="compound">AtRGBA</ref> *</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_userdef.h" line="157" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_userdef.h" bodystart="157" bodyend="157"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__userdef_8h_1a3af8a1325cbeedd1faf75f162c3c7b8e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DEPRECATED bool</type>
+        <definition>DEPRECATED bool AiUserGetVecFunc</definition>
+        <argsstring>(const char *, const AtShaderGlobals *, AtVector *)</argsstring>
+        <name>AiUserGetVecFunc</name>
+        <param>
+          <type>const char *</type>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+        </param>
+        <param>
+          <type><ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_userdef.h" line="158" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__userdef_8h_1a37a4f3ff18ab6c2b3e5b9fe845c4e1b6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiUserGetVecFuncAtString</definition>
+        <argsstring>(const AtString, const AtShaderGlobals *, AtVector *)</argsstring>
+        <name>AiUserGetVecFuncAtString</name>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+        </param>
+        <param>
+          <type><ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_userdef.h" line="158" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__userdef_8h_1ae8816bdcbbb24e83b748bf982558731b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiUserGetVecFunc</definition>
+        <argsstring>(const AtString str, const AtShaderGlobals *sg, AtVector *x)</argsstring>
+        <name>AiUserGetVecFunc</name>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>str</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type><ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> *</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_userdef.h" line="158" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_userdef.h" bodystart="158" bodyend="158"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__userdef_8h_1a4e72071511d81ef105965f5fba7758be" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DEPRECATED bool</type>
+        <definition>DEPRECATED bool AiUserGetPntFunc</definition>
+        <argsstring>(const char *, const AtShaderGlobals *, AtPoint *)</argsstring>
+        <name>AiUserGetPntFunc</name>
+        <param>
+          <type>const char *</type>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+        </param>
+        <param>
+          <type><ref refid="struct_at_point" kindref="compound">AtPoint</ref> *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_userdef.h" line="159" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__userdef_8h_1a3c3051ed60849389e741ee53a4e3a04a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiUserGetPntFuncAtString</definition>
+        <argsstring>(const AtString, const AtShaderGlobals *, AtPoint *)</argsstring>
+        <name>AiUserGetPntFuncAtString</name>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+        </param>
+        <param>
+          <type><ref refid="struct_at_point" kindref="compound">AtPoint</ref> *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_userdef.h" line="159" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__userdef_8h_1ae4b3338ebe7cbc03727d7a2bfaa519cd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiUserGetPntFunc</definition>
+        <argsstring>(const AtString str, const AtShaderGlobals *sg, AtPoint *x)</argsstring>
+        <name>AiUserGetPntFunc</name>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>str</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_at_point" kindref="compound">AtPoint</ref> *</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_userdef.h" line="159" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_userdef.h" bodystart="159" bodyend="159"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__userdef_8h_1acabd97b04fc0f607d212320ba43a2a40" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DEPRECATED bool</type>
+        <definition>DEPRECATED bool AiUserGetPnt2Func</definition>
+        <argsstring>(const char *, const AtShaderGlobals *, AtPoint2 *)</argsstring>
+        <name>AiUserGetPnt2Func</name>
+        <param>
+          <type>const char *</type>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+        </param>
+        <param>
+          <type><ref refid="struct_at_point2" kindref="compound">AtPoint2</ref> *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_userdef.h" line="160" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__userdef_8h_1aac5ca104df125f17009c04ef0d0363a0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiUserGetPnt2FuncAtString</definition>
+        <argsstring>(const AtString, const AtShaderGlobals *, AtPoint2 *)</argsstring>
+        <name>AiUserGetPnt2FuncAtString</name>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+        </param>
+        <param>
+          <type><ref refid="struct_at_point2" kindref="compound">AtPoint2</ref> *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_userdef.h" line="160" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__userdef_8h_1ae98dba2cc4a9d082f96c440d19d3eb0a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiUserGetPnt2Func</definition>
+        <argsstring>(const AtString str, const AtShaderGlobals *sg, AtPoint2 *x)</argsstring>
+        <name>AiUserGetPnt2Func</name>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>str</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_at_point2" kindref="compound">AtPoint2</ref> *</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_userdef.h" line="160" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_userdef.h" bodystart="160" bodyend="160"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__userdef_8h_1a969acdfd42d4da6ed975fbd11533ec3d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DEPRECATED bool</type>
+        <definition>DEPRECATED bool AiUserGetStrFunc</definition>
+        <argsstring>(const char *, const AtShaderGlobals *, const char **)</argsstring>
+        <name>AiUserGetStrFunc</name>
+        <param>
+          <type>const char *</type>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+        </param>
+        <param>
+          <type>const char **</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_userdef.h" line="161" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__userdef_8h_1a1d58e2bcef4196dbc9df785f105ac2e7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiUserGetStrFuncAtString</definition>
+        <argsstring>(const AtString, const AtShaderGlobals *, const char **)</argsstring>
+        <name>AiUserGetStrFuncAtString</name>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+        </param>
+        <param>
+          <type>const char **</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_userdef.h" line="161" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__userdef_8h_1a01cd7ccdb61d649d90e82ac1a26e2502" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiUserGetStrFunc</definition>
+        <argsstring>(const AtString str, const AtShaderGlobals *sg, const char **x)</argsstring>
+        <name>AiUserGetStrFunc</name>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>str</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type>const char **</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_userdef.h" line="161" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_userdef.h" bodystart="161" bodyend="161"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__userdef_8h_1a03a8b9298b4992f29c6a0783b5b74c09" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DEPRECATED bool</type>
+        <definition>DEPRECATED bool AiUserGetPtrFunc</definition>
+        <argsstring>(const char *, const AtShaderGlobals *, void **)</argsstring>
+        <name>AiUserGetPtrFunc</name>
+        <param>
+          <type>const char *</type>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+        </param>
+        <param>
+          <type>void **</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_userdef.h" line="162" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__userdef_8h_1a8b4f31c1135435e5959f163784a9906e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiUserGetPtrFuncAtString</definition>
+        <argsstring>(const AtString, const AtShaderGlobals *, void **)</argsstring>
+        <name>AiUserGetPtrFuncAtString</name>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+        </param>
+        <param>
+          <type>void **</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_userdef.h" line="162" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__userdef_8h_1a11df511572483731f2caaf6bc38614e9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiUserGetPtrFunc</definition>
+        <argsstring>(const AtString str, const AtShaderGlobals *sg, void **x)</argsstring>
+        <name>AiUserGetPtrFunc</name>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>str</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type>void **</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_userdef.h" line="162" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_userdef.h" bodystart="162" bodyend="162"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__userdef_8h_1af256f0fd7bcfee415cee242b6648192d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DEPRECATED bool</type>
+        <definition>DEPRECATED bool AiUserGetNodeFunc</definition>
+        <argsstring>(const char *, const AtShaderGlobals *, AtNode **)</argsstring>
+        <name>AiUserGetNodeFunc</name>
+        <param>
+          <type>const char *</type>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+        </param>
+        <param>
+          <type><ref refid="struct_at_node" kindref="compound">AtNode</ref> **</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_userdef.h" line="163" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__userdef_8h_1a6e5e1dc5cc0bc12843ef91107c776678" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiUserGetNodeFuncAtString</definition>
+        <argsstring>(const AtString, const AtShaderGlobals *, AtNode **)</argsstring>
+        <name>AiUserGetNodeFuncAtString</name>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+        </param>
+        <param>
+          <type><ref refid="struct_at_node" kindref="compound">AtNode</ref> **</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_userdef.h" line="163" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__userdef_8h_1a6ce5c4343514535de0c4a56499f0ba01" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiUserGetNodeFunc</definition>
+        <argsstring>(const AtString str, const AtShaderGlobals *sg, AtNode **x)</argsstring>
+        <name>AiUserGetNodeFunc</name>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>str</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_at_node" kindref="compound">AtNode</ref> **</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_userdef.h" line="163" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_userdef.h" bodystart="163" bodyend="163"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__userdef_8h_1a955a9a47e387d844dcffa96e318ef981" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DEPRECATED bool</type>
+        <definition>DEPRECATED bool AiUserGetArrayFunc</definition>
+        <argsstring>(const char *, const AtShaderGlobals *, AtArray **)</argsstring>
+        <name>AiUserGetArrayFunc</name>
+        <param>
+          <type>const char *</type>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+        </param>
+        <param>
+          <type><ref refid="struct_at_array" kindref="compound">AtArray</ref> **</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_userdef.h" line="164" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__userdef_8h_1a9c8421a48147cc53c02e7b44ac933c5e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiUserGetArrayFuncAtString</definition>
+        <argsstring>(const AtString, const AtShaderGlobals *, AtArray **)</argsstring>
+        <name>AiUserGetArrayFuncAtString</name>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+        </param>
+        <param>
+          <type><ref refid="struct_at_array" kindref="compound">AtArray</ref> **</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_userdef.h" line="164" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__userdef_8h_1a0127c45dfcc9262ae77bdbc9aa5d8e27" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiUserGetArrayFunc</definition>
+        <argsstring>(const AtString str, const AtShaderGlobals *sg, AtArray **x)</argsstring>
+        <name>AiUserGetArrayFunc</name>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>str</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_at_array" kindref="compound">AtArray</ref> **</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_userdef.h" line="164" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_userdef.h" bodystart="164" bodyend="164"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__userdef_8h_1ace47f7551bd28eddb556e56e5b307829" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DEPRECATED bool</type>
+        <definition>DEPRECATED bool AiUserGetMatrixFunc</definition>
+        <argsstring>(const char *, const AtShaderGlobals *, AtMatrix *)</argsstring>
+        <name>AiUserGetMatrixFunc</name>
+        <param>
+          <type>const char *</type>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+        </param>
+        <param>
+          <type><ref refid="group__ai__matrix_1ga239cea4f70543ed6dae0d0549d28c01c" kindref="member">AtMatrix</ref> *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_userdef.h" line="165" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__userdef_8h_1a4337e32c04e934ad5f0b09f618919edb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiUserGetMatrixFuncAtString</definition>
+        <argsstring>(const AtString, const AtShaderGlobals *, AtMatrix *)</argsstring>
+        <name>AiUserGetMatrixFuncAtString</name>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+        </param>
+        <param>
+          <type><ref refid="group__ai__matrix_1ga239cea4f70543ed6dae0d0549d28c01c" kindref="member">AtMatrix</ref> *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_userdef.h" line="165" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__userdef_8h_1a6fe6f383f800340ad190481d4e2a5d37" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiUserGetMatrixFunc</definition>
+        <argsstring>(const AtString str, const AtShaderGlobals *sg, AtMatrix *x)</argsstring>
+        <name>AiUserGetMatrixFunc</name>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>str</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type><ref refid="group__ai__matrix_1ga239cea4f70543ed6dae0d0549d28c01c" kindref="member">AtMatrix</ref> *</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_userdef.h" line="165" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_userdef.h" bodystart="165" bodyend="165"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__userdef_8h_1ac7eb135d1e424481beebb23cde7a7d25" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DEPRECATED bool</type>
+        <definition>DEPRECATED bool AiUserGetDxyDerivativesFltFunc</definition>
+        <argsstring>(const char *, const AtShaderGlobals *, float *, float *)</argsstring>
+        <name>AiUserGetDxyDerivativesFltFunc</name>
+        <param>
+          <type>const char *</type>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+        </param>
+        <param>
+          <type>float *</type>
+        </param>
+        <param>
+          <type>float *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_userdef.h" line="175" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__userdef_8h_1a87bd554f069f5d76b88d3f8619153d0f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiUserGetDxyDerivativesFltFuncAtString</definition>
+        <argsstring>(const AtString, const AtShaderGlobals *, float *, float *)</argsstring>
+        <name>AiUserGetDxyDerivativesFltFuncAtString</name>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+        </param>
+        <param>
+          <type>float *</type>
+        </param>
+        <param>
+          <type>float *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_userdef.h" line="175" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__userdef_8h_1a0d71b4226fcd94fcd40d54d95da0e13f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiUserGetDxyDerivativesFltFunc</definition>
+        <argsstring>(const AtString str, const AtShaderGlobals *sg, float *dx, float *dy)</argsstring>
+        <name>AiUserGetDxyDerivativesFltFunc</name>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>str</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>dx</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>dy</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_userdef.h" line="175" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_userdef.h" bodystart="175" bodyend="175"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__userdef_8h_1aa6dfee233bacc1392c846eab55f2fffd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DEPRECATED bool</type>
+        <definition>DEPRECATED bool AiUserGetDxyDerivativesRGBFunc</definition>
+        <argsstring>(const char *, const AtShaderGlobals *, AtRGB *, AtRGB *)</argsstring>
+        <name>AiUserGetDxyDerivativesRGBFunc</name>
+        <param>
+          <type>const char *</type>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+        </param>
+        <param>
+          <type><ref refid="struct_at_r_g_b" kindref="compound">AtRGB</ref> *</type>
+        </param>
+        <param>
+          <type><ref refid="struct_at_r_g_b" kindref="compound">AtRGB</ref> *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_userdef.h" line="176" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__userdef_8h_1a72575b4d4f5e572cca0d087397727bda" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiUserGetDxyDerivativesRGBFuncAtString</definition>
+        <argsstring>(const AtString, const AtShaderGlobals *, AtRGB *, AtRGB *)</argsstring>
+        <name>AiUserGetDxyDerivativesRGBFuncAtString</name>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+        </param>
+        <param>
+          <type><ref refid="struct_at_r_g_b" kindref="compound">AtRGB</ref> *</type>
+        </param>
+        <param>
+          <type><ref refid="struct_at_r_g_b" kindref="compound">AtRGB</ref> *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_userdef.h" line="176" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__userdef_8h_1a8ab01aa6f4fffabb010ddab86ff15f82" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiUserGetDxyDerivativesRGBFunc</definition>
+        <argsstring>(const AtString str, const AtShaderGlobals *sg, AtRGB *dx, AtRGB *dy)</argsstring>
+        <name>AiUserGetDxyDerivativesRGBFunc</name>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>str</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_at_r_g_b" kindref="compound">AtRGB</ref> *</type>
+          <declname>dx</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_at_r_g_b" kindref="compound">AtRGB</ref> *</type>
+          <declname>dy</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_userdef.h" line="176" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_userdef.h" bodystart="176" bodyend="176"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__userdef_8h_1a7f586a5d88b58f96cdeba82cacbe20ee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DEPRECATED bool</type>
+        <definition>DEPRECATED bool AiUserGetDxyDerivativesRGBAFunc</definition>
+        <argsstring>(const char *, const AtShaderGlobals *, AtRGBA *, AtRGBA *)</argsstring>
+        <name>AiUserGetDxyDerivativesRGBAFunc</name>
+        <param>
+          <type>const char *</type>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+        </param>
+        <param>
+          <type><ref refid="struct_at_r_g_b_a" kindref="compound">AtRGBA</ref> *</type>
+        </param>
+        <param>
+          <type><ref refid="struct_at_r_g_b_a" kindref="compound">AtRGBA</ref> *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_userdef.h" line="177" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__userdef_8h_1a7961bbbfba1c823496d1a763370ccf84" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiUserGetDxyDerivativesRGBAFuncAtString</definition>
+        <argsstring>(const AtString, const AtShaderGlobals *, AtRGBA *, AtRGBA *)</argsstring>
+        <name>AiUserGetDxyDerivativesRGBAFuncAtString</name>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+        </param>
+        <param>
+          <type><ref refid="struct_at_r_g_b_a" kindref="compound">AtRGBA</ref> *</type>
+        </param>
+        <param>
+          <type><ref refid="struct_at_r_g_b_a" kindref="compound">AtRGBA</ref> *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_userdef.h" line="177" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__userdef_8h_1a595633c8ef1c32adec85a499d1f517d4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiUserGetDxyDerivativesRGBAFunc</definition>
+        <argsstring>(const AtString str, const AtShaderGlobals *sg, AtRGBA *dx, AtRGBA *dy)</argsstring>
+        <name>AiUserGetDxyDerivativesRGBAFunc</name>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>str</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_at_r_g_b_a" kindref="compound">AtRGBA</ref> *</type>
+          <declname>dx</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_at_r_g_b_a" kindref="compound">AtRGBA</ref> *</type>
+          <declname>dy</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_userdef.h" line="177" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_userdef.h" bodystart="177" bodyend="177"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__userdef_8h_1a5906cd87ed9587b0fb81c4ea3e906ad9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DEPRECATED bool</type>
+        <definition>DEPRECATED bool AiUserGetDxyDerivativesVecFunc</definition>
+        <argsstring>(const char *, const AtShaderGlobals *, AtVector *, AtVector *)</argsstring>
+        <name>AiUserGetDxyDerivativesVecFunc</name>
+        <param>
+          <type>const char *</type>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+        </param>
+        <param>
+          <type><ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> *</type>
+        </param>
+        <param>
+          <type><ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_userdef.h" line="178" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__userdef_8h_1a5bbb5c0b5ff4ad30cd800cfd2b224984" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiUserGetDxyDerivativesVecFuncAtString</definition>
+        <argsstring>(const AtString, const AtShaderGlobals *, AtVector *, AtVector *)</argsstring>
+        <name>AiUserGetDxyDerivativesVecFuncAtString</name>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+        </param>
+        <param>
+          <type><ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> *</type>
+        </param>
+        <param>
+          <type><ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_userdef.h" line="178" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__userdef_8h_1a368c379bf680c891923cd2a4110833c2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiUserGetDxyDerivativesVecFunc</definition>
+        <argsstring>(const AtString str, const AtShaderGlobals *sg, AtVector *dx, AtVector *dy)</argsstring>
+        <name>AiUserGetDxyDerivativesVecFunc</name>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>str</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type><ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> *</type>
+          <declname>dx</declname>
+        </param>
+        <param>
+          <type><ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> *</type>
+          <declname>dy</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_userdef.h" line="178" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_userdef.h" bodystart="178" bodyend="178"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__userdef_8h_1aead7dc90ff98bc9b55ec850c8c7d5abd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DEPRECATED bool</type>
+        <definition>DEPRECATED bool AiUserGetDxyDerivativesPntFunc</definition>
+        <argsstring>(const char *, const AtShaderGlobals *, AtPoint *, AtPoint *)</argsstring>
+        <name>AiUserGetDxyDerivativesPntFunc</name>
+        <param>
+          <type>const char *</type>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+        </param>
+        <param>
+          <type><ref refid="struct_at_point" kindref="compound">AtPoint</ref> *</type>
+        </param>
+        <param>
+          <type><ref refid="struct_at_point" kindref="compound">AtPoint</ref> *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_userdef.h" line="179" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__userdef_8h_1a48f4cef6196dbfc8378e474ef3bb42ea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiUserGetDxyDerivativesPntFuncAtString</definition>
+        <argsstring>(const AtString, const AtShaderGlobals *, AtPoint *, AtPoint *)</argsstring>
+        <name>AiUserGetDxyDerivativesPntFuncAtString</name>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+        </param>
+        <param>
+          <type><ref refid="struct_at_point" kindref="compound">AtPoint</ref> *</type>
+        </param>
+        <param>
+          <type><ref refid="struct_at_point" kindref="compound">AtPoint</ref> *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_userdef.h" line="179" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__userdef_8h_1af3ad00345399b140b2efc00e25e3f76d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiUserGetDxyDerivativesPntFunc</definition>
+        <argsstring>(const AtString str, const AtShaderGlobals *sg, AtPoint *dx, AtPoint *dy)</argsstring>
+        <name>AiUserGetDxyDerivativesPntFunc</name>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>str</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_at_point" kindref="compound">AtPoint</ref> *</type>
+          <declname>dx</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_at_point" kindref="compound">AtPoint</ref> *</type>
+          <declname>dy</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_userdef.h" line="179" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_userdef.h" bodystart="179" bodyend="179"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__userdef_8h_1a69a25433f9eeb4e26ac60f20034f124a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DEPRECATED bool</type>
+        <definition>DEPRECATED bool AiUserGetDxyDerivativesPnt2Func</definition>
+        <argsstring>(const char *, const AtShaderGlobals *, AtPoint2 *, AtPoint2 *)</argsstring>
+        <name>AiUserGetDxyDerivativesPnt2Func</name>
+        <param>
+          <type>const char *</type>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+        </param>
+        <param>
+          <type><ref refid="struct_at_point2" kindref="compound">AtPoint2</ref> *</type>
+        </param>
+        <param>
+          <type><ref refid="struct_at_point2" kindref="compound">AtPoint2</ref> *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_userdef.h" line="180" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__userdef_8h_1a96a99661d3f7984ab953aa8f5740153d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiUserGetDxyDerivativesPnt2FuncAtString</definition>
+        <argsstring>(const AtString, const AtShaderGlobals *, AtPoint2 *, AtPoint2 *)</argsstring>
+        <name>AiUserGetDxyDerivativesPnt2FuncAtString</name>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+        </param>
+        <param>
+          <type><ref refid="struct_at_point2" kindref="compound">AtPoint2</ref> *</type>
+        </param>
+        <param>
+          <type><ref refid="struct_at_point2" kindref="compound">AtPoint2</ref> *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_userdef.h" line="180" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__userdef_8h_1a7d1cd7d3e2d7b93e70a4ceae81c930e2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiUserGetDxyDerivativesPnt2Func</definition>
+        <argsstring>(const AtString str, const AtShaderGlobals *sg, AtPoint2 *dx, AtPoint2 *dy)</argsstring>
+        <name>AiUserGetDxyDerivativesPnt2Func</name>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>str</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_at_point2" kindref="compound">AtPoint2</ref> *</type>
+          <declname>dx</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_at_point2" kindref="compound">AtPoint2</ref> *</type>
+          <declname>dy</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_userdef.h" line="180" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_userdef.h" bodystart="180" bodyend="180"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__userdef_8h_1af7834a59914f319a098ca3984fe882fe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DEPRECATED bool</type>
+        <definition>DEPRECATED bool AiUserGetDxyDerivativesArrayFunc</definition>
+        <argsstring>(const char *, const AtShaderGlobals *, AtArray **, AtArray **)</argsstring>
+        <name>AiUserGetDxyDerivativesArrayFunc</name>
+        <param>
+          <type>const char *</type>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+        </param>
+        <param>
+          <type><ref refid="struct_at_array" kindref="compound">AtArray</ref> **</type>
+        </param>
+        <param>
+          <type><ref refid="struct_at_array" kindref="compound">AtArray</ref> **</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_userdef.h" line="181" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__userdef_8h_1a6ac7d2f80564a0881b1e9732e4000332" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiUserGetDxyDerivativesArrayFuncAtString</definition>
+        <argsstring>(const AtString, const AtShaderGlobals *, AtArray **, AtArray **)</argsstring>
+        <name>AiUserGetDxyDerivativesArrayFuncAtString</name>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+        </param>
+        <param>
+          <type><ref refid="struct_at_array" kindref="compound">AtArray</ref> **</type>
+        </param>
+        <param>
+          <type><ref refid="struct_at_array" kindref="compound">AtArray</ref> **</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_userdef.h" line="181" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__userdef_8h_1a285d101738c3050841d1e58f68173155" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiUserGetDxyDerivativesArrayFunc</definition>
+        <argsstring>(const AtString str, const AtShaderGlobals *sg, AtArray **dx, AtArray **dy)</argsstring>
+        <name>AiUserGetDxyDerivativesArrayFunc</name>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>str</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_at_array" kindref="compound">AtArray</ref> **</type>
+          <declname>dx</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_at_array" kindref="compound">AtArray</ref> **</type>
+          <declname>dy</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_userdef.h" line="181" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_userdef.h" bodystart="181" bodyend="181"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__userdef_8h_1a92c02fa469d3fcf00af645c51db94735" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DEPRECATED bool</type>
+        <definition>DEPRECATED bool AiUserGetDxyDerivativesMatrixFunc</definition>
+        <argsstring>(const char *, const AtShaderGlobals *, AtMatrix *, AtMatrix *)</argsstring>
+        <name>AiUserGetDxyDerivativesMatrixFunc</name>
+        <param>
+          <type>const char *</type>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+        </param>
+        <param>
+          <type><ref refid="group__ai__matrix_1ga239cea4f70543ed6dae0d0549d28c01c" kindref="member">AtMatrix</ref> *</type>
+        </param>
+        <param>
+          <type><ref refid="group__ai__matrix_1ga239cea4f70543ed6dae0d0549d28c01c" kindref="member">AtMatrix</ref> *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_userdef.h" line="182" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__userdef_8h_1ab46dbd5cdbb5e65f297aa8682222b483" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiUserGetDxyDerivativesMatrixFuncAtString</definition>
+        <argsstring>(const AtString, const AtShaderGlobals *, AtMatrix *, AtMatrix *)</argsstring>
+        <name>AiUserGetDxyDerivativesMatrixFuncAtString</name>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+        </param>
+        <param>
+          <type><ref refid="group__ai__matrix_1ga239cea4f70543ed6dae0d0549d28c01c" kindref="member">AtMatrix</ref> *</type>
+        </param>
+        <param>
+          <type><ref refid="group__ai__matrix_1ga239cea4f70543ed6dae0d0549d28c01c" kindref="member">AtMatrix</ref> *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_userdef.h" line="182" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__userdef_8h_1aa7b964c83be5087e33203166f025f945" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiUserGetDxyDerivativesMatrixFunc</definition>
+        <argsstring>(const AtString str, const AtShaderGlobals *sg, AtMatrix *dx, AtMatrix *dy)</argsstring>
+        <name>AiUserGetDxyDerivativesMatrixFunc</name>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>str</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type><ref refid="group__ai__matrix_1ga239cea4f70543ed6dae0d0549d28c01c" kindref="member">AtMatrix</ref> *</type>
+          <declname>dx</declname>
+        </param>
+        <param>
+          <type><ref refid="group__ai__matrix_1ga239cea4f70543ed6dae0d0549d28c01c" kindref="member">AtMatrix</ref> *</type>
+          <declname>dy</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_userdef.h" line="182" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_userdef.h" bodystart="182" bodyend="182"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>User data functions for shaders </para>    </detaileddescription>
+    <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_userdef.h"/>
+  </compounddef>
+</doxygen>

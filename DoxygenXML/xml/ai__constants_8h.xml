@@ -1,0 +1,630 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="ai__constants_8h" kind="file" language="C++">
+    <compoundname>ai_constants.h</compoundname>
+    <includedby refid="ai__vector_8h" local="yes">ai_vector.h</includedby>
+    <includedby refid="ai__types_8h" local="yes">ai_types.h</includedby>
+    <includedby refid="ai__color_8h" local="yes">ai_color.h</includedby>
+    <includedby refid="ai_8h" local="yes">ai.h</includedby>
+    <invincdepgraph>
+      <node id="208">
+        <label>ai_constants.h</label>
+        <link refid="ai_constants.h"/>
+        <childnode refid="209" relation="include">
+        </childnode>
+        <childnode refid="239" relation="include">
+        </childnode>
+        <childnode refid="240" relation="include">
+        </childnode>
+        <childnode refid="212" relation="include">
+        </childnode>
+      </node>
+      <node id="234">
+        <label>ai_ray.h</label>
+        <link refid="ai__ray_8h"/>
+        <childnode refid="224" relation="include">
+        </childnode>
+        <childnode refid="212" relation="include">
+        </childnode>
+      </node>
+      <node id="215">
+        <label>ai_universe.h</label>
+        <link refid="ai__universe_8h"/>
+        <childnode refid="212" relation="include">
+        </childnode>
+      </node>
+      <node id="221">
+        <label>ai_filters.h</label>
+        <link refid="ai__filters_8h"/>
+        <childnode refid="212" relation="include">
+        </childnode>
+      </node>
+      <node id="241">
+        <label>ai_shader_sss.h</label>
+        <link refid="ai__shader__sss_8h"/>
+        <childnode refid="212" relation="include">
+        </childnode>
+      </node>
+      <node id="246">
+        <label>ai_allocate.h</label>
+        <link refid="ai__allocate_8h"/>
+        <childnode refid="212" relation="include">
+        </childnode>
+      </node>
+      <node id="242">
+        <label>ai_plugins.h</label>
+        <link refid="ai__plugins_8h"/>
+        <childnode refid="212" relation="include">
+        </childnode>
+      </node>
+      <node id="235">
+        <label>ai_shader_sample.h</label>
+        <link refid="ai__shader__sample_8h"/>
+        <childnode refid="234" relation="include">
+        </childnode>
+        <childnode refid="212" relation="include">
+        </childnode>
+      </node>
+      <node id="214">
+        <label>ai_shader_util.h</label>
+        <link refid="ai__shader__util_8h"/>
+        <childnode refid="212" relation="include">
+        </childnode>
+      </node>
+      <node id="245">
+        <label>ai_msg.h</label>
+        <link refid="ai__msg_8h"/>
+        <childnode refid="212" relation="include">
+        </childnode>
+        <childnode refid="246" relation="include">
+        </childnode>
+      </node>
+      <node id="237">
+        <label>ai_shader_volume.h</label>
+        <link refid="ai__shader__volume_8h"/>
+        <childnode refid="212" relation="include">
+        </childnode>
+      </node>
+      <node id="231">
+        <label>ai_texture.h</label>
+        <link refid="ai__texture_8h"/>
+        <childnode refid="212" relation="include">
+        </childnode>
+      </node>
+      <node id="209">
+        <label>ai_vector.h</label>
+        <link refid="ai__vector_8h"/>
+        <childnode refid="210" relation="include">
+        </childnode>
+        <childnode refid="216" relation="include">
+        </childnode>
+        <childnode refid="217" relation="include">
+        </childnode>
+        <childnode refid="218" relation="include">
+        </childnode>
+        <childnode refid="221" relation="include">
+        </childnode>
+        <childnode refid="222" relation="include">
+        </childnode>
+        <childnode refid="226" relation="include">
+        </childnode>
+        <childnode refid="228" relation="include">
+        </childnode>
+        <childnode refid="230" relation="include">
+        </childnode>
+        <childnode refid="229" relation="include">
+        </childnode>
+        <childnode refid="224" relation="include">
+        </childnode>
+        <childnode refid="235" relation="include">
+        </childnode>
+        <childnode refid="234" relation="include">
+        </childnode>
+        <childnode refid="232" relation="include">
+        </childnode>
+        <childnode refid="236" relation="include">
+        </childnode>
+        <childnode refid="225" relation="include">
+        </childnode>
+        <childnode refid="233" relation="include">
+        </childnode>
+        <childnode refid="214" relation="include">
+        </childnode>
+        <childnode refid="237" relation="include">
+        </childnode>
+        <childnode refid="238" relation="include">
+        </childnode>
+        <childnode refid="212" relation="include">
+        </childnode>
+      </node>
+      <node id="226">
+        <label>ai_metadata.h</label>
+        <link refid="ai__metadata_8h"/>
+        <childnode refid="212" relation="include">
+        </childnode>
+      </node>
+      <node id="219">
+        <label>ai_node_entry.h</label>
+        <link refid="ai__node__entry_8h"/>
+        <childnode refid="220" relation="include">
+        </childnode>
+        <childnode refid="226" relation="include">
+        </childnode>
+        <childnode refid="227" relation="include">
+        </childnode>
+      </node>
+      <node id="220">
+        <label>ai_nodes.h</label>
+        <link refid="ai__nodes_8h"/>
+        <childnode refid="213" relation="include">
+        </childnode>
+        <childnode refid="221" relation="include">
+        </childnode>
+        <childnode refid="222" relation="include">
+        </childnode>
+        <childnode refid="223" relation="include">
+        </childnode>
+        <childnode refid="212" relation="include">
+        </childnode>
+        <childnode refid="224" relation="include">
+        </childnode>
+        <childnode refid="225" relation="include">
+        </childnode>
+      </node>
+      <node id="227">
+        <label>ai_dotass.h</label>
+        <link refid="ai__dotass_8h"/>
+        <childnode refid="212" relation="include">
+        </childnode>
+      </node>
+      <node id="211">
+        <label>ai_volume.h</label>
+        <link refid="ai__volume_8h"/>
+        <childnode refid="212" relation="include">
+        </childnode>
+      </node>
+      <node id="243">
+        <label>ai_driver_utils.h</label>
+        <link refid="ai__driver__utils_8h"/>
+        <childnode refid="212" relation="include">
+        </childnode>
+      </node>
+      <node id="239">
+        <label>ai_types.h</label>
+        <link refid="ai__types_8h"/>
+        <childnode refid="209" relation="include">
+        </childnode>
+        <childnode refid="240" relation="include">
+        </childnode>
+        <childnode refid="217" relation="include">
+        </childnode>
+        <childnode refid="218" relation="include">
+        </childnode>
+        <childnode refid="242" relation="include">
+        </childnode>
+        <childnode refid="213" relation="include">
+        </childnode>
+        <childnode refid="243" relation="include">
+        </childnode>
+        <childnode refid="244" relation="include">
+        </childnode>
+        <childnode refid="221" relation="include">
+        </childnode>
+        <childnode refid="245" relation="include">
+        </childnode>
+        <childnode refid="228" relation="include">
+        </childnode>
+        <childnode refid="229" relation="include">
+        </childnode>
+        <childnode refid="234" relation="include">
+        </childnode>
+        <childnode refid="232" relation="include">
+        </childnode>
+        <childnode refid="236" relation="include">
+        </childnode>
+        <childnode refid="225" relation="include">
+        </childnode>
+        <childnode refid="233" relation="include">
+        </childnode>
+        <childnode refid="215" relation="include">
+        </childnode>
+        <childnode refid="212" relation="include">
+        </childnode>
+      </node>
+      <node id="213">
+        <label>ai_drivers.h</label>
+        <link refid="ai__drivers_8h"/>
+        <childnode refid="212" relation="include">
+        </childnode>
+      </node>
+      <node id="222">
+        <label>ai_cameras.h</label>
+        <link refid="ai__cameras_8h"/>
+        <childnode refid="212" relation="include">
+        </childnode>
+      </node>
+      <node id="217">
+        <label>ai_array.h</label>
+        <link refid="ai__array_8h"/>
+        <childnode refid="218" relation="include">
+        </childnode>
+        <childnode refid="229" relation="include">
+        </childnode>
+        <childnode refid="232" relation="include">
+        </childnode>
+        <childnode refid="225" relation="include">
+        </childnode>
+        <childnode refid="233" relation="include">
+        </childnode>
+        <childnode refid="212" relation="include">
+        </childnode>
+      </node>
+      <node id="230">
+        <label>ai_shader_brdf.h</label>
+        <link refid="ai__shader__brdf_8h"/>
+        <childnode refid="212" relation="include">
+        </childnode>
+      </node>
+      <node id="218">
+        <label>ai_params.h</label>
+        <link refid="ai__params_8h"/>
+        <childnode refid="211" relation="include">
+        </childnode>
+        <childnode refid="219" relation="include">
+        </childnode>
+        <childnode refid="220" relation="include">
+        </childnode>
+        <childnode refid="212" relation="include">
+        </childnode>
+        <childnode refid="228" relation="include">
+        </childnode>
+        <childnode refid="229" relation="include">
+        </childnode>
+      </node>
+      <node id="228">
+        <label>ai_shader_aovs.h</label>
+        <link refid="ai__shader__aovs_8h"/>
+        <childnode refid="212" relation="include">
+        </childnode>
+      </node>
+      <node id="229">
+        <label>ai_shaderglobals.h</label>
+        <link refid="ai__shaderglobals_8h"/>
+        <childnode refid="230" relation="include">
+        </childnode>
+        <childnode refid="212" relation="include">
+        </childnode>
+        <childnode refid="224" relation="include">
+        </childnode>
+        <childnode refid="225" relation="include">
+        </childnode>
+        <childnode refid="214" relation="include">
+        </childnode>
+        <childnode refid="231" relation="include">
+        </childnode>
+      </node>
+      <node id="225">
+        <label>ai_shader_userdef.h</label>
+        <link refid="ai__shader__userdef_8h"/>
+        <childnode refid="212" relation="include">
+        </childnode>
+      </node>
+      <node id="240">
+        <label>ai_color.h</label>
+        <link refid="ai__color_8h"/>
+        <childnode refid="211" relation="include">
+        </childnode>
+        <childnode refid="217" relation="include">
+        </childnode>
+        <childnode refid="218" relation="include">
+        </childnode>
+        <childnode refid="226" relation="include">
+        </childnode>
+        <childnode refid="228" relation="include">
+        </childnode>
+        <childnode refid="230" relation="include">
+        </childnode>
+        <childnode refid="229" relation="include">
+        </childnode>
+        <childnode refid="224" relation="include">
+        </childnode>
+        <childnode refid="235" relation="include">
+        </childnode>
+        <childnode refid="232" relation="include">
+        </childnode>
+        <childnode refid="236" relation="include">
+        </childnode>
+        <childnode refid="241" relation="include">
+        </childnode>
+        <childnode refid="225" relation="include">
+        </childnode>
+        <childnode refid="233" relation="include">
+        </childnode>
+        <childnode refid="214" relation="include">
+        </childnode>
+        <childnode refid="237" relation="include">
+        </childnode>
+        <childnode refid="231" relation="include">
+        </childnode>
+        <childnode refid="212" relation="include">
+        </childnode>
+      </node>
+      <node id="233">
+        <label>ai_shader_parameval.h</label>
+        <link refid="ai__shader__parameval_8h"/>
+        <childnode refid="212" relation="include">
+        </childnode>
+      </node>
+      <node id="210">
+        <label>ai_bbox.h</label>
+        <link refid="ai__bbox_8h"/>
+        <childnode refid="211" relation="include">
+        </childnode>
+        <childnode refid="213" relation="include">
+        </childnode>
+        <childnode refid="214" relation="include">
+        </childnode>
+        <childnode refid="215" relation="include">
+        </childnode>
+        <childnode refid="212" relation="include">
+        </childnode>
+      </node>
+      <node id="236">
+        <label>ai_shader_radiance.h</label>
+        <link refid="ai__shader__radiance_8h"/>
+        <childnode refid="212" relation="include">
+        </childnode>
+      </node>
+      <node id="232">
+        <label>ai_shader_message.h</label>
+        <link refid="ai__shader__message_8h"/>
+        <childnode refid="212" relation="include">
+        </childnode>
+      </node>
+      <node id="223">
+        <label>ai_shaders.h</label>
+        <link refid="ai__shaders_8h"/>
+        <childnode refid="212" relation="include">
+        </childnode>
+      </node>
+      <node id="216">
+        <label>ai_matrix.h</label>
+        <link refid="ai__matrix_8h"/>
+        <childnode refid="217" relation="include">
+        </childnode>
+        <childnode refid="218" relation="include">
+        </childnode>
+        <childnode refid="229" relation="include">
+        </childnode>
+        <childnode refid="234" relation="include">
+        </childnode>
+        <childnode refid="225" relation="include">
+        </childnode>
+        <childnode refid="233" relation="include">
+        </childnode>
+        <childnode refid="212" relation="include">
+        </childnode>
+      </node>
+      <node id="224">
+        <label>ai_shader_lights.h</label>
+        <link refid="ai__shader__lights_8h"/>
+        <childnode refid="212" relation="include">
+        </childnode>
+      </node>
+      <node id="238">
+        <label>ai_noise.h</label>
+        <link refid="ai__noise_8h"/>
+        <childnode refid="212" relation="include">
+        </childnode>
+      </node>
+      <node id="244">
+        <label>ai_string.h</label>
+        <link refid="ai__string_8h"/>
+        <childnode refid="219" relation="include">
+        </childnode>
+        <childnode refid="220" relation="include">
+        </childnode>
+        <childnode refid="226" relation="include">
+        </childnode>
+        <childnode refid="228" relation="include">
+        </childnode>
+        <childnode refid="229" relation="include">
+        </childnode>
+        <childnode refid="234" relation="include">
+        </childnode>
+        <childnode refid="232" relation="include">
+        </childnode>
+        <childnode refid="225" relation="include">
+        </childnode>
+      </node>
+      <node id="212">
+        <label>ai.h</label>
+        <link refid="ai_8h"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="user-defined">
+      <header>Numerical Constants</header>
+      <memberdef kind="define" id="group__ai__constants_1gae6eba75b8cf695e07b70a22cd39509a4" prot="public" static="no">
+        <name>AI_PI</name>
+        <initializer>(3.1415926535897931f)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>pi </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_constants.h" line="21" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_constants.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__constants_1ga3543b773da0a81f87eea7a6e80b2cacd" prot="public" static="no">
+        <name>AI_PITIMES2</name>
+        <initializer>(6.2831853071795862f)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>2 * pi </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_constants.h" line="22" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_constants.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__constants_1ga233b419fa85ba1e1337def2692a9e7e9" prot="public" static="no">
+        <name>AI_PIOVER2</name>
+        <initializer>(1.5707963267948966f)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>pi / 2 </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_constants.h" line="23" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_constants.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__constants_1gafc9c837dde9125a322be0df306cb720a" prot="public" static="no">
+        <name>AI_ONEOVERPI</name>
+        <initializer>(0.3183098861837906f)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>1 / pi </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_constants.h" line="24" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_constants.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__constants_1ga08330580f17d7ba99755e3490ed5d95a" prot="public" static="no">
+        <name>AI_ONEOVER2PI</name>
+        <initializer>(0.1591549430918953f)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>1 / 2pi </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_constants.h" line="25" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_constants.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__constants_1ga7c62a0326a6349dda6d12d553011d085" prot="public" static="no">
+        <name>AI_E</name>
+        <initializer>(2.7182818284590452f)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>e </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_constants.h" line="26" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_constants.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__constants_1ga48d6cbb34e010c73f5c6073d12180737" prot="public" static="no">
+        <name>AI_LOG2E</name>
+        <initializer>(1.4426950408889634f)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>log_2(e) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_constants.h" line="27" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_constants.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__constants_1gac5b896dad391a22aed04f9b97f7203d2" prot="public" static="no">
+        <name>AI_LN2</name>
+        <initializer>(0.6931471805599453f)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>ln(2) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_constants.h" line="28" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_constants.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__constants_1ga977a89a7ff47dabc3137cf85ede99ca4" prot="public" static="no">
+        <name>AI_SQRT2</name>
+        <initializer>(1.4142135623730951f)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>sqrt(2) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_constants.h" line="29" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_constants.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__constants_1ga92033adc31d7e1923061370aa7febe2d" prot="public" static="no">
+        <name>AI_SQRT3</name>
+        <initializer>(1.7320508075688772f)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>sqrt(3) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_constants.h" line="30" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_constants.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__constants_1gaec130fb4bfced7fa62de706778360d65" prot="public" static="no">
+        <name>AI_GOLDEN</name>
+        <initializer>(1.6180339887498948f)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Golden ratio </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_constants.h" line="31" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_constants.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__constants_1ga0d2cb58d0cee6cb2a80210fbd4cb3a78" prot="public" static="no">
+        <name>AI_DTOR</name>
+        <initializer>(0.0174532925199433f)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Degrees to radians </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_constants.h" line="32" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_constants.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__constants_1ga64bd7c654442f122c2f9f0905a252029" prot="public" static="no">
+        <name>AI_RTOD</name>
+        <initializer>(57.295779513082323f)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Radians to degrees </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_constants.h" line="33" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_constants.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__constants_1gaf5a851882299e92281399bc8a3572818" prot="public" static="no">
+        <name>AI_EPSILON</name>
+        <initializer>(1.0e-4f)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>System epsilon value </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_constants.h" line="35" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_constants.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__constants_1ga95c7821608a4e5760d498d0785f81f90" prot="public" static="no">
+        <name>AI_BIG</name>
+        <initializer>(1.0e12f)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Big number </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_constants.h" line="36" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_constants.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__constants_1ga0f9aad8867e067d2482aa09f7e5806cd" prot="public" static="no">
+        <name>AI_INFINITE</name>
+        <initializer>(1.0e30f)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Our convention for an &quot;infinite&quot; number </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_constants.h" line="37" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_constants.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Various useful constants </para>    </detaileddescription>
+    <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_constants.h"/>
+  </compounddef>
+</doxygen>

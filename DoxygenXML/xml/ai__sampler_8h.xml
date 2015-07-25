@@ -1,0 +1,206 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="ai__sampler_8h" kind="file" language="C++">
+    <compoundname>ai_sampler.h</compoundname>
+    <includes refid="ai__api_8h" local="yes">ai_api.h</includes>
+    <includedby refid="ai_8h" local="yes">ai.h</includedby>
+    <incdepgraph>
+      <node id="519">
+        <label>ai_api.h</label>
+        <link refid="ai__api_8h"/>
+      </node>
+      <node id="518">
+        <label>ai_sampler.h</label>
+        <link refid="ai_sampler.h"/>
+        <childnode refid="519" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="521">
+        <label>ai.h</label>
+        <link refid="ai_8h"/>
+      </node>
+      <node id="520">
+        <label>ai_sampler.h</label>
+        <link refid="ai_sampler.h"/>
+        <childnode refid="521" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group__ai__sampler_1ga020c82e219b20c68a9f17662743a1999" prot="public" static="no">
+        <type>struct <ref refid="group__ai__sampler_1ga020c82e219b20c68a9f17662743a1999" kindref="member">AtSampler</ref></type>
+        <definition>typedef struct AtSampler AtSampler</definition>
+        <argsstring></argsstring>
+        <name>AtSampler</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Opaque data type for a sampler </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_sampler.h" line="48" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_sampler.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__ai__sampler_1ga90249a552a8a50b3a143f6f79fbb0f5e" prot="public" static="no">
+        <type>struct <ref refid="group__ai__sampler_1ga90249a552a8a50b3a143f6f79fbb0f5e" kindref="member">AtSamplerIterator</ref></type>
+        <definition>typedef struct AtSamplerIterator AtSamplerIterator</definition>
+        <argsstring></argsstring>
+        <name>AtSamplerIterator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Opaque data type for a sampler iterator </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_sampler.h" line="48" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_sampler.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__ai__sampler_1ga51b0074da64d6baf143bebdacad4d5c9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__ai__sampler_1ga020c82e219b20c68a9f17662743a1999" kindref="member">AtSampler</ref> *</type>
+        <definition>AtSampler* AiSampler</definition>
+        <argsstring>(int nsamples, int ndim)</argsstring>
+        <name>AiSampler</name>
+        <param>
+          <type>int</type>
+          <declname>nsamples</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>ndim</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_sampler.h" line="31" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__sampler_1ga0f2946499f27be75b5d1d37bef534d85" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__ai__sampler_1ga020c82e219b20c68a9f17662743a1999" kindref="member">AtSampler</ref> *</type>
+        <definition>AtSampler* AiSamplerSeeded</definition>
+        <argsstring>(int seed, int nsamples, int ndim)</argsstring>
+        <name>AiSamplerSeeded</name>
+        <param>
+          <type>int</type>
+          <declname>seed</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nsamples</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>ndim</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_sampler.h" line="32" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__sampler_1ga47b9562efe1567cb5c1e6d2fb0c42da8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__ai__sampler_1ga90249a552a8a50b3a143f6f79fbb0f5e" kindref="member">AtSamplerIterator</ref> *</type>
+        <definition>AtSamplerIterator* AiSamplerIterator</definition>
+        <argsstring>(const AtSampler *sampler, const AtShaderGlobals *sg)</argsstring>
+        <name>AiSamplerIterator</name>
+        <param>
+          <type>const <ref refid="group__ai__sampler_1ga020c82e219b20c68a9f17662743a1999" kindref="member">AtSampler</ref> *</type>
+          <declname>sampler</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_sampler.h" line="33" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__sampler_1ga5f3393a811f51d80c6281fb571812b64" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiSamplerGetSample</definition>
+        <argsstring>(AtSamplerIterator *iterator, float *sample)</argsstring>
+        <name>AiSamplerGetSample</name>
+        <param>
+          <type><ref refid="group__ai__sampler_1ga90249a552a8a50b3a143f6f79fbb0f5e" kindref="member">AtSamplerIterator</ref> *</type>
+          <declname>iterator</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>sample</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_sampler.h" line="34" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__sampler_1ga395a46f4c4047472a66edeef725f2c31" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int AiSamplerGetSampleCount</definition>
+        <argsstring>(const AtSamplerIterator *iterator)</argsstring>
+        <name>AiSamplerGetSampleCount</name>
+        <param>
+          <type>const <ref refid="group__ai__sampler_1ga90249a552a8a50b3a143f6f79fbb0f5e" kindref="member">AtSamplerIterator</ref> *</type>
+          <declname>iterator</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_sampler.h" line="35" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__sampler_1gae2bf439b451018a22537b3ec4de1f50c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float AiSamplerGetSampleInvCount</definition>
+        <argsstring>(const AtSamplerIterator *iterator)</argsstring>
+        <name>AiSamplerGetSampleInvCount</name>
+        <param>
+          <type>const <ref refid="group__ai__sampler_1ga90249a552a8a50b3a143f6f79fbb0f5e" kindref="member">AtSamplerIterator</ref> *</type>
+          <declname>iterator</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_sampler.h" line="36" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__sampler_1ga521aeac89891148d9934f01f1ea700dc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiSamplerDestroy</definition>
+        <argsstring>(AtSampler *sampler)</argsstring>
+        <name>AiSamplerDestroy</name>
+        <param>
+          <type><ref refid="group__ai__sampler_1ga020c82e219b20c68a9f17662743a1999" kindref="member">AtSampler</ref> *</type>
+          <declname>sampler</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_sampler.h" line="37" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>A generic, two-dimensional sampler that is sometimes useful when writing shaders </para>    </detaileddescription>
+    <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_sampler.h"/>
+  </compounddef>
+</doxygen>

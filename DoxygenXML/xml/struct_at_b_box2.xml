@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="struct_at_b_box2" kind="struct" language="C++" prot="public">
+    <compoundname>AtBBox2</compoundname>
+    <includes refid="ai__bbox_8h" local="no">ai_bbox.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_at_b_box2_1ab33a729395c8205643c00d16d631be60" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int AtBBox2::minx</definition>
+        <argsstring></argsstring>
+        <name>minx</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_bbox.h" line="32" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_bbox.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_b_box2_1aeb5f432002a1accb415813d7438f0aa5" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int AtBBox2::miny</definition>
+        <argsstring></argsstring>
+        <name>miny</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_bbox.h" line="32" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_bbox.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_b_box2_1a4020349f4004f6b2dc60dd9235303555" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int AtBBox2::maxx</definition>
+        <argsstring></argsstring>
+        <name>maxx</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_bbox.h" line="32" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_bbox.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_b_box2_1a107a4e2dfad1fe6835e2d38ffb7b39cb" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int AtBBox2::maxy</definition>
+        <argsstring></argsstring>
+        <name>maxy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_bbox.h" line="32" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_bbox.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>2D axis-aligned bounding box (uses integers) </para>    </detaileddescription>
+    <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_bbox.h" line="31" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_bbox.h" bodystart="30" bodyend="33"/>
+    <listofallmembers>
+      <member refid="struct_at_b_box2_1a4020349f4004f6b2dc60dd9235303555" prot="public" virt="non-virtual"><scope>AtBBox2</scope><name>maxx</name></member>
+      <member refid="struct_at_b_box2_1a107a4e2dfad1fe6835e2d38ffb7b39cb" prot="public" virt="non-virtual"><scope>AtBBox2</scope><name>maxy</name></member>
+      <member refid="struct_at_b_box2_1ab33a729395c8205643c00d16d631be60" prot="public" virt="non-virtual"><scope>AtBBox2</scope><name>minx</name></member>
+      <member refid="struct_at_b_box2_1aeb5f432002a1accb415813d7438f0aa5" prot="public" virt="non-virtual"><scope>AtBBox2</scope><name>miny</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

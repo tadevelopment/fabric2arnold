@@ -1,0 +1,166 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="struct_at_volume_plugin_vtable" kind="struct" language="C++" prot="public">
+    <compoundname>AtVolumePluginVtable</compoundname>
+    <includes refid="ai__volume_8h" local="no">ai_volume.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_at_volume_plugin_vtable_1a033b90f16516c76ad1d4fa440bb251f3" prot="public" static="no" mutable="no">
+        <type><ref refid="group__ai__volumes_1gabe6c3604458a81adbb9541116ec45d82" kindref="member">AtVolumePluginInit</ref></type>
+        <definition>AtVolumePluginInit AtVolumePluginVtable::Init</definition>
+        <argsstring></argsstring>
+        <name>Init</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method is called first and should initialize the volume plugin </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_volume.h" line="196" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_volume.h" bodystart="196" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_volume_plugin_vtable_1a648f53355e913d8918860b437ea254a9" prot="public" static="no" mutable="no">
+        <type><ref refid="group__ai__volumes_1gadfe24ebc98193d6456f5935ed90e9579" kindref="member">AtVolumePluginCleanup</ref></type>
+        <definition>AtVolumePluginCleanup AtVolumePluginVtable::Cleanup</definition>
+        <argsstring></argsstring>
+        <name>Cleanup</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method is called last and should clean up any memory used by the volume plugin </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_volume.h" line="197" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_volume.h" bodystart="197" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_volume_plugin_vtable_1a3ff70595091fde7baea6f552571d4680" prot="public" static="no" mutable="no">
+        <type><ref refid="group__ai__volumes_1gacc9b10f81897f73f6639d766710a5d5d" kindref="member">AtVolumePluginCreateVolume</ref></type>
+        <definition>AtVolumePluginCreateVolume AtVolumePluginVtable::CreateVolume</definition>
+        <argsstring></argsstring>
+        <name>CreateVolume</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method is called to load/create a volume </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_volume.h" line="198" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_volume.h" bodystart="198" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_volume_plugin_vtable_1a993ac6ee5628b6154682b0c72a52c931" prot="public" static="no" mutable="no">
+        <type><ref refid="group__ai__volumes_1gac5ccd339ab12eeb595d317438fbf30a0" kindref="member">AtVolumePluginCleanupVolume</ref></type>
+        <definition>AtVolumePluginCleanupVolume AtVolumePluginVtable::CleanupVolume</definition>
+        <argsstring></argsstring>
+        <name>CleanupVolume</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method is called to clean up a volume when it&apos;s no longer needed </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_volume.h" line="199" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_volume.h" bodystart="199" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_volume_plugin_vtable_1adb8865483e8e1dca07693dfcafb62ba0" prot="public" static="no" mutable="no">
+        <type><ref refid="group__ai__volumes_1ga251067a3542b07c53dc67f98da35f056" kindref="member">AtVolumePluginSample</ref></type>
+        <definition>AtVolumePluginSample AtVolumePluginVtable::Sample</definition>
+        <argsstring></argsstring>
+        <name>Sample</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method is called to sample a volume&apos;s named channel using a given point and interpolation </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_volume.h" line="200" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_volume.h" bodystart="200" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_volume_plugin_vtable_1aabf4ff35c6b634750ebad898d8679e35" prot="public" static="no" mutable="no">
+        <type><ref refid="group__ai__volumes_1ga15496348020553b2f4e0361100d37a31" kindref="member">AtVolumePluginRayExtents</ref></type>
+        <definition>AtVolumePluginRayExtents AtVolumePluginVtable::RayExtents</definition>
+        <argsstring></argsstring>
+        <name>RayExtents</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method is called to get all tightly-bounded extents along a ray where the volume exists </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_volume.h" line="201" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_volume.h" bodystart="201" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_volume_plugin_vtable_1a73c5660ec47a7bdf405cd84bb8be2dcf" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char AtVolumePluginVtable::version[32]</definition>
+        <argsstring>[32]</argsstring>
+        <name>version</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>You must copy the contents of the AI_VERSION macro here </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_volume.h" line="202" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_volume.h" bodystart="202" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_volume_plugin_vtable_1aec00917a94fb48d49899a1e26b72ddde" prot="public" static="no" mutable="no">
+        <type><ref refid="group__ai__volumes_1ga4a62e519527dee81b4b0e22d0b8d9593" kindref="member">AtVolumePluginUpdateVolume</ref></type>
+        <definition>AtVolumePluginUpdateVolume AtVolumePluginVtable::UpdateVolume</definition>
+        <argsstring></argsstring>
+        <name>UpdateVolume</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method is called to update a volume before render passes or on scene changes (optional) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_volume.h" line="203" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_volume.h" bodystart="203" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Volume plugin function table</para><para>This structure is used to report the function pointers that the renderer needs to call at runtime. The version field is used for runtime compatibility checking. </para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="108">
+        <label>AtNode</label>
+        <link refid="struct_at_node"/>
+      </node>
+      <node id="106">
+        <label>AtBBox</label>
+        <link refid="struct_at_b_box"/>
+        <childnode refid="107" relation="usage">
+          <edgelabel>min</edgelabel>
+          <edgelabel>max</edgelabel>
+        </childnode>
+      </node>
+      <node id="107">
+        <label>AtPoint</label>
+        <link refid="struct_at_point"/>
+      </node>
+      <node id="104">
+        <label>AtVolumePluginVtable</label>
+        <link refid="struct_at_volume_plugin_vtable"/>
+        <childnode refid="105" relation="usage">
+          <edgelabel>RayExtents</edgelabel>
+          <edgelabel>Sample</edgelabel>
+          <edgelabel>CleanupVolume</edgelabel>
+        </childnode>
+        <childnode refid="108" relation="usage">
+          <edgelabel>UpdateVolume</edgelabel>
+          <edgelabel>CreateVolume</edgelabel>
+        </childnode>
+      </node>
+      <node id="105">
+        <label>AtVolumeData</label>
+        <link refid="struct_at_volume_data"/>
+        <childnode refid="106" relation="usage">
+          <edgelabel>bbox</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_volume.h" line="195" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_volume.h" bodystart="194" bodyend="204"/>
+    <listofallmembers>
+      <member refid="struct_at_volume_plugin_vtable_1a648f53355e913d8918860b437ea254a9" prot="public" virt="non-virtual"><scope>AtVolumePluginVtable</scope><name>Cleanup</name></member>
+      <member refid="struct_at_volume_plugin_vtable_1a993ac6ee5628b6154682b0c72a52c931" prot="public" virt="non-virtual"><scope>AtVolumePluginVtable</scope><name>CleanupVolume</name></member>
+      <member refid="struct_at_volume_plugin_vtable_1a3ff70595091fde7baea6f552571d4680" prot="public" virt="non-virtual"><scope>AtVolumePluginVtable</scope><name>CreateVolume</name></member>
+      <member refid="struct_at_volume_plugin_vtable_1a033b90f16516c76ad1d4fa440bb251f3" prot="public" virt="non-virtual"><scope>AtVolumePluginVtable</scope><name>Init</name></member>
+      <member refid="struct_at_volume_plugin_vtable_1aabf4ff35c6b634750ebad898d8679e35" prot="public" virt="non-virtual"><scope>AtVolumePluginVtable</scope><name>RayExtents</name></member>
+      <member refid="struct_at_volume_plugin_vtable_1adb8865483e8e1dca07693dfcafb62ba0" prot="public" virt="non-virtual"><scope>AtVolumePluginVtable</scope><name>Sample</name></member>
+      <member refid="struct_at_volume_plugin_vtable_1aec00917a94fb48d49899a1e26b72ddde" prot="public" virt="non-virtual"><scope>AtVolumePluginVtable</scope><name>UpdateVolume</name></member>
+      <member refid="struct_at_volume_plugin_vtable_1a73c5660ec47a7bdf405cd84bb8be2dcf" prot="public" virt="non-virtual"><scope>AtVolumePluginVtable</scope><name>version</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

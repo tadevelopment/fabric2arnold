@@ -1,0 +1,2879 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="group__ai__nodes" kind="group">
+    <compoundname>ai_nodes</compoundname>
+    <title>AtNode API</title>
+    <innerclass refid="struct_at_node" prot="public">AtNode</innerclass>
+      <sectiondef kind="user-defined">
+      <header>Node Method Declarations</header>
+      <memberdef kind="define" id="group__ai__nodes_1gadec5d9ecd55d964c1a30151fffa8e575" prot="public" static="no">
+        <name>node_parameters</name>
+        <initializer>static void Parameters(AtList* params, <ref refid="group__ai__nodemeta_1ga2bc4e600ff981b485a9070f367e6bda2" kindref="member">AtMetaDataStore</ref>* mds)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Parameter declaration method </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" line="61" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__nodes_1ga8e40576b04f6465c5fafbb009e4ba19f" prot="public" static="no">
+        <name>node_initialize</name>
+        <initializer>static void Initialize(<ref refid="struct_at_node" kindref="compound">AtNode</ref>* node, <ref refid="union_at_param_value" kindref="compound">AtParamValue</ref>* params)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Node initialization method </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" line="65" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__nodes_1ga88e12b100dbc0a1f44d32bf529d3e1df" prot="public" static="no">
+        <name>node_update</name>
+        <initializer>static void Update(<ref refid="struct_at_node" kindref="compound">AtNode</ref>* node, <ref refid="union_at_param_value" kindref="compound">AtParamValue</ref>* params)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Node update method </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" line="69" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__nodes_1ga1d66d14d02ac60ccd46bb952ac7c6695" prot="public" static="no">
+        <name>node_finish</name>
+        <initializer>static void Finish(<ref refid="struct_at_node" kindref="compound">AtNode</ref>* node)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Node de-initialization method </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" line="73" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__nodes_1gaef2910e1d5da254d1aa2ce6f8c49520a" prot="public" static="no">
+        <name>node_loader</name>
+        <initializer><ref refid="group__ai__plugins_1ga95e724cd6a8385c2cea8d7fddc3a5d28" kindref="member">AI_EXPORT_LIB</ref> bool NodeLoader(int i, <ref refid="struct_at_node_lib" kindref="compound">AtNodeLib</ref>* node)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Node loading method (for plugin nodes in dynamic libraries) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" line="77" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>AtNode Methods</header>
+      <memberdef kind="function" id="group__ai__nodes_1ga3b6d82ff565e59498426a70e164fe4b1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DEPRECATED <ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+        <definition>DEPRECATED AtNode* AiNode</definition>
+        <argsstring>(const char *name)</argsstring>
+        <name>AiNode</name>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" line="98" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodes_1gae8673e0e94a482abf7a391cae0b10e41" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+        <definition>AtNode* AiNodeAtString</definition>
+        <argsstring>(const AtString name)</argsstring>
+        <name>AiNodeAtString</name>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" line="99" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodes_1ga67505eef50745fb948158fd87ee4d0ae" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+        <definition>AtNode* AiNode</definition>
+        <argsstring>(const AtString name)</argsstring>
+        <name>AiNode</name>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" line="100" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" bodystart="100" bodyend="100"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodes_1ga6148a9382a00adde8ee3fea6c4b144f2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DEPRECATED <ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+        <definition>DEPRECATED AtNode* AiNodeLookUpByName</definition>
+        <argsstring>(const char *name)</argsstring>
+        <name>AiNodeLookUpByName</name>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" line="102" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodes_1ga8080ab2efdbc2003395f47d20dc286a9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+        <definition>AtNode* AiNodeLookUpByNameAtString</definition>
+        <argsstring>(const AtString name)</argsstring>
+        <name>AiNodeLookUpByNameAtString</name>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" line="103" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodes_1ga77d7e26727cd73c61145268dd2ebd920" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+        <definition>AtNode* AiNodeLookUpByName</definition>
+        <argsstring>(const AtString name)</argsstring>
+        <name>AiNodeLookUpByName</name>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" line="104" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" bodystart="104" bodyend="104"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodes_1ga8159a10470dc686508e2d1cb9e2743f7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiNodeReset</definition>
+        <argsstring>(AtNode *node)</argsstring>
+        <name>AiNodeReset</name>
+        <param>
+          <type><ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" line="106" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodes_1gad0d41d74f3a8930de179083298c414f1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiNodeResetParameter</definition>
+        <argsstring>(AtNode *node, const char *param)</argsstring>
+        <name>AiNodeResetParameter</name>
+        <param>
+          <type><ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>param</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" line="107" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodes_1gae2ce1642620d6d2a68a217934116fafe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+        <definition>AtNode* AiNodeClone</definition>
+        <argsstring>(const AtNode *node)</argsstring>
+        <name>AiNodeClone</name>
+        <param>
+          <type>const <ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" line="108" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodes_1ga4c5e05e6fb5eb188ced168c269d072a6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiNodeDestroy</definition>
+        <argsstring>(AtNode *node)</argsstring>
+        <name>AiNodeDestroy</name>
+        <param>
+          <type><ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" line="109" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodes_1gacac1264eb23e411aa7146d8e02921ec3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiNodeIs</definition>
+        <argsstring>(const AtNode *node, const char *str)</argsstring>
+        <name>AiNodeIs</name>
+        <param>
+          <type>const <ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>str</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" line="110" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodes_1ga32f8a98ea3b4efdd56ca89ab860f01e3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DEPRECATED bool</type>
+        <definition>DEPRECATED bool AiNodeDeclare</definition>
+        <argsstring>(AtNode *node, const char *param, const char *declaration)</argsstring>
+        <name>AiNodeDeclare</name>
+        <param>
+          <type><ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>param</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>declaration</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" line="112" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodes_1ga0d566557b82b0ce0c5a5e8f2c9428cb2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiNodeDeclareAtString</definition>
+        <argsstring>(AtNode *node, const AtString param, const char *declaration)</argsstring>
+        <name>AiNodeDeclareAtString</name>
+        <param>
+          <type><ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>param</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>declaration</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" line="113" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodes_1gafebad8cd1732d353f9af24ad962b4f23" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiNodeDeclare</definition>
+        <argsstring>(AtNode *node, const AtString param, const char *declaration)</argsstring>
+        <name>AiNodeDeclare</name>
+        <param>
+          <type><ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>param</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>declaration</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" line="114" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" bodystart="114" bodyend="114"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodes_1ga2966b564f0ab33eb58b9fc08495ef36b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiNodeLink</definition>
+        <argsstring>(AtNode *src, const char *input, AtNode *target)</argsstring>
+        <name>AiNodeLink</name>
+        <param>
+          <type><ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>input</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+          <declname>target</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" line="116" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodes_1ga05573083b01e0d5f2fd3a87d655cd327" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiNodeLinkOutput</definition>
+        <argsstring>(AtNode *src, const char *output, AtNode *target, const char *input)</argsstring>
+        <name>AiNodeLinkOutput</name>
+        <param>
+          <type><ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>output</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+          <declname>target</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>input</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" line="117" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodes_1gabf8740607a686a1a3e2becc6fff98fa8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiNodeUnlink</definition>
+        <argsstring>(AtNode *node, const char *input)</argsstring>
+        <name>AiNodeUnlink</name>
+        <param>
+          <type><ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>input</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" line="118" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodes_1gac20b1ad16e02938d97a34b38d38d4b30" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiNodeIsLinked</definition>
+        <argsstring>(const AtNode *node, const char *input)</argsstring>
+        <name>AiNodeIsLinked</name>
+        <param>
+          <type>const <ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>input</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" line="119" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodes_1gaaae8d01d2edc82009df1bd28415557ec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+        <definition>AtNode* AiNodeGetLink</definition>
+        <argsstring>(const AtNode *node, const char *input, int *comp=NULL)</argsstring>
+        <name>AiNodeGetLink</name>
+        <param>
+          <type>const <ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>input</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>comp</declname>
+          <defval><ref refid="group__ai__types_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" line="120" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodes_1gaf9c675305a4fbc1058665bcf20ff39e8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* AiNodeGetName</definition>
+        <argsstring>(const AtNode *node)</argsstring>
+        <name>AiNodeGetName</name>
+        <param>
+          <type>const <ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" line="121" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodes_1gacef39225891156b62b6a663cc230a192" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="struct_at_node_entry" kindref="compound">AtNodeEntry</ref> *</type>
+        <definition>const AtNodeEntry* AiNodeGetNodeEntry</definition>
+        <argsstring>(const AtNode *node)</argsstring>
+        <name>AiNodeGetNodeEntry</name>
+        <param>
+          <type>const <ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" line="122" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodes_1ga8b88e289b284b69734d86b077f42080f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="union_at_param_value" kindref="compound">AtParamValue</ref> *</type>
+        <definition>AtParamValue* AiNodeGetParams</definition>
+        <argsstring>(const AtNode *node)</argsstring>
+        <name>AiNodeGetParams</name>
+        <param>
+          <type>const <ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" line="123" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodes_1gae23742e73878271f8eafe71139e647f0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void *</type>
+        <definition>void* AiNodeGetLocalData</definition>
+        <argsstring>(const AtNode *node)</argsstring>
+        <name>AiNodeGetLocalData</name>
+        <param>
+          <type>const <ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" line="124" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodes_1gaf133f0f617bf3be98941d6ffa6090883" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiNodeSetLocalData</definition>
+        <argsstring>(AtNode *node, void *data)</argsstring>
+        <name>AiNodeSetLocalData</name>
+        <param>
+          <type><ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" line="125" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodes_1ga4a7bf8cb9faf7b1d91cbbd5e279435a2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiNodeSetDisabled</definition>
+        <argsstring>(AtNode *node, bool disabled)</argsstring>
+        <name>AiNodeSetDisabled</name>
+        <param>
+          <type><ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>disabled</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" line="126" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodes_1gae2b7776138fe1722d6a16fb82a469ad6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiNodeIsDisabled</definition>
+        <argsstring>(const AtNode *node)</argsstring>
+        <name>AiNodeIsDisabled</name>
+        <param>
+          <type>const <ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" line="127" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodes_1ga92d3e5a4187cf1cbfc2c992a47d4d768" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DEPRECATED const AtUserParamEntry *</type>
+        <definition>DEPRECATED const AtUserParamEntry* AiNodeLookUpUserParameter</definition>
+        <argsstring>(const AtNode *node, const char *param)</argsstring>
+        <name>AiNodeLookUpUserParameter</name>
+        <param>
+          <type>const <ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>param</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" line="129" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodes_1ga5ba318fab32d07829dbeef5622b0ebb8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const AtUserParamEntry *</type>
+        <definition>const AtUserParamEntry* AiNodeLookUpUserParameterAtString</definition>
+        <argsstring>(const AtNode *node, const AtString param)</argsstring>
+        <name>AiNodeLookUpUserParameterAtString</name>
+        <param>
+          <type>const <ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>param</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" line="130" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodes_1ga5843eac53e2e63c41a39ae4ce4211280" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>const AtUserParamEntry *</type>
+        <definition>const AtUserParamEntry* AiNodeLookUpUserParameter</definition>
+        <argsstring>(const AtNode *node, const AtString param)</argsstring>
+        <name>AiNodeLookUpUserParameter</name>
+        <param>
+          <type>const <ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>param</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" line="131" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" bodystart="131" bodyend="131"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodes_1gadde7c0948723aea39edd05a9efb54b52" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>AtUserParamIterator *</type>
+        <definition>AtUserParamIterator* AiNodeGetUserParamIterator</definition>
+        <argsstring>(const AtNode *node)</argsstring>
+        <name>AiNodeGetUserParamIterator</name>
+        <param>
+          <type>const <ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" line="133" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>AtUserParamIterator Methods</header>
+      <memberdef kind="function" id="group__ai__nodes_1gac2209011e77dc64572533781618b4ed0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiUserParamIteratorDestroy</definition>
+        <argsstring>(AtUserParamIterator *iter)</argsstring>
+        <name>AiUserParamIteratorDestroy</name>
+        <param>
+          <type>AtUserParamIterator *</type>
+          <declname>iter</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" line="140" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodes_1ga6e3d38b7a852f95b3c24125743131418" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const AtUserParamEntry *</type>
+        <definition>const AtUserParamEntry* AiUserParamIteratorGetNext</definition>
+        <argsstring>(AtUserParamIterator *iter)</argsstring>
+        <name>AiUserParamIteratorGetNext</name>
+        <param>
+          <type>AtUserParamIterator *</type>
+          <declname>iter</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" line="141" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodes_1gae382e61c378eb64c1fd9feaaacbcf7ee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiUserParamIteratorFinished</definition>
+        <argsstring>(const AtUserParamIterator *iter)</argsstring>
+        <name>AiUserParamIteratorFinished</name>
+        <param>
+          <type>const AtUserParamIterator *</type>
+          <declname>iter</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" line="142" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Parameter Writers</header>
+      <memberdef kind="function" id="group__ai__nodes_1ga078a633a86f6ff8be4234c3b6575030b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DEPRECATED void</type>
+        <definition>DEPRECATED void AiNodeSetByte</definition>
+        <argsstring>(AtNode *node, const char *param, AtByte val)</argsstring>
+        <name>AiNodeSetByte</name>
+        <param>
+          <type><ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>param</declname>
+        </param>
+        <param>
+          <type><ref refid="group__ai__types_1ga41f7f394ad3ef67901cce4d05bdabf89" kindref="member">AtByte</ref></type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" line="157" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodes_1gacf642ada04d9aa3829d9b38710330597" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiNodeSetByteAtString</definition>
+        <argsstring>(AtNode *node, const AtString param, AtByte val)</argsstring>
+        <name>AiNodeSetByteAtString</name>
+        <param>
+          <type><ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>param</declname>
+        </param>
+        <param>
+          <type><ref refid="group__ai__types_1ga41f7f394ad3ef67901cce4d05bdabf89" kindref="member">AtByte</ref></type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" line="157" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodes_1ga7eecb93a2a48e038c49caea452899afe" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiNodeSetByte</definition>
+        <argsstring>(AtNode *node, const AtString param, AtByte val)</argsstring>
+        <name>AiNodeSetByte</name>
+        <param>
+          <type><ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>param</declname>
+        </param>
+        <param>
+          <type><ref refid="group__ai__types_1ga41f7f394ad3ef67901cce4d05bdabf89" kindref="member">AtByte</ref></type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" line="157" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" bodystart="157" bodyend="157"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodes_1gabdeb5c0db798a2e70439f4e3947ed3be" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DEPRECATED void</type>
+        <definition>DEPRECATED void AiNodeSetInt</definition>
+        <argsstring>(AtNode *node, const char *param, int val)</argsstring>
+        <name>AiNodeSetInt</name>
+        <param>
+          <type><ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>param</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" line="158" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodes_1ga622e65c495027b993224dc72b06d2f0a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiNodeSetIntAtString</definition>
+        <argsstring>(AtNode *node, const AtString param, int val)</argsstring>
+        <name>AiNodeSetIntAtString</name>
+        <param>
+          <type><ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>param</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" line="158" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodes_1ga7a5aba295d8417c3e55743122a7410f4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiNodeSetInt</definition>
+        <argsstring>(AtNode *node, const AtString param, int val)</argsstring>
+        <name>AiNodeSetInt</name>
+        <param>
+          <type><ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>param</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" line="158" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" bodystart="158" bodyend="158"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodes_1ga9e5923b6f65e591b4762a2e3abb01718" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DEPRECATED void</type>
+        <definition>DEPRECATED void AiNodeSetUInt</definition>
+        <argsstring>(AtNode *node, const char *param, unsigned int val)</argsstring>
+        <name>AiNodeSetUInt</name>
+        <param>
+          <type><ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>param</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" line="159" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodes_1gad4b420c891beac59989cee07529d5fec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiNodeSetUIntAtString</definition>
+        <argsstring>(AtNode *node, const AtString param, unsigned int val)</argsstring>
+        <name>AiNodeSetUIntAtString</name>
+        <param>
+          <type><ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>param</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" line="159" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodes_1gaae3a3c8527443bdf42939a3c1cea2e4e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiNodeSetUInt</definition>
+        <argsstring>(AtNode *node, const AtString param, unsigned int val)</argsstring>
+        <name>AiNodeSetUInt</name>
+        <param>
+          <type><ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>param</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" line="159" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" bodystart="159" bodyend="159"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodes_1ga722907754095e86cf3671cbbf1c69414" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DEPRECATED void</type>
+        <definition>DEPRECATED void AiNodeSetBool</definition>
+        <argsstring>(AtNode *node, const char *param, bool val)</argsstring>
+        <name>AiNodeSetBool</name>
+        <param>
+          <type><ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>param</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" line="160" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodes_1ga103fc3b1ea2e424b3595a588796a678d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiNodeSetBoolAtString</definition>
+        <argsstring>(AtNode *node, const AtString param, bool val)</argsstring>
+        <name>AiNodeSetBoolAtString</name>
+        <param>
+          <type><ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>param</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" line="160" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodes_1ga0220ffba53da03aabe90b15384ce9e60" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiNodeSetBool</definition>
+        <argsstring>(AtNode *node, const AtString param, bool val)</argsstring>
+        <name>AiNodeSetBool</name>
+        <param>
+          <type><ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>param</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" line="160" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" bodystart="160" bodyend="160"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodes_1gae276cebe0da5bc6eb91027bc81b57239" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DEPRECATED void</type>
+        <definition>DEPRECATED void AiNodeSetFlt</definition>
+        <argsstring>(AtNode *node, const char *param, float val)</argsstring>
+        <name>AiNodeSetFlt</name>
+        <param>
+          <type><ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>param</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" line="161" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodes_1ga8244d07fb76d31c5bf4941b210e6692c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiNodeSetFltAtString</definition>
+        <argsstring>(AtNode *node, const AtString param, float val)</argsstring>
+        <name>AiNodeSetFltAtString</name>
+        <param>
+          <type><ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>param</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" line="161" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodes_1ga06944dfd684af9ba14f654b5ed98f067" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiNodeSetFlt</definition>
+        <argsstring>(AtNode *node, const AtString param, float val)</argsstring>
+        <name>AiNodeSetFlt</name>
+        <param>
+          <type><ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>param</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" line="161" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" bodystart="161" bodyend="161"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodes_1gaed1cd5497c7fc68eef62483458de4903" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DEPRECATED void</type>
+        <definition>DEPRECATED void AiNodeSetPtr</definition>
+        <argsstring>(AtNode *node, const char *param, void *val)</argsstring>
+        <name>AiNodeSetPtr</name>
+        <param>
+          <type><ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>param</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" line="162" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodes_1ga124f435d08b1a74f72635ed31932bbee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiNodeSetPtrAtString</definition>
+        <argsstring>(AtNode *node, const AtString param, void *val)</argsstring>
+        <name>AiNodeSetPtrAtString</name>
+        <param>
+          <type><ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>param</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" line="162" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodes_1gaabeee32e1c7af8695c255d18ec7d9026" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiNodeSetPtr</definition>
+        <argsstring>(AtNode *node, const AtString param, void *val)</argsstring>
+        <name>AiNodeSetPtr</name>
+        <param>
+          <type><ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>param</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" line="162" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" bodystart="162" bodyend="162"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodes_1ga25ef7ac371522c2b143ac66b37270b17" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DEPRECATED void</type>
+        <definition>DEPRECATED void AiNodeSetArray</definition>
+        <argsstring>(AtNode *node, const char *param, AtArray *val)</argsstring>
+        <name>AiNodeSetArray</name>
+        <param>
+          <type><ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>param</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_at_array" kindref="compound">AtArray</ref> *</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" line="163" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodes_1gadf2957d6664085769a6634c383606e29" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiNodeSetArrayAtString</definition>
+        <argsstring>(AtNode *node, const AtString param, AtArray *val)</argsstring>
+        <name>AiNodeSetArrayAtString</name>
+        <param>
+          <type><ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>param</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_at_array" kindref="compound">AtArray</ref> *</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" line="163" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodes_1ga0ed9507058ff43f0265c1366d9f8f8b3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiNodeSetArray</definition>
+        <argsstring>(AtNode *node, const AtString param, AtArray *val)</argsstring>
+        <name>AiNodeSetArray</name>
+        <param>
+          <type><ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>param</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_at_array" kindref="compound">AtArray</ref> *</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" line="163" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" bodystart="163" bodyend="163"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodes_1ga2b7adb0efb6c14a3c31a0b4707496a26" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DEPRECATED void</type>
+        <definition>DEPRECATED void AiNodeSetMatrix</definition>
+        <argsstring>(AtNode *node, const char *param, AtMatrix val)</argsstring>
+        <name>AiNodeSetMatrix</name>
+        <param>
+          <type><ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>param</declname>
+        </param>
+        <param>
+          <type><ref refid="group__ai__matrix_1ga239cea4f70543ed6dae0d0549d28c01c" kindref="member">AtMatrix</ref></type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" line="164" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodes_1ga76f6ed4fd4500370098724b039a652f6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiNodeSetMatrixAtString</definition>
+        <argsstring>(AtNode *node, const AtString param, AtMatrix val)</argsstring>
+        <name>AiNodeSetMatrixAtString</name>
+        <param>
+          <type><ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>param</declname>
+        </param>
+        <param>
+          <type><ref refid="group__ai__matrix_1ga239cea4f70543ed6dae0d0549d28c01c" kindref="member">AtMatrix</ref></type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" line="164" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodes_1ga539e5e05ea0311cc2e1154d821a35d31" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiNodeSetMatrix</definition>
+        <argsstring>(AtNode *node, const AtString param, AtMatrix val)</argsstring>
+        <name>AiNodeSetMatrix</name>
+        <param>
+          <type><ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>param</declname>
+        </param>
+        <param>
+          <type><ref refid="group__ai__matrix_1ga239cea4f70543ed6dae0d0549d28c01c" kindref="member">AtMatrix</ref></type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" line="164" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" bodystart="164" bodyend="164"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodes_1gab543094f0e2c57ea857c2d612747463c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DEPRECATED void</type>
+        <definition>DEPRECATED void AiNodeSetStr</definition>
+        <argsstring>(AtNode *node, const char *param, const char *str)</argsstring>
+        <name>AiNodeSetStr</name>
+        <param>
+          <type><ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>param</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>str</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" line="167" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodes_1ga0a65b3967f5634b33ea6f181fdf9d3bc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiNodeSetStrAtString</definition>
+        <argsstring>(AtNode *node, const AtString param, const AtString str)</argsstring>
+        <name>AiNodeSetStrAtString</name>
+        <param>
+          <type><ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>param</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>str</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" line="168" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodes_1gadb9db68abfe2be52dc3640f7e5c9a4c4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiNodeSetStr</definition>
+        <argsstring>(AtNode *node, const AtString param, const AtString str)</argsstring>
+        <name>AiNodeSetStr</name>
+        <param>
+          <type><ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>param</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>str</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" line="169" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" bodystart="169" bodyend="169"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodes_1ga5073e67019c0f6da4956e4c63b40905d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DEPRECATED void</type>
+        <definition>DEPRECATED void AiNodeSetRGB</definition>
+        <argsstring>(AtNode *node, const char *param, float r, float g, float b)</argsstring>
+        <name>AiNodeSetRGB</name>
+        <param>
+          <type><ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>param</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>g</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" line="171" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodes_1ga5013dffaa8edb0eb2c50da08adf73fc9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiNodeSetRGBAtString</definition>
+        <argsstring>(AtNode *node, const AtString param, float r, float g, float b)</argsstring>
+        <name>AiNodeSetRGBAtString</name>
+        <param>
+          <type><ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>param</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>g</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" line="172" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodes_1ga9f4d08bd11ece2612b146a8f4605ee32" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiNodeSetRGB</definition>
+        <argsstring>(AtNode *node, const AtString param, float r, float g, float b)</argsstring>
+        <name>AiNodeSetRGB</name>
+        <param>
+          <type><ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>param</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>g</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" line="173" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" bodystart="173" bodyend="173"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodes_1ga88b0766073f456b1c2c0ff9a2d6f79e0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DEPRECATED void</type>
+        <definition>DEPRECATED void AiNodeSetRGBA</definition>
+        <argsstring>(AtNode *node, const char *param, float r, float g, float b, float a)</argsstring>
+        <name>AiNodeSetRGBA</name>
+        <param>
+          <type><ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>param</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>g</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>a</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" line="175" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodes_1gaef68b33d572d6a270150085a25be18eb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiNodeSetRGBAAtString</definition>
+        <argsstring>(AtNode *node, const AtString param, float r, float g, float b, float a)</argsstring>
+        <name>AiNodeSetRGBAAtString</name>
+        <param>
+          <type><ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>param</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>g</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>a</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" line="176" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodes_1ga941346c6616ad52b8033ef5fd353df64" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiNodeSetRGBA</definition>
+        <argsstring>(AtNode *node, const AtString param, float r, float g, float b, float a)</argsstring>
+        <name>AiNodeSetRGBA</name>
+        <param>
+          <type><ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>param</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>g</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>a</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" line="177" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" bodystart="177" bodyend="177"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodes_1ga4145c3a7d7bec07e03a9e468d437d023" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DEPRECATED void</type>
+        <definition>DEPRECATED void AiNodeSetVec</definition>
+        <argsstring>(AtNode *node, const char *param, float x, float y, float z)</argsstring>
+        <name>AiNodeSetVec</name>
+        <param>
+          <type><ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>param</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>z</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" line="179" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodes_1gaca000bb3094814fcc50b4701b77f35cd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiNodeSetVecAtString</definition>
+        <argsstring>(AtNode *node, const AtString param, float x, float y, float z)</argsstring>
+        <name>AiNodeSetVecAtString</name>
+        <param>
+          <type><ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>param</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>z</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" line="180" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodes_1gad867a0b2f798aad63f781accde87304e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiNodeSetVec</definition>
+        <argsstring>(AtNode *node, const AtString param, float x, float y, float z)</argsstring>
+        <name>AiNodeSetVec</name>
+        <param>
+          <type><ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>param</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>z</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" line="181" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" bodystart="181" bodyend="181"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodes_1ga78c91cc7d1cdeea31ff48486deb41b6f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DEPRECATED void</type>
+        <definition>DEPRECATED void AiNodeSetPnt</definition>
+        <argsstring>(AtNode *node, const char *param, float x, float y, float z)</argsstring>
+        <name>AiNodeSetPnt</name>
+        <param>
+          <type><ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>param</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>z</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" line="183" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodes_1gad158832c3a9461db76ba75cb271f9536" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiNodeSetPntAtString</definition>
+        <argsstring>(AtNode *node, const AtString param, float x, float y, float z)</argsstring>
+        <name>AiNodeSetPntAtString</name>
+        <param>
+          <type><ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>param</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>z</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" line="184" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodes_1gad92596e07dd41b205c251cc6bbf3f78f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiNodeSetPnt</definition>
+        <argsstring>(AtNode *node, const AtString param, float x, float y, float z)</argsstring>
+        <name>AiNodeSetPnt</name>
+        <param>
+          <type><ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>param</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>z</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" line="185" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" bodystart="185" bodyend="185"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodes_1gab565cb94b18ada478fe57c43b4afdce7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DEPRECATED void</type>
+        <definition>DEPRECATED void AiNodeSetPnt2</definition>
+        <argsstring>(AtNode *node, const char *param, float x, float y)</argsstring>
+        <name>AiNodeSetPnt2</name>
+        <param>
+          <type><ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>param</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" line="187" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodes_1gac515b53fff4ad7e19803f373b6689084" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiNodeSetPnt2AtString</definition>
+        <argsstring>(AtNode *node, const AtString param, float x, float y)</argsstring>
+        <name>AiNodeSetPnt2AtString</name>
+        <param>
+          <type><ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>param</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" line="188" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodes_1ga1314fe4162da37d3feba92a8eecf7fb1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiNodeSetPnt2</definition>
+        <argsstring>(AtNode *node, const AtString param, float x, float y)</argsstring>
+        <name>AiNodeSetPnt2</name>
+        <param>
+          <type><ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>param</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" line="189" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" bodystart="189" bodyend="189"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodes_1ga0b8b2da6e196e5f58a58f51a242db314" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiNodeSetAttributes</definition>
+        <argsstring>(AtNode *node, const char *attributes)</argsstring>
+        <name>AiNodeSetAttributes</name>
+        <param>
+          <type><ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>attributes</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" line="191" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Parameter Readers</header>
+      <memberdef kind="function" id="group__ai__nodes_1ga39fb403a864197277aa8bac94f05afbb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DEPRECATED <ref refid="group__ai__types_1ga41f7f394ad3ef67901cce4d05bdabf89" kindref="member">AtByte</ref></type>
+        <definition>DEPRECATED AtByte AiNodeGetByte</definition>
+        <argsstring>(const AtNode *node, const char *param)</argsstring>
+        <name>AiNodeGetByte</name>
+        <param>
+          <type>const <ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>param</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" line="205" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodes_1gaba8e2589da27413a1e74f45c20324640" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__ai__types_1ga41f7f394ad3ef67901cce4d05bdabf89" kindref="member">AtByte</ref></type>
+        <definition>AtByte AiNodeGetByteAtString</definition>
+        <argsstring>(const AtNode *node, const AtString param)</argsstring>
+        <name>AiNodeGetByteAtString</name>
+        <param>
+          <type>const <ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>param</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" line="205" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodes_1ga5ae40a649603e268705fe3c9b8805e21" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="group__ai__types_1ga41f7f394ad3ef67901cce4d05bdabf89" kindref="member">AtByte</ref></type>
+        <definition>AtByte AiNodeGetByte</definition>
+        <argsstring>(const AtNode *node, const AtString param)</argsstring>
+        <name>AiNodeGetByte</name>
+        <param>
+          <type>const <ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>param</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" line="205" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" bodystart="205" bodyend="205"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodes_1gabd10f260c76b7475e58c83914c52f637" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DEPRECATED int</type>
+        <definition>DEPRECATED int AiNodeGetInt</definition>
+        <argsstring>(const AtNode *node, const char *param)</argsstring>
+        <name>AiNodeGetInt</name>
+        <param>
+          <type>const <ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>param</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" line="206" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodes_1ga26550dd6c80085874afb5e02c844654e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int AiNodeGetIntAtString</definition>
+        <argsstring>(const AtNode *node, const AtString param)</argsstring>
+        <name>AiNodeGetIntAtString</name>
+        <param>
+          <type>const <ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>param</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" line="206" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodes_1gae65ceadcc6f989fe5beac4c653421c72" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int AiNodeGetInt</definition>
+        <argsstring>(const AtNode *node, const AtString param)</argsstring>
+        <name>AiNodeGetInt</name>
+        <param>
+          <type>const <ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>param</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" line="206" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" bodystart="206" bodyend="206"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodes_1ga660600ea04d23bd7243e644ec97b3393" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DEPRECATED unsigned int</type>
+        <definition>DEPRECATED unsigned int AiNodeGetUInt</definition>
+        <argsstring>(const AtNode *node, const char *param)</argsstring>
+        <name>AiNodeGetUInt</name>
+        <param>
+          <type>const <ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>param</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" line="207" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodes_1ga444a83395ba59c2c5b245211a87df777" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int AiNodeGetUIntAtString</definition>
+        <argsstring>(const AtNode *node, const AtString param)</argsstring>
+        <name>AiNodeGetUIntAtString</name>
+        <param>
+          <type>const <ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>param</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" line="207" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodes_1ga7b714d4eb404f18a39781cc252123fff" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int AiNodeGetUInt</definition>
+        <argsstring>(const AtNode *node, const AtString param)</argsstring>
+        <name>AiNodeGetUInt</name>
+        <param>
+          <type>const <ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>param</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" line="207" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" bodystart="207" bodyend="207"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodes_1ga1ebf13bf7696aa4c10b56b6ba9d1ada7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DEPRECATED bool</type>
+        <definition>DEPRECATED bool AiNodeGetBool</definition>
+        <argsstring>(const AtNode *node, const char *param)</argsstring>
+        <name>AiNodeGetBool</name>
+        <param>
+          <type>const <ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>param</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" line="208" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodes_1ga33fb175da1a1a14dff2db48355bdc1c1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiNodeGetBoolAtString</definition>
+        <argsstring>(const AtNode *node, const AtString param)</argsstring>
+        <name>AiNodeGetBoolAtString</name>
+        <param>
+          <type>const <ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>param</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" line="208" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodes_1gaf4d42ea63d9ca34d0de3995bb5ed0fd8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiNodeGetBool</definition>
+        <argsstring>(const AtNode *node, const AtString param)</argsstring>
+        <name>AiNodeGetBool</name>
+        <param>
+          <type>const <ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>param</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" line="208" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" bodystart="208" bodyend="208"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodes_1ga108d1913c323b756bb9fadf6cd64050d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DEPRECATED float</type>
+        <definition>DEPRECATED float AiNodeGetFlt</definition>
+        <argsstring>(const AtNode *node, const char *param)</argsstring>
+        <name>AiNodeGetFlt</name>
+        <param>
+          <type>const <ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>param</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" line="209" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodes_1gab7b7b6b40a5d24695594d93f9ad12409" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float AiNodeGetFltAtString</definition>
+        <argsstring>(const AtNode *node, const AtString param)</argsstring>
+        <name>AiNodeGetFltAtString</name>
+        <param>
+          <type>const <ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>param</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" line="209" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodes_1ga1e46073d086da1c20aaf4038d690b942" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float AiNodeGetFlt</definition>
+        <argsstring>(const AtNode *node, const AtString param)</argsstring>
+        <name>AiNodeGetFlt</name>
+        <param>
+          <type>const <ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>param</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" line="209" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" bodystart="209" bodyend="209"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodes_1ga187378ac6f89cb84d94b815b0469cfee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DEPRECATED <ref refid="struct_at_r_g_b" kindref="compound">AtRGB</ref></type>
+        <definition>DEPRECATED AtRGB AiNodeGetRGB</definition>
+        <argsstring>(const AtNode *node, const char *param)</argsstring>
+        <name>AiNodeGetRGB</name>
+        <param>
+          <type>const <ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>param</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" line="210" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodes_1ga61d72bcb9367c491fad987be79e3a08b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_at_r_g_b" kindref="compound">AtRGB</ref></type>
+        <definition>AtRGB AiNodeGetRGBAtString</definition>
+        <argsstring>(const AtNode *node, const AtString param)</argsstring>
+        <name>AiNodeGetRGBAtString</name>
+        <param>
+          <type>const <ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>param</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" line="210" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodes_1ga0a85363827a2dbad5cdd50042bd83c2b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="struct_at_r_g_b" kindref="compound">AtRGB</ref></type>
+        <definition>AtRGB AiNodeGetRGB</definition>
+        <argsstring>(const AtNode *node, const AtString param)</argsstring>
+        <name>AiNodeGetRGB</name>
+        <param>
+          <type>const <ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>param</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" line="210" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" bodystart="210" bodyend="210"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodes_1ga384146044c585305fce368817e39f9f7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DEPRECATED <ref refid="struct_at_r_g_b_a" kindref="compound">AtRGBA</ref></type>
+        <definition>DEPRECATED AtRGBA AiNodeGetRGBA</definition>
+        <argsstring>(const AtNode *node, const char *param)</argsstring>
+        <name>AiNodeGetRGBA</name>
+        <param>
+          <type>const <ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>param</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" line="211" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodes_1ga4438668ae6c3805e4b4357d93ed88e0b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_at_r_g_b_a" kindref="compound">AtRGBA</ref></type>
+        <definition>AtRGBA AiNodeGetRGBAAtString</definition>
+        <argsstring>(const AtNode *node, const AtString param)</argsstring>
+        <name>AiNodeGetRGBAAtString</name>
+        <param>
+          <type>const <ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>param</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" line="211" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodes_1ga8707d3fc16a273aad68561af8226481f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="struct_at_r_g_b_a" kindref="compound">AtRGBA</ref></type>
+        <definition>AtRGBA AiNodeGetRGBA</definition>
+        <argsstring>(const AtNode *node, const AtString param)</argsstring>
+        <name>AiNodeGetRGBA</name>
+        <param>
+          <type>const <ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>param</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" line="211" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" bodystart="211" bodyend="211"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodes_1ga6cd146f56687c03246570f20ffbda357" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DEPRECATED <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref></type>
+        <definition>DEPRECATED AtVector AiNodeGetVec</definition>
+        <argsstring>(const AtNode *node, const char *param)</argsstring>
+        <name>AiNodeGetVec</name>
+        <param>
+          <type>const <ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>param</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" line="212" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodes_1gaac81614564026990649df9f878219c26" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref></type>
+        <definition>AtVector AiNodeGetVecAtString</definition>
+        <argsstring>(const AtNode *node, const AtString param)</argsstring>
+        <name>AiNodeGetVecAtString</name>
+        <param>
+          <type>const <ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>param</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" line="212" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodes_1ga41236af5098f01954e9935b5a3203ce2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref></type>
+        <definition>AtVector AiNodeGetVec</definition>
+        <argsstring>(const AtNode *node, const AtString param)</argsstring>
+        <name>AiNodeGetVec</name>
+        <param>
+          <type>const <ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>param</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" line="212" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" bodystart="212" bodyend="212"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodes_1gadb90e30b2b40bb383d324c7002b70303" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DEPRECATED <ref refid="struct_at_point" kindref="compound">AtPoint</ref></type>
+        <definition>DEPRECATED AtPoint AiNodeGetPnt</definition>
+        <argsstring>(const AtNode *node, const char *param)</argsstring>
+        <name>AiNodeGetPnt</name>
+        <param>
+          <type>const <ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>param</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" line="213" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodes_1ga0a60cb6e353053ae89b9bcd964ceee5d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_at_point" kindref="compound">AtPoint</ref></type>
+        <definition>AtPoint AiNodeGetPntAtString</definition>
+        <argsstring>(const AtNode *node, const AtString param)</argsstring>
+        <name>AiNodeGetPntAtString</name>
+        <param>
+          <type>const <ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>param</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" line="213" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodes_1gaad6adacb3ebc95ebf9ee60791a2b29fb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="struct_at_point" kindref="compound">AtPoint</ref></type>
+        <definition>AtPoint AiNodeGetPnt</definition>
+        <argsstring>(const AtNode *node, const AtString param)</argsstring>
+        <name>AiNodeGetPnt</name>
+        <param>
+          <type>const <ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>param</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" line="213" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" bodystart="213" bodyend="213"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodes_1ga3b4690b2745a7c32f2fc97cc4ff51770" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DEPRECATED <ref refid="struct_at_point2" kindref="compound">AtPoint2</ref></type>
+        <definition>DEPRECATED AtPoint2 AiNodeGetPnt2</definition>
+        <argsstring>(const AtNode *node, const char *param)</argsstring>
+        <name>AiNodeGetPnt2</name>
+        <param>
+          <type>const <ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>param</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" line="214" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodes_1gaf4933683139343d7e45bb4f766bc409d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_at_point2" kindref="compound">AtPoint2</ref></type>
+        <definition>AtPoint2 AiNodeGetPnt2AtString</definition>
+        <argsstring>(const AtNode *node, const AtString param)</argsstring>
+        <name>AiNodeGetPnt2AtString</name>
+        <param>
+          <type>const <ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>param</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" line="214" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodes_1gaf181645a091343c64284ae0a2f440ada" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="struct_at_point2" kindref="compound">AtPoint2</ref></type>
+        <definition>AtPoint2 AiNodeGetPnt2</definition>
+        <argsstring>(const AtNode *node, const AtString param)</argsstring>
+        <name>AiNodeGetPnt2</name>
+        <param>
+          <type>const <ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>param</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" line="214" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" bodystart="214" bodyend="214"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodes_1ga2be3de7332bd4169e9413c4d441ba9fc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DEPRECATED void *</type>
+        <definition>DEPRECATED void* AiNodeGetPtr</definition>
+        <argsstring>(const AtNode *node, const char *param)</argsstring>
+        <name>AiNodeGetPtr</name>
+        <param>
+          <type>const <ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>param</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" line="216" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodes_1ga6091d6543602515d2b5fdfd3b19c8fa4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void *</type>
+        <definition>void* AiNodeGetPtrAtString</definition>
+        <argsstring>(const AtNode *node, const AtString param)</argsstring>
+        <name>AiNodeGetPtrAtString</name>
+        <param>
+          <type>const <ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>param</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" line="216" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodes_1ga136a5cef1016b293138af2d0c0db1a97" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void *</type>
+        <definition>void* AiNodeGetPtr</definition>
+        <argsstring>(const AtNode *node, const AtString param)</argsstring>
+        <name>AiNodeGetPtr</name>
+        <param>
+          <type>const <ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>param</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" line="216" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" bodystart="216" bodyend="216"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodes_1gad4c06049c567740adb5cd36e5b5292d1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DEPRECATED <ref refid="struct_at_array" kindref="compound">AtArray</ref> *</type>
+        <definition>DEPRECATED AtArray* AiNodeGetArray</definition>
+        <argsstring>(const AtNode *node, const char *param)</argsstring>
+        <name>AiNodeGetArray</name>
+        <param>
+          <type>const <ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>param</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" line="217" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodes_1gadc34410bc31b51c5dccf7afba1d7f853" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_at_array" kindref="compound">AtArray</ref> *</type>
+        <definition>AtArray* AiNodeGetArrayAtString</definition>
+        <argsstring>(const AtNode *node, const AtString param)</argsstring>
+        <name>AiNodeGetArrayAtString</name>
+        <param>
+          <type>const <ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>param</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" line="217" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodes_1gace3b7b4fd4f05ac97291cd145bd27714" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="struct_at_array" kindref="compound">AtArray</ref> *</type>
+        <definition>AtArray* AiNodeGetArray</definition>
+        <argsstring>(const AtNode *node, const AtString param)</argsstring>
+        <name>AiNodeGetArray</name>
+        <param>
+          <type>const <ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>param</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" line="217" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" bodystart="217" bodyend="217"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodes_1ga4bd12f60d4b2aae3ac7e06aaa5c810bf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DEPRECATED const char *</type>
+        <definition>DEPRECATED const char* AiNodeGetStr</definition>
+        <argsstring>(const AtNode *node, const char *param)</argsstring>
+        <name>AiNodeGetStr</name>
+        <param>
+          <type>const <ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>param</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" line="225" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodes_1gadbcd6bb600ff8b3ff399b7e44ef8082f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_at_string" kindref="compound">AtString</ref></type>
+        <definition>AtString AiNodeGetStrAtString</definition>
+        <argsstring>(const AtNode *node, const AtString param)</argsstring>
+        <name>AiNodeGetStrAtString</name>
+        <param>
+          <type>const <ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>param</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" line="226" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodes_1gaa3e6e70c7f9984b436461a883d0eb251" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_at_string" kindref="compound">AtString</ref></type>
+        <definition>AtString AiNodeGetStr</definition>
+        <argsstring>(const AtNode *node, const AtString param)</argsstring>
+        <name>AiNodeGetStr</name>
+        <param>
+          <type>const <ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>param</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" line="227" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" bodystart="227" bodyend="230"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodes_1gad774f59b181c511e4ceae5af56176ca9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DEPRECATED void</type>
+        <definition>DEPRECATED void AiNodeGetMatrix</definition>
+        <argsstring>(const AtNode *node, const char *param, AtMatrix matrix)</argsstring>
+        <name>AiNodeGetMatrix</name>
+        <param>
+          <type>const <ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>param</declname>
+        </param>
+        <param>
+          <type><ref refid="group__ai__matrix_1ga239cea4f70543ed6dae0d0549d28c01c" kindref="member">AtMatrix</ref></type>
+          <declname>matrix</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" line="232" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodes_1ga55bdb5e227b148e272ea26e7e117b3d2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiNodeGetMatrixAtString</definition>
+        <argsstring>(const AtNode *node, const AtString param, AtMatrix matrix)</argsstring>
+        <name>AiNodeGetMatrixAtString</name>
+        <param>
+          <type>const <ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>param</declname>
+        </param>
+        <param>
+          <type><ref refid="group__ai__matrix_1ga239cea4f70543ed6dae0d0549d28c01c" kindref="member">AtMatrix</ref></type>
+          <declname>matrix</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" line="233" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodes_1ga0dd9d4c1489b55f12c9e5b6180d97690" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiNodeGetMatrix</definition>
+        <argsstring>(const AtNode *node, const AtString param, AtMatrix matrix)</argsstring>
+        <name>AiNodeGetMatrix</name>
+        <param>
+          <type>const <ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>param</declname>
+        </param>
+        <param>
+          <type><ref refid="group__ai__matrix_1ga239cea4f70543ed6dae0d0549d28c01c" kindref="member">AtMatrix</ref></type>
+          <declname>matrix</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" line="234" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" bodystart="234" bodyend="234"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__nodes_1ga3e91f55d8dd438c30f8e52916788fa1e" prot="public" static="no">
+        <name>AiCreateFuncs</name>
+        <param><defname>_name</defname></param>
+        <param><defname>_type</defname></param>
+        <initializer><ref refid="ai__api_8h_1a4b9d3c7c64877dda42d97f936f023a96" kindref="member">AI_API</ref> <ref refid="ai__api_8h_1a19d077fa951fe893bfc989f548855f96" kindref="member">AI_DEPRECATED</ref> void AiNodeSet##<ref refid="ai__deprecated_8h_1aec321dc1beac683ff60b65608dab6c9b" kindref="member">_name</ref>          (<ref refid="struct_at_node" kindref="compound">AtNode</ref>* node, const char* param,    _type val); \
+<ref refid="ai__api_8h_1a4b9d3c7c64877dda42d97f936f023a96" kindref="member">AI_API</ref>               void AiNodeSet##<ref refid="ai__deprecated_8h_1aec321dc1beac683ff60b65608dab6c9b" kindref="member">_name</ref>##<ref refid="class_at_string" kindref="compound">AtString</ref>(<ref refid="struct_at_node" kindref="compound">AtNode</ref>* node, const <ref refid="class_at_string" kindref="compound">AtString</ref> param, _type val); \
+inline               void AiNodeSet##<ref refid="ai__deprecated_8h_1aec321dc1beac683ff60b65608dab6c9b" kindref="member">_name</ref>          (<ref refid="struct_at_node" kindref="compound">AtNode</ref>* node, const <ref refid="class_at_string" kindref="compound">AtString</ref> param, _type val)  \
+{                                                                                                    \
+   AiNodeSet##<ref refid="ai__deprecated_8h_1aec321dc1beac683ff60b65608dab6c9b" kindref="member">_name</ref>##<ref refid="class_at_string" kindref="compound">AtString</ref>(node, param, val);                                                     \
+}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" line="149" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" bodystart="198" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__nodes_1gac1a63e972305953e11fb2be8b9fb1797" prot="public" static="no">
+        <name>AiCreateFuncs</name>
+        <param><defname>_name</defname></param>
+        <param><defname>_type</defname></param>
+        <initializer><ref refid="ai__api_8h_1a4b9d3c7c64877dda42d97f936f023a96" kindref="member">AI_API</ref> <ref refid="ai__api_8h_1a19d077fa951fe893bfc989f548855f96" kindref="member">AI_DEPRECATED</ref> _type AiNodeGet##<ref refid="ai__deprecated_8h_1aec321dc1beac683ff60b65608dab6c9b" kindref="member">_name</ref>             (const <ref refid="struct_at_node" kindref="compound">AtNode</ref>* node, const char* param); \
+<ref refid="ai__api_8h_1a4b9d3c7c64877dda42d97f936f023a96" kindref="member">AI_API</ref>               _type AiNodeGet##<ref refid="ai__deprecated_8h_1aec321dc1beac683ff60b65608dab6c9b" kindref="member">_name</ref>##<ref refid="class_at_string" kindref="compound">AtString</ref>(const <ref refid="struct_at_node" kindref="compound">AtNode</ref>* node, const <ref refid="class_at_string" kindref="compound">AtString</ref> param); \
+inline               _type AiNodeGet##<ref refid="ai__deprecated_8h_1aec321dc1beac683ff60b65608dab6c9b" kindref="member">_name</ref>          (const <ref refid="struct_at_node" kindref="compound">AtNode</ref>* node, const <ref refid="class_at_string" kindref="compound">AtString</ref> param)  \
+{                                                                                                \
+   return AiNodeGet##<ref refid="ai__deprecated_8h_1aec321dc1beac683ff60b65608dab6c9b" kindref="member">_name</ref>##<ref refid="class_at_string" kindref="compound">AtString</ref>(node, param);                                               \
+}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" line="198" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" bodystart="198" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group__ai__nodes_1gad84d7f2f4a9b8374cba1702e81f68a64" prot="public" static="no">
+        <name>AI_INSTANCE_COMMON_METHODS</name>
+        <initializer><ref refid="group__ai__nodes_1gadec5d9ecd55d964c1a30151fffa8e575" kindref="member">node_parameters</ref>;                           \
+<ref refid="group__ai__nodes_1ga8e40576b04f6465c5fafbb009e4ba19f" kindref="member">node_initialize</ref>;                           \
+<ref refid="group__ai__nodes_1ga88e12b100dbc0a1f44d32bf529d3e1df" kindref="member">node_update</ref>;                               \
+<ref refid="group__ai__nodes_1ga1d66d14d02ac60ccd46bb952ac7c6695" kindref="member">node_finish</ref>;                               \
+static <ref refid="struct_at_common_methods" kindref="compound">AtCommonMethods</ref> ai_common_mtds = {  \
+   Parameters,                             \
+   Initialize,                             \
+   Update,                                 \
+   Finish                                  \
+};</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Exporter for common methods </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" line="82" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_nodes.h" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Arnold has a pluggable node-management system for the standard primitives such as lights, cameras, geometry, shaders, filters, drivers, etc. Each node type has a set of associated methods (member functions) and parameters. Like C++&apos;s objects, Arnold&apos;s node system allows new nodes to inherit both parameters and methods from the &quot;parent&quot; node. For example, all nodes have a &quot;name&quot; parameter and a &quot;node_initialize{}&quot; method (among others) because they are declared in the base node from which all nodes inherit.</para><para>In addition to these standard methods and parameters, derived nodes may have their own type-specific parameters and methods. For example, all shaders have a &quot;shader_evaluate{}&quot; method and all driver nodes have a &quot;driver_write_bucket{}&quot; method (among others). User-derived nodes may have their own new parameters but are not permitted to add new methods.</para><para>Two of the important data-structures in this object-oriented-like system are: <itemizedlist>
+<listitem><para><ref refid="struct_at_node_entry" kindref="compound">AtNodeEntry</ref> <ndash/> this contains the &quot;description&quot; of a particular node type (&quot;polymesh&quot;, &quot;persp_camera&quot;, etc.) </para></listitem>
+<listitem><para><ref refid="struct_at_node" kindref="compound">AtNode</ref> <ndash/> this contains the &quot;instantiation&quot; of a particular node type </para></listitem>
+</itemizedlist>
+</para>    </detaileddescription>
+  </compounddef>
+</doxygen>

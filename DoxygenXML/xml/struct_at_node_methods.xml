@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="struct_at_node_methods" kind="struct" language="C++" prot="public">
+    <compoundname>AtNodeMethods</compoundname>
+    <includes refid="ai__node__entry_8h" local="no">ai_node_entry.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_at_node_methods_1a8993fb480fafa1023138983b74ccd01e" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_at_common_methods" kindref="compound">AtCommonMethods</ref> *</type>
+        <definition>AtCommonMethods* AtNodeMethods::cmethods</definition>
+        <argsstring></argsstring>
+        <name>cmethods</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>common methods </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_node_entry.h" line="58" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_node_entry.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_node_methods_1a1b959b0998b638d0ce33fd4f08dda13e" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* AtNodeMethods::dmethods</definition>
+        <argsstring></argsstring>
+        <name>dmethods</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>derived methods </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_node_entry.h" line="59" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_node_entry.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Node methods </para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="41">
+        <label>AtNodeMethods</label>
+        <link refid="struct_at_node_methods"/>
+        <childnode refid="42" relation="usage">
+          <edgelabel>cmethods</edgelabel>
+        </childnode>
+      </node>
+      <node id="42">
+        <label>AtCommonMethods</label>
+        <link refid="struct_at_common_methods"/>
+      </node>
+    </collaborationgraph>
+    <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_node_entry.h" line="57" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_node_entry.h" bodystart="56" bodyend="60"/>
+    <listofallmembers>
+      <member refid="struct_at_node_methods_1a8993fb480fafa1023138983b74ccd01e" prot="public" virt="non-virtual"><scope>AtNodeMethods</scope><name>cmethods</name></member>
+      <member refid="struct_at_node_methods_1a1b959b0998b638d0ce33fd4f08dda13e" prot="public" virt="non-virtual"><scope>AtNodeMethods</scope><name>dmethods</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

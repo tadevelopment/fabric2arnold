@@ -1,0 +1,190 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="group__ai__constants" kind="group">
+    <compoundname>ai_constants</compoundname>
+    <title>Constants</title>
+      <sectiondef kind="user-defined">
+      <header>Numerical Constants</header>
+      <memberdef kind="define" id="group__ai__constants_1gae6eba75b8cf695e07b70a22cd39509a4" prot="public" static="no">
+        <name>AI_PI</name>
+        <initializer>(3.1415926535897931f)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>pi </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_constants.h" line="21" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_constants.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__constants_1ga3543b773da0a81f87eea7a6e80b2cacd" prot="public" static="no">
+        <name>AI_PITIMES2</name>
+        <initializer>(6.2831853071795862f)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>2 * pi </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_constants.h" line="22" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_constants.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__constants_1ga233b419fa85ba1e1337def2692a9e7e9" prot="public" static="no">
+        <name>AI_PIOVER2</name>
+        <initializer>(1.5707963267948966f)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>pi / 2 </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_constants.h" line="23" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_constants.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__constants_1gafc9c837dde9125a322be0df306cb720a" prot="public" static="no">
+        <name>AI_ONEOVERPI</name>
+        <initializer>(0.3183098861837906f)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>1 / pi </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_constants.h" line="24" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_constants.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__constants_1ga08330580f17d7ba99755e3490ed5d95a" prot="public" static="no">
+        <name>AI_ONEOVER2PI</name>
+        <initializer>(0.1591549430918953f)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>1 / 2pi </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_constants.h" line="25" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_constants.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__constants_1ga7c62a0326a6349dda6d12d553011d085" prot="public" static="no">
+        <name>AI_E</name>
+        <initializer>(2.7182818284590452f)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>e </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_constants.h" line="26" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_constants.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__constants_1ga48d6cbb34e010c73f5c6073d12180737" prot="public" static="no">
+        <name>AI_LOG2E</name>
+        <initializer>(1.4426950408889634f)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>log_2(e) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_constants.h" line="27" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_constants.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__constants_1gac5b896dad391a22aed04f9b97f7203d2" prot="public" static="no">
+        <name>AI_LN2</name>
+        <initializer>(0.6931471805599453f)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>ln(2) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_constants.h" line="28" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_constants.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__constants_1ga977a89a7ff47dabc3137cf85ede99ca4" prot="public" static="no">
+        <name>AI_SQRT2</name>
+        <initializer>(1.4142135623730951f)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>sqrt(2) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_constants.h" line="29" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_constants.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__constants_1ga92033adc31d7e1923061370aa7febe2d" prot="public" static="no">
+        <name>AI_SQRT3</name>
+        <initializer>(1.7320508075688772f)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>sqrt(3) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_constants.h" line="30" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_constants.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__constants_1gaec130fb4bfced7fa62de706778360d65" prot="public" static="no">
+        <name>AI_GOLDEN</name>
+        <initializer>(1.6180339887498948f)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Golden ratio </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_constants.h" line="31" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_constants.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__constants_1ga0d2cb58d0cee6cb2a80210fbd4cb3a78" prot="public" static="no">
+        <name>AI_DTOR</name>
+        <initializer>(0.0174532925199433f)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Degrees to radians </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_constants.h" line="32" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_constants.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__constants_1ga64bd7c654442f122c2f9f0905a252029" prot="public" static="no">
+        <name>AI_RTOD</name>
+        <initializer>(57.295779513082323f)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Radians to degrees </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_constants.h" line="33" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_constants.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__constants_1gaf5a851882299e92281399bc8a3572818" prot="public" static="no">
+        <name>AI_EPSILON</name>
+        <initializer>(1.0e-4f)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>System epsilon value </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_constants.h" line="35" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_constants.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__constants_1ga95c7821608a4e5760d498d0785f81f90" prot="public" static="no">
+        <name>AI_BIG</name>
+        <initializer>(1.0e12f)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Big number </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_constants.h" line="36" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_constants.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__constants_1ga0f9aad8867e067d2482aa09f7e5806cd" prot="public" static="no">
+        <name>AI_INFINITE</name>
+        <initializer>(1.0e30f)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Our convention for an &quot;infinite&quot; number </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_constants.h" line="37" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_constants.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

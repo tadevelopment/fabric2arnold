@@ -1,0 +1,293 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="ai__render_8h" kind="file" language="C++">
+    <compoundname>ai_render.h</compoundname>
+    <includes refid="ai__api_8h" local="yes">ai_api.h</includes>
+    <includedby refid="ai_8h" local="yes">ai.h</includedby>
+    <incdepgraph>
+      <node id="515">
+        <label>ai_api.h</label>
+        <link refid="ai__api_8h"/>
+      </node>
+      <node id="514">
+        <label>ai_render.h</label>
+        <link refid="ai_render.h"/>
+        <childnode refid="515" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="516">
+        <label>ai_render.h</label>
+        <link refid="ai_render.h"/>
+        <childnode refid="517" relation="include">
+        </childnode>
+      </node>
+      <node id="517">
+        <label>ai.h</label>
+        <link refid="ai_8h"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="user-defined">
+      <header>Rendering Modes</header>
+      <memberdef kind="define" id="group__ai__render_1gac93b8777f869ec18dbc546c5e8781dc2" prot="public" static="no">
+        <name>AI_RENDER_MODE_CAMERA</name>
+        <initializer>0x00</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Render from a camera </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_render.h" line="21" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_render.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__render_1ga5db6bf165024605507e401db3ce9f855" prot="public" static="no">
+        <name>AI_RENDER_MODE_FREE</name>
+        <initializer>0x01</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Process arbitrary ray-tracing requests, acting as a &quot;ray server&quot; </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_render.h" line="22" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_render.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Error Codes</header>
+      <memberdef kind="define" id="group__ai__render_1gaa70d7252d3d035f70bfa27025c62659b" prot="public" static="no">
+        <name>AI_SUCCESS</name>
+        <initializer>0x00</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>no error </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_render.h" line="28" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_render.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__render_1gadbb103601a14da8ab9f6a55ab930fb89" prot="public" static="no">
+        <name>AI_ABORT</name>
+        <initializer>0x01</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>render aborted </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_render.h" line="29" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_render.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__render_1gaf56727cff5c0d42fab4e5dceb9f27c02" prot="public" static="no">
+        <name>AI_ERROR_WRONG_OUTPUT</name>
+        <initializer>0x02</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>can&apos;t open output file </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_render.h" line="30" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_render.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__render_1ga992811169e5063a56d2acbe28bbee937" prot="public" static="no">
+        <name>AI_ERROR_NO_CAMERA</name>
+        <initializer>0x03</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>camera not defined </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_render.h" line="31" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_render.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__render_1ga024cbd7757435842b8a9ca3c348c80fc" prot="public" static="no">
+        <name>AI_ERROR_BAD_CAMERA</name>
+        <initializer>0x04</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>bad camera data </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_render.h" line="32" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_render.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__render_1ga9ef0f708ce82ed9a43c66f6436792644" prot="public" static="no">
+        <name>AI_ERROR_VALIDATION</name>
+        <initializer>0x05</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>usage not validated </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_render.h" line="33" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_render.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__render_1gaebbf5060b892f82e92554d278f9f26f9" prot="public" static="no">
+        <name>AI_ERROR_RENDER_REGION</name>
+        <initializer>0x06</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>invalid render region </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_render.h" line="34" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_render.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__render_1gaee41442db04def90f77048f644fbcaf1" prot="public" static="no">
+        <name>AI_ERROR_OUTPUT_EXISTS</name>
+        <initializer>0x07</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>output file already exists </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_render.h" line="35" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_render.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__render_1ga1d82aaefb336ed4c147c9a1b64468b26" prot="public" static="no">
+        <name>AI_ERROR_OPENING_FILE</name>
+        <initializer>0x08</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>can&apos;t open file </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_render.h" line="36" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_render.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__render_1gab8f39eafe50d2bcc7011e1f99ba7e0c6" prot="public" static="no">
+        <name>AI_INTERRUPT</name>
+        <initializer>0x09</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>render interrupted by user </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_render.h" line="37" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_render.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__render_1ga42c57015109871065dd4dcc001ed282b" prot="public" static="no">
+        <name>AI_ERROR_UNRENDERABLE_SCENEGRAPH</name>
+        <initializer>0x0A</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>unrenderable scenegraph </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_render.h" line="38" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_render.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__render_1gadb94e3bfc96d01aee87f9a2b76d7c316" prot="public" static="no">
+        <name>AI_ERROR_NO_OUTPUTS</name>
+        <initializer>0x0B</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>no rendering outputs </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_render.h" line="39" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_render.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__render_1ga98f0ed7e83c8681d5cbeba4560e66551" prot="public" static="no">
+        <name>AI_ERROR</name>
+        <initializer>-1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>generic error </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_render.h" line="40" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_render.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__ai__render_1ga4c215ce533d32f96c18840ff8db0c28a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiBegin</definition>
+        <argsstring>()</argsstring>
+        <name>AiBegin</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_render.h" line="43" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__render_1gae10675b4b86f894d90feb1d341942579" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiEnd</definition>
+        <argsstring>()</argsstring>
+        <name>AiEnd</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_render.h" line="44" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__render_1gaac678ba247b970fda7721af21510726d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int AiRender</definition>
+        <argsstring>(int mode=AI_RENDER_MODE_CAMERA)</argsstring>
+        <name>AiRender</name>
+        <param>
+          <type>int</type>
+          <declname>mode</declname>
+          <defval><ref refid="group__ai__render_1gac93b8777f869ec18dbc546c5e8781dc2" kindref="member">AI_RENDER_MODE_CAMERA</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_render.h" line="45" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__render_1gab2a9396dd466695f624653964eea4b20" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiRenderAbort</definition>
+        <argsstring>()</argsstring>
+        <name>AiRenderAbort</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_render.h" line="46" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__render_1ga1245c2c5d8ab70030decbe6553eca40e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiRenderInterrupt</definition>
+        <argsstring>()</argsstring>
+        <name>AiRenderInterrupt</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_render.h" line="47" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__render_1gaabac37db4d2deb45707b4ee29485ecbf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiRendering</definition>
+        <argsstring>()</argsstring>
+        <name>AiRendering</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_render.h" line="48" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>API for managing rendering sessions </para>    </detaileddescription>
+    <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_render.h"/>
+  </compounddef>
+</doxygen>

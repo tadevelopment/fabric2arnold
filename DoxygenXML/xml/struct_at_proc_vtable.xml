@@ -1,0 +1,100 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="struct_at_proc_vtable" kind="struct" language="C++" prot="public">
+    <compoundname>AtProcVtable</compoundname>
+    <includes refid="ai__procedural_8h" local="no">ai_procedural.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_at_proc_vtable_1af8ce771bece2e599bddf0b061d9d7cfa" prot="public" static="no" mutable="no">
+        <type><ref refid="group__ai__procedurals_1gada0f51d3c111b02fef3cf1a9c9e6d02a" kindref="member">AtProcInit</ref></type>
+        <definition>AtProcInit AtProcVtable::Init</definition>
+        <argsstring></argsstring>
+        <name>Init</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This is called first and should initialize the procedural </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_procedural.h" line="106" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_procedural.h" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_proc_vtable_1a83d7eae1915196ad6cac72a441a7d629" prot="public" static="no" mutable="no">
+        <type><ref refid="group__ai__procedurals_1ga2b7de3a0c8d9d648a5e44496d4afadfc" kindref="member">AtProcCleanup</ref></type>
+        <definition>AtProcCleanup AtProcVtable::Cleanup</definition>
+        <argsstring></argsstring>
+        <name>Cleanup</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This is called last and should clean up any temporary memory used by the procedural </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_procedural.h" line="107" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_procedural.h" bodystart="107" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_proc_vtable_1a421df58d7c9b91b11c54d394759bd352" prot="public" static="no" mutable="no">
+        <type><ref refid="group__ai__procedurals_1ga65b46727711a0987c684d81dcd88bcca" kindref="member">AtProcNumNodes</ref></type>
+        <definition>AtProcNumNodes AtProcVtable::NumNodes</definition>
+        <argsstring></argsstring>
+        <name>NumNodes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This is called to find out how many nodes this procedural will generate </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_procedural.h" line="108" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_procedural.h" bodystart="108" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_proc_vtable_1a79a56c642aef727e05326cc261e1c05b" prot="public" static="no" mutable="no">
+        <type><ref refid="group__ai__procedurals_1gae4e9e4c1438b4abd859ea040c8b84f3d" kindref="member">AtProcGetNode</ref></type>
+        <definition>AtProcGetNode AtProcVtable::GetNode</definition>
+        <argsstring></argsstring>
+        <name>GetNode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This is called NumNodes times, once for each node the procedural creates </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_procedural.h" line="109" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_procedural.h" bodystart="109" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_proc_vtable_1ae383a0698b0be95c703a73ec6d1fbc8c" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char AtProcVtable::version[AI_MAXSIZE_VERSION]</definition>
+        <argsstring>[AI_MAXSIZE_VERSION]</argsstring>
+        <name>version</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>You must copy the contents of the AI_VERSION macro here </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_procedural.h" line="110" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_procedural.h" bodystart="110" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Procedural function table</para><para>This structure is used to report the function pointers that the renderer needs to call at runtime. The version field is used for runtime compatibility checking. </para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="60">
+        <label>AtNode</label>
+        <link refid="struct_at_node"/>
+      </node>
+      <node id="59">
+        <label>AtProcVtable</label>
+        <link refid="struct_at_proc_vtable"/>
+        <childnode refid="60" relation="usage">
+          <edgelabel>GetNode</edgelabel>
+          <edgelabel>Init</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_procedural.h" line="105" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_procedural.h" bodystart="105" bodyend="111"/>
+    <listofallmembers>
+      <member refid="struct_at_proc_vtable_1a83d7eae1915196ad6cac72a441a7d629" prot="public" virt="non-virtual"><scope>AtProcVtable</scope><name>Cleanup</name></member>
+      <member refid="struct_at_proc_vtable_1a79a56c642aef727e05326cc261e1c05b" prot="public" virt="non-virtual"><scope>AtProcVtable</scope><name>GetNode</name></member>
+      <member refid="struct_at_proc_vtable_1af8ce771bece2e599bddf0b061d9d7cfa" prot="public" virt="non-virtual"><scope>AtProcVtable</scope><name>Init</name></member>
+      <member refid="struct_at_proc_vtable_1a421df58d7c9b91b11c54d394759bd352" prot="public" virt="non-virtual"><scope>AtProcVtable</scope><name>NumNodes</name></member>
+      <member refid="struct_at_proc_vtable_1ae383a0698b0be95c703a73ec6d1fbc8c" prot="public" virt="non-virtual"><scope>AtProcVtable</scope><name>version</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

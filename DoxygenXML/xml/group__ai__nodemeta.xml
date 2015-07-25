@@ -1,0 +1,1576 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="group__ai__nodemeta" kind="group">
+    <compoundname>ai_nodemeta</compoundname>
+    <title>Node Metadata API</title>
+      <sectiondef kind="user-defined">
+      <header>Metadata Storage Structure</header>
+      <description><para>This is a private structure that Arnold uses to maintain metadata information internally. Its contents can only be set/queried by the API calls below. </para></description>
+      <memberdef kind="typedef" id="group__ai__nodemeta_1ga2bc4e600ff981b485a9070f367e6bda2" prot="public" static="no">
+        <type>struct <ref refid="group__ai__nodemeta_1ga2bc4e600ff981b485a9070f367e6bda2" kindref="member">AtMetaDataStore</ref></type>
+        <definition>typedef struct AtMetaDataStore AtMetaDataStore</definition>
+        <argsstring></argsstring>
+        <name>AtMetaDataStore</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_metadata.h" line="44" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_metadata.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Metadata Writing</header>
+      <description><para>These functions let the author of a node attach auxiliary information about parameters or the node to the node itself. These methods may only be called inside of the <computeroutput>node_parameters</computeroutput> method where the parameters are declared. This function receives an opaque pointer to a AtMetaDataStore structure which will hold the results until <ref refid="group__ai__render_1gae10675b4b86f894d90feb1d341942579" kindref="member">AiEnd()</ref> is called.</para><para>Note that Arnold currently supports one special case for metadata. If you attach a string named &quot;synonym&quot; to a parameter or to a node (by passing NULL for param), Arnold will accept the alternative name when creating nodes or setting parameters. This can be helpful for backwards compatibility.</para><para>Here is an example: <programlisting><codeline><highlight class="normal">node_parameters</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>AiParameterFlt(&quot;Kd&quot;,<sp/>0.7f);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>//<sp/>create<sp/>a<sp/>lower-case<sp/>synonym<sp/>for<sp/>parameter<sp/>Kd</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>AiMetaDataSetStr(mds,<sp/>&quot;Kd&quot;,<sp/>&quot;synonym&quot;,<sp/>&quot;kd&quot;);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>//<sp/>describe<sp/>the<sp/>parameter</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>AiMetaDataSetStr(mds,<sp/>&quot;Kd&quot;,<sp/>&quot;description&quot;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&quot;Diffuse<sp/>coefficient&quot;);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>//<sp/>describe<sp/>the<sp/>node<sp/>itself</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>AiMetaDataSetStr(mds,<sp/>NULL,<sp/>&quot;description&quot;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&quot;This<sp/>is<sp/>a<sp/>simple<sp/>lambert<sp/>shader<sp/>for<sp/>illustration<sp/>purposes&quot;);</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting></para><para>Note that you should never pass allocated strings, as they will not be freed.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>mds</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>this is the AtMetaDataStore that is located inside the node&apos;s <ref refid="struct_at_node_entry" kindref="compound">AtNodeEntry</ref> (note that <emphasis>mds</emphasis> is an argument to <computeroutput>node_parameters</computeroutput>) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>param</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the name of the node parameter to which the metadata will be attached (or NULL if you want to attach to the node itself) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the name of the metadata you want to attach </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the value of the metadata </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para></description>
+      <memberdef kind="function" id="group__ai__nodemeta_1gabe4dc3b4f78622ef2eafe56f850997e6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiMetaDataSetBool</definition>
+        <argsstring>(AtMetaDataStore *mds, const char *param, const char *name, bool value)</argsstring>
+        <name>AiMetaDataSetBool</name>
+        <param>
+          <type><ref refid="group__ai__nodemeta_1ga2bc4e600ff981b485a9070f367e6bda2" kindref="member">AtMetaDataStore</ref> *</type>
+          <declname>mds</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>param</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_metadata.h" line="85" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodemeta_1ga18bb8767f869fbf6ea76006310cea91d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiMetaDataSetBoolAtString</definition>
+        <argsstring>(AtMetaDataStore *mds, const AtString param, const AtString name, bool value)</argsstring>
+        <name>AiMetaDataSetBoolAtString</name>
+        <param>
+          <type><ref refid="group__ai__nodemeta_1ga2bc4e600ff981b485a9070f367e6bda2" kindref="member">AtMetaDataStore</ref> *</type>
+          <declname>mds</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>param</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_metadata.h" line="85" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodemeta_1ga365e4dde4521948c4a30a0bfdb120482" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiMetaDataSetBool</definition>
+        <argsstring>(AtMetaDataStore *mds, const AtString param, const AtString name, bool value)</argsstring>
+        <name>AiMetaDataSetBool</name>
+        <param>
+          <type><ref refid="group__ai__nodemeta_1ga2bc4e600ff981b485a9070f367e6bda2" kindref="member">AtMetaDataStore</ref> *</type>
+          <declname>mds</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>param</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_metadata.h" line="85" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_metadata.h" bodystart="85" bodyend="85"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodemeta_1gac61f97b6453528f86c8c9d0ca6a94508" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiMetaDataSetInt</definition>
+        <argsstring>(AtMetaDataStore *mds, const char *param, const char *name, int value)</argsstring>
+        <name>AiMetaDataSetInt</name>
+        <param>
+          <type><ref refid="group__ai__nodemeta_1ga2bc4e600ff981b485a9070f367e6bda2" kindref="member">AtMetaDataStore</ref> *</type>
+          <declname>mds</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>param</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_metadata.h" line="86" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodemeta_1gaa38ba3c34b226fcd6f679c0728392dd3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiMetaDataSetIntAtString</definition>
+        <argsstring>(AtMetaDataStore *mds, const AtString param, const AtString name, int value)</argsstring>
+        <name>AiMetaDataSetIntAtString</name>
+        <param>
+          <type><ref refid="group__ai__nodemeta_1ga2bc4e600ff981b485a9070f367e6bda2" kindref="member">AtMetaDataStore</ref> *</type>
+          <declname>mds</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>param</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_metadata.h" line="86" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodemeta_1ga51ae9643f46af59c6aaf766045aa6c92" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiMetaDataSetInt</definition>
+        <argsstring>(AtMetaDataStore *mds, const AtString param, const AtString name, int value)</argsstring>
+        <name>AiMetaDataSetInt</name>
+        <param>
+          <type><ref refid="group__ai__nodemeta_1ga2bc4e600ff981b485a9070f367e6bda2" kindref="member">AtMetaDataStore</ref> *</type>
+          <declname>mds</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>param</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_metadata.h" line="86" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_metadata.h" bodystart="86" bodyend="86"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodemeta_1gaa9be921042e8d13ab0defd609d5f0384" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiMetaDataSetFlt</definition>
+        <argsstring>(AtMetaDataStore *mds, const char *param, const char *name, float value)</argsstring>
+        <name>AiMetaDataSetFlt</name>
+        <param>
+          <type><ref refid="group__ai__nodemeta_1ga2bc4e600ff981b485a9070f367e6bda2" kindref="member">AtMetaDataStore</ref> *</type>
+          <declname>mds</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>param</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_metadata.h" line="87" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodemeta_1ga473b7e10937e834ccef0b2afe5c178d6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiMetaDataSetFltAtString</definition>
+        <argsstring>(AtMetaDataStore *mds, const AtString param, const AtString name, float value)</argsstring>
+        <name>AiMetaDataSetFltAtString</name>
+        <param>
+          <type><ref refid="group__ai__nodemeta_1ga2bc4e600ff981b485a9070f367e6bda2" kindref="member">AtMetaDataStore</ref> *</type>
+          <declname>mds</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>param</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_metadata.h" line="87" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodemeta_1gadc5572a2fbe5fa21f8be320b5b7a1990" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiMetaDataSetFlt</definition>
+        <argsstring>(AtMetaDataStore *mds, const AtString param, const AtString name, float value)</argsstring>
+        <name>AiMetaDataSetFlt</name>
+        <param>
+          <type><ref refid="group__ai__nodemeta_1ga2bc4e600ff981b485a9070f367e6bda2" kindref="member">AtMetaDataStore</ref> *</type>
+          <declname>mds</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>param</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_metadata.h" line="87" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_metadata.h" bodystart="87" bodyend="87"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodemeta_1ga41b3cac2e193f0f15f1552404cafa68d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiMetaDataSetRGB</definition>
+        <argsstring>(AtMetaDataStore *mds, const char *param, const char *name, AtColor value)</argsstring>
+        <name>AiMetaDataSetRGB</name>
+        <param>
+          <type><ref refid="group__ai__nodemeta_1ga2bc4e600ff981b485a9070f367e6bda2" kindref="member">AtMetaDataStore</ref> *</type>
+          <declname>mds</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>param</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type><ref refid="group__ai__color_1ga03caa98eaded3f2dd0527ed284656f04" kindref="member">AtColor</ref></type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_metadata.h" line="88" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodemeta_1gad1232e8ecd8e493cc7a613e38e0de761" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiMetaDataSetRGBAtString</definition>
+        <argsstring>(AtMetaDataStore *mds, const AtString param, const AtString name, AtColor value)</argsstring>
+        <name>AiMetaDataSetRGBAtString</name>
+        <param>
+          <type><ref refid="group__ai__nodemeta_1ga2bc4e600ff981b485a9070f367e6bda2" kindref="member">AtMetaDataStore</ref> *</type>
+          <declname>mds</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>param</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type><ref refid="group__ai__color_1ga03caa98eaded3f2dd0527ed284656f04" kindref="member">AtColor</ref></type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_metadata.h" line="88" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodemeta_1ga559c0cb5465304979f8eda30163edc5c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiMetaDataSetRGB</definition>
+        <argsstring>(AtMetaDataStore *mds, const AtString param, const AtString name, AtColor value)</argsstring>
+        <name>AiMetaDataSetRGB</name>
+        <param>
+          <type><ref refid="group__ai__nodemeta_1ga2bc4e600ff981b485a9070f367e6bda2" kindref="member">AtMetaDataStore</ref> *</type>
+          <declname>mds</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>param</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type><ref refid="group__ai__color_1ga03caa98eaded3f2dd0527ed284656f04" kindref="member">AtColor</ref></type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_metadata.h" line="88" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_metadata.h" bodystart="88" bodyend="88"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodemeta_1gae3c8ce7e492e6533603a8a40ba6218c4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiMetaDataSetVec</definition>
+        <argsstring>(AtMetaDataStore *mds, const char *param, const char *name, AtVector value)</argsstring>
+        <name>AiMetaDataSetVec</name>
+        <param>
+          <type><ref refid="group__ai__nodemeta_1ga2bc4e600ff981b485a9070f367e6bda2" kindref="member">AtMetaDataStore</ref> *</type>
+          <declname>mds</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>param</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type><ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref></type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_metadata.h" line="89" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodemeta_1gacb22039764281abeb81d0280f0684374" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiMetaDataSetVecAtString</definition>
+        <argsstring>(AtMetaDataStore *mds, const AtString param, const AtString name, AtVector value)</argsstring>
+        <name>AiMetaDataSetVecAtString</name>
+        <param>
+          <type><ref refid="group__ai__nodemeta_1ga2bc4e600ff981b485a9070f367e6bda2" kindref="member">AtMetaDataStore</ref> *</type>
+          <declname>mds</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>param</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type><ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref></type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_metadata.h" line="89" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodemeta_1gad3c7be7083bbca1ac92d70c83532d6ab" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiMetaDataSetVec</definition>
+        <argsstring>(AtMetaDataStore *mds, const AtString param, const AtString name, AtVector value)</argsstring>
+        <name>AiMetaDataSetVec</name>
+        <param>
+          <type><ref refid="group__ai__nodemeta_1ga2bc4e600ff981b485a9070f367e6bda2" kindref="member">AtMetaDataStore</ref> *</type>
+          <declname>mds</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>param</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type><ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref></type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_metadata.h" line="89" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_metadata.h" bodystart="89" bodyend="89"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodemeta_1gac74dffb58586fe86b472390248538d43" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiMetaDataSetPnt</definition>
+        <argsstring>(AtMetaDataStore *mds, const char *param, const char *name, AtPoint value)</argsstring>
+        <name>AiMetaDataSetPnt</name>
+        <param>
+          <type><ref refid="group__ai__nodemeta_1ga2bc4e600ff981b485a9070f367e6bda2" kindref="member">AtMetaDataStore</ref> *</type>
+          <declname>mds</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>param</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_at_point" kindref="compound">AtPoint</ref></type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_metadata.h" line="90" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodemeta_1ga66ddbd31bd53eac64702d627ae62573b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiMetaDataSetPntAtString</definition>
+        <argsstring>(AtMetaDataStore *mds, const AtString param, const AtString name, AtPoint value)</argsstring>
+        <name>AiMetaDataSetPntAtString</name>
+        <param>
+          <type><ref refid="group__ai__nodemeta_1ga2bc4e600ff981b485a9070f367e6bda2" kindref="member">AtMetaDataStore</ref> *</type>
+          <declname>mds</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>param</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_at_point" kindref="compound">AtPoint</ref></type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_metadata.h" line="90" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodemeta_1ga447cade63e8362d904c2bf46d6ff45ae" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiMetaDataSetPnt</definition>
+        <argsstring>(AtMetaDataStore *mds, const AtString param, const AtString name, AtPoint value)</argsstring>
+        <name>AiMetaDataSetPnt</name>
+        <param>
+          <type><ref refid="group__ai__nodemeta_1ga2bc4e600ff981b485a9070f367e6bda2" kindref="member">AtMetaDataStore</ref> *</type>
+          <declname>mds</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>param</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_at_point" kindref="compound">AtPoint</ref></type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_metadata.h" line="90" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_metadata.h" bodystart="90" bodyend="90"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodemeta_1ga398ecec0a30a58c920bc19314d509f09" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiMetaDataSetPnt2</definition>
+        <argsstring>(AtMetaDataStore *mds, const char *param, const char *name, AtPoint2 value)</argsstring>
+        <name>AiMetaDataSetPnt2</name>
+        <param>
+          <type><ref refid="group__ai__nodemeta_1ga2bc4e600ff981b485a9070f367e6bda2" kindref="member">AtMetaDataStore</ref> *</type>
+          <declname>mds</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>param</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_at_point2" kindref="compound">AtPoint2</ref></type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_metadata.h" line="91" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodemeta_1gabf824d707af9305c451b340d02c42d2b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiMetaDataSetPnt2AtString</definition>
+        <argsstring>(AtMetaDataStore *mds, const AtString param, const AtString name, AtPoint2 value)</argsstring>
+        <name>AiMetaDataSetPnt2AtString</name>
+        <param>
+          <type><ref refid="group__ai__nodemeta_1ga2bc4e600ff981b485a9070f367e6bda2" kindref="member">AtMetaDataStore</ref> *</type>
+          <declname>mds</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>param</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_at_point2" kindref="compound">AtPoint2</ref></type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_metadata.h" line="91" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodemeta_1ga364fe603d3c40a3e6a1f3cf184278ebe" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiMetaDataSetPnt2</definition>
+        <argsstring>(AtMetaDataStore *mds, const AtString param, const AtString name, AtPoint2 value)</argsstring>
+        <name>AiMetaDataSetPnt2</name>
+        <param>
+          <type><ref refid="group__ai__nodemeta_1ga2bc4e600ff981b485a9070f367e6bda2" kindref="member">AtMetaDataStore</ref> *</type>
+          <declname>mds</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>param</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_at_point2" kindref="compound">AtPoint2</ref></type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_metadata.h" line="91" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_metadata.h" bodystart="91" bodyend="91"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodemeta_1gab4fd2b8c9dfb91bcb0b052d5f679f67d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiMetaDataSetStr</definition>
+        <argsstring>(AtMetaDataStore *mds, const char *param, const char *name, const char *value)</argsstring>
+        <name>AiMetaDataSetStr</name>
+        <param>
+          <type><ref refid="group__ai__nodemeta_1ga2bc4e600ff981b485a9070f367e6bda2" kindref="member">AtMetaDataStore</ref> *</type>
+          <declname>mds</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>param</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_metadata.h" line="92" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodemeta_1gac27f03567842b9d97fdc91a49791c39a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiMetaDataSetStrAtString</definition>
+        <argsstring>(AtMetaDataStore *mds, const AtString param, const AtString name, const char *value)</argsstring>
+        <name>AiMetaDataSetStrAtString</name>
+        <param>
+          <type><ref refid="group__ai__nodemeta_1ga2bc4e600ff981b485a9070f367e6bda2" kindref="member">AtMetaDataStore</ref> *</type>
+          <declname>mds</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>param</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_metadata.h" line="92" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodemeta_1ga47aab4b8365a65a7d48e1856b2b3a69f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiMetaDataSetStr</definition>
+        <argsstring>(AtMetaDataStore *mds, const AtString param, const AtString name, const char *value)</argsstring>
+        <name>AiMetaDataSetStr</name>
+        <param>
+          <type><ref refid="group__ai__nodemeta_1ga2bc4e600ff981b485a9070f367e6bda2" kindref="member">AtMetaDataStore</ref> *</type>
+          <declname>mds</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>param</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_metadata.h" line="92" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_metadata.h" bodystart="92" bodyend="92"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Metadata Retrieval</header>
+      <description><para>These functions allow client code to examine metadata attached to specific parameters or to a node.</para><para>Following on the example above: <programlisting><codeline><highlight class="normal">const<sp/>AtNodeEntry*<sp/>entry<sp/>=<sp/>AiNodeEntryLookUp(&quot;my_simple_lambert&quot;);</highlight></codeline>
+<codeline><highlight class="normal">char*<sp/>desc;</highlight></codeline>
+<codeline><highlight class="normal">bool<sp/>success<sp/>=<sp/>AiMetaDataGetStr(entry,<sp/>&quot;Kd&quot;,<sp/>&quot;description&quot;,<sp/>&amp;desc)</highlight></codeline>
+<codeline><highlight class="normal">if<sp/>(success)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>printf(&quot;\nDescription<sp/>for<sp/>parameter<sp/>Kd:<sp/>%s&quot;,<sp/>desc);</highlight></codeline>
+</programlisting></para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>entry</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the <ref refid="struct_at_node_entry" kindref="compound">AtNodeEntry</ref> of the node you want to get metadata from </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>param</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the name of the node parameter you want to get metadata from (or NULL if you are looking for metadata on the node itself) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the name of the metadata you want to get </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if the read succeeds, the variable pointed to by <emphasis>value</emphasis> will be overwritten with the metadata </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true when the lookup is succesful </para></simplesect>
+</para></description>
+      <memberdef kind="function" id="group__ai__nodemeta_1ga7b84a1e936990a4ab168578f9b340a8f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DEPRECATED bool</type>
+        <definition>DEPRECATED bool AiMetaDataGetBool</definition>
+        <argsstring>(const AtNodeEntry *entry, const char *param, const char *name, bool *value)</argsstring>
+        <name>AiMetaDataGetBool</name>
+        <param>
+          <type>const <ref refid="struct_at_node_entry" kindref="compound">AtNodeEntry</ref> *</type>
+          <declname>entry</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>param</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>bool *</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_metadata.h" line="129" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodemeta_1gaf66c752aaa8f0ece43934cc87ca15758" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiMetaDataGetBoolAtString</definition>
+        <argsstring>(const AtNodeEntry *entry, const AtString param, const AtString name, bool *value)</argsstring>
+        <name>AiMetaDataGetBoolAtString</name>
+        <param>
+          <type>const <ref refid="struct_at_node_entry" kindref="compound">AtNodeEntry</ref> *</type>
+          <declname>entry</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>param</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>bool *</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_metadata.h" line="129" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodemeta_1gae3bdd7b07d2d861c9bb3342843b3aa6b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiMetaDataGetBool</definition>
+        <argsstring>(const AtNodeEntry *entry, const AtString param, const AtString name, bool *value)</argsstring>
+        <name>AiMetaDataGetBool</name>
+        <param>
+          <type>const <ref refid="struct_at_node_entry" kindref="compound">AtNodeEntry</ref> *</type>
+          <declname>entry</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>param</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>bool *</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_metadata.h" line="129" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_metadata.h" bodystart="129" bodyend="129"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodemeta_1ga018096f4df2972707d52e9b9cea9b8fc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DEPRECATED bool</type>
+        <definition>DEPRECATED bool AiMetaDataGetInt</definition>
+        <argsstring>(const AtNodeEntry *entry, const char *param, const char *name, int *value)</argsstring>
+        <name>AiMetaDataGetInt</name>
+        <param>
+          <type>const <ref refid="struct_at_node_entry" kindref="compound">AtNodeEntry</ref> *</type>
+          <declname>entry</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>param</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_metadata.h" line="130" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodemeta_1ga9c12b5193d05fecdc0f8d46aa574a6c0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiMetaDataGetIntAtString</definition>
+        <argsstring>(const AtNodeEntry *entry, const AtString param, const AtString name, int *value)</argsstring>
+        <name>AiMetaDataGetIntAtString</name>
+        <param>
+          <type>const <ref refid="struct_at_node_entry" kindref="compound">AtNodeEntry</ref> *</type>
+          <declname>entry</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>param</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_metadata.h" line="130" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodemeta_1ga317af3bd557d1488173f50f7b84132e6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiMetaDataGetInt</definition>
+        <argsstring>(const AtNodeEntry *entry, const AtString param, const AtString name, int *value)</argsstring>
+        <name>AiMetaDataGetInt</name>
+        <param>
+          <type>const <ref refid="struct_at_node_entry" kindref="compound">AtNodeEntry</ref> *</type>
+          <declname>entry</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>param</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_metadata.h" line="130" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_metadata.h" bodystart="130" bodyend="130"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodemeta_1ga5b46cde3f45e14d53a0653c679d7736f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DEPRECATED bool</type>
+        <definition>DEPRECATED bool AiMetaDataGetFlt</definition>
+        <argsstring>(const AtNodeEntry *entry, const char *param, const char *name, float *value)</argsstring>
+        <name>AiMetaDataGetFlt</name>
+        <param>
+          <type>const <ref refid="struct_at_node_entry" kindref="compound">AtNodeEntry</ref> *</type>
+          <declname>entry</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>param</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_metadata.h" line="131" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodemeta_1gabc24dc5570e70d6b030892622054df37" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiMetaDataGetFltAtString</definition>
+        <argsstring>(const AtNodeEntry *entry, const AtString param, const AtString name, float *value)</argsstring>
+        <name>AiMetaDataGetFltAtString</name>
+        <param>
+          <type>const <ref refid="struct_at_node_entry" kindref="compound">AtNodeEntry</ref> *</type>
+          <declname>entry</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>param</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_metadata.h" line="131" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodemeta_1ga707f8e949b9ef168c01014647da08f23" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiMetaDataGetFlt</definition>
+        <argsstring>(const AtNodeEntry *entry, const AtString param, const AtString name, float *value)</argsstring>
+        <name>AiMetaDataGetFlt</name>
+        <param>
+          <type>const <ref refid="struct_at_node_entry" kindref="compound">AtNodeEntry</ref> *</type>
+          <declname>entry</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>param</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_metadata.h" line="131" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_metadata.h" bodystart="131" bodyend="131"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodemeta_1ga3a704d1db9b9659e1b85197cba99fa96" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DEPRECATED bool</type>
+        <definition>DEPRECATED bool AiMetaDataGetRGB</definition>
+        <argsstring>(const AtNodeEntry *entry, const char *param, const char *name, AtColor *value)</argsstring>
+        <name>AiMetaDataGetRGB</name>
+        <param>
+          <type>const <ref refid="struct_at_node_entry" kindref="compound">AtNodeEntry</ref> *</type>
+          <declname>entry</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>param</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type><ref refid="group__ai__color_1ga03caa98eaded3f2dd0527ed284656f04" kindref="member">AtColor</ref> *</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_metadata.h" line="132" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodemeta_1ga9de64317eb29815da054bd924f622dea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiMetaDataGetRGBAtString</definition>
+        <argsstring>(const AtNodeEntry *entry, const AtString param, const AtString name, AtColor *value)</argsstring>
+        <name>AiMetaDataGetRGBAtString</name>
+        <param>
+          <type>const <ref refid="struct_at_node_entry" kindref="compound">AtNodeEntry</ref> *</type>
+          <declname>entry</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>param</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type><ref refid="group__ai__color_1ga03caa98eaded3f2dd0527ed284656f04" kindref="member">AtColor</ref> *</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_metadata.h" line="132" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodemeta_1ga2f531adbc015144bd9015ade11725887" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiMetaDataGetRGB</definition>
+        <argsstring>(const AtNodeEntry *entry, const AtString param, const AtString name, AtColor *value)</argsstring>
+        <name>AiMetaDataGetRGB</name>
+        <param>
+          <type>const <ref refid="struct_at_node_entry" kindref="compound">AtNodeEntry</ref> *</type>
+          <declname>entry</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>param</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type><ref refid="group__ai__color_1ga03caa98eaded3f2dd0527ed284656f04" kindref="member">AtColor</ref> *</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_metadata.h" line="132" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_metadata.h" bodystart="132" bodyend="132"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodemeta_1gaf6ada0ef9f6720a0f469106be8f9aa15" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DEPRECATED bool</type>
+        <definition>DEPRECATED bool AiMetaDataGetVec</definition>
+        <argsstring>(const AtNodeEntry *entry, const char *param, const char *name, AtVector *value)</argsstring>
+        <name>AiMetaDataGetVec</name>
+        <param>
+          <type>const <ref refid="struct_at_node_entry" kindref="compound">AtNodeEntry</ref> *</type>
+          <declname>entry</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>param</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type><ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> *</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_metadata.h" line="133" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodemeta_1gac46f11f0587651961ad16757149ba9f7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiMetaDataGetVecAtString</definition>
+        <argsstring>(const AtNodeEntry *entry, const AtString param, const AtString name, AtVector *value)</argsstring>
+        <name>AiMetaDataGetVecAtString</name>
+        <param>
+          <type>const <ref refid="struct_at_node_entry" kindref="compound">AtNodeEntry</ref> *</type>
+          <declname>entry</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>param</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type><ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> *</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_metadata.h" line="133" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodemeta_1ga08c7dd06b0e970edad61151d0c4e1cb6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiMetaDataGetVec</definition>
+        <argsstring>(const AtNodeEntry *entry, const AtString param, const AtString name, AtVector *value)</argsstring>
+        <name>AiMetaDataGetVec</name>
+        <param>
+          <type>const <ref refid="struct_at_node_entry" kindref="compound">AtNodeEntry</ref> *</type>
+          <declname>entry</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>param</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type><ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> *</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_metadata.h" line="133" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_metadata.h" bodystart="133" bodyend="133"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodemeta_1gac659f0928b6697f5f3575d2fb85fed2e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DEPRECATED bool</type>
+        <definition>DEPRECATED bool AiMetaDataGetPnt</definition>
+        <argsstring>(const AtNodeEntry *entry, const char *param, const char *name, AtPoint *value)</argsstring>
+        <name>AiMetaDataGetPnt</name>
+        <param>
+          <type>const <ref refid="struct_at_node_entry" kindref="compound">AtNodeEntry</ref> *</type>
+          <declname>entry</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>param</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_at_point" kindref="compound">AtPoint</ref> *</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_metadata.h" line="134" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodemeta_1ga4c72d5dfb6cb05eb0f98de448e64961f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiMetaDataGetPntAtString</definition>
+        <argsstring>(const AtNodeEntry *entry, const AtString param, const AtString name, AtPoint *value)</argsstring>
+        <name>AiMetaDataGetPntAtString</name>
+        <param>
+          <type>const <ref refid="struct_at_node_entry" kindref="compound">AtNodeEntry</ref> *</type>
+          <declname>entry</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>param</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_at_point" kindref="compound">AtPoint</ref> *</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_metadata.h" line="134" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodemeta_1gadf8efa122b7a1dbbd1370929710602f8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiMetaDataGetPnt</definition>
+        <argsstring>(const AtNodeEntry *entry, const AtString param, const AtString name, AtPoint *value)</argsstring>
+        <name>AiMetaDataGetPnt</name>
+        <param>
+          <type>const <ref refid="struct_at_node_entry" kindref="compound">AtNodeEntry</ref> *</type>
+          <declname>entry</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>param</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_at_point" kindref="compound">AtPoint</ref> *</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_metadata.h" line="134" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_metadata.h" bodystart="134" bodyend="134"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodemeta_1gadb223d0ebfeddfe55842cc307c025ed0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DEPRECATED bool</type>
+        <definition>DEPRECATED bool AiMetaDataGetPnt2</definition>
+        <argsstring>(const AtNodeEntry *entry, const char *param, const char *name, AtPoint2 *value)</argsstring>
+        <name>AiMetaDataGetPnt2</name>
+        <param>
+          <type>const <ref refid="struct_at_node_entry" kindref="compound">AtNodeEntry</ref> *</type>
+          <declname>entry</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>param</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_at_point2" kindref="compound">AtPoint2</ref> *</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_metadata.h" line="135" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodemeta_1ga8f2f92b7612882b44ecb5fb4093c4a01" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiMetaDataGetPnt2AtString</definition>
+        <argsstring>(const AtNodeEntry *entry, const AtString param, const AtString name, AtPoint2 *value)</argsstring>
+        <name>AiMetaDataGetPnt2AtString</name>
+        <param>
+          <type>const <ref refid="struct_at_node_entry" kindref="compound">AtNodeEntry</ref> *</type>
+          <declname>entry</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>param</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_at_point2" kindref="compound">AtPoint2</ref> *</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_metadata.h" line="135" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodemeta_1gad2a840a46582f418700e4b2f7f08a664" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiMetaDataGetPnt2</definition>
+        <argsstring>(const AtNodeEntry *entry, const AtString param, const AtString name, AtPoint2 *value)</argsstring>
+        <name>AiMetaDataGetPnt2</name>
+        <param>
+          <type>const <ref refid="struct_at_node_entry" kindref="compound">AtNodeEntry</ref> *</type>
+          <declname>entry</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>param</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_at_point2" kindref="compound">AtPoint2</ref> *</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_metadata.h" line="135" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_metadata.h" bodystart="135" bodyend="135"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodemeta_1ga24382ef7d828287d4abce3b12449df6a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DEPRECATED bool</type>
+        <definition>DEPRECATED bool AiMetaDataGetStr</definition>
+        <argsstring>(const AtNodeEntry *entry, const char *param, const char *name, const char **value)</argsstring>
+        <name>AiMetaDataGetStr</name>
+        <param>
+          <type>const <ref refid="struct_at_node_entry" kindref="compound">AtNodeEntry</ref> *</type>
+          <declname>entry</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>param</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>const char **</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_metadata.h" line="136" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodemeta_1ga7dcc85242d9ad679df14a57636a60536" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiMetaDataGetStrAtString</definition>
+        <argsstring>(const AtNodeEntry *entry, const AtString param, const AtString name, const char **value)</argsstring>
+        <name>AiMetaDataGetStrAtString</name>
+        <param>
+          <type>const <ref refid="struct_at_node_entry" kindref="compound">AtNodeEntry</ref> *</type>
+          <declname>entry</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>param</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>const char **</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_metadata.h" line="136" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__nodemeta_1ga762fde0d3c73e0a194a1f9d244c36be0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiMetaDataGetStr</definition>
+        <argsstring>(const AtNodeEntry *entry, const AtString param, const AtString name, const char **value)</argsstring>
+        <name>AiMetaDataGetStr</name>
+        <param>
+          <type>const <ref refid="struct_at_node_entry" kindref="compound">AtNodeEntry</ref> *</type>
+          <declname>entry</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>param</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>const char **</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_metadata.h" line="136" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_metadata.h" bodystart="136" bodyend="136"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__nodemeta_1gad3ea02324279de758f27bcaab313fc52" prot="public" static="no">
+        <name>AiCreateFuncs</name>
+        <param><defname>_name</defname></param>
+        <param><defname>_type</defname></param>
+        <initializer><ref refid="ai__api_8h_1a4b9d3c7c64877dda42d97f936f023a96" kindref="member">AI_API</ref> void AiMetaDataSet##<ref refid="ai__deprecated_8h_1aec321dc1beac683ff60b65608dab6c9b" kindref="member">_name</ref>          (<ref refid="group__ai__nodemeta_1ga2bc4e600ff981b485a9070f367e6bda2" kindref="member">AtMetaDataStore</ref>* mds, const char* param,    const char* name,    _type value); \
+<ref refid="ai__api_8h_1a4b9d3c7c64877dda42d97f936f023a96" kindref="member">AI_API</ref> void AiMetaDataSet##<ref refid="ai__deprecated_8h_1aec321dc1beac683ff60b65608dab6c9b" kindref="member">_name</ref>##<ref refid="class_at_string" kindref="compound">AtString</ref>(<ref refid="group__ai__nodemeta_1ga2bc4e600ff981b485a9070f367e6bda2" kindref="member">AtMetaDataStore</ref>* mds, const <ref refid="class_at_string" kindref="compound">AtString</ref> param, const <ref refid="class_at_string" kindref="compound">AtString</ref> name, _type value); \
+inline void AiMetaDataSet##<ref refid="ai__deprecated_8h_1aec321dc1beac683ff60b65608dab6c9b" kindref="member">_name</ref>          (<ref refid="group__ai__nodemeta_1ga2bc4e600ff981b485a9070f367e6bda2" kindref="member">AtMetaDataStore</ref>* mds, const <ref refid="class_at_string" kindref="compound">AtString</ref> param, const <ref refid="class_at_string" kindref="compound">AtString</ref> name, _type value)  \
+{                                                                                                                         \
+   AiMetaDataSet##<ref refid="ai__deprecated_8h_1aec321dc1beac683ff60b65608dab6c9b" kindref="member">_name</ref>##<ref refid="class_at_string" kindref="compound">AtString</ref>(mds, param, name, value);                                                               \
+}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_metadata.h" line="77" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_metadata.h" bodystart="121" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__nodemeta_1ga16638b64718cf0f90d8bd51a99a76df3" prot="public" static="no">
+        <name>AiCreateFuncs</name>
+        <param><defname>_name</defname></param>
+        <param><defname>_type</defname></param>
+        <initializer><ref refid="ai__api_8h_1a4b9d3c7c64877dda42d97f936f023a96" kindref="member">AI_API</ref> <ref refid="ai__api_8h_1a19d077fa951fe893bfc989f548855f96" kindref="member">AI_DEPRECATED</ref> bool AiMetaDataGet##<ref refid="ai__deprecated_8h_1aec321dc1beac683ff60b65608dab6c9b" kindref="member">_name</ref>          (const <ref refid="struct_at_node_entry" kindref="compound">AtNodeEntry</ref>* entry, const char* param,    const char* name,    _type* value); \
+<ref refid="ai__api_8h_1a4b9d3c7c64877dda42d97f936f023a96" kindref="member">AI_API</ref>               bool AiMetaDataGet##<ref refid="ai__deprecated_8h_1aec321dc1beac683ff60b65608dab6c9b" kindref="member">_name</ref>##<ref refid="class_at_string" kindref="compound">AtString</ref>(const <ref refid="struct_at_node_entry" kindref="compound">AtNodeEntry</ref>* entry, const <ref refid="class_at_string" kindref="compound">AtString</ref> param, const <ref refid="class_at_string" kindref="compound">AtString</ref> name, _type* value); \
+inline               bool AiMetaDataGet##<ref refid="ai__deprecated_8h_1aec321dc1beac683ff60b65608dab6c9b" kindref="member">_name</ref>          (const <ref refid="struct_at_node_entry" kindref="compound">AtNodeEntry</ref>* entry, const <ref refid="class_at_string" kindref="compound">AtString</ref> param, const <ref refid="class_at_string" kindref="compound">AtString</ref> name, _type* value)  \
+{                                                                                                                                            \
+   return AiMetaDataGet##<ref refid="ai__deprecated_8h_1aec321dc1beac683ff60b65608dab6c9b" kindref="member">_name</ref>##<ref refid="class_at_string" kindref="compound">AtString</ref>(entry, param, name, value);                                                                         \
+}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_metadata.h" line="121" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_metadata.h" bodystart="121" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Metadata Files</header>
+      <description><para>This function allows client code to manually load and apply a metadata file.</para><para>Usage: <programlisting><codeline><highlight class="normal">const<sp/>char*<sp/>metadata_file<sp/>=<sp/>&quot;metadata_file.mtd&quot;;</highlight></codeline>
+<codeline><highlight class="normal">bool<sp/>success<sp/>=<sp/>AiMetaDataLoadFile(metadata_file)</highlight></codeline>
+<codeline><highlight class="normal">if<sp/>(!success)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>printf(&quot;\nError<sp/>loading<sp/>metadata<sp/>file<sp/>%s&quot;,<sp/>metadata_file);</highlight></codeline>
+</programlisting></para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>filename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the name of the metadata file to load </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true when the file could be read succesfully </para></simplesect>
+</para></description>
+      <memberdef kind="function" id="group__ai__nodemeta_1ga57917e7cf9a84b09fb2a58dd55e52dff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiMetaDataLoadFile</definition>
+        <argsstring>(const char *filename)</argsstring>
+        <name>AiMetaDataLoadFile</name>
+        <param>
+          <type>const char *</type>
+          <declname>filename</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_metadata.h" line="158" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This API allows the user to attach and retrieve extra information about nodes and their parameters. This can be helpful to maintain extra annotations about parameters for GUI tools for example. </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

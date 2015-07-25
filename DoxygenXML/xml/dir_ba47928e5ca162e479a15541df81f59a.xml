@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="dir_ba47928e5ca162e479a15541df81f59a" kind="dir">
+    <compoundname>include</compoundname>
+    <innerfile refid="ai_8h">ai.h</innerfile>
+    <innerfile refid="ai__allocate_8h">ai_allocate.h</innerfile>
+    <innerfile refid="ai__api_8h">ai_api.h</innerfile>
+    <innerfile refid="ai__array_8h">ai_array.h</innerfile>
+    <innerfile refid="ai__bbox_8h">ai_bbox.h</innerfile>
+    <innerfile refid="ai__cameras_8h">ai_cameras.h</innerfile>
+    <innerfile refid="ai__color_8h">ai_color.h</innerfile>
+    <innerfile refid="ai__constants_8h">ai_constants.h</innerfile>
+    <innerfile refid="ai__critsec_8h">ai_critsec.h</innerfile>
+    <innerfile refid="ai__deprecated_8h">ai_deprecated.h</innerfile>
+    <innerfile refid="ai__dotass_8h">ai_dotass.h</innerfile>
+    <innerfile refid="ai__driver__utils_8h">ai_driver_utils.h</innerfile>
+    <innerfile refid="ai__drivers_8h">ai_drivers.h</innerfile>
+    <innerfile refid="ai__enum_8h">ai_enum.h</innerfile>
+    <innerfile refid="ai__filters_8h">ai_filters.h</innerfile>
+    <innerfile refid="ai__license_8h">ai_license.h</innerfile>
+    <innerfile refid="ai__matrix_8h">ai_matrix.h</innerfile>
+    <innerfile refid="ai__metadata_8h">ai_metadata.h</innerfile>
+    <innerfile refid="ai__msg_8h">ai_msg.h</innerfile>
+    <innerfile refid="ai__node__entry_8h">ai_node_entry.h</innerfile>
+    <innerfile refid="ai__nodes_8h">ai_nodes.h</innerfile>
+    <innerfile refid="ai__noise_8h">ai_noise.h</innerfile>
+    <innerfile refid="ai__params_8h">ai_params.h</innerfile>
+    <innerfile refid="ai__plugins_8h">ai_plugins.h</innerfile>
+    <innerfile refid="ai__procedural_8h">ai_procedural.h</innerfile>
+    <innerfile refid="ai__ray_8h">ai_ray.h</innerfile>
+    <innerfile refid="ai__render_8h">ai_render.h</innerfile>
+    <innerfile refid="ai__sampler_8h">ai_sampler.h</innerfile>
+    <innerfile refid="ai__shader__aovs_8h">ai_shader_aovs.h</innerfile>
+    <innerfile refid="ai__shader__brdf_8h">ai_shader_brdf.h</innerfile>
+    <innerfile refid="ai__shader__lights_8h">ai_shader_lights.h</innerfile>
+    <innerfile refid="ai__shader__message_8h">ai_shader_message.h</innerfile>
+    <innerfile refid="ai__shader__parameval_8h">ai_shader_parameval.h</innerfile>
+    <innerfile refid="ai__shader__radiance_8h">ai_shader_radiance.h</innerfile>
+    <innerfile refid="ai__shader__sample_8h">ai_shader_sample.h</innerfile>
+    <innerfile refid="ai__shader__sss_8h">ai_shader_sss.h</innerfile>
+    <innerfile refid="ai__shader__userdef_8h">ai_shader_userdef.h</innerfile>
+    <innerfile refid="ai__shader__util_8h">ai_shader_util.h</innerfile>
+    <innerfile refid="ai__shader__volume_8h">ai_shader_volume.h</innerfile>
+    <innerfile refid="ai__shaderglobals_8h">ai_shaderglobals.h</innerfile>
+    <innerfile refid="ai__shaders_8h">ai_shaders.h</innerfile>
+    <innerfile refid="ai__string_8h">ai_string.h</innerfile>
+    <innerfile refid="ai__texture_8h">ai_texture.h</innerfile>
+    <innerfile refid="ai__threads_8h">ai_threads.h</innerfile>
+    <innerfile refid="ai__types_8h">ai_types.h</innerfile>
+    <innerfile refid="ai__unit__test_8h">ai_unit_test.h</innerfile>
+    <innerfile refid="ai__universe_8h">ai_universe.h</innerfile>
+    <innerfile refid="ai__vector_8h">ai_vector.h</innerfile>
+    <innerfile refid="ai__version_8h">ai_version.h</innerfile>
+    <innerfile refid="ai__volume_8h">ai_volume.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,1285 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="ai__shader__brdf_8h" kind="file" language="C++">
+    <compoundname>ai_shader_brdf.h</compoundname>
+    <includes refid="ai__color_8h" local="yes">ai_color.h</includes>
+    <includes refid="ai__vector_8h" local="yes">ai_vector.h</includes>
+    <includes refid="ai__shaderglobals_8h" local="yes">ai_shaderglobals.h</includes>
+    <includedby refid="ai_8h" local="yes">ai.h</includedby>
+    <incdepgraph>
+      <node id="542">
+        <label>ai_constants.h</label>
+        <link refid="ai__constants_8h"/>
+      </node>
+      <node id="541">
+        <label>ai_api.h</label>
+        <link refid="ai__api_8h"/>
+      </node>
+      <node id="543">
+        <label>cmath</label>
+      </node>
+      <node id="545">
+        <label>ai_vector.h</label>
+        <link refid="ai__vector_8h"/>
+        <childnode refid="542" relation="include">
+        </childnode>
+        <childnode refid="540" relation="include">
+        </childnode>
+        <childnode refid="541" relation="include">
+        </childnode>
+        <childnode refid="546" relation="include">
+        </childnode>
+      </node>
+      <node id="540">
+        <label>ai_types.h</label>
+        <link refid="ai__types_8h"/>
+        <childnode refid="541" relation="include">
+        </childnode>
+        <childnode refid="542" relation="include">
+        </childnode>
+        <childnode refid="543" relation="include">
+        </childnode>
+        <childnode refid="544" relation="include">
+        </childnode>
+      </node>
+      <node id="549">
+        <label>ai_array.h</label>
+        <link refid="ai__array_8h"/>
+        <childnode refid="539" relation="include">
+        </childnode>
+        <childnode refid="550" relation="include">
+        </childnode>
+        <childnode refid="545" relation="include">
+        </childnode>
+        <childnode refid="540" relation="include">
+        </childnode>
+        <childnode refid="541" relation="include">
+        </childnode>
+      </node>
+      <node id="538">
+        <label>ai_shader_brdf.h</label>
+        <link refid="ai_shader_brdf.h"/>
+        <childnode refid="539" relation="include">
+        </childnode>
+        <childnode refid="545" relation="include">
+        </childnode>
+        <childnode refid="547" relation="include">
+        </childnode>
+      </node>
+      <node id="548">
+        <label>ai_params.h</label>
+        <link refid="ai__params_8h"/>
+        <childnode refid="549" relation="include">
+        </childnode>
+        <childnode refid="539" relation="include">
+        </childnode>
+        <childnode refid="551" relation="include">
+        </childnode>
+        <childnode refid="550" relation="include">
+        </childnode>
+        <childnode refid="545" relation="include">
+        </childnode>
+        <childnode refid="540" relation="include">
+        </childnode>
+        <childnode refid="541" relation="include">
+        </childnode>
+      </node>
+      <node id="547">
+        <label>ai_shaderglobals.h</label>
+        <link refid="ai__shaderglobals_8h"/>
+        <childnode refid="548" relation="include">
+        </childnode>
+        <childnode refid="549" relation="include">
+        </childnode>
+        <childnode refid="539" relation="include">
+        </childnode>
+        <childnode refid="550" relation="include">
+        </childnode>
+        <childnode refid="545" relation="include">
+        </childnode>
+        <childnode refid="552" relation="include">
+        </childnode>
+        <childnode refid="540" relation="include">
+        </childnode>
+        <childnode refid="541" relation="include">
+        </childnode>
+      </node>
+      <node id="539">
+        <label>ai_color.h</label>
+        <link refid="ai__color_8h"/>
+        <childnode refid="540" relation="include">
+        </childnode>
+        <childnode refid="542" relation="include">
+        </childnode>
+        <childnode refid="541" relation="include">
+        </childnode>
+      </node>
+      <node id="546">
+        <label>math.h</label>
+      </node>
+      <node id="544">
+        <label>cstdlib</label>
+      </node>
+      <node id="550">
+        <label>ai_matrix.h</label>
+        <link refid="ai__matrix_8h"/>
+        <childnode refid="545" relation="include">
+        </childnode>
+        <childnode refid="541" relation="include">
+        </childnode>
+      </node>
+      <node id="552">
+        <label>ai_string.h</label>
+        <link refid="ai__string_8h"/>
+        <childnode refid="541" relation="include">
+        </childnode>
+        <childnode refid="540" relation="include">
+        </childnode>
+      </node>
+      <node id="551">
+        <label>ai_enum.h</label>
+        <link refid="ai__enum_8h"/>
+        <childnode refid="541" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="553">
+        <label>ai_shader_brdf.h</label>
+        <link refid="ai_shader_brdf.h"/>
+        <childnode refid="554" relation="include">
+        </childnode>
+      </node>
+      <node id="554">
+        <label>ai.h</label>
+        <link refid="ai_8h"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="user-defined">
+      <header>BRDF Evaluation Methods</header>
+      <description><para>We provide an interface for users to define a BRDF and its associated methods. All the functions receive an arbitrary void pointer where the programmer can store needed parameters. An &quot;instance&quot; of a BRDF is meant to be located at a certain point and to a certain viewing direction. The programmer must take care of this and store it in the arbitrary data pointer. </para></description>
+      <memberdef kind="typedef" id="group__ai__shader__brdf_1gab2b0ce1b9740281354a064a12d5a601b" prot="public" static="no">
+        <type><ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref>(*</type>
+        <definition>typedef AtVector(* AtBRDFEvalSampleFunc) (const void *brdf_data, float rx, float ry)</definition>
+        <argsstring>)(const void *brdf_data, float rx, float ry)</argsstring>
+        <name>AtBRDFEvalSampleFunc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns a direction according to some distribution based on the reflectance of the BRDF. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_brdf.h" line="32" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_brdf.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__ai__shader__brdf_1ga1ff1c22edcf12ea1ee48a3c9199f2aa8" prot="public" static="no">
+        <type><ref refid="group__ai__color_1ga03caa98eaded3f2dd0527ed284656f04" kindref="member">AtColor</ref>(*</type>
+        <definition>typedef AtColor(* AtBRDFEvalBrdfFunc) (const void *brdf_data, const AtVector *indir)</definition>
+        <argsstring>)(const void *brdf_data, const AtVector *indir)</argsstring>
+        <name>AtBRDFEvalBrdfFunc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the actual reflectance from a given direction to the viewer&apos;s direction. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_brdf.h" line="34" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_brdf.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__ai__shader__brdf_1gabc74d2ce025bded1ae27897b385831d8" prot="public" static="no">
+        <type>float(*</type>
+        <definition>typedef float(* AtBRDFEvalPdfFunc) (const void *brdf_data, const AtVector *indir)</definition>
+        <argsstring>)(const void *brdf_data, const AtVector *indir)</argsstring>
+        <name>AtBRDFEvalPdfFunc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the probability density for the above sample function at a certain incoming direction. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_brdf.h" line="36" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_brdf.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>BRDF Integration</header>
+      <memberdef kind="function" id="group__ai__shader__brdf_1gaff822f1ebcc5b3affa368c1bbf31d7e5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__ai__color_1ga03caa98eaded3f2dd0527ed284656f04" kindref="member">AtColor</ref></type>
+        <definition>AtColor AiEvaluateLightSample</definition>
+        <argsstring>(AtShaderGlobals *sg, const void *brdf_data, AtBRDFEvalSampleFunc eval_sample, AtBRDFEvalBrdfFunc eval_brdf, AtBRDFEvalPdfFunc eval_pdf)</argsstring>
+        <name>AiEvaluateLightSample</name>
+        <param>
+          <type><ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type>const void *</type>
+          <declname>brdf_data</declname>
+        </param>
+        <param>
+          <type><ref refid="group__ai__shader__brdf_1gab2b0ce1b9740281354a064a12d5a601b" kindref="member">AtBRDFEvalSampleFunc</ref></type>
+          <declname>eval_sample</declname>
+        </param>
+        <param>
+          <type><ref refid="group__ai__shader__brdf_1ga1ff1c22edcf12ea1ee48a3c9199f2aa8" kindref="member">AtBRDFEvalBrdfFunc</ref></type>
+          <declname>eval_brdf</declname>
+        </param>
+        <param>
+          <type><ref refid="group__ai__shader__brdf_1gabc74d2ce025bded1ae27897b385831d8" kindref="member">AtBRDFEvalPdfFunc</ref></type>
+          <declname>eval_pdf</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_brdf.h" line="42" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__brdf_1ga935b955c5a6d0f1295202a151f429c8b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__ai__color_1ga03caa98eaded3f2dd0527ed284656f04" kindref="member">AtColor</ref></type>
+        <definition>AtColor AiBRDFIntegrate</definition>
+        <argsstring>(AtShaderGlobals *sg, const void *brdf_data, AtBRDFEvalSampleFunc eval_sample, AtBRDFEvalBrdfFunc eval_brdf, AtBRDFEvalPdfFunc eval_pdf, AtUInt16 ray_type)</argsstring>
+        <name>AiBRDFIntegrate</name>
+        <param>
+          <type><ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type>const void *</type>
+          <declname>brdf_data</declname>
+        </param>
+        <param>
+          <type><ref refid="group__ai__shader__brdf_1gab2b0ce1b9740281354a064a12d5a601b" kindref="member">AtBRDFEvalSampleFunc</ref></type>
+          <declname>eval_sample</declname>
+        </param>
+        <param>
+          <type><ref refid="group__ai__shader__brdf_1ga1ff1c22edcf12ea1ee48a3c9199f2aa8" kindref="member">AtBRDFEvalBrdfFunc</ref></type>
+          <declname>eval_brdf</declname>
+        </param>
+        <param>
+          <type><ref refid="group__ai__shader__brdf_1gabc74d2ce025bded1ae27897b385831d8" kindref="member">AtBRDFEvalPdfFunc</ref></type>
+          <declname>eval_pdf</declname>
+        </param>
+        <param>
+          <type><ref refid="group__ai__types_1ga31e2774651e7b62b89c5628edfd63fa3" kindref="member">AtUInt16</ref></type>
+          <declname>ray_type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_brdf.h" line="43" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Pre-defined BRDFs</header>
+      <memberdef kind="function" id="group__ai__shader__brdf_1ga7c75279a2ce6e9ac477008c0f6ee6776" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__ai__color_1ga03caa98eaded3f2dd0527ed284656f04" kindref="member">AtColor</ref></type>
+        <definition>AtColor AiOrenNayarMISBRDF</definition>
+        <argsstring>(const void *brdf_data, const AtVector *indir)</argsstring>
+        <name>AiOrenNayarMISBRDF</name>
+        <param>
+          <type>const void *</type>
+          <declname>brdf_data</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> *</type>
+          <declname>indir</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_brdf.h" line="49" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__brdf_1ga44e66a2e0872a36755ac4ca72bf8949c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float AiOrenNayarMISPDF</definition>
+        <argsstring>(const void *brdf_data, const AtVector *indir)</argsstring>
+        <name>AiOrenNayarMISPDF</name>
+        <param>
+          <type>const void *</type>
+          <declname>brdf_data</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> *</type>
+          <declname>indir</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_brdf.h" line="50" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__brdf_1ga079b1ce3464018d2560ad0497ce6eb75" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref></type>
+        <definition>AtVector AiOrenNayarMISSample</definition>
+        <argsstring>(const void *brdf_data, float randx, float randy)</argsstring>
+        <name>AiOrenNayarMISSample</name>
+        <param>
+          <type>const void *</type>
+          <declname>brdf_data</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>randx</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>randy</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_brdf.h" line="51" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__brdf_1ga5efeaa3b1b800eb30444e544e29746ad" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void *</type>
+        <definition>void* AiOrenNayarMISCreateData</definition>
+        <argsstring>(const AtShaderGlobals *sg, float r)</argsstring>
+        <name>AiOrenNayarMISCreateData</name>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>r</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_brdf.h" line="52" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__brdf_1gaed6f6d1d8921867d9a0364e721444261" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__ai__color_1ga03caa98eaded3f2dd0527ed284656f04" kindref="member">AtColor</ref></type>
+        <definition>AtColor AiCookTorranceMISBRDF</definition>
+        <argsstring>(const void *brdf_data, const AtVector *indir)</argsstring>
+        <name>AiCookTorranceMISBRDF</name>
+        <param>
+          <type>const void *</type>
+          <declname>brdf_data</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> *</type>
+          <declname>indir</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_brdf.h" line="54" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__brdf_1gafa18824eedd8a343af432238adb92d43" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float AiCookTorranceMISPDF</definition>
+        <argsstring>(const void *brdf_data, const AtVector *indir)</argsstring>
+        <name>AiCookTorranceMISPDF</name>
+        <param>
+          <type>const void *</type>
+          <declname>brdf_data</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> *</type>
+          <declname>indir</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_brdf.h" line="55" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__brdf_1gacb094332c1881bbe8f03a950ad2d3e40" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref></type>
+        <definition>AtVector AiCookTorranceMISSample</definition>
+        <argsstring>(const void *brdf_data, float randx, float randy)</argsstring>
+        <name>AiCookTorranceMISSample</name>
+        <param>
+          <type>const void *</type>
+          <declname>brdf_data</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>randx</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>randy</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_brdf.h" line="56" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__brdf_1ga6372bc85421b66b32a72ffe9cce3afff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void *</type>
+        <definition>void* AiCookTorranceMISCreateData</definition>
+        <argsstring>(const AtShaderGlobals *sg, const AtVector *u, const AtVector *v, float rx, float ry)</argsstring>
+        <name>AiCookTorranceMISCreateData</name>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> *</type>
+          <declname>u</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> *</type>
+          <declname>v</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>rx</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>ry</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_brdf.h" line="57" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__brdf_1ga2a880eaf9eb110d6a0441f51d665a9b8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__ai__color_1ga03caa98eaded3f2dd0527ed284656f04" kindref="member">AtColor</ref></type>
+        <definition>AtColor AiWardDuerMISBRDF</definition>
+        <argsstring>(const void *brdf_data, const AtVector *indir)</argsstring>
+        <name>AiWardDuerMISBRDF</name>
+        <param>
+          <type>const void *</type>
+          <declname>brdf_data</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> *</type>
+          <declname>indir</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_brdf.h" line="59" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__brdf_1ga040b5efc047165fb4c79d7ec9dbdf288" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float AiWardDuerMISPDF</definition>
+        <argsstring>(const void *brdf_data, const AtVector *indir)</argsstring>
+        <name>AiWardDuerMISPDF</name>
+        <param>
+          <type>const void *</type>
+          <declname>brdf_data</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> *</type>
+          <declname>indir</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_brdf.h" line="60" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__brdf_1gafcdaa68f1c2234f413eb666b22674f90" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref></type>
+        <definition>AtVector AiWardDuerMISSample</definition>
+        <argsstring>(const void *brdf_data, float randx, float randy)</argsstring>
+        <name>AiWardDuerMISSample</name>
+        <param>
+          <type>const void *</type>
+          <declname>brdf_data</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>randx</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>randy</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_brdf.h" line="61" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__brdf_1ga9f1fdf933267da2454ef170d6d7c530b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void *</type>
+        <definition>void* AiWardDuerMISCreateData</definition>
+        <argsstring>(const AtShaderGlobals *sg, const AtVector *u, const AtVector *v, float rx, float ry)</argsstring>
+        <name>AiWardDuerMISCreateData</name>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> *</type>
+          <declname>u</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> *</type>
+          <declname>v</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>rx</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>ry</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_brdf.h" line="62" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__brdf_1ga367192aef55bcbea38a8f3a74fb9801f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__ai__color_1ga03caa98eaded3f2dd0527ed284656f04" kindref="member">AtColor</ref></type>
+        <definition>AtColor AiAshikhminShirleyMISBRDF</definition>
+        <argsstring>(const void *brdf_data, const AtVector *indir)</argsstring>
+        <name>AiAshikhminShirleyMISBRDF</name>
+        <param>
+          <type>const void *</type>
+          <declname>brdf_data</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> *</type>
+          <declname>indir</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_brdf.h" line="64" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__brdf_1ga4335e7297c44ddf9d8d6307f7e22a957" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float AiAshikhminShirleyMISPDF</definition>
+        <argsstring>(const void *brdf_data, const AtVector *indir)</argsstring>
+        <name>AiAshikhminShirleyMISPDF</name>
+        <param>
+          <type>const void *</type>
+          <declname>brdf_data</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> *</type>
+          <declname>indir</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_brdf.h" line="65" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__brdf_1ga48879500bead20172131c24a080cdc53" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref></type>
+        <definition>AtVector AiAshikhminShirleyMISSample</definition>
+        <argsstring>(const void *brdf_data, float randx, float randy)</argsstring>
+        <name>AiAshikhminShirleyMISSample</name>
+        <param>
+          <type>const void *</type>
+          <declname>brdf_data</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>randx</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>randy</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_brdf.h" line="66" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__brdf_1ga823953d5b185479469b31c27897b482f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void *</type>
+        <definition>void* AiAshikhminShirleyMISCreateData</definition>
+        <argsstring>(const AtShaderGlobals *sg, const AtVector *u, const AtVector *v, float rx, float ry)</argsstring>
+        <name>AiAshikhminShirleyMISCreateData</name>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> *</type>
+          <declname>u</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> *</type>
+          <declname>v</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>rx</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>ry</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_brdf.h" line="67" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__brdf_1gabea6a77d653ba0172cd1a390b6a9d5da" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__ai__color_1ga03caa98eaded3f2dd0527ed284656f04" kindref="member">AtColor</ref></type>
+        <definition>AtColor AiStretchedPhongMISBRDF</definition>
+        <argsstring>(const void *brdf_data, const AtVector *indir)</argsstring>
+        <name>AiStretchedPhongMISBRDF</name>
+        <param>
+          <type>const void *</type>
+          <declname>brdf_data</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> *</type>
+          <declname>indir</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_brdf.h" line="69" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__brdf_1gaf8d2ec683b2546b074fcdc3642a8fff6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float AiStretchedPhongMISPDF</definition>
+        <argsstring>(const void *brdf_data, const AtVector *indir)</argsstring>
+        <name>AiStretchedPhongMISPDF</name>
+        <param>
+          <type>const void *</type>
+          <declname>brdf_data</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> *</type>
+          <declname>indir</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_brdf.h" line="70" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__brdf_1ga2948fe3ff0fcb8ce5e5ae9e4c3771b34" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref></type>
+        <definition>AtVector AiStretchedPhongMISSample</definition>
+        <argsstring>(const void *brdf_data, float randx, float randy)</argsstring>
+        <name>AiStretchedPhongMISSample</name>
+        <param>
+          <type>const void *</type>
+          <declname>brdf_data</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>randx</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>randy</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_brdf.h" line="71" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__brdf_1ga52fe47fca3880c9b3ddf5cd7116d3f7d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void *</type>
+        <definition>void* AiStretchedPhongMISCreateData</definition>
+        <argsstring>(const AtShaderGlobals *sg, float pexp)</argsstring>
+        <name>AiStretchedPhongMISCreateData</name>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>pexp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_brdf.h" line="72" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Deprecated BRDF Evaluation API</header>
+      <memberdef kind="function" id="group__ai__shader__brdf_1ga25cacd86fe92cdd3b716cdecbcd792d8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float AiOrenNayarBRDF</definition>
+        <argsstring>(const AtVector *L, const AtVector *V, const AtVector *N, float r)</argsstring>
+        <name>AiOrenNayarBRDF</name>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> *</type>
+          <declname>L</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> *</type>
+          <declname>V</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> *</type>
+          <declname>N</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>r</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_brdf.h" line="78" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__brdf_1ga20aa2626135ea12d5b932ae1062614cb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float AiLommelSeeligerBRDF</definition>
+        <argsstring>(const AtVector *L, const AtVector *V, const AtVector *N)</argsstring>
+        <name>AiLommelSeeligerBRDF</name>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> *</type>
+          <declname>L</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> *</type>
+          <declname>V</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> *</type>
+          <declname>N</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_brdf.h" line="79" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__brdf_1ga892ce64c093f2941cd85e80abd2315c9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float AiCookTorranceBRDF</definition>
+        <argsstring>(const AtVector *L, const AtVector *V, const AtVector *N, const AtVector *u, const AtVector *v, float rx, float ry)</argsstring>
+        <name>AiCookTorranceBRDF</name>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> *</type>
+          <declname>L</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> *</type>
+          <declname>V</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> *</type>
+          <declname>N</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> *</type>
+          <declname>u</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> *</type>
+          <declname>v</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>rx</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>ry</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_brdf.h" line="80" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__brdf_1ga274feb45c221cf533e60bd73f1ec8197" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float AiWardBRDF</definition>
+        <argsstring>(const AtVector *L, const AtVector *V, const AtVector *N, const AtVector *u, const AtVector *v, float rx, float ry)</argsstring>
+        <name>AiWardBRDF</name>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> *</type>
+          <declname>L</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> *</type>
+          <declname>V</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> *</type>
+          <declname>N</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> *</type>
+          <declname>u</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> *</type>
+          <declname>v</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>rx</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>ry</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_brdf.h" line="81" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__brdf_1gab63bbd0714659e5bea8f84879bb7346a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float AiWardDuerBRDF</definition>
+        <argsstring>(const AtVector *L, const AtVector *V, const AtVector *N, const AtVector *u, const AtVector *v, float rx, float ry)</argsstring>
+        <name>AiWardDuerBRDF</name>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> *</type>
+          <declname>L</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> *</type>
+          <declname>V</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> *</type>
+          <declname>N</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> *</type>
+          <declname>u</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> *</type>
+          <declname>v</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>rx</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>ry</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_brdf.h" line="82" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__brdf_1gad65f93ba0ec6a487832fe10b37b1996f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float AiAshikhminShirleyBRDF</definition>
+        <argsstring>(const AtVector *L, const AtVector *V, const AtVector *N, const AtVector *u, const AtVector *v, float nx, float ny)</argsstring>
+        <name>AiAshikhminShirleyBRDF</name>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> *</type>
+          <declname>L</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> *</type>
+          <declname>V</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> *</type>
+          <declname>N</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> *</type>
+          <declname>u</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> *</type>
+          <declname>v</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>nx</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>ny</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_brdf.h" line="83" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__brdf_1gaf5bf85de1b9efbc9e15ba73d985dde87" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float AiStretchedPhongBRDF</definition>
+        <argsstring>(const AtVector *L, const AtVector *V, const AtVector *N, float n, bool retro=false)</argsstring>
+        <name>AiStretchedPhongBRDF</name>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> *</type>
+          <declname>L</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> *</type>
+          <declname>V</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> *</type>
+          <declname>N</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>retro</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_brdf.h" line="84" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Deprecated BRDF Integration API</header>
+      <memberdef kind="function" id="group__ai__shader__brdf_1gae3aa4e0ba162f8b25a9fad237a99540d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__ai__color_1ga03caa98eaded3f2dd0527ed284656f04" kindref="member">AtColor</ref></type>
+        <definition>AtColor AiOrenNayarIntegrate</definition>
+        <argsstring>(const AtVector *N, AtShaderGlobals *sg, float r)</argsstring>
+        <name>AiOrenNayarIntegrate</name>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> *</type>
+          <declname>N</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>r</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_brdf.h" line="90" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__brdf_1ga5e0b256c7c43cb8cc2a07cf9cfa8d22b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__ai__color_1ga03caa98eaded3f2dd0527ed284656f04" kindref="member">AtColor</ref></type>
+        <definition>AtColor AiLommelSeeligerIntegrate</definition>
+        <argsstring>(const AtVector *N, AtShaderGlobals *sg)</argsstring>
+        <name>AiLommelSeeligerIntegrate</name>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> *</type>
+          <declname>N</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_brdf.h" line="91" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__brdf_1ga4b5c01e2f836a932508613824d45ee03" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__ai__color_1ga03caa98eaded3f2dd0527ed284656f04" kindref="member">AtColor</ref></type>
+        <definition>AtColor AiCookTorranceIntegrate</definition>
+        <argsstring>(const AtVector *N, AtShaderGlobals *sg, const AtVector *u, const AtVector *v, float rx, float ry)</argsstring>
+        <name>AiCookTorranceIntegrate</name>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> *</type>
+          <declname>N</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> *</type>
+          <declname>u</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> *</type>
+          <declname>v</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>rx</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>ry</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_brdf.h" line="92" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__brdf_1ga17ad001b574181dd87bf6685923698c2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__ai__color_1ga03caa98eaded3f2dd0527ed284656f04" kindref="member">AtColor</ref></type>
+        <definition>AtColor AiWardIntegrate</definition>
+        <argsstring>(const AtVector *N, AtShaderGlobals *sg, const AtVector *u, const AtVector *v, float rx, float ry)</argsstring>
+        <name>AiWardIntegrate</name>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> *</type>
+          <declname>N</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> *</type>
+          <declname>u</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> *</type>
+          <declname>v</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>rx</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>ry</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_brdf.h" line="93" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__brdf_1ga9693bda1d7b4ce48ec5d74cd0c10160b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__ai__color_1ga03caa98eaded3f2dd0527ed284656f04" kindref="member">AtColor</ref></type>
+        <definition>AtColor AiWardDuerIntegrate</definition>
+        <argsstring>(const AtVector *N, AtShaderGlobals *sg, const AtVector *u, const AtVector *v, float rx, float ry)</argsstring>
+        <name>AiWardDuerIntegrate</name>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> *</type>
+          <declname>N</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> *</type>
+          <declname>u</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> *</type>
+          <declname>v</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>rx</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>ry</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_brdf.h" line="94" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__brdf_1ga57bb5d599a2a8bf060d557c8ba2c9091" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__ai__color_1ga03caa98eaded3f2dd0527ed284656f04" kindref="member">AtColor</ref></type>
+        <definition>AtColor AiAshikhminShirleyIntegrate</definition>
+        <argsstring>(const AtVector *N, AtShaderGlobals *sg, const AtVector *u, const AtVector *v, float nx, float ny)</argsstring>
+        <name>AiAshikhminShirleyIntegrate</name>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> *</type>
+          <declname>N</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> *</type>
+          <declname>u</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> *</type>
+          <declname>v</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>nx</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>ny</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_brdf.h" line="95" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__brdf_1ga6192ce7f735a422fdbf387914b322a13" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__ai__color_1ga03caa98eaded3f2dd0527ed284656f04" kindref="member">AtColor</ref></type>
+        <definition>AtColor AiMicrofacetBTDFIntegrate</definition>
+        <argsstring>(const AtVector *N, AtShaderGlobals *sg, const AtVector *u, const AtVector *v, float rx, float ry, float eta_i, float eta_o, AtColor transmittance)</argsstring>
+        <name>AiMicrofacetBTDFIntegrate</name>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> *</type>
+          <declname>N</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> *</type>
+          <declname>u</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> *</type>
+          <declname>v</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>rx</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>ry</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>eta_i</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>eta_o</declname>
+        </param>
+        <param>
+          <type><ref refid="group__ai__color_1ga03caa98eaded3f2dd0527ed284656f04" kindref="member">AtColor</ref></type>
+          <declname>transmittance</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_brdf.h" line="96" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__brdf_1ga1b0e78cf5f5b2fd4d8ab82d85bba3073" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__ai__color_1ga03caa98eaded3f2dd0527ed284656f04" kindref="member">AtColor</ref></type>
+        <definition>AtColor AiStretchedPhongIntegrate</definition>
+        <argsstring>(const AtVector *N, AtShaderGlobals *sg, float exp)</argsstring>
+        <name>AiStretchedPhongIntegrate</name>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> *</type>
+          <declname>N</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>exp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_brdf.h" line="97" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Various BRDF functions available to shader writers </para>    </detaileddescription>
+    <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_brdf.h"/>
+  </compounddef>
+</doxygen>

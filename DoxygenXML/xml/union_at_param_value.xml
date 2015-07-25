@@ -1,0 +1,254 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="union_at_param_value" kind="union" language="C++" prot="public">
+    <compoundname>AtParamValue</compoundname>
+    <includes refid="ai__params_8h" local="no">ai_params.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="union_at_param_value_1a7c4dae1d25e4e06e8e1abb74a63ca5d8" prot="public" static="no" mutable="no">
+        <type><ref refid="group__ai__types_1ga41f7f394ad3ef67901cce4d05bdabf89" kindref="member">AtByte</ref></type>
+        <definition>AtByte AtParamValue::BYTE</definition>
+        <argsstring></argsstring>
+        <name>BYTE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" line="73" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="union_at_param_value_1ae134dfcb2103eff34aa1656e44443ad6" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int AtParamValue::INT</definition>
+        <argsstring></argsstring>
+        <name>INT</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" line="74" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="union_at_param_value_1a2f431a51e87d616f69178dfa9438525f" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int AtParamValue::UINT</definition>
+        <argsstring></argsstring>
+        <name>UINT</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" line="75" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="union_at_param_value_1a54080f30f946633bdbe706beb624978d" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool AtParamValue::BOOL</definition>
+        <argsstring></argsstring>
+        <name>BOOL</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" line="76" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="union_at_param_value_1aabc8172696edbe3003a26d3efbd0f300" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float AtParamValue::FLT</definition>
+        <argsstring></argsstring>
+        <name>FLT</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" line="77" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="union_at_param_value_1aa5907c072b2600c2a9f84c66859c4361" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_at_r_g_b" kindref="compound">AtRGB</ref></type>
+        <definition>AtRGB AtParamValue::RGB</definition>
+        <argsstring></argsstring>
+        <name>RGB</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" line="78" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="union_at_param_value_1a1a4ce3ff3ccbb8c2579ad6a4e659eabf" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_at_r_g_b_a" kindref="compound">AtRGBA</ref></type>
+        <definition>AtRGBA AtParamValue::RGBA</definition>
+        <argsstring></argsstring>
+        <name>RGBA</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" line="79" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="union_at_param_value_1a522ba9483581e41dff856f931403525e" prot="public" static="no" mutable="no">
+        <type><ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref></type>
+        <definition>AtVector AtParamValue::VEC</definition>
+        <argsstring></argsstring>
+        <name>VEC</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" line="80" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="union_at_param_value_1abaf66a33a4d36d605d68090ae67f7770" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_at_point" kindref="compound">AtPoint</ref></type>
+        <definition>AtPoint AtParamValue::PNT</definition>
+        <argsstring></argsstring>
+        <name>PNT</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" line="81" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="union_at_param_value_1a7ae3524df4aa5e79d77dfde15fad273c" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_at_point2" kindref="compound">AtPoint2</ref></type>
+        <definition>AtPoint2 AtParamValue::PNT2</definition>
+        <argsstring></argsstring>
+        <name>PNT2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" line="82" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="union_at_param_value_1a5c16934ca92e2b0ad644ec5beced7fa3" prot="public" static="no" mutable="no">
+        <type>const char *</type>
+        <definition>const char* AtParamValue::STR</definition>
+        <argsstring></argsstring>
+        <name>STR</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" line="83" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="union_at_param_value_1a14584f6d1dfecef146de4b0c8d06e876" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* AtParamValue::PTR</definition>
+        <argsstring></argsstring>
+        <name>PTR</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" line="84" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="union_at_param_value_1a308ce92e62c06e8a971e42fa9fe7d652" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_at_array" kindref="compound">AtArray</ref> *</type>
+        <definition>AtArray* AtParamValue::ARRAY</definition>
+        <argsstring></argsstring>
+        <name>ARRAY</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" line="85" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="union_at_param_value_1ab0a9dc2fd8dd63b9a7e1d3c1a5021f43" prot="public" static="no" mutable="no">
+        <type><ref refid="group__ai__matrix_1ga239cea4f70543ed6dae0d0549d28c01c" kindref="member">AtMatrix</ref> *</type>
+        <definition>AtMatrix* AtParamValue::pMTX</definition>
+        <argsstring></argsstring>
+        <name>pMTX</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" line="86" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Actual parameter value for each supported type </para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="44">
+        <label>AtParamValue</label>
+        <link refid="union_at_param_value"/>
+        <childnode refid="45" relation="usage">
+          <edgelabel>PNT</edgelabel>
+          <edgelabel>VEC</edgelabel>
+        </childnode>
+        <childnode refid="46" relation="usage">
+          <edgelabel>ARRAY</edgelabel>
+        </childnode>
+        <childnode refid="47" relation="usage">
+          <edgelabel>RGBA</edgelabel>
+        </childnode>
+        <childnode refid="48" relation="usage">
+          <edgelabel>RGB</edgelabel>
+        </childnode>
+        <childnode refid="49" relation="usage">
+          <edgelabel>PNT2</edgelabel>
+        </childnode>
+      </node>
+      <node id="45">
+        <label>AtPoint</label>
+        <link refid="struct_at_point"/>
+      </node>
+      <node id="46">
+        <label>AtArray</label>
+        <link refid="struct_at_array"/>
+      </node>
+      <node id="48">
+        <label>AtRGB</label>
+        <link refid="struct_at_r_g_b"/>
+      </node>
+      <node id="47">
+        <label>AtRGBA</label>
+        <link refid="struct_at_r_g_b_a"/>
+      </node>
+      <node id="49">
+        <label>AtPoint2</label>
+        <link refid="struct_at_point2"/>
+      </node>
+    </collaborationgraph>
+    <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" line="72" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" bodystart="72" bodyend="87"/>
+    <listofallmembers>
+      <member refid="union_at_param_value_1a308ce92e62c06e8a971e42fa9fe7d652" prot="public" virt="non-virtual"><scope>AtParamValue</scope><name>ARRAY</name></member>
+      <member refid="union_at_param_value_1a54080f30f946633bdbe706beb624978d" prot="public" virt="non-virtual"><scope>AtParamValue</scope><name>BOOL</name></member>
+      <member refid="union_at_param_value_1a7c4dae1d25e4e06e8e1abb74a63ca5d8" prot="public" virt="non-virtual"><scope>AtParamValue</scope><name>BYTE</name></member>
+      <member refid="union_at_param_value_1aabc8172696edbe3003a26d3efbd0f300" prot="public" virt="non-virtual"><scope>AtParamValue</scope><name>FLT</name></member>
+      <member refid="union_at_param_value_1ae134dfcb2103eff34aa1656e44443ad6" prot="public" virt="non-virtual"><scope>AtParamValue</scope><name>INT</name></member>
+      <member refid="union_at_param_value_1ab0a9dc2fd8dd63b9a7e1d3c1a5021f43" prot="public" virt="non-virtual"><scope>AtParamValue</scope><name>pMTX</name></member>
+      <member refid="union_at_param_value_1abaf66a33a4d36d605d68090ae67f7770" prot="public" virt="non-virtual"><scope>AtParamValue</scope><name>PNT</name></member>
+      <member refid="union_at_param_value_1a7ae3524df4aa5e79d77dfde15fad273c" prot="public" virt="non-virtual"><scope>AtParamValue</scope><name>PNT2</name></member>
+      <member refid="union_at_param_value_1a14584f6d1dfecef146de4b0c8d06e876" prot="public" virt="non-virtual"><scope>AtParamValue</scope><name>PTR</name></member>
+      <member refid="union_at_param_value_1aa5907c072b2600c2a9f84c66859c4361" prot="public" virt="non-virtual"><scope>AtParamValue</scope><name>RGB</name></member>
+      <member refid="union_at_param_value_1a1a4ce3ff3ccbb8c2579ad6a4e659eabf" prot="public" virt="non-virtual"><scope>AtParamValue</scope><name>RGBA</name></member>
+      <member refid="union_at_param_value_1a5c16934ca92e2b0ad644ec5beced7fa3" prot="public" virt="non-virtual"><scope>AtParamValue</scope><name>STR</name></member>
+      <member refid="union_at_param_value_1a2f431a51e87d616f69178dfa9438525f" prot="public" virt="non-virtual"><scope>AtParamValue</scope><name>UINT</name></member>
+      <member refid="union_at_param_value_1a522ba9483581e41dff856f931403525e" prot="public" virt="non-virtual"><scope>AtParamValue</scope><name>VEC</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

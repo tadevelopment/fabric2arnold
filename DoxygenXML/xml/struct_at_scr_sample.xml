@@ -1,0 +1,142 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="struct_at_scr_sample" kind="struct" language="C++" prot="public">
+    <compoundname>AtScrSample</compoundname>
+    <includes refid="ai__shader__sample_8h" local="no">ai_shader_sample.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_at_scr_sample_1aaac9f113f4aea30eb0deae10abe4cc00" prot="public" static="no" mutable="no">
+        <type><ref refid="group__ai__color_1ga03caa98eaded3f2dd0527ed284656f04" kindref="member">AtColor</ref></type>
+        <definition>AtColor AtScrSample::color</definition>
+        <argsstring></argsstring>
+        <name>color</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>color </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_sample.h" line="24" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_sample.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_scr_sample_1adb3d60db2db8898bc06525c0406a4ccf" prot="public" static="no" mutable="no">
+        <type><ref refid="group__ai__color_1ga03caa98eaded3f2dd0527ed284656f04" kindref="member">AtColor</ref></type>
+        <definition>AtColor AtScrSample::opacity</definition>
+        <argsstring></argsstring>
+        <name>opacity</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>opacity </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_sample.h" line="25" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_sample.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_scr_sample_1a5b12db4f55d611536c46733df8bdc9d7" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float AtScrSample::alpha</definition>
+        <argsstring></argsstring>
+        <name>alpha</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>alpha </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_sample.h" line="26" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_sample.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_scr_sample_1a2217272617b779cb62637b30f37c27e9" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_at_point" kindref="compound">AtPoint</ref></type>
+        <definition>AtPoint AtScrSample::point</definition>
+        <argsstring></argsstring>
+        <name>point</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>3D hit point </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_sample.h" line="27" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_sample.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_scr_sample_1af544ef201a869e2a723115e0acbfaa75" prot="public" static="no" mutable="no">
+        <type><ref refid="group__ai__types_1ga5e008e3afa9393ab65d66796de249df9" kindref="member">AtUInt32</ref></type>
+        <definition>AtUInt32 AtScrSample::face</definition>
+        <argsstring></argsstring>
+        <name>face</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>triangle ID of hit </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_sample.h" line="28" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_sample.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_scr_sample_1a4588921dfdda43121da846404a40d28f" prot="public" static="no" mutable="no">
+        <type>const <ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+        <definition>const AtNode* AtScrSample::obj</definition>
+        <argsstring></argsstring>
+        <name>obj</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>pointer to object hit </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_sample.h" line="29" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_sample.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_scr_sample_1a053ed5952451f7fa0c18f49f2fccbadb" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double AtScrSample::z</definition>
+        <argsstring></argsstring>
+        <name>z</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>hit distance (Z depth) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_sample.h" line="30" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_sample.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Used to hold the result of <ref refid="group__ai__ray_1ga056513d98b80c330d28cd00aa13d719d" kindref="member">AiTrace()</ref> calls </para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="77">
+        <label>AtScrSample</label>
+        <link refid="struct_at_scr_sample"/>
+        <childnode refid="78" relation="usage">
+          <edgelabel>obj</edgelabel>
+        </childnode>
+        <childnode refid="79" relation="usage">
+          <edgelabel>point</edgelabel>
+        </childnode>
+        <childnode refid="80" relation="usage">
+          <edgelabel>opacity</edgelabel>
+          <edgelabel>color</edgelabel>
+        </childnode>
+      </node>
+      <node id="78">
+        <label>AtNode</label>
+        <link refid="struct_at_node"/>
+      </node>
+      <node id="79">
+        <label>AtPoint</label>
+        <link refid="struct_at_point"/>
+      </node>
+      <node id="80">
+        <label>AtRGB</label>
+        <link refid="struct_at_r_g_b"/>
+      </node>
+    </collaborationgraph>
+    <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_sample.h" line="23" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_sample.h" bodystart="23" bodyend="31"/>
+    <listofallmembers>
+      <member refid="struct_at_scr_sample_1a5b12db4f55d611536c46733df8bdc9d7" prot="public" virt="non-virtual"><scope>AtScrSample</scope><name>alpha</name></member>
+      <member refid="struct_at_scr_sample_1aaac9f113f4aea30eb0deae10abe4cc00" prot="public" virt="non-virtual"><scope>AtScrSample</scope><name>color</name></member>
+      <member refid="struct_at_scr_sample_1af544ef201a869e2a723115e0acbfaa75" prot="public" virt="non-virtual"><scope>AtScrSample</scope><name>face</name></member>
+      <member refid="struct_at_scr_sample_1a4588921dfdda43121da846404a40d28f" prot="public" virt="non-virtual"><scope>AtScrSample</scope><name>obj</name></member>
+      <member refid="struct_at_scr_sample_1adb3d60db2db8898bc06525c0406a4ccf" prot="public" virt="non-virtual"><scope>AtScrSample</scope><name>opacity</name></member>
+      <member refid="struct_at_scr_sample_1a2217272617b779cb62637b30f37c27e9" prot="public" virt="non-virtual"><scope>AtScrSample</scope><name>point</name></member>
+      <member refid="struct_at_scr_sample_1a053ed5952451f7fa0c18f49f2fccbadb" prot="public" virt="non-virtual"><scope>AtScrSample</scope><name>z</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

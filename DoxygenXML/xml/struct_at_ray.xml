@@ -1,0 +1,531 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="struct_at_ray" kind="struct" language="C++" prot="public">
+    <compoundname>AtRay</compoundname>
+    <includes refid="ai__ray_8h" local="no">ai_ray.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_at_ray_1a31f8057b9d3fe59706d77945b7b26b32" prot="public" static="no" mutable="no">
+        <type><ref refid="group__ai__types_1ga31e2774651e7b62b89c5628edfd63fa3" kindref="member">AtUInt16</ref></type>
+        <definition>AtUInt16 AtRay::type</definition>
+        <argsstring></argsstring>
+        <name>type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Type of ray (<computeroutput>AI_RAY_CAMERA</computeroutput>, etc) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_ray.h" line="43" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_ray.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_ray_1a4d3f193eba4280265d38ec284a70c4b6" prot="public" static="no" mutable="no">
+        <type><ref refid="group__ai__types_1ga41f7f394ad3ef67901cce4d05bdabf89" kindref="member">AtByte</ref></type>
+        <definition>AtByte AtRay::tid</definition>
+        <argsstring></argsstring>
+        <name>tid</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Thread ID </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_ray.h" line="44" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_ray.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_ray_1a9cae132c9b1c656e42ade3fd1e993bdc" prot="public" static="no" mutable="no">
+        <type><ref refid="group__ai__types_1ga41f7f394ad3ef67901cce4d05bdabf89" kindref="member">AtByte</ref></type>
+        <definition>AtByte AtRay::level</definition>
+        <argsstring></argsstring>
+        <name>level</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Recursion level (0 for camera rays) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_ray.h" line="45" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_ray.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_ray_1abe3d275c436650e9748b8b7460fdeb9b" prot="public" static="no" mutable="no">
+        <type><ref refid="group__ai__types_1ga41f7f394ad3ef67901cce4d05bdabf89" kindref="member">AtByte</ref></type>
+        <definition>AtByte AtRay::diff_bounces</definition>
+        <argsstring></argsstring>
+        <name>diff_bounces</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Number of diffuse bounces so far </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_ray.h" line="46" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_ray.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_ray_1ae4e8b2d3f458e23cf81a153913796dcc" prot="public" static="no" mutable="no">
+        <type><ref refid="group__ai__types_1ga41f7f394ad3ef67901cce4d05bdabf89" kindref="member">AtByte</ref></type>
+        <definition>AtByte AtRay::gloss_bounces</definition>
+        <argsstring></argsstring>
+        <name>gloss_bounces</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Number of glossy bounces so far </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_ray.h" line="47" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_ray.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_ray_1a1c9b9255e2b3c02d15e708e66f0fa5a1" prot="public" static="no" mutable="no">
+        <type><ref refid="group__ai__types_1ga41f7f394ad3ef67901cce4d05bdabf89" kindref="member">AtByte</ref></type>
+        <definition>AtByte AtRay::refl_bounces</definition>
+        <argsstring></argsstring>
+        <name>refl_bounces</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Number of reflection bounces so far </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_ray.h" line="48" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_ray.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_ray_1a04890229d8d0e92da0b9947c48c42033" prot="public" static="no" mutable="no">
+        <type><ref refid="group__ai__types_1ga41f7f394ad3ef67901cce4d05bdabf89" kindref="member">AtByte</ref></type>
+        <definition>AtByte AtRay::refr_bounces</definition>
+        <argsstring></argsstring>
+        <name>refr_bounces</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Number of refraction bounces so far </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_ray.h" line="49" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_ray.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_ray_1a74b240bb1b76b7deea884af01d334051" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int AtRay::x</definition>
+        <argsstring></argsstring>
+        <name>x</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Raster-space X coordinate </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_ray.h" line="50" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_ray.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_ray_1ab741af9a108a2648e0ee7aa9fe02046a" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int AtRay::y</definition>
+        <argsstring></argsstring>
+        <name>y</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Raster-space Y coordinate </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_ray.h" line="51" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_ray.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_ray_1aa9e0b9cd990ee38febe0dce308f54838" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float AtRay::sx</definition>
+        <argsstring></argsstring>
+        <name>sx</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Image-space X coordinate, in [-1,1) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_ray.h" line="52" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_ray.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_ray_1a4dec5665c0dfd82655739d629c9d6319" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float AtRay::sy</definition>
+        <argsstring></argsstring>
+        <name>sy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Image-space Y coordinate, in [-1,1) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_ray.h" line="53" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_ray.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_ray_1af75f36769699af5f06b2d0cc96e046b3" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float AtRay::px</definition>
+        <argsstring></argsstring>
+        <name>px</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Subpixel X coordinate in [0,1) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_ray.h" line="54" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_ray.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_ray_1a96e4019acd62375d3dc2b8cf5675ee0c" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float AtRay::py</definition>
+        <argsstring></argsstring>
+        <name>py</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Subpixel Y coordinate in [0,1) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_ray.h" line="55" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_ray.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_ray_1ad486ab1ff25f1cdd0742441cf5d13430" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_at_point" kindref="compound">AtPoint</ref></type>
+        <definition>AtPoint AtRay::origin</definition>
+        <argsstring></argsstring>
+        <name>origin</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Ray origin </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_ray.h" line="56" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_ray.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_ray_1acc7d3ae97d350cea022c0205920c473b" prot="public" static="no" mutable="no">
+        <type><ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref></type>
+        <definition>AtVector AtRay::dir</definition>
+        <argsstring></argsstring>
+        <name>dir</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Unit ray direction </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_ray.h" line="57" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_ray.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_ray_1a0d5ddd0d5eed35f7da7d4c84a286dc1e" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double AtRay::mindist</definition>
+        <argsstring></argsstring>
+        <name>mindist</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Minimum useful distance from the origin </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_ray.h" line="58" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_ray.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_ray_1a7c3a154957cd4a428f7cc8c1a89cc602" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double AtRay::maxdist</definition>
+        <argsstring></argsstring>
+        <name>maxdist</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Maximum useful distance from the origin (volatile while ray is traced) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_ray.h" line="59" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_ray.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_ray_1a9f0b22d36df63ded1e8e3d38ba1a979b" prot="public" static="no" mutable="no">
+        <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+        <definition>const AtShaderGlobals* AtRay::psg</definition>
+        <argsstring></argsstring>
+        <name>psg</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Parent shader globals (last shaded) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_ray.h" line="60" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_ray.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_ray_1aafe58dd6762f316d85b2e14108e395d1" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* AtRay::light_source</definition>
+        <argsstring></argsstring>
+        <name>light_source</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>For shadow rays only </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_ray.h" line="61" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_ray.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_ray_1a608fb1d32733ac6c19f915ab99924840" prot="public" static="no" mutable="no">
+        <type>AtBucket *</type>
+        <definition>AtBucket* AtRay::bucket</definition>
+        <argsstring></argsstring>
+        <name>bucket</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Parent bucket </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_ray.h" line="62" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_ray.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_ray_1a8b3011f0a0297503127c384b8f1fbe6f" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float AtRay::weight</definition>
+        <argsstring></argsstring>
+        <name>weight</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Ray weight, 1.0 for clean camera rays </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_ray.h" line="63" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_ray.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_ray_1a5b47ab10fcc3aa2635abed57a9f9b62a" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float AtRay::time</definition>
+        <argsstring></argsstring>
+        <name>time</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Time at which the ray was created, in [0,1) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_ray.h" line="64" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_ray.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_ray_1af449c25b363f6a2ad7e11e1bea46135f" prot="public" static="no" mutable="no">
+        <type><ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref></type>
+        <definition>AtVector AtRay::dOdx</definition>
+        <argsstring></argsstring>
+        <name>dOdx</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Partial derivative of ray origin wrt image-space X coordinate </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_ray.h" line="65" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_ray.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_ray_1a9af4c80582a6b7ebae12c8b9cd401eeb" prot="public" static="no" mutable="no">
+        <type><ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref></type>
+        <definition>AtVector AtRay::dOdy</definition>
+        <argsstring></argsstring>
+        <name>dOdy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Partial derivative of ray origin wrt image-space Y coordinate </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_ray.h" line="66" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_ray.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_ray_1a77e81b3539336c8eb17179a8c6d83c33" prot="public" static="no" mutable="no">
+        <type><ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref></type>
+        <definition>AtVector AtRay::dDdx</definition>
+        <argsstring></argsstring>
+        <name>dDdx</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Partial derivative of ray direction wrt image-space X coordinate </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_ray.h" line="67" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_ray.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_ray_1a0e96fffbc7d37b7d299e2c403d2cab9a" prot="public" static="no" mutable="no">
+        <type><ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref></type>
+        <definition>AtVector AtRay::dDdy</definition>
+        <argsstring></argsstring>
+        <name>dDdy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Partial derivative of ray direction wrt image-space Y coordinate </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_ray.h" line="68" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_ray.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_ray_1a7fbefba6cab7423b4331b345586ae920" prot="public" static="no" mutable="no">
+        <type><ref refid="class_at_string" kindref="compound">AtString</ref></type>
+        <definition>AtString AtRay::traceset</definition>
+        <argsstring></argsstring>
+        <name>traceset</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Trace-set for this ray. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_ray.h" line="69" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_ray.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_ray_1aff668234b9be226be6a5bb9bab5c4acc" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool AtRay::inclusive_traceset</definition>
+        <argsstring></argsstring>
+        <name>inclusive_traceset</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Is the trace-set inclusive or exclusive? </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_ray.h" line="70" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_ray.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_ray_1ad843ecef6ed6f5cee371da892c1eac87" prot="public" static="no" mutable="no">
+        <type><ref refid="group__ai__types_1ga31e2774651e7b62b89c5628edfd63fa3" kindref="member">AtUInt16</ref></type>
+        <definition>AtUInt16 AtRay::sindex</definition>
+        <argsstring></argsstring>
+        <name>sindex</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sub-pixel sample index when supersampling </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_ray.h" line="71" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_ray.h" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Ray data structure </para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="62">
+        <label>AtRay</label>
+        <link refid="struct_at_ray"/>
+        <childnode refid="63" relation="usage">
+          <edgelabel>psg</edgelabel>
+        </childnode>
+        <childnode refid="65" relation="usage">
+          <edgelabel>dOdy</edgelabel>
+          <edgelabel>dDdx</edgelabel>
+          <edgelabel>dDdy</edgelabel>
+          <edgelabel>origin</edgelabel>
+          <edgelabel>dir</edgelabel>
+          <edgelabel>dOdx</edgelabel>
+        </childnode>
+        <childnode refid="66" relation="usage">
+          <edgelabel>traceset</edgelabel>
+        </childnode>
+      </node>
+      <node id="63">
+        <label>AtShaderGlobals</label>
+        <link refid="struct_at_shader_globals"/>
+        <childnode refid="63" relation="usage">
+          <edgelabel>psg</edgelabel>
+        </childnode>
+        <childnode refid="64" relation="usage">
+          <edgelabel>Lp</edgelabel>
+          <edgelabel>shader</edgelabel>
+          <edgelabel>proc</edgelabel>
+          <edgelabel>lights</edgelabel>
+          <edgelabel>Op</edgelabel>
+        </childnode>
+        <childnode refid="65" relation="usage">
+          <edgelabel>dPdx</edgelabel>
+          <edgelabel>dPdy</edgelabel>
+          <edgelabel>Rd</edgelabel>
+          <edgelabel>Ns</edgelabel>
+          <edgelabel>dDdx</edgelabel>
+          <edgelabel>dDdy</edgelabel>
+          <edgelabel>Ld</edgelabel>
+          <edgelabel>Nf</edgelabel>
+          <edgelabel>Ng</edgelabel>
+          <edgelabel>Ngf</edgelabel>
+          <edgelabel>...</edgelabel>
+        </childnode>
+        <childnode refid="66" relation="usage">
+          <edgelabel>traceset</edgelabel>
+        </childnode>
+        <childnode refid="67" relation="usage">
+          <edgelabel>Lo</edgelabel>
+          <edgelabel>Liu</edgelabel>
+          <edgelabel>Ci</edgelabel>
+          <edgelabel>out_opacity</edgelabel>
+          <edgelabel>Vo</edgelabel>
+          <edgelabel>Li</edgelabel>
+        </childnode>
+        <childnode refid="68" relation="usage">
+          <edgelabel>out</edgelabel>
+        </childnode>
+      </node>
+      <node id="68">
+        <label>AtParamValue</label>
+        <link refid="union_at_param_value"/>
+        <childnode refid="65" relation="usage">
+          <edgelabel>PNT</edgelabel>
+          <edgelabel>VEC</edgelabel>
+        </childnode>
+        <childnode refid="69" relation="usage">
+          <edgelabel>ARRAY</edgelabel>
+        </childnode>
+        <childnode refid="70" relation="usage">
+          <edgelabel>RGBA</edgelabel>
+        </childnode>
+        <childnode refid="67" relation="usage">
+          <edgelabel>RGB</edgelabel>
+        </childnode>
+        <childnode refid="71" relation="usage">
+          <edgelabel>PNT2</edgelabel>
+        </childnode>
+      </node>
+      <node id="64">
+        <label>AtNode</label>
+        <link refid="struct_at_node"/>
+      </node>
+      <node id="66">
+        <label>AtString</label>
+        <link refid="class_at_string"/>
+      </node>
+      <node id="65">
+        <label>AtPoint</label>
+        <link refid="struct_at_point"/>
+      </node>
+      <node id="69">
+        <label>AtArray</label>
+        <link refid="struct_at_array"/>
+      </node>
+      <node id="67">
+        <label>AtRGB</label>
+        <link refid="struct_at_r_g_b"/>
+      </node>
+      <node id="70">
+        <label>AtRGBA</label>
+        <link refid="struct_at_r_g_b_a"/>
+      </node>
+      <node id="71">
+        <label>AtPoint2</label>
+        <link refid="struct_at_point2"/>
+      </node>
+    </collaborationgraph>
+    <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_ray.h" line="42" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_ray.h" bodystart="42" bodyend="72"/>
+    <listofallmembers>
+      <member refid="struct_at_ray_1a608fb1d32733ac6c19f915ab99924840" prot="public" virt="non-virtual"><scope>AtRay</scope><name>bucket</name></member>
+      <member refid="struct_at_ray_1a77e81b3539336c8eb17179a8c6d83c33" prot="public" virt="non-virtual"><scope>AtRay</scope><name>dDdx</name></member>
+      <member refid="struct_at_ray_1a0e96fffbc7d37b7d299e2c403d2cab9a" prot="public" virt="non-virtual"><scope>AtRay</scope><name>dDdy</name></member>
+      <member refid="struct_at_ray_1abe3d275c436650e9748b8b7460fdeb9b" prot="public" virt="non-virtual"><scope>AtRay</scope><name>diff_bounces</name></member>
+      <member refid="struct_at_ray_1acc7d3ae97d350cea022c0205920c473b" prot="public" virt="non-virtual"><scope>AtRay</scope><name>dir</name></member>
+      <member refid="struct_at_ray_1af449c25b363f6a2ad7e11e1bea46135f" prot="public" virt="non-virtual"><scope>AtRay</scope><name>dOdx</name></member>
+      <member refid="struct_at_ray_1a9af4c80582a6b7ebae12c8b9cd401eeb" prot="public" virt="non-virtual"><scope>AtRay</scope><name>dOdy</name></member>
+      <member refid="struct_at_ray_1ae4e8b2d3f458e23cf81a153913796dcc" prot="public" virt="non-virtual"><scope>AtRay</scope><name>gloss_bounces</name></member>
+      <member refid="struct_at_ray_1aff668234b9be226be6a5bb9bab5c4acc" prot="public" virt="non-virtual"><scope>AtRay</scope><name>inclusive_traceset</name></member>
+      <member refid="struct_at_ray_1a9cae132c9b1c656e42ade3fd1e993bdc" prot="public" virt="non-virtual"><scope>AtRay</scope><name>level</name></member>
+      <member refid="struct_at_ray_1aafe58dd6762f316d85b2e14108e395d1" prot="public" virt="non-virtual"><scope>AtRay</scope><name>light_source</name></member>
+      <member refid="struct_at_ray_1a7c3a154957cd4a428f7cc8c1a89cc602" prot="public" virt="non-virtual"><scope>AtRay</scope><name>maxdist</name></member>
+      <member refid="struct_at_ray_1a0d5ddd0d5eed35f7da7d4c84a286dc1e" prot="public" virt="non-virtual"><scope>AtRay</scope><name>mindist</name></member>
+      <member refid="struct_at_ray_1ad486ab1ff25f1cdd0742441cf5d13430" prot="public" virt="non-virtual"><scope>AtRay</scope><name>origin</name></member>
+      <member refid="struct_at_ray_1a9f0b22d36df63ded1e8e3d38ba1a979b" prot="public" virt="non-virtual"><scope>AtRay</scope><name>psg</name></member>
+      <member refid="struct_at_ray_1af75f36769699af5f06b2d0cc96e046b3" prot="public" virt="non-virtual"><scope>AtRay</scope><name>px</name></member>
+      <member refid="struct_at_ray_1a96e4019acd62375d3dc2b8cf5675ee0c" prot="public" virt="non-virtual"><scope>AtRay</scope><name>py</name></member>
+      <member refid="struct_at_ray_1a1c9b9255e2b3c02d15e708e66f0fa5a1" prot="public" virt="non-virtual"><scope>AtRay</scope><name>refl_bounces</name></member>
+      <member refid="struct_at_ray_1a04890229d8d0e92da0b9947c48c42033" prot="public" virt="non-virtual"><scope>AtRay</scope><name>refr_bounces</name></member>
+      <member refid="struct_at_ray_1ad843ecef6ed6f5cee371da892c1eac87" prot="public" virt="non-virtual"><scope>AtRay</scope><name>sindex</name></member>
+      <member refid="struct_at_ray_1aa9e0b9cd990ee38febe0dce308f54838" prot="public" virt="non-virtual"><scope>AtRay</scope><name>sx</name></member>
+      <member refid="struct_at_ray_1a4dec5665c0dfd82655739d629c9d6319" prot="public" virt="non-virtual"><scope>AtRay</scope><name>sy</name></member>
+      <member refid="struct_at_ray_1a4d3f193eba4280265d38ec284a70c4b6" prot="public" virt="non-virtual"><scope>AtRay</scope><name>tid</name></member>
+      <member refid="struct_at_ray_1a5b47ab10fcc3aa2635abed57a9f9b62a" prot="public" virt="non-virtual"><scope>AtRay</scope><name>time</name></member>
+      <member refid="struct_at_ray_1a7fbefba6cab7423b4331b345586ae920" prot="public" virt="non-virtual"><scope>AtRay</scope><name>traceset</name></member>
+      <member refid="struct_at_ray_1a31f8057b9d3fe59706d77945b7b26b32" prot="public" virt="non-virtual"><scope>AtRay</scope><name>type</name></member>
+      <member refid="struct_at_ray_1a8b3011f0a0297503127c384b8f1fbe6f" prot="public" virt="non-virtual"><scope>AtRay</scope><name>weight</name></member>
+      <member refid="struct_at_ray_1a74b240bb1b76b7deea884af01d334051" prot="public" virt="non-virtual"><scope>AtRay</scope><name>x</name></member>
+      <member refid="struct_at_ray_1ab741af9a108a2648e0ee7aa9fe02046a" prot="public" virt="non-virtual"><scope>AtRay</scope><name>y</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

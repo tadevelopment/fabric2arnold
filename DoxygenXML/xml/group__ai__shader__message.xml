@@ -1,0 +1,416 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="group__ai__shader__message" kind="group">
+    <compoundname>ai_shader_message</compoundname>
+    <title>Shader Message Passing API</title>
+      <sectiondef kind="user-defined">
+      <header>Message Retrieval Macros</header>
+      <description><para>These macros allow a shader to retrieve messages which have been written to the message bank. If the named message does not exist (has not been written yet?), then false is returned. Otherwise, true indicates a successful read.</para><para>Please refer to <ref refid="ai__shader__message_8h" kindref="compound">ai_shader_message.h</ref> for a description of the message-reading functions called by these macros. </para></description>
+      <memberdef kind="define" id="group__ai__shader__message_1gac3de96fc49ad151a0e51f46165ba8a80" prot="public" static="no">
+        <name>AiStateGetMsgByte</name>
+        <param><defname>name</defname></param>
+        <param><defname>val</defname></param>
+        <initializer><ref refid="ai__shader__message_8h_1aaf99c00483bcaef4ec9371b4a10fe32b" kindref="member">AiMessageGetByteFunc</ref> (sg,name,val)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" line="55" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__shader__message_1ga17395251f58dca1ab07a08fb4cf7f2ec" prot="public" static="no">
+        <name>AiStateGetMsgBool</name>
+        <param><defname>name</defname></param>
+        <param><defname>val</defname></param>
+        <initializer><ref refid="ai__shader__message_8h_1a73d23e0546ccb6e9a0f1b47dc1f0ed81" kindref="member">AiMessageGetBoolFunc</ref> (sg,name,val)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" line="56" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__shader__message_1ga3f6faaabbb613221a230a51729566d78" prot="public" static="no">
+        <name>AiStateGetMsgInt</name>
+        <param><defname>name</defname></param>
+        <param><defname>val</defname></param>
+        <initializer><ref refid="ai__shader__message_8h_1a1a9309486f326303c19fb042f2575f8a" kindref="member">AiMessageGetIntFunc</ref>  (sg,name,val)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" line="57" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__shader__message_1gadcea1640014f50051484ce8d7b6bf64e" prot="public" static="no">
+        <name>AiStateGetMsgUInt</name>
+        <param><defname>name</defname></param>
+        <param><defname>val</defname></param>
+        <initializer><ref refid="ai__shader__message_8h_1a9b2a2f1030a30aaffc4fb84549fa32cd" kindref="member">AiMessageGetUIntFunc</ref> (sg,name,val)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" line="58" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__shader__message_1ga3e3b4640da414d273ed8d3d4257bf178" prot="public" static="no">
+        <name>AiStateGetMsgFlt</name>
+        <param><defname>name</defname></param>
+        <param><defname>val</defname></param>
+        <initializer><ref refid="ai__shader__message_8h_1a0e7cdb7417674c929c99614de6773266" kindref="member">AiMessageGetFltFunc</ref>  (sg,name,val)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" line="59" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__shader__message_1ga23b0262f5f980cfc321f98d850b19107" prot="public" static="no">
+        <name>AiStateGetMsgRGB</name>
+        <param><defname>name</defname></param>
+        <param><defname>val</defname></param>
+        <initializer><ref refid="ai__shader__message_8h_1a8653470419b49be5f1f841ecbe259a9c" kindref="member">AiMessageGetRGBFunc</ref>  (sg,name,val)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" line="60" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__shader__message_1ga9388c76592a1b0854de231a5018a8ed4" prot="public" static="no">
+        <name>AiStateGetMsgRGBA</name>
+        <param><defname>name</defname></param>
+        <param><defname>val</defname></param>
+        <initializer><ref refid="ai__shader__message_8h_1a1e5992af61347d45aecc22d01edb307d" kindref="member">AiMessageGetRGBAFunc</ref> (sg,name,val)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" line="61" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__shader__message_1ga1d3ca201475ead3351f4fa7290b2511c" prot="public" static="no">
+        <name>AiStateGetMsgVec</name>
+        <param><defname>name</defname></param>
+        <param><defname>val</defname></param>
+        <initializer><ref refid="ai__shader__message_8h_1ad3391e9bd452cce9a4fde3a9199b061a" kindref="member">AiMessageGetVecFunc</ref>  (sg,name,val)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" line="62" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__shader__message_1ga3f89b23e0c6313b7152b4e8745dfdf16" prot="public" static="no">
+        <name>AiStateGetMsgPnt</name>
+        <param><defname>name</defname></param>
+        <param><defname>val</defname></param>
+        <initializer><ref refid="ai__shader__message_8h_1a17d2e000fe43b29e60666ec3f97d3ea2" kindref="member">AiMessageGetPntFunc</ref>  (sg,name,val)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" line="63" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__shader__message_1ga7679d08d620ed552c1696d414f044dda" prot="public" static="no">
+        <name>AiStateGetMsgPnt2</name>
+        <param><defname>name</defname></param>
+        <param><defname>val</defname></param>
+        <initializer><ref refid="ai__shader__message_8h_1a4a1bb891c4ee4c4f09f88ac425a1c1a9" kindref="member">AiMessageGetPnt2Func</ref> (sg,name,val)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" line="64" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__shader__message_1ga3cb89bc4336ac92037c237b69c7ec90b" prot="public" static="no">
+        <name>AiStateGetMsgStr</name>
+        <param><defname>name</defname></param>
+        <param><defname>val</defname></param>
+        <initializer><ref refid="ai__shader__message_8h_1a2e8a78ae12e0168e0396d8cdcd92b995" kindref="member">AiMessageGetStrFunc</ref>  (sg,name,val)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" line="65" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__shader__message_1gaea425b29245182f88da2f82b9f98f61b" prot="public" static="no">
+        <name>AiStateGetMsgPtr</name>
+        <param><defname>name</defname></param>
+        <param><defname>val</defname></param>
+        <initializer><ref refid="ai__shader__message_8h_1a2b126cea4a51674327fca40462528205" kindref="member">AiMessageGetPtrFunc</ref>  (sg,name,val)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" line="66" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__shader__message_1ga6278c2a51a7540ea8abe073cbaa7aacf" prot="public" static="no">
+        <name>AiStateGetMsgArray</name>
+        <param><defname>name</defname></param>
+        <param><defname>val</defname></param>
+        <initializer><ref refid="ai__shader__message_8h_1af1bb5fd85181825d45d495b6f95678a2" kindref="member">AiMessageGetArrayFunc</ref>(sg,name,val)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" line="67" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Message Writing Macros</header>
+      <description><para>These macros allow a shader to write messages to the message bank. If the write has failed for some reason (perhaps there are already too many messages in the bank?) then false is returned. Otherwise, true indicates a successful write.</para><para>Please refer to <ref refid="ai__shader__message_8h" kindref="compound">ai_shader_message.h</ref> for a description of the message-writing functions called by these macros. </para></description>
+      <memberdef kind="define" id="group__ai__shader__message_1ga90bb2a4bd943b07f4ab2d37713739e1f" prot="public" static="no">
+        <name>AiStateSetMsgByte</name>
+        <param><defname>name</defname></param>
+        <param><defname>val</defname></param>
+        <initializer><ref refid="ai__shader__message_8h_1a941f2b8fe9d19b8197be27b2d93a8cb8" kindref="member">AiMessageSetByteFunc</ref> (sg,name,val)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" line="83" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__shader__message_1gac56d4663028ea15b66e9a9f356b537df" prot="public" static="no">
+        <name>AiStateSetMsgBool</name>
+        <param><defname>name</defname></param>
+        <param><defname>val</defname></param>
+        <initializer><ref refid="ai__shader__message_8h_1a441acf5e7dc0eb7f7139c94654c1a6ed" kindref="member">AiMessageSetBoolFunc</ref> (sg,name,val)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" line="84" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__shader__message_1ga6dec63005a6e0419c9838bb9d157abaa" prot="public" static="no">
+        <name>AiStateSetMsgInt</name>
+        <param><defname>name</defname></param>
+        <param><defname>val</defname></param>
+        <initializer><ref refid="ai__shader__message_8h_1a50e2809b225a57b53c2708cdc7c78665" kindref="member">AiMessageSetIntFunc</ref>  (sg,name,val)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" line="85" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__shader__message_1ga9b325e5cd62b256311655a5c03de4fd5" prot="public" static="no">
+        <name>AiStateSetMsgUInt</name>
+        <param><defname>name</defname></param>
+        <param><defname>val</defname></param>
+        <initializer><ref refid="ai__shader__message_8h_1a06f0bfef8b4c0346a4f929a41835843f" kindref="member">AiMessageSetUIntFunc</ref> (sg,name,val)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" line="86" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__shader__message_1gad0d0d3963ff36362ec614cb30d9e2ab3" prot="public" static="no">
+        <name>AiStateSetMsgFlt</name>
+        <param><defname>name</defname></param>
+        <param><defname>val</defname></param>
+        <initializer><ref refid="ai__shader__message_8h_1aa66165cddd141134214c78726ab1376b" kindref="member">AiMessageSetFltFunc</ref>  (sg,name,val)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" line="87" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__shader__message_1gac33b3432c4a67c085acb1787f05634ee" prot="public" static="no">
+        <name>AiStateSetMsgRGB</name>
+        <param><defname>name</defname></param>
+        <param><defname>val</defname></param>
+        <initializer><ref refid="ai__shader__message_8h_1aafcd5610f3aa17286b4d8f0a5214412d" kindref="member">AiMessageSetRGBFunc</ref>  (sg,name,val)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" line="88" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__shader__message_1gab51647ca52d6d65b34279bd90e0f5262" prot="public" static="no">
+        <name>AiStateSetMsgRGBA</name>
+        <param><defname>name</defname></param>
+        <param><defname>val</defname></param>
+        <initializer><ref refid="ai__shader__message_8h_1a6c47308820bd23a7158b9efdeab6d433" kindref="member">AiMessageSetRGBAFunc</ref> (sg,name,val)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" line="89" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__shader__message_1gaf79e63a2fdcd63f46c8df3146953e19e" prot="public" static="no">
+        <name>AiStateSetMsgVec</name>
+        <param><defname>name</defname></param>
+        <param><defname>val</defname></param>
+        <initializer><ref refid="ai__shader__message_8h_1afed3040dc52aaf745a0211583ea76e90" kindref="member">AiMessageSetVecFunc</ref>  (sg,name,val)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" line="90" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__shader__message_1gaced42ddb6a82a33a92a128b21a45a90d" prot="public" static="no">
+        <name>AiStateSetMsgPnt</name>
+        <param><defname>name</defname></param>
+        <param><defname>val</defname></param>
+        <initializer><ref refid="ai__shader__message_8h_1aad357dbf7af89c8166a2fbe68772746e" kindref="member">AiMessageSetPntFunc</ref>  (sg,name,val)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" line="91" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__shader__message_1gafea57b0eae30f82f08851ba3af0327c8" prot="public" static="no">
+        <name>AiStateSetMsgPnt2</name>
+        <param><defname>name</defname></param>
+        <param><defname>val</defname></param>
+        <initializer><ref refid="ai__shader__message_8h_1a9cd79cec6e91c52360c1cadf9123f727" kindref="member">AiMessageSetPnt2Func</ref> (sg,name,val)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" line="92" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__shader__message_1gacea3764735403606129f7853b73ffb85" prot="public" static="no">
+        <name>AiStateSetMsgStr</name>
+        <param><defname>name</defname></param>
+        <param><defname>val</defname></param>
+        <initializer><ref refid="ai__shader__message_8h_1a7ae6df9c884a23255af18a9e386d6bb7" kindref="member">AiMessageSetStrFunc</ref>  (sg,name,val)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" line="93" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__shader__message_1ga8993c53708917cdc4889f7272dc4b119" prot="public" static="no">
+        <name>AiStateSetMsgPtr</name>
+        <param><defname>name</defname></param>
+        <param><defname>val</defname></param>
+        <initializer><ref refid="ai__shader__message_8h_1ac4b7e564aa5c0faaf4747cadf0410306" kindref="member">AiMessageSetPtrFunc</ref>  (sg,name,val)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" line="94" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__shader__message_1ga67d80ddf083900031e593205ffcaa888" prot="public" static="no">
+        <name>AiStateSetMsgArray</name>
+        <param><defname>name</defname></param>
+        <param><defname>val</defname></param>
+        <initializer><ref refid="ai__shader__message_8h_1a1da0884870903488cca63c311bd052dc" kindref="member">AiMessageSetArrayFunc</ref>(sg,name,val)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" line="95" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Message Inspection Functions</header>
+      <description><para>These functions let you loop over all available messages for a given sample. This is mainly intended for debugging purposes. </para></description>
+      <memberdef kind="typedef" id="group__ai__shader__message_1gadc613869c8656beb6959a7e5dea7a10e" prot="public" static="no">
+        <type>struct <ref refid="group__ai__shader__message_1gadc613869c8656beb6959a7e5dea7a10e" kindref="member">AtMessageIterator</ref></type>
+        <definition>typedef struct AtMessageIterator AtMessageIterator</definition>
+        <argsstring></argsstring>
+        <name>AtMessageIterator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This represents a message iterator. The actual contents of this struct are private. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" line="46" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" bodystart="112" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__message_1ga306a3ce40a510fd1245f4992beae1556" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__ai__shader__message_1gadc613869c8656beb6959a7e5dea7a10e" kindref="member">AtMessageIterator</ref> *</type>
+        <definition>AtMessageIterator* AiMessageIterator</definition>
+        <argsstring>(const AtShaderGlobals *sg)</argsstring>
+        <name>AiMessageIterator</name>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" line="114" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__message_1gac8ca185f7c74ef0b681965e43461fce7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiMessageIteratorGetNext</definition>
+        <argsstring>(AtMessageIterator *iterator, const char **msg_name, int *msg_type)</argsstring>
+        <name>AiMessageIteratorGetNext</name>
+        <param>
+          <type><ref refid="group__ai__shader__message_1gadc613869c8656beb6959a7e5dea7a10e" kindref="member">AtMessageIterator</ref> *</type>
+          <declname>iterator</declname>
+        </param>
+        <param>
+          <type>const char **</type>
+          <declname>msg_name</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>msg_type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" line="115" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This message passing API allows the shader to write a message into the messsage bank which can be retrieved by other shaders in the current/active shading network. A &quot;message&quot; consists of a value and an associated name. To retrieve a message (a value), one needs to provide the name of that message.</para><para>The &quot;lifetime&quot; of these messages is for a single screen sample (it&apos;s attached to the <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> of the current pixel/sample). So, if a single camera ray recursively fires new rays, then the messages created anywhere in that ray-tree will be accessible by any shader in that ray-tree. When the next camera ray is fired, the message bank will be completely emptied.</para><para>The message bank has a fixed number of slots, so it is possible that one could fill the message bank. In that case, all subsequent writes of new messages will fail. </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

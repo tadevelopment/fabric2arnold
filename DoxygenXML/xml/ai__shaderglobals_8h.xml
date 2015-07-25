@@ -1,0 +1,300 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="ai__shaderglobals_8h" kind="file" language="C++">
+    <compoundname>ai_shaderglobals.h</compoundname>
+    <includes refid="ai__params_8h" local="yes">ai_params.h</includes>
+    <includes refid="ai__array_8h" local="yes">ai_array.h</includes>
+    <includes refid="ai__color_8h" local="yes">ai_color.h</includes>
+    <includes refid="ai__matrix_8h" local="yes">ai_matrix.h</includes>
+    <includes refid="ai__vector_8h" local="yes">ai_vector.h</includes>
+    <includes refid="ai__string_8h" local="yes">ai_string.h</includes>
+    <includes refid="ai__types_8h" local="yes">ai_types.h</includes>
+    <includes refid="ai__api_8h" local="yes">ai_api.h</includes>
+    <includedby refid="ai__shader__brdf_8h" local="yes">ai_shader_brdf.h</includedby>
+    <includedby refid="ai_8h" local="yes">ai.h</includedby>
+    <includedby refid="ai__shader__lights_8h" local="yes">ai_shader_lights.h</includedby>
+    <includedby refid="ai__shader__userdef_8h" local="yes">ai_shader_userdef.h</includedby>
+    <includedby refid="ai__shader__util_8h" local="yes">ai_shader_util.h</includedby>
+    <includedby refid="ai__texture_8h" local="yes">ai_texture.h</includedby>
+    <incdepgraph>
+      <node id="690">
+        <label>ai_constants.h</label>
+        <link refid="ai__constants_8h"/>
+      </node>
+      <node id="689">
+        <label>ai_api.h</label>
+        <link refid="ai__api_8h"/>
+      </node>
+      <node id="691">
+        <label>cmath</label>
+      </node>
+      <node id="694">
+        <label>ai_vector.h</label>
+        <link refid="ai__vector_8h"/>
+        <childnode refid="690" relation="include">
+        </childnode>
+        <childnode refid="688" relation="include">
+        </childnode>
+        <childnode refid="689" relation="include">
+        </childnode>
+        <childnode refid="695" relation="include">
+        </childnode>
+      </node>
+      <node id="688">
+        <label>ai_types.h</label>
+        <link refid="ai__types_8h"/>
+        <childnode refid="689" relation="include">
+        </childnode>
+        <childnode refid="690" relation="include">
+        </childnode>
+        <childnode refid="691" relation="include">
+        </childnode>
+        <childnode refid="692" relation="include">
+        </childnode>
+      </node>
+      <node id="686">
+        <label>ai_array.h</label>
+        <link refid="ai__array_8h"/>
+        <childnode refid="687" relation="include">
+        </childnode>
+        <childnode refid="693" relation="include">
+        </childnode>
+        <childnode refid="694" relation="include">
+        </childnode>
+        <childnode refid="688" relation="include">
+        </childnode>
+        <childnode refid="689" relation="include">
+        </childnode>
+      </node>
+      <node id="685">
+        <label>ai_params.h</label>
+        <link refid="ai__params_8h"/>
+        <childnode refid="686" relation="include">
+        </childnode>
+        <childnode refid="687" relation="include">
+        </childnode>
+        <childnode refid="696" relation="include">
+        </childnode>
+        <childnode refid="693" relation="include">
+        </childnode>
+        <childnode refid="694" relation="include">
+        </childnode>
+        <childnode refid="688" relation="include">
+        </childnode>
+        <childnode refid="689" relation="include">
+        </childnode>
+      </node>
+      <node id="684">
+        <label>ai_shaderglobals.h</label>
+        <link refid="ai_shaderglobals.h"/>
+        <childnode refid="685" relation="include">
+        </childnode>
+        <childnode refid="686" relation="include">
+        </childnode>
+        <childnode refid="687" relation="include">
+        </childnode>
+        <childnode refid="693" relation="include">
+        </childnode>
+        <childnode refid="694" relation="include">
+        </childnode>
+        <childnode refid="697" relation="include">
+        </childnode>
+        <childnode refid="688" relation="include">
+        </childnode>
+        <childnode refid="689" relation="include">
+        </childnode>
+      </node>
+      <node id="687">
+        <label>ai_color.h</label>
+        <link refid="ai__color_8h"/>
+        <childnode refid="688" relation="include">
+        </childnode>
+        <childnode refid="690" relation="include">
+        </childnode>
+        <childnode refid="689" relation="include">
+        </childnode>
+      </node>
+      <node id="695">
+        <label>math.h</label>
+      </node>
+      <node id="692">
+        <label>cstdlib</label>
+      </node>
+      <node id="693">
+        <label>ai_matrix.h</label>
+        <link refid="ai__matrix_8h"/>
+        <childnode refid="694" relation="include">
+        </childnode>
+        <childnode refid="689" relation="include">
+        </childnode>
+      </node>
+      <node id="697">
+        <label>ai_string.h</label>
+        <link refid="ai__string_8h"/>
+        <childnode refid="689" relation="include">
+        </childnode>
+        <childnode refid="688" relation="include">
+        </childnode>
+      </node>
+      <node id="696">
+        <label>ai_enum.h</label>
+        <link refid="ai__enum_8h"/>
+        <childnode refid="689" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="703">
+        <label>ai_shader_util.h</label>
+        <link refid="ai__shader__util_8h"/>
+        <childnode refid="700" relation="include">
+        </childnode>
+      </node>
+      <node id="704">
+        <label>ai_texture.h</label>
+        <link refid="ai__texture_8h"/>
+        <childnode refid="700" relation="include">
+        </childnode>
+      </node>
+      <node id="699">
+        <label>ai_shader_brdf.h</label>
+        <link refid="ai__shader__brdf_8h"/>
+        <childnode refid="700" relation="include">
+        </childnode>
+      </node>
+      <node id="698">
+        <label>ai_shaderglobals.h</label>
+        <link refid="ai_shaderglobals.h"/>
+        <childnode refid="699" relation="include">
+        </childnode>
+        <childnode refid="700" relation="include">
+        </childnode>
+        <childnode refid="701" relation="include">
+        </childnode>
+        <childnode refid="702" relation="include">
+        </childnode>
+        <childnode refid="703" relation="include">
+        </childnode>
+        <childnode refid="704" relation="include">
+        </childnode>
+      </node>
+      <node id="702">
+        <label>ai_shader_userdef.h</label>
+        <link refid="ai__shader__userdef_8h"/>
+        <childnode refid="700" relation="include">
+        </childnode>
+      </node>
+      <node id="701">
+        <label>ai_shader_lights.h</label>
+        <link refid="ai__shader__lights_8h"/>
+        <childnode refid="700" relation="include">
+        </childnode>
+      </node>
+      <node id="700">
+        <label>ai.h</label>
+        <link refid="ai_8h"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="struct_at_shader_globals" prot="public">AtShaderGlobals</innerclass>
+      <sectiondef kind="user-defined">
+      <header>Shading Contexts</header>
+      <description><para>These macros let you determine the purpose that the shader globals were defined for. </para></description>
+      <memberdef kind="define" id="group__ai__shader__globals_1ga47516f390a9687588b5dd59af8051a5d" prot="public" static="no">
+        <name>AI_CONTEXT_SURFACE</name>
+        <initializer>0x00</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>for ray-surface intersections </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" line="123" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" bodystart="123" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__shader__globals_1ga3fbfd9709d7499dfc7afbc5e6ab79d6b" prot="public" static="no">
+        <name>AI_CONTEXT_VOLUME</name>
+        <initializer>0x01</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>for volume points during ray-marching </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" line="124" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" bodystart="124" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__shader__globals_1ga04475e2d3ea6c93f4b88e3a2ad5334a0" prot="public" static="no">
+        <name>AI_CONTEXT_BACKGROUND</name>
+        <initializer>0x02</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>for rays that don&apos;t hit any geometry </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" line="125" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" bodystart="125" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__shader__globals_1ga671fd0e5eed8fc3aa6c83bb694d18a5f" prot="public" static="no">
+        <name>AI_CONTEXT_DISPLACEMENT</name>
+        <initializer>0x03</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>for each vertex to be displaced </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" line="126" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" bodystart="126" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group__ai__shader__globals_1gad7011f93e8ccbc1eefff06aa0f07aebe" prot="public" static="no">
+        <type>struct <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref></type>
+        <definition>typedef struct AtShaderGlobals  AtShaderGlobals</definition>
+        <argsstring></argsstring>
+        <name>AtShaderGlobals</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Shader globals data structure</para><para>An <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> structure represents a <emphasis>shading</emphasis> <emphasis>context</emphasis> that holds all the information accesible to the different types of shaders. For example, after a camera ray hits the surface of an object, a shading context of type <computeroutput>AI_CONTEXT_SURFACE</computeroutput> is created that contains, amongst other things, local geometric properties such as the surface normal, the UV surface parameters, etc. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" line="115" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__ai__shader__globals_1ga749a8e8ab28081f9782be0ddc63ded4e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+        <definition>AtShaderGlobals* AiShaderGlobals</definition>
+        <argsstring>()</argsstring>
+        <name>AiShaderGlobals</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" line="129" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__globals_1ga98a10f09ebc94294bb59ab740f066a6e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiShaderGlobalsDestroy</definition>
+        <argsstring>(AtShaderGlobals *sg)</argsstring>
+        <name>AiShaderGlobalsDestroy</name>
+        <param>
+          <type><ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" line="130" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Shader globals struct, methods and macros </para>    </detaileddescription>
+    <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h"/>
+  </compounddef>
+</doxygen>

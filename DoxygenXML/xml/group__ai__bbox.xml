@@ -1,0 +1,343 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="group__ai__bbox" kind="group">
+    <compoundname>ai_bbox</compoundname>
+    <title>AtBBox API</title>
+    <innerclass refid="struct_at_b_box" prot="public">AtBBox</innerclass>
+    <innerclass refid="struct_at_b_box2" prot="public">AtBBox2</innerclass>
+      <sectiondef kind="user-defined">
+      <header>Constants</header>
+      <memberdef kind="variable" id="group__ai__bbox_1gaaa972a319c4797ee770d783945c89a71" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_at_b_box" kindref="compound">AtBBox</ref></type>
+        <definition>AtBBox AI_BBOX_UNIT</definition>
+        <argsstring></argsstring>
+        <name>AI_BBOX_UNIT</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Unit bounding box </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_bbox.h" line="174" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_bbox.h" bodystart="174" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__ai__bbox_1gadbeebf49fdcd029f35757b24b6e21d2f" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_at_b_box" kindref="compound">AtBBox</ref></type>
+        <definition>AtBBox AI_BBOX_ZERO</definition>
+        <argsstring></argsstring>
+        <name>AI_BBOX_ZERO</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Zero-width bounding box </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_bbox.h" line="175" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_bbox.h" bodystart="175" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__ai__bbox_1gad5f879709b38456939fb4431cfa1186e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiBBoxAddSlack</definition>
+        <argsstring>(AtBBox &amp;bbox, float slack)</argsstring>
+        <name>AiBBoxAddSlack</name>
+        <param>
+          <type><ref refid="struct_at_b_box" kindref="compound">AtBBox</ref> &amp;</type>
+          <declname>bbox</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>slack</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Expand a bounding box with some safety slack volume </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_bbox.h" line="39" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_bbox.h" bodystart="39" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__bbox_1ga29105436fe4b3242c1243d004dda59de" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiBBoxInit</definition>
+        <argsstring>(AtBBox &amp;bbox, float bound)</argsstring>
+        <name>AiBBoxInit</name>
+        <param>
+          <type><ref refid="struct_at_b_box" kindref="compound">AtBBox</ref> &amp;</type>
+          <declname>bbox</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>bound</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Initialize a bounding box </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_bbox.h" line="48" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_bbox.h" bodystart="48" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__bbox_1gae74a27fbe500f4ebf0e5e38b618de713" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiBBoxExpand</definition>
+        <argsstring>(AtBBox &amp;bbox, const AtVector &amp;v)</argsstring>
+        <name>AiBBoxExpand</name>
+        <param>
+          <type><ref refid="struct_at_b_box" kindref="compound">AtBBox</ref> &amp;</type>
+          <declname>bbox</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> &amp;</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Expand a bounding box with a point </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_bbox.h" line="57" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_bbox.h" bodystart="57" bodyend="61"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__bbox_1gaf5ca7b37305ad6bf0382801cf8d22f22" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiBBoxTriangle</definition>
+        <argsstring>(AtBBox &amp;bbox, const AtPoint &amp;p0, const AtPoint &amp;p1, const AtPoint &amp;p2)</argsstring>
+        <name>AiBBoxTriangle</name>
+        <param>
+          <type><ref refid="struct_at_b_box" kindref="compound">AtBBox</ref> &amp;</type>
+          <declname>bbox</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_point" kindref="compound">AtPoint</ref> &amp;</type>
+          <declname>p0</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_point" kindref="compound">AtPoint</ref> &amp;</type>
+          <declname>p1</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_point" kindref="compound">AtPoint</ref> &amp;</type>
+          <declname>p2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Compute the bbox of a triangle </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_bbox.h" line="66" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_bbox.h" bodystart="66" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__bbox_1ga0b73f72f9db8c523686dd2c9d24d1e80" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiBBoxUnion</definition>
+        <argsstring>(AtBBox &amp;bbox, const AtBBox &amp;b1, const AtBBox &amp;b2)</argsstring>
+        <name>AiBBoxUnion</name>
+        <param>
+          <type><ref refid="struct_at_b_box" kindref="compound">AtBBox</ref> &amp;</type>
+          <declname>bbox</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_b_box" kindref="compound">AtBBox</ref> &amp;</type>
+          <declname>b1</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_b_box" kindref="compound">AtBBox</ref> &amp;</type>
+          <declname>b2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Compute the &quot;union&quot; of two bboxes</para><para><simplesect kind="note"><para>this name is misleading since it&apos;s the bbox of bboxes, not the union (which can be disjoint) </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_bbox.h" line="81" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_bbox.h" bodystart="81" bodyend="85"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__bbox_1gafaf5f224ef12a3503be99a60f79fd42d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiBBoxIntersection</definition>
+        <argsstring>(AtBBox &amp;bbox, const AtBBox &amp;b1, const AtBBox &amp;b2)</argsstring>
+        <name>AiBBoxIntersection</name>
+        <param>
+          <type><ref refid="struct_at_b_box" kindref="compound">AtBBox</ref> &amp;</type>
+          <declname>bbox</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_b_box" kindref="compound">AtBBox</ref> &amp;</type>
+          <declname>b1</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_b_box" kindref="compound">AtBBox</ref> &amp;</type>
+          <declname>b2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Compute the intersection of two bboxes </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_bbox.h" line="90" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_bbox.h" bodystart="90" bodyend="94"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__bbox_1ga52f036ce96019030f88b4f3a7b398d31" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiBBoxInside</definition>
+        <argsstring>(const AtBBox &amp;bbox, const AtPoint &amp;p)</argsstring>
+        <name>AiBBoxInside</name>
+        <param>
+          <type>const <ref refid="struct_at_b_box" kindref="compound">AtBBox</ref> &amp;</type>
+          <declname>bbox</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_point" kindref="compound">AtPoint</ref> &amp;</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Check to see if the specified point is inside the bbox </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_bbox.h" line="99" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_bbox.h" bodystart="99" bodyend="103"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__bbox_1ga0df3884d06ff6ffd266b95f16d6da403" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float AiBBoxVolume</definition>
+        <argsstring>(const AtBBox &amp;bbox)</argsstring>
+        <name>AiBBoxVolume</name>
+        <param>
+          <type>const <ref refid="struct_at_b_box" kindref="compound">AtBBox</ref> &amp;</type>
+          <declname>bbox</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Compute the volume of a bbox </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_bbox.h" line="108" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_bbox.h" bodystart="108" bodyend="113"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__bbox_1gaefff51196e024ecf768fd3c2b6c68977" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiBBoxIsEmpty</definition>
+        <argsstring>(const AtBBox &amp;bbox)</argsstring>
+        <name>AiBBoxIsEmpty</name>
+        <param>
+          <type>const <ref refid="struct_at_b_box" kindref="compound">AtBBox</ref> &amp;</type>
+          <declname>bbox</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns whether or not the specified box is empty </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_bbox.h" line="118" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_bbox.h" bodystart="118" bodyend="123"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__bbox_1ga0359edd5c67c51ccadf004a011c3a7e5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float AiBBoxArea</definition>
+        <argsstring>(const AtBBox &amp;bbox)</argsstring>
+        <name>AiBBoxArea</name>
+        <param>
+          <type>const <ref refid="struct_at_b_box" kindref="compound">AtBBox</ref> &amp;</type>
+          <declname>bbox</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Compute the surface area of a bbox </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_bbox.h" line="128" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_bbox.h" bodystart="128" bodyend="132"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__bbox_1ga758b93d68331e803c0d1abdbb825644d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float AiBBoxHalfArea</definition>
+        <argsstring>(const AtBBox &amp;bbox)</argsstring>
+        <name>AiBBoxHalfArea</name>
+        <param>
+          <type>const <ref refid="struct_at_b_box" kindref="compound">AtBBox</ref> &amp;</type>
+          <declname>bbox</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Compute half the surface area of a bbox </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_bbox.h" line="137" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_bbox.h" bodystart="137" bodyend="141"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__bbox_1ga32111bef8b3c212353cbb9a98b59183f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiBBoxCenter</definition>
+        <argsstring>(const AtBBox &amp;bbox, AtPoint &amp;c)</argsstring>
+        <name>AiBBoxCenter</name>
+        <param>
+          <type>const <ref refid="struct_at_b_box" kindref="compound">AtBBox</ref> &amp;</type>
+          <declname>bbox</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_at_point" kindref="compound">AtPoint</ref> &amp;</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Compute the center of a bbox </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_bbox.h" line="146" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_bbox.h" bodystart="146" bodyend="149"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__bbox_1gad1e63cee0906ce0edb74f40260d2e4d2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiBBoxLerp</definition>
+        <argsstring>(AtBBox &amp;bbox, float k, const AtBBox &amp;lo, const AtBBox &amp;hi)</argsstring>
+        <name>AiBBoxLerp</name>
+        <param>
+          <type><ref refid="struct_at_b_box" kindref="compound">AtBBox</ref> &amp;</type>
+          <declname>bbox</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>k</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_b_box" kindref="compound">AtBBox</ref> &amp;</type>
+          <declname>lo</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_b_box" kindref="compound">AtBBox</ref> &amp;</type>
+          <declname>hi</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Linear interpolation between two bboxes (k=0 -&gt; bbox=lo, k=1 -&gt; bbox=hi) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_bbox.h" line="155" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_bbox.h" bodystart="155" bodyend="159"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__bbox_1ga836f48fc0b5f4b7f186420e2e77459e7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int AiBBox2Area</definition>
+        <argsstring>(const AtBBox2 &amp;bbox)</argsstring>
+        <name>AiBBox2Area</name>
+        <param>
+          <type>const <ref refid="struct_at_b_box2" kindref="compound">AtBBox2</ref> &amp;</type>
+          <declname>bbox</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Compute the area (# of pixels) of an integer bbox </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_bbox.h" line="164" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_bbox.h" bodystart="164" bodyend="168"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

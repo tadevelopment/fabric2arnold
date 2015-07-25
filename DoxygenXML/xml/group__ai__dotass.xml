@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="group__ai__dotass" kind="group">
+    <compoundname>ai_dotass</compoundname>
+    <title>ASS file related API</title>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__ai__dotass_1gaaf6a399593d4bab06b93d507217dc28e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int AiASSWrite</definition>
+        <argsstring>(const char *filename, int mask=AI_NODE_ALL, bool open_procs=false, bool binary=true)</argsstring>
+        <name>AiASSWrite</name>
+        <param>
+          <type>const char *</type>
+          <declname>filename</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>mask</declname>
+          <defval><ref refid="group__ai__node__entry_1gaaf029c124baf82592ee04a8a303be9d8" kindref="member">AI_NODE_ALL</ref></defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>open_procs</declname>
+          <defval>false</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>binary</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_dotass.h" line="33" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__dotass_1gac5a26ea04f6721948dc37a17c1dd7d30" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int AiASSLoad</definition>
+        <argsstring>(const char *filename, int mask=AI_NODE_ALL)</argsstring>
+        <name>AiASSLoad</name>
+        <param>
+          <type>const char *</type>
+          <declname>filename</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>mask</declname>
+          <defval><ref refid="group__ai__node__entry_1gaaf029c124baf82592ee04a8a303be9d8" kindref="member">AI_NODE_ALL</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_dotass.h" line="34" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Arnold has built-in support for writing scene data to a file and later reading the file in. Although not required, the extension for these files is usually .ass, which stands for <bold>A</bold>rnold <bold>S</bold>cene <bold>S</bold>ource. The file format is a straightforward mapping from Arnold <ref refid="struct_at_node" kindref="compound">AtNode</ref>&apos;s to human-readable ASCII. For example, a sphere node is written as: <programlisting><codeline><highlight class="normal">sphere<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>this<sp/>is<sp/>the<sp/>node<sp/>class</highlight></codeline>
+<codeline><highlight class="normal">{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>any<sp/>number<sp/>of<sp/>param/value<sp/>pairs<sp/>enclosed<sp/>in<sp/>curly<sp/>braces</highlight></codeline>
+<codeline><highlight class="normal"><sp/>center<sp/>0<sp/>0<sp/>0<sp/><sp/><sp/>//<sp/><sp/>parameter<sp/>&quot;center&quot;<sp/>of<sp/>type<sp/>AtPoint<sp/>is<sp/>set<sp/>to<sp/>value<sp/>(0,0,0)</highlight></codeline>
+<codeline><highlight class="normal"><sp/>radius<sp/>2.0<sp/><sp/><sp/><sp/><sp/>//<sp/><sp/>parameter<sp/>&quot;radius&quot;<sp/>of<sp/>type<sp/>float<sp/>is<sp/>set<sp/>to<sp/>value<sp/>2.0</highlight></codeline>
+<codeline><highlight class="normal">}<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>end<sp/>of<sp/>node<sp/>block</highlight></codeline>
+</programlisting> </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

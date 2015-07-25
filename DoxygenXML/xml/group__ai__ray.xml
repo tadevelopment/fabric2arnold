@@ -1,0 +1,300 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="group__ai__ray" kind="group">
+    <compoundname>ai_ray</compoundname>
+    <title>Ray Tracing API</title>
+    <innerclass refid="struct_at_ray" prot="public">AtRay</innerclass>
+      <sectiondef kind="user-defined">
+      <header>Ray Types</header>
+      <memberdef kind="define" id="group__ai__ray_1gaa3c3736d9e2f5abb1226d37d47c217b3" prot="public" static="no">
+        <name>AI_RAY_UNDEFINED</name>
+        <initializer>0x00</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>undefined type </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_ray.h" line="29" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_ray.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__ray_1gad711a20b2b29190b7e0f631aac68a1b1" prot="public" static="no">
+        <name>AI_RAY_CAMERA</name>
+        <initializer>0x01</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>ray originating at the camera </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_ray.h" line="30" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_ray.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__ray_1ga6e7f458ea66760fae254376c2709f8e3" prot="public" static="no">
+        <name>AI_RAY_SHADOW</name>
+        <initializer>0x02</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>shadow ray towards a light source </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_ray.h" line="31" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_ray.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__ray_1ga36121a76d8981c2a1f5b2abe5c2d2752" prot="public" static="no">
+        <name>AI_RAY_REFLECTED</name>
+        <initializer>0x04</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>mirror reflection ray </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_ray.h" line="32" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_ray.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__ray_1ga1935ceb0d3176a3fc4bde699b1896383" prot="public" static="no">
+        <name>AI_RAY_REFRACTED</name>
+        <initializer>0x08</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>mirror refraction ray </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_ray.h" line="33" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_ray.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__ray_1gafe958b9203acb9bf0210eef9e1a11346" prot="public" static="no">
+        <name>AI_RAY_SUBSURFACE</name>
+        <initializer>0x10</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>subsurface scattering probe ray </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_ray.h" line="34" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_ray.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__ray_1ga6d5a7bf099a76d81458baccc9fcb8dea" prot="public" static="no">
+        <name>AI_RAY_DIFFUSE</name>
+        <initializer>0x20</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>indirect diffuse (also known as diffuse GI) ray </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_ray.h" line="35" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_ray.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__ray_1gabb85326e8a24457a00f17de037f542a5" prot="public" static="no">
+        <name>AI_RAY_GLOSSY</name>
+        <initializer>0x40</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>glossy/blurred reflection ray </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_ray.h" line="36" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_ray.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__ray_1gabb30bfd3ebc92760c54010b07ee178f8" prot="public" static="no">
+        <name>AI_RAY_ALL</name>
+        <initializer>0xFF</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>mask for all ray types </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_ray.h" line="37" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_ray.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__ray_1ga6a0d8e7d9c447be4adc3ebb78d3d3e6a" prot="public" static="no">
+        <name>AI_RAY_GENERIC</name>
+        <initializer><ref refid="group__ai__ray_1gabb30bfd3ebc92760c54010b07ee178f8" kindref="member">AI_RAY_ALL</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>mask for all ray types </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_ray.h" line="38" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_ray.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group__ai__ray_1gaf14a6ebfb4366338a46fdc1eba6a6d1f" prot="public" static="no">
+        <type>struct <ref refid="struct_at_ray" kindref="compound">AtRay</ref></type>
+        <definition>typedef struct AtRay  AtRay</definition>
+        <argsstring></argsstring>
+        <name>AtRay</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Ray data structure </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_ray.h" line="72" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__ai__ray_1ga625d534111e135d7882eed4d4418a16c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiMakeRay</definition>
+        <argsstring>(AtRay *ray, AtUInt32 type, const AtPoint *origin, const AtVector *dir, double maxdist, const AtShaderGlobals *sg)</argsstring>
+        <name>AiMakeRay</name>
+        <param>
+          <type><ref refid="struct_at_ray" kindref="compound">AtRay</ref> *</type>
+          <declname>ray</declname>
+        </param>
+        <param>
+          <type><ref refid="group__ai__types_1ga5e008e3afa9393ab65d66796de249df9" kindref="member">AtUInt32</ref></type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_point" kindref="compound">AtPoint</ref> *</type>
+          <declname>origin</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> *</type>
+          <declname>dir</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>maxdist</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_ray.h" line="74" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__ray_1ga34f4d1096a116ddd4995791f8cd218ca" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiReflectRay</definition>
+        <argsstring>(AtRay *ray, const AtVector *normal, const AtShaderGlobals *sg)</argsstring>
+        <name>AiReflectRay</name>
+        <param>
+          <type><ref refid="struct_at_ray" kindref="compound">AtRay</ref> *</type>
+          <declname>ray</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> *</type>
+          <declname>normal</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_ray.h" line="75" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__ray_1ga61eb22e7ca114c7acf5100a4690b9836" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiRefractRay</definition>
+        <argsstring>(AtRay *ray, const AtVector *normal, float n1, float n2, const AtShaderGlobals *sg)</argsstring>
+        <name>AiRefractRay</name>
+        <param>
+          <type><ref refid="struct_at_ray" kindref="compound">AtRay</ref> *</type>
+          <declname>ray</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> *</type>
+          <declname>normal</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>n1</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>n2</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_ray.h" line="76" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__ray_1ga056513d98b80c330d28cd00aa13d719d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiTrace</definition>
+        <argsstring>(const AtRay *ray, AtScrSample *sample)</argsstring>
+        <name>AiTrace</name>
+        <param>
+          <type>const <ref refid="struct_at_ray" kindref="compound">AtRay</ref> *</type>
+          <declname>ray</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_at_scr_sample" kindref="compound">AtScrSample</ref> *</type>
+          <declname>sample</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_ray.h" line="77" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__ray_1ga875d52fa59c0c14f208b8dff3043c83c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiTraceBackground</definition>
+        <argsstring>(const AtRay *ray, AtScrSample *sample)</argsstring>
+        <name>AiTraceBackground</name>
+        <param>
+          <type>const <ref refid="struct_at_ray" kindref="compound">AtRay</ref> *</type>
+          <declname>ray</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_at_scr_sample" kindref="compound">AtScrSample</ref> *</type>
+          <declname>sample</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_ray.h" line="78" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__ray_1ga9645f676858e806c006f394a4ca9d22c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiTraceProbe</definition>
+        <argsstring>(const AtRay *ray, AtShaderGlobals *sgout)</argsstring>
+        <name>AiTraceProbe</name>
+        <param>
+          <type>const <ref refid="struct_at_ray" kindref="compound">AtRay</ref> *</type>
+          <declname>ray</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sgout</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_ray.h" line="79" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

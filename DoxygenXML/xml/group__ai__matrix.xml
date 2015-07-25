@@ -1,0 +1,516 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="group__ai__matrix" kind="group">
+    <compoundname>ai_matrix</compoundname>
+    <title>AtMatrix API</title>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group__ai__matrix_1ga239cea4f70543ed6dae0d0549d28c01c" prot="public" static="no">
+        <type>float</type>
+        <definition>typedef float AtMatrix[4][4]</definition>
+        <argsstring>[4][4]</argsstring>
+        <name>AtMatrix</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>4-by-4 matrix </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_matrix.h" line="20" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_matrix.h" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="group__ai__matrix_1gaaa04301bc0b27ac53c42dba74111f97c" prot="public" static="no" mutable="no">
+        <type><ref refid="group__ai__matrix_1ga239cea4f70543ed6dae0d0549d28c01c" kindref="member">AtMatrix</ref></type>
+        <definition>AtMatrix AI_M4_IDENTITY</definition>
+        <argsstring></argsstring>
+        <name>AI_M4_IDENTITY</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_matrix.h" line="43" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_matrix.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__ai__matrix_1gaa8e90dec4fea0482d5934da116324e6a" prot="public" static="no" mutable="no">
+        <type><ref refid="group__ai__matrix_1ga239cea4f70543ed6dae0d0549d28c01c" kindref="member">AtMatrix</ref></type>
+        <definition>AtMatrix AI_M4_ZERO</definition>
+        <argsstring></argsstring>
+        <name>AI_M4_ZERO</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_matrix.h" line="44" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_matrix.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__ai__matrix_1ga1235dbcf409ba5846a62272fa343ee6d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiM4Identity</definition>
+        <argsstring>(AtMatrix mout)</argsstring>
+        <name>AiM4Identity</name>
+        <param>
+          <type><ref refid="group__ai__matrix_1ga239cea4f70543ed6dae0d0549d28c01c" kindref="member">AtMatrix</ref></type>
+          <declname>mout</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_matrix.h" line="22" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__matrix_1gae426d87dfeab49d050823b4ce9fef119" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiM4Translation</definition>
+        <argsstring>(AtMatrix mout, const AtVector *t)</argsstring>
+        <name>AiM4Translation</name>
+        <param>
+          <type><ref refid="group__ai__matrix_1ga239cea4f70543ed6dae0d0549d28c01c" kindref="member">AtMatrix</ref></type>
+          <declname>mout</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> *</type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_matrix.h" line="23" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__matrix_1ga3caa9738e7e0a57e26880a3167e729e3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiM4RotationX</definition>
+        <argsstring>(AtMatrix mout, float x)</argsstring>
+        <name>AiM4RotationX</name>
+        <param>
+          <type><ref refid="group__ai__matrix_1ga239cea4f70543ed6dae0d0549d28c01c" kindref="member">AtMatrix</ref></type>
+          <declname>mout</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_matrix.h" line="24" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__matrix_1ga4a8f3774589251cd0160d45667ede165" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiM4RotationY</definition>
+        <argsstring>(AtMatrix mout, float y)</argsstring>
+        <name>AiM4RotationY</name>
+        <param>
+          <type><ref refid="group__ai__matrix_1ga239cea4f70543ed6dae0d0549d28c01c" kindref="member">AtMatrix</ref></type>
+          <declname>mout</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_matrix.h" line="25" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__matrix_1ga09e2dd5f2840e5f3eb7f9d517b95c687" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiM4RotationZ</definition>
+        <argsstring>(AtMatrix mout, float z)</argsstring>
+        <name>AiM4RotationZ</name>
+        <param>
+          <type><ref refid="group__ai__matrix_1ga239cea4f70543ed6dae0d0549d28c01c" kindref="member">AtMatrix</ref></type>
+          <declname>mout</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>z</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_matrix.h" line="26" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__matrix_1gacbb7cd242a79b36b69ade9a6335d405f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiM4Scaling</definition>
+        <argsstring>(AtMatrix mout, const AtVector *s)</argsstring>
+        <name>AiM4Scaling</name>
+        <param>
+          <type><ref refid="group__ai__matrix_1ga239cea4f70543ed6dae0d0549d28c01c" kindref="member">AtMatrix</ref></type>
+          <declname>mout</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> *</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_matrix.h" line="27" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__matrix_1gac9e01520cc725251ec7b3fe11578eb15" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiM4Frame</definition>
+        <argsstring>(AtMatrix mout, const AtVector *o, const AtVector *u, const AtVector *v, const AtVector *w)</argsstring>
+        <name>AiM4Frame</name>
+        <param>
+          <type><ref refid="group__ai__matrix_1ga239cea4f70543ed6dae0d0549d28c01c" kindref="member">AtMatrix</ref></type>
+          <declname>mout</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> *</type>
+          <declname>o</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> *</type>
+          <declname>u</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> *</type>
+          <declname>v</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> *</type>
+          <declname>w</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_matrix.h" line="28" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__matrix_1ga61a3137182f4f9b20dff1f5992e896ea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiM4PointByMatrixMult</definition>
+        <argsstring>(AtPoint *pout, const AtMatrix m, const AtPoint *pin)</argsstring>
+        <name>AiM4PointByMatrixMult</name>
+        <param>
+          <type><ref refid="struct_at_point" kindref="compound">AtPoint</ref> *</type>
+          <declname>pout</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__matrix_1ga239cea4f70543ed6dae0d0549d28c01c" kindref="member">AtMatrix</ref></type>
+          <declname>m</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_point" kindref="compound">AtPoint</ref> *</type>
+          <declname>pin</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_matrix.h" line="29" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__matrix_1ga80d1394e62cf48957433b6a322b67963" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiM4HPointByMatrixMult</definition>
+        <argsstring>(AtHPoint *pout, const AtMatrix m, const AtHPoint *pin)</argsstring>
+        <name>AiM4HPointByMatrixMult</name>
+        <param>
+          <type><ref refid="struct_at_h_point" kindref="compound">AtHPoint</ref> *</type>
+          <declname>pout</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__matrix_1ga239cea4f70543ed6dae0d0549d28c01c" kindref="member">AtMatrix</ref></type>
+          <declname>m</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_h_point" kindref="compound">AtHPoint</ref> *</type>
+          <declname>pin</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_matrix.h" line="30" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__matrix_1gad9122dfe2708503f101c93412ef2e285" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiM4VectorByMatrixMult</definition>
+        <argsstring>(AtVector *vout, const AtMatrix m, const AtVector *vin)</argsstring>
+        <name>AiM4VectorByMatrixMult</name>
+        <param>
+          <type><ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> *</type>
+          <declname>vout</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__matrix_1ga239cea4f70543ed6dae0d0549d28c01c" kindref="member">AtMatrix</ref></type>
+          <declname>m</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> *</type>
+          <declname>vin</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_matrix.h" line="31" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__matrix_1ga897410ac1364b9a8f8f0e24323f5388a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiM4VectorByMatrixTMult</definition>
+        <argsstring>(AtVector *vout, const AtMatrix m, const AtVector *vin)</argsstring>
+        <name>AiM4VectorByMatrixTMult</name>
+        <param>
+          <type><ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> *</type>
+          <declname>vout</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__matrix_1ga239cea4f70543ed6dae0d0549d28c01c" kindref="member">AtMatrix</ref></type>
+          <declname>m</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> *</type>
+          <declname>vin</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_matrix.h" line="32" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__matrix_1gab21b49caad065d598a3db7dedb010da3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiM4Mult</definition>
+        <argsstring>(AtMatrix mout, const AtMatrix ma, const AtMatrix mb)</argsstring>
+        <name>AiM4Mult</name>
+        <param>
+          <type><ref refid="group__ai__matrix_1ga239cea4f70543ed6dae0d0549d28c01c" kindref="member">AtMatrix</ref></type>
+          <declname>mout</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__matrix_1ga239cea4f70543ed6dae0d0549d28c01c" kindref="member">AtMatrix</ref></type>
+          <declname>ma</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__matrix_1ga239cea4f70543ed6dae0d0549d28c01c" kindref="member">AtMatrix</ref></type>
+          <declname>mb</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_matrix.h" line="33" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__matrix_1ga355586452eacfc02ee03d46592c6a534" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiM4Copy</definition>
+        <argsstring>(AtMatrix dest, const AtMatrix src)</argsstring>
+        <name>AiM4Copy</name>
+        <param>
+          <type><ref refid="group__ai__matrix_1ga239cea4f70543ed6dae0d0549d28c01c" kindref="member">AtMatrix</ref></type>
+          <declname>dest</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__matrix_1ga239cea4f70543ed6dae0d0549d28c01c" kindref="member">AtMatrix</ref></type>
+          <declname>src</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_matrix.h" line="34" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__matrix_1ga650be9836bed7dc41eb27de22875e890" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiM4Transpose</definition>
+        <argsstring>(const AtMatrix min, AtMatrix mout)</argsstring>
+        <name>AiM4Transpose</name>
+        <param>
+          <type>const <ref refid="group__ai__matrix_1ga239cea4f70543ed6dae0d0549d28c01c" kindref="member">AtMatrix</ref></type>
+          <declname>min</declname>
+        </param>
+        <param>
+          <type><ref refid="group__ai__matrix_1ga239cea4f70543ed6dae0d0549d28c01c" kindref="member">AtMatrix</ref></type>
+          <declname>mout</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_matrix.h" line="35" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__matrix_1ga56edae28530cb1ffc4bfa4f1f0f3ab92" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiM4Invert</definition>
+        <argsstring>(const AtMatrix min, AtMatrix mout)</argsstring>
+        <name>AiM4Invert</name>
+        <param>
+          <type>const <ref refid="group__ai__matrix_1ga239cea4f70543ed6dae0d0549d28c01c" kindref="member">AtMatrix</ref></type>
+          <declname>min</declname>
+        </param>
+        <param>
+          <type><ref refid="group__ai__matrix_1ga239cea4f70543ed6dae0d0549d28c01c" kindref="member">AtMatrix</ref></type>
+          <declname>mout</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_matrix.h" line="36" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__matrix_1ga2474271c0c1cf97503226091417e3a7d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float AiM4Determinant</definition>
+        <argsstring>(const AtMatrix m)</argsstring>
+        <name>AiM4Determinant</name>
+        <param>
+          <type>const <ref refid="group__ai__matrix_1ga239cea4f70543ed6dae0d0549d28c01c" kindref="member">AtMatrix</ref></type>
+          <declname>m</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_matrix.h" line="37" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__matrix_1ga42a773687e9b1ec860ba22db9bb0bca0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiM4Lerp</definition>
+        <argsstring>(AtMatrix mout, float t, const AtMatrix ma, const AtMatrix mb)</argsstring>
+        <name>AiM4Lerp</name>
+        <param>
+          <type><ref refid="group__ai__matrix_1ga239cea4f70543ed6dae0d0549d28c01c" kindref="member">AtMatrix</ref></type>
+          <declname>mout</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>t</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__matrix_1ga239cea4f70543ed6dae0d0549d28c01c" kindref="member">AtMatrix</ref></type>
+          <declname>ma</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__matrix_1ga239cea4f70543ed6dae0d0549d28c01c" kindref="member">AtMatrix</ref></type>
+          <declname>mb</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_matrix.h" line="38" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__matrix_1gaea3b952645243763b6f4d10e61887868" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiM4Berp</definition>
+        <argsstring>(float bu, float bv, const AtMatrix m0, const AtMatrix m1, const AtMatrix m2, AtMatrix mout)</argsstring>
+        <name>AiM4Berp</name>
+        <param>
+          <type>float</type>
+          <declname>bu</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>bv</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__matrix_1ga239cea4f70543ed6dae0d0549d28c01c" kindref="member">AtMatrix</ref></type>
+          <declname>m0</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__matrix_1ga239cea4f70543ed6dae0d0549d28c01c" kindref="member">AtMatrix</ref></type>
+          <declname>m1</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__matrix_1ga239cea4f70543ed6dae0d0549d28c01c" kindref="member">AtMatrix</ref></type>
+          <declname>m2</declname>
+        </param>
+        <param>
+          <type><ref refid="group__ai__matrix_1ga239cea4f70543ed6dae0d0549d28c01c" kindref="member">AtMatrix</ref></type>
+          <declname>mout</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_matrix.h" line="39" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__matrix_1ga2f1e02758c7d93433e766ce2673210a2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiM4IsIdentity</definition>
+        <argsstring>(const AtMatrix m)</argsstring>
+        <name>AiM4IsIdentity</name>
+        <param>
+          <type>const <ref refid="group__ai__matrix_1ga239cea4f70543ed6dae0d0549d28c01c" kindref="member">AtMatrix</ref></type>
+          <declname>m</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_matrix.h" line="40" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__matrix_1ga4645edb6323c7414e9badb5a6d13c762" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiM4IsSingular</definition>
+        <argsstring>(const AtMatrix m)</argsstring>
+        <name>AiM4IsSingular</name>
+        <param>
+          <type>const <ref refid="group__ai__matrix_1ga239cea4f70543ed6dae0d0549d28c01c" kindref="member">AtMatrix</ref></type>
+          <declname>m</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_matrix.h" line="41" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

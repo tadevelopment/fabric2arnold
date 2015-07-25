@@ -1,0 +1,508 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="group__ai__noise" kind="group">
+    <compoundname>ai_noise</compoundname>
+    <title>Procedural texturing API</title>
+      <sectiondef kind="user-defined">
+      <header>Perlin Noise</header>
+      <memberdef kind="function" id="group__ai__noise_1ga14cc6c071e344a96778f7782e08a20ec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="ai__api_8h_1a80eacd8febc412193f639f01892984c7" kindref="member">AI_CONST</ref> float</type>
+        <definition>AI_CONST float AiPerlin2</definition>
+        <argsstring>(AtPoint2 p)</argsstring>
+        <name>AiPerlin2</name>
+        <param>
+          <type><ref refid="struct_at_point2" kindref="compound">AtPoint2</ref></type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_noise.h" line="22" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__noise_1gab63e6eb3006358b9ca662735277c0e06" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="ai__api_8h_1a80eacd8febc412193f639f01892984c7" kindref="member">AI_CONST</ref> float</type>
+        <definition>AI_CONST float AiPerlin3</definition>
+        <argsstring>(AtPoint p)</argsstring>
+        <name>AiPerlin3</name>
+        <param>
+          <type><ref refid="struct_at_point" kindref="compound">AtPoint</ref></type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_noise.h" line="23" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__noise_1gad2ee5b05cbdf44bada5bda6df8b9a5b9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="ai__api_8h_1a80eacd8febc412193f639f01892984c7" kindref="member">AI_CONST</ref> float</type>
+        <definition>AI_CONST float AiPerlin4</definition>
+        <argsstring>(AtPoint p, float time)</argsstring>
+        <name>AiPerlin4</name>
+        <param>
+          <type><ref refid="struct_at_point" kindref="compound">AtPoint</ref></type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>time</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_noise.h" line="24" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Periodic Perlin Noise</header>
+      <memberdef kind="function" id="group__ai__noise_1ga5f79f1c59bc9547b09b7057047fdaf66" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="ai__api_8h_1a80eacd8febc412193f639f01892984c7" kindref="member">AI_CONST</ref> float</type>
+        <definition>AI_CONST float AiPeriodicPerlin2</definition>
+        <argsstring>(AtPoint2 p, int periodx, int periody)</argsstring>
+        <name>AiPeriodicPerlin2</name>
+        <param>
+          <type><ref refid="struct_at_point2" kindref="compound">AtPoint2</ref></type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>periodx</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>periody</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_noise.h" line="30" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__noise_1gabc970a44c39e72da89df037deb6b2576" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="ai__api_8h_1a80eacd8febc412193f639f01892984c7" kindref="member">AI_CONST</ref> float</type>
+        <definition>AI_CONST float AiPeriodicPerlin3</definition>
+        <argsstring>(AtPoint p, int periodx, int periody, int periodz)</argsstring>
+        <name>AiPeriodicPerlin3</name>
+        <param>
+          <type><ref refid="struct_at_point" kindref="compound">AtPoint</ref></type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>periodx</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>periody</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>periodz</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_noise.h" line="31" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__noise_1ga23d723f6f5948cf95dc8ffd04f82787d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="ai__api_8h_1a80eacd8febc412193f639f01892984c7" kindref="member">AI_CONST</ref> float</type>
+        <definition>AI_CONST float AiPeriodicPerlin4</definition>
+        <argsstring>(AtPoint p, float time, int periodx, int periody, int periodz, int periodt)</argsstring>
+        <name>AiPeriodicPerlin4</name>
+        <param>
+          <type><ref refid="struct_at_point" kindref="compound">AtPoint</ref></type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>time</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>periodx</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>periody</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>periodz</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>periodt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_noise.h" line="32" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Summed-Noise</header>
+      <memberdef kind="function" id="group__ai__noise_1ga7b58f50db0060d6eb7ae3b1c71787c26" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="ai__api_8h_1a80eacd8febc412193f639f01892984c7" kindref="member">AI_CONST</ref> float</type>
+        <definition>AI_CONST float AiNoise2</definition>
+        <argsstring>(AtPoint2 p, int octaves, float distortion, float lacunarity)</argsstring>
+        <name>AiNoise2</name>
+        <param>
+          <type><ref refid="struct_at_point2" kindref="compound">AtPoint2</ref></type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>octaves</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>distortion</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>lacunarity</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_noise.h" line="38" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__noise_1gaba8eb40afb0f50821913dcd4e9ae2fb2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="ai__api_8h_1a80eacd8febc412193f639f01892984c7" kindref="member">AI_CONST</ref> float</type>
+        <definition>AI_CONST float AiNoise3</definition>
+        <argsstring>(AtPoint p, int octaves, float distortion, float lacunarity)</argsstring>
+        <name>AiNoise3</name>
+        <param>
+          <type><ref refid="struct_at_point" kindref="compound">AtPoint</ref></type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>octaves</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>distortion</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>lacunarity</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_noise.h" line="39" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__noise_1ga644430e441e6656879a90c53948fd3ce" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="ai__api_8h_1a80eacd8febc412193f639f01892984c7" kindref="member">AI_CONST</ref> float</type>
+        <definition>AI_CONST float AiNoise4</definition>
+        <argsstring>(AtPoint p, float time, int octaves, float distortion, float lacunarity)</argsstring>
+        <name>AiNoise4</name>
+        <param>
+          <type><ref refid="struct_at_point" kindref="compound">AtPoint</ref></type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>time</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>octaves</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>distortion</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>lacunarity</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_noise.h" line="40" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__noise_1ga50f2cb84721c33f5c71e20bfcc962490" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="ai__api_8h_1a80eacd8febc412193f639f01892984c7" kindref="member">AI_CONST</ref> <ref refid="group__ai__vector_1gacc3427eeb6f63537ae2b2127348008fd" kindref="member">AtVector2</ref></type>
+        <definition>AI_CONST AtVector2 AiVNoise2</definition>
+        <argsstring>(AtPoint2 p, int octaves, float distortion, float lacunarity)</argsstring>
+        <name>AiVNoise2</name>
+        <param>
+          <type><ref refid="struct_at_point2" kindref="compound">AtPoint2</ref></type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>octaves</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>distortion</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>lacunarity</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_noise.h" line="41" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__noise_1gaef2ad3f9a947efb26a310b8f1767a168" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="ai__api_8h_1a80eacd8febc412193f639f01892984c7" kindref="member">AI_CONST</ref> <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref></type>
+        <definition>AI_CONST AtVector AiVNoise3</definition>
+        <argsstring>(AtPoint p, int octaves, float distortion, float lacunarity)</argsstring>
+        <name>AiVNoise3</name>
+        <param>
+          <type><ref refid="struct_at_point" kindref="compound">AtPoint</ref></type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>octaves</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>distortion</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>lacunarity</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_noise.h" line="42" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__noise_1gacfb4037a185e4dd656439667758b06b8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="ai__api_8h_1a80eacd8febc412193f639f01892984c7" kindref="member">AI_CONST</ref> <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref></type>
+        <definition>AI_CONST AtVector AiVNoise4</definition>
+        <argsstring>(AtPoint p, float time, int octaves, float distortion, float lacunarity)</argsstring>
+        <name>AiVNoise4</name>
+        <param>
+          <type><ref refid="struct_at_point" kindref="compound">AtPoint</ref></type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>time</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>octaves</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>distortion</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>lacunarity</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_noise.h" line="43" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Cellular Noise</header>
+      <memberdef kind="function" id="group__ai__noise_1ga4c4344ae7c5ab27b4f289aed98d33500" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiCellular</definition>
+        <argsstring>(AtPoint p, int n, int octaves, float lacunarity, float randomness, float *F, AtVector *delta=NULL, AtUInt32 *ID=NULL)</argsstring>
+        <name>AiCellular</name>
+        <param>
+          <type><ref refid="struct_at_point" kindref="compound">AtPoint</ref></type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>octaves</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>lacunarity</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>randomness</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>F</declname>
+        </param>
+        <param>
+          <type><ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> *</type>
+          <declname>delta</declname>
+          <defval><ref refid="group__ai__types_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref></defval>
+        </param>
+        <param>
+          <type><ref refid="group__ai__types_1ga5e008e3afa9393ab65d66796de249df9" kindref="member">AtUInt32</ref> *</type>
+          <declname>ID</declname>
+          <defval><ref refid="group__ai__types_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_noise.h" line="49" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__noise_1gaac881e55b5b0e852fd53dc15bc4543d8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="ai__api_8h_1a80eacd8febc412193f639f01892984c7" kindref="member">AI_CONST</ref> float</type>
+        <definition>AI_CONST float AiCellNoise2</definition>
+        <argsstring>(AtPoint2 p)</argsstring>
+        <name>AiCellNoise2</name>
+        <param>
+          <type><ref refid="struct_at_point2" kindref="compound">AtPoint2</ref></type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_noise.h" line="50" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__noise_1gae48e6f20aa7a53fb784327fee3fbf459" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="ai__api_8h_1a80eacd8febc412193f639f01892984c7" kindref="member">AI_CONST</ref> float</type>
+        <definition>AI_CONST float AiCellNoise3</definition>
+        <argsstring>(AtPoint p)</argsstring>
+        <name>AiCellNoise3</name>
+        <param>
+          <type><ref refid="struct_at_point" kindref="compound">AtPoint</ref></type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_noise.h" line="51" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__noise_1ga93c6a05f1234d8e2f2fea71848ad8749" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="ai__api_8h_1a80eacd8febc412193f639f01892984c7" kindref="member">AI_CONST</ref> float</type>
+        <definition>AI_CONST float AiCellNoise4</definition>
+        <argsstring>(AtPoint p, float t)</argsstring>
+        <name>AiCellNoise4</name>
+        <param>
+          <type><ref refid="struct_at_point" kindref="compound">AtPoint</ref></type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_noise.h" line="52" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__noise_1gaa109628f02bbdf09613eb56fb2526e6d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="ai__api_8h_1a80eacd8febc412193f639f01892984c7" kindref="member">AI_CONST</ref> <ref refid="group__ai__vector_1gacc3427eeb6f63537ae2b2127348008fd" kindref="member">AtVector2</ref></type>
+        <definition>AI_CONST AtVector2 AiVCellNoise2</definition>
+        <argsstring>(AtPoint2 p)</argsstring>
+        <name>AiVCellNoise2</name>
+        <param>
+          <type><ref refid="struct_at_point2" kindref="compound">AtPoint2</ref></type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_noise.h" line="53" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__noise_1ga75ad1c6cd9bf18baa5d17376ebd47fa8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="ai__api_8h_1a80eacd8febc412193f639f01892984c7" kindref="member">AI_CONST</ref> <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref></type>
+        <definition>AI_CONST AtVector AiVCellNoise3</definition>
+        <argsstring>(AtPoint p)</argsstring>
+        <name>AiVCellNoise3</name>
+        <param>
+          <type><ref refid="struct_at_point" kindref="compound">AtPoint</ref></type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_noise.h" line="54" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__noise_1ga91fe8db55734537aee27dd567ce1f34b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="ai__api_8h_1a80eacd8febc412193f639f01892984c7" kindref="member">AI_CONST</ref> <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref></type>
+        <definition>AI_CONST AtVector AiVCellNoise4</definition>
+        <argsstring>(AtPoint p, float t)</argsstring>
+        <name>AiVCellNoise4</name>
+        <param>
+          <type><ref refid="struct_at_point" kindref="compound">AtPoint</ref></type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_noise.h" line="55" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

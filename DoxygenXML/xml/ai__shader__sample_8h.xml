@@ -1,0 +1,120 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="ai__shader__sample_8h" kind="file" language="C++">
+    <compoundname>ai_shader_sample.h</compoundname>
+    <includes refid="ai__color_8h" local="yes">ai_color.h</includes>
+    <includes refid="ai__vector_8h" local="yes">ai_vector.h</includes>
+    <includedby refid="ai__ray_8h" local="yes">ai_ray.h</includedby>
+    <includedby refid="ai_8h" local="yes">ai.h</includedby>
+    <incdepgraph>
+      <node id="618">
+        <label>ai_constants.h</label>
+        <link refid="ai__constants_8h"/>
+      </node>
+      <node id="617">
+        <label>ai_api.h</label>
+        <link refid="ai__api_8h"/>
+      </node>
+      <node id="619">
+        <label>cmath</label>
+      </node>
+      <node id="614">
+        <label>ai_shader_sample.h</label>
+        <link refid="ai_shader_sample.h"/>
+        <childnode refid="615" relation="include">
+        </childnode>
+        <childnode refid="621" relation="include">
+        </childnode>
+      </node>
+      <node id="621">
+        <label>ai_vector.h</label>
+        <link refid="ai__vector_8h"/>
+        <childnode refid="618" relation="include">
+        </childnode>
+        <childnode refid="616" relation="include">
+        </childnode>
+        <childnode refid="617" relation="include">
+        </childnode>
+        <childnode refid="622" relation="include">
+        </childnode>
+      </node>
+      <node id="616">
+        <label>ai_types.h</label>
+        <link refid="ai__types_8h"/>
+        <childnode refid="617" relation="include">
+        </childnode>
+        <childnode refid="618" relation="include">
+        </childnode>
+        <childnode refid="619" relation="include">
+        </childnode>
+        <childnode refid="620" relation="include">
+        </childnode>
+      </node>
+      <node id="615">
+        <label>ai_color.h</label>
+        <link refid="ai__color_8h"/>
+        <childnode refid="616" relation="include">
+        </childnode>
+        <childnode refid="618" relation="include">
+        </childnode>
+        <childnode refid="617" relation="include">
+        </childnode>
+      </node>
+      <node id="622">
+        <label>math.h</label>
+      </node>
+      <node id="620">
+        <label>cstdlib</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="624">
+        <label>ai_ray.h</label>
+        <link refid="ai__ray_8h"/>
+        <childnode refid="625" relation="include">
+        </childnode>
+        <childnode refid="626" relation="include">
+        </childnode>
+      </node>
+      <node id="623">
+        <label>ai_shader_sample.h</label>
+        <link refid="ai_shader_sample.h"/>
+        <childnode refid="624" relation="include">
+        </childnode>
+        <childnode refid="626" relation="include">
+        </childnode>
+      </node>
+      <node id="625">
+        <label>ai_shader_lights.h</label>
+        <link refid="ai__shader__lights_8h"/>
+        <childnode refid="626" relation="include">
+        </childnode>
+      </node>
+      <node id="626">
+        <label>ai.h</label>
+        <link refid="ai_8h"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="struct_at_scr_sample" prot="public">AtScrSample</innerclass>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group__ai__shader__sample_1ga4dbcb14ac88d5d6ece1935d1a201696f" prot="public" static="no">
+        <type>struct <ref refid="struct_at_scr_sample" kindref="compound">AtScrSample</ref></type>
+        <definition>typedef struct AtScrSample  AtScrSample</definition>
+        <argsstring></argsstring>
+        <name>AtScrSample</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Used to hold the result of <ref refid="group__ai__ray_1ga056513d98b80c330d28cd00aa13d719d" kindref="member">AiTrace()</ref> calls </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_sample.h" line="31" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Struct returned by <ref refid="group__ai__ray_1ga056513d98b80c330d28cd00aa13d719d" kindref="member">AiTrace()</ref>, called &quot;screen sample&quot; for legacy reasons </para>    </detaileddescription>
+    <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_sample.h"/>
+  </compounddef>
+</doxygen>

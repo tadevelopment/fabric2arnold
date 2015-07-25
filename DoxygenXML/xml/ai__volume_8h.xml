@@ -1,0 +1,559 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="ai__volume_8h" kind="file" language="C++">
+    <compoundname>ai_volume.h</compoundname>
+    <includes refid="ai__bbox_8h" local="yes">ai_bbox.h</includes>
+    <includes refid="ai__color_8h" local="yes">ai_color.h</includes>
+    <includes refid="ai__params_8h" local="yes">ai_params.h</includes>
+    <includedby refid="ai_8h" local="yes">ai.h</includedby>
+    <incdepgraph>
+      <node id="873">
+        <label>ai_constants.h</label>
+        <link refid="ai__constants_8h"/>
+      </node>
+      <node id="875">
+        <label>ai_api.h</label>
+        <link refid="ai__api_8h"/>
+      </node>
+      <node id="876">
+        <label>cmath</label>
+      </node>
+      <node id="872">
+        <label>ai_vector.h</label>
+        <link refid="ai__vector_8h"/>
+        <childnode refid="873" relation="include">
+        </childnode>
+        <childnode refid="874" relation="include">
+        </childnode>
+        <childnode refid="875" relation="include">
+        </childnode>
+        <childnode refid="878" relation="include">
+        </childnode>
+      </node>
+      <node id="870">
+        <label>ai_volume.h</label>
+        <link refid="ai_volume.h"/>
+        <childnode refid="871" relation="include">
+        </childnode>
+        <childnode refid="879" relation="include">
+        </childnode>
+        <childnode refid="880" relation="include">
+        </childnode>
+      </node>
+      <node id="874">
+        <label>ai_types.h</label>
+        <link refid="ai__types_8h"/>
+        <childnode refid="875" relation="include">
+        </childnode>
+        <childnode refid="873" relation="include">
+        </childnode>
+        <childnode refid="876" relation="include">
+        </childnode>
+        <childnode refid="877" relation="include">
+        </childnode>
+      </node>
+      <node id="881">
+        <label>ai_array.h</label>
+        <link refid="ai__array_8h"/>
+        <childnode refid="879" relation="include">
+        </childnode>
+        <childnode refid="882" relation="include">
+        </childnode>
+        <childnode refid="872" relation="include">
+        </childnode>
+        <childnode refid="874" relation="include">
+        </childnode>
+        <childnode refid="875" relation="include">
+        </childnode>
+      </node>
+      <node id="880">
+        <label>ai_params.h</label>
+        <link refid="ai__params_8h"/>
+        <childnode refid="881" relation="include">
+        </childnode>
+        <childnode refid="879" relation="include">
+        </childnode>
+        <childnode refid="883" relation="include">
+        </childnode>
+        <childnode refid="882" relation="include">
+        </childnode>
+        <childnode refid="872" relation="include">
+        </childnode>
+        <childnode refid="874" relation="include">
+        </childnode>
+        <childnode refid="875" relation="include">
+        </childnode>
+      </node>
+      <node id="879">
+        <label>ai_color.h</label>
+        <link refid="ai__color_8h"/>
+        <childnode refid="874" relation="include">
+        </childnode>
+        <childnode refid="873" relation="include">
+        </childnode>
+        <childnode refid="875" relation="include">
+        </childnode>
+      </node>
+      <node id="878">
+        <label>math.h</label>
+      </node>
+      <node id="871">
+        <label>ai_bbox.h</label>
+        <link refid="ai__bbox_8h"/>
+        <childnode refid="872" relation="include">
+        </childnode>
+        <childnode refid="875" relation="include">
+        </childnode>
+      </node>
+      <node id="877">
+        <label>cstdlib</label>
+      </node>
+      <node id="882">
+        <label>ai_matrix.h</label>
+        <link refid="ai__matrix_8h"/>
+        <childnode refid="872" relation="include">
+        </childnode>
+        <childnode refid="875" relation="include">
+        </childnode>
+      </node>
+      <node id="883">
+        <label>ai_enum.h</label>
+        <link refid="ai__enum_8h"/>
+        <childnode refid="875" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="884">
+        <label>ai_volume.h</label>
+        <link refid="ai_volume.h"/>
+        <childnode refid="885" relation="include">
+        </childnode>
+      </node>
+      <node id="885">
+        <label>ai.h</label>
+        <link refid="ai_8h"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="struct_at_volume_data" prot="public">AtVolumeData</innerclass>
+    <innerclass refid="struct_at_volume_plugin_vtable" prot="public">AtVolumePluginVtable</innerclass>
+      <sectiondef kind="user-defined">
+      <header>Volume interpolation quality</header>
+      <memberdef kind="define" id="group__ai__volumes_1ga2fb44d2a905b83a4991d692b5c836d51" prot="public" static="no">
+        <name>AI_VOLUME_INTERP_CLOSEST</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>closest data from the volume </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_volume.h" line="38" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_volume.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__volumes_1ga2c0220a799d98f756e0daa4617233f35" prot="public" static="no">
+        <name>AI_VOLUME_INTERP_TRILINEAR</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>trilinearly sampled volume </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_volume.h" line="39" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_volume.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__volumes_1ga4bbde2a4d76bfc4d5acaf9b6bca28d4c" prot="public" static="no">
+        <name>AI_VOLUME_INTERP_TRICUBIC</name>
+        <initializer>2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>tricubicly sampled volume </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_volume.h" line="40" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_volume.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group__ai__volumes_1ga106ca06f566d7378426f3689b3ca1a03" prot="public" static="no">
+        <name>volume_plugin_loader</name>
+        <initializer><ref refid="group__ai__plugins_1ga95e724cd6a8385c2cea8d7fddc3a5d28" kindref="member">AI_EXPORT_LIB</ref> bool VolumePluginLoader(<ref refid="struct_at_volume_plugin_vtable" kindref="compound">AtVolumePluginVtable</ref>* vtable)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Handy shortcut for writing volume plugins.</para><para>This is a shorter, alternate way to declare the <ref refid="group__ai__volumes_1gacd979be744c4da0bfa20db92bbdfe17b" kindref="member">AtVolumePluginLoader</ref> symbol. Here is an example: <programlisting><codeline><highlight class="normal">volume_plugin_loader<sp/></highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>vtable-&gt;Init<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>MyInit;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>vtable-&gt;Cleanup<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>MyCleanup;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>vtable-&gt;CreateVolume<sp/><sp/><sp/>=<sp/>MyCreateVolume;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>vtable-&gt;UpdateVolume<sp/><sp/><sp/>=<sp/>MyUpdateVolume;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>vtable-&gt;CleanupVolume<sp/><sp/>=<sp/>MyCleanupVolume;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>vtable-&gt;Sample<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>MySample;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>vtable-&gt;RayExtents<sp/><sp/><sp/><sp/><sp/>=<sp/>MyRayExtents;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>strcpy(vtable-&gt;version,<sp/>AI_VERSION);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>return<sp/>true;</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_volume.h" line="237" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_volume.h" bodystart="237" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group__ai__volumes_1gabe6c3604458a81adbb9541116ec45d82" prot="public" static="no">
+        <type>bool(*</type>
+        <definition>typedef bool(* AtVolumePluginInit) (void **user_ptr)</definition>
+        <argsstring>)(void **user_ptr)</argsstring>
+        <name>AtVolumePluginInit</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Volume plugin init method.</para><para>This method will be called first and should perform any initialization required by this volume type. This might involve initializing an external volume format API, for example.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">user_ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>This is a general-purpose, user-supplied data pointer that Arnold will pass along to the other volume plugin methods. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true upon success </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_volume.h" line="69" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_volume.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__ai__volumes_1gadfe24ebc98193d6456f5935ed90e9579" prot="public" static="no">
+        <type>bool(*</type>
+        <definition>typedef bool(* AtVolumePluginCleanup) (void *user_ptr)</definition>
+        <argsstring>)(void *user_ptr)</argsstring>
+        <name>AtVolumePluginCleanup</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Volume plugin cleanup method.</para><para>This method will be called last and should perform any cleanup required by your volume plugin. Make sure you release any memory you allocated that is no longer needed by Arnold.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>user_ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>User data pointer, as returned from <ref refid="group__ai__volumes_1gabe6c3604458a81adbb9541116ec45d82" kindref="member">AtVolumePluginInit</ref> </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true upon success </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_volume.h" line="81" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_volume.h" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__ai__volumes_1gacc9b10f81897f73f6639d766710a5d5d" prot="public" static="no">
+        <type>bool(*</type>
+        <definition>typedef bool(* AtVolumePluginCreateVolume) (void *user_ptr, const char *user_string, const AtNode *node, AtVolumeData *data)</definition>
+        <argsstring>)(void *user_ptr, const char *user_string, const AtNode *node, AtVolumeData *data)</argsstring>
+        <name>AtVolumePluginCreateVolume</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Volume plugin volume creation.</para><para>This method will be called for each volume node before usage.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>user_ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>User data pointer, as returned from <ref refid="group__ai__volumes_1gabe6c3604458a81adbb9541116ec45d82" kindref="member">AtVolumePluginInit</ref> </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>user_string</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>User configuration string </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>node</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Owner node where the volume was requested </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Volume data with all fields to be set by the callback </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if volume creation succeeded </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_volume.h" line="94" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_volume.h" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__ai__volumes_1ga4a62e519527dee81b4b0e22d0b8d9593" prot="public" static="no">
+        <type>bool(*</type>
+        <definition>typedef bool(* AtVolumePluginUpdateVolume) (void *user_ptr, const char *user_string, const AtNode *node, AtVolumeData *data)</definition>
+        <argsstring>)(void *user_ptr, const char *user_string, const AtNode *node, AtVolumeData *data)</argsstring>
+        <name>AtVolumePluginUpdateVolume</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Volume plugin volume update.</para><para>This optional method will be called for each volume node before each render pass or scene change, so that the volume can be update accordingly. If not provided, the volume will be destroyed and recreated.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>user_ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>User data pointer, as returned from <ref refid="group__ai__volumes_1gabe6c3604458a81adbb9541116ec45d82" kindref="member">AtVolumePluginInit</ref> </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>user_string</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>User configuration string </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>node</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Owner node where the volume was requested </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Volume data with all fields to be set by the callback </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if volume data was modified </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_volume.h" line="112" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_volume.h" bodystart="112" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__ai__volumes_1gac5ccd339ab12eeb595d317438fbf30a0" prot="public" static="no">
+        <type>bool(*</type>
+        <definition>typedef bool(* AtVolumePluginCleanupVolume) (void *user_ptr, AtVolumeData *data, const AtNode *node)</definition>
+        <argsstring>)(void *user_ptr, AtVolumeData *data, const AtNode *node)</argsstring>
+        <name>AtVolumePluginCleanupVolume</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Volume plugin volume cleanup method.</para><para>This method will be called once for each volume that was created by a call to <ref refid="group__ai__volumes_1gacc9b10f81897f73f6639d766710a5d5d" kindref="member">AtVolumePluginCreateVolume</ref> to allow a chance to clean up any private data.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>user_ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>User data pointer, as returned from <ref refid="group__ai__volumes_1gabe6c3604458a81adbb9541116ec45d82" kindref="member">AtVolumePluginInit</ref> </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Volume data returned from <ref refid="group__ai__volumes_1gacc9b10f81897f73f6639d766710a5d5d" kindref="member">AtVolumePluginCreateVolume</ref> </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true upon success </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_volume.h" line="127" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_volume.h" bodystart="127" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__ai__volumes_1ga251067a3542b07c53dc67f98da35f056" prot="public" static="no">
+        <type>bool(*</type>
+        <definition>typedef bool(* AtVolumePluginSample) (void *user_ptr, const AtVolumeData *data, const char *channel, const AtShaderGlobals *sg, int interp, AtParamValue *value, AtByte *type)</definition>
+        <argsstring>)(void *user_ptr, const AtVolumeData *data, const char *channel, const AtShaderGlobals *sg, int interp, AtParamValue *value, AtByte *type)</argsstring>
+        <name>AtVolumePluginSample</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Volume plugin sample method.</para><para>This method will be called concurrently to sample data from a given channel with the specified interpolation. Implementors should use sg-&gt;Po as the sampling position.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>user_ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>User data pointer, as returned from <ref refid="group__ai__volumes_1gabe6c3604458a81adbb9541116ec45d82" kindref="member">AtVolumePluginInit</ref> </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Volume data returned from <ref refid="group__ai__volumes_1gacc9b10f81897f73f6639d766710a5d5d" kindref="member">AtVolumePluginCreateVolume</ref> </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>channel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Data channel name from the volume </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Shader globals for the sampling context </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>interp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Volume interpolation quality, one of <computeroutput>AI_VOLUME_INTERP_*</computeroutput> </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Resulting sampled value, matching the type output in out_type </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Resulting value type, one of <computeroutput>AI_TYPE_FLOAT</computeroutput>, <computeroutput>AI_TYPE_POINT</computeroutput>, <computeroutput>AI_TYPE_POINT2</computeroutput>, <computeroutput>AI_TYPE_RGB</computeroutput>, <computeroutput>AI_TYPE_RGBA</computeroutput>, or <computeroutput>AI_TYPE_VECTOR</computeroutput> </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true upon success </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_volume.h" line="147" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_volume.h" bodystart="147" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__ai__volumes_1ga15496348020553b2f4e0361100d37a31" prot="public" static="no">
+        <type>void(*</type>
+        <definition>typedef void(* AtVolumePluginRayExtents) (void *user_ptr, const AtVolumeData *data, const AtVolumeIntersectionInfo *info, AtByte tid, float time, const AtPoint *origin, const AtVector *direction, float t0, float t1)</definition>
+        <argsstring>)(void *user_ptr, const AtVolumeData *data, const AtVolumeIntersectionInfo *info, AtByte tid, float time, const AtPoint *origin, const AtVector *direction, float t0, float t1)</argsstring>
+        <name>AtVolumePluginRayExtents</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Volume plugin method for submitting extents along a ray where there is data.</para><para>For each ray interval where there is volumetric potentially to be integrated this callback should call <ref refid="group__ai__volumes_1gad99251dffb5add595284ff73520f1179" kindref="member">AiVolumeAddIntersection</ref> to submit the extent along the ray.</para><para><simplesect kind="warning"><para>Any ray extents submitted that overlap will have the shaders run more than once for each extent. If shaders should only be run once, then those extents should be merged and submitted just once to <ref refid="group__ai__volumes_1gad99251dffb5add595284ff73520f1179" kindref="member">AiVolumeAddIntersection</ref> instead.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>user_ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>User data pointer, as returned from <ref refid="group__ai__volumes_1gabe6c3604458a81adbb9541116ec45d82" kindref="member">AtVolumePluginInit</ref> </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Volume data returned from <ref refid="group__ai__volumes_1gacc9b10f81897f73f6639d766710a5d5d" kindref="member">AtVolumePluginCreateVolume</ref> </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>info</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Opaque ptr to intersection info passed to <ref refid="group__ai__volumes_1gad99251dffb5add595284ff73520f1179" kindref="member">AiVolumeAddIntersection</ref> </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>tid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Current thread ID, use for thread-local access as needed </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>time</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Time at which the volume is being sampled (for motion blur) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>origin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Ray origin in object space </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>direction</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Ray direction, normalized and in object space </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>t0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Start of the master ray interval in which to check for extents </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>t1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>End of the master ray interval in which to check for extents </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_volume.h" line="177" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_volume.h" bodystart="177" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__ai__volumes_1gacd979be744c4da0bfa20db92bbdfe17b" prot="public" static="no">
+        <type>bool(*</type>
+        <definition>typedef bool(* AtVolumePluginLoader) (AtVolumePluginVtable *vtable)</definition>
+        <argsstring>)(AtVolumePluginVtable *vtable)</argsstring>
+        <name>AtVolumePluginLoader</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Volume plugin entry-point symbol</para><para>Volume plugin DSOs must define a symbol named &quot;VolumePluginLoader&quot; of this type. It should fill in the fields of a <ref refid="struct_at_volume_plugin_vtable" kindref="compound">AtVolumePluginVtable</ref> structure.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">vtable</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>List of volume plugin methods to be supplied by the user </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true upon success </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_volume.h" line="215" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_volume.h" bodystart="215" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__ai__volumes_1gad99251dffb5add595284ff73520f1179" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiVolumeAddIntersection</definition>
+        <argsstring>(const AtVolumeIntersectionInfo *info, float t0, float t1)</argsstring>
+        <name>AiVolumeAddIntersection</name>
+        <param>
+          <type>const AtVolumeIntersectionInfo *</type>
+          <declname>info</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>t0</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>t1</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_volume.h" line="55" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>API for writing volume plugins </para>    </detaileddescription>
+    <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_volume.h"/>
+  </compounddef>
+</doxygen>

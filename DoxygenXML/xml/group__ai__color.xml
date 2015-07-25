@@ -1,0 +1,1986 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="group__ai__color" kind="group">
+    <compoundname>ai_color</compoundname>
+    <title>AtColor API</title>
+    <innerclass refid="struct_at_r_g_b" prot="public">AtRGB</innerclass>
+    <innerclass refid="struct_at_r_g_b_a" prot="public">AtRGBA</innerclass>
+      <sectiondef kind="user-defined">
+      <header>Color Operations</header>
+      <memberdef kind="function" id="group__ai__color_1ga011cc943f2d782dc1331a6b0cbfeeb2a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="group__ai__color_1ga03caa98eaded3f2dd0527ed284656f04" kindref="member">AtColor</ref></type>
+        <definition>AtColor AiColor</definition>
+        <argsstring>(float f)</argsstring>
+        <name>AiColor</name>
+        <param>
+          <type>float</type>
+          <declname>f</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a RGB color using the same value for all components </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" line="488" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" bodystart="488" bodyend="492"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__color_1ga42c1b5bf75a2d2b92b097e1573ed4e77" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="group__ai__color_1ga03caa98eaded3f2dd0527ed284656f04" kindref="member">AtColor</ref></type>
+        <definition>AtColor AiColor</definition>
+        <argsstring>(float r, float g, float b)</argsstring>
+        <name>AiColor</name>
+        <param>
+          <type>float</type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>g</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a RGB color from its components </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" line="497" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" bodystart="497" bodyend="501"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__color_1gac38f0e7769b1780e573b0dd4a4db7647" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="struct_at_r_g_b_a" kindref="compound">AtRGBA</ref></type>
+        <definition>AtRGBA AiRGBACreate</definition>
+        <argsstring>(const float r, float g, float b, float a)</argsstring>
+        <name>AiRGBACreate</name>
+        <param>
+          <type>const float</type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>g</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>a</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a RGBA color from its components </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" line="506" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" bodystart="506" bodyend="510"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__color_1gaf087c2251558276e47088d918d877b92" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiColorReset</definition>
+        <argsstring>(AtColor &amp;c)</argsstring>
+        <name>AiColorReset</name>
+        <param>
+          <type><ref refid="group__ai__color_1ga03caa98eaded3f2dd0527ed284656f04" kindref="member">AtColor</ref> &amp;</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a zero RGB color, c = (0, 0, 0) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" line="515" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" bodystart="515" bodyend="520"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__color_1gaa84b799004a69a533e6faf4396e1a385" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiRGBAReset</definition>
+        <argsstring>(AtRGBA &amp;rgba)</argsstring>
+        <name>AiRGBAReset</name>
+        <param>
+          <type><ref refid="struct_at_r_g_b_a" kindref="compound">AtRGBA</ref> &amp;</type>
+          <declname>rgba</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a zero RGBA color, c = (0, 0, 0, 0) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" line="525" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" bodystart="525" bodyend="531"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__color_1gae3cb9d38a2d9190ea5b7bde9bb2c18fa" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="group__ai__color_1ga03caa98eaded3f2dd0527ed284656f04" kindref="member">AtColor</ref></type>
+        <definition>AtColor AiColorLerp</definition>
+        <argsstring>(float t, const AtColor &amp;lo, const AtColor &amp;hi)</argsstring>
+        <name>AiColorLerp</name>
+        <param>
+          <type>float</type>
+          <declname>t</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__color_1ga03caa98eaded3f2dd0527ed284656f04" kindref="member">AtColor</ref> &amp;</type>
+          <declname>lo</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__color_1ga03caa98eaded3f2dd0527ed284656f04" kindref="member">AtColor</ref> &amp;</type>
+          <declname>hi</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Linear interpolation between two RGB colors. (t=0 -&gt; result=lo, t=1 -&gt; result=hi) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" line="537" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" bodystart="537" bodyend="540"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__color_1gaf9d14c6a332d6e651ff8d9c4b6568746" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="struct_at_r_g_b_a" kindref="compound">AtRGBA</ref></type>
+        <definition>AtRGBA AiColorLerp</definition>
+        <argsstring>(float t, const AtRGBA &amp;lo, const AtRGBA &amp;hi)</argsstring>
+        <name>AiColorLerp</name>
+        <param>
+          <type>float</type>
+          <declname>t</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_r_g_b_a" kindref="compound">AtRGBA</ref> &amp;</type>
+          <declname>lo</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_r_g_b_a" kindref="compound">AtRGBA</ref> &amp;</type>
+          <declname>hi</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Linear interpolation between two RGBA colors. (t=0 -&gt; result=lo, t=1 -&gt; result=hi) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" line="546" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" bodystart="546" bodyend="549"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__color_1ga39e806d09f68d4b6e7ec3797d994f627" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="group__ai__color_1ga03caa98eaded3f2dd0527ed284656f04" kindref="member">AtColor</ref></type>
+        <definition>AtColor AiColorHerp</definition>
+        <argsstring>(float t, const AtColor &amp;lo, const AtColor &amp;hi)</argsstring>
+        <name>AiColorHerp</name>
+        <param>
+          <type>float</type>
+          <declname>t</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__color_1ga03caa98eaded3f2dd0527ed284656f04" kindref="member">AtColor</ref> &amp;</type>
+          <declname>lo</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__color_1ga03caa98eaded3f2dd0527ed284656f04" kindref="member">AtColor</ref> &amp;</type>
+          <declname>hi</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Cubic Hermite interpolation between two RGB colors. (t=0 -&gt; result=lo, t=1 -&gt; result=hi) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" line="555" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" bodystart="555" bodyend="558"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__color_1ga11eb2e8dc93c3dc2cf5bd930b7aa8919" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="struct_at_r_g_b_a" kindref="compound">AtRGBA</ref></type>
+        <definition>AtRGBA AiColorHerp</definition>
+        <argsstring>(float t, const AtRGBA &amp;lo, const AtRGBA &amp;hi)</argsstring>
+        <name>AiColorHerp</name>
+        <param>
+          <type>float</type>
+          <declname>t</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_r_g_b_a" kindref="compound">AtRGBA</ref> &amp;</type>
+          <declname>lo</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_r_g_b_a" kindref="compound">AtRGBA</ref> &amp;</type>
+          <declname>hi</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Cubic Hermite interpolation between two RGBA colors. (t=0 -&gt; result=lo, t=1 -&gt; result=hi) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" line="564" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" bodystart="564" bodyend="567"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__color_1gab944ec51540baa5c1393d73bcd97e224" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="struct_at_r_g_b_a" kindref="compound">AtRGBA</ref></type>
+        <definition>AtRGBA AiRGBALerp</definition>
+        <argsstring>(float t, const AtRGBA &amp;lo, const AtRGBA &amp;hi)</argsstring>
+        <name>AiRGBALerp</name>
+        <param>
+          <type>float</type>
+          <declname>t</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_r_g_b_a" kindref="compound">AtRGBA</ref> &amp;</type>
+          <declname>lo</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_r_g_b_a" kindref="compound">AtRGBA</ref> &amp;</type>
+          <declname>hi</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Linear interpolation between two RGBA colors. (t=0 -&gt; result=lo, t=1 -&gt; result=hi) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" line="573" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" bodystart="573" bodyend="576"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__color_1gabba076a03ffb0e4fd086ae7efb06c089" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="struct_at_r_g_b_a" kindref="compound">AtRGBA</ref></type>
+        <definition>AtRGBA AiRGBAHerp</definition>
+        <argsstring>(float t, const AtRGBA &amp;lo, const AtRGBA &amp;hi)</argsstring>
+        <name>AiRGBAHerp</name>
+        <param>
+          <type>float</type>
+          <declname>t</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_r_g_b_a" kindref="compound">AtRGBA</ref> &amp;</type>
+          <declname>lo</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_r_g_b_a" kindref="compound">AtRGBA</ref> &amp;</type>
+          <declname>hi</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Cubic Hermite interpolation between two RGBA colors. (t=0 -&gt; result=lo, t=1 -&gt; result=hi) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" line="582" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" bodystart="582" bodyend="585"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__color_1gaf5c27e7ab6a0e0a8e0f4fdb1551a34ef" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="group__ai__color_1ga03caa98eaded3f2dd0527ed284656f04" kindref="member">AtColor</ref></type>
+        <definition>AtColor AiColorBiLerp</definition>
+        <argsstring>(float s, float t, const AtColor &amp;c00, const AtColor &amp;c10, const AtColor &amp;c01, const AtColor &amp;c11)</argsstring>
+        <name>AiColorBiLerp</name>
+        <param>
+          <type>float</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>t</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__color_1ga03caa98eaded3f2dd0527ed284656f04" kindref="member">AtColor</ref> &amp;</type>
+          <declname>c00</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__color_1ga03caa98eaded3f2dd0527ed284656f04" kindref="member">AtColor</ref> &amp;</type>
+          <declname>c10</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__color_1ga03caa98eaded3f2dd0527ed284656f04" kindref="member">AtColor</ref> &amp;</type>
+          <declname>c01</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__color_1ga03caa98eaded3f2dd0527ed284656f04" kindref="member">AtColor</ref> &amp;</type>
+          <declname>c11</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Bilinear interpolation between four RGB colors. (s,t)=(0,0) -&gt; result = c00, (s,t)=(1,1) -&gt; result = c11, (s,t) in [0,1] </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" line="592" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" bodystart="592" bodyend="595"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__color_1ga11aff79c483eeb018f2f105cadb00374" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="group__ai__color_1ga03caa98eaded3f2dd0527ed284656f04" kindref="member">AtColor</ref></type>
+        <definition>AtColor AiColorBiHerp</definition>
+        <argsstring>(float s, float t, const AtColor &amp;c00, const AtColor &amp;c10, const AtColor &amp;c01, const AtColor &amp;c11)</argsstring>
+        <name>AiColorBiHerp</name>
+        <param>
+          <type>float</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>t</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__color_1ga03caa98eaded3f2dd0527ed284656f04" kindref="member">AtColor</ref> &amp;</type>
+          <declname>c00</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__color_1ga03caa98eaded3f2dd0527ed284656f04" kindref="member">AtColor</ref> &amp;</type>
+          <declname>c10</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__color_1ga03caa98eaded3f2dd0527ed284656f04" kindref="member">AtColor</ref> &amp;</type>
+          <declname>c01</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__color_1ga03caa98eaded3f2dd0527ed284656f04" kindref="member">AtColor</ref> &amp;</type>
+          <declname>c11</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Bicubic Hermite interpolation between four RGB colors. (s,t)=(0,0) -&gt; result = c00, (s,t)=(1,1) -&gt; result = c11, (s,t) in [0,1] </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" line="602" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" bodystart="602" bodyend="605"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__color_1ga9d7f4f9407c88581abeb177ed44b361e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="struct_at_r_g_b_a" kindref="compound">AtRGBA</ref></type>
+        <definition>AtRGBA AiRGBAbiLerp</definition>
+        <argsstring>(float s, float t, const AtRGBA &amp;c00, const AtRGBA &amp;c10, const AtRGBA &amp;c01, const AtRGBA &amp;c11)</argsstring>
+        <name>AiRGBAbiLerp</name>
+        <param>
+          <type>float</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>t</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_r_g_b_a" kindref="compound">AtRGBA</ref> &amp;</type>
+          <declname>c00</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_r_g_b_a" kindref="compound">AtRGBA</ref> &amp;</type>
+          <declname>c10</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_r_g_b_a" kindref="compound">AtRGBA</ref> &amp;</type>
+          <declname>c01</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_r_g_b_a" kindref="compound">AtRGBA</ref> &amp;</type>
+          <declname>c11</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Bilinear interpolation between four RGBA colors. (s,t)=(0,0) -&gt; result = c00, (s,t)=(1,1) -&gt; result = c11, (s,t) in [0,1] </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" line="612" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" bodystart="612" bodyend="615"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__color_1ga0aa12a75bef42bf29c1eaa1f0566978b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="struct_at_r_g_b_a" kindref="compound">AtRGBA</ref></type>
+        <definition>AtRGBA AiRGBAbiHerp</definition>
+        <argsstring>(float s, float t, const AtRGBA &amp;c00, const AtRGBA &amp;c10, const AtRGBA &amp;c01, const AtRGBA &amp;c11)</argsstring>
+        <name>AiRGBAbiHerp</name>
+        <param>
+          <type>float</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>t</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_r_g_b_a" kindref="compound">AtRGBA</ref> &amp;</type>
+          <declname>c00</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_r_g_b_a" kindref="compound">AtRGBA</ref> &amp;</type>
+          <declname>c10</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_r_g_b_a" kindref="compound">AtRGBA</ref> &amp;</type>
+          <declname>c01</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_r_g_b_a" kindref="compound">AtRGBA</ref> &amp;</type>
+          <declname>c11</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Bicubic Hermite interpolation between four RGBA colors. (s,t)=(0,0) -&gt; result = c00, (s,t)=(1,1) -&gt; result = c11, (s,t) in [0,1] </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" line="622" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" bodystart="622" bodyend="625"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__color_1ga82742f00d56a8b2f785c231cb61b1132" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="group__ai__color_1ga03caa98eaded3f2dd0527ed284656f04" kindref="member">AtColor</ref></type>
+        <definition>AtColor AiColorClamp</definition>
+        <argsstring>(const AtColor &amp;c, float lo, float hi)</argsstring>
+        <name>AiColorClamp</name>
+        <param>
+          <type>const <ref refid="group__ai__color_1ga03caa98eaded3f2dd0527ed284656f04" kindref="member">AtColor</ref> &amp;</type>
+          <declname>c</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>lo</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>hi</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Clamp the RGB color vector to the specified range </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" line="630" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" bodystart="630" bodyend="637"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__color_1ga3c6be0c0258e395ef0bcdd1a2c9cc1b6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="struct_at_r_g_b_a" kindref="compound">AtRGBA</ref></type>
+        <definition>AtRGBA AiRGBAClamp</definition>
+        <argsstring>(const AtRGBA &amp;c, float lo, float hi)</argsstring>
+        <name>AiRGBAClamp</name>
+        <param>
+          <type>const <ref refid="struct_at_r_g_b_a" kindref="compound">AtRGBA</ref> &amp;</type>
+          <declname>c</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>lo</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>hi</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Clamp the RGBA color vector to the specified range </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" line="642" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" bodystart="642" bodyend="650"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__color_1ga2b8684da328a446b374dcefcfc65370a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiColorClipToZero</definition>
+        <argsstring>(AtColor &amp;c)</argsstring>
+        <name>AiColorClipToZero</name>
+        <param>
+          <type><ref refid="group__ai__color_1ga03caa98eaded3f2dd0527ed284656f04" kindref="member">AtColor</ref> &amp;</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Clip negative values </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" line="655" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" bodystart="655" bodyend="660"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__color_1ga2f38bcb56e55a6bbdbb8fac4793bfca5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiColorIsSmall</definition>
+        <argsstring>(const AtRGB &amp;c, float epsilon=AI_EPSILON)</argsstring>
+        <name>AiColorIsSmall</name>
+        <param>
+          <type>const <ref refid="struct_at_r_g_b" kindref="compound">AtRGB</ref> &amp;</type>
+          <declname>c</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>epsilon</declname>
+          <defval><ref refid="group__ai__constants_1gaf5a851882299e92281399bc8a3572818" kindref="member">AI_EPSILON</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Check for almost black </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" line="665" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" bodystart="665" bodyend="668"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__color_1gaf12ff0aac40883ab4c109dd801742cb2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiColorEqual</definition>
+        <argsstring>(const AtColor &amp;a, const AtColor &amp;b)</argsstring>
+        <name>AiColorEqual</name>
+        <param>
+          <type>const <ref refid="group__ai__color_1ga03caa98eaded3f2dd0527ed284656f04" kindref="member">AtColor</ref> &amp;</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__color_1ga03caa98eaded3f2dd0527ed284656f04" kindref="member">AtColor</ref> &amp;</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Check if two colors are equal </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" line="678" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" bodystart="678" bodyend="681"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__color_1gac508206a95b82fe2e292a133bc55fd00" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiColorEqual</definition>
+        <argsstring>(const AtRGBA &amp;a, const AtRGBA &amp;b)</argsstring>
+        <name>AiColorEqual</name>
+        <param>
+          <type>const <ref refid="struct_at_r_g_b_a" kindref="compound">AtRGBA</ref> &amp;</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_r_g_b_a" kindref="compound">AtRGBA</ref> &amp;</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Check if two colors are equal, RGBA version (ignores alpha) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" line="686" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" bodystart="686" bodyend="689"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__color_1ga327da7bae0b1c22c750fce26a6ece2f0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="group__ai__color_1ga03caa98eaded3f2dd0527ed284656f04" kindref="member">AtColor</ref></type>
+        <definition>AtColor AiColorABS</definition>
+        <argsstring>(const AtColor &amp;c)</argsstring>
+        <name>AiColorABS</name>
+        <param>
+          <type>const <ref refid="group__ai__color_1ga03caa98eaded3f2dd0527ed284656f04" kindref="member">AtColor</ref> &amp;</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Absolute value of color </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" line="694" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" bodystart="694" bodyend="701"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__color_1ga0394a18bca34e566ef33452469dc89d0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="struct_at_r_g_b_a" kindref="compound">AtRGBA</ref></type>
+        <definition>AtRGBA AiColorABS</definition>
+        <argsstring>(const AtRGBA &amp;c)</argsstring>
+        <name>AiColorABS</name>
+        <param>
+          <type>const <ref refid="struct_at_r_g_b_a" kindref="compound">AtRGBA</ref> &amp;</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Absolute value of color, RGBA version </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" line="706" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" bodystart="706" bodyend="714"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__color_1gab47329d23e2dc879e04a19cf99d48102" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float AiColorMaxRGB</definition>
+        <argsstring>(const AtColor &amp;c)</argsstring>
+        <name>AiColorMaxRGB</name>
+        <param>
+          <type>const <ref refid="group__ai__color_1ga03caa98eaded3f2dd0527ed284656f04" kindref="member">AtColor</ref> &amp;</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Max RGB component of color </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" line="719" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" bodystart="719" bodyend="722"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__color_1ga050b28c7ea300fac746b7325603d0f86" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float AiColorMaxRGB</definition>
+        <argsstring>(const AtRGBA &amp;c)</argsstring>
+        <name>AiColorMaxRGB</name>
+        <param>
+          <type>const <ref refid="struct_at_r_g_b_a" kindref="compound">AtRGBA</ref> &amp;</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Max RGB component of color, RGBA version (ignores alpha) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" line="727" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" bodystart="727" bodyend="730"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__color_1gae2afa43073d05c44d607911a043ad510" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiColorThreshold</definition>
+        <argsstring>(const AtColor &amp;c1, const AtColor &amp;c2, float t)</argsstring>
+        <name>AiColorThreshold</name>
+        <param>
+          <type>const <ref refid="group__ai__color_1ga03caa98eaded3f2dd0527ed284656f04" kindref="member">AtColor</ref> &amp;</type>
+          <declname>c1</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__color_1ga03caa98eaded3f2dd0527ed284656f04" kindref="member">AtColor</ref> &amp;</type>
+          <declname>c2</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Check to see if two colors differ by more than a threhsold </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" line="735" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" bodystart="735" bodyend="738"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__color_1ga654d6e9f708ec188634491cd91646350" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="group__ai__color_1ga03caa98eaded3f2dd0527ed284656f04" kindref="member">AtColor</ref></type>
+        <definition>AtColor AiRGBAtoRGB</definition>
+        <argsstring>(const AtRGBA &amp;rgba)</argsstring>
+        <name>AiRGBAtoRGB</name>
+        <param>
+          <type>const <ref refid="struct_at_r_g_b_a" kindref="compound">AtRGBA</ref> &amp;</type>
+          <declname>rgba</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Convert a RGBA color to a RGB color (ignoring alpha) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" line="743" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" bodystart="743" bodyend="750"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__color_1ga897ddad3c980965e1faa278270cf194c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="struct_at_r_g_b_a" kindref="compound">AtRGBA</ref></type>
+        <definition>AtRGBA AiRGBtoRGBA</definition>
+        <argsstring>(const AtColor &amp;c)</argsstring>
+        <name>AiRGBtoRGBA</name>
+        <param>
+          <type>const <ref refid="group__ai__color_1ga03caa98eaded3f2dd0527ed284656f04" kindref="member">AtColor</ref> &amp;</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Convert a RGB color to a RGBA color (setting alpha to 1.0) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" line="755" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" bodystart="755" bodyend="763"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__color_1ga00299339587461515851535a348912e5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float AiColorToGrey</definition>
+        <argsstring>(const AtColor &amp;c)</argsstring>
+        <name>AiColorToGrey</name>
+        <param>
+          <type>const <ref refid="group__ai__color_1ga03caa98eaded3f2dd0527ed284656f04" kindref="member">AtColor</ref> &amp;</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Convert a RGB color to grey scale (take average of R, G, B) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" line="768" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" bodystart="768" bodyend="771"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__color_1gab74f51391abcd6bfde3b516142930675" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float AiColorToGrey</definition>
+        <argsstring>(const AtRGBA &amp;rgba)</argsstring>
+        <name>AiColorToGrey</name>
+        <param>
+          <type>const <ref refid="struct_at_r_g_b_a" kindref="compound">AtRGBA</ref> &amp;</type>
+          <declname>rgba</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Convert a RGBA color to grey scale (take average of R, G, B - ignore alpha) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" line="776" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" bodystart="776" bodyend="779"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__color_1ga7d255515f99176f78e18dab5eaee9de9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiRGBCorrupted</definition>
+        <argsstring>(const AtRGB &amp;rgba)</argsstring>
+        <name>AiRGBCorrupted</name>
+        <param>
+          <type>const <ref refid="struct_at_r_g_b" kindref="compound">AtRGB</ref> &amp;</type>
+          <declname>rgba</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Check to see if an RGB color has any corrupted components (nan or infinite). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" line="784" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__color_1ga9afe9c3645901fd2644951272ad0a771" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiRGBACorrupted</definition>
+        <argsstring>(const AtRGBA &amp;rgba)</argsstring>
+        <name>AiRGBACorrupted</name>
+        <param>
+          <type>const <ref refid="struct_at_r_g_b_a" kindref="compound">AtRGBA</ref> &amp;</type>
+          <declname>rgba</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Check to see if an RGBA color has any corrupted components (nan or infinite). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" line="789" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__color_1gaeb0d274e81b23ad46e02c47b6975237e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiColorCorrupted</definition>
+        <argsstring>(const AtColor &amp;c)</argsstring>
+        <name>AiColorCorrupted</name>
+        <param>
+          <type>const <ref refid="group__ai__color_1ga03caa98eaded3f2dd0527ed284656f04" kindref="member">AtColor</ref> &amp;</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Check to see if a color has any corrupted components (nan or infinite). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" line="794" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" bodystart="794" bodyend="797"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__color_1ga9ee4841aadcf9170f8e5080c0a09290c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiColorCorrupted</definition>
+        <argsstring>(const AtRGBA &amp;rgba)</argsstring>
+        <name>AiColorCorrupted</name>
+        <param>
+          <type>const <ref refid="struct_at_r_g_b_a" kindref="compound">AtRGBA</ref> &amp;</type>
+          <declname>rgba</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Check to see if an RGBA color has any corrupted components (nan or infinite). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" line="802" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" bodystart="802" bodyend="805"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__color_1ga479be15acab30cc6dffa93d76ebb54e5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="group__ai__color_1ga03caa98eaded3f2dd0527ed284656f04" kindref="member">AtColor</ref></type>
+        <definition>AtColor AiBerpRGB</definition>
+        <argsstring>(float a, float b, const AtColor &amp;c0, const AtColor &amp;c1, const AtColor &amp;c2)</argsstring>
+        <name>AiBerpRGB</name>
+        <param>
+          <type>float</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__color_1ga03caa98eaded3f2dd0527ed284656f04" kindref="member">AtColor</ref> &amp;</type>
+          <declname>c0</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__color_1ga03caa98eaded3f2dd0527ed284656f04" kindref="member">AtColor</ref> &amp;</type>
+          <declname>c1</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__color_1ga03caa98eaded3f2dd0527ed284656f04" kindref="member">AtColor</ref> &amp;</type>
+          <declname>c2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Barycentric interpolation of triangle vertex colors </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" line="810" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" bodystart="810" bodyend="814"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__color_1gac199c8c076267ab983d0fcc379ae3b7b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiColorGamma</definition>
+        <argsstring>(AtColor *color, float gamma)</argsstring>
+        <name>AiColorGamma</name>
+        <param>
+          <type><ref refid="group__ai__color_1ga03caa98eaded3f2dd0527ed284656f04" kindref="member">AtColor</ref> *</type>
+          <declname>color</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>gamma</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" line="816" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__color_1gac8384f461b407b7f893d8c3896e5049a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiRGBAGamma</definition>
+        <argsstring>(AtRGBA *color, float gamma)</argsstring>
+        <name>AiRGBAGamma</name>
+        <param>
+          <type><ref refid="struct_at_r_g_b_a" kindref="compound">AtRGBA</ref> *</type>
+          <declname>color</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>gamma</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" line="817" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__color_1gae58bc50be1ebddb2a95ecc612505f7ef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__ai__color_1ga03caa98eaded3f2dd0527ed284656f04" kindref="member">AtColor</ref></type>
+        <definition>AtColor AiColorHeatMap</definition>
+        <argsstring>(const AtColor *map_colors, const float *map_values, unsigned int map_length, float lookup)</argsstring>
+        <name>AiColorHeatMap</name>
+        <param>
+          <type>const <ref refid="group__ai__color_1ga03caa98eaded3f2dd0527ed284656f04" kindref="member">AtColor</ref> *</type>
+          <declname>map_colors</declname>
+        </param>
+        <param>
+          <type>const float *</type>
+          <declname>map_values</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>map_length</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>lookup</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" line="818" column="1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__color_1ga2178010043373d9c5fb1c53318839667" prot="public" static="no">
+        <name>AiColorIsZero</name>
+        <initializer><ref refid="group__ai__color_1ga2f38bcb56e55a6bbdbb8fac4793bfca5" kindref="member">AiColorIsSmall</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Check for almost black </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" line="673" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" bodystart="673" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Deprecated</header>
+      <memberdef kind="function" id="group__ai__color_1ga3db63446cf7ebf8a506ebb7722c5d913" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiColorLerp</definition>
+        <argsstring>(AtColor &amp;out, float t, const AtColor &amp;lo, const AtColor &amp;hi)</argsstring>
+        <name>AiColorLerp</name>
+        <param>
+          <type><ref refid="group__ai__color_1ga03caa98eaded3f2dd0527ed284656f04" kindref="member">AtColor</ref> &amp;</type>
+          <declname>out</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>t</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__color_1ga03caa98eaded3f2dd0527ed284656f04" kindref="member">AtColor</ref> &amp;</type>
+          <declname>lo</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__color_1ga03caa98eaded3f2dd0527ed284656f04" kindref="member">AtColor</ref> &amp;</type>
+          <declname>hi</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" line="826" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" bodystart="826" bodyend="829"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__color_1gae6d9bf883dea9674076e0a6bc57bdfa3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiColorLerp</definition>
+        <argsstring>(AtRGBA &amp;out, float t, const AtRGBA &amp;lo, const AtRGBA &amp;hi)</argsstring>
+        <name>AiColorLerp</name>
+        <param>
+          <type><ref refid="struct_at_r_g_b_a" kindref="compound">AtRGBA</ref> &amp;</type>
+          <declname>out</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>t</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_r_g_b_a" kindref="compound">AtRGBA</ref> &amp;</type>
+          <declname>lo</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_r_g_b_a" kindref="compound">AtRGBA</ref> &amp;</type>
+          <declname>hi</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" line="831" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" bodystart="831" bodyend="841"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__color_1ga03cb0295aec5ee10fc6199bc99140402" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiColorLerp</definition>
+        <argsstring>(AtColor &amp;out, float t, const AtRGBA &amp;lo, const AtRGBA &amp;hi)</argsstring>
+        <name>AiColorLerp</name>
+        <param>
+          <type><ref refid="group__ai__color_1ga03caa98eaded3f2dd0527ed284656f04" kindref="member">AtColor</ref> &amp;</type>
+          <declname>out</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>t</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_r_g_b_a" kindref="compound">AtRGBA</ref> &amp;</type>
+          <declname>lo</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_r_g_b_a" kindref="compound">AtRGBA</ref> &amp;</type>
+          <declname>hi</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" line="843" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" bodystart="843" bodyend="849"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__color_1ga737e3323c2fbf4e51cb336f7a25085eb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiColorHerp</definition>
+        <argsstring>(AtColor &amp;out, float t, const AtColor &amp;lo, const AtColor &amp;hi)</argsstring>
+        <name>AiColorHerp</name>
+        <param>
+          <type><ref refid="group__ai__color_1ga03caa98eaded3f2dd0527ed284656f04" kindref="member">AtColor</ref> &amp;</type>
+          <declname>out</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>t</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__color_1ga03caa98eaded3f2dd0527ed284656f04" kindref="member">AtColor</ref> &amp;</type>
+          <declname>lo</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__color_1ga03caa98eaded3f2dd0527ed284656f04" kindref="member">AtColor</ref> &amp;</type>
+          <declname>hi</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" line="851" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" bodystart="851" bodyend="854"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__color_1ga23af76db82bbd4148f3e7eacc683c6fd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiColorHerp</definition>
+        <argsstring>(AtRGBA &amp;out, float t, const AtRGBA &amp;lo, const AtRGBA &amp;hi)</argsstring>
+        <name>AiColorHerp</name>
+        <param>
+          <type><ref refid="struct_at_r_g_b_a" kindref="compound">AtRGBA</ref> &amp;</type>
+          <declname>out</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>t</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_r_g_b_a" kindref="compound">AtRGBA</ref> &amp;</type>
+          <declname>lo</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_r_g_b_a" kindref="compound">AtRGBA</ref> &amp;</type>
+          <declname>hi</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" line="856" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" bodystart="856" bodyend="866"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__color_1ga33f5594a7f77bb8a68be60367826b59a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiRGBALerp</definition>
+        <argsstring>(AtRGBA &amp;out, float t, const AtRGBA &amp;lo, const AtRGBA &amp;hi)</argsstring>
+        <name>AiRGBALerp</name>
+        <param>
+          <type><ref refid="struct_at_r_g_b_a" kindref="compound">AtRGBA</ref> &amp;</type>
+          <declname>out</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>t</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_r_g_b_a" kindref="compound">AtRGBA</ref> &amp;</type>
+          <declname>lo</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_r_g_b_a" kindref="compound">AtRGBA</ref> &amp;</type>
+          <declname>hi</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" line="868" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" bodystart="868" bodyend="871"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__color_1ga71d4a26448da5c9f0fc506d0d644954c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiRGBAHerp</definition>
+        <argsstring>(AtRGBA &amp;out, float t, const AtRGBA &amp;lo, const AtRGBA &amp;hi)</argsstring>
+        <name>AiRGBAHerp</name>
+        <param>
+          <type><ref refid="struct_at_r_g_b_a" kindref="compound">AtRGBA</ref> &amp;</type>
+          <declname>out</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>t</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_r_g_b_a" kindref="compound">AtRGBA</ref> &amp;</type>
+          <declname>lo</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_r_g_b_a" kindref="compound">AtRGBA</ref> &amp;</type>
+          <declname>hi</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" line="873" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" bodystart="873" bodyend="876"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__color_1ga60540c6f687c9bf49a80ea2746fb74e5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiColorBiLerp</definition>
+        <argsstring>(AtColor &amp;out, float s, float t, const AtColor &amp;c00, const AtColor &amp;c10, const AtColor &amp;c01, const AtColor &amp;c11)</argsstring>
+        <name>AiColorBiLerp</name>
+        <param>
+          <type><ref refid="group__ai__color_1ga03caa98eaded3f2dd0527ed284656f04" kindref="member">AtColor</ref> &amp;</type>
+          <declname>out</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>t</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__color_1ga03caa98eaded3f2dd0527ed284656f04" kindref="member">AtColor</ref> &amp;</type>
+          <declname>c00</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__color_1ga03caa98eaded3f2dd0527ed284656f04" kindref="member">AtColor</ref> &amp;</type>
+          <declname>c10</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__color_1ga03caa98eaded3f2dd0527ed284656f04" kindref="member">AtColor</ref> &amp;</type>
+          <declname>c01</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__color_1ga03caa98eaded3f2dd0527ed284656f04" kindref="member">AtColor</ref> &amp;</type>
+          <declname>c11</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" line="878" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" bodystart="878" bodyend="881"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__color_1ga5a66f22d0fdb875a04fd16540db6d8b4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiColorBiHerp</definition>
+        <argsstring>(AtColor &amp;out, float s, float t, const AtColor &amp;c00, const AtColor &amp;c10, const AtColor &amp;c01, const AtColor &amp;c11)</argsstring>
+        <name>AiColorBiHerp</name>
+        <param>
+          <type><ref refid="group__ai__color_1ga03caa98eaded3f2dd0527ed284656f04" kindref="member">AtColor</ref> &amp;</type>
+          <declname>out</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>t</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__color_1ga03caa98eaded3f2dd0527ed284656f04" kindref="member">AtColor</ref> &amp;</type>
+          <declname>c00</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__color_1ga03caa98eaded3f2dd0527ed284656f04" kindref="member">AtColor</ref> &amp;</type>
+          <declname>c10</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__color_1ga03caa98eaded3f2dd0527ed284656f04" kindref="member">AtColor</ref> &amp;</type>
+          <declname>c01</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__color_1ga03caa98eaded3f2dd0527ed284656f04" kindref="member">AtColor</ref> &amp;</type>
+          <declname>c11</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" line="883" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" bodystart="883" bodyend="886"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__color_1ga7ac6d9b756ecd6a061cd15f485a37545" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiRGBAbiLerp</definition>
+        <argsstring>(AtRGBA &amp;out, float s, float t, const AtRGBA &amp;c00, const AtRGBA &amp;c10, const AtRGBA &amp;c01, const AtRGBA &amp;c11)</argsstring>
+        <name>AiRGBAbiLerp</name>
+        <param>
+          <type><ref refid="struct_at_r_g_b_a" kindref="compound">AtRGBA</ref> &amp;</type>
+          <declname>out</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>t</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_r_g_b_a" kindref="compound">AtRGBA</ref> &amp;</type>
+          <declname>c00</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_r_g_b_a" kindref="compound">AtRGBA</ref> &amp;</type>
+          <declname>c10</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_r_g_b_a" kindref="compound">AtRGBA</ref> &amp;</type>
+          <declname>c01</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_r_g_b_a" kindref="compound">AtRGBA</ref> &amp;</type>
+          <declname>c11</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" line="888" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" bodystart="888" bodyend="891"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__color_1ga5ebb371dda7d2e85be98af069c44a566" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiRGBAbiHerp</definition>
+        <argsstring>(AtRGBA &amp;out, float s, float t, const AtRGBA &amp;c00, const AtRGBA &amp;c10, const AtRGBA &amp;c01, const AtRGBA &amp;c11)</argsstring>
+        <name>AiRGBAbiHerp</name>
+        <param>
+          <type><ref refid="struct_at_r_g_b_a" kindref="compound">AtRGBA</ref> &amp;</type>
+          <declname>out</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>t</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_r_g_b_a" kindref="compound">AtRGBA</ref> &amp;</type>
+          <declname>c00</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_r_g_b_a" kindref="compound">AtRGBA</ref> &amp;</type>
+          <declname>c10</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_r_g_b_a" kindref="compound">AtRGBA</ref> &amp;</type>
+          <declname>c01</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_r_g_b_a" kindref="compound">AtRGBA</ref> &amp;</type>
+          <declname>c11</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" line="893" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" bodystart="893" bodyend="896"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__color_1ga8aac8863a0b977dbdec355dbc906c21c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiColorClamp</definition>
+        <argsstring>(AtColor &amp;out, const AtColor &amp;c, float lo, float hi)</argsstring>
+        <name>AiColorClamp</name>
+        <param>
+          <type><ref refid="group__ai__color_1ga03caa98eaded3f2dd0527ed284656f04" kindref="member">AtColor</ref> &amp;</type>
+          <declname>out</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__color_1ga03caa98eaded3f2dd0527ed284656f04" kindref="member">AtColor</ref> &amp;</type>
+          <declname>c</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>lo</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>hi</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" line="898" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" bodystart="898" bodyend="901"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__color_1gab2d2794695b07a91b32061cf532c55e4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiRGBAClamp</definition>
+        <argsstring>(AtRGBA &amp;out, const AtRGBA &amp;c, float lo, float hi)</argsstring>
+        <name>AiRGBAClamp</name>
+        <param>
+          <type><ref refid="struct_at_r_g_b_a" kindref="compound">AtRGBA</ref> &amp;</type>
+          <declname>out</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_r_g_b_a" kindref="compound">AtRGBA</ref> &amp;</type>
+          <declname>c</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>lo</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>hi</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" line="903" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" bodystart="903" bodyend="906"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__color_1gaeeddcce0bc9b4dda11e29514f3eacba0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiColorABS</definition>
+        <argsstring>(AtColor &amp;out, const AtColor &amp;c)</argsstring>
+        <name>AiColorABS</name>
+        <param>
+          <type><ref refid="group__ai__color_1ga03caa98eaded3f2dd0527ed284656f04" kindref="member">AtColor</ref> &amp;</type>
+          <declname>out</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__color_1ga03caa98eaded3f2dd0527ed284656f04" kindref="member">AtColor</ref> &amp;</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" line="908" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" bodystart="908" bodyend="911"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__color_1ga7844f309c791cfb53494720bff8e0221" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiColorABS</definition>
+        <argsstring>(AtRGBA &amp;out, const AtRGBA &amp;c)</argsstring>
+        <name>AiColorABS</name>
+        <param>
+          <type><ref refid="struct_at_r_g_b_a" kindref="compound">AtRGBA</ref> &amp;</type>
+          <declname>out</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_r_g_b_a" kindref="compound">AtRGBA</ref> &amp;</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" line="913" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" bodystart="913" bodyend="923"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__color_1ga08b3f87b531d0f76971366f15ebae720" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiRGBAtoRGB</definition>
+        <argsstring>(const AtRGBA &amp;rgba, AtColor &amp;out)</argsstring>
+        <name>AiRGBAtoRGB</name>
+        <param>
+          <type>const <ref refid="struct_at_r_g_b_a" kindref="compound">AtRGBA</ref> &amp;</type>
+          <declname>rgba</declname>
+        </param>
+        <param>
+          <type><ref refid="group__ai__color_1ga03caa98eaded3f2dd0527ed284656f04" kindref="member">AtColor</ref> &amp;</type>
+          <declname>out</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" line="925" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" bodystart="925" bodyend="928"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__color_1ga3e82293e5170319c6d9936e756df0c1a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiRGBtoRGBA</definition>
+        <argsstring>(const AtColor &amp;c, AtRGBA &amp;out)</argsstring>
+        <name>AiRGBtoRGBA</name>
+        <param>
+          <type>const <ref refid="group__ai__color_1ga03caa98eaded3f2dd0527ed284656f04" kindref="member">AtColor</ref> &amp;</type>
+          <declname>c</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_at_r_g_b_a" kindref="compound">AtRGBA</ref> &amp;</type>
+          <declname>out</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" line="930" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" bodystart="930" bodyend="933"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__color_1gad80fbc88754f9b71dac959a8c8cf79d8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiBerpRGB</definition>
+        <argsstring>(float a, float b, const AtColor &amp;c0, const AtColor &amp;c1, const AtColor &amp;c2, AtColor &amp;out)</argsstring>
+        <name>AiBerpRGB</name>
+        <param>
+          <type>float</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__color_1ga03caa98eaded3f2dd0527ed284656f04" kindref="member">AtColor</ref> &amp;</type>
+          <declname>c0</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__color_1ga03caa98eaded3f2dd0527ed284656f04" kindref="member">AtColor</ref> &amp;</type>
+          <declname>c1</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__color_1ga03caa98eaded3f2dd0527ed284656f04" kindref="member">AtColor</ref> &amp;</type>
+          <declname>c2</declname>
+        </param>
+        <param>
+          <type><ref refid="group__ai__color_1ga03caa98eaded3f2dd0527ed284656f04" kindref="member">AtColor</ref> &amp;</type>
+          <declname>out</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" line="935" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" bodystart="935" bodyend="938"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__color_1gab1b0a6177f183f6a14cc6429268ac49c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="group__ai__color_1ga03caa98eaded3f2dd0527ed284656f04" kindref="member">AtColor</ref></type>
+        <definition>AtColor AiColorCreate</definition>
+        <argsstring>(float r, float g, float b)</argsstring>
+        <name>AiColorCreate</name>
+        <param>
+          <type>float</type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>g</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" line="941" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" bodystart="941" bodyend="945"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__color_1gafea3234e0a41fe2ee2e63c33ade3f591" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiColorCreate</definition>
+        <argsstring>(AtColor &amp;out, float r, float g, float b)</argsstring>
+        <name>AiColorCreate</name>
+        <param>
+          <type><ref refid="group__ai__color_1ga03caa98eaded3f2dd0527ed284656f04" kindref="member">AtColor</ref> &amp;</type>
+          <declname>out</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>g</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" line="947" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" bodystart="947" bodyend="952"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__color_1gaceac31f17dc35adb41b3df0a20d926cb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiRGBACreate</definition>
+        <argsstring>(AtRGBA &amp;out, float r, float g, float b, float a)</argsstring>
+        <name>AiRGBACreate</name>
+        <param>
+          <type><ref refid="struct_at_r_g_b_a" kindref="compound">AtRGBA</ref> &amp;</type>
+          <declname>out</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>g</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>a</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" line="954" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" bodystart="954" bodyend="960"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__color_1gab326ad35fa508c4a404aa214a3392ba1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiColorAdd</definition>
+        <argsstring>(AtColor &amp;a, const AtColor &amp;b, const AtColor &amp;c)</argsstring>
+        <name>AiColorAdd</name>
+        <param>
+          <type><ref refid="group__ai__color_1ga03caa98eaded3f2dd0527ed284656f04" kindref="member">AtColor</ref> &amp;</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__color_1ga03caa98eaded3f2dd0527ed284656f04" kindref="member">AtColor</ref> &amp;</type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__color_1ga03caa98eaded3f2dd0527ed284656f04" kindref="member">AtColor</ref> &amp;</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" line="962" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" bodystart="962" bodyend="965"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__color_1gac1d8d6b4007edc3490270b74e7cf8ac2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiColorSub</definition>
+        <argsstring>(AtColor &amp;a, const AtColor &amp;b, const AtColor &amp;c)</argsstring>
+        <name>AiColorSub</name>
+        <param>
+          <type><ref refid="group__ai__color_1ga03caa98eaded3f2dd0527ed284656f04" kindref="member">AtColor</ref> &amp;</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__color_1ga03caa98eaded3f2dd0527ed284656f04" kindref="member">AtColor</ref> &amp;</type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__color_1ga03caa98eaded3f2dd0527ed284656f04" kindref="member">AtColor</ref> &amp;</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" line="967" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" bodystart="967" bodyend="970"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__color_1ga78157773bfd996d6772674d75513767d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiColorScale</definition>
+        <argsstring>(AtColor &amp;a, const AtColor &amp;b, float k)</argsstring>
+        <name>AiColorScale</name>
+        <param>
+          <type><ref refid="group__ai__color_1ga03caa98eaded3f2dd0527ed284656f04" kindref="member">AtColor</ref> &amp;</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__color_1ga03caa98eaded3f2dd0527ed284656f04" kindref="member">AtColor</ref> &amp;</type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>k</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" line="972" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" bodystart="972" bodyend="975"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__color_1ga276aed78e198e14d964023ea567cc2ed" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiColorAddScale</definition>
+        <argsstring>(AtColor &amp;a, const AtColor &amp;b, const AtColor &amp;c, float k)</argsstring>
+        <name>AiColorAddScale</name>
+        <param>
+          <type><ref refid="group__ai__color_1ga03caa98eaded3f2dd0527ed284656f04" kindref="member">AtColor</ref> &amp;</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__color_1ga03caa98eaded3f2dd0527ed284656f04" kindref="member">AtColor</ref> &amp;</type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__color_1ga03caa98eaded3f2dd0527ed284656f04" kindref="member">AtColor</ref> &amp;</type>
+          <declname>c</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>k</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" line="977" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" bodystart="977" bodyend="980"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__color_1ga4674179120a2ee234406dd7c33f2afa4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiColorMult</definition>
+        <argsstring>(AtColor &amp;a, const AtColor &amp;b, const AtColor &amp;c)</argsstring>
+        <name>AiColorMult</name>
+        <param>
+          <type><ref refid="group__ai__color_1ga03caa98eaded3f2dd0527ed284656f04" kindref="member">AtColor</ref> &amp;</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__color_1ga03caa98eaded3f2dd0527ed284656f04" kindref="member">AtColor</ref> &amp;</type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__color_1ga03caa98eaded3f2dd0527ed284656f04" kindref="member">AtColor</ref> &amp;</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" line="982" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" bodystart="982" bodyend="985"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__color_1ga37d1eb852bd3ee310abd511663f726a2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiColorDiv</definition>
+        <argsstring>(AtColor &amp;a, const AtColor &amp;b, const AtColor &amp;c)</argsstring>
+        <name>AiColorDiv</name>
+        <param>
+          <type><ref refid="group__ai__color_1ga03caa98eaded3f2dd0527ed284656f04" kindref="member">AtColor</ref> &amp;</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__color_1ga03caa98eaded3f2dd0527ed284656f04" kindref="member">AtColor</ref> &amp;</type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__color_1ga03caa98eaded3f2dd0527ed284656f04" kindref="member">AtColor</ref> &amp;</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" line="987" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" bodystart="987" bodyend="990"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Constants</header>
+      <memberdef kind="variable" id="group__ai__color_1ga972f7bc5298ba6447bfc4ac99a182da5" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_at_r_g_b" kindref="compound">AtRGB</ref></type>
+        <definition>AtRGB AI_RGB_BLACK</definition>
+        <argsstring></argsstring>
+        <name>AI_RGB_BLACK</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" line="997" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" bodystart="997" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__ai__color_1ga7bd15512d9528614a91074f52b6911ff" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_at_r_g_b" kindref="compound">AtRGB</ref></type>
+        <definition>AtRGB AI_RGB_RED</definition>
+        <argsstring></argsstring>
+        <name>AI_RGB_RED</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" line="998" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" bodystart="998" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__ai__color_1ga9cbe91e1100135820b333ba99edd4886" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_at_r_g_b" kindref="compound">AtRGB</ref></type>
+        <definition>AtRGB AI_RGB_GREEN</definition>
+        <argsstring></argsstring>
+        <name>AI_RGB_GREEN</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" line="999" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" bodystart="999" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__ai__color_1gaadf8880630b8147b30249990d2e7a7ed" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_at_r_g_b" kindref="compound">AtRGB</ref></type>
+        <definition>AtRGB AI_RGB_BLUE</definition>
+        <argsstring></argsstring>
+        <name>AI_RGB_BLUE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" line="1000" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" bodystart="1000" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__ai__color_1ga4fb6a176e682596360adc5c7ba93bcb8" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_at_r_g_b" kindref="compound">AtRGB</ref></type>
+        <definition>AtRGB AI_RGB_50GREY</definition>
+        <argsstring></argsstring>
+        <name>AI_RGB_50GREY</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" line="1001" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" bodystart="1001" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__ai__color_1gad55a5e8b24fd3ac01e66238edd0ece7b" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_at_r_g_b" kindref="compound">AtRGB</ref></type>
+        <definition>AtRGB AI_RGB_WHITE</definition>
+        <argsstring></argsstring>
+        <name>AI_RGB_WHITE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" line="1002" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" bodystart="1002" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__ai__color_1gaaedb490b2816b13092519c7a6918dd5b" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_at_r_g_b_a" kindref="compound">AtRGBA</ref></type>
+        <definition>AtRGBA AI_RGBA_BLACK</definition>
+        <argsstring></argsstring>
+        <name>AI_RGBA_BLACK</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" line="1004" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" bodystart="1004" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__ai__color_1ga7204b934b555125255a1bccd84b829d7" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_at_r_g_b_a" kindref="compound">AtRGBA</ref></type>
+        <definition>AtRGBA AI_RGBA_RED</definition>
+        <argsstring></argsstring>
+        <name>AI_RGBA_RED</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" line="1005" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" bodystart="1005" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__ai__color_1gaedbdd9c0a2a533d92c583aee5d7ab1ce" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_at_r_g_b_a" kindref="compound">AtRGBA</ref></type>
+        <definition>AtRGBA AI_RGBA_GREEN</definition>
+        <argsstring></argsstring>
+        <name>AI_RGBA_GREEN</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" line="1006" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" bodystart="1006" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__ai__color_1gaddd500f592ac9d37dbbedb3d109cbd72" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_at_r_g_b_a" kindref="compound">AtRGBA</ref></type>
+        <definition>AtRGBA AI_RGBA_BLUE</definition>
+        <argsstring></argsstring>
+        <name>AI_RGBA_BLUE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" line="1007" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" bodystart="1007" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__ai__color_1ga0cafad4d49c056415684256b5cf1eb9c" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_at_r_g_b_a" kindref="compound">AtRGBA</ref></type>
+        <definition>AtRGBA AI_RGBA_50GREY</definition>
+        <argsstring></argsstring>
+        <name>AI_RGBA_50GREY</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" line="1008" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" bodystart="1008" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__ai__color_1gaa92ddfc5a78fd522f805ddc5fa91544a" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_at_r_g_b_a" kindref="compound">AtRGBA</ref></type>
+        <definition>AtRGBA AI_RGBA_WHITE</definition>
+        <argsstring></argsstring>
+        <name>AI_RGBA_WHITE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" line="1009" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" bodystart="1009" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group__ai__color_1ga03caa98eaded3f2dd0527ed284656f04" prot="public" static="no">
+        <type><ref refid="struct_at_r_g_b" kindref="compound">AtRGB</ref></type>
+        <definition>typedef AtRGB AtColor</definition>
+        <argsstring></argsstring>
+        <name>AtColor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>RGB color (same as <ref refid="struct_at_r_g_b" kindref="compound">AtRGB</ref>) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" line="235" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" bodystart="235" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__ai__color_1gaa4dc0b648059b94bf427828cc3b9d1bd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="struct_at_r_g_b" kindref="compound">AtRGB</ref></type>
+        <definition>AtRGB operator*</definition>
+        <argsstring>(float f, const AtRGB &amp;rgb)</argsstring>
+        <name>operator*</name>
+        <param>
+          <type>float</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_r_g_b" kindref="compound">AtRGB</ref> &amp;</type>
+          <declname>rgb</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" line="213" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" bodystart="213" bodyend="216"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__color_1gad425c1c9c81aa57edbb9abba722270c7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="struct_at_r_g_b" kindref="compound">AtRGB</ref></type>
+        <definition>AtRGB operator+</definition>
+        <argsstring>(float f, const AtRGB &amp;rgb)</argsstring>
+        <name>operator+</name>
+        <param>
+          <type>float</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_r_g_b" kindref="compound">AtRGB</ref> &amp;</type>
+          <declname>rgb</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" line="218" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" bodystart="218" bodyend="221"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__color_1ga0a1db28e94d6065cda90ba025144a2fb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="struct_at_r_g_b" kindref="compound">AtRGB</ref></type>
+        <definition>AtRGB operator-</definition>
+        <argsstring>(float f, const AtRGB &amp;rgb)</argsstring>
+        <name>operator-</name>
+        <param>
+          <type>float</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_r_g_b" kindref="compound">AtRGB</ref> &amp;</type>
+          <declname>rgb</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" line="223" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" bodystart="223" bodyend="230"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__color_1ga4becd9e39f520cb1150b7d3d4dd40f25" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="struct_at_r_g_b_a" kindref="compound">AtRGBA</ref></type>
+        <definition>AtRGBA operator*</definition>
+        <argsstring>(float f, const AtRGBA &amp;rgba)</argsstring>
+        <name>operator*</name>
+        <param>
+          <type>float</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_r_g_b_a" kindref="compound">AtRGBA</ref> &amp;</type>
+          <declname>rgba</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" line="459" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" bodystart="459" bodyend="462"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__color_1gac8fbe7480f5a609c073a2d73e12e2cc1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="struct_at_r_g_b_a" kindref="compound">AtRGBA</ref></type>
+        <definition>AtRGBA operator+</definition>
+        <argsstring>(float f, const AtRGBA &amp;rgba)</argsstring>
+        <name>operator+</name>
+        <param>
+          <type>float</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_r_g_b_a" kindref="compound">AtRGBA</ref> &amp;</type>
+          <declname>rgba</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" line="464" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" bodystart="464" bodyend="467"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__color_1ga880b0a1f7e2410a01606d2e9f5581d7b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="struct_at_r_g_b_a" kindref="compound">AtRGBA</ref></type>
+        <definition>AtRGBA operator-</definition>
+        <argsstring>(float f, const AtRGBA &amp;rgba)</argsstring>
+        <name>operator-</name>
+        <param>
+          <type>float</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_r_g_b_a" kindref="compound">AtRGBA</ref> &amp;</type>
+          <declname>rgba</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" line="469" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_color.h" bodystart="469" bodyend="477"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

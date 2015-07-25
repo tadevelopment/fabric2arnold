@@ -1,0 +1,520 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="struct_at_point" kind="struct" language="C++" prot="public">
+    <compoundname>AtPoint</compoundname>
+    <includes refid="ai__vector_8h" local="no">ai_vector.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_at_point_1abbb87c2ead5ebeabd3171f738363842a" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float AtPoint::x</definition>
+        <argsstring></argsstring>
+        <name>x</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" line="32" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_point_1a73afec5eaaf68080c2c9f8e76a7858bc" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float AtPoint::y</definition>
+        <argsstring></argsstring>
+        <name>y</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" line="32" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_point_1a0b46d17f2acd1dc6d994ba08712c22d6" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float AtPoint::z</definition>
+        <argsstring></argsstring>
+        <name>z</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" line="32" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="struct_at_point_1a27d5524bef52f73c38794ec8ee3c730f" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="struct_at_point" kindref="compound">AtPoint</ref></type>
+        <definition>AtPoint AtPoint::operator+</definition>
+        <argsstring>(const AtPoint &amp;p) const </argsstring>
+        <name>operator+</name>
+        <param>
+          <type>const <ref refid="struct_at_point" kindref="compound">AtPoint</ref> &amp;</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" line="34" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" bodystart="34" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_at_point_1af7a9d75fc89bc4a8f4a39f9ac1514e56" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="struct_at_point" kindref="compound">AtPoint</ref> &amp;</type>
+        <definition>AtPoint&amp; AtPoint::operator+=</definition>
+        <argsstring>(const AtPoint &amp;p)</argsstring>
+        <name>operator+=</name>
+        <param>
+          <type>const <ref refid="struct_at_point" kindref="compound">AtPoint</ref> &amp;</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" line="43" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" bodystart="43" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_at_point_1a971e5a70d60798e72da395ca04be7495" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="struct_at_point" kindref="compound">AtPoint</ref></type>
+        <definition>AtPoint AtPoint::operator+</definition>
+        <argsstring>(float f) const </argsstring>
+        <name>operator+</name>
+        <param>
+          <type>float</type>
+          <declname>f</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" line="51" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" bodystart="51" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_at_point_1abe9c323a411d6f06efdf9d6b2ec3c4f0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="struct_at_point" kindref="compound">AtPoint</ref> &amp;</type>
+        <definition>AtPoint&amp; AtPoint::operator+=</definition>
+        <argsstring>(float f)</argsstring>
+        <name>operator+=</name>
+        <param>
+          <type>float</type>
+          <declname>f</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" line="60" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" bodystart="60" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_at_point_1abb292e64a30f8020ae43a84c617617a0" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="struct_at_point" kindref="compound">AtPoint</ref></type>
+        <definition>AtPoint AtPoint::operator-</definition>
+        <argsstring>(const AtPoint &amp;p) const </argsstring>
+        <name>operator-</name>
+        <param>
+          <type>const <ref refid="struct_at_point" kindref="compound">AtPoint</ref> &amp;</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" line="68" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" bodystart="68" bodyend="75"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_at_point_1a13087ccbc41a82db1b16fa3ea39894f2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="struct_at_point" kindref="compound">AtPoint</ref> &amp;</type>
+        <definition>AtPoint&amp; AtPoint::operator-=</definition>
+        <argsstring>(const AtPoint &amp;p)</argsstring>
+        <name>operator-=</name>
+        <param>
+          <type>const <ref refid="struct_at_point" kindref="compound">AtPoint</ref> &amp;</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" line="77" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" bodystart="77" bodyend="83"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_at_point_1a6cefeba5581d159ea71ba7c357762ab9" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="struct_at_point" kindref="compound">AtPoint</ref></type>
+        <definition>AtPoint AtPoint::operator-</definition>
+        <argsstring>(float f) const </argsstring>
+        <name>operator-</name>
+        <param>
+          <type>float</type>
+          <declname>f</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" line="85" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" bodystart="85" bodyend="92"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_at_point_1a77651cf059dcd14ffd78ad7b88c94b95" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="struct_at_point" kindref="compound">AtPoint</ref> &amp;</type>
+        <definition>AtPoint&amp; AtPoint::operator-=</definition>
+        <argsstring>(float f)</argsstring>
+        <name>operator-=</name>
+        <param>
+          <type>float</type>
+          <declname>f</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" line="94" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" bodystart="94" bodyend="100"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_at_point_1ae3788d97c5aa1e4b5fe21ce8cdac3809" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="struct_at_point" kindref="compound">AtPoint</ref></type>
+        <definition>AtPoint AtPoint::operator-</definition>
+        <argsstring>() const </argsstring>
+        <name>operator-</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" line="102" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" bodystart="102" bodyend="109"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_at_point_1af16c92f336d51e8574083ccb45adac90" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="struct_at_point" kindref="compound">AtPoint</ref></type>
+        <definition>AtPoint AtPoint::operator*</definition>
+        <argsstring>(const AtPoint &amp;p) const </argsstring>
+        <name>operator*</name>
+        <param>
+          <type>const <ref refid="struct_at_point" kindref="compound">AtPoint</ref> &amp;</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" line="111" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" bodystart="111" bodyend="118"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_at_point_1ae2beab9e8912555ae1d9ef18e2ffecaf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="struct_at_point" kindref="compound">AtPoint</ref></type>
+        <definition>AtPoint AtPoint::operator*=</definition>
+        <argsstring>(const AtPoint &amp;p)</argsstring>
+        <name>operator*=</name>
+        <param>
+          <type>const <ref refid="struct_at_point" kindref="compound">AtPoint</ref> &amp;</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" line="120" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" bodystart="120" bodyend="126"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_at_point_1a36ff37ccd6c1b4939eb8d0074d1f92cb" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="struct_at_point" kindref="compound">AtPoint</ref></type>
+        <definition>AtPoint AtPoint::operator*</definition>
+        <argsstring>(float f) const </argsstring>
+        <name>operator*</name>
+        <param>
+          <type>float</type>
+          <declname>f</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" line="128" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" bodystart="128" bodyend="135"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_at_point_1aa0f8a5b016b904f0ee0ad8fe943674e8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="struct_at_point" kindref="compound">AtPoint</ref></type>
+        <definition>AtPoint AtPoint::operator*=</definition>
+        <argsstring>(float f)</argsstring>
+        <name>operator*=</name>
+        <param>
+          <type>float</type>
+          <declname>f</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" line="137" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" bodystart="137" bodyend="143"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_at_point_1a55d1f9aeb1be97b4e5c105250e3e5a2a" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="struct_at_point" kindref="compound">AtPoint</ref></type>
+        <definition>AtPoint AtPoint::operator/</definition>
+        <argsstring>(const AtPoint &amp;p) const </argsstring>
+        <name>operator/</name>
+        <param>
+          <type>const <ref refid="struct_at_point" kindref="compound">AtPoint</ref> &amp;</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" line="145" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" bodystart="145" bodyend="152"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_at_point_1a11654f2d99b2c3f105d398699ee5c9f9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="struct_at_point" kindref="compound">AtPoint</ref></type>
+        <definition>AtPoint AtPoint::operator/=</definition>
+        <argsstring>(const AtPoint &amp;p)</argsstring>
+        <name>operator/=</name>
+        <param>
+          <type>const <ref refid="struct_at_point" kindref="compound">AtPoint</ref> &amp;</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" line="154" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" bodystart="154" bodyend="160"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_at_point_1aead3517ec2e88db6c661acfeca2e097b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="struct_at_point" kindref="compound">AtPoint</ref></type>
+        <definition>AtPoint AtPoint::operator/</definition>
+        <argsstring>(float f) const </argsstring>
+        <name>operator/</name>
+        <param>
+          <type>float</type>
+          <declname>f</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" line="162" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" bodystart="162" bodyend="170"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_at_point_1afc9a6d5b1706df77525ee1620cc4bfe5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="struct_at_point" kindref="compound">AtPoint</ref></type>
+        <definition>AtPoint AtPoint::operator/=</definition>
+        <argsstring>(float f)</argsstring>
+        <name>operator/=</name>
+        <param>
+          <type>float</type>
+          <declname>f</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" line="172" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" bodystart="172" bodyend="179"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_at_point_1aeecd6b2662bfe45b51dc4ea2b1dd7f07" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AtPoint::operator==</definition>
+        <argsstring>(const AtPoint &amp;p) const </argsstring>
+        <name>operator==</name>
+        <param>
+          <type>const <ref refid="struct_at_point" kindref="compound">AtPoint</ref> &amp;</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" line="181" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" bodystart="181" bodyend="184"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_at_point_1a3ac16d288cdc21865806c5114abdb9f0" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AtPoint::operator!=</definition>
+        <argsstring>(const AtPoint &amp;p) const </argsstring>
+        <name>operator!=</name>
+        <param>
+          <type>const <ref refid="struct_at_point" kindref="compound">AtPoint</ref> &amp;</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" line="186" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" bodystart="186" bodyend="189"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_at_point_1ae551b4aab5027e1fce4523c38d138486" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="struct_at_point" kindref="compound">AtPoint</ref> &amp;</type>
+        <definition>AtPoint&amp; AtPoint::operator=</definition>
+        <argsstring>(float f)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>float</type>
+          <declname>f</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" line="191" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" bodystart="191" bodyend="197"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_at_point_1aec08b2f3eb03e2b2e8526b4e74a2ba71" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>float &amp;</type>
+        <definition>float&amp; AtPoint::operator[]</definition>
+        <argsstring>(unsigned int i)</argsstring>
+        <name>operator[]</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" line="199" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" bodystart="199" bodyend="202"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_at_point_1a991973d54fd5992483a95f233030838f" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const float &amp;</type>
+        <definition>const float&amp; AtPoint::operator[]</definition>
+        <argsstring>(unsigned int i) const </argsstring>
+        <name>operator[]</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" line="204" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" bodystart="204" bodyend="207"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="struct_at_point_1ac61f66e9e406af78d2e22b69a90ae767" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend <ref refid="struct_at_point" kindref="compound">AtPoint</ref></type>
+        <definition>AtPoint operator*</definition>
+        <argsstring>(float f, const AtPoint &amp;p)</argsstring>
+        <name>operator*</name>
+        <param>
+          <type>float</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_point" kindref="compound">AtPoint</ref> &amp;</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" line="209" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" bodystart="214" bodyend="217"/>
+      </memberdef>
+      <memberdef kind="friend" id="struct_at_point_1ac7079ec7ac243258fc28560983e1de4d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend <ref refid="struct_at_point" kindref="compound">AtPoint</ref></type>
+        <definition>AtPoint operator+</definition>
+        <argsstring>(float f, const AtPoint &amp;p)</argsstring>
+        <name>operator+</name>
+        <param>
+          <type>float</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_point" kindref="compound">AtPoint</ref> &amp;</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" line="210" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" bodystart="219" bodyend="222"/>
+      </memberdef>
+      <memberdef kind="friend" id="struct_at_point_1a228b9bb5dc5c00d6de2d5e940de1f92d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend <ref refid="struct_at_point" kindref="compound">AtPoint</ref></type>
+        <definition>AtPoint operator-</definition>
+        <argsstring>(float f, const AtPoint &amp;p)</argsstring>
+        <name>operator-</name>
+        <param>
+          <type>float</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_point" kindref="compound">AtPoint</ref> &amp;</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" line="211" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" bodystart="224" bodyend="231"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>3D point (single precision) </para>    </detaileddescription>
+    <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" line="31" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" bodystart="30" bodyend="212"/>
+    <listofallmembers>
+      <member refid="struct_at_point_1a3ac16d288cdc21865806c5114abdb9f0" prot="public" virt="non-virtual"><scope>AtPoint</scope><name>operator!=</name></member>
+      <member refid="struct_at_point_1af16c92f336d51e8574083ccb45adac90" prot="public" virt="non-virtual"><scope>AtPoint</scope><name>operator*</name></member>
+      <member refid="struct_at_point_1a36ff37ccd6c1b4939eb8d0074d1f92cb" prot="public" virt="non-virtual"><scope>AtPoint</scope><name>operator*</name></member>
+      <member refid="struct_at_point_1ac61f66e9e406af78d2e22b69a90ae767" prot="public" virt="non-virtual"><scope>AtPoint</scope><name>operator*</name></member>
+      <member refid="struct_at_point_1ae2beab9e8912555ae1d9ef18e2ffecaf" prot="public" virt="non-virtual"><scope>AtPoint</scope><name>operator*=</name></member>
+      <member refid="struct_at_point_1aa0f8a5b016b904f0ee0ad8fe943674e8" prot="public" virt="non-virtual"><scope>AtPoint</scope><name>operator*=</name></member>
+      <member refid="struct_at_point_1a27d5524bef52f73c38794ec8ee3c730f" prot="public" virt="non-virtual"><scope>AtPoint</scope><name>operator+</name></member>
+      <member refid="struct_at_point_1a971e5a70d60798e72da395ca04be7495" prot="public" virt="non-virtual"><scope>AtPoint</scope><name>operator+</name></member>
+      <member refid="struct_at_point_1ac7079ec7ac243258fc28560983e1de4d" prot="public" virt="non-virtual"><scope>AtPoint</scope><name>operator+</name></member>
+      <member refid="struct_at_point_1af7a9d75fc89bc4a8f4a39f9ac1514e56" prot="public" virt="non-virtual"><scope>AtPoint</scope><name>operator+=</name></member>
+      <member refid="struct_at_point_1abe9c323a411d6f06efdf9d6b2ec3c4f0" prot="public" virt="non-virtual"><scope>AtPoint</scope><name>operator+=</name></member>
+      <member refid="struct_at_point_1abb292e64a30f8020ae43a84c617617a0" prot="public" virt="non-virtual"><scope>AtPoint</scope><name>operator-</name></member>
+      <member refid="struct_at_point_1a6cefeba5581d159ea71ba7c357762ab9" prot="public" virt="non-virtual"><scope>AtPoint</scope><name>operator-</name></member>
+      <member refid="struct_at_point_1ae3788d97c5aa1e4b5fe21ce8cdac3809" prot="public" virt="non-virtual"><scope>AtPoint</scope><name>operator-</name></member>
+      <member refid="struct_at_point_1a228b9bb5dc5c00d6de2d5e940de1f92d" prot="public" virt="non-virtual"><scope>AtPoint</scope><name>operator-</name></member>
+      <member refid="struct_at_point_1a13087ccbc41a82db1b16fa3ea39894f2" prot="public" virt="non-virtual"><scope>AtPoint</scope><name>operator-=</name></member>
+      <member refid="struct_at_point_1a77651cf059dcd14ffd78ad7b88c94b95" prot="public" virt="non-virtual"><scope>AtPoint</scope><name>operator-=</name></member>
+      <member refid="struct_at_point_1a55d1f9aeb1be97b4e5c105250e3e5a2a" prot="public" virt="non-virtual"><scope>AtPoint</scope><name>operator/</name></member>
+      <member refid="struct_at_point_1aead3517ec2e88db6c661acfeca2e097b" prot="public" virt="non-virtual"><scope>AtPoint</scope><name>operator/</name></member>
+      <member refid="struct_at_point_1a11654f2d99b2c3f105d398699ee5c9f9" prot="public" virt="non-virtual"><scope>AtPoint</scope><name>operator/=</name></member>
+      <member refid="struct_at_point_1afc9a6d5b1706df77525ee1620cc4bfe5" prot="public" virt="non-virtual"><scope>AtPoint</scope><name>operator/=</name></member>
+      <member refid="struct_at_point_1ae551b4aab5027e1fce4523c38d138486" prot="public" virt="non-virtual"><scope>AtPoint</scope><name>operator=</name></member>
+      <member refid="struct_at_point_1aeecd6b2662bfe45b51dc4ea2b1dd7f07" prot="public" virt="non-virtual"><scope>AtPoint</scope><name>operator==</name></member>
+      <member refid="struct_at_point_1aec08b2f3eb03e2b2e8526b4e74a2ba71" prot="public" virt="non-virtual"><scope>AtPoint</scope><name>operator[]</name></member>
+      <member refid="struct_at_point_1a991973d54fd5992483a95f233030838f" prot="public" virt="non-virtual"><scope>AtPoint</scope><name>operator[]</name></member>
+      <member refid="struct_at_point_1abbb87c2ead5ebeabd3171f738363842a" prot="public" virt="non-virtual"><scope>AtPoint</scope><name>x</name></member>
+      <member refid="struct_at_point_1a73afec5eaaf68080c2c9f8e76a7858bc" prot="public" virt="non-virtual"><scope>AtPoint</scope><name>y</name></member>
+      <member refid="struct_at_point_1a0b46d17f2acd1dc6d994ba08712c22d6" prot="public" virt="non-virtual"><scope>AtPoint</scope><name>z</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

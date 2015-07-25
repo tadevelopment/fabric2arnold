@@ -1,0 +1,279 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="ai__version_8h" kind="file" language="C++">
+    <compoundname>ai_version.h</compoundname>
+    <includes refid="ai__api_8h" local="yes">ai_api.h</includes>
+    <includedby refid="ai__procedural_8h" local="yes">ai_procedural.h</includedby>
+    <includedby refid="ai__plugins_8h" local="yes">ai_plugins.h</includedby>
+    <includedby refid="ai_8h" local="yes">ai.h</includedby>
+    <incdepgraph>
+      <node id="865">
+        <label>ai_api.h</label>
+        <link refid="ai__api_8h"/>
+      </node>
+      <node id="864">
+        <label>ai_version.h</label>
+        <link refid="ai_version.h"/>
+        <childnode refid="865" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="869">
+        <label>ai_plugins.h</label>
+        <link refid="ai__plugins_8h"/>
+        <childnode refid="868" relation="include">
+        </childnode>
+      </node>
+      <node id="866">
+        <label>ai_version.h</label>
+        <link refid="ai_version.h"/>
+        <childnode refid="867" relation="include">
+        </childnode>
+        <childnode refid="869" relation="include">
+        </childnode>
+        <childnode refid="868" relation="include">
+        </childnode>
+      </node>
+      <node id="867">
+        <label>ai_procedural.h</label>
+        <link refid="ai__procedural_8h"/>
+        <childnode refid="868" relation="include">
+        </childnode>
+      </node>
+      <node id="868">
+        <label>ai.h</label>
+        <link refid="ai_8h"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="ai__version_8h_1a61372114c761a0efbe20c8845dccdb88" prot="public" static="no">
+        <name>ARNOLD_XSTR</name>
+        <param><defname>s</defname></param>
+        <initializer><ref refid="ai__version_8h_1a408d131366f7ec4e04747605f6a9aab2" kindref="member">ARNOLD_STR</ref>(s)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_version.h" line="14" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_version.h" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ai__version_8h_1a408d131366f7ec4e04747605f6a9aab2" prot="public" static="no">
+        <name>ARNOLD_STR</name>
+        <param><defname>s</defname></param>
+        <initializer>#s</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_version.h" line="15" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_version.h" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ai__version_8h_1aab5650a23473a86f61a65ef03b9eea48" prot="public" static="no">
+        <name>AI_MAXSIZE_VERSION</name>
+        <initializer>32</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_version.h" line="17" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_version.h" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ai__version_8h_1ac5b818eab6c5702006845589e5b35a64" prot="public" static="no">
+        <name>AI_VERSION_ARCH_NUM</name>
+        <initializer>4</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_version.h" line="23" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_version.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ai__version_8h_1a63fbda14db869981285dcaa82c05638a" prot="public" static="no">
+        <name>AI_VERSION_MAJOR_NUM</name>
+        <initializer>2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_version.h" line="24" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_version.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ai__version_8h_1a66cf9b6f4b920fc1e576ebaca1dc9478" prot="public" static="no">
+        <name>AI_VERSION_MINOR_NUM</name>
+        <initializer>7</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_version.h" line="25" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_version.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ai__version_8h_1a49ce48ff3237c5e3eaf257be8677dcc5" prot="public" static="no">
+        <name>AI_VERSION_FIX</name>
+        <initializer>&quot;5&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_version.h" line="26" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_version.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ai__version_8h_1a59a218e9423c32ca296313db8e6b0815" prot="public" static="no">
+        <name>AI_VERSION_ARCH</name>
+        <initializer><ref refid="ai__version_8h_1a61372114c761a0efbe20c8845dccdb88" kindref="member">ARNOLD_XSTR</ref>(<ref refid="ai__version_8h_1ac5b818eab6c5702006845589e5b35a64" kindref="member">AI_VERSION_ARCH_NUM</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_version.h" line="28" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_version.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ai__version_8h_1aeee1e27ee6574bc1d9ccda323b26515a" prot="public" static="no">
+        <name>AI_VERSION_MAJOR</name>
+        <initializer><ref refid="ai__version_8h_1a61372114c761a0efbe20c8845dccdb88" kindref="member">ARNOLD_XSTR</ref>(<ref refid="ai__version_8h_1a63fbda14db869981285dcaa82c05638a" kindref="member">AI_VERSION_MAJOR_NUM</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_version.h" line="29" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_version.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ai__version_8h_1abe4e74438f851ba8c810d4494a430a7f" prot="public" static="no">
+        <name>AI_VERSION_MINOR</name>
+        <initializer><ref refid="ai__version_8h_1a61372114c761a0efbe20c8845dccdb88" kindref="member">ARNOLD_XSTR</ref>(<ref refid="ai__version_8h_1a66cf9b6f4b920fc1e576ebaca1dc9478" kindref="member">AI_VERSION_MINOR_NUM</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_version.h" line="30" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_version.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__version_1ga0fa6df40e275fee5979261866f55d662" prot="public" static="no">
+        <name>AI_VERSION</name>
+        <initializer><ref refid="ai__version_8h_1a59a218e9423c32ca296313db8e6b0815" kindref="member">AI_VERSION_ARCH</ref> &quot;.&quot; <ref refid="ai__version_8h_1aeee1e27ee6574bc1d9ccda323b26515a" kindref="member">AI_VERSION_MAJOR</ref> &quot;.&quot; <ref refid="ai__version_8h_1abe4e74438f851ba8c810d4494a430a7f" kindref="member">AI_VERSION_MINOR</ref> &quot;.&quot; <ref refid="ai__version_8h_1a49ce48ff3237c5e3eaf257be8677dcc5" kindref="member">AI_VERSION_FIX</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Full Arnold version as string </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_version.h" line="37" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_version.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__ai__version_1ga7752422ba5d484a3374239acb12e67b1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* AiGetVersion</definition>
+        <argsstring>(char *arch, char *major, char *minor, char *fix)</argsstring>
+        <name>AiGetVersion</name>
+        <param>
+          <type>char *</type>
+          <declname>arch</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>major</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>minor</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>fix</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_version.h" line="39" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__version_1ga7b3e2ded57ceecd6bbf67fa85bd33cfd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* AiGetVersionInfo</definition>
+        <argsstring>()</argsstring>
+        <name>AiGetVersionInfo</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_version.h" line="40" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__version_1gab5e2eb63c429afca73f1839fa916b844" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* AiGetCompileOptions</definition>
+        <argsstring>()</argsstring>
+        <name>AiGetCompileOptions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_version.h" line="41" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__version_1gaa102a507a27a569822adafce0162b41f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiCheckAPIVersion</definition>
+        <argsstring>(const char *arch, const char *major, const char *minor)</argsstring>
+        <name>AiCheckAPIVersion</name>
+        <param>
+          <type>const char *</type>
+          <declname>arch</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>major</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>minor</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_version.h" line="42" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__version_1ga74c69553d7a94ef8d1bc84b57aa35cef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiSetAppString</definition>
+        <argsstring>(const char *appstr)</argsstring>
+        <name>AiSetAppString</name>
+        <param>
+          <type>const char *</type>
+          <declname>appstr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_version.h" line="44" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Version number information and checking of backwards-compatibility </para>    </detaileddescription>
+    <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_version.h"/>
+  </compounddef>
+</doxygen>

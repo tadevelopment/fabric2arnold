@@ -1,0 +1,1566 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="group__ai__shader__aovs" kind="group">
+    <compoundname>ai_shader_aovs</compoundname>
+    <title>AOV (Arbitrary Output Variables) API</title>
+      <sectiondef kind="user-defined">
+      <header>AOV-writing Functions</header>
+      <description><para>These functions allow the user to write AOVs. Shaders may write AOVs indiscriminately without hesitation because the system understands the &quot;context&quot; in which an AOV write is performed. This means Arnold can store AOVs when it &quot;makes sense&quot; and ignore writes when it doesn&apos;t.</para><para>For example, Arnold will not store &quot;deep&quot; AOV values (AOVs which are written at different depths for a singe pixel-sample) unless a driver specifically requests &quot;deep&quot; AOV values. An example of a driver requiring &quot;deep&quot; AOV values would be one which writes deep-texture/volume-shadow files.</para><para>Arnold will only perform AOV writes from within the main trunk of a pixel-sample ray-tree. AOV writes made from inside a side-branch of the primary ray&apos;s ray-tree (such as a reflection) will be ignored. Also, AOV writes are ignored during shadow evaluations.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the current shader globals structure (pixel-sample state) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the name of the AOV to write into </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>val</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the value to write into the AOV </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>a boolean indicating whether the write was successfully stored or not. A failure could indicate that the AOV is not enabled, or is of the wrong type, or is being written in the wrong &quot;state&quot; (such as not from within the trunk of the primary ray-tree). </para></simplesect>
+</para></description>
+      <memberdef kind="function" id="group__ai__shader__aovs_1gaca826eeb6ccff6fba27ca9b07d29a41f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DEPRECATED bool</type>
+        <definition>DEPRECATED bool AiAOVSetBool</definition>
+        <argsstring>(AtShaderGlobals *sg, const char *name, bool val)</argsstring>
+        <name>AiAOVSetBool</name>
+        <param>
+          <type><ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_aovs.h" line="64" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__aovs_1gab07e2021cff4e84f074bae981b299ad6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiAOVSetBoolAtString</definition>
+        <argsstring>(AtShaderGlobals *sg, const AtString name, bool val)</argsstring>
+        <name>AiAOVSetBoolAtString</name>
+        <param>
+          <type><ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_aovs.h" line="64" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__aovs_1gacc30ed4d2912e9d84a812f640faa10ed" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiAOVSetBool</definition>
+        <argsstring>(AtShaderGlobals *sg, const AtString name, bool val)</argsstring>
+        <name>AiAOVSetBool</name>
+        <param>
+          <type><ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_aovs.h" line="64" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_aovs.h" bodystart="64" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__aovs_1ga5fa3497869802446377f5bbf11c4cefc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DEPRECATED bool</type>
+        <definition>DEPRECATED bool AiAOVSetInt</definition>
+        <argsstring>(AtShaderGlobals *sg, const char *name, int val)</argsstring>
+        <name>AiAOVSetInt</name>
+        <param>
+          <type><ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_aovs.h" line="65" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__aovs_1gad33c577b3a8f87fddb2b3186a9054342" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiAOVSetIntAtString</definition>
+        <argsstring>(AtShaderGlobals *sg, const AtString name, int val)</argsstring>
+        <name>AiAOVSetIntAtString</name>
+        <param>
+          <type><ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_aovs.h" line="65" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__aovs_1gae9a2fc550c861a08ea4bdc4f0ae54b6a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiAOVSetInt</definition>
+        <argsstring>(AtShaderGlobals *sg, const AtString name, int val)</argsstring>
+        <name>AiAOVSetInt</name>
+        <param>
+          <type><ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_aovs.h" line="65" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_aovs.h" bodystart="65" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__aovs_1gaaa1aeafe897ec6986cc14f8d4407347b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DEPRECATED bool</type>
+        <definition>DEPRECATED bool AiAOVSetFlt</definition>
+        <argsstring>(AtShaderGlobals *sg, const char *name, float val)</argsstring>
+        <name>AiAOVSetFlt</name>
+        <param>
+          <type><ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_aovs.h" line="66" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__aovs_1gaa3b1524920d4b254ef1d259f2ccc1282" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiAOVSetFltAtString</definition>
+        <argsstring>(AtShaderGlobals *sg, const AtString name, float val)</argsstring>
+        <name>AiAOVSetFltAtString</name>
+        <param>
+          <type><ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_aovs.h" line="66" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__aovs_1gac8a37596b92826fa14026c8bafd05f56" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiAOVSetFlt</definition>
+        <argsstring>(AtShaderGlobals *sg, const AtString name, float val)</argsstring>
+        <name>AiAOVSetFlt</name>
+        <param>
+          <type><ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_aovs.h" line="66" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_aovs.h" bodystart="66" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__aovs_1ga0dbc465217d0c8ef30bcceda610b5bc4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DEPRECATED bool</type>
+        <definition>DEPRECATED bool AiAOVSetRGB</definition>
+        <argsstring>(AtShaderGlobals *sg, const char *name, AtRGB val)</argsstring>
+        <name>AiAOVSetRGB</name>
+        <param>
+          <type><ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_at_r_g_b" kindref="compound">AtRGB</ref></type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_aovs.h" line="67" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__aovs_1ga34f351f2c4a7e6a0c1d69df2bb9436ba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiAOVSetRGBAtString</definition>
+        <argsstring>(AtShaderGlobals *sg, const AtString name, AtRGB val)</argsstring>
+        <name>AiAOVSetRGBAtString</name>
+        <param>
+          <type><ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_at_r_g_b" kindref="compound">AtRGB</ref></type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_aovs.h" line="67" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__aovs_1ga1395006087c5eb5000cc21253577112d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiAOVSetRGB</definition>
+        <argsstring>(AtShaderGlobals *sg, const AtString name, AtRGB val)</argsstring>
+        <name>AiAOVSetRGB</name>
+        <param>
+          <type><ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_at_r_g_b" kindref="compound">AtRGB</ref></type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_aovs.h" line="67" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_aovs.h" bodystart="67" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__aovs_1ga53483df25a0f1184400b4817f4070423" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DEPRECATED bool</type>
+        <definition>DEPRECATED bool AiAOVSetRGBA</definition>
+        <argsstring>(AtShaderGlobals *sg, const char *name, AtRGBA val)</argsstring>
+        <name>AiAOVSetRGBA</name>
+        <param>
+          <type><ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_at_r_g_b_a" kindref="compound">AtRGBA</ref></type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_aovs.h" line="68" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__aovs_1ga86cf089d2787031ed7642fea3222c26f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiAOVSetRGBAAtString</definition>
+        <argsstring>(AtShaderGlobals *sg, const AtString name, AtRGBA val)</argsstring>
+        <name>AiAOVSetRGBAAtString</name>
+        <param>
+          <type><ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_at_r_g_b_a" kindref="compound">AtRGBA</ref></type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_aovs.h" line="68" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__aovs_1gac16dc3eacad7867b92715658de0758cb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiAOVSetRGBA</definition>
+        <argsstring>(AtShaderGlobals *sg, const AtString name, AtRGBA val)</argsstring>
+        <name>AiAOVSetRGBA</name>
+        <param>
+          <type><ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_at_r_g_b_a" kindref="compound">AtRGBA</ref></type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_aovs.h" line="68" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_aovs.h" bodystart="68" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__aovs_1ga672af0740dc990e68d984187065203e3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DEPRECATED bool</type>
+        <definition>DEPRECATED bool AiAOVSetVec</definition>
+        <argsstring>(AtShaderGlobals *sg, const char *name, AtVector val)</argsstring>
+        <name>AiAOVSetVec</name>
+        <param>
+          <type><ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type><ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref></type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_aovs.h" line="69" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__aovs_1gaed6672d90c2974d67d0fc041ae3e22cd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiAOVSetVecAtString</definition>
+        <argsstring>(AtShaderGlobals *sg, const AtString name, AtVector val)</argsstring>
+        <name>AiAOVSetVecAtString</name>
+        <param>
+          <type><ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type><ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref></type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_aovs.h" line="69" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__aovs_1gad8ed5af3982adb3b21f65317179997da" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiAOVSetVec</definition>
+        <argsstring>(AtShaderGlobals *sg, const AtString name, AtVector val)</argsstring>
+        <name>AiAOVSetVec</name>
+        <param>
+          <type><ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type><ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref></type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_aovs.h" line="69" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_aovs.h" bodystart="69" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__aovs_1gabd7124515021ff6aaa215d6184453623" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DEPRECATED bool</type>
+        <definition>DEPRECATED bool AiAOVSetPnt</definition>
+        <argsstring>(AtShaderGlobals *sg, const char *name, AtPoint val)</argsstring>
+        <name>AiAOVSetPnt</name>
+        <param>
+          <type><ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_at_point" kindref="compound">AtPoint</ref></type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_aovs.h" line="70" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__aovs_1gada2770cb19a81fdcd66e68e217d4d135" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiAOVSetPntAtString</definition>
+        <argsstring>(AtShaderGlobals *sg, const AtString name, AtPoint val)</argsstring>
+        <name>AiAOVSetPntAtString</name>
+        <param>
+          <type><ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_at_point" kindref="compound">AtPoint</ref></type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_aovs.h" line="70" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__aovs_1ga820e3c4a222e8029dc1f04603889e158" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiAOVSetPnt</definition>
+        <argsstring>(AtShaderGlobals *sg, const AtString name, AtPoint val)</argsstring>
+        <name>AiAOVSetPnt</name>
+        <param>
+          <type><ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_at_point" kindref="compound">AtPoint</ref></type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_aovs.h" line="70" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_aovs.h" bodystart="70" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__aovs_1ga5521580956b244c87c0e1853647e9e7f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DEPRECATED bool</type>
+        <definition>DEPRECATED bool AiAOVSetPnt2</definition>
+        <argsstring>(AtShaderGlobals *sg, const char *name, AtPoint2 val)</argsstring>
+        <name>AiAOVSetPnt2</name>
+        <param>
+          <type><ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_at_point2" kindref="compound">AtPoint2</ref></type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_aovs.h" line="71" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__aovs_1ga7551ad2eacb27b3a90f52b9722d53f6f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiAOVSetPnt2AtString</definition>
+        <argsstring>(AtShaderGlobals *sg, const AtString name, AtPoint2 val)</argsstring>
+        <name>AiAOVSetPnt2AtString</name>
+        <param>
+          <type><ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_at_point2" kindref="compound">AtPoint2</ref></type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_aovs.h" line="71" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__aovs_1ga05b86fa251c7e48410e08a44b2e51d71" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiAOVSetPnt2</definition>
+        <argsstring>(AtShaderGlobals *sg, const AtString name, AtPoint2 val)</argsstring>
+        <name>AiAOVSetPnt2</name>
+        <param>
+          <type><ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_at_point2" kindref="compound">AtPoint2</ref></type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_aovs.h" line="71" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_aovs.h" bodystart="71" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__aovs_1gad40a3d68e8ae3404170fd2da63993990" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DEPRECATED bool</type>
+        <definition>DEPRECATED bool AiAOVSetPtr</definition>
+        <argsstring>(AtShaderGlobals *sg, const char *name, void *val)</argsstring>
+        <name>AiAOVSetPtr</name>
+        <param>
+          <type><ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_aovs.h" line="72" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__aovs_1ga2d24421b6eccdcb3a4b000ceb174d128" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiAOVSetPtrAtString</definition>
+        <argsstring>(AtShaderGlobals *sg, const AtString name, void *val)</argsstring>
+        <name>AiAOVSetPtrAtString</name>
+        <param>
+          <type><ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_aovs.h" line="72" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__aovs_1ga971c728beeb5d3d642d6d26f94d8f3e0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiAOVSetPtr</definition>
+        <argsstring>(AtShaderGlobals *sg, const AtString name, void *val)</argsstring>
+        <name>AiAOVSetPtr</name>
+        <param>
+          <type><ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_aovs.h" line="72" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_aovs.h" bodystart="72" bodyend="72"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>AOV-reading Functions</header>
+      <description><para>These functions allow the user to read AOVs.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the current shader globals structure (pixel-sample state) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the name of the AOV to read from </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>val</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the variable to store the read value </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>a boolean indicating whether the read was successfully done or not. A failure could indicate that the AOV is not enabled, or is of the wrong type. </para></simplesect>
+</para></description>
+      <memberdef kind="function" id="group__ai__shader__aovs_1ga083981f7d1c14c14ba7514f7bbea7bc6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DEPRECATED bool</type>
+        <definition>DEPRECATED bool AiAOVGetBool</definition>
+        <argsstring>(const AtShaderGlobals *sg, const char *name, bool &amp;val)</argsstring>
+        <name>AiAOVGetBool</name>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>bool &amp;</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_aovs.h" line="96" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__aovs_1gaa51a27deabd95adebfc8d06d7449c5b0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiAOVGetBoolAtString</definition>
+        <argsstring>(const AtShaderGlobals *sg, const AtString name, bool &amp;val)</argsstring>
+        <name>AiAOVGetBoolAtString</name>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>bool &amp;</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_aovs.h" line="96" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__aovs_1ga60c09ab6408a3948fbffa87f7dfe9025" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiAOVGetBool</definition>
+        <argsstring>(const AtShaderGlobals *sg, const AtString name, bool &amp;val)</argsstring>
+        <name>AiAOVGetBool</name>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>bool &amp;</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_aovs.h" line="96" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_aovs.h" bodystart="96" bodyend="96"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__aovs_1gab5cf87796762d1c24eb88f8ef2a500fe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DEPRECATED bool</type>
+        <definition>DEPRECATED bool AiAOVGetInt</definition>
+        <argsstring>(const AtShaderGlobals *sg, const char *name, int &amp;val)</argsstring>
+        <name>AiAOVGetInt</name>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>int &amp;</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_aovs.h" line="97" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__aovs_1ga15723576b669f69fb8828bc320ede3c2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiAOVGetIntAtString</definition>
+        <argsstring>(const AtShaderGlobals *sg, const AtString name, int &amp;val)</argsstring>
+        <name>AiAOVGetIntAtString</name>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>int &amp;</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_aovs.h" line="97" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__aovs_1ga120216c7e1a5f6a6b57864c9827511dd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiAOVGetInt</definition>
+        <argsstring>(const AtShaderGlobals *sg, const AtString name, int &amp;val)</argsstring>
+        <name>AiAOVGetInt</name>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>int &amp;</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_aovs.h" line="97" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_aovs.h" bodystart="97" bodyend="97"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__aovs_1ga5df7716f3c397ee5ee70cd4144c2a7c0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DEPRECATED bool</type>
+        <definition>DEPRECATED bool AiAOVGetFlt</definition>
+        <argsstring>(const AtShaderGlobals *sg, const char *name, float &amp;val)</argsstring>
+        <name>AiAOVGetFlt</name>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>float &amp;</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_aovs.h" line="98" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__aovs_1gae9b64a303dd3d49cf6cd85653079e513" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiAOVGetFltAtString</definition>
+        <argsstring>(const AtShaderGlobals *sg, const AtString name, float &amp;val)</argsstring>
+        <name>AiAOVGetFltAtString</name>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>float &amp;</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_aovs.h" line="98" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__aovs_1ga9289f0dec9a079d937f0c595564717c1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiAOVGetFlt</definition>
+        <argsstring>(const AtShaderGlobals *sg, const AtString name, float &amp;val)</argsstring>
+        <name>AiAOVGetFlt</name>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>float &amp;</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_aovs.h" line="98" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_aovs.h" bodystart="98" bodyend="98"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__aovs_1ga31c4213327f680fee8d2009afae54969" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DEPRECATED bool</type>
+        <definition>DEPRECATED bool AiAOVGetRGB</definition>
+        <argsstring>(const AtShaderGlobals *sg, const char *name, AtRGB &amp;val)</argsstring>
+        <name>AiAOVGetRGB</name>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_at_r_g_b" kindref="compound">AtRGB</ref> &amp;</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_aovs.h" line="99" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__aovs_1ga677baa265b035a23f7dd308f0a55c3a9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiAOVGetRGBAtString</definition>
+        <argsstring>(const AtShaderGlobals *sg, const AtString name, AtRGB &amp;val)</argsstring>
+        <name>AiAOVGetRGBAtString</name>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_at_r_g_b" kindref="compound">AtRGB</ref> &amp;</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_aovs.h" line="99" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__aovs_1gaac9bd114c877dabe9fcb7769587dfd29" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiAOVGetRGB</definition>
+        <argsstring>(const AtShaderGlobals *sg, const AtString name, AtRGB &amp;val)</argsstring>
+        <name>AiAOVGetRGB</name>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_at_r_g_b" kindref="compound">AtRGB</ref> &amp;</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_aovs.h" line="99" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_aovs.h" bodystart="99" bodyend="99"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__aovs_1gafafe6a4e35076420be0c442d53b9df15" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DEPRECATED bool</type>
+        <definition>DEPRECATED bool AiAOVGetRGBA</definition>
+        <argsstring>(const AtShaderGlobals *sg, const char *name, AtRGBA &amp;val)</argsstring>
+        <name>AiAOVGetRGBA</name>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_at_r_g_b_a" kindref="compound">AtRGBA</ref> &amp;</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_aovs.h" line="100" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__aovs_1gaf888f9a61faa6d55bf0df6075aa88787" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiAOVGetRGBAAtString</definition>
+        <argsstring>(const AtShaderGlobals *sg, const AtString name, AtRGBA &amp;val)</argsstring>
+        <name>AiAOVGetRGBAAtString</name>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_at_r_g_b_a" kindref="compound">AtRGBA</ref> &amp;</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_aovs.h" line="100" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__aovs_1gac2b6b6c8eb3400a89b51070fbc3c68af" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiAOVGetRGBA</definition>
+        <argsstring>(const AtShaderGlobals *sg, const AtString name, AtRGBA &amp;val)</argsstring>
+        <name>AiAOVGetRGBA</name>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_at_r_g_b_a" kindref="compound">AtRGBA</ref> &amp;</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_aovs.h" line="100" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_aovs.h" bodystart="100" bodyend="100"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__aovs_1ga587b8ae8c72507cf600b467ce47ac3de" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DEPRECATED bool</type>
+        <definition>DEPRECATED bool AiAOVGetVec</definition>
+        <argsstring>(const AtShaderGlobals *sg, const char *name, AtVector &amp;val)</argsstring>
+        <name>AiAOVGetVec</name>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type><ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> &amp;</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_aovs.h" line="101" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__aovs_1ga315c488b4ec8b91b1621bf1d282a8142" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiAOVGetVecAtString</definition>
+        <argsstring>(const AtShaderGlobals *sg, const AtString name, AtVector &amp;val)</argsstring>
+        <name>AiAOVGetVecAtString</name>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type><ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> &amp;</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_aovs.h" line="101" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__aovs_1ga78cf51e0b8aa02f7e9a90e691c348db1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiAOVGetVec</definition>
+        <argsstring>(const AtShaderGlobals *sg, const AtString name, AtVector &amp;val)</argsstring>
+        <name>AiAOVGetVec</name>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type><ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> &amp;</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_aovs.h" line="101" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_aovs.h" bodystart="101" bodyend="101"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__aovs_1ga809a12ed9f1dd765534b2333357a5923" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DEPRECATED bool</type>
+        <definition>DEPRECATED bool AiAOVGetPnt</definition>
+        <argsstring>(const AtShaderGlobals *sg, const char *name, AtPoint &amp;val)</argsstring>
+        <name>AiAOVGetPnt</name>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_at_point" kindref="compound">AtPoint</ref> &amp;</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_aovs.h" line="102" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__aovs_1gab2a0eb27615ce361b5ec58b641adb618" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiAOVGetPntAtString</definition>
+        <argsstring>(const AtShaderGlobals *sg, const AtString name, AtPoint &amp;val)</argsstring>
+        <name>AiAOVGetPntAtString</name>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_at_point" kindref="compound">AtPoint</ref> &amp;</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_aovs.h" line="102" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__aovs_1gafda1f9a17b6ab4cca0d41404ba41e7c8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiAOVGetPnt</definition>
+        <argsstring>(const AtShaderGlobals *sg, const AtString name, AtPoint &amp;val)</argsstring>
+        <name>AiAOVGetPnt</name>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_at_point" kindref="compound">AtPoint</ref> &amp;</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_aovs.h" line="102" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_aovs.h" bodystart="102" bodyend="102"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__aovs_1gaacb7ee18ba943c283bd9dd6cc5cfc0f3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DEPRECATED bool</type>
+        <definition>DEPRECATED bool AiAOVGetPnt2</definition>
+        <argsstring>(const AtShaderGlobals *sg, const char *name, AtPoint2 &amp;val)</argsstring>
+        <name>AiAOVGetPnt2</name>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_at_point2" kindref="compound">AtPoint2</ref> &amp;</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_aovs.h" line="103" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__aovs_1gab795e291b3f944afb989b9f7a82dbbfa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiAOVGetPnt2AtString</definition>
+        <argsstring>(const AtShaderGlobals *sg, const AtString name, AtPoint2 &amp;val)</argsstring>
+        <name>AiAOVGetPnt2AtString</name>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_at_point2" kindref="compound">AtPoint2</ref> &amp;</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_aovs.h" line="103" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__aovs_1gaaeb24792664dd4132188512a83f9c597" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiAOVGetPnt2</definition>
+        <argsstring>(const AtShaderGlobals *sg, const AtString name, AtPoint2 &amp;val)</argsstring>
+        <name>AiAOVGetPnt2</name>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_at_point2" kindref="compound">AtPoint2</ref> &amp;</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_aovs.h" line="103" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_aovs.h" bodystart="103" bodyend="103"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__aovs_1gafae21dcd0e72b9b11756a18f52f82fc6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DEPRECATED bool</type>
+        <definition>DEPRECATED bool AiAOVGetPtr</definition>
+        <argsstring>(const AtShaderGlobals *sg, const char *name, void *&amp;val)</argsstring>
+        <name>AiAOVGetPtr</name>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>void *&amp;</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_aovs.h" line="104" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__aovs_1gac431cf3837c0346fed30f05244821b11" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiAOVGetPtrAtString</definition>
+        <argsstring>(const AtShaderGlobals *sg, const AtString name, void *&amp;val)</argsstring>
+        <name>AiAOVGetPtrAtString</name>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>void *&amp;</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_aovs.h" line="104" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__aovs_1ga8dce6ba567442d0701b6d054758441e1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiAOVGetPtr</definition>
+        <argsstring>(const AtShaderGlobals *sg, const AtString name, void *&amp;val)</argsstring>
+        <name>AiAOVGetPtr</name>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>void *&amp;</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_aovs.h" line="104" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_aovs.h" bodystart="104" bodyend="104"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__shader__aovs_1ga394723c78f93746919dd10b29162d735" prot="public" static="no">
+        <name>AiCreateFuncs</name>
+        <param><defname>_name</defname></param>
+        <param><defname>_type</defname></param>
+        <initializer><ref refid="ai__api_8h_1a4b9d3c7c64877dda42d97f936f023a96" kindref="member">AI_API</ref> <ref refid="ai__api_8h_1a19d077fa951fe893bfc989f548855f96" kindref="member">AI_DEPRECATED</ref> bool AiAOVSet##<ref refid="ai__deprecated_8h_1aec321dc1beac683ff60b65608dab6c9b" kindref="member">_name</ref>          (<ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref>* sg, const char* name,    _type val); \
+<ref refid="ai__api_8h_1a4b9d3c7c64877dda42d97f936f023a96" kindref="member">AI_API</ref>               bool AiAOVSet##<ref refid="ai__deprecated_8h_1aec321dc1beac683ff60b65608dab6c9b" kindref="member">_name</ref>##<ref refid="class_at_string" kindref="compound">AtString</ref>(<ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref>* sg, const <ref refid="class_at_string" kindref="compound">AtString</ref> name, _type val); \
+inline               bool AiAOVSet##<ref refid="ai__deprecated_8h_1aec321dc1beac683ff60b65608dab6c9b" kindref="member">_name</ref>          (<ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref>* sg, const <ref refid="class_at_string" kindref="compound">AtString</ref> name, _type val)  \
+{                                                                                                         \
+   return AiAOVSet##<ref refid="ai__deprecated_8h_1aec321dc1beac683ff60b65608dab6c9b" kindref="member">_name</ref>##<ref refid="class_at_string" kindref="compound">AtString</ref>(sg, name, val);                                                       \
+}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_aovs.h" line="57" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_aovs.h" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__shader__aovs_1ga9cfdb661490292d1f4d711ce17e8155d" prot="public" static="no">
+        <name>AiCreateFuncs</name>
+        <param><defname>_name</defname></param>
+        <param><defname>_type</defname></param>
+        <initializer><ref refid="ai__api_8h_1a4b9d3c7c64877dda42d97f936f023a96" kindref="member">AI_API</ref> <ref refid="ai__api_8h_1a19d077fa951fe893bfc989f548855f96" kindref="member">AI_DEPRECATED</ref> bool AiAOVGet##<ref refid="ai__deprecated_8h_1aec321dc1beac683ff60b65608dab6c9b" kindref="member">_name</ref>          (const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref>* sg, const char* name,    _type&amp; val); \
+<ref refid="ai__api_8h_1a4b9d3c7c64877dda42d97f936f023a96" kindref="member">AI_API</ref>               bool AiAOVGet##<ref refid="ai__deprecated_8h_1aec321dc1beac683ff60b65608dab6c9b" kindref="member">_name</ref>##<ref refid="class_at_string" kindref="compound">AtString</ref>(const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref>* sg, const <ref refid="class_at_string" kindref="compound">AtString</ref> name, _type&amp; val); \
+inline               bool AiAOVGet##<ref refid="ai__deprecated_8h_1aec321dc1beac683ff60b65608dab6c9b" kindref="member">_name</ref>          (const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref>* sg, const <ref refid="class_at_string" kindref="compound">AtString</ref> name, _type&amp; val)  \
+{                                                                                                                \
+   return AiAOVGet##<ref refid="ai__deprecated_8h_1aec321dc1beac683ff60b65608dab6c9b" kindref="member">_name</ref>##<ref refid="class_at_string" kindref="compound">AtString</ref>(sg, name, val);                                                              \
+}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_aovs.h" line="89" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_aovs.h" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__ai__shader__aovs_1ga10c703a39a1cf46fce615a619b95701a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DEPRECATED bool</type>
+        <definition>DEPRECATED bool AiAOVEnabled</definition>
+        <argsstring>(const char *name, AtByte type)</argsstring>
+        <name>AiAOVEnabled</name>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type><ref refid="group__ai__types_1ga41f7f394ad3ef67901cce4d05bdabf89" kindref="member">AtByte</ref></type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_aovs.h" line="111" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__aovs_1ga4f347ac1ffa0c7adb57127ea17c78098" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiAOVEnabledAtString</definition>
+        <argsstring>(const AtString name, AtByte type)</argsstring>
+        <name>AiAOVEnabledAtString</name>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type><ref refid="group__ai__types_1ga41f7f394ad3ef67901cce4d05bdabf89" kindref="member">AtByte</ref></type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_aovs.h" line="112" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__aovs_1ga6ef11cfddba55f2ea58a2e2bd73dbdec" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiAOVEnabled</definition>
+        <argsstring>(const AtString name, AtByte type)</argsstring>
+        <name>AiAOVEnabled</name>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type><ref refid="group__ai__types_1ga41f7f394ad3ef67901cce4d05bdabf89" kindref="member">AtByte</ref></type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_aovs.h" line="113" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_aovs.h" bodystart="113" bodyend="113"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__aovs_1ga1d51071c161bb4254af5a51a688773c8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiAOVRegister</definition>
+        <argsstring>(const char *name, AtByte type, int blend_mode=AI_AOV_BLEND_NONE)</argsstring>
+        <name>AiAOVRegister</name>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type><ref refid="group__ai__types_1ga41f7f394ad3ef67901cce4d05bdabf89" kindref="member">AtByte</ref></type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>blend_mode</declname>
+          <defval><ref refid="group__ai__shader__aovs_1ga398b593f0ec7ad830e35c69140b66f73" kindref="member">AI_AOV_BLEND_NONE</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_aovs.h" line="115" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group__ai__shader__aovs_1ga398b593f0ec7ad830e35c69140b66f73" prot="public" static="no">
+        <name>AI_AOV_BLEND_NONE</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_aovs.h" line="108" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_aovs.h" bodystart="108" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__shader__aovs_1ga54b541a28445e873cb3feb5de43470cf" prot="public" static="no">
+        <name>AI_AOV_BLEND_OPACITY</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_aovs.h" line="109" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_aovs.h" bodystart="109" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This API is for writing AOVs (Arbitrary Ouput Values) from inside a shader. Arnold can route any number of AOVs into any number of drivers that can write to any number of output files. </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

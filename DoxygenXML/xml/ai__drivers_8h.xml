@@ -1,0 +1,758 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="ai__drivers_8h" kind="file" language="C++">
+    <compoundname>ai_drivers.h</compoundname>
+    <includes refid="ai__nodes_8h" local="no">ai_nodes.h</includes>
+    <includes refid="ai__api_8h" local="no">ai_api.h</includes>
+    <includes refid="ai__bbox_8h" local="no">ai_bbox.h</includes>
+    <includes refid="ai__types_8h" local="no">ai_types.h</includes>
+    <includedby refid="ai_8h" local="yes">ai.h</includedby>
+    <incdepgraph>
+      <node id="286">
+        <label>ai_constants.h</label>
+        <link refid="ai__constants_8h"/>
+      </node>
+      <node id="285">
+        <label>ai_api.h</label>
+        <link refid="ai__api_8h"/>
+      </node>
+      <node id="287">
+        <label>cmath</label>
+      </node>
+      <node id="290">
+        <label>ai_vector.h</label>
+        <link refid="ai__vector_8h"/>
+        <childnode refid="286" relation="include">
+        </childnode>
+        <childnode refid="284" relation="include">
+        </childnode>
+        <childnode refid="285" relation="include">
+        </childnode>
+        <childnode refid="291" relation="include">
+        </childnode>
+      </node>
+      <node id="280">
+        <label>ai_node_entry.h</label>
+        <link refid="ai__node__entry_8h"/>
+        <childnode refid="281" relation="include">
+        </childnode>
+        <childnode refid="293" relation="include">
+        </childnode>
+      </node>
+      <node id="279">
+        <label>ai_nodes.h</label>
+        <link refid="ai__nodes_8h"/>
+        <childnode refid="280" relation="include">
+        </childnode>
+        <childnode refid="281" relation="include">
+        </childnode>
+        <childnode refid="285" relation="include">
+        </childnode>
+        <childnode refid="293" relation="include">
+        </childnode>
+      </node>
+      <node id="284">
+        <label>ai_types.h</label>
+        <link refid="ai__types_8h"/>
+        <childnode refid="285" relation="include">
+        </childnode>
+        <childnode refid="286" relation="include">
+        </childnode>
+        <childnode refid="287" relation="include">
+        </childnode>
+        <childnode refid="288" relation="include">
+        </childnode>
+      </node>
+      <node id="278">
+        <label>ai_drivers.h</label>
+        <link refid="ai_drivers.h"/>
+        <childnode refid="279" relation="include">
+        </childnode>
+        <childnode refid="285" relation="include">
+        </childnode>
+        <childnode refid="294" relation="include">
+        </childnode>
+        <childnode refid="284" relation="include">
+        </childnode>
+      </node>
+      <node id="282">
+        <label>ai_array.h</label>
+        <link refid="ai__array_8h"/>
+        <childnode refid="283" relation="include">
+        </childnode>
+        <childnode refid="289" relation="include">
+        </childnode>
+        <childnode refid="290" relation="include">
+        </childnode>
+        <childnode refid="284" relation="include">
+        </childnode>
+        <childnode refid="285" relation="include">
+        </childnode>
+      </node>
+      <node id="281">
+        <label>ai_params.h</label>
+        <link refid="ai__params_8h"/>
+        <childnode refid="282" relation="include">
+        </childnode>
+        <childnode refid="283" relation="include">
+        </childnode>
+        <childnode refid="292" relation="include">
+        </childnode>
+        <childnode refid="289" relation="include">
+        </childnode>
+        <childnode refid="290" relation="include">
+        </childnode>
+        <childnode refid="284" relation="include">
+        </childnode>
+        <childnode refid="285" relation="include">
+        </childnode>
+      </node>
+      <node id="283">
+        <label>ai_color.h</label>
+        <link refid="ai__color_8h"/>
+        <childnode refid="284" relation="include">
+        </childnode>
+        <childnode refid="286" relation="include">
+        </childnode>
+        <childnode refid="285" relation="include">
+        </childnode>
+      </node>
+      <node id="294">
+        <label>ai_bbox.h</label>
+        <link refid="ai__bbox_8h"/>
+        <childnode refid="290" relation="include">
+        </childnode>
+        <childnode refid="285" relation="include">
+        </childnode>
+      </node>
+      <node id="291">
+        <label>math.h</label>
+      </node>
+      <node id="288">
+        <label>cstdlib</label>
+      </node>
+      <node id="289">
+        <label>ai_matrix.h</label>
+        <link refid="ai__matrix_8h"/>
+        <childnode refid="290" relation="include">
+        </childnode>
+        <childnode refid="285" relation="include">
+        </childnode>
+      </node>
+      <node id="293">
+        <label>ai_string.h</label>
+        <link refid="ai__string_8h"/>
+        <childnode refid="285" relation="include">
+        </childnode>
+        <childnode refid="284" relation="include">
+        </childnode>
+      </node>
+      <node id="292">
+        <label>ai_enum.h</label>
+        <link refid="ai__enum_8h"/>
+        <childnode refid="285" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="295">
+        <label>ai_drivers.h</label>
+        <link refid="ai_drivers.h"/>
+        <childnode refid="296" relation="include">
+        </childnode>
+      </node>
+      <node id="296">
+        <label>ai.h</label>
+        <link refid="ai_8h"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="struct_at_driver_node_methods" prot="public">AtDriverNodeMethods</innerclass>
+      <sectiondef kind="user-defined">
+      <header>Node Method Declarations</header>
+      <memberdef kind="define" id="group__ai__drivers_1gad18183b3cd0bc436a8087ca1d25850ec" prot="public" static="no">
+        <name>driver_supports_pixel_type</name>
+        <initializer>static bool DriverSupportsPixelType(const <ref refid="struct_at_node" kindref="compound">AtNode</ref>* node, <ref refid="group__ai__types_1ga41f7f394ad3ef67901cce4d05bdabf89" kindref="member">AtByte</ref> pixel_type)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Driver&apos;s driver_supports_pixel_type declaration</para><para>Can the driver handle buckets of pixels of the specified type? This function is not called for raw mode drivers.</para><para><simplesect kind="return"><para>true if the driver can write pixels of the given type </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_drivers.h" line="92" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_drivers.h" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__drivers_1gac0b8895e83f19a5cbf53091bb52dd0e8" prot="public" static="no">
+        <name>driver_extension</name>
+        <initializer>static const char** DriverExtension()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Driver&apos;s driver_extension method declaration</para><para><simplesect kind="return"><para>a NULL-terminated array of filename extensions which this driver is capable of writing. For example, a &apos;jpeg&apos; driver might return the following array: { &quot;jpeg&quot;, &quot;jpg&quot;, NULL } </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_drivers.h" line="101" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_drivers.h" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__drivers_1ga5c4c1392f7280dcf596d833b27c63257" prot="public" static="no">
+        <name>driver_open</name>
+        <initializer>static void DriverOpen(<ref refid="struct_at_node" kindref="compound">AtNode</ref>* node, struct AtOutputIterator* iterator, <ref refid="struct_at_b_box2" kindref="compound">AtBBox2</ref> display_window, <ref refid="struct_at_b_box2" kindref="compound">AtBBox2</ref> data_window, int bucket_size)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Driver&apos;s driver_open method declaration</para><para>This function is called before rendering starts and can make any preparations the driver needs, like opening a file or allocating memory. The list of connected outputs is passed in using an output iterator.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>node</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to the driver node itself </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>iterator</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>output iterator for outputs connected to this driver </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>display_window</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>this is a 2D bounding box for the actual resolution </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data_window</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>this is the actual region of pixels that will be rendered </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>bucket_size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>maximum width in pixels of a bucket </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_drivers.h" line="116" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_drivers.h" bodystart="116" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__drivers_1gaea47f8f7451d75112be4bfb1da5611b5" prot="public" static="no">
+        <name>driver_needs_bucket</name>
+        <initializer>static bool DriverNeedsBucket(<ref refid="struct_at_node" kindref="compound">AtNode</ref>* node, int bucket_xo, int bucket_yo, int bucket_size_x, int bucket_size_y, int tid)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Driver&apos;s driver_needs_bucket method declaration</para><para>This function is called to determine if a bucket will be rendered. It can be used to continue work on partial images without re-rendering already present buckets.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>node</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to the driver node itself </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>bucket_xo</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>x coordinate of the bucket (upper-left) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>bucket_yo</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>y coordinate of the bucket (upper-left) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>bucket_size_x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>width of the bucket in pixels </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>bucket_size_y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>height of the bucket in pixels </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>tid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>thread ID that will render this bucket</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if the bucket needs to be rendered, false if the bucket can be skipped </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_drivers.h" line="134" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_drivers.h" bodystart="134" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__drivers_1gac0171f32654d3704a27b3177cfea5fc6" prot="public" static="no">
+        <name>driver_prepare_bucket</name>
+        <initializer>static void DriverPrepareBucket(<ref refid="struct_at_node" kindref="compound">AtNode</ref>* node, int bucket_xo, int bucket_yo, int bucket_size_x, int bucket_size_y, int tid)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Driver&apos;s driver_prepare_bucket method declaration</para><para>This function is called before a bucket is rendered. It can be used to display bucket corners for interactive rendering drivers to show which buckets are being processed, for example. The renderer locks around this function so the contained code is not required to be thread safe. The bucket size may be smaller than what was given to <computeroutput>driver_open</computeroutput> because buckets are clamped to the edge of the render region.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>node</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to the driver node itself </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>bucket_xo</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>x coordinate of the bucket (upper-left) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>bucket_yo</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>y coordinate of the bucket (upper-left) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>bucket_size_x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>width of the bucket in pixels </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>bucket_size_y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>height of the bucket in pixels </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>tid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>thread ID that will render this bucket </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_drivers.h" line="153" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_drivers.h" bodystart="153" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__drivers_1gad581a889a481b9c7ad1fddf92c2bc8b7" prot="public" static="no">
+        <name>driver_process_bucket</name>
+        <initializer>static void DriverProcessBucket(<ref refid="struct_at_node" kindref="compound">AtNode</ref>* node, struct AtOutputIterator* iterator, struct AtAOVSampleIterator* sample_iterator, int bucket_xo, int bucket_yo, int bucket_size_x, int bucket_size_y, int tid)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Driver&apos;s driver_process_bucket method declaration</para><para>This function is called after a bucket has been rendered, but before it is written out. It provides the rendered pixels of each output to the driver, or the raw AOV samples if this is a raw driver. The renderer does not lock around this function, to allow for lengthy bucket preprocessing to happen in parallel. The contained code should not require any thread synchornization. The bucket size may be smaller than what was given to <computeroutput>driver_open</computeroutput> because buckets are clamped to the edge of the render region.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>node</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to the driver node itself </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>iterator</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>output iterator (loops over connected outputs for regular drivers) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sample_iterator</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>raw AOV sample iterator (loops over connected AOVs for raw drivers) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>bucket_xo</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>x coordinate of the bucket (upper-left) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>bucket_yo</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>y coordinate of the bucket (upper-left) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>bucket_size_x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>width of the bucket in pixels </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>bucket_size_y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>height of the bucket in pixels </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>tid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>thread ID that rendered this bucket </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_drivers.h" line="174" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_drivers.h" bodystart="174" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__drivers_1ga7734e3bcc6deff211dec384a840fb09b" prot="public" static="no">
+        <name>driver_write_bucket</name>
+        <initializer>static void DriverWriteBucket(<ref refid="struct_at_node" kindref="compound">AtNode</ref>* node, struct AtOutputIterator* iterator, struct AtAOVSampleIterator* sample_iterator, int bucket_xo, int bucket_yo, int bucket_size_x, int bucket_size_y)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Driver&apos;s driver_write_bucket method declaration</para><para>This function is called after a bucket has been rendered. It provides the rendered pixels of each output to the driver, or the raw AOV samples if this is a raw driver. The renderer locks around this function so the contained code is not required to be thread safe. The bucket size may be smaller than what was given to <computeroutput>driver_open</computeroutput> because buckets are clamped to the edge of the render region.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>node</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to the driver node itself </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>iterator</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>output iterator (loops over connected outputs for regular drivers) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sample_iterator</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>raw AOV sample iterator (loops over connected AOVs for raw drivers) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>bucket_xo</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>x coordinate of the bucket (upper-left) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>bucket_yo</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>y coordinate of the bucket (upper-left) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>bucket_size_x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>width of the bucket in pixels </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>bucket_size_y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>height of the bucket in pixels </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_drivers.h" line="193" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_drivers.h" bodystart="193" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__drivers_1ga016be0537a02f4b1db64c69dd9667b71" prot="public" static="no">
+        <name>driver_close</name>
+        <initializer>static void DriverClose(<ref refid="struct_at_node" kindref="compound">AtNode</ref>* node, struct AtOutputIterator* iterator)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Driver&apos;s driver_close method declaration</para><para>This function is called after the image has finished rendering. It is responsible for any final tasks such as flushing or closing open files.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>node</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to the driver node itself </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>iterator</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>output iterator (loops over connected outputs for regular drivers) </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_drivers.h" line="204" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_drivers.h" bodystart="204" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>API for Driver Writers</header>
+      <memberdef kind="function" id="group__ai__drivers_1gae0946e85e28acdeb1f7c10b748e382fb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiDriverInitialize</definition>
+        <argsstring>(AtNode *node, bool supports_multiple_outputs, void *data)</argsstring>
+        <name>AiDriverInitialize</name>
+        <param>
+          <type><ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>supports_multiple_outputs</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_drivers.h" line="213" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__drivers_1ga4ed6c4f2f6fbdcc6d7d3a223088ad1f6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiRawDriverInitialize</definition>
+        <argsstring>(AtNode *node, const char **required_aovs, bool requires_depth, void *data)</argsstring>
+        <name>AiRawDriverInitialize</name>
+        <param>
+          <type><ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>const char **</type>
+          <declname>required_aovs</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>requires_depth</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_drivers.h" line="214" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__drivers_1ga4027cb36331a2071034c57d48795af82" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiDriverDestroy</definition>
+        <argsstring>(AtNode *node)</argsstring>
+        <name>AiDriverDestroy</name>
+        <param>
+          <type><ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_drivers.h" line="215" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__drivers_1gac3a78189573751566e251e4da605fa9c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void *</type>
+        <definition>void* AiDriverGetLocalData</definition>
+        <argsstring>(const AtNode *node)</argsstring>
+        <name>AiDriverGetLocalData</name>
+        <param>
+          <type>const <ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_drivers.h" line="216" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__drivers_1ga3371e5d4d73bdd953b3a0a0630930436" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiDriverGetMatrices</definition>
+        <argsstring>(AtMatrix world_to_camera, AtMatrix world_to_screen)</argsstring>
+        <name>AiDriverGetMatrices</name>
+        <param>
+          <type><ref refid="group__ai__matrix_1ga239cea4f70543ed6dae0d0549d28c01c" kindref="member">AtMatrix</ref></type>
+          <declname>world_to_camera</declname>
+        </param>
+        <param>
+          <type><ref refid="group__ai__matrix_1ga239cea4f70543ed6dae0d0549d28c01c" kindref="member">AtMatrix</ref></type>
+          <declname>world_to_screen</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_drivers.h" line="217" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__drivers_1gaa369a92e45305129cd90f7f3b4bccb48" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char **</type>
+        <definition>const char** AiDriverExtension</definition>
+        <argsstring>(const AtNodeEntry *node_entry)</argsstring>
+        <name>AiDriverExtension</name>
+        <param>
+          <type>const <ref refid="struct_at_node_entry" kindref="compound">AtNodeEntry</ref> *</type>
+          <declname>node_entry</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_drivers.h" line="218" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__drivers_1gaa315abb5085e7fc961df269fd85087a6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiOutputIteratorGetNext</definition>
+        <argsstring>(struct AtOutputIterator *iter, const char **output_name, int *pixel_type, const void **bucket_data)</argsstring>
+        <name>AiOutputIteratorGetNext</name>
+        <param>
+          <type>struct AtOutputIterator *</type>
+          <declname>iter</declname>
+        </param>
+        <param>
+          <type>const char **</type>
+          <declname>output_name</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>pixel_type</declname>
+        </param>
+        <param>
+          <type>const void **</type>
+          <declname>bucket_data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_drivers.h" line="220" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__drivers_1ga9c13f00ca70ee5d245a9ee6560fd17bb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiOutputIteratorReset</definition>
+        <argsstring>(struct AtOutputIterator *iter)</argsstring>
+        <name>AiOutputIteratorReset</name>
+        <param>
+          <type>struct AtOutputIterator *</type>
+          <declname>iter</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_drivers.h" line="221" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__drivers_1ga3d5a3c6797a52366c354b9c0d7c5d9ca" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="struct_at_node_entry" kindref="compound">AtNodeEntry</ref> *</type>
+        <definition>const AtNodeEntry* AiFindDriverType</definition>
+        <argsstring>(const char *extension)</argsstring>
+        <name>AiFindDriverType</name>
+        <param>
+          <type>const char *</type>
+          <declname>extension</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_drivers.h" line="223" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group__ai__drivers_1ga407ac5c17630ff9d583da3490a06d8b3" prot="public" static="no">
+        <name>AI_DRIVER_NODE_EXPORT_METHODS</name>
+        <param><defname>tag</defname></param>
+        <initializer><ref refid="group__ai__nodes_1gad84d7f2f4a9b8374cba1702e81f68a64" kindref="member">AI_INSTANCE_COMMON_METHODS</ref>                         \
+<ref refid="group__ai__drivers_1gad18183b3cd0bc436a8087ca1d25850ec" kindref="member">driver_supports_pixel_type</ref>;                        \
+<ref refid="group__ai__drivers_1gac0b8895e83f19a5cbf53091bb52dd0e8" kindref="member">driver_extension</ref>;                                  \
+<ref refid="group__ai__drivers_1ga5c4c1392f7280dcf596d833b27c63257" kindref="member">driver_open</ref>;                                       \
+<ref refid="group__ai__drivers_1gaea47f8f7451d75112be4bfb1da5611b5" kindref="member">driver_needs_bucket</ref>;                               \
+<ref refid="group__ai__drivers_1gac0171f32654d3704a27b3177cfea5fc6" kindref="member">driver_prepare_bucket</ref>;                             \
+<ref refid="group__ai__drivers_1gad581a889a481b9c7ad1fddf92c2bc8b7" kindref="member">driver_process_bucket</ref>;                             \
+<ref refid="group__ai__drivers_1ga7734e3bcc6deff211dec384a840fb09b" kindref="member">driver_write_bucket</ref>;                               \
+<ref refid="group__ai__drivers_1ga016be0537a02f4b1db64c69dd9667b71" kindref="member">driver_close</ref>;                                      \
+static <ref refid="struct_at_driver_node_methods" kindref="compound">AtDriverNodeMethods</ref> ai_driver_mtds = {      \
+   DriverSupportsPixelType,                        \
+   DriverExtension,                                \
+   DriverOpen,                                     \
+   DriverNeedsBucket,                              \
+   DriverPrepareBucket,                            \
+   DriverProcessBucket,                            \
+   DriverWriteBucket,                              \
+   DriverClose,                                    \
+};                                                 \
+static <ref refid="struct_at_node_methods" kindref="compound">AtNodeMethods</ref> ai_node_mtds = {              \
+   &amp;ai_common_mtds,                                \
+   &amp;ai_driver_mtds                                 \
+};                                                 \
+<ref refid="struct_at_node_methods" kindref="compound">AtNodeMethods</ref> *tag = &amp;ai_node_mtds;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Output Driver node methods exporter </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_drivers.h" line="54" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_drivers.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group__ai__drivers_1gae6697d7e30a29095265fae9bc27cfe61" prot="public" static="no">
+        <type>struct <ref refid="struct_at_driver_node_methods" kindref="compound">AtDriverNodeMethods</ref></type>
+        <definition>typedef struct AtDriverNodeMethods  AtDriverNodeMethods</definition>
+        <argsstring></argsstring>
+        <name>AtDriverNodeMethods</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Driver Node methods structure </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_drivers.h" line="51" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>API for writing AOV driver nodes </para>    </detaileddescription>
+    <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_drivers.h"/>
+  </compounddef>
+</doxygen>

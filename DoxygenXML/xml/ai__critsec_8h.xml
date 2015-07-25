@@ -1,0 +1,139 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="ai__critsec_8h" kind="file" language="C++">
+    <compoundname>ai_critsec.h</compoundname>
+    <includes refid="ai__api_8h" local="yes">ai_api.h</includes>
+    <includedby refid="ai_8h" local="yes">ai.h</includedby>
+    <incdepgraph>
+      <node id="248">
+        <label>ai_api.h</label>
+        <link refid="ai__api_8h"/>
+      </node>
+      <node id="247">
+        <label>ai_critsec.h</label>
+        <link refid="ai_critsec.h"/>
+        <childnode refid="248" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="249">
+        <label>ai_critsec.h</label>
+        <link refid="ai_critsec.h"/>
+        <childnode refid="250" relation="include">
+        </childnode>
+      </node>
+      <node id="250">
+        <label>ai.h</label>
+        <link refid="ai_8h"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group__ai__critsec_1ga77ea816c1f5a8451b8b3dc7dc0455f5d" prot="public" static="no">
+        <type>void *</type>
+        <definition>typedef void* AtCritSec</definition>
+        <argsstring></argsstring>
+        <name>AtCritSec</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Opaque data type for a critical section </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_critsec.h" line="21" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_critsec.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__ai__critsec_1gabb62dec09092025528b2cd6f4139833d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiCritSecInit</definition>
+        <argsstring>(AtCritSec *cs)</argsstring>
+        <name>AiCritSecInit</name>
+        <param>
+          <type><ref refid="group__ai__critsec_1ga77ea816c1f5a8451b8b3dc7dc0455f5d" kindref="member">AtCritSec</ref> *</type>
+          <declname>cs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_critsec.h" line="23" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__critsec_1ga0b1ffdb46a62824f1f0cdea5fdc0cd2b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiCritSecInitRecursive</definition>
+        <argsstring>(AtCritSec *cs)</argsstring>
+        <name>AiCritSecInitRecursive</name>
+        <param>
+          <type><ref refid="group__ai__critsec_1ga77ea816c1f5a8451b8b3dc7dc0455f5d" kindref="member">AtCritSec</ref> *</type>
+          <declname>cs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_critsec.h" line="24" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__critsec_1ga78886db520a0046e336f1c86ca52c278" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiCritSecClose</definition>
+        <argsstring>(AtCritSec *cs)</argsstring>
+        <name>AiCritSecClose</name>
+        <param>
+          <type><ref refid="group__ai__critsec_1ga77ea816c1f5a8451b8b3dc7dc0455f5d" kindref="member">AtCritSec</ref> *</type>
+          <declname>cs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_critsec.h" line="25" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__critsec_1ga731d804c140971933e25157bb8fbd696" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiCritSecEnter</definition>
+        <argsstring>(AtCritSec *cs)</argsstring>
+        <name>AiCritSecEnter</name>
+        <param>
+          <type><ref refid="group__ai__critsec_1ga77ea816c1f5a8451b8b3dc7dc0455f5d" kindref="member">AtCritSec</ref> *</type>
+          <declname>cs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_critsec.h" line="26" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__critsec_1gad0b67b2fc920eb21a24b104b164283e0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiCritSecLeave</definition>
+        <argsstring>(AtCritSec *cs)</argsstring>
+        <name>AiCritSecLeave</name>
+        <param>
+          <type><ref refid="group__ai__critsec_1ga77ea816c1f5a8451b8b3dc7dc0455f5d" kindref="member">AtCritSec</ref> *</type>
+          <declname>cs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_critsec.h" line="27" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Critical section type that helps when writing multi-platform threaded code </para>    </detaileddescription>
+    <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_critsec.h"/>
+  </compounddef>
+</doxygen>

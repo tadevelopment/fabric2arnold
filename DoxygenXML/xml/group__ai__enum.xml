@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="group__ai__enum" kind="group">
+    <compoundname>ai_enum</compoundname>
+    <title>AtEnum API</title>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group__ai__enum_1ga5987d638f44e43282a7fa98ada12495d" prot="public" static="no">
+        <type>const char **</type>
+        <definition>typedef const char** AtEnum</definition>
+        <argsstring></argsstring>
+        <name>AtEnum</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>String-based enumerated data type</para><para><ref refid="struct_at_node" kindref="compound">AtNode</ref> parameters of type <computeroutput>AI_TYPE_ENUM</computeroutput> are stored as <ref refid="group__ai__enum_1ga5987d638f44e43282a7fa98ada12495d" kindref="member">AtEnum</ref>. The <ref refid="group__ai__enum_1ga5987d638f44e43282a7fa98ada12495d" kindref="member">AtEnum</ref> data type is just an array of strings that ends with a NULL string (not an empty string, but a NULL pointer).</para><para>Note that, in order to keep backwards compatibility, any value strings beginning with a digit will be interpreted as a number. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_enum.h" line="27" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_enum.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__ai__enum_1ga0b565941674c6d42a359cad9a2f0433d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int AiEnumGetValue</definition>
+        <argsstring>(AtEnum enum_type, const char *string)</argsstring>
+        <name>AiEnumGetValue</name>
+        <param>
+          <type><ref refid="group__ai__enum_1ga5987d638f44e43282a7fa98ada12495d" kindref="member">AtEnum</ref></type>
+          <declname>enum_type</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>string</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_enum.h" line="29" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__enum_1gae4c54cf670316618053d63956c22d1ab" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* AiEnumGetString</definition>
+        <argsstring>(AtEnum enum_type, int index)</argsstring>
+        <name>AiEnumGetString</name>
+        <param>
+          <type><ref refid="group__ai__enum_1ga5987d638f44e43282a7fa98ada12495d" kindref="member">AtEnum</ref></type>
+          <declname>enum_type</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_enum.h" line="30" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

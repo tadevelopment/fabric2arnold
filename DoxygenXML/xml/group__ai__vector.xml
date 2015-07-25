@@ -1,0 +1,1936 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="group__ai__vector" kind="group">
+    <compoundname>ai_vector</compoundname>
+    <title>AtVector API</title>
+    <innerclass refid="struct_at_point" prot="public">AtPoint</innerclass>
+    <innerclass refid="struct_at_point2" prot="public">AtPoint2</innerclass>
+    <innerclass refid="struct_at_h_point" prot="public">AtHPoint</innerclass>
+      <sectiondef kind="user-defined">
+      <header>Derived Typedefs</header>
+      <memberdef kind="typedef" id="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" prot="public" static="no">
+        <type><ref refid="struct_at_point" kindref="compound">AtPoint</ref></type>
+        <definition>typedef AtPoint AtVector</definition>
+        <argsstring></argsstring>
+        <name>AtVector</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>3D vector (single precision) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" line="431" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" bodystart="431" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__ai__vector_1gacc3427eeb6f63537ae2b2127348008fd" prot="public" static="no">
+        <type><ref refid="struct_at_point2" kindref="compound">AtPoint2</ref></type>
+        <definition>typedef AtPoint2 AtVector2</definition>
+        <argsstring></argsstring>
+        <name>AtVector2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>2D vector </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" line="432" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" bodystart="432" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Vector Components</header>
+      <memberdef kind="define" id="group__ai__vector_1ga94c8e7b11b29a96fb6d677d3e89b0707" prot="public" static="no">
+        <name>AI_X</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>X component </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" line="438" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" bodystart="438" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__vector_1ga0610b67dda3fafe6b4b2f9c734d3f11a" prot="public" static="no">
+        <name>AI_Y</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Y component </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" line="439" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" bodystart="439" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__vector_1gac816e305a1c8d32721fb4cbd6f3bbd63" prot="public" static="no">
+        <name>AI_Z</name>
+        <initializer>2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Z component </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" line="440" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" bodystart="440" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>2D Vector Operations</header>
+      <memberdef kind="function" id="group__ai__vector_1ga75949522ba20dcee48b17ae119722185" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="struct_at_point2" kindref="compound">AtPoint2</ref></type>
+        <definition>AtPoint2 AiPoint2</definition>
+        <argsstring>(float x, float y)</argsstring>
+        <name>AiPoint2</name>
+        <param>
+          <type>float</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a XY point from its components </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" line="452" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" bodystart="452" bodyend="456"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__vector_1gac7deb708170182044d09bd9ecc8bcf1a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="group__ai__vector_1gacc3427eeb6f63537ae2b2127348008fd" kindref="member">AtVector2</ref></type>
+        <definition>AtVector2 AiVector2</definition>
+        <argsstring>(float x, float y)</argsstring>
+        <name>AiVector2</name>
+        <param>
+          <type>float</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a XY vector from its components (same as AiPoint2) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" line="461" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" bodystart="461" bodyend="465"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__vector_1gacdb7c58c12fbbde4ad8a953a8699e181" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float AiV2Dot</definition>
+        <argsstring>(const AtVector2 &amp;v1, const AtVector2 &amp;v2)</argsstring>
+        <name>AiV2Dot</name>
+        <param>
+          <type>const <ref refid="group__ai__vector_1gacc3427eeb6f63537ae2b2127348008fd" kindref="member">AtVector2</ref> &amp;</type>
+          <declname>v1</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__vector_1gacc3427eeb6f63537ae2b2127348008fd" kindref="member">AtVector2</ref> &amp;</type>
+          <declname>v2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Dot product: &lt;v1, v2&gt; </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" line="470" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" bodystart="470" bodyend="473"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__vector_1ga98bca9d73c61c6a86b58a822791773d0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float AiV2Length</definition>
+        <argsstring>(const AtVector2 &amp;v1)</argsstring>
+        <name>AiV2Length</name>
+        <param>
+          <type>const <ref refid="group__ai__vector_1gacc3427eeb6f63537ae2b2127348008fd" kindref="member">AtVector2</ref> &amp;</type>
+          <declname>v1</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Vector Length: ||v1|| </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" line="478" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" bodystart="478" bodyend="481"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__vector_1gad063452cf797befa6e25c2fd7e6a0ff6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float AiV2Dist</definition>
+        <argsstring>(const AtPoint2 &amp;p1, const AtPoint2 &amp;p2)</argsstring>
+        <name>AiV2Dist</name>
+        <param>
+          <type>const <ref refid="struct_at_point2" kindref="compound">AtPoint2</ref> &amp;</type>
+          <declname>p1</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_point2" kindref="compound">AtPoint2</ref> &amp;</type>
+          <declname>p2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Distance between two points: ||p1-p2|| </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" line="486" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" bodystart="486" bodyend="489"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__vector_1gac0c3e11fba43f4c59e4c29ee694e9059" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="group__ai__vector_1gacc3427eeb6f63537ae2b2127348008fd" kindref="member">AtVector2</ref></type>
+        <definition>AtVector2 AiV2Lerp</definition>
+        <argsstring>(float t, const AtVector2 &amp;lo, const AtVector2 &amp;hi)</argsstring>
+        <name>AiV2Lerp</name>
+        <param>
+          <type>float</type>
+          <declname>t</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__vector_1gacc3427eeb6f63537ae2b2127348008fd" kindref="member">AtVector2</ref> &amp;</type>
+          <declname>lo</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__vector_1gacc3427eeb6f63537ae2b2127348008fd" kindref="member">AtVector2</ref> &amp;</type>
+          <declname>hi</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>2D vector linear interpolation (t=0 -&gt; result=lo, t=1 -&gt; result=hi) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" line="495" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" bodystart="495" bodyend="498"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__vector_1gab71c3b65c0f40520b1ca69561d4b4de2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="group__ai__vector_1gacc3427eeb6f63537ae2b2127348008fd" kindref="member">AtVector2</ref></type>
+        <definition>AtVector2 AiV2Clamp</definition>
+        <argsstring>(const AtVector2 &amp;in, float lo, float hi)</argsstring>
+        <name>AiV2Clamp</name>
+        <param>
+          <type>const <ref refid="group__ai__vector_1gacc3427eeb6f63537ae2b2127348008fd" kindref="member">AtVector2</ref> &amp;</type>
+          <declname>in</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>lo</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>hi</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Clamp each vector coordinate to the range [lo,hi] </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" line="503" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" bodystart="503" bodyend="509"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>3D Vector Operations</header>
+      <memberdef kind="function" id="group__ai__vector_1ga082ef7348acc99a7106005ca6bd639f0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="struct_at_point" kindref="compound">AtPoint</ref></type>
+        <definition>AtPoint AiPoint</definition>
+        <argsstring>(float x, float y, float z)</argsstring>
+        <name>AiPoint</name>
+        <param>
+          <type>float</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>z</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a XYZ point from its components </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" line="522" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" bodystart="522" bodyend="526"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__vector_1ga390902946ff7f50a01598cdec770fe6f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref></type>
+        <definition>AtVector AiVector</definition>
+        <argsstring>(float x, float y, float z)</argsstring>
+        <name>AiVector</name>
+        <param>
+          <type>float</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>z</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a XYZ vector from its components (same as AiPoint) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" line="531" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" bodystart="531" bodyend="535"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__vector_1ga28e19a48f682534e99530677cc7fdb64" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float AiV3Length</definition>
+        <argsstring>(const AtVector &amp;a)</argsstring>
+        <name>AiV3Length</name>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> &amp;</type>
+          <declname>a</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Vector Length: ||a|| </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" line="540" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" bodystart="540" bodyend="543"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__vector_1ga0b33f59627deb7fe2157b4ce04a01e66" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float AiV3Dot</definition>
+        <argsstring>(const AtVector &amp;a, const AtVector &amp;b)</argsstring>
+        <name>AiV3Dot</name>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> &amp;</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> &amp;</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Dot product: &lt;a, b&gt; </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" line="548" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" bodystart="548" bodyend="551"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__vector_1ga3750efc8772bbae1df016b7a83c88e87" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float AiV3Dist</definition>
+        <argsstring>(const AtVector &amp;a, const AtVector &amp;b)</argsstring>
+        <name>AiV3Dist</name>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> &amp;</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> &amp;</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Distance between two points: ||a-b|| </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" line="556" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" bodystart="556" bodyend="559"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__vector_1ga94d2d6e5491d51877a4bfd7611bada2c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float AiV3Dist2</definition>
+        <argsstring>(const AtVector &amp;a, const AtVector &amp;b)</argsstring>
+        <name>AiV3Dist2</name>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> &amp;</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> &amp;</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Squared distance between two points: ||a-b||^2 </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" line="564" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" bodystart="564" bodyend="567"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__vector_1gab60b1c8e1ca212ec3ab10f46b802ca11" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float AiV3DistPlane</definition>
+        <argsstring>(const AtPoint &amp;x, const AtPoint &amp;p, const AtVector &amp;n)</argsstring>
+        <name>AiV3DistPlane</name>
+        <param>
+          <type>const <ref refid="struct_at_point" kindref="compound">AtPoint</ref> &amp;</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_point" kindref="compound">AtPoint</ref> &amp;</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> &amp;</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Signed distance between point x and a plane defined by point p and normalized vector n </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" line="572" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" bodystart="572" bodyend="575"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__vector_1ga72413f7b89c13c2d8962540d4bd3b68a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref></type>
+        <definition>AtVector AiV3Cross</definition>
+        <argsstring>(const AtVector &amp;a, const AtVector &amp;b)</argsstring>
+        <name>AiV3Cross</name>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> &amp;</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> &amp;</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Cross product: a x b </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" line="580" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" bodystart="580" bodyend="587"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__vector_1ga5917eee3021c3d37629cb02497d4f862" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref></type>
+        <definition>AtVector AiV3Normalize</definition>
+        <argsstring>(const AtVector &amp;a)</argsstring>
+        <name>AiV3Normalize</name>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> &amp;</type>
+          <declname>a</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Normalize a vector: a / ||a|| </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" line="592" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" bodystart="592" bodyend="602"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__vector_1ga38ace7c34139774ca41e9b56ae6f3e2f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref></type>
+        <definition>AtVector AiV3Lerp</definition>
+        <argsstring>(float t, const AtVector &amp;lo, const AtVector &amp;hi)</argsstring>
+        <name>AiV3Lerp</name>
+        <param>
+          <type>float</type>
+          <declname>t</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> &amp;</type>
+          <declname>lo</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> &amp;</type>
+          <declname>hi</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>3D vector linear interpolation (t=0 -&gt; result=lo, t=1 -&gt; result=hi) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" line="608" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" bodystart="608" bodyend="611"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__vector_1ga20edc61c394fe5c086ec7a5f35682f8f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref></type>
+        <definition>AtVector AiV3Clamp</definition>
+        <argsstring>(const AtVector &amp;in, float lo, float hi)</argsstring>
+        <name>AiV3Clamp</name>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> &amp;</type>
+          <declname>in</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>lo</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>hi</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Clamp each vector coordinate to the range [lo,hi] </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" line="616" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" bodystart="616" bodyend="623"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__vector_1ga82bebe6aff36ea753c8f0cdefead589e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref></type>
+        <definition>AtVector AiV3Min</definition>
+        <argsstring>(const AtVector &amp;a, const AtVector &amp;b)</argsstring>
+        <name>AiV3Min</name>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> &amp;</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> &amp;</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Minimum of two vectors, component-wise </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" line="628" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" bodystart="628" bodyend="635"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__vector_1gaa94f1d5539356ae657e96a36a0b0ca5a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref></type>
+        <definition>AtVector AiV3Max</definition>
+        <argsstring>(const AtVector &amp;a, const AtVector &amp;b)</argsstring>
+        <name>AiV3Max</name>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> &amp;</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> &amp;</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Maximum of two vectors, component-wise </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" line="640" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" bodystart="640" bodyend="647"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__vector_1ga61af40c0e81ba8f8cad749a44e5a086b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref></type>
+        <definition>AtVector ABS</definition>
+        <argsstring>(const AtVector &amp;a)</argsstring>
+        <name>ABS</name>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> &amp;</type>
+          <declname>a</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Absolute value of each component </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" line="652" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" bodystart="652" bodyend="656"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__vector_1gacecd25d8c82fc5ad7d40760f354d7558" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref></type>
+        <definition>AtVector AiBerpXYZ</definition>
+        <argsstring>(float a, float b, const AtVector &amp;p0, const AtVector &amp;p1, const AtVector &amp;p2)</argsstring>
+        <name>AiBerpXYZ</name>
+        <param>
+          <type>float</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> &amp;</type>
+          <declname>p0</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> &amp;</type>
+          <declname>p1</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> &amp;</type>
+          <declname>p2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Barycentric interpolation of a point inside a triangle </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" line="661" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" bodystart="661" bodyend="665"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__vector_1gafb64339fe93de4e568cef38e9927f1fa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiV3Exists</definition>
+        <argsstring>(const AtVector &amp;a)</argsstring>
+        <name>AiV3Exists</name>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> &amp;</type>
+          <declname>a</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Check whether a vector has all valid components (not NaN and not infinite) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" line="670" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__vector_1gab6d045fac0b0b22c0029cd25c78b7ccb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiV3Equal</definition>
+        <argsstring>(const AtVector &amp;a, const AtVector &amp;b)</argsstring>
+        <name>AiV3Equal</name>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> &amp;</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> &amp;</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Vector equality: a == b </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" line="675" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" bodystart="675" bodyend="678"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__vector_1ga26f058b61efe7e0b595e48285781f02a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiV3IsSmall</definition>
+        <argsstring>(const AtVector &amp;a, float epsilon=AI_EPSILON)</argsstring>
+        <name>AiV3IsSmall</name>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> &amp;</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>epsilon</declname>
+          <defval><ref refid="group__ai__constants_1gaf5a851882299e92281399bc8a3572818" kindref="member">AI_EPSILON</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Check for a zero vector, within a small tolerance: ||a|| &lt; epsilon </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" line="683" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" bodystart="683" bodyend="686"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__vector_1ga311ce9e673b43e0b72fb61ac1bf9a79f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>DEPRECATED bool</type>
+        <definition>DEPRECATED bool AiV3IsZero</definition>
+        <argsstring>(const AtVector &amp;a)</argsstring>
+        <name>AiV3IsZero</name>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> &amp;</type>
+          <declname>a</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Check for a zero vector: ||a|| == 0</para><para>This does not actually check for zero, it checks for small values, including zero. This can easily be confused with asking for exact comparisons with zero, so this confusing function is deprecated and should be avoided </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" line="696" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" bodystart="696" bodyend="699"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__vector_1ga7c6b35b14c98ce72f7ba281618dbd1c7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>DEPRECATED bool</type>
+        <definition>DEPRECATED bool AiV3isZero</definition>
+        <argsstring>(const AtVector &amp;a, float epsilon=AI_EPSILON)</argsstring>
+        <name>AiV3isZero</name>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> &amp;</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>epsilon</declname>
+          <defval><ref refid="group__ai__constants_1gaf5a851882299e92281399bc8a3572818" kindref="member">AI_EPSILON</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" line="702" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" bodystart="702" bodyend="705"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__vector_1gad5f62864825d651c568058aaabe136b2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiV3RotateToFrame</definition>
+        <argsstring>(AtVector &amp;a, const AtVector &amp;u, const AtVector &amp;v, const AtVector &amp;w)</argsstring>
+        <name>AiV3RotateToFrame</name>
+        <param>
+          <type><ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> &amp;</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> &amp;</type>
+          <declname>u</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> &amp;</type>
+          <declname>v</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> &amp;</type>
+          <declname>w</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Rotate vector a so that it aligns with frame {u,v,w} </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" line="710" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" bodystart="710" bodyend="713"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__vector_1ga60a7d31f9741bc54005337bbf6267e40" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiBerpUV</definition>
+        <argsstring>(float a, float b, float u0, float v0, float u1, float v1, float u2, float v2, float *u, float *v)</argsstring>
+        <name>AiBerpUV</name>
+        <param>
+          <type>float</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>u0</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>v0</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>u1</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>v1</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>u2</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>v2</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>u</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Barycentric interpolation of UV coordinates inside a 3D triangle </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" line="718" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" bodystart="718" bodyend="723"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>4D Vector Operations</header>
+      <memberdef kind="function" id="group__ai__vector_1ga53b82978dd18b5bdbee8c923c2612127" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiV4Create</definition>
+        <argsstring>(AtHPoint &amp;vout, float x, float y, float z, float w)</argsstring>
+        <name>AiV4Create</name>
+        <param>
+          <type><ref refid="struct_at_h_point" kindref="compound">AtHPoint</ref> &amp;</type>
+          <declname>vout</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>z</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>w</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a 4D vector: pout = (x, y, z, w) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" line="734" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" bodystart="734" bodyend="740"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__vector_1ga66b2bba41d3b18b3329985078901e6f5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiV4CreatePoint</definition>
+        <argsstring>(AtHPoint &amp;pout, const AtVector &amp;v)</argsstring>
+        <name>AiV4CreatePoint</name>
+        <param>
+          <type><ref refid="struct_at_h_point" kindref="compound">AtHPoint</ref> &amp;</type>
+          <declname>pout</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> &amp;</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a 4D point: pout = (v.x, v.y, v.z, 1) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" line="745" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" bodystart="745" bodyend="751"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__vector_1gab5cfc88decec461e6024d1ad05192e88" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiV4CreateVector</definition>
+        <argsstring>(AtHPoint &amp;vout, const AtVector &amp;v)</argsstring>
+        <name>AiV4CreateVector</name>
+        <param>
+          <type><ref refid="struct_at_h_point" kindref="compound">AtHPoint</ref> &amp;</type>
+          <declname>vout</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> &amp;</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a 4D vector: vout = (v.x, v.y, v.z, 0) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" line="756" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" bodystart="756" bodyend="762"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__vector_1gaac373349f487f4e760e4e08a900e2119" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiV4Add</definition>
+        <argsstring>(AtHPoint &amp;vout, const AtHPoint &amp;v1, const AtHPoint &amp;v2)</argsstring>
+        <name>AiV4Add</name>
+        <param>
+          <type><ref refid="struct_at_h_point" kindref="compound">AtHPoint</ref> &amp;</type>
+          <declname>vout</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_h_point" kindref="compound">AtHPoint</ref> &amp;</type>
+          <declname>v1</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_h_point" kindref="compound">AtHPoint</ref> &amp;</type>
+          <declname>v2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Add two vectors: vout = v1 + v2 </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" line="767" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" bodystart="767" bodyend="773"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__vector_1gac02a09792c9687deeb2444333e24ab3e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiV4Sub</definition>
+        <argsstring>(AtHPoint &amp;vout, const AtHPoint &amp;v1, const AtHPoint &amp;v2)</argsstring>
+        <name>AiV4Sub</name>
+        <param>
+          <type><ref refid="struct_at_h_point" kindref="compound">AtHPoint</ref> &amp;</type>
+          <declname>vout</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_h_point" kindref="compound">AtHPoint</ref> &amp;</type>
+          <declname>v1</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_h_point" kindref="compound">AtHPoint</ref> &amp;</type>
+          <declname>v2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Substract two vectors: vout = v1 - v2 </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" line="778" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" bodystart="778" bodyend="784"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__vector_1gaa926d6fb54b011e92d4b1876120735b5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiV4Scale</definition>
+        <argsstring>(AtHPoint &amp;vout, const AtHPoint &amp;vin, float k)</argsstring>
+        <name>AiV4Scale</name>
+        <param>
+          <type><ref refid="struct_at_h_point" kindref="compound">AtHPoint</ref> &amp;</type>
+          <declname>vout</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_h_point" kindref="compound">AtHPoint</ref> &amp;</type>
+          <declname>vin</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>k</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Scale a vector by a constant: vout = vin * k </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" line="789" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" bodystart="789" bodyend="795"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__vector_1gac35b424c83c21ed112377a7831c8974b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiV4Neg</definition>
+        <argsstring>(AtHPoint &amp;vout, const AtHPoint &amp;vin)</argsstring>
+        <name>AiV4Neg</name>
+        <param>
+          <type><ref refid="struct_at_h_point" kindref="compound">AtHPoint</ref> &amp;</type>
+          <declname>vout</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_h_point" kindref="compound">AtHPoint</ref> &amp;</type>
+          <declname>vin</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Negate a vector: vout = -vin </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" line="800" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" bodystart="800" bodyend="806"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__vector_1ga81245360619b54592c2c7329869d52cf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiV4Project</definition>
+        <argsstring>(AtVector &amp;vout, const AtHPoint &amp;vin)</argsstring>
+        <name>AiV4Project</name>
+        <param>
+          <type><ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> &amp;</type>
+          <declname>vout</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_h_point" kindref="compound">AtHPoint</ref> &amp;</type>
+          <declname>vin</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Project a homogeneous vector back into 3d: vout = vin.w != 0 ? vin * (1 / vin.w) : (0,0,0) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" line="811" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" bodystart="811" bodyend="826"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Deprecated</header>
+      <memberdef kind="function" id="group__ai__vector_1ga7fbedf1c391b5d12f1420ccc2749f492" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiV2Create</definition>
+        <argsstring>(AtVector2 &amp;out, float x, float y)</argsstring>
+        <name>AiV2Create</name>
+        <param>
+          <type><ref refid="group__ai__vector_1gacc3427eeb6f63537ae2b2127348008fd" kindref="member">AtVector2</ref> &amp;</type>
+          <declname>out</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" line="834" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" bodystart="834" bodyend="838"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__vector_1gae34d5a624a0ad2c8cf3b1a0159516e9a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiV2Add</definition>
+        <argsstring>(AtVector2 &amp;out, const AtVector2 &amp;v1, const AtVector2 &amp;v2)</argsstring>
+        <name>AiV2Add</name>
+        <param>
+          <type><ref refid="group__ai__vector_1gacc3427eeb6f63537ae2b2127348008fd" kindref="member">AtVector2</ref> &amp;</type>
+          <declname>out</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__vector_1gacc3427eeb6f63537ae2b2127348008fd" kindref="member">AtVector2</ref> &amp;</type>
+          <declname>v1</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__vector_1gacc3427eeb6f63537ae2b2127348008fd" kindref="member">AtVector2</ref> &amp;</type>
+          <declname>v2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" line="840" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" bodystart="840" bodyend="843"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__vector_1gab454978fd3da7a8eec426f8b762f21f8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiV2Sub</definition>
+        <argsstring>(AtVector2 &amp;out, const AtVector2 &amp;v1, const AtVector2 &amp;v2)</argsstring>
+        <name>AiV2Sub</name>
+        <param>
+          <type><ref refid="group__ai__vector_1gacc3427eeb6f63537ae2b2127348008fd" kindref="member">AtVector2</ref> &amp;</type>
+          <declname>out</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__vector_1gacc3427eeb6f63537ae2b2127348008fd" kindref="member">AtVector2</ref> &amp;</type>
+          <declname>v1</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__vector_1gacc3427eeb6f63537ae2b2127348008fd" kindref="member">AtVector2</ref> &amp;</type>
+          <declname>v2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" line="845" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" bodystart="845" bodyend="848"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__vector_1ga1a5ea202c4bfab7b5cba7207b52f1113" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiV2Scale</definition>
+        <argsstring>(AtVector2 &amp;out, const AtVector2 &amp;v1, float k)</argsstring>
+        <name>AiV2Scale</name>
+        <param>
+          <type><ref refid="group__ai__vector_1gacc3427eeb6f63537ae2b2127348008fd" kindref="member">AtVector2</ref> &amp;</type>
+          <declname>out</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__vector_1gacc3427eeb6f63537ae2b2127348008fd" kindref="member">AtVector2</ref> &amp;</type>
+          <declname>v1</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>k</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" line="850" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" bodystart="850" bodyend="853"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__vector_1gad2fff25bf41ae1f93f2b5a8a77fb2464" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiV2Lerp</definition>
+        <argsstring>(AtVector2 &amp;out, float t, const AtVector2 &amp;lo, const AtVector2 &amp;hi)</argsstring>
+        <name>AiV2Lerp</name>
+        <param>
+          <type><ref refid="group__ai__vector_1gacc3427eeb6f63537ae2b2127348008fd" kindref="member">AtVector2</ref> &amp;</type>
+          <declname>out</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>t</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__vector_1gacc3427eeb6f63537ae2b2127348008fd" kindref="member">AtVector2</ref> &amp;</type>
+          <declname>lo</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__vector_1gacc3427eeb6f63537ae2b2127348008fd" kindref="member">AtVector2</ref> &amp;</type>
+          <declname>hi</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" line="855" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" bodystart="855" bodyend="858"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__vector_1gaf667d975aafdc7127fe4c8499009f676" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiV2Clamp</definition>
+        <argsstring>(AtVector2 &amp;out, const AtVector2 &amp;in, float lo, float hi)</argsstring>
+        <name>AiV2Clamp</name>
+        <param>
+          <type><ref refid="group__ai__vector_1gacc3427eeb6f63537ae2b2127348008fd" kindref="member">AtVector2</ref> &amp;</type>
+          <declname>out</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__vector_1gacc3427eeb6f63537ae2b2127348008fd" kindref="member">AtVector2</ref> &amp;</type>
+          <declname>in</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>lo</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>hi</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" line="860" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" bodystart="860" bodyend="863"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__vector_1ga4fb7f655c05f0fe99b1ef324ddb59211" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiV3Cross</definition>
+        <argsstring>(AtVector &amp;out, const AtVector &amp;a, const AtVector &amp;b)</argsstring>
+        <name>AiV3Cross</name>
+        <param>
+          <type><ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> &amp;</type>
+          <declname>out</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> &amp;</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> &amp;</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" line="864" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" bodystart="864" bodyend="867"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__vector_1ga88509bbb3d0a44700ddd044de1c975ba" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiV3Normalize</definition>
+        <argsstring>(AtVector &amp;out, const AtVector &amp;in)</argsstring>
+        <name>AiV3Normalize</name>
+        <param>
+          <type><ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> &amp;</type>
+          <declname>out</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> &amp;</type>
+          <declname>in</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" line="869" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" bodystart="869" bodyend="872"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__vector_1gac468909fda4c30b00eea5195ad6f9bc5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiV3Lerp</definition>
+        <argsstring>(AtVector &amp;out, float t, const AtVector &amp;lo, const AtVector &amp;hi)</argsstring>
+        <name>AiV3Lerp</name>
+        <param>
+          <type><ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> &amp;</type>
+          <declname>out</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>t</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> &amp;</type>
+          <declname>lo</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> &amp;</type>
+          <declname>hi</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" line="874" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" bodystart="874" bodyend="877"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__vector_1ga6ca6fbadaf4abb9a7566365de3a7a436" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiV3Min</definition>
+        <argsstring>(AtVector &amp;out, const AtVector &amp;a, const AtVector &amp;b)</argsstring>
+        <name>AiV3Min</name>
+        <param>
+          <type><ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> &amp;</type>
+          <declname>out</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> &amp;</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> &amp;</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" line="879" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" bodystart="879" bodyend="882"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__vector_1ga1f2716f094e920912f7c28706fde87a2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiV3Max</definition>
+        <argsstring>(AtVector &amp;out, const AtVector &amp;a, const AtVector &amp;b)</argsstring>
+        <name>AiV3Max</name>
+        <param>
+          <type><ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> &amp;</type>
+          <declname>out</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> &amp;</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> &amp;</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" line="884" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" bodystart="884" bodyend="887"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__vector_1gacf771b63da7087f970c6db694c0d4c14" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiV3Clamp</definition>
+        <argsstring>(AtVector &amp;out, const AtVector &amp;in, float lo, float hi)</argsstring>
+        <name>AiV3Clamp</name>
+        <param>
+          <type><ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> &amp;</type>
+          <declname>out</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> &amp;</type>
+          <declname>in</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>lo</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>hi</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" line="889" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" bodystart="889" bodyend="892"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__vector_1gad72f7a2ba2890c3cf25df3f58598fe1c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiBerpXYZ</definition>
+        <argsstring>(float a, float b, const AtVector &amp;p0, const AtVector &amp;p1, const AtVector &amp;p2, AtVector &amp;out)</argsstring>
+        <name>AiBerpXYZ</name>
+        <param>
+          <type>float</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> &amp;</type>
+          <declname>p0</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> &amp;</type>
+          <declname>p1</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> &amp;</type>
+          <declname>p2</declname>
+        </param>
+        <param>
+          <type><ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> &amp;</type>
+          <declname>out</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" line="894" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" bodystart="894" bodyend="897"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__vector_1gafc56676f247b9e71f9892dad747c29da" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiV3Create</definition>
+        <argsstring>(AtVector &amp;vout, float x, float y, float z)</argsstring>
+        <name>AiV3Create</name>
+        <param>
+          <type><ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> &amp;</type>
+          <declname>vout</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>z</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" line="899" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" bodystart="899" bodyend="904"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__vector_1ga15fb0e656bb69ef59b7e6d383ebe832f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiV3Copy</definition>
+        <argsstring>(AtVector &amp;vout, const AtVector &amp;vin)</argsstring>
+        <name>AiV3Copy</name>
+        <param>
+          <type><ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> &amp;</type>
+          <declname>vout</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> &amp;</type>
+          <declname>vin</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" line="906" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" bodystart="906" bodyend="909"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__vector_1gaa02cb610c2896f7a736fc993dc867327" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiV3Add</definition>
+        <argsstring>(AtVector &amp;vout, const AtVector &amp;v1, const AtVector &amp;v2)</argsstring>
+        <name>AiV3Add</name>
+        <param>
+          <type><ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> &amp;</type>
+          <declname>vout</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> &amp;</type>
+          <declname>v1</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> &amp;</type>
+          <declname>v2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" line="911" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" bodystart="911" bodyend="914"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__vector_1ga1421d050adc26519cb4879ca63ddb65f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiV3Sub</definition>
+        <argsstring>(AtVector &amp;vout, const AtVector &amp;v1, const AtVector &amp;v2)</argsstring>
+        <name>AiV3Sub</name>
+        <param>
+          <type><ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> &amp;</type>
+          <declname>vout</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> &amp;</type>
+          <declname>v1</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> &amp;</type>
+          <declname>v2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" line="916" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" bodystart="916" bodyend="919"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__vector_1ga2ed1e7e8b259fef481bc4c45dd8a499a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiV3AddScalar</definition>
+        <argsstring>(AtVector &amp;vout, const AtVector &amp;vin, float k)</argsstring>
+        <name>AiV3AddScalar</name>
+        <param>
+          <type><ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> &amp;</type>
+          <declname>vout</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> &amp;</type>
+          <declname>vin</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>k</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" line="921" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" bodystart="921" bodyend="924"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__vector_1ga66f19c885639fe58843b9fd13ac70779" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiV3SubScalar</definition>
+        <argsstring>(AtVector &amp;vout, const AtVector &amp;vin, float k)</argsstring>
+        <name>AiV3SubScalar</name>
+        <param>
+          <type><ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> &amp;</type>
+          <declname>vout</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> &amp;</type>
+          <declname>vin</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>k</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" line="926" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" bodystart="926" bodyend="929"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__vector_1ga6ea7e6fc565a484509f9b200251dd63d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiV3Scale</definition>
+        <argsstring>(AtVector &amp;vout, const AtVector &amp;vin, float k)</argsstring>
+        <name>AiV3Scale</name>
+        <param>
+          <type><ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> &amp;</type>
+          <declname>vout</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> &amp;</type>
+          <declname>vin</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>k</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" line="931" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" bodystart="931" bodyend="934"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__vector_1ga023e230eca94219c3c562b14c578e139" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiV3Neg</definition>
+        <argsstring>(AtVector &amp;vout, const AtVector &amp;vin)</argsstring>
+        <name>AiV3Neg</name>
+        <param>
+          <type><ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> &amp;</type>
+          <declname>vout</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> &amp;</type>
+          <declname>vin</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" line="936" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" bodystart="936" bodyend="939"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__vector_1ga7bccc2e1420869319dc88392177eb3be" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiV3Invert</definition>
+        <argsstring>(AtVector &amp;vout, const AtVector &amp;vin)</argsstring>
+        <name>AiV3Invert</name>
+        <param>
+          <type><ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> &amp;</type>
+          <declname>vout</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> &amp;</type>
+          <declname>vin</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" line="941" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" bodystart="941" bodyend="946"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__vector_1ga00eaa0134d634c7da0eedc20fd33e36f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiV3Mult</definition>
+        <argsstring>(AtVector &amp;vout, const AtVector &amp;v1, const AtVector &amp;v2)</argsstring>
+        <name>AiV3Mult</name>
+        <param>
+          <type><ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> &amp;</type>
+          <declname>vout</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> &amp;</type>
+          <declname>v1</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> &amp;</type>
+          <declname>v2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" line="948" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" bodystart="948" bodyend="951"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__vector_1gab02a0eda9c1bf9004b33fe406a4255ea" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiV3Div</definition>
+        <argsstring>(AtVector &amp;vout, const AtVector &amp;v1, const AtVector &amp;v2)</argsstring>
+        <name>AiV3Div</name>
+        <param>
+          <type><ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> &amp;</type>
+          <declname>vout</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> &amp;</type>
+          <declname>v1</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> &amp;</type>
+          <declname>v2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" line="953" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" bodystart="953" bodyend="956"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__vector_1gadfed17ce4b189eb3b7a6e6dbb0c801f1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiV3Midpoint</definition>
+        <argsstring>(AtPoint &amp;pout, const AtVector &amp;v1, const AtVector &amp;v2)</argsstring>
+        <name>AiV3Midpoint</name>
+        <param>
+          <type><ref refid="struct_at_point" kindref="compound">AtPoint</ref> &amp;</type>
+          <declname>pout</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> &amp;</type>
+          <declname>v1</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> &amp;</type>
+          <declname>v2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" line="958" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" bodystart="958" bodyend="961"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__vector_1ga2a8dec697c99f6f5afa8c0cd7674b750" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiV3ProjectPointOnLine</definition>
+        <argsstring>(AtPoint &amp;pout, const AtPoint &amp;o, const AtVector &amp;dir, const AtPoint &amp;p)</argsstring>
+        <name>AiV3ProjectPointOnLine</name>
+        <param>
+          <type><ref refid="struct_at_point" kindref="compound">AtPoint</ref> &amp;</type>
+          <declname>pout</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_point" kindref="compound">AtPoint</ref> &amp;</type>
+          <declname>o</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> &amp;</type>
+          <declname>dir</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_point" kindref="compound">AtPoint</ref> &amp;</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" line="963" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" bodystart="963" bodyend="966"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__vector_1gaa1881c77993bb32e754f42455626fc2d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiV3RayPoint</definition>
+        <argsstring>(AtPoint &amp;pout, const AtPoint &amp;origin, const AtVector &amp;dir, double t)</argsstring>
+        <name>AiV3RayPoint</name>
+        <param>
+          <type><ref refid="struct_at_point" kindref="compound">AtPoint</ref> &amp;</type>
+          <declname>pout</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_point" kindref="compound">AtPoint</ref> &amp;</type>
+          <declname>origin</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> &amp;</type>
+          <declname>dir</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" line="968" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" bodystart="968" bodyend="973"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Constants</header>
+      <memberdef kind="variable" id="group__ai__vector_1ga2f190f8914a0f8a3fa746f2934cadd3d" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_at_point" kindref="compound">AtPoint</ref></type>
+        <definition>AtPoint AI_P3_ZERO</definition>
+        <argsstring></argsstring>
+        <name>AI_P3_ZERO</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" line="981" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" bodystart="981" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__ai__vector_1ga51d27f1c2c3f48762077b9791e7d02b8" prot="public" static="no" mutable="no">
+        <type><ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref></type>
+        <definition>AtVector AI_V3_ZERO</definition>
+        <argsstring></argsstring>
+        <name>AI_V3_ZERO</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" line="982" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" bodystart="982" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__ai__vector_1ga9b4e360f346ee24f548c072876f97e79" prot="public" static="no" mutable="no">
+        <type><ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref></type>
+        <definition>AtVector AI_V3_HALF</definition>
+        <argsstring></argsstring>
+        <name>AI_V3_HALF</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" line="983" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" bodystart="983" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__ai__vector_1ga4167452d5b827d6e97e92fb437405db7" prot="public" static="no" mutable="no">
+        <type><ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref></type>
+        <definition>AtVector AI_V3_ONE</definition>
+        <argsstring></argsstring>
+        <name>AI_V3_ONE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" line="984" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" bodystart="984" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__ai__vector_1ga0e30b5d65a5d795269dcf6c4ca08bcca" prot="public" static="no" mutable="no">
+        <type><ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref></type>
+        <definition>AtVector AI_V3_X</definition>
+        <argsstring></argsstring>
+        <name>AI_V3_X</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" line="985" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" bodystart="985" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__ai__vector_1ga9210a663de3e22bf83f2ddab32f462aa" prot="public" static="no" mutable="no">
+        <type><ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref></type>
+        <definition>AtVector AI_V3_Y</definition>
+        <argsstring></argsstring>
+        <name>AI_V3_Y</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" line="986" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" bodystart="986" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__ai__vector_1gae8105b370fea3368a28f3d411c2e2200" prot="public" static="no" mutable="no">
+        <type><ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref></type>
+        <definition>AtVector AI_V3_Z</definition>
+        <argsstring></argsstring>
+        <name>AI_V3_Z</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" line="987" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" bodystart="987" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__ai__vector_1ga6e28f9ec796c25b7f39355ce7cbf5fd4" prot="public" static="no" mutable="no">
+        <type><ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref></type>
+        <definition>AtVector AI_V3_NEGX</definition>
+        <argsstring></argsstring>
+        <name>AI_V3_NEGX</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" line="988" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" bodystart="988" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__ai__vector_1ga5e42144750ed5fa736931d12a6b9385b" prot="public" static="no" mutable="no">
+        <type><ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref></type>
+        <definition>AtVector AI_V3_NEGY</definition>
+        <argsstring></argsstring>
+        <name>AI_V3_NEGY</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" line="989" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" bodystart="989" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__ai__vector_1ga5924e26ed338738d97ca8a7e4a612648" prot="public" static="no" mutable="no">
+        <type><ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref></type>
+        <definition>AtVector AI_V3_NEGZ</definition>
+        <argsstring></argsstring>
+        <name>AI_V3_NEGZ</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" line="990" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" bodystart="990" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__ai__vector_1gac2572a0c3f2e4595c03a396d736dd055" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_at_point2" kindref="compound">AtPoint2</ref></type>
+        <definition>AtPoint2 AI_P2_ZERO</definition>
+        <argsstring></argsstring>
+        <name>AI_P2_ZERO</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" line="991" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" bodystart="991" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__ai__vector_1ga15dbafda38fa3291811703326caa62a1" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_at_point2" kindref="compound">AtPoint2</ref></type>
+        <definition>AtPoint2 AI_P2_ONE</definition>
+        <argsstring></argsstring>
+        <name>AI_P2_ONE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" line="992" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" bodystart="992" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__ai__vector_1gac61f66e9e406af78d2e22b69a90ae767" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="struct_at_point" kindref="compound">AtPoint</ref></type>
+        <definition>AtPoint operator*</definition>
+        <argsstring>(float f, const AtPoint &amp;p)</argsstring>
+        <name>operator*</name>
+        <param>
+          <type>float</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_point" kindref="compound">AtPoint</ref> &amp;</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" line="214" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" bodystart="214" bodyend="217"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__vector_1gac7079ec7ac243258fc28560983e1de4d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="struct_at_point" kindref="compound">AtPoint</ref></type>
+        <definition>AtPoint operator+</definition>
+        <argsstring>(float f, const AtPoint &amp;p)</argsstring>
+        <name>operator+</name>
+        <param>
+          <type>float</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_point" kindref="compound">AtPoint</ref> &amp;</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" line="219" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" bodystart="219" bodyend="222"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__vector_1ga228b9bb5dc5c00d6de2d5e940de1f92d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="struct_at_point" kindref="compound">AtPoint</ref></type>
+        <definition>AtPoint operator-</definition>
+        <argsstring>(float f, const AtPoint &amp;p)</argsstring>
+        <name>operator-</name>
+        <param>
+          <type>float</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_point" kindref="compound">AtPoint</ref> &amp;</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" line="224" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" bodystart="224" bodyend="231"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__vector_1gaae226a0648c79bdc65fbeaba6cbdd7a9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="struct_at_point2" kindref="compound">AtPoint2</ref></type>
+        <definition>AtPoint2 operator*</definition>
+        <argsstring>(float f, const AtPoint2 &amp;p)</argsstring>
+        <name>operator*</name>
+        <param>
+          <type>float</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_point2" kindref="compound">AtPoint2</ref> &amp;</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" line="402" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" bodystart="402" bodyend="405"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__vector_1gab7e17635803e7fbd91171f1cd7863390" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="struct_at_point2" kindref="compound">AtPoint2</ref></type>
+        <definition>AtPoint2 operator+</definition>
+        <argsstring>(float f, const AtPoint2 &amp;p)</argsstring>
+        <name>operator+</name>
+        <param>
+          <type>float</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_point2" kindref="compound">AtPoint2</ref> &amp;</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" line="407" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" bodystart="407" bodyend="410"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__vector_1gaf3673552225db4ce8e96c43a9eb01222" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="struct_at_point2" kindref="compound">AtPoint2</ref></type>
+        <definition>AtPoint2 operator-</definition>
+        <argsstring>(float f, const AtPoint2 &amp;p)</argsstring>
+        <name>operator-</name>
+        <param>
+          <type>float</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_point2" kindref="compound">AtPoint2</ref> &amp;</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" line="412" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" bodystart="412" bodyend="418"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This module contains vector math types and vector utilities. There are two equivalent definitions of the basic 3D vector type (<computeroutput><ref refid="struct_at_point" kindref="compound">AtPoint</ref></computeroutput>, and <computeroutput>AtVector</computeroutput>). </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="struct_at_texture_handle" kind="struct" language="C++" prot="public">
+    <compoundname>AtTextureHandle</compoundname>
+    <includes refid="ai__texture_8h" local="no">ai_texture.h</includes>
+    <briefdescription>
+<para>Structure that holds a handle for a given texture. </para>    </briefdescription>
+    <detaileddescription>
+<para>texture handles can be created through <ref refid="group__ai__texture_1ga15e62494655eb0f0165ed1f2cf1e4fbe" kindref="member">AiTextureHandleCreate</ref> and destroyed with <ref refid="group__ai__texture_1ga6094f1e45109323770188353c9f8753c" kindref="member">AiTextureHandleDestroy</ref>. Texture&apos;s accesses can be done with <ref refid="group__ai__texture_1ga0dcb66514d0e86125174fabb210dd7df" kindref="member">AiTextureHandleAccess</ref>, which is faster than <ref refid="group__ai__texture_1ga07b633a45cabf55ec383d260d42e7132" kindref="member">AiTextureAccess</ref>. </para>    </detaileddescription>
+    <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_texture.h" line="82" column="1"/>
+    <listofallmembers>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

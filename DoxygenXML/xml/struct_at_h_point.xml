@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="struct_at_h_point" kind="struct" language="C++" prot="public">
+    <compoundname>AtHPoint</compoundname>
+    <includes refid="ai__vector_8h" local="no">ai_vector.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_at_h_point_1a43af1509a57ea11baebd484ec646745e" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float AtHPoint::x</definition>
+        <argsstring></argsstring>
+        <name>x</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" line="425" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" bodystart="425" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_h_point_1a82bbd939c63e8bcca389909976ccde37" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float AtHPoint::y</definition>
+        <argsstring></argsstring>
+        <name>y</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" line="425" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" bodystart="425" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_h_point_1a65e963e25d7b26bf352a449a305f6bbe" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float AtHPoint::z</definition>
+        <argsstring></argsstring>
+        <name>z</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" line="425" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" bodystart="425" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_h_point_1ae66f4818068c1d202dc9a1ccdbd40005" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float AtHPoint::w</definition>
+        <argsstring></argsstring>
+        <name>w</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" line="425" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" bodystart="425" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Homogeneous point </para>    </detaileddescription>
+    <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" line="424" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_vector.h" bodystart="423" bodyend="426"/>
+    <listofallmembers>
+      <member refid="struct_at_h_point_1ae66f4818068c1d202dc9a1ccdbd40005" prot="public" virt="non-virtual"><scope>AtHPoint</scope><name>w</name></member>
+      <member refid="struct_at_h_point_1a43af1509a57ea11baebd484ec646745e" prot="public" virt="non-virtual"><scope>AtHPoint</scope><name>x</name></member>
+      <member refid="struct_at_h_point_1a82bbd939c63e8bcca389909976ccde37" prot="public" virt="non-virtual"><scope>AtHPoint</scope><name>y</name></member>
+      <member refid="struct_at_h_point_1a65e963e25d7b26bf352a449a305f6bbe" prot="public" virt="non-virtual"><scope>AtHPoint</scope><name>z</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

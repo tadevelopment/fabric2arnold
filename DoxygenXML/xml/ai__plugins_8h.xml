@@ -1,0 +1,147 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="ai__plugins_8h" kind="file" language="C++">
+    <compoundname>ai_plugins.h</compoundname>
+    <includes refid="ai__api_8h" local="yes">ai_api.h</includes>
+    <includes refid="ai__types_8h" local="yes">ai_types.h</includes>
+    <includes refid="ai__version_8h" local="yes">ai_version.h</includes>
+    <includedby refid="ai_8h" local="yes">ai.h</includedby>
+    <incdepgraph>
+      <node id="488">
+        <label>ai_constants.h</label>
+        <link refid="ai__constants_8h"/>
+      </node>
+      <node id="486">
+        <label>ai_api.h</label>
+        <link refid="ai__api_8h"/>
+      </node>
+      <node id="485">
+        <label>ai_plugins.h</label>
+        <link refid="ai_plugins.h"/>
+        <childnode refid="486" relation="include">
+        </childnode>
+        <childnode refid="487" relation="include">
+        </childnode>
+        <childnode refid="491" relation="include">
+        </childnode>
+      </node>
+      <node id="489">
+        <label>cmath</label>
+      </node>
+      <node id="491">
+        <label>ai_version.h</label>
+        <link refid="ai__version_8h"/>
+        <childnode refid="486" relation="include">
+        </childnode>
+      </node>
+      <node id="487">
+        <label>ai_types.h</label>
+        <link refid="ai__types_8h"/>
+        <childnode refid="486" relation="include">
+        </childnode>
+        <childnode refid="488" relation="include">
+        </childnode>
+        <childnode refid="489" relation="include">
+        </childnode>
+        <childnode refid="490" relation="include">
+        </childnode>
+      </node>
+      <node id="490">
+        <label>cstdlib</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="492">
+        <label>ai_plugins.h</label>
+        <link refid="ai_plugins.h"/>
+        <childnode refid="493" relation="include">
+        </childnode>
+      </node>
+      <node id="493">
+        <label>ai.h</label>
+        <link refid="ai_8h"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="struct_at_node_lib" prot="public">AtNodeLib</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="ai__plugins_8h_1afc1be0f8f11e27528e2acb0033c54411" prot="public" static="no">
+        <name>AI_DLL_EXPORT</name>
+        <initializer>__attribute__ ((visibility(&quot;default&quot;)))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_plugins.h" line="19" column="10" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_plugins.h" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__plugins_1ga95e724cd6a8385c2cea8d7fddc3a5d28" prot="public" static="no">
+        <name>AI_EXPORT_LIB</name>
+        <initializer><ref refid="ai__api_8h_1a0b01885d4a528f7ff9551bdf5e4f4b23" kindref="member">AI_EXTERN_C</ref> <ref refid="ai__plugins_8h_1afc1be0f8f11e27528e2acb0033c54411" kindref="member">AI_DLL_EXPORT</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Used by dynamically-linked nodes to export the entry-point function </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_plugins.h" line="29" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_plugins.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group__ai__plugins_1ga50bdc00513112f4b542b6fb6f31e01ed" prot="public" static="no">
+        <type>struct <ref refid="struct_at_node_lib" kindref="compound">AtNodeLib</ref></type>
+        <definition>typedef struct AtNodeLib  AtNodeLib</definition>
+        <argsstring></argsstring>
+        <name>AtNodeLib</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Used by dynamically-linked nodes to return node info </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_plugins.h" line="40" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__ai__plugins_1ga1ecb52123de963ecbe422df3423a8540" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiLoadPlugins</definition>
+        <argsstring>(const char *directory)</argsstring>
+        <name>AiLoadPlugins</name>
+        <param>
+          <type>const char *</type>
+          <declname>directory</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_plugins.h" line="42" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__plugins_1ga70dae3af262eebefb261d5a8cafefbb4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiLoadPlugin</definition>
+        <argsstring>(const char *path)</argsstring>
+        <name>AiLoadPlugin</name>
+        <param>
+          <type>const char *</type>
+          <declname>path</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_plugins.h" line="43" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Runtime loading of plugin nodes </para>    </detaileddescription>
+    <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_plugins.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="struct_at_volume_data" kind="struct" language="C++" prot="public">
+    <compoundname>AtVolumeData</compoundname>
+    <includes refid="ai__volume_8h" local="no">ai_volume.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_at_volume_data_1a0805689e7b5b71f23aa9fa31f1bb189f" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* AtVolumeData::private_info</definition>
+        <argsstring></argsstring>
+        <name>private_info</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Volume plugin private data, used how the plugin likes </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_volume.h" line="48" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_volume.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_volume_data_1ada54142b4079ea0f8209402375c219af" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_at_b_box" kindref="compound">AtBBox</ref></type>
+        <definition>AtBBox AtVolumeData::bbox</definition>
+        <argsstring></argsstring>
+        <name>bbox</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Bounding box for this volume </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_volume.h" line="49" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_volume.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_volume_data_1a4a0487825b597d857757d6c16d8386bd" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float AtVolumeData::auto_step_size</definition>
+        <argsstring></argsstring>
+        <name>auto_step_size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Recommended step size for ray marching through this data </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_volume.h" line="50" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_volume.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Volume data, as returned by <ref refid="group__ai__volumes_1gacc9b10f81897f73f6639d766710a5d5d" kindref="member">AtVolumePluginCreateVolume</ref> </para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="101">
+        <label>AtBBox</label>
+        <link refid="struct_at_b_box"/>
+        <childnode refid="102" relation="usage">
+          <edgelabel>min</edgelabel>
+          <edgelabel>max</edgelabel>
+        </childnode>
+      </node>
+      <node id="102">
+        <label>AtPoint</label>
+        <link refid="struct_at_point"/>
+      </node>
+      <node id="100">
+        <label>AtVolumeData</label>
+        <link refid="struct_at_volume_data"/>
+        <childnode refid="101" relation="usage">
+          <edgelabel>bbox</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_volume.h" line="47" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_volume.h" bodystart="46" bodyend="51"/>
+    <listofallmembers>
+      <member refid="struct_at_volume_data_1a4a0487825b597d857757d6c16d8386bd" prot="public" virt="non-virtual"><scope>AtVolumeData</scope><name>auto_step_size</name></member>
+      <member refid="struct_at_volume_data_1ada54142b4079ea0f8209402375c219af" prot="public" virt="non-virtual"><scope>AtVolumeData</scope><name>bbox</name></member>
+      <member refid="struct_at_volume_data_1a0805689e7b5b71f23aa9fa31f1bb189f" prot="public" virt="non-virtual"><scope>AtVolumeData</scope><name>private_info</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

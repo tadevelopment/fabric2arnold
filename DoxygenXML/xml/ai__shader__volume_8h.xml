@@ -1,0 +1,466 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="ai__shader__volume_8h" kind="file" language="C++">
+    <compoundname>ai_shader_volume.h</compoundname>
+    <includes refid="ai__color_8h" local="yes">ai_color.h</includes>
+    <includes refid="ai__vector_8h" local="yes">ai_vector.h</includes>
+    <includes refid="ai__api_8h" local="yes">ai_api.h</includes>
+    <includedby refid="ai_8h" local="yes">ai.h</includedby>
+    <incdepgraph>
+      <node id="677">
+        <label>ai_constants.h</label>
+        <link refid="ai__constants_8h"/>
+      </node>
+      <node id="676">
+        <label>ai_api.h</label>
+        <link refid="ai__api_8h"/>
+      </node>
+      <node id="678">
+        <label>cmath</label>
+      </node>
+      <node id="673">
+        <label>ai_shader_volume.h</label>
+        <link refid="ai_shader_volume.h"/>
+        <childnode refid="674" relation="include">
+        </childnode>
+        <childnode refid="680" relation="include">
+        </childnode>
+        <childnode refid="676" relation="include">
+        </childnode>
+      </node>
+      <node id="680">
+        <label>ai_vector.h</label>
+        <link refid="ai__vector_8h"/>
+        <childnode refid="677" relation="include">
+        </childnode>
+        <childnode refid="675" relation="include">
+        </childnode>
+        <childnode refid="676" relation="include">
+        </childnode>
+        <childnode refid="681" relation="include">
+        </childnode>
+      </node>
+      <node id="675">
+        <label>ai_types.h</label>
+        <link refid="ai__types_8h"/>
+        <childnode refid="676" relation="include">
+        </childnode>
+        <childnode refid="677" relation="include">
+        </childnode>
+        <childnode refid="678" relation="include">
+        </childnode>
+        <childnode refid="679" relation="include">
+        </childnode>
+      </node>
+      <node id="674">
+        <label>ai_color.h</label>
+        <link refid="ai__color_8h"/>
+        <childnode refid="675" relation="include">
+        </childnode>
+        <childnode refid="677" relation="include">
+        </childnode>
+        <childnode refid="676" relation="include">
+        </childnode>
+      </node>
+      <node id="681">
+        <label>math.h</label>
+      </node>
+      <node id="679">
+        <label>cstdlib</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="682">
+        <label>ai_shader_volume.h</label>
+        <link refid="ai_shader_volume.h"/>
+        <childnode refid="683" relation="include">
+        </childnode>
+      </node>
+      <node id="683">
+        <label>ai.h</label>
+        <link refid="ai_8h"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="user-defined">
+      <header>Volume sampling</header>
+      <description><para>These macros are used to retrieve volume channel values from within volume shaders.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>_channel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of data channel in the volume node </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>_interp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Volume interpolation quality, one of <computeroutput>AI_VOLUME_INTERP_*</computeroutput> </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">_val</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Resulting sampled value at the shader globals position </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if sampling was successful</para></simplesect>
+Please refer to <ref refid="ai__shader__volume_8h" kindref="compound">ai_shader_volume.h</ref> for a description of the volume sampling functions called by these macros. </para></description>
+      <memberdef kind="define" id="group__ai__shader__volume_1ga3abc042f6e006953734011da3e5e0cdb" prot="public" static="no">
+        <name>AiVolumeSampleFlt</name>
+        <param><defname>_channel</defname></param>
+        <param><defname>_interp</defname></param>
+        <param><defname>_val</defname></param>
+        <initializer><ref refid="group__ai__shader__volume_1gab0255348c0e23e0d229f9d5e637f0399" kindref="member">AiVolumeSampleFltFunc</ref> (_channel, sg, _interp, _val)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_volume.h" line="39" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_volume.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__shader__volume_1gae8fdb9374cfae9106c44a036949c282d" prot="public" static="no">
+        <name>AiVolumeSampleRGB</name>
+        <param><defname>_channel</defname></param>
+        <param><defname>_interp</defname></param>
+        <param><defname>_val</defname></param>
+        <initializer><ref refid="group__ai__shader__volume_1ga6148c2a40524dc1401d1484e9ce9c79d" kindref="member">AiVolumeSampleRGBFunc</ref> (_channel, sg, _interp, _val)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_volume.h" line="40" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_volume.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__shader__volume_1gaf33a6321486064db42b39df6d61c5f45" prot="public" static="no">
+        <name>AiVolumeSampleRGBA</name>
+        <param><defname>_channel</defname></param>
+        <param><defname>_interp</defname></param>
+        <param><defname>_val</defname></param>
+        <initializer><ref refid="group__ai__shader__volume_1ga9b93ff1f973873bcbd8f0a79febecea3" kindref="member">AiVolumeSampleRGBAFunc</ref>(_channel, sg, _interp, _val)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_volume.h" line="41" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_volume.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__shader__volume_1gaf71a54f2fa569dff03719f6090e8b924" prot="public" static="no">
+        <name>AiVolumeSampleVec</name>
+        <param><defname>_channel</defname></param>
+        <param><defname>_interp</defname></param>
+        <param><defname>_val</defname></param>
+        <initializer><ref refid="group__ai__shader__volume_1ga407830c4dff9320d0ba7c31bc17796ba" kindref="member">AiVolumeSampleVecFunc</ref> (_channel, sg, _interp, _val)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_volume.h" line="42" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_volume.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__shader__volume_1gac2cb5340b8be54b0c6aad41cb946da3e" prot="public" static="no">
+        <name>AiVolumeSamplePnt</name>
+        <param><defname>_channel</defname></param>
+        <param><defname>_interp</defname></param>
+        <param><defname>_val</defname></param>
+        <initializer><ref refid="group__ai__shader__volume_1ga7fd117ddc7dd4836cb470a9a4f158aa7" kindref="member">AiVolumeSamplePntFunc</ref> (_channel, sg, _interp, _val)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_volume.h" line="43" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_volume.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__shader__volume_1ga18a7f6602140963964c1536bb1aa5029" prot="public" static="no">
+        <name>AiVolumeSamplePnt2</name>
+        <param><defname>_channel</defname></param>
+        <param><defname>_interp</defname></param>
+        <param><defname>_val</defname></param>
+        <initializer><ref refid="group__ai__shader__volume_1gab17dc62d07d185933cff1cef9a7e1f25" kindref="member">AiVolumeSamplePnt2Func</ref>(_channel, sg, _interp, _val)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_volume.h" line="44" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_volume.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__ai__shader__volume_1gab0255348c0e23e0d229f9d5e637f0399" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiVolumeSampleFltFunc</definition>
+        <argsstring>(const char *channel, const AtShaderGlobals *sg, int interp, float *value)</argsstring>
+        <name>AiVolumeSampleFltFunc</name>
+        <param>
+          <type>const char *</type>
+          <declname>channel</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>interp</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_volume.h" line="47" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__volume_1ga6148c2a40524dc1401d1484e9ce9c79d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiVolumeSampleRGBFunc</definition>
+        <argsstring>(const char *channel, const AtShaderGlobals *sg, int interp, AtRGB *value)</argsstring>
+        <name>AiVolumeSampleRGBFunc</name>
+        <param>
+          <type>const char *</type>
+          <declname>channel</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>interp</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_at_r_g_b" kindref="compound">AtRGB</ref> *</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_volume.h" line="48" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__volume_1ga9b93ff1f973873bcbd8f0a79febecea3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiVolumeSampleRGBAFunc</definition>
+        <argsstring>(const char *channel, const AtShaderGlobals *sg, int interp, AtRGBA *value)</argsstring>
+        <name>AiVolumeSampleRGBAFunc</name>
+        <param>
+          <type>const char *</type>
+          <declname>channel</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>interp</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_at_r_g_b_a" kindref="compound">AtRGBA</ref> *</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_volume.h" line="49" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__volume_1ga407830c4dff9320d0ba7c31bc17796ba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiVolumeSampleVecFunc</definition>
+        <argsstring>(const char *channel, const AtShaderGlobals *sg, int interp, AtVector *value)</argsstring>
+        <name>AiVolumeSampleVecFunc</name>
+        <param>
+          <type>const char *</type>
+          <declname>channel</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>interp</declname>
+        </param>
+        <param>
+          <type><ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> *</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_volume.h" line="50" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__volume_1ga7fd117ddc7dd4836cb470a9a4f158aa7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiVolumeSamplePntFunc</definition>
+        <argsstring>(const char *channel, const AtShaderGlobals *sg, int interp, AtPoint *value)</argsstring>
+        <name>AiVolumeSamplePntFunc</name>
+        <param>
+          <type>const char *</type>
+          <declname>channel</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>interp</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_at_point" kindref="compound">AtPoint</ref> *</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_volume.h" line="51" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__volume_1gab17dc62d07d185933cff1cef9a7e1f25" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiVolumeSamplePnt2Func</definition>
+        <argsstring>(const char *channel, const AtShaderGlobals *sg, int interp, AtPoint2 *value)</argsstring>
+        <name>AiVolumeSamplePnt2Func</name>
+        <param>
+          <type>const char *</type>
+          <declname>channel</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>interp</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_at_point2" kindref="compound">AtPoint2</ref> *</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_volume.h" line="52" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__volume_1gadb45a216c4f10881f1bea88f1e55af98" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiShaderGlobalsSetVolumeAbsorption</definition>
+        <argsstring>(const AtShaderGlobals *sg, const AtRGB &amp;absorption)</argsstring>
+        <name>AiShaderGlobalsSetVolumeAbsorption</name>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_r_g_b" kindref="compound">AtRGB</ref> &amp;</type>
+          <declname>absorption</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_volume.h" line="54" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__volume_1ga318ab14834a3aa4240ed59767ebb4359" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiShaderGlobalsSetVolumeAttenuation</definition>
+        <argsstring>(const AtShaderGlobals *sg, const AtRGB &amp;attenuation)</argsstring>
+        <name>AiShaderGlobalsSetVolumeAttenuation</name>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_r_g_b" kindref="compound">AtRGB</ref> &amp;</type>
+          <declname>attenuation</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_volume.h" line="55" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__volume_1ga031e01caa136ffd564dced2972bf4413" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiShaderGlobalsSetVolumeEmission</definition>
+        <argsstring>(const AtShaderGlobals *sg, const AtRGB &amp;emission)</argsstring>
+        <name>AiShaderGlobalsSetVolumeEmission</name>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_r_g_b" kindref="compound">AtRGB</ref> &amp;</type>
+          <declname>emission</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_volume.h" line="56" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__volume_1gae8c1e1189e5d7eafe6446dd0b4477895" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiShaderGlobalsSetVolumeScattering</definition>
+        <argsstring>(const AtShaderGlobals *sg, const AtRGB &amp;scattering, float g=0.f)</argsstring>
+        <name>AiShaderGlobalsSetVolumeScattering</name>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_r_g_b" kindref="compound">AtRGB</ref> &amp;</type>
+          <declname>scattering</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>g</declname>
+          <defval>0.f</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_volume.h" line="57" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Volume functions for shaders </para>    </detaileddescription>
+    <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_volume.h"/>
+  </compounddef>
+</doxygen>

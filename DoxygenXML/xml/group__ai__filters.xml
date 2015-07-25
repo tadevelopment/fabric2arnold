@@ -1,0 +1,1139 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="group__ai__filters" kind="group">
+    <compoundname>ai_filters</compoundname>
+    <title>Pixel Sample Filter Nodes</title>
+    <innerclass refid="struct_at_filter_node_methods" prot="public">AtFilterNodeMethods</innerclass>
+      <sectiondef kind="user-defined">
+      <header>Node Method Declarations</header>
+      <memberdef kind="define" id="group__ai__filters_1ga51be8b24f90ffc8897a45a500874bdac" prot="public" static="no">
+        <name>filter_output_type</name>
+        <initializer>static <ref refid="group__ai__types_1ga41f7f394ad3ef67901cce4d05bdabf89" kindref="member">AtByte</ref> FilterOutputType(const <ref refid="struct_at_node" kindref="compound">AtNode</ref>* node, const <ref refid="union_at_param_value" kindref="compound">AtParamValue</ref>* params, <ref refid="group__ai__types_1ga41f7f394ad3ef67901cce4d05bdabf89" kindref="member">AtByte</ref> input_type)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Filter&apos;s filter_output_type method declaration</para><para>This function describes how a pixel sample filter will map a particular input type to an output type. For example, if a filter is asked to filter an Integer AOV, then the filter might decide to convert the integers to floats first and then output a float containing the filtered values. Most filters&apos; &quot;output&quot; type will match their &quot;input&quot; type. The system will use this information to ensure that a filter is only connected to an output driver which can write the filter&apos;s output type.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>node</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The filter node </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>params</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The filter node&apos;s parameters array </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>input_type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A particular input type (e.g. <computeroutput>AI_TYPE_RGB</computeroutput>, AI_TYPE_FLOAT, etc) </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>returns the output type of this filter for a given input type </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_filters.h" line="76" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_filters.h" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__filters_1ga758ca445ffc642feed4e7a2b856b22c3" prot="public" static="no">
+        <name>filter_pixel</name>
+        <initializer>static void FilterPixel(<ref refid="struct_at_node" kindref="compound">AtNode</ref>* node, <ref refid="union_at_param_value" kindref="compound">AtParamValue</ref>* params, AtAOVSampleIterator* iterator, void* data_out, <ref refid="group__ai__types_1ga41f7f394ad3ef67901cce4d05bdabf89" kindref="member">AtByte</ref> data_type)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Filter&apos;s filter_pixel method declaration</para><para>This function peforms pixel filtering. Generally, this function will contain a loop which iterates over all the samples of the primary AOV which are contained in this pixel.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>node</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The filter node </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>params</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The filter node&apos;s parameter list </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>iterator</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An iterator which the filter uses to iterate over all the samples of the primary AOV for the current pixel. The user advances to the next sample by calling <ref refid="group__ai__filters_1ga3fc3ffb146b96950753bcced5c02d39b" kindref="member">AiAOVSampleIteratorGetNext()</ref>. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data_out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to where the filter writes the filtered pixel output. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data_type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>This contains the data-type of the primary AOV. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_filters.h" line="93" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_filters.h" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>API Methods for Filter Writers</header>
+      <memberdef kind="function" id="group__ai__filters_1ga66d36cd0e0e99f27bfdf81ad824fa0af" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiFilterInitialize</definition>
+        <argsstring>(AtNode *node, bool requires_depth, const char **required_aovs, void *data)</argsstring>
+        <name>AiFilterInitialize</name>
+        <param>
+          <type><ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>requires_depth</declname>
+        </param>
+        <param>
+          <type>const char **</type>
+          <declname>required_aovs</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_filters.h" line="102" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__filters_1ga1e9789c31b0bae2291d8e41ccfa76894" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiFilterUpdate</definition>
+        <argsstring>(AtNode *node, float width)</argsstring>
+        <name>AiFilterUpdate</name>
+        <param>
+          <type><ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>width</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_filters.h" line="103" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__filters_1gaa5deeea4b88cac8a65001954a20fe16d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiFilterDestroy</definition>
+        <argsstring>(AtNode *node)</argsstring>
+        <name>AiFilterDestroy</name>
+        <param>
+          <type><ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_filters.h" line="104" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__filters_1ga9af09d0be04ba4082956503303c41f68" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void *</type>
+        <definition>void* AiFilterGetLocalData</definition>
+        <argsstring>(const AtNode *node)</argsstring>
+        <name>AiFilterGetLocalData</name>
+        <param>
+          <type>const <ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_filters.h" line="105" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>API Methods to Loop over Samples</header>
+      <memberdef kind="function" id="group__ai__filters_1gac314bf17c7d1585d286537ff0f1a8510" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiAOVSampleIteratorInitPixel</definition>
+        <argsstring>(AtAOVSampleIterator *iter, int x, int y)</argsstring>
+        <name>AiAOVSampleIteratorInitPixel</name>
+        <param>
+          <type>AtAOVSampleIterator *</type>
+          <declname>iter</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_filters.h" line="112" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__filters_1ga8b5450edd6f724bdb8ebd48c1b2b10fa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiAOVSampleIteratorReset</definition>
+        <argsstring>(AtAOVSampleIterator *iter)</argsstring>
+        <name>AiAOVSampleIteratorReset</name>
+        <param>
+          <type>AtAOVSampleIterator *</type>
+          <declname>iter</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_filters.h" line="113" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__filters_1ga3fc3ffb146b96950753bcced5c02d39b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiAOVSampleIteratorGetNext</definition>
+        <argsstring>(AtAOVSampleIterator *iter)</argsstring>
+        <name>AiAOVSampleIteratorGetNext</name>
+        <param>
+          <type>AtAOVSampleIterator *</type>
+          <declname>iter</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_filters.h" line="114" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__filters_1gac0d2430ffd1fedb1bd0fea3b84f843f4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiAOVSampleIteratorGetNextDepth</definition>
+        <argsstring>(AtAOVSampleIterator *iter)</argsstring>
+        <name>AiAOVSampleIteratorGetNextDepth</name>
+        <param>
+          <type>AtAOVSampleIterator *</type>
+          <declname>iter</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_filters.h" line="115" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__filters_1gaaf9a5cf708b8778046436bf0c32a9aa7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_at_point2" kindref="compound">AtPoint2</ref></type>
+        <definition>AtPoint2 AiAOVSampleIteratorGetOffset</definition>
+        <argsstring>(const AtAOVSampleIterator *iter)</argsstring>
+        <name>AiAOVSampleIteratorGetOffset</name>
+        <param>
+          <type>const AtAOVSampleIterator *</type>
+          <declname>iter</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_filters.h" line="116" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__filters_1ga88b3a68f4ca66820077f28b33e462542" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float AiAOVSampleIteratorGetInvDensity</definition>
+        <argsstring>(const AtAOVSampleIterator *iter)</argsstring>
+        <name>AiAOVSampleIteratorGetInvDensity</name>
+        <param>
+          <type>const AtAOVSampleIterator *</type>
+          <declname>iter</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_filters.h" line="117" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__filters_1gadad1cc1db1815c8e51094571522b554b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int AiAOVSampleIteratorGetDepth</definition>
+        <argsstring>(const AtAOVSampleIterator *iter)</argsstring>
+        <name>AiAOVSampleIteratorGetDepth</name>
+        <param>
+          <type>const AtAOVSampleIterator *</type>
+          <declname>iter</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_filters.h" line="118" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__filters_1gaa1fbf09fa24db2f13cbd5aedb8c4e59a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiAOVSampleIteratorHasValue</definition>
+        <argsstring>(const AtAOVSampleIterator *iter)</argsstring>
+        <name>AiAOVSampleIteratorHasValue</name>
+        <param>
+          <type>const AtAOVSampleIterator *</type>
+          <declname>iter</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_filters.h" line="119" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__filters_1gaac4d417362b7f9ae5e8c79d69f7bc3db" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiAOVSampleIteratorHasAOVValue</definition>
+        <argsstring>(const AtAOVSampleIterator *iter, const char *name, AtByte type)</argsstring>
+        <name>AiAOVSampleIteratorHasAOVValue</name>
+        <param>
+          <type>const AtAOVSampleIterator *</type>
+          <declname>iter</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type><ref refid="group__ai__types_1ga41f7f394ad3ef67901cce4d05bdabf89" kindref="member">AtByte</ref></type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_filters.h" line="120" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>API Methods to Get Sample Value from Iterator</header>
+      <memberdef kind="function" id="group__ai__filters_1gaadf0172608020394b9246f395fba37b5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiAOVSampleIteratorGetBool</definition>
+        <argsstring>(const AtAOVSampleIterator *iter)</argsstring>
+        <name>AiAOVSampleIteratorGetBool</name>
+        <param>
+          <type>const AtAOVSampleIterator *</type>
+          <declname>iter</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_filters.h" line="127" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__filters_1gad980e7bdcadade37e61e811b315fe34b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int AiAOVSampleIteratorGetInt</definition>
+        <argsstring>(const AtAOVSampleIterator *iter)</argsstring>
+        <name>AiAOVSampleIteratorGetInt</name>
+        <param>
+          <type>const AtAOVSampleIterator *</type>
+          <declname>iter</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_filters.h" line="128" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__filters_1ga5caa1652652f31c6c46c95a81f41da42" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float AiAOVSampleIteratorGetFlt</definition>
+        <argsstring>(const AtAOVSampleIterator *iter)</argsstring>
+        <name>AiAOVSampleIteratorGetFlt</name>
+        <param>
+          <type>const AtAOVSampleIterator *</type>
+          <declname>iter</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_filters.h" line="129" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__filters_1gaee02063b09900856003456784ba833a7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_at_r_g_b" kindref="compound">AtRGB</ref></type>
+        <definition>AtRGB AiAOVSampleIteratorGetRGB</definition>
+        <argsstring>(const AtAOVSampleIterator *iter)</argsstring>
+        <name>AiAOVSampleIteratorGetRGB</name>
+        <param>
+          <type>const AtAOVSampleIterator *</type>
+          <declname>iter</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_filters.h" line="130" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__filters_1ga4da9f383da44b47679226dc5a0151df2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_at_r_g_b_a" kindref="compound">AtRGBA</ref></type>
+        <definition>AtRGBA AiAOVSampleIteratorGetRGBA</definition>
+        <argsstring>(const AtAOVSampleIterator *iter)</argsstring>
+        <name>AiAOVSampleIteratorGetRGBA</name>
+        <param>
+          <type>const AtAOVSampleIterator *</type>
+          <declname>iter</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_filters.h" line="131" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__filters_1ga3caf44a0bdd8ca7b793c2c0bf3121b71" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref></type>
+        <definition>AtVector AiAOVSampleIteratorGetVec</definition>
+        <argsstring>(const AtAOVSampleIterator *iter)</argsstring>
+        <name>AiAOVSampleIteratorGetVec</name>
+        <param>
+          <type>const AtAOVSampleIterator *</type>
+          <declname>iter</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_filters.h" line="132" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__filters_1ga55e478ec63ef9ca33a1803cab99239b5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_at_point" kindref="compound">AtPoint</ref></type>
+        <definition>AtPoint AiAOVSampleIteratorGetPnt</definition>
+        <argsstring>(const AtAOVSampleIterator *iter)</argsstring>
+        <name>AiAOVSampleIteratorGetPnt</name>
+        <param>
+          <type>const AtAOVSampleIterator *</type>
+          <declname>iter</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_filters.h" line="133" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__filters_1ga4a2fd0d46ef768e65b136d3482a24f72" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_at_point2" kindref="compound">AtPoint2</ref></type>
+        <definition>AtPoint2 AiAOVSampleIteratorGetPnt2</definition>
+        <argsstring>(const AtAOVSampleIterator *iter)</argsstring>
+        <name>AiAOVSampleIteratorGetPnt2</name>
+        <param>
+          <type>const AtAOVSampleIterator *</type>
+          <declname>iter</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_filters.h" line="134" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__filters_1ga11e4400fe04fc56501a4766bb39c7dfa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const void *</type>
+        <definition>const void* AiAOVSampleIteratorGetPtr</definition>
+        <argsstring>(const AtAOVSampleIterator *iter)</argsstring>
+        <name>AiAOVSampleIteratorGetPtr</name>
+        <param>
+          <type>const AtAOVSampleIterator *</type>
+          <declname>iter</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_filters.h" line="135" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>API Methods to Get Sample Value from Iterator for an Arbitrary AOV</header>
+      <memberdef kind="function" id="group__ai__filters_1ga4a287c394b7351ee00b1bf0ab49956de" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DEPRECATED bool</type>
+        <definition>DEPRECATED bool AiAOVSampleIteratorGetAOVBool</definition>
+        <argsstring>(const AtAOVSampleIterator *iter, const char *name)</argsstring>
+        <name>AiAOVSampleIteratorGetAOVBool</name>
+        <param>
+          <type>const AtAOVSampleIterator *</type>
+          <declname>iter</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_filters.h" line="150" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__filters_1ga388810f9ef19e40a5500a413c2aa0a1f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiAOVSampleIteratorGetAOVBoolAtString</definition>
+        <argsstring>(const AtAOVSampleIterator *iter, const AtString name)</argsstring>
+        <name>AiAOVSampleIteratorGetAOVBoolAtString</name>
+        <param>
+          <type>const AtAOVSampleIterator *</type>
+          <declname>iter</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_filters.h" line="150" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__filters_1ga845fd1a98bdb54cfe806628dc19e9646" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiAOVSampleIteratorGetAOVBool</definition>
+        <argsstring>(const AtAOVSampleIterator *iter, const AtString name)</argsstring>
+        <name>AiAOVSampleIteratorGetAOVBool</name>
+        <param>
+          <type>const AtAOVSampleIterator *</type>
+          <declname>iter</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_filters.h" line="150" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_filters.h" bodystart="150" bodyend="150"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__filters_1ga4f9f93cd025dff019c4f79259f7dda8b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DEPRECATED int</type>
+        <definition>DEPRECATED int AiAOVSampleIteratorGetAOVInt</definition>
+        <argsstring>(const AtAOVSampleIterator *iter, const char *name)</argsstring>
+        <name>AiAOVSampleIteratorGetAOVInt</name>
+        <param>
+          <type>const AtAOVSampleIterator *</type>
+          <declname>iter</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_filters.h" line="151" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__filters_1ga974ff27668d1835384d71a607f1d902f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int AiAOVSampleIteratorGetAOVIntAtString</definition>
+        <argsstring>(const AtAOVSampleIterator *iter, const AtString name)</argsstring>
+        <name>AiAOVSampleIteratorGetAOVIntAtString</name>
+        <param>
+          <type>const AtAOVSampleIterator *</type>
+          <declname>iter</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_filters.h" line="151" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__filters_1ga08a7f735324479ba27433da943e70ba1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int AiAOVSampleIteratorGetAOVInt</definition>
+        <argsstring>(const AtAOVSampleIterator *iter, const AtString name)</argsstring>
+        <name>AiAOVSampleIteratorGetAOVInt</name>
+        <param>
+          <type>const AtAOVSampleIterator *</type>
+          <declname>iter</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_filters.h" line="151" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_filters.h" bodystart="151" bodyend="151"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__filters_1ga94611c818e830783b0c23840de4a6d44" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DEPRECATED float</type>
+        <definition>DEPRECATED float AiAOVSampleIteratorGetAOVFlt</definition>
+        <argsstring>(const AtAOVSampleIterator *iter, const char *name)</argsstring>
+        <name>AiAOVSampleIteratorGetAOVFlt</name>
+        <param>
+          <type>const AtAOVSampleIterator *</type>
+          <declname>iter</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_filters.h" line="152" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__filters_1ga17bc4736f06d20cd77253ef5a028fe6e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float AiAOVSampleIteratorGetAOVFltAtString</definition>
+        <argsstring>(const AtAOVSampleIterator *iter, const AtString name)</argsstring>
+        <name>AiAOVSampleIteratorGetAOVFltAtString</name>
+        <param>
+          <type>const AtAOVSampleIterator *</type>
+          <declname>iter</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_filters.h" line="152" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__filters_1ga3fa3b7e106d5c89040bfad41a5d7c6ac" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float AiAOVSampleIteratorGetAOVFlt</definition>
+        <argsstring>(const AtAOVSampleIterator *iter, const AtString name)</argsstring>
+        <name>AiAOVSampleIteratorGetAOVFlt</name>
+        <param>
+          <type>const AtAOVSampleIterator *</type>
+          <declname>iter</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_filters.h" line="152" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_filters.h" bodystart="152" bodyend="152"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__filters_1ga71a47439cf057bc32544e86c2fa2e299" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DEPRECATED <ref refid="struct_at_r_g_b" kindref="compound">AtRGB</ref></type>
+        <definition>DEPRECATED AtRGB AiAOVSampleIteratorGetAOVRGB</definition>
+        <argsstring>(const AtAOVSampleIterator *iter, const char *name)</argsstring>
+        <name>AiAOVSampleIteratorGetAOVRGB</name>
+        <param>
+          <type>const AtAOVSampleIterator *</type>
+          <declname>iter</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_filters.h" line="153" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__filters_1gad9e0c627c34a51e9a1326a69641024cf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_at_r_g_b" kindref="compound">AtRGB</ref></type>
+        <definition>AtRGB AiAOVSampleIteratorGetAOVRGBAtString</definition>
+        <argsstring>(const AtAOVSampleIterator *iter, const AtString name)</argsstring>
+        <name>AiAOVSampleIteratorGetAOVRGBAtString</name>
+        <param>
+          <type>const AtAOVSampleIterator *</type>
+          <declname>iter</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_filters.h" line="153" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__filters_1gac70fd0b63a767515d8eecc1134ca5c67" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="struct_at_r_g_b" kindref="compound">AtRGB</ref></type>
+        <definition>AtRGB AiAOVSampleIteratorGetAOVRGB</definition>
+        <argsstring>(const AtAOVSampleIterator *iter, const AtString name)</argsstring>
+        <name>AiAOVSampleIteratorGetAOVRGB</name>
+        <param>
+          <type>const AtAOVSampleIterator *</type>
+          <declname>iter</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_filters.h" line="153" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_filters.h" bodystart="153" bodyend="153"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__filters_1ga518f05e414c00863076f4d02934884d2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DEPRECATED <ref refid="struct_at_r_g_b_a" kindref="compound">AtRGBA</ref></type>
+        <definition>DEPRECATED AtRGBA AiAOVSampleIteratorGetAOVRGBA</definition>
+        <argsstring>(const AtAOVSampleIterator *iter, const char *name)</argsstring>
+        <name>AiAOVSampleIteratorGetAOVRGBA</name>
+        <param>
+          <type>const AtAOVSampleIterator *</type>
+          <declname>iter</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_filters.h" line="154" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__filters_1ga8fbf3fe41596834f9548e5efa025a809" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_at_r_g_b_a" kindref="compound">AtRGBA</ref></type>
+        <definition>AtRGBA AiAOVSampleIteratorGetAOVRGBAAtString</definition>
+        <argsstring>(const AtAOVSampleIterator *iter, const AtString name)</argsstring>
+        <name>AiAOVSampleIteratorGetAOVRGBAAtString</name>
+        <param>
+          <type>const AtAOVSampleIterator *</type>
+          <declname>iter</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_filters.h" line="154" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__filters_1gab009b310483042f7c8bbe5c0cff58bf4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="struct_at_r_g_b_a" kindref="compound">AtRGBA</ref></type>
+        <definition>AtRGBA AiAOVSampleIteratorGetAOVRGBA</definition>
+        <argsstring>(const AtAOVSampleIterator *iter, const AtString name)</argsstring>
+        <name>AiAOVSampleIteratorGetAOVRGBA</name>
+        <param>
+          <type>const AtAOVSampleIterator *</type>
+          <declname>iter</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_filters.h" line="154" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_filters.h" bodystart="154" bodyend="154"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__filters_1gafcb1dc5ea39cf6c40efeba34d8b95fc7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DEPRECATED <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref></type>
+        <definition>DEPRECATED AtVector AiAOVSampleIteratorGetAOVVec</definition>
+        <argsstring>(const AtAOVSampleIterator *iter, const char *name)</argsstring>
+        <name>AiAOVSampleIteratorGetAOVVec</name>
+        <param>
+          <type>const AtAOVSampleIterator *</type>
+          <declname>iter</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_filters.h" line="155" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__filters_1ga5a5ec4a89cf6b4ffdbe8244a5ff5b147" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref></type>
+        <definition>AtVector AiAOVSampleIteratorGetAOVVecAtString</definition>
+        <argsstring>(const AtAOVSampleIterator *iter, const AtString name)</argsstring>
+        <name>AiAOVSampleIteratorGetAOVVecAtString</name>
+        <param>
+          <type>const AtAOVSampleIterator *</type>
+          <declname>iter</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_filters.h" line="155" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__filters_1ga71374b05c69d7872ad0ebb1275edbad9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref></type>
+        <definition>AtVector AiAOVSampleIteratorGetAOVVec</definition>
+        <argsstring>(const AtAOVSampleIterator *iter, const AtString name)</argsstring>
+        <name>AiAOVSampleIteratorGetAOVVec</name>
+        <param>
+          <type>const AtAOVSampleIterator *</type>
+          <declname>iter</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_filters.h" line="155" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_filters.h" bodystart="155" bodyend="155"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__filters_1ga23cfe38410f674f2c6e2e2ac1aed9fcb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DEPRECATED <ref refid="struct_at_point" kindref="compound">AtPoint</ref></type>
+        <definition>DEPRECATED AtPoint AiAOVSampleIteratorGetAOVPnt</definition>
+        <argsstring>(const AtAOVSampleIterator *iter, const char *name)</argsstring>
+        <name>AiAOVSampleIteratorGetAOVPnt</name>
+        <param>
+          <type>const AtAOVSampleIterator *</type>
+          <declname>iter</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_filters.h" line="156" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__filters_1ga476f79e44f7e14dab71ec2655bc4d0b3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_at_point" kindref="compound">AtPoint</ref></type>
+        <definition>AtPoint AiAOVSampleIteratorGetAOVPntAtString</definition>
+        <argsstring>(const AtAOVSampleIterator *iter, const AtString name)</argsstring>
+        <name>AiAOVSampleIteratorGetAOVPntAtString</name>
+        <param>
+          <type>const AtAOVSampleIterator *</type>
+          <declname>iter</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_filters.h" line="156" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__filters_1ga4d3a75c849e25814b0c38fdeb7821754" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="struct_at_point" kindref="compound">AtPoint</ref></type>
+        <definition>AtPoint AiAOVSampleIteratorGetAOVPnt</definition>
+        <argsstring>(const AtAOVSampleIterator *iter, const AtString name)</argsstring>
+        <name>AiAOVSampleIteratorGetAOVPnt</name>
+        <param>
+          <type>const AtAOVSampleIterator *</type>
+          <declname>iter</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_filters.h" line="156" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_filters.h" bodystart="156" bodyend="156"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__filters_1gada9085ce7706480ebb7d18806a7417bd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DEPRECATED <ref refid="struct_at_point2" kindref="compound">AtPoint2</ref></type>
+        <definition>DEPRECATED AtPoint2 AiAOVSampleIteratorGetAOVPnt2</definition>
+        <argsstring>(const AtAOVSampleIterator *iter, const char *name)</argsstring>
+        <name>AiAOVSampleIteratorGetAOVPnt2</name>
+        <param>
+          <type>const AtAOVSampleIterator *</type>
+          <declname>iter</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_filters.h" line="157" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__filters_1gac307eb5438d1665a94b766c226ee0e80" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_at_point2" kindref="compound">AtPoint2</ref></type>
+        <definition>AtPoint2 AiAOVSampleIteratorGetAOVPnt2AtString</definition>
+        <argsstring>(const AtAOVSampleIterator *iter, const AtString name)</argsstring>
+        <name>AiAOVSampleIteratorGetAOVPnt2AtString</name>
+        <param>
+          <type>const AtAOVSampleIterator *</type>
+          <declname>iter</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_filters.h" line="157" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__filters_1ga8a839cccbc0d04ed5ba35f235b17dd86" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="struct_at_point2" kindref="compound">AtPoint2</ref></type>
+        <definition>AtPoint2 AiAOVSampleIteratorGetAOVPnt2</definition>
+        <argsstring>(const AtAOVSampleIterator *iter, const AtString name)</argsstring>
+        <name>AiAOVSampleIteratorGetAOVPnt2</name>
+        <param>
+          <type>const AtAOVSampleIterator *</type>
+          <declname>iter</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_filters.h" line="157" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_filters.h" bodystart="157" bodyend="157"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__filters_1ga16267d676cae6e34bc9934075622cffd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DEPRECATED const void *</type>
+        <definition>DEPRECATED const void* AiAOVSampleIteratorGetAOVPtr</definition>
+        <argsstring>(const AtAOVSampleIterator *iter, const char *name)</argsstring>
+        <name>AiAOVSampleIteratorGetAOVPtr</name>
+        <param>
+          <type>const AtAOVSampleIterator *</type>
+          <declname>iter</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_filters.h" line="158" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__filters_1gad746c4187e77cd11630fb8b677f92100" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const void *</type>
+        <definition>const void* AiAOVSampleIteratorGetAOVPtrAtString</definition>
+        <argsstring>(const AtAOVSampleIterator *iter, const AtString name)</argsstring>
+        <name>AiAOVSampleIteratorGetAOVPtrAtString</name>
+        <param>
+          <type>const AtAOVSampleIterator *</type>
+          <declname>iter</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_filters.h" line="158" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__filters_1gac042c9331fd6e89944d8f22fb2bd887d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>const void *</type>
+        <definition>const void* AiAOVSampleIteratorGetAOVPtr</definition>
+        <argsstring>(const AtAOVSampleIterator *iter, const AtString name)</argsstring>
+        <name>AiAOVSampleIteratorGetAOVPtr</name>
+        <param>
+          <type>const AtAOVSampleIterator *</type>
+          <declname>iter</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_filters.h" line="158" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_filters.h" bodystart="158" bodyend="158"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__filters_1gaee4ae4cb858f152908474f6d1fdeddd3" prot="public" static="no">
+        <name>AiCreateFuncs</name>
+        <param><defname>_name</defname></param>
+        <param><defname>_type</defname></param>
+        <initializer><ref refid="ai__api_8h_1a4b9d3c7c64877dda42d97f936f023a96" kindref="member">AI_API</ref> <ref refid="ai__api_8h_1a19d077fa951fe893bfc989f548855f96" kindref="member">AI_DEPRECATED</ref> <ref refid="ai__api_8h_1a77a67401ed2eadd8003f6bb2a516bcb8" kindref="member">AI_PURE</ref> _type AiAOVSampleIteratorGetAOV##<ref refid="ai__deprecated_8h_1aec321dc1beac683ff60b65608dab6c9b" kindref="member">_name</ref>          (const AtAOVSampleIterator* iter, const char* name);   \
+<ref refid="ai__api_8h_1a4b9d3c7c64877dda42d97f936f023a96" kindref="member">AI_API</ref>               <ref refid="ai__api_8h_1a77a67401ed2eadd8003f6bb2a516bcb8" kindref="member">AI_PURE</ref> _type AiAOVSampleIteratorGetAOV##<ref refid="ai__deprecated_8h_1aec321dc1beac683ff60b65608dab6c9b" kindref="member">_name</ref>##<ref refid="class_at_string" kindref="compound">AtString</ref>(const AtAOVSampleIterator* iter, const <ref refid="class_at_string" kindref="compound">AtString</ref> name);\
+inline                       _type AiAOVSampleIteratorGetAOV##<ref refid="ai__deprecated_8h_1aec321dc1beac683ff60b65608dab6c9b" kindref="member">_name</ref>          (const AtAOVSampleIterator* iter, const <ref refid="class_at_string" kindref="compound">AtString</ref> name) \
+{                                                                                                                                   \
+   return AiAOVSampleIteratorGetAOV##<ref refid="ai__deprecated_8h_1aec321dc1beac683ff60b65608dab6c9b" kindref="member">_name</ref>##<ref refid="class_at_string" kindref="compound">AtString</ref>(iter, name);                                                                   \
+}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_filters.h" line="142" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_filters.h" bodystart="142" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group__ai__filters_1gaaba64375eee93511b8196af9a22dab85" prot="public" static="no">
+        <type>struct <ref refid="struct_at_filter_node_methods" kindref="compound">AtFilterNodeMethods</ref></type>
+        <definition>typedef struct AtFilterNodeMethods  AtFilterNodeMethods</definition>
+        <argsstring></argsstring>
+        <name>AtFilterNodeMethods</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Filter Node methods structure </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_filters.h" line="39" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group__ai__filters_1ga764908fbc36660f1738ce353a4a05030" prot="public" static="no">
+        <name>AI_FILTER_NODE_EXPORT_METHODS</name>
+        <param><defname>tag</defname></param>
+        <initializer><ref refid="group__ai__nodes_1gad84d7f2f4a9b8374cba1702e81f68a64" kindref="member">AI_INSTANCE_COMMON_METHODS</ref>                      \
+<ref refid="group__ai__filters_1ga51be8b24f90ffc8897a45a500874bdac" kindref="member">filter_output_type</ref>;                             \
+<ref refid="group__ai__filters_1ga758ca445ffc642feed4e7a2b856b22c3" kindref="member">filter_pixel</ref>;                                   \
+static <ref refid="struct_at_filter_node_methods" kindref="compound">AtFilterNodeMethods</ref> ai_filter_mtds = {   \
+   FilterOutputType,                            \
+   FilterPixel                                  \
+};                                              \
+static <ref refid="struct_at_node_methods" kindref="compound">AtNodeMethods</ref> ai_node_mtds = {           \
+   &amp;ai_common_mtds,                             \
+   &amp;ai_filter_mtds                              \
+};                                              \
+<ref refid="struct_at_node_methods" kindref="compound">AtNodeMethods</ref> *tag = &amp;ai_node_mtds;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Filter Node methods exporter </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_filters.h" line="42" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_filters.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Arnold has support for pluggable sample filters. The filter will process a bucket of AOV subsamples and filter them down to a single AOV sample per pixel.</para><para>Filters operate on a &quot;primary&quot; AOV; this is the AOV which is specified on the same &quot;outputs&quot; line as where the filter is specified. However, filters can also query supporting, or auxiliary, AOVs which can assist in filtering. These are specified when a filter is initialized (see <ref refid="group__ai__filters_1ga66d36cd0e0e99f27bfdf81ad824fa0af" kindref="member">AiFilterInitialize()</ref>). </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

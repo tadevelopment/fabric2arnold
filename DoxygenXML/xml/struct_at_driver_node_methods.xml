@@ -1,0 +1,128 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="struct_at_driver_node_methods" kind="struct" language="C++" prot="public">
+    <compoundname>AtDriverNodeMethods</compoundname>
+    <includes refid="ai__drivers_8h" local="no">ai_drivers.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_at_driver_node_methods_1a52321a15fed0fb77a8af31c5c1ae9b94" prot="public" static="no" mutable="no">
+        <type>bool(*</type>
+        <definition>bool(* AtDriverNodeMethods::DriverSupportsPixelType) (const AtNode *, AtByte)</definition>
+        <argsstring>)(const AtNode *, AtByte)</argsstring>
+        <name>DriverSupportsPixelType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_drivers.h" line="43" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_drivers.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_driver_node_methods_1a5ad1359579a92cf6c164422f26c4ef0a" prot="public" static="no" mutable="no">
+        <type>const char **(*</type>
+        <definition>const char**(* AtDriverNodeMethods::DriverExtension) ()</definition>
+        <argsstring>)()</argsstring>
+        <name>DriverExtension</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_drivers.h" line="44" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_drivers.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_driver_node_methods_1a7891b821ceb5b588e236ca32bf957868" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* AtDriverNodeMethods::DriverOpen) (AtNode *, struct AtOutputIterator *, AtBBox2, AtBBox2, int)</definition>
+        <argsstring>)(AtNode *, struct AtOutputIterator *, AtBBox2, AtBBox2, int)</argsstring>
+        <name>DriverOpen</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_drivers.h" line="45" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_drivers.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_driver_node_methods_1a1f10186d921fae3c2c5fbb36e1fe254c" prot="public" static="no" mutable="no">
+        <type>bool(*</type>
+        <definition>bool(* AtDriverNodeMethods::DriverNeedsBucket) (AtNode *, int, int, int, int, int)</definition>
+        <argsstring>)(AtNode *, int, int, int, int, int)</argsstring>
+        <name>DriverNeedsBucket</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_drivers.h" line="46" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_drivers.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_driver_node_methods_1afc41d47d0e9427a3fdf3e50b940cc8c9" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* AtDriverNodeMethods::DriverPrepareBucket) (AtNode *, int, int, int, int, int)</definition>
+        <argsstring>)(AtNode *, int, int, int, int, int)</argsstring>
+        <name>DriverPrepareBucket</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_drivers.h" line="47" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_drivers.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_driver_node_methods_1ad680e1267eb1d98760f760893a792526" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* AtDriverNodeMethods::DriverProcessBucket) (AtNode *, struct AtOutputIterator *, struct AtAOVSampleIterator *, int, int, int, int, int)</definition>
+        <argsstring>)(AtNode *, struct AtOutputIterator *, struct AtAOVSampleIterator *, int, int, int, int, int)</argsstring>
+        <name>DriverProcessBucket</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_drivers.h" line="48" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_drivers.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_driver_node_methods_1a69dcc1da998b9043f450edd2881f6ce8" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* AtDriverNodeMethods::DriverWriteBucket) (AtNode *, struct AtOutputIterator *, struct AtAOVSampleIterator *, int, int, int, int)</definition>
+        <argsstring>)(AtNode *, struct AtOutputIterator *, struct AtAOVSampleIterator *, int, int, int, int)</argsstring>
+        <name>DriverWriteBucket</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_drivers.h" line="49" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_drivers.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_driver_node_methods_1a7a0d8f25f2b3ee3258a959dca2a33e4a" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* AtDriverNodeMethods::DriverClose) (AtNode *, struct AtOutputIterator *)</definition>
+        <argsstring>)(AtNode *, struct AtOutputIterator *)</argsstring>
+        <name>DriverClose</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_drivers.h" line="50" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_drivers.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Driver Node methods structure </para>    </detaileddescription>
+    <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_drivers.h" line="42" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_drivers.h" bodystart="42" bodyend="51"/>
+    <listofallmembers>
+      <member refid="struct_at_driver_node_methods_1a7a0d8f25f2b3ee3258a959dca2a33e4a" prot="public" virt="non-virtual"><scope>AtDriverNodeMethods</scope><name>DriverClose</name></member>
+      <member refid="struct_at_driver_node_methods_1a5ad1359579a92cf6c164422f26c4ef0a" prot="public" virt="non-virtual"><scope>AtDriverNodeMethods</scope><name>DriverExtension</name></member>
+      <member refid="struct_at_driver_node_methods_1a1f10186d921fae3c2c5fbb36e1fe254c" prot="public" virt="non-virtual"><scope>AtDriverNodeMethods</scope><name>DriverNeedsBucket</name></member>
+      <member refid="struct_at_driver_node_methods_1a7891b821ceb5b588e236ca32bf957868" prot="public" virt="non-virtual"><scope>AtDriverNodeMethods</scope><name>DriverOpen</name></member>
+      <member refid="struct_at_driver_node_methods_1afc41d47d0e9427a3fdf3e50b940cc8c9" prot="public" virt="non-virtual"><scope>AtDriverNodeMethods</scope><name>DriverPrepareBucket</name></member>
+      <member refid="struct_at_driver_node_methods_1ad680e1267eb1d98760f760893a792526" prot="public" virt="non-virtual"><scope>AtDriverNodeMethods</scope><name>DriverProcessBucket</name></member>
+      <member refid="struct_at_driver_node_methods_1a52321a15fed0fb77a8af31c5c1ae9b94" prot="public" virt="non-virtual"><scope>AtDriverNodeMethods</scope><name>DriverSupportsPixelType</name></member>
+      <member refid="struct_at_driver_node_methods_1a69dcc1da998b9043f450edd2881f6ce8" prot="public" virt="non-virtual"><scope>AtDriverNodeMethods</scope><name>DriverWriteBucket</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

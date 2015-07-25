@@ -1,0 +1,2355 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="ai__shader__message_8h" kind="file" language="C++">
+    <compoundname>ai_shader_message.h</compoundname>
+    <includes refid="ai__array_8h" local="yes">ai_array.h</includes>
+    <includes refid="ai__color_8h" local="yes">ai_color.h</includes>
+    <includes refid="ai__string_8h" local="yes">ai_string.h</includes>
+    <includes refid="ai__vector_8h" local="yes">ai_vector.h</includes>
+    <includes refid="ai__types_8h" local="yes">ai_types.h</includes>
+    <includedby refid="ai_8h" local="yes">ai.h</includedby>
+    <incdepgraph>
+      <node id="581">
+        <label>ai_constants.h</label>
+        <link refid="ai__constants_8h"/>
+      </node>
+      <node id="580">
+        <label>ai_api.h</label>
+        <link refid="ai__api_8h"/>
+      </node>
+      <node id="582">
+        <label>cmath</label>
+      </node>
+      <node id="585">
+        <label>ai_vector.h</label>
+        <link refid="ai__vector_8h"/>
+        <childnode refid="581" relation="include">
+        </childnode>
+        <childnode refid="579" relation="include">
+        </childnode>
+        <childnode refid="580" relation="include">
+        </childnode>
+        <childnode refid="586" relation="include">
+        </childnode>
+      </node>
+      <node id="579">
+        <label>ai_types.h</label>
+        <link refid="ai__types_8h"/>
+        <childnode refid="580" relation="include">
+        </childnode>
+        <childnode refid="581" relation="include">
+        </childnode>
+        <childnode refid="582" relation="include">
+        </childnode>
+        <childnode refid="583" relation="include">
+        </childnode>
+      </node>
+      <node id="577">
+        <label>ai_array.h</label>
+        <link refid="ai__array_8h"/>
+        <childnode refid="578" relation="include">
+        </childnode>
+        <childnode refid="584" relation="include">
+        </childnode>
+        <childnode refid="585" relation="include">
+        </childnode>
+        <childnode refid="579" relation="include">
+        </childnode>
+        <childnode refid="580" relation="include">
+        </childnode>
+      </node>
+      <node id="578">
+        <label>ai_color.h</label>
+        <link refid="ai__color_8h"/>
+        <childnode refid="579" relation="include">
+        </childnode>
+        <childnode refid="581" relation="include">
+        </childnode>
+        <childnode refid="580" relation="include">
+        </childnode>
+      </node>
+      <node id="586">
+        <label>math.h</label>
+      </node>
+      <node id="583">
+        <label>cstdlib</label>
+      </node>
+      <node id="576">
+        <label>ai_shader_message.h</label>
+        <link refid="ai_shader_message.h"/>
+        <childnode refid="577" relation="include">
+        </childnode>
+        <childnode refid="578" relation="include">
+        </childnode>
+        <childnode refid="587" relation="include">
+        </childnode>
+        <childnode refid="585" relation="include">
+        </childnode>
+        <childnode refid="579" relation="include">
+        </childnode>
+      </node>
+      <node id="584">
+        <label>ai_matrix.h</label>
+        <link refid="ai__matrix_8h"/>
+        <childnode refid="585" relation="include">
+        </childnode>
+        <childnode refid="580" relation="include">
+        </childnode>
+      </node>
+      <node id="587">
+        <label>ai_string.h</label>
+        <link refid="ai__string_8h"/>
+        <childnode refid="580" relation="include">
+        </childnode>
+        <childnode refid="579" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="588">
+        <label>ai_shader_message.h</label>
+        <link refid="ai_shader_message.h"/>
+        <childnode refid="589" relation="include">
+        </childnode>
+      </node>
+      <node id="589">
+        <label>ai.h</label>
+        <link refid="ai_8h"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="user-defined">
+      <header>Message Retrieval Macros</header>
+      <description><para>These macros allow a shader to retrieve messages which have been written to the message bank. If the named message does not exist (has not been written yet?), then false is returned. Otherwise, true indicates a successful read.</para><para>Please refer to <ref refid="ai__shader__message_8h" kindref="compound">ai_shader_message.h</ref> for a description of the message-reading functions called by these macros. </para></description>
+      <memberdef kind="define" id="group__ai__shader__message_1gac3de96fc49ad151a0e51f46165ba8a80" prot="public" static="no">
+        <name>AiStateGetMsgByte</name>
+        <param><defname>name</defname></param>
+        <param><defname>val</defname></param>
+        <initializer><ref refid="ai__shader__message_8h_1aaf99c00483bcaef4ec9371b4a10fe32b" kindref="member">AiMessageGetByteFunc</ref> (sg,name,val)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" line="55" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__shader__message_1ga17395251f58dca1ab07a08fb4cf7f2ec" prot="public" static="no">
+        <name>AiStateGetMsgBool</name>
+        <param><defname>name</defname></param>
+        <param><defname>val</defname></param>
+        <initializer><ref refid="ai__shader__message_8h_1a73d23e0546ccb6e9a0f1b47dc1f0ed81" kindref="member">AiMessageGetBoolFunc</ref> (sg,name,val)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" line="56" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__shader__message_1ga3f6faaabbb613221a230a51729566d78" prot="public" static="no">
+        <name>AiStateGetMsgInt</name>
+        <param><defname>name</defname></param>
+        <param><defname>val</defname></param>
+        <initializer><ref refid="ai__shader__message_8h_1a1a9309486f326303c19fb042f2575f8a" kindref="member">AiMessageGetIntFunc</ref>  (sg,name,val)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" line="57" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__shader__message_1gadcea1640014f50051484ce8d7b6bf64e" prot="public" static="no">
+        <name>AiStateGetMsgUInt</name>
+        <param><defname>name</defname></param>
+        <param><defname>val</defname></param>
+        <initializer><ref refid="ai__shader__message_8h_1a9b2a2f1030a30aaffc4fb84549fa32cd" kindref="member">AiMessageGetUIntFunc</ref> (sg,name,val)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" line="58" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__shader__message_1ga3e3b4640da414d273ed8d3d4257bf178" prot="public" static="no">
+        <name>AiStateGetMsgFlt</name>
+        <param><defname>name</defname></param>
+        <param><defname>val</defname></param>
+        <initializer><ref refid="ai__shader__message_8h_1a0e7cdb7417674c929c99614de6773266" kindref="member">AiMessageGetFltFunc</ref>  (sg,name,val)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" line="59" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__shader__message_1ga23b0262f5f980cfc321f98d850b19107" prot="public" static="no">
+        <name>AiStateGetMsgRGB</name>
+        <param><defname>name</defname></param>
+        <param><defname>val</defname></param>
+        <initializer><ref refid="ai__shader__message_8h_1a8653470419b49be5f1f841ecbe259a9c" kindref="member">AiMessageGetRGBFunc</ref>  (sg,name,val)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" line="60" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__shader__message_1ga9388c76592a1b0854de231a5018a8ed4" prot="public" static="no">
+        <name>AiStateGetMsgRGBA</name>
+        <param><defname>name</defname></param>
+        <param><defname>val</defname></param>
+        <initializer><ref refid="ai__shader__message_8h_1a1e5992af61347d45aecc22d01edb307d" kindref="member">AiMessageGetRGBAFunc</ref> (sg,name,val)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" line="61" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__shader__message_1ga1d3ca201475ead3351f4fa7290b2511c" prot="public" static="no">
+        <name>AiStateGetMsgVec</name>
+        <param><defname>name</defname></param>
+        <param><defname>val</defname></param>
+        <initializer><ref refid="ai__shader__message_8h_1ad3391e9bd452cce9a4fde3a9199b061a" kindref="member">AiMessageGetVecFunc</ref>  (sg,name,val)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" line="62" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__shader__message_1ga3f89b23e0c6313b7152b4e8745dfdf16" prot="public" static="no">
+        <name>AiStateGetMsgPnt</name>
+        <param><defname>name</defname></param>
+        <param><defname>val</defname></param>
+        <initializer><ref refid="ai__shader__message_8h_1a17d2e000fe43b29e60666ec3f97d3ea2" kindref="member">AiMessageGetPntFunc</ref>  (sg,name,val)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" line="63" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__shader__message_1ga7679d08d620ed552c1696d414f044dda" prot="public" static="no">
+        <name>AiStateGetMsgPnt2</name>
+        <param><defname>name</defname></param>
+        <param><defname>val</defname></param>
+        <initializer><ref refid="ai__shader__message_8h_1a4a1bb891c4ee4c4f09f88ac425a1c1a9" kindref="member">AiMessageGetPnt2Func</ref> (sg,name,val)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" line="64" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__shader__message_1ga3cb89bc4336ac92037c237b69c7ec90b" prot="public" static="no">
+        <name>AiStateGetMsgStr</name>
+        <param><defname>name</defname></param>
+        <param><defname>val</defname></param>
+        <initializer><ref refid="ai__shader__message_8h_1a2e8a78ae12e0168e0396d8cdcd92b995" kindref="member">AiMessageGetStrFunc</ref>  (sg,name,val)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" line="65" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__shader__message_1gaea425b29245182f88da2f82b9f98f61b" prot="public" static="no">
+        <name>AiStateGetMsgPtr</name>
+        <param><defname>name</defname></param>
+        <param><defname>val</defname></param>
+        <initializer><ref refid="ai__shader__message_8h_1a2b126cea4a51674327fca40462528205" kindref="member">AiMessageGetPtrFunc</ref>  (sg,name,val)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" line="66" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__shader__message_1ga6278c2a51a7540ea8abe073cbaa7aacf" prot="public" static="no">
+        <name>AiStateGetMsgArray</name>
+        <param><defname>name</defname></param>
+        <param><defname>val</defname></param>
+        <initializer><ref refid="ai__shader__message_8h_1af1bb5fd85181825d45d495b6f95678a2" kindref="member">AiMessageGetArrayFunc</ref>(sg,name,val)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" line="67" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Message Writing Macros</header>
+      <description><para>These macros allow a shader to write messages to the message bank. If the write has failed for some reason (perhaps there are already too many messages in the bank?) then false is returned. Otherwise, true indicates a successful write.</para><para>Please refer to <ref refid="ai__shader__message_8h" kindref="compound">ai_shader_message.h</ref> for a description of the message-writing functions called by these macros. </para></description>
+      <memberdef kind="define" id="group__ai__shader__message_1ga90bb2a4bd943b07f4ab2d37713739e1f" prot="public" static="no">
+        <name>AiStateSetMsgByte</name>
+        <param><defname>name</defname></param>
+        <param><defname>val</defname></param>
+        <initializer><ref refid="ai__shader__message_8h_1a941f2b8fe9d19b8197be27b2d93a8cb8" kindref="member">AiMessageSetByteFunc</ref> (sg,name,val)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" line="83" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__shader__message_1gac56d4663028ea15b66e9a9f356b537df" prot="public" static="no">
+        <name>AiStateSetMsgBool</name>
+        <param><defname>name</defname></param>
+        <param><defname>val</defname></param>
+        <initializer><ref refid="ai__shader__message_8h_1a441acf5e7dc0eb7f7139c94654c1a6ed" kindref="member">AiMessageSetBoolFunc</ref> (sg,name,val)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" line="84" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__shader__message_1ga6dec63005a6e0419c9838bb9d157abaa" prot="public" static="no">
+        <name>AiStateSetMsgInt</name>
+        <param><defname>name</defname></param>
+        <param><defname>val</defname></param>
+        <initializer><ref refid="ai__shader__message_8h_1a50e2809b225a57b53c2708cdc7c78665" kindref="member">AiMessageSetIntFunc</ref>  (sg,name,val)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" line="85" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__shader__message_1ga9b325e5cd62b256311655a5c03de4fd5" prot="public" static="no">
+        <name>AiStateSetMsgUInt</name>
+        <param><defname>name</defname></param>
+        <param><defname>val</defname></param>
+        <initializer><ref refid="ai__shader__message_8h_1a06f0bfef8b4c0346a4f929a41835843f" kindref="member">AiMessageSetUIntFunc</ref> (sg,name,val)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" line="86" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__shader__message_1gad0d0d3963ff36362ec614cb30d9e2ab3" prot="public" static="no">
+        <name>AiStateSetMsgFlt</name>
+        <param><defname>name</defname></param>
+        <param><defname>val</defname></param>
+        <initializer><ref refid="ai__shader__message_8h_1aa66165cddd141134214c78726ab1376b" kindref="member">AiMessageSetFltFunc</ref>  (sg,name,val)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" line="87" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__shader__message_1gac33b3432c4a67c085acb1787f05634ee" prot="public" static="no">
+        <name>AiStateSetMsgRGB</name>
+        <param><defname>name</defname></param>
+        <param><defname>val</defname></param>
+        <initializer><ref refid="ai__shader__message_8h_1aafcd5610f3aa17286b4d8f0a5214412d" kindref="member">AiMessageSetRGBFunc</ref>  (sg,name,val)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" line="88" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__shader__message_1gab51647ca52d6d65b34279bd90e0f5262" prot="public" static="no">
+        <name>AiStateSetMsgRGBA</name>
+        <param><defname>name</defname></param>
+        <param><defname>val</defname></param>
+        <initializer><ref refid="ai__shader__message_8h_1a6c47308820bd23a7158b9efdeab6d433" kindref="member">AiMessageSetRGBAFunc</ref> (sg,name,val)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" line="89" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__shader__message_1gaf79e63a2fdcd63f46c8df3146953e19e" prot="public" static="no">
+        <name>AiStateSetMsgVec</name>
+        <param><defname>name</defname></param>
+        <param><defname>val</defname></param>
+        <initializer><ref refid="ai__shader__message_8h_1afed3040dc52aaf745a0211583ea76e90" kindref="member">AiMessageSetVecFunc</ref>  (sg,name,val)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" line="90" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__shader__message_1gaced42ddb6a82a33a92a128b21a45a90d" prot="public" static="no">
+        <name>AiStateSetMsgPnt</name>
+        <param><defname>name</defname></param>
+        <param><defname>val</defname></param>
+        <initializer><ref refid="ai__shader__message_8h_1aad357dbf7af89c8166a2fbe68772746e" kindref="member">AiMessageSetPntFunc</ref>  (sg,name,val)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" line="91" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__shader__message_1gafea57b0eae30f82f08851ba3af0327c8" prot="public" static="no">
+        <name>AiStateSetMsgPnt2</name>
+        <param><defname>name</defname></param>
+        <param><defname>val</defname></param>
+        <initializer><ref refid="ai__shader__message_8h_1a9cd79cec6e91c52360c1cadf9123f727" kindref="member">AiMessageSetPnt2Func</ref> (sg,name,val)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" line="92" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__shader__message_1gacea3764735403606129f7853b73ffb85" prot="public" static="no">
+        <name>AiStateSetMsgStr</name>
+        <param><defname>name</defname></param>
+        <param><defname>val</defname></param>
+        <initializer><ref refid="ai__shader__message_8h_1a7ae6df9c884a23255af18a9e386d6bb7" kindref="member">AiMessageSetStrFunc</ref>  (sg,name,val)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" line="93" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__shader__message_1ga8993c53708917cdc4889f7272dc4b119" prot="public" static="no">
+        <name>AiStateSetMsgPtr</name>
+        <param><defname>name</defname></param>
+        <param><defname>val</defname></param>
+        <initializer><ref refid="ai__shader__message_8h_1ac4b7e564aa5c0faaf4747cadf0410306" kindref="member">AiMessageSetPtrFunc</ref>  (sg,name,val)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" line="94" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__shader__message_1ga67d80ddf083900031e593205ffcaa888" prot="public" static="no">
+        <name>AiStateSetMsgArray</name>
+        <param><defname>name</defname></param>
+        <param><defname>val</defname></param>
+        <initializer><ref refid="ai__shader__message_8h_1a1da0884870903488cca63c311bd052dc" kindref="member">AiMessageSetArrayFunc</ref>(sg,name,val)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" line="95" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Message Inspection Functions</header>
+      <description><para>These functions let you loop over all available messages for a given sample. This is mainly intended for debugging purposes. </para></description>
+      <memberdef kind="typedef" id="group__ai__shader__message_1gadc613869c8656beb6959a7e5dea7a10e" prot="public" static="no">
+        <type>struct <ref refid="group__ai__shader__message_1gadc613869c8656beb6959a7e5dea7a10e" kindref="member">AtMessageIterator</ref></type>
+        <definition>typedef struct AtMessageIterator AtMessageIterator</definition>
+        <argsstring></argsstring>
+        <name>AtMessageIterator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This represents a message iterator. The actual contents of this struct are private. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" line="46" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" bodystart="112" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__message_1ga306a3ce40a510fd1245f4992beae1556" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__ai__shader__message_1gadc613869c8656beb6959a7e5dea7a10e" kindref="member">AtMessageIterator</ref> *</type>
+        <definition>AtMessageIterator* AiMessageIterator</definition>
+        <argsstring>(const AtShaderGlobals *sg)</argsstring>
+        <name>AiMessageIterator</name>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" line="114" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__message_1gac8ca185f7c74ef0b681965e43461fce7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiMessageIteratorGetNext</definition>
+        <argsstring>(AtMessageIterator *iterator, const char **msg_name, int *msg_type)</argsstring>
+        <name>AiMessageIteratorGetNext</name>
+        <param>
+          <type><ref refid="group__ai__shader__message_1gadc613869c8656beb6959a7e5dea7a10e" kindref="member">AtMessageIterator</ref> *</type>
+          <declname>iterator</declname>
+        </param>
+        <param>
+          <type>const char **</type>
+          <declname>msg_name</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>msg_type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" line="115" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="ai__shader__message_8h_1af35233ba0404698b05bd545332e90b1e" prot="public" static="no">
+        <name>AiCreateFuncs</name>
+        <param><defname>_name</defname></param>
+        <param><defname>_type</defname></param>
+        <initializer><ref refid="ai__api_8h_1a4b9d3c7c64877dda42d97f936f023a96" kindref="member">AI_API</ref> <ref refid="ai__api_8h_1a19d077fa951fe893bfc989f548855f96" kindref="member">AI_DEPRECATED</ref> bool AiMessageGet##<ref refid="ai__deprecated_8h_1aec321dc1beac683ff60b65608dab6c9b" kindref="member">_name</ref>##Func         (const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref>*,    const char*,        _type*); \
+<ref refid="ai__api_8h_1a4b9d3c7c64877dda42d97f936f023a96" kindref="member">AI_API</ref>               bool AiMessageGet##<ref refid="ai__deprecated_8h_1aec321dc1beac683ff60b65608dab6c9b" kindref="member">_name</ref>##FuncAtString (const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref>*,    const <ref refid="class_at_string" kindref="compound">AtString</ref>,     _type*); \
+inline               bool AiMessageGet##<ref refid="ai__deprecated_8h_1aec321dc1beac683ff60b65608dab6c9b" kindref="member">_name</ref>##Func         (const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref>* sg, const <ref refid="class_at_string" kindref="compound">AtString</ref> str, _type* x)\
+{                                                                                                                    \
+   return AiMessageGet##<ref refid="ai__deprecated_8h_1aec321dc1beac683ff60b65608dab6c9b" kindref="member">_name</ref>##FuncAtString(sg, str, x);                                                             \
+}                                                                                                                    \
+<ref refid="ai__api_8h_1a4b9d3c7c64877dda42d97f936f023a96" kindref="member">AI_API</ref> <ref refid="ai__api_8h_1a19d077fa951fe893bfc989f548855f96" kindref="member">AI_DEPRECATED</ref> bool AiMessageSet##<ref refid="ai__deprecated_8h_1aec321dc1beac683ff60b65608dab6c9b" kindref="member">_name</ref>##Func         (<ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref>*,    const char*,        _type);  \
+<ref refid="ai__api_8h_1a4b9d3c7c64877dda42d97f936f023a96" kindref="member">AI_API</ref>               bool AiMessageSet##<ref refid="ai__deprecated_8h_1aec321dc1beac683ff60b65608dab6c9b" kindref="member">_name</ref>##FuncAtString (<ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref>*,    const <ref refid="class_at_string" kindref="compound">AtString</ref>,     _type);  \
+inline               bool AiMessageSet##<ref refid="ai__deprecated_8h_1aec321dc1beac683ff60b65608dab6c9b" kindref="member">_name</ref>##Func         (<ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref>* sg, const <ref refid="class_at_string" kindref="compound">AtString</ref> str, _type x) \
+{                                                                                                              \
+   return AiMessageSet##<ref refid="ai__deprecated_8h_1aec321dc1beac683ff60b65608dab6c9b" kindref="member">_name</ref>##FuncAtString(sg, str, x);                                                       \
+}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" line="121" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" bodystart="121" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="ai__shader__message_8h_1a0a95838ba63752d5bcdbd6f5368daff0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DEPRECATED bool</type>
+        <definition>DEPRECATED bool AiMessageGetBoolFunc</definition>
+        <argsstring>(const AtShaderGlobals *, const char *, bool *)</argsstring>
+        <name>AiMessageGetBoolFunc</name>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+        </param>
+        <param>
+          <type>const char *</type>
+        </param>
+        <param>
+          <type>bool *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" line="135" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__message_8h_1aee923457c4945354748d48833d57f3fb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiMessageGetBoolFuncAtString</definition>
+        <argsstring>(const AtShaderGlobals *, const AtString, bool *)</argsstring>
+        <name>AiMessageGetBoolFuncAtString</name>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+        </param>
+        <param>
+          <type>bool *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" line="135" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__message_8h_1a73d23e0546ccb6e9a0f1b47dc1f0ed81" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiMessageGetBoolFunc</definition>
+        <argsstring>(const AtShaderGlobals *sg, const AtString str, bool *x)</argsstring>
+        <name>AiMessageGetBoolFunc</name>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>str</declname>
+        </param>
+        <param>
+          <type>bool *</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" line="135" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" bodystart="135" bodyend="135"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__message_8h_1a31397c265824c0f616a3493414a8dca7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DEPRECATED bool</type>
+        <definition>DEPRECATED bool AiMessageSetBoolFunc</definition>
+        <argsstring>(AtShaderGlobals *, const char *, bool)</argsstring>
+        <name>AiMessageSetBoolFunc</name>
+        <param>
+          <type><ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+        </param>
+        <param>
+          <type>const char *</type>
+        </param>
+        <param>
+          <type>bool</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" line="135" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__message_8h_1a82a0bff4da21fa018fe5f173bc89fc5f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiMessageSetBoolFuncAtString</definition>
+        <argsstring>(AtShaderGlobals *, const AtString, bool)</argsstring>
+        <name>AiMessageSetBoolFuncAtString</name>
+        <param>
+          <type><ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+        </param>
+        <param>
+          <type>bool</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" line="135" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__message_8h_1a441acf5e7dc0eb7f7139c94654c1a6ed" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiMessageSetBoolFunc</definition>
+        <argsstring>(AtShaderGlobals *sg, const AtString str, bool x)</argsstring>
+        <name>AiMessageSetBoolFunc</name>
+        <param>
+          <type><ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>str</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" line="135" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" bodystart="135" bodyend="135"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__message_8h_1ad024cc79b1c8cea4861f05acdbeb4d38" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DEPRECATED bool</type>
+        <definition>DEPRECATED bool AiMessageGetByteFunc</definition>
+        <argsstring>(const AtShaderGlobals *, const char *, AtByte *)</argsstring>
+        <name>AiMessageGetByteFunc</name>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+        </param>
+        <param>
+          <type>const char *</type>
+        </param>
+        <param>
+          <type><ref refid="group__ai__types_1ga41f7f394ad3ef67901cce4d05bdabf89" kindref="member">AtByte</ref> *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" line="136" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__message_8h_1a16f291e1733b11a0c492ff601c471b89" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiMessageGetByteFuncAtString</definition>
+        <argsstring>(const AtShaderGlobals *, const AtString, AtByte *)</argsstring>
+        <name>AiMessageGetByteFuncAtString</name>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+        </param>
+        <param>
+          <type><ref refid="group__ai__types_1ga41f7f394ad3ef67901cce4d05bdabf89" kindref="member">AtByte</ref> *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" line="136" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__message_8h_1aaf99c00483bcaef4ec9371b4a10fe32b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiMessageGetByteFunc</definition>
+        <argsstring>(const AtShaderGlobals *sg, const AtString str, AtByte *x)</argsstring>
+        <name>AiMessageGetByteFunc</name>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>str</declname>
+        </param>
+        <param>
+          <type><ref refid="group__ai__types_1ga41f7f394ad3ef67901cce4d05bdabf89" kindref="member">AtByte</ref> *</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" line="136" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" bodystart="136" bodyend="136"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__message_8h_1a6e9050330070b0d5e7892f26acad3c17" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DEPRECATED bool</type>
+        <definition>DEPRECATED bool AiMessageSetByteFunc</definition>
+        <argsstring>(AtShaderGlobals *, const char *, AtByte)</argsstring>
+        <name>AiMessageSetByteFunc</name>
+        <param>
+          <type><ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+        </param>
+        <param>
+          <type>const char *</type>
+        </param>
+        <param>
+          <type><ref refid="group__ai__types_1ga41f7f394ad3ef67901cce4d05bdabf89" kindref="member">AtByte</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" line="136" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__message_8h_1aaefa2fff53bf3fca9a567bd018b3af2a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiMessageSetByteFuncAtString</definition>
+        <argsstring>(AtShaderGlobals *, const AtString, AtByte)</argsstring>
+        <name>AiMessageSetByteFuncAtString</name>
+        <param>
+          <type><ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+        </param>
+        <param>
+          <type><ref refid="group__ai__types_1ga41f7f394ad3ef67901cce4d05bdabf89" kindref="member">AtByte</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" line="136" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__message_8h_1a941f2b8fe9d19b8197be27b2d93a8cb8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiMessageSetByteFunc</definition>
+        <argsstring>(AtShaderGlobals *sg, const AtString str, AtByte x)</argsstring>
+        <name>AiMessageSetByteFunc</name>
+        <param>
+          <type><ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>str</declname>
+        </param>
+        <param>
+          <type><ref refid="group__ai__types_1ga41f7f394ad3ef67901cce4d05bdabf89" kindref="member">AtByte</ref></type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" line="136" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" bodystart="136" bodyend="136"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__message_8h_1aa9d113bece1dc3f02493e4f6e5631cd5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DEPRECATED bool</type>
+        <definition>DEPRECATED bool AiMessageGetIntFunc</definition>
+        <argsstring>(const AtShaderGlobals *, const char *, int *)</argsstring>
+        <name>AiMessageGetIntFunc</name>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+        </param>
+        <param>
+          <type>const char *</type>
+        </param>
+        <param>
+          <type>int *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" line="137" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__message_8h_1aa7a494549edf253769c213797b5dc88f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiMessageGetIntFuncAtString</definition>
+        <argsstring>(const AtShaderGlobals *, const AtString, int *)</argsstring>
+        <name>AiMessageGetIntFuncAtString</name>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+        </param>
+        <param>
+          <type>int *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" line="137" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__message_8h_1a1a9309486f326303c19fb042f2575f8a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiMessageGetIntFunc</definition>
+        <argsstring>(const AtShaderGlobals *sg, const AtString str, int *x)</argsstring>
+        <name>AiMessageGetIntFunc</name>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>str</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" line="137" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" bodystart="137" bodyend="137"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__message_8h_1a44d76f433873a3d6728d56b02057aac4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DEPRECATED bool</type>
+        <definition>DEPRECATED bool AiMessageSetIntFunc</definition>
+        <argsstring>(AtShaderGlobals *, const char *, int)</argsstring>
+        <name>AiMessageSetIntFunc</name>
+        <param>
+          <type><ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+        </param>
+        <param>
+          <type>const char *</type>
+        </param>
+        <param>
+          <type>int</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" line="137" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__message_8h_1acb546095af530d4e2cf2b0fc7014ba34" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiMessageSetIntFuncAtString</definition>
+        <argsstring>(AtShaderGlobals *, const AtString, int)</argsstring>
+        <name>AiMessageSetIntFuncAtString</name>
+        <param>
+          <type><ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+        </param>
+        <param>
+          <type>int</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" line="137" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__message_8h_1a50e2809b225a57b53c2708cdc7c78665" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiMessageSetIntFunc</definition>
+        <argsstring>(AtShaderGlobals *sg, const AtString str, int x)</argsstring>
+        <name>AiMessageSetIntFunc</name>
+        <param>
+          <type><ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>str</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" line="137" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" bodystart="137" bodyend="137"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__message_8h_1a6cc2e919d0ffdca813de4e5b3db5414f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DEPRECATED bool</type>
+        <definition>DEPRECATED bool AiMessageGetUIntFunc</definition>
+        <argsstring>(const AtShaderGlobals *, const char *, unsigned int *)</argsstring>
+        <name>AiMessageGetUIntFunc</name>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+        </param>
+        <param>
+          <type>const char *</type>
+        </param>
+        <param>
+          <type>unsigned int *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" line="138" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__message_8h_1a82ea37988f84ab3576ecb4ed1eb2ffae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiMessageGetUIntFuncAtString</definition>
+        <argsstring>(const AtShaderGlobals *, const AtString, unsigned int *)</argsstring>
+        <name>AiMessageGetUIntFuncAtString</name>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+        </param>
+        <param>
+          <type>unsigned int *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" line="138" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__message_8h_1a9b2a2f1030a30aaffc4fb84549fa32cd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiMessageGetUIntFunc</definition>
+        <argsstring>(const AtShaderGlobals *sg, const AtString str, unsigned int *x)</argsstring>
+        <name>AiMessageGetUIntFunc</name>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>str</declname>
+        </param>
+        <param>
+          <type>unsigned int *</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" line="138" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" bodystart="138" bodyend="138"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__message_8h_1a596f9cfd3eee92958995887ba1eb925c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DEPRECATED bool</type>
+        <definition>DEPRECATED bool AiMessageSetUIntFunc</definition>
+        <argsstring>(AtShaderGlobals *, const char *, unsigned int)</argsstring>
+        <name>AiMessageSetUIntFunc</name>
+        <param>
+          <type><ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+        </param>
+        <param>
+          <type>const char *</type>
+        </param>
+        <param>
+          <type>unsigned</type>
+          <declname>int</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" line="138" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__message_8h_1aac90adbc43b60b7e38f65743a8613cd7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiMessageSetUIntFuncAtString</definition>
+        <argsstring>(AtShaderGlobals *, const AtString, unsigned int)</argsstring>
+        <name>AiMessageSetUIntFuncAtString</name>
+        <param>
+          <type><ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+        </param>
+        <param>
+          <type>unsigned</type>
+          <declname>int</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" line="138" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__message_8h_1a06f0bfef8b4c0346a4f929a41835843f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiMessageSetUIntFunc</definition>
+        <argsstring>(AtShaderGlobals *sg, const AtString str, unsigned int x)</argsstring>
+        <name>AiMessageSetUIntFunc</name>
+        <param>
+          <type><ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>str</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" line="138" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" bodystart="138" bodyend="138"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__message_8h_1ad98becca4aa309cf993e40f802d70b4d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DEPRECATED bool</type>
+        <definition>DEPRECATED bool AiMessageGetFltFunc</definition>
+        <argsstring>(const AtShaderGlobals *, const char *, float *)</argsstring>
+        <name>AiMessageGetFltFunc</name>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+        </param>
+        <param>
+          <type>const char *</type>
+        </param>
+        <param>
+          <type>float *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" line="139" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__message_8h_1a72238479afe296ffc6d70954825f4e55" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiMessageGetFltFuncAtString</definition>
+        <argsstring>(const AtShaderGlobals *, const AtString, float *)</argsstring>
+        <name>AiMessageGetFltFuncAtString</name>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+        </param>
+        <param>
+          <type>float *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" line="139" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__message_8h_1a0e7cdb7417674c929c99614de6773266" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiMessageGetFltFunc</definition>
+        <argsstring>(const AtShaderGlobals *sg, const AtString str, float *x)</argsstring>
+        <name>AiMessageGetFltFunc</name>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>str</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" line="139" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" bodystart="139" bodyend="139"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__message_8h_1a1eb379ad5d799016dfdda53933591bc7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DEPRECATED bool</type>
+        <definition>DEPRECATED bool AiMessageSetFltFunc</definition>
+        <argsstring>(AtShaderGlobals *, const char *, float)</argsstring>
+        <name>AiMessageSetFltFunc</name>
+        <param>
+          <type><ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+        </param>
+        <param>
+          <type>const char *</type>
+        </param>
+        <param>
+          <type>float</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" line="139" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__message_8h_1a7bd178ec6d41a1b517cbf5a070b54ff0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiMessageSetFltFuncAtString</definition>
+        <argsstring>(AtShaderGlobals *, const AtString, float)</argsstring>
+        <name>AiMessageSetFltFuncAtString</name>
+        <param>
+          <type><ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+        </param>
+        <param>
+          <type>float</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" line="139" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__message_8h_1aa66165cddd141134214c78726ab1376b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiMessageSetFltFunc</definition>
+        <argsstring>(AtShaderGlobals *sg, const AtString str, float x)</argsstring>
+        <name>AiMessageSetFltFunc</name>
+        <param>
+          <type><ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>str</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" line="139" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" bodystart="139" bodyend="139"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__message_8h_1aff7b844fac388e8e04a5a95ea814132f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DEPRECATED bool</type>
+        <definition>DEPRECATED bool AiMessageGetRGBFunc</definition>
+        <argsstring>(const AtShaderGlobals *, const char *, AtRGB *)</argsstring>
+        <name>AiMessageGetRGBFunc</name>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+        </param>
+        <param>
+          <type>const char *</type>
+        </param>
+        <param>
+          <type><ref refid="struct_at_r_g_b" kindref="compound">AtRGB</ref> *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" line="140" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__message_8h_1a3bf9a8c664eb049fe10c8e198aa7877e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiMessageGetRGBFuncAtString</definition>
+        <argsstring>(const AtShaderGlobals *, const AtString, AtRGB *)</argsstring>
+        <name>AiMessageGetRGBFuncAtString</name>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+        </param>
+        <param>
+          <type><ref refid="struct_at_r_g_b" kindref="compound">AtRGB</ref> *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" line="140" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__message_8h_1a8653470419b49be5f1f841ecbe259a9c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiMessageGetRGBFunc</definition>
+        <argsstring>(const AtShaderGlobals *sg, const AtString str, AtRGB *x)</argsstring>
+        <name>AiMessageGetRGBFunc</name>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>str</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_at_r_g_b" kindref="compound">AtRGB</ref> *</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" line="140" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" bodystart="140" bodyend="140"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__message_8h_1a31b1f77df0b24d44dfd3030c4768c54d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DEPRECATED bool</type>
+        <definition>DEPRECATED bool AiMessageSetRGBFunc</definition>
+        <argsstring>(AtShaderGlobals *, const char *, AtRGB)</argsstring>
+        <name>AiMessageSetRGBFunc</name>
+        <param>
+          <type><ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+        </param>
+        <param>
+          <type>const char *</type>
+        </param>
+        <param>
+          <type><ref refid="struct_at_r_g_b" kindref="compound">AtRGB</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" line="140" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__message_8h_1a9a3d4861201ef6b8da59826f24326f56" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiMessageSetRGBFuncAtString</definition>
+        <argsstring>(AtShaderGlobals *, const AtString, AtRGB)</argsstring>
+        <name>AiMessageSetRGBFuncAtString</name>
+        <param>
+          <type><ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+        </param>
+        <param>
+          <type><ref refid="struct_at_r_g_b" kindref="compound">AtRGB</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" line="140" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__message_8h_1aafcd5610f3aa17286b4d8f0a5214412d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiMessageSetRGBFunc</definition>
+        <argsstring>(AtShaderGlobals *sg, const AtString str, AtRGB x)</argsstring>
+        <name>AiMessageSetRGBFunc</name>
+        <param>
+          <type><ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>str</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_at_r_g_b" kindref="compound">AtRGB</ref></type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" line="140" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" bodystart="140" bodyend="140"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__message_8h_1aeb7e7e953333e61ecbb5a445a2e3367e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DEPRECATED bool</type>
+        <definition>DEPRECATED bool AiMessageGetRGBAFunc</definition>
+        <argsstring>(const AtShaderGlobals *, const char *, AtRGBA *)</argsstring>
+        <name>AiMessageGetRGBAFunc</name>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+        </param>
+        <param>
+          <type>const char *</type>
+        </param>
+        <param>
+          <type><ref refid="struct_at_r_g_b_a" kindref="compound">AtRGBA</ref> *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" line="141" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__message_8h_1a7c92853c14bb3fef69c577278260a176" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiMessageGetRGBAFuncAtString</definition>
+        <argsstring>(const AtShaderGlobals *, const AtString, AtRGBA *)</argsstring>
+        <name>AiMessageGetRGBAFuncAtString</name>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+        </param>
+        <param>
+          <type><ref refid="struct_at_r_g_b_a" kindref="compound">AtRGBA</ref> *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" line="141" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__message_8h_1a1e5992af61347d45aecc22d01edb307d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiMessageGetRGBAFunc</definition>
+        <argsstring>(const AtShaderGlobals *sg, const AtString str, AtRGBA *x)</argsstring>
+        <name>AiMessageGetRGBAFunc</name>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>str</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_at_r_g_b_a" kindref="compound">AtRGBA</ref> *</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" line="141" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" bodystart="141" bodyend="141"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__message_8h_1afc046db9626e2c22f4eef1aa8d15edf5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DEPRECATED bool</type>
+        <definition>DEPRECATED bool AiMessageSetRGBAFunc</definition>
+        <argsstring>(AtShaderGlobals *, const char *, AtRGBA)</argsstring>
+        <name>AiMessageSetRGBAFunc</name>
+        <param>
+          <type><ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+        </param>
+        <param>
+          <type>const char *</type>
+        </param>
+        <param>
+          <type><ref refid="struct_at_r_g_b_a" kindref="compound">AtRGBA</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" line="141" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__message_8h_1a81e676194ccf1fa63e036784caf3547f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiMessageSetRGBAFuncAtString</definition>
+        <argsstring>(AtShaderGlobals *, const AtString, AtRGBA)</argsstring>
+        <name>AiMessageSetRGBAFuncAtString</name>
+        <param>
+          <type><ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+        </param>
+        <param>
+          <type><ref refid="struct_at_r_g_b_a" kindref="compound">AtRGBA</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" line="141" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__message_8h_1a6c47308820bd23a7158b9efdeab6d433" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiMessageSetRGBAFunc</definition>
+        <argsstring>(AtShaderGlobals *sg, const AtString str, AtRGBA x)</argsstring>
+        <name>AiMessageSetRGBAFunc</name>
+        <param>
+          <type><ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>str</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_at_r_g_b_a" kindref="compound">AtRGBA</ref></type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" line="141" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" bodystart="141" bodyend="141"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__message_8h_1a2f10e811589ad5307c018e42acbc8321" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DEPRECATED bool</type>
+        <definition>DEPRECATED bool AiMessageGetVecFunc</definition>
+        <argsstring>(const AtShaderGlobals *, const char *, AtVector *)</argsstring>
+        <name>AiMessageGetVecFunc</name>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+        </param>
+        <param>
+          <type>const char *</type>
+        </param>
+        <param>
+          <type><ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" line="142" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__message_8h_1a2111bbc5b6178ccb9e25ae5699238e6a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiMessageGetVecFuncAtString</definition>
+        <argsstring>(const AtShaderGlobals *, const AtString, AtVector *)</argsstring>
+        <name>AiMessageGetVecFuncAtString</name>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+        </param>
+        <param>
+          <type><ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" line="142" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__message_8h_1ad3391e9bd452cce9a4fde3a9199b061a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiMessageGetVecFunc</definition>
+        <argsstring>(const AtShaderGlobals *sg, const AtString str, AtVector *x)</argsstring>
+        <name>AiMessageGetVecFunc</name>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>str</declname>
+        </param>
+        <param>
+          <type><ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> *</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" line="142" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" bodystart="142" bodyend="142"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__message_8h_1aef286345fb53914ef5bb445c68bafaa5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DEPRECATED bool</type>
+        <definition>DEPRECATED bool AiMessageSetVecFunc</definition>
+        <argsstring>(AtShaderGlobals *, const char *, AtVector)</argsstring>
+        <name>AiMessageSetVecFunc</name>
+        <param>
+          <type><ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+        </param>
+        <param>
+          <type>const char *</type>
+        </param>
+        <param>
+          <type><ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" line="142" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__message_8h_1a90b19699c189dc213dc1ab967f4ee0f0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiMessageSetVecFuncAtString</definition>
+        <argsstring>(AtShaderGlobals *, const AtString, AtVector)</argsstring>
+        <name>AiMessageSetVecFuncAtString</name>
+        <param>
+          <type><ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+        </param>
+        <param>
+          <type><ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" line="142" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__message_8h_1afed3040dc52aaf745a0211583ea76e90" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiMessageSetVecFunc</definition>
+        <argsstring>(AtShaderGlobals *sg, const AtString str, AtVector x)</argsstring>
+        <name>AiMessageSetVecFunc</name>
+        <param>
+          <type><ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>str</declname>
+        </param>
+        <param>
+          <type><ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref></type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" line="142" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" bodystart="142" bodyend="142"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__message_8h_1a0d9790fdf429c65d6b982a9049677bf8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DEPRECATED bool</type>
+        <definition>DEPRECATED bool AiMessageGetPntFunc</definition>
+        <argsstring>(const AtShaderGlobals *, const char *, AtPoint *)</argsstring>
+        <name>AiMessageGetPntFunc</name>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+        </param>
+        <param>
+          <type>const char *</type>
+        </param>
+        <param>
+          <type><ref refid="struct_at_point" kindref="compound">AtPoint</ref> *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" line="143" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__message_8h_1a929169317763b3da64370a3efa01ebed" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiMessageGetPntFuncAtString</definition>
+        <argsstring>(const AtShaderGlobals *, const AtString, AtPoint *)</argsstring>
+        <name>AiMessageGetPntFuncAtString</name>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+        </param>
+        <param>
+          <type><ref refid="struct_at_point" kindref="compound">AtPoint</ref> *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" line="143" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__message_8h_1a17d2e000fe43b29e60666ec3f97d3ea2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiMessageGetPntFunc</definition>
+        <argsstring>(const AtShaderGlobals *sg, const AtString str, AtPoint *x)</argsstring>
+        <name>AiMessageGetPntFunc</name>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>str</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_at_point" kindref="compound">AtPoint</ref> *</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" line="143" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" bodystart="143" bodyend="143"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__message_8h_1a22d6255ce374b049445995cd32466b86" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DEPRECATED bool</type>
+        <definition>DEPRECATED bool AiMessageSetPntFunc</definition>
+        <argsstring>(AtShaderGlobals *, const char *, AtPoint)</argsstring>
+        <name>AiMessageSetPntFunc</name>
+        <param>
+          <type><ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+        </param>
+        <param>
+          <type>const char *</type>
+        </param>
+        <param>
+          <type><ref refid="struct_at_point" kindref="compound">AtPoint</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" line="143" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__message_8h_1a13f77488bc645095422ea0656d45eb55" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiMessageSetPntFuncAtString</definition>
+        <argsstring>(AtShaderGlobals *, const AtString, AtPoint)</argsstring>
+        <name>AiMessageSetPntFuncAtString</name>
+        <param>
+          <type><ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+        </param>
+        <param>
+          <type><ref refid="struct_at_point" kindref="compound">AtPoint</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" line="143" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__message_8h_1aad357dbf7af89c8166a2fbe68772746e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiMessageSetPntFunc</definition>
+        <argsstring>(AtShaderGlobals *sg, const AtString str, AtPoint x)</argsstring>
+        <name>AiMessageSetPntFunc</name>
+        <param>
+          <type><ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>str</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_at_point" kindref="compound">AtPoint</ref></type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" line="143" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" bodystart="143" bodyend="143"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__message_8h_1a2bf33a83fc769177ae1d2788625d6921" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DEPRECATED bool</type>
+        <definition>DEPRECATED bool AiMessageGetPnt2Func</definition>
+        <argsstring>(const AtShaderGlobals *, const char *, AtPoint2 *)</argsstring>
+        <name>AiMessageGetPnt2Func</name>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+        </param>
+        <param>
+          <type>const char *</type>
+        </param>
+        <param>
+          <type><ref refid="struct_at_point2" kindref="compound">AtPoint2</ref> *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" line="144" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__message_8h_1a34c3268af66827e3a60799aa650523ee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiMessageGetPnt2FuncAtString</definition>
+        <argsstring>(const AtShaderGlobals *, const AtString, AtPoint2 *)</argsstring>
+        <name>AiMessageGetPnt2FuncAtString</name>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+        </param>
+        <param>
+          <type><ref refid="struct_at_point2" kindref="compound">AtPoint2</ref> *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" line="144" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__message_8h_1a4a1bb891c4ee4c4f09f88ac425a1c1a9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiMessageGetPnt2Func</definition>
+        <argsstring>(const AtShaderGlobals *sg, const AtString str, AtPoint2 *x)</argsstring>
+        <name>AiMessageGetPnt2Func</name>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>str</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_at_point2" kindref="compound">AtPoint2</ref> *</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" line="144" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" bodystart="144" bodyend="144"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__message_8h_1ad3e48fd7f23e4596720be5e47d2bb952" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DEPRECATED bool</type>
+        <definition>DEPRECATED bool AiMessageSetPnt2Func</definition>
+        <argsstring>(AtShaderGlobals *, const char *, AtPoint2)</argsstring>
+        <name>AiMessageSetPnt2Func</name>
+        <param>
+          <type><ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+        </param>
+        <param>
+          <type>const char *</type>
+        </param>
+        <param>
+          <type><ref refid="struct_at_point2" kindref="compound">AtPoint2</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" line="144" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__message_8h_1ae4ee2c82ddad5fbff4678a01e2698e18" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiMessageSetPnt2FuncAtString</definition>
+        <argsstring>(AtShaderGlobals *, const AtString, AtPoint2)</argsstring>
+        <name>AiMessageSetPnt2FuncAtString</name>
+        <param>
+          <type><ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+        </param>
+        <param>
+          <type><ref refid="struct_at_point2" kindref="compound">AtPoint2</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" line="144" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__message_8h_1a9cd79cec6e91c52360c1cadf9123f727" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiMessageSetPnt2Func</definition>
+        <argsstring>(AtShaderGlobals *sg, const AtString str, AtPoint2 x)</argsstring>
+        <name>AiMessageSetPnt2Func</name>
+        <param>
+          <type><ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>str</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_at_point2" kindref="compound">AtPoint2</ref></type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" line="144" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" bodystart="144" bodyend="144"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__message_8h_1adf7fc1c9cca808fb905b730482ecc519" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DEPRECATED bool</type>
+        <definition>DEPRECATED bool AiMessageGetStrFunc</definition>
+        <argsstring>(const AtShaderGlobals *, const char *, const char **)</argsstring>
+        <name>AiMessageGetStrFunc</name>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+        </param>
+        <param>
+          <type>const char *</type>
+        </param>
+        <param>
+          <type>const char **</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" line="145" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__message_8h_1a47c68e41463b088bf77c49bce7e9ee5c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiMessageGetStrFuncAtString</definition>
+        <argsstring>(const AtShaderGlobals *, const AtString, const char **)</argsstring>
+        <name>AiMessageGetStrFuncAtString</name>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+        </param>
+        <param>
+          <type>const char **</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" line="145" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__message_8h_1a2e8a78ae12e0168e0396d8cdcd92b995" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiMessageGetStrFunc</definition>
+        <argsstring>(const AtShaderGlobals *sg, const AtString str, const char **x)</argsstring>
+        <name>AiMessageGetStrFunc</name>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>str</declname>
+        </param>
+        <param>
+          <type>const char **</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" line="145" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" bodystart="145" bodyend="145"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__message_8h_1aba0e9481d434f429caf4abae143e4139" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DEPRECATED bool</type>
+        <definition>DEPRECATED bool AiMessageSetStrFunc</definition>
+        <argsstring>(AtShaderGlobals *, const char *, const char *)</argsstring>
+        <name>AiMessageSetStrFunc</name>
+        <param>
+          <type><ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+        </param>
+        <param>
+          <type>const char *</type>
+        </param>
+        <param>
+          <type>const char *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" line="145" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__message_8h_1a670f70028458878b916c11db765f50c6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiMessageSetStrFuncAtString</definition>
+        <argsstring>(AtShaderGlobals *, const AtString, const char *)</argsstring>
+        <name>AiMessageSetStrFuncAtString</name>
+        <param>
+          <type><ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+        </param>
+        <param>
+          <type>const char *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" line="145" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__message_8h_1a7ae6df9c884a23255af18a9e386d6bb7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiMessageSetStrFunc</definition>
+        <argsstring>(AtShaderGlobals *sg, const AtString str, const char *x)</argsstring>
+        <name>AiMessageSetStrFunc</name>
+        <param>
+          <type><ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>str</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" line="145" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" bodystart="145" bodyend="145"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__message_8h_1a8ac776dd063659f6ff8945d34e8bc348" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DEPRECATED bool</type>
+        <definition>DEPRECATED bool AiMessageGetPtrFunc</definition>
+        <argsstring>(const AtShaderGlobals *, const char *, void **)</argsstring>
+        <name>AiMessageGetPtrFunc</name>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+        </param>
+        <param>
+          <type>const char *</type>
+        </param>
+        <param>
+          <type>void **</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" line="146" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__message_8h_1a0f8d84195422fb926ab6001a1ba4c5f1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiMessageGetPtrFuncAtString</definition>
+        <argsstring>(const AtShaderGlobals *, const AtString, void **)</argsstring>
+        <name>AiMessageGetPtrFuncAtString</name>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+        </param>
+        <param>
+          <type>void **</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" line="146" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__message_8h_1a2b126cea4a51674327fca40462528205" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiMessageGetPtrFunc</definition>
+        <argsstring>(const AtShaderGlobals *sg, const AtString str, void **x)</argsstring>
+        <name>AiMessageGetPtrFunc</name>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>str</declname>
+        </param>
+        <param>
+          <type>void **</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" line="146" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" bodystart="146" bodyend="146"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__message_8h_1a70373ec6161e64ee5571aa49ef948148" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DEPRECATED bool</type>
+        <definition>DEPRECATED bool AiMessageSetPtrFunc</definition>
+        <argsstring>(AtShaderGlobals *, const char *, void *)</argsstring>
+        <name>AiMessageSetPtrFunc</name>
+        <param>
+          <type><ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+        </param>
+        <param>
+          <type>const char *</type>
+        </param>
+        <param>
+          <type>void *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" line="146" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__message_8h_1a3ccfb8678cbfe5c3c7331757ccb54df7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiMessageSetPtrFuncAtString</definition>
+        <argsstring>(AtShaderGlobals *, const AtString, void *)</argsstring>
+        <name>AiMessageSetPtrFuncAtString</name>
+        <param>
+          <type><ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+        </param>
+        <param>
+          <type>void *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" line="146" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__message_8h_1ac4b7e564aa5c0faaf4747cadf0410306" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiMessageSetPtrFunc</definition>
+        <argsstring>(AtShaderGlobals *sg, const AtString str, void *x)</argsstring>
+        <name>AiMessageSetPtrFunc</name>
+        <param>
+          <type><ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>str</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" line="146" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" bodystart="146" bodyend="146"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__message_8h_1a58290ecd617693a7797ba2761ba17138" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DEPRECATED bool</type>
+        <definition>DEPRECATED bool AiMessageGetArrayFunc</definition>
+        <argsstring>(const AtShaderGlobals *, const char *, AtArray **)</argsstring>
+        <name>AiMessageGetArrayFunc</name>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+        </param>
+        <param>
+          <type>const char *</type>
+        </param>
+        <param>
+          <type><ref refid="struct_at_array" kindref="compound">AtArray</ref> **</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" line="147" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__message_8h_1aeb61f6e5a11ac92b294efe46b71ce3d4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiMessageGetArrayFuncAtString</definition>
+        <argsstring>(const AtShaderGlobals *, const AtString, AtArray **)</argsstring>
+        <name>AiMessageGetArrayFuncAtString</name>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+        </param>
+        <param>
+          <type><ref refid="struct_at_array" kindref="compound">AtArray</ref> **</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" line="147" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__message_8h_1af1bb5fd85181825d45d495b6f95678a2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiMessageGetArrayFunc</definition>
+        <argsstring>(const AtShaderGlobals *sg, const AtString str, AtArray **x)</argsstring>
+        <name>AiMessageGetArrayFunc</name>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>str</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_at_array" kindref="compound">AtArray</ref> **</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" line="147" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" bodystart="147" bodyend="147"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__message_8h_1a8a8b2bfc9a999f167ad9e711c9449f1a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DEPRECATED bool</type>
+        <definition>DEPRECATED bool AiMessageSetArrayFunc</definition>
+        <argsstring>(AtShaderGlobals *, const char *, AtArray *)</argsstring>
+        <name>AiMessageSetArrayFunc</name>
+        <param>
+          <type><ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+        </param>
+        <param>
+          <type>const char *</type>
+        </param>
+        <param>
+          <type><ref refid="struct_at_array" kindref="compound">AtArray</ref> *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" line="147" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__message_8h_1a09ec4efbaec983bd7afcc95fd920ece3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiMessageSetArrayFuncAtString</definition>
+        <argsstring>(AtShaderGlobals *, const AtString, AtArray *)</argsstring>
+        <name>AiMessageSetArrayFuncAtString</name>
+        <param>
+          <type><ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+        </param>
+        <param>
+          <type><ref refid="struct_at_array" kindref="compound">AtArray</ref> *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" line="147" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__message_8h_1a1da0884870903488cca63c311bd052dc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiMessageSetArrayFunc</definition>
+        <argsstring>(AtShaderGlobals *sg, const AtString str, AtArray *x)</argsstring>
+        <name>AiMessageSetArrayFunc</name>
+        <param>
+          <type><ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>str</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_at_array" kindref="compound">AtArray</ref> *</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" line="147" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h" bodystart="147" bodyend="147"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Message passing API for shader writers </para>    </detaileddescription>
+    <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_message.h"/>
+  </compounddef>
+</doxygen>

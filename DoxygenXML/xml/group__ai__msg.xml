@@ -1,0 +1,546 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="group__ai__msg" kind="group">
+    <compoundname>ai_msg</compoundname>
+    <title>Message Logging API</title>
+      <sectiondef kind="user-defined">
+      <header>Severity Codes</header>
+      <memberdef kind="define" id="group__ai__msg_1gab5949f8d2ef621037489b2f7bf49684f" prot="public" static="no">
+        <name>AI_SEVERITY_INFO</name>
+        <initializer>0x00</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>regular information message </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_msg.h" line="31" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_msg.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__msg_1ga9751b62b73855d71d0240e3b95cf5ce2" prot="public" static="no">
+        <name>AI_SEVERITY_WARNING</name>
+        <initializer>0x01</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>warning message </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_msg.h" line="32" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_msg.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__msg_1ga75e85f44052fb2528aa760a2a0744aa4" prot="public" static="no">
+        <name>AI_SEVERITY_ERROR</name>
+        <initializer>0x02</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>error message </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_msg.h" line="33" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_msg.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__msg_1ga3b8771ea35ef19d0b9c0ec75137f0b05" prot="public" static="no">
+        <name>AI_SEVERITY_FATAL</name>
+        <initializer>0x03</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>fatal error message </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_msg.h" line="34" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_msg.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Logging Flags</header>
+      <memberdef kind="define" id="group__ai__msg_1ga8a3bb774002173067560d320b04124ab" prot="public" static="no">
+        <name>AI_LOG_NONE</name>
+        <initializer>0x0000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>don&apos;t show any messages </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_msg.h" line="41" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_msg.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__msg_1ga0aa25a862e038c407b45f657ba2f6e60" prot="public" static="no">
+        <name>AI_LOG_INFO</name>
+        <initializer>0x0001</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>show all regular information messages </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_msg.h" line="42" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_msg.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__msg_1gafccea5aa3844d1d754ab1814577d8fc9" prot="public" static="no">
+        <name>AI_LOG_WARNINGS</name>
+        <initializer>0x0002</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>show warning messages </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_msg.h" line="43" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_msg.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__msg_1ga345ea109903e8c7844bf880d4634dcf4" prot="public" static="no">
+        <name>AI_LOG_ERRORS</name>
+        <initializer>0x0004</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>show error messages </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_msg.h" line="44" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_msg.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__msg_1ga6b3e6e20d613c327a5f4612e52f71d42" prot="public" static="no">
+        <name>AI_LOG_DEBUG</name>
+        <initializer>0x0008</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>show debug messages </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_msg.h" line="45" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_msg.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__msg_1ga185e4221e2b7781c6b5a4c4c0fc3ecbb" prot="public" static="no">
+        <name>AI_LOG_STATS</name>
+        <initializer>0x0010</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>show detailed render statistics </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_msg.h" line="46" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_msg.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__msg_1ga31ab2b21c997b7dacf1c57eb3cf74a4b" prot="public" static="no">
+        <name>AI_LOG_ASS_PARSE</name>
+        <initializer>0x0020</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>show .ass-file parsing details </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_msg.h" line="47" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_msg.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__msg_1ga15c5e3f7b3dbe1e76bf575cab0e71790" prot="public" static="no">
+        <name>AI_LOG_PLUGINS</name>
+        <initializer>0x0040</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>show details about plugins loaded </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_msg.h" line="48" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_msg.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__msg_1ga477cc0619456b6c33a2958a2c3602217" prot="public" static="no">
+        <name>AI_LOG_PROGRESS</name>
+        <initializer>0x0080</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>show progress messages at 5% increments while rendering </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_msg.h" line="49" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_msg.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__msg_1ga24c9e6588d8835232392ebbe9658f154" prot="public" static="no">
+        <name>AI_LOG_NAN</name>
+        <initializer>0x0100</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>show warnings for pixels with NaN&apos;s </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_msg.h" line="50" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_msg.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__msg_1gaedf6e3a4f39f133ac1441e55f04cd685" prot="public" static="no">
+        <name>AI_LOG_TIMESTAMP</name>
+        <initializer>0x0200</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>prefix messages with a timestamp (elapsed time) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_msg.h" line="51" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_msg.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__msg_1gad59d5107af1dc4f583fc30390978585b" prot="public" static="no">
+        <name>AI_LOG_BACKTRACE</name>
+        <initializer>0x0400</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>show stack contents after abnormal program termination (<computeroutput>SIGSEGV</computeroutput>, etc) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_msg.h" line="52" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_msg.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__msg_1gacec3bd3d72e1471572414b4cda1e8202" prot="public" static="no">
+        <name>AI_LOG_MEMORY</name>
+        <initializer>0x0800</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>prefix messages with current memory usage </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_msg.h" line="53" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_msg.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__msg_1ga8c58d04717814f65f633553374066c1b" prot="public" static="no">
+        <name>AI_LOG_COLOR</name>
+        <initializer>0x1000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>add colors to log messages based on severity </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_msg.h" line="54" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_msg.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__msg_1ga81f8da767ca90bcf716a00dd37f43091" prot="public" static="no">
+        <name>AI_LOG_SSS</name>
+        <initializer>0x2000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>show messages about sub-surface scattering pointclouds </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_msg.h" line="55" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_msg.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__msg_1ga2ca5b284307093f0cf0ecd867dded354" prot="public" static="no">
+        <name>AI_LOG_ALL</name>
+        <initializer>( <ref refid="group__ai__msg_1ga0aa25a862e038c407b45f657ba2f6e60" kindref="member">AI_LOG_INFO</ref>       | <ref refid="group__ai__msg_1gafccea5aa3844d1d754ab1814577d8fc9" kindref="member">AI_LOG_WARNINGS</ref>   | <ref refid="group__ai__msg_1ga345ea109903e8c7844bf880d4634dcf4" kindref="member">AI_LOG_ERRORS</ref>    | \
+   <ref refid="group__ai__msg_1ga6b3e6e20d613c327a5f4612e52f71d42" kindref="member">AI_LOG_DEBUG</ref>      | <ref refid="group__ai__msg_1ga185e4221e2b7781c6b5a4c4c0fc3ecbb" kindref="member">AI_LOG_STATS</ref>      | <ref refid="group__ai__msg_1ga15c5e3f7b3dbe1e76bf575cab0e71790" kindref="member">AI_LOG_PLUGINS</ref>   | \
+   <ref refid="group__ai__msg_1ga477cc0619456b6c33a2958a2c3602217" kindref="member">AI_LOG_PROGRESS</ref>   | <ref refid="group__ai__msg_1ga24c9e6588d8835232392ebbe9658f154" kindref="member">AI_LOG_NAN</ref>        | <ref refid="group__ai__msg_1ga31ab2b21c997b7dacf1c57eb3cf74a4b" kindref="member">AI_LOG_ASS_PARSE</ref> | \
+   <ref refid="group__ai__msg_1gaedf6e3a4f39f133ac1441e55f04cd685" kindref="member">AI_LOG_TIMESTAMP</ref>  | <ref refid="group__ai__msg_1gad59d5107af1dc4f583fc30390978585b" kindref="member">AI_LOG_BACKTRACE</ref>  | <ref refid="group__ai__msg_1gacec3bd3d72e1471572414b4cda1e8202" kindref="member">AI_LOG_MEMORY</ref>    | \
+   <ref refid="group__ai__msg_1ga8c58d04717814f65f633553374066c1b" kindref="member">AI_LOG_COLOR</ref>      | <ref refid="group__ai__msg_1ga81f8da767ca90bcf716a00dd37f43091" kindref="member">AI_LOG_SSS</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>set all flags at once </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_msg.h" line="57" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_msg.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group__ai__msg_1ga12168a9adef266f39315877a86cc4e5d" prot="public" static="no">
+        <type>void(*</type>
+        <definition>typedef void(* AtMsgCallBack) (int logmask, int severity, const char *msg_string, int tabs)</definition>
+        <argsstring>)(int logmask, int severity, const char *msg_string, int tabs)</argsstring>
+        <name>AtMsgCallBack</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Custom message callback, as passed to <ref refid="group__ai__msg_1ga8e17ffce84562a77d6f0a2196a75a1cb" kindref="member">AiMsgSetCallback()</ref> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_msg.h" line="81" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_msg.h" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__ai__msg_1ga731609be1218236f017d5120b0ff1cfe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiMsgSetLogFileName</definition>
+        <argsstring>(const char *filename)</argsstring>
+        <name>AiMsgSetLogFileName</name>
+        <param>
+          <type>const char *</type>
+          <declname>filename</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_msg.h" line="83" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__msg_1gaeeea175c566b82ebf01c0d9b194970f3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiMsgSetLogFileFlags</definition>
+        <argsstring>(int flags)</argsstring>
+        <name>AiMsgSetLogFileFlags</name>
+        <param>
+          <type>int</type>
+          <declname>flags</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_msg.h" line="84" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__msg_1ga4decdd72a28e02a80ea10bc75815d4e2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiMsgSetConsoleFlags</definition>
+        <argsstring>(int flags)</argsstring>
+        <name>AiMsgSetConsoleFlags</name>
+        <param>
+          <type>int</type>
+          <declname>flags</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_msg.h" line="85" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__msg_1gaf90d4414beee1f97f228552917f0de50" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiMsgSetMaxWarnings</definition>
+        <argsstring>(int max_warnings)</argsstring>
+        <name>AiMsgSetMaxWarnings</name>
+        <param>
+          <type>int</type>
+          <declname>max_warnings</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_msg.h" line="86" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__msg_1ga8e17ffce84562a77d6f0a2196a75a1cb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiMsgSetCallback</definition>
+        <argsstring>(AtMsgCallBack func)</argsstring>
+        <name>AiMsgSetCallback</name>
+        <param>
+          <type><ref refid="group__ai__msg_1ga12168a9adef266f39315877a86cc4e5d" kindref="member">AtMsgCallBack</ref></type>
+          <declname>func</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_msg.h" line="87" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__msg_1ga2cf14ba6ddc5c7a3ea19ddbe9f423077" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiMsgResetCallback</definition>
+        <argsstring>()</argsstring>
+        <name>AiMsgResetCallback</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_msg.h" line="88" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__msg_1ga6cec4c0cc8a5479804c747928d816d42" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiMsgInfo</definition>
+        <argsstring>(const char *format,...) AI_PRINTF_ARGS(1</argsstring>
+        <name>AiMsgInfo</name>
+        <param>
+          <type>const char *</type>
+          <declname>format</declname>
+        </param>
+        <param>
+          <type>...</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_msg.h" line="90" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__msg_1gae6c06aac87ec56c834ea6566a9d3981f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void void</type>
+        <definition>void void AiMsgDebug</definition>
+        <argsstring>(const char *format,...) AI_PRINTF_ARGS(1</argsstring>
+        <name>AiMsgDebug</name>
+        <param>
+          <type>const char *</type>
+          <declname>format</declname>
+        </param>
+        <param>
+          <type>...</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_msg.h" line="91" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__msg_1ga00c7583dad0af69215a50f780b339be9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void void void</type>
+        <definition>void void void AiMsgWarning</definition>
+        <argsstring>(const char *format,...) AI_PRINTF_ARGS(1</argsstring>
+        <name>AiMsgWarning</name>
+        <param>
+          <type>const char *</type>
+          <declname>format</declname>
+        </param>
+        <param>
+          <type>...</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_msg.h" line="92" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__msg_1ga4c7e6b4599102441d2cf5e2af3ea1426" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void void void void</type>
+        <definition>void void void void AiMsgError</definition>
+        <argsstring>(const char *format,...) AI_PRINTF_ARGS(1</argsstring>
+        <name>AiMsgError</name>
+        <param>
+          <type>const char *</type>
+          <declname>format</declname>
+        </param>
+        <param>
+          <type>...</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_msg.h" line="93" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__msg_1gada882420668b894d51b2f553b0f63401" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void void void void void</type>
+        <definition>void void void void void AiMsgFatal</definition>
+        <argsstring>(const char *format,...) AI_PRINTF_ARGS(1</argsstring>
+        <name>AiMsgFatal</name>
+        <param>
+          <type>const char *</type>
+          <declname>format</declname>
+        </param>
+        <param>
+          <type>...</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_msg.h" line="94" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__msg_1gac2a584c8351ccf354e3dd7ab00c589d2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void void void void void void</type>
+        <definition>void void void void void void AiMsgTab</definition>
+        <argsstring>(int tabinc)</argsstring>
+        <name>AiMsgTab</name>
+        <param>
+          <type>int</type>
+          <declname>tabinc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_msg.h" line="95" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__msg_1gac768ba5277d0cd420db220dc6c0852a5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__ai__types_1ga736e5b867444aa696f58f647852e15e9" kindref="member">AtUInt64</ref></type>
+        <definition>AtUInt64 AiMsgUtilGetUsedMemory</definition>
+        <argsstring>()</argsstring>
+        <name>AiMsgUtilGetUsedMemory</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_msg.h" line="97" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__msg_1ga4af2d9393c06c7ad077841b76dc00166" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__ai__types_1ga5e008e3afa9393ab65d66796de249df9" kindref="member">AtUInt32</ref></type>
+        <definition>AtUInt32 AiMsgUtilGetElapsedTime</definition>
+        <argsstring>()</argsstring>
+        <name>AiMsgUtilGetElapsedTime</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_msg.h" line="98" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group__ai__msg_1ga52c8b1089e945e33b2d53de73c31392a" prot="public" static="no">
+        <name>__AI_FILE__</name>
+        <initializer>__FILE__</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_msg.h" line="19" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_msg.h" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__msg_1ga3fdf610d07884ff5735d9a6c7339f821" prot="public" static="no">
+        <name>__AI_LINE__</name>
+        <initializer>__LINE__</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_msg.h" line="22" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_msg.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__msg_1ga76853c0849dfd8561ea8461029d611cf" prot="public" static="no">
+        <name>__AI_FUNCTION__</name>
+        <initializer>__FUNCTION__</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_msg.h" line="25" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_msg.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__msg_1gaef13a823e2c71f4616b1036d95cd84e1" prot="public" static="no">
+        <name>AI_PRINTF_ARGS</name>
+        <param><defname>fmtarg_pos</defname></param>
+        <param><defname>vararg_pos</defname></param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_msg.h" line="76" column="17" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_msg.h" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

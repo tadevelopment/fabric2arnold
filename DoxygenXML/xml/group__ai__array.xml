@@ -1,0 +1,743 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="group__ai__array" kind="group">
+    <compoundname>ai_array</compoundname>
+    <title>AtArray API</title>
+    <innerclass refid="struct_at_array" prot="public">AtArray</innerclass>
+      <sectiondef kind="user-defined">
+      <header>AtArray Getters</header>
+      <description><para>The following getter functions return the i&apos;th element in an array of the given type. In case of out-of-bounds access, an error message is generated with the source code location of the offending call.</para><para>Note that, for ease of use, these are actually macros, which are shorter to type than the full functions. The actual functions can be found in <ref refid="ai__array_8h" kindref="compound">ai_array.h</ref>. </para></description>
+      <memberdef kind="define" id="group__ai__array_1ga7368638aab1653e2e880bcbf2e6f216c" prot="public" static="no">
+        <name>AiArrayGetBool</name>
+        <param><defname>a</defname></param>
+        <param><defname>i</defname></param>
+        <initializer><ref refid="ai__array_8h_1af621c9f5682f72de887e42d60cc1a898" kindref="member">AiArrayGetBoolFunc</ref> (a,i,<ref refid="group__ai__msg_1ga52c8b1089e945e33b2d53de73c31392a" kindref="member">__AI_FILE__</ref>,<ref refid="group__ai__msg_1ga3fdf610d07884ff5735d9a6c7339f821" kindref="member">__AI_LINE__</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_array.h" line="68" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_array.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__array_1ga76e68ba17dd1eb97d2a3bf10620054ef" prot="public" static="no">
+        <name>AiArrayGetByte</name>
+        <param><defname>a</defname></param>
+        <param><defname>i</defname></param>
+        <initializer><ref refid="ai__array_8h_1a89efab552f66dc5a0260dfb88c97725c" kindref="member">AiArrayGetByteFunc</ref> (a,i,<ref refid="group__ai__msg_1ga52c8b1089e945e33b2d53de73c31392a" kindref="member">__AI_FILE__</ref>,<ref refid="group__ai__msg_1ga3fdf610d07884ff5735d9a6c7339f821" kindref="member">__AI_LINE__</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_array.h" line="69" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_array.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__array_1gabcfa0e29da5d0edb625f31534f31fb7c" prot="public" static="no">
+        <name>AiArrayGetInt</name>
+        <param><defname>a</defname></param>
+        <param><defname>i</defname></param>
+        <initializer><ref refid="ai__array_8h_1a2dd826900267edac777b62366cb02f62" kindref="member">AiArrayGetIntFunc</ref>  (a,i,<ref refid="group__ai__msg_1ga52c8b1089e945e33b2d53de73c31392a" kindref="member">__AI_FILE__</ref>,<ref refid="group__ai__msg_1ga3fdf610d07884ff5735d9a6c7339f821" kindref="member">__AI_LINE__</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_array.h" line="70" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_array.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__array_1gaadb07a2c96737713780bd535f47e9181" prot="public" static="no">
+        <name>AiArrayGetUInt</name>
+        <param><defname>a</defname></param>
+        <param><defname>i</defname></param>
+        <initializer><ref refid="ai__array_8h_1a98ffc10512d74e86e4cb18bc3bba95cd" kindref="member">AiArrayGetUIntFunc</ref> (a,i,<ref refid="group__ai__msg_1ga52c8b1089e945e33b2d53de73c31392a" kindref="member">__AI_FILE__</ref>,<ref refid="group__ai__msg_1ga3fdf610d07884ff5735d9a6c7339f821" kindref="member">__AI_LINE__</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_array.h" line="71" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_array.h" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__array_1ga4f34536f40b7336055acd562729db4f8" prot="public" static="no">
+        <name>AiArrayGetFlt</name>
+        <param><defname>a</defname></param>
+        <param><defname>i</defname></param>
+        <initializer><ref refid="ai__array_8h_1ac1f61693e998a0384e62aa9523692630" kindref="member">AiArrayGetFltFunc</ref>  (a,i,<ref refid="group__ai__msg_1ga52c8b1089e945e33b2d53de73c31392a" kindref="member">__AI_FILE__</ref>,<ref refid="group__ai__msg_1ga3fdf610d07884ff5735d9a6c7339f821" kindref="member">__AI_LINE__</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_array.h" line="72" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_array.h" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__array_1ga438c0665854f5fb025770eec623d471b" prot="public" static="no">
+        <name>AiArrayGetRGB</name>
+        <param><defname>a</defname></param>
+        <param><defname>i</defname></param>
+        <initializer><ref refid="ai__array_8h_1ac7724bbcc80a2b29b45a4779450ef2c1" kindref="member">AiArrayGetRGBFunc</ref>  (a,i,<ref refid="group__ai__msg_1ga52c8b1089e945e33b2d53de73c31392a" kindref="member">__AI_FILE__</ref>,<ref refid="group__ai__msg_1ga3fdf610d07884ff5735d9a6c7339f821" kindref="member">__AI_LINE__</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_array.h" line="73" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_array.h" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__array_1gad507126be182e550632c4f0ac7907766" prot="public" static="no">
+        <name>AiArrayGetRGBA</name>
+        <param><defname>a</defname></param>
+        <param><defname>i</defname></param>
+        <initializer><ref refid="ai__array_8h_1ac6e3e14f1f84cb651a53a2994adf1861" kindref="member">AiArrayGetRGBAFunc</ref> (a,i,<ref refid="group__ai__msg_1ga52c8b1089e945e33b2d53de73c31392a" kindref="member">__AI_FILE__</ref>,<ref refid="group__ai__msg_1ga3fdf610d07884ff5735d9a6c7339f821" kindref="member">__AI_LINE__</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_array.h" line="74" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_array.h" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__array_1gaa30ea75d54abbb6a2d18acbe73d3d3f5" prot="public" static="no">
+        <name>AiArrayGetPnt</name>
+        <param><defname>a</defname></param>
+        <param><defname>i</defname></param>
+        <initializer><ref refid="ai__array_8h_1a97ac4d60974ba8aa5a63202f0aecb769" kindref="member">AiArrayGetPntFunc</ref>  (a,i,<ref refid="group__ai__msg_1ga52c8b1089e945e33b2d53de73c31392a" kindref="member">__AI_FILE__</ref>,<ref refid="group__ai__msg_1ga3fdf610d07884ff5735d9a6c7339f821" kindref="member">__AI_LINE__</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_array.h" line="75" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_array.h" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__array_1gacde33ab61f8244f51afeaf8dde3be757" prot="public" static="no">
+        <name>AiArrayGetPnt2</name>
+        <param><defname>a</defname></param>
+        <param><defname>i</defname></param>
+        <initializer><ref refid="ai__array_8h_1ac1517e222639f3b1ddc1bd46824b2033" kindref="member">AiArrayGetPnt2Func</ref> (a,i,<ref refid="group__ai__msg_1ga52c8b1089e945e33b2d53de73c31392a" kindref="member">__AI_FILE__</ref>,<ref refid="group__ai__msg_1ga3fdf610d07884ff5735d9a6c7339f821" kindref="member">__AI_LINE__</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_array.h" line="76" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_array.h" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__array_1gae90234f8c0302fe9269538cfa1535bfd" prot="public" static="no">
+        <name>AiArrayGetVec</name>
+        <param><defname>a</defname></param>
+        <param><defname>i</defname></param>
+        <initializer><ref refid="ai__array_8h_1a09640d4d47ab25928c6cd8b17067bcfa" kindref="member">AiArrayGetVecFunc</ref>  (a,i,<ref refid="group__ai__msg_1ga52c8b1089e945e33b2d53de73c31392a" kindref="member">__AI_FILE__</ref>,<ref refid="group__ai__msg_1ga3fdf610d07884ff5735d9a6c7339f821" kindref="member">__AI_LINE__</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_array.h" line="77" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_array.h" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__array_1gad6278c617362a9e39c32bc6a69055dc4" prot="public" static="no">
+        <name>AiArrayGetMtx</name>
+        <param><defname>a</defname></param>
+        <param><defname>i</defname></param>
+        <param><defname>out</defname></param>
+        <initializer><ref refid="ai__array_8h_1ac3d78dd94b5d3ee5293efcbc8907eddf" kindref="member">AiArrayGetMtxFunc</ref>  (a,i,out,<ref refid="group__ai__msg_1ga52c8b1089e945e33b2d53de73c31392a" kindref="member">__AI_FILE__</ref>,<ref refid="group__ai__msg_1ga3fdf610d07884ff5735d9a6c7339f821" kindref="member">__AI_LINE__</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_array.h" line="78" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_array.h" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__array_1ga7ed435d0d3487d37a167e49c0124932a" prot="public" static="no">
+        <name>AiArrayGetStr</name>
+        <param><defname>a</defname></param>
+        <param><defname>i</defname></param>
+        <initializer><ref refid="ai__array_8h_1af40781628f16959cb365fa065341e5e7" kindref="member">AiArrayGetStrFunc</ref>  (a,i,<ref refid="group__ai__msg_1ga52c8b1089e945e33b2d53de73c31392a" kindref="member">__AI_FILE__</ref>,<ref refid="group__ai__msg_1ga3fdf610d07884ff5735d9a6c7339f821" kindref="member">__AI_LINE__</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_array.h" line="79" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_array.h" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__array_1gad4a147b67b6940ea0302d6a58cc709f0" prot="public" static="no">
+        <name>AiArrayGetPtr</name>
+        <param><defname>a</defname></param>
+        <param><defname>i</defname></param>
+        <initializer><ref refid="ai__array_8h_1aefb3b2c99bb83bec375cbf79365c1108" kindref="member">AiArrayGetPtrFunc</ref>  (a,i,<ref refid="group__ai__msg_1ga52c8b1089e945e33b2d53de73c31392a" kindref="member">__AI_FILE__</ref>,<ref refid="group__ai__msg_1ga3fdf610d07884ff5735d9a6c7339f821" kindref="member">__AI_LINE__</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_array.h" line="80" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_array.h" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__array_1gaceaf4814f4d496bbd93f009c10eb426a" prot="public" static="no">
+        <name>AiArrayGetArray</name>
+        <param><defname>a</defname></param>
+        <param><defname>i</defname></param>
+        <initializer><ref refid="ai__array_8h_1a31878c37c62f85d914511a68c6495509" kindref="member">AiArrayGetArrayFunc</ref>(a,i,<ref refid="group__ai__msg_1ga52c8b1089e945e33b2d53de73c31392a" kindref="member">__AI_FILE__</ref>,<ref refid="group__ai__msg_1ga3fdf610d07884ff5735d9a6c7339f821" kindref="member">__AI_LINE__</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_array.h" line="81" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_array.h" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>AtArray Setters</header>
+      <description><para>The following functions write an element of a given type into the i&apos;th position in an array. If the write was succesful, these functions will return true, otherwise a detailed error message will be logged and false will be returned. </para></description>
+      <memberdef kind="define" id="group__ai__array_1ga3a3e5fc6129e5d896d8d4707ff23b287" prot="public" static="no">
+        <name>AiArraySetBool</name>
+        <param><defname>a</defname></param>
+        <param><defname>i</defname></param>
+        <param><defname>val</defname></param>
+        <initializer><ref refid="ai__array_8h_1a742ed1485d047bb8945436fad8250d1f" kindref="member">AiArraySetBoolFunc</ref> (a,i,val,<ref refid="group__ai__msg_1ga52c8b1089e945e33b2d53de73c31392a" kindref="member">__AI_FILE__</ref>,<ref refid="group__ai__msg_1ga3fdf610d07884ff5735d9a6c7339f821" kindref="member">__AI_LINE__</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_array.h" line="93" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_array.h" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__array_1ga275484642ee915ebb31fb0166e6b4691" prot="public" static="no">
+        <name>AiArraySetByte</name>
+        <param><defname>a</defname></param>
+        <param><defname>i</defname></param>
+        <param><defname>val</defname></param>
+        <initializer><ref refid="ai__array_8h_1ae17e2bc8e902d93a738cc809246785ff" kindref="member">AiArraySetByteFunc</ref> (a,i,val,<ref refid="group__ai__msg_1ga52c8b1089e945e33b2d53de73c31392a" kindref="member">__AI_FILE__</ref>,<ref refid="group__ai__msg_1ga3fdf610d07884ff5735d9a6c7339f821" kindref="member">__AI_LINE__</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_array.h" line="94" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_array.h" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__array_1gac4737c83b7bbe3aed567ba337785927a" prot="public" static="no">
+        <name>AiArraySetInt</name>
+        <param><defname>a</defname></param>
+        <param><defname>i</defname></param>
+        <param><defname>val</defname></param>
+        <initializer><ref refid="ai__array_8h_1aa80c679097181d3510beddd945676385" kindref="member">AiArraySetIntFunc</ref>  (a,i,val,<ref refid="group__ai__msg_1ga52c8b1089e945e33b2d53de73c31392a" kindref="member">__AI_FILE__</ref>,<ref refid="group__ai__msg_1ga3fdf610d07884ff5735d9a6c7339f821" kindref="member">__AI_LINE__</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_array.h" line="95" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_array.h" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__array_1ga909b429c0c8fa2c328a8008ec38b2fef" prot="public" static="no">
+        <name>AiArraySetUInt</name>
+        <param><defname>a</defname></param>
+        <param><defname>i</defname></param>
+        <param><defname>val</defname></param>
+        <initializer><ref refid="ai__array_8h_1af1b7ceeeb57dd411c4ab827b067bc057" kindref="member">AiArraySetUIntFunc</ref> (a,i,val,<ref refid="group__ai__msg_1ga52c8b1089e945e33b2d53de73c31392a" kindref="member">__AI_FILE__</ref>,<ref refid="group__ai__msg_1ga3fdf610d07884ff5735d9a6c7339f821" kindref="member">__AI_LINE__</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_array.h" line="96" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_array.h" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__array_1gafbb5ad5eb037db3725e79774c459e693" prot="public" static="no">
+        <name>AiArraySetFlt</name>
+        <param><defname>a</defname></param>
+        <param><defname>i</defname></param>
+        <param><defname>val</defname></param>
+        <initializer><ref refid="ai__array_8h_1a9d482d3da4f4d0aef99535e59764bc14" kindref="member">AiArraySetFltFunc</ref>  (a,i,val,<ref refid="group__ai__msg_1ga52c8b1089e945e33b2d53de73c31392a" kindref="member">__AI_FILE__</ref>,<ref refid="group__ai__msg_1ga3fdf610d07884ff5735d9a6c7339f821" kindref="member">__AI_LINE__</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_array.h" line="97" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_array.h" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__array_1ga15f32b1687278518d4a19781e653cdf0" prot="public" static="no">
+        <name>AiArraySetRGB</name>
+        <param><defname>a</defname></param>
+        <param><defname>i</defname></param>
+        <param><defname>val</defname></param>
+        <initializer><ref refid="ai__array_8h_1a9269e5b66a4d8c238f1c0b7f82d60ead" kindref="member">AiArraySetRGBFunc</ref>  (a,i,val,<ref refid="group__ai__msg_1ga52c8b1089e945e33b2d53de73c31392a" kindref="member">__AI_FILE__</ref>,<ref refid="group__ai__msg_1ga3fdf610d07884ff5735d9a6c7339f821" kindref="member">__AI_LINE__</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_array.h" line="98" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_array.h" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__array_1ga1f70c72b1498a5b441f99a16427cb78f" prot="public" static="no">
+        <name>AiArraySetRGBA</name>
+        <param><defname>a</defname></param>
+        <param><defname>i</defname></param>
+        <param><defname>val</defname></param>
+        <initializer><ref refid="ai__array_8h_1a2e4270db19df7a51f72000c32110762a" kindref="member">AiArraySetRGBAFunc</ref> (a,i,val,<ref refid="group__ai__msg_1ga52c8b1089e945e33b2d53de73c31392a" kindref="member">__AI_FILE__</ref>,<ref refid="group__ai__msg_1ga3fdf610d07884ff5735d9a6c7339f821" kindref="member">__AI_LINE__</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_array.h" line="99" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_array.h" bodystart="99" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__array_1ga9cc6bb8195eec867853403747dc30cf4" prot="public" static="no">
+        <name>AiArraySetPnt</name>
+        <param><defname>a</defname></param>
+        <param><defname>i</defname></param>
+        <param><defname>val</defname></param>
+        <initializer><ref refid="ai__array_8h_1aa4b67c99ec953b2485d28c3cdd991f95" kindref="member">AiArraySetPntFunc</ref>  (a,i,val,<ref refid="group__ai__msg_1ga52c8b1089e945e33b2d53de73c31392a" kindref="member">__AI_FILE__</ref>,<ref refid="group__ai__msg_1ga3fdf610d07884ff5735d9a6c7339f821" kindref="member">__AI_LINE__</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_array.h" line="100" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_array.h" bodystart="100" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__array_1ga06183350cba49566a630611925015a49" prot="public" static="no">
+        <name>AiArraySetPnt2</name>
+        <param><defname>a</defname></param>
+        <param><defname>i</defname></param>
+        <param><defname>val</defname></param>
+        <initializer><ref refid="ai__array_8h_1aa6d6ee6d2a31d8772982dbfd9f4b25f1" kindref="member">AiArraySetPnt2Func</ref> (a,i,val,<ref refid="group__ai__msg_1ga52c8b1089e945e33b2d53de73c31392a" kindref="member">__AI_FILE__</ref>,<ref refid="group__ai__msg_1ga3fdf610d07884ff5735d9a6c7339f821" kindref="member">__AI_LINE__</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_array.h" line="101" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_array.h" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__array_1ga5ffb481e684e60fe67fb82910ca7e427" prot="public" static="no">
+        <name>AiArraySetVec</name>
+        <param><defname>a</defname></param>
+        <param><defname>i</defname></param>
+        <param><defname>val</defname></param>
+        <initializer><ref refid="ai__array_8h_1ad869f503bc62c5294949382423a21ade" kindref="member">AiArraySetVecFunc</ref>  (a,i,val,<ref refid="group__ai__msg_1ga52c8b1089e945e33b2d53de73c31392a" kindref="member">__AI_FILE__</ref>,<ref refid="group__ai__msg_1ga3fdf610d07884ff5735d9a6c7339f821" kindref="member">__AI_LINE__</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_array.h" line="102" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_array.h" bodystart="102" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__array_1ga89056ff17570958187ba53d4ff6ff274" prot="public" static="no">
+        <name>AiArraySetMtx</name>
+        <param><defname>a</defname></param>
+        <param><defname>i</defname></param>
+        <param><defname>val</defname></param>
+        <initializer><ref refid="ai__array_8h_1a0884bf424c40e8a356cc0a149c5edc9a" kindref="member">AiArraySetMtxFunc</ref>  (a,i,val,<ref refid="group__ai__msg_1ga52c8b1089e945e33b2d53de73c31392a" kindref="member">__AI_FILE__</ref>,<ref refid="group__ai__msg_1ga3fdf610d07884ff5735d9a6c7339f821" kindref="member">__AI_LINE__</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_array.h" line="103" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_array.h" bodystart="103" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__array_1gaeaaab4d421420727f2b2fd4a1247f496" prot="public" static="no">
+        <name>AiArraySetStr</name>
+        <param><defname>a</defname></param>
+        <param><defname>i</defname></param>
+        <param><defname>val</defname></param>
+        <initializer><ref refid="ai__array_8h_1ad61717e9b56be654f0b33ec889590fce" kindref="member">AiArraySetStrFunc</ref>  (a,i,val,<ref refid="group__ai__msg_1ga52c8b1089e945e33b2d53de73c31392a" kindref="member">__AI_FILE__</ref>,<ref refid="group__ai__msg_1ga3fdf610d07884ff5735d9a6c7339f821" kindref="member">__AI_LINE__</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_array.h" line="104" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_array.h" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__array_1ga580d74bb7e66b877910291f013ec1299" prot="public" static="no">
+        <name>AiArraySetPtr</name>
+        <param><defname>a</defname></param>
+        <param><defname>i</defname></param>
+        <param><defname>val</defname></param>
+        <initializer><ref refid="ai__array_8h_1a4d3bba0d06b03c5be60b07aa47ec646e" kindref="member">AiArraySetPtrFunc</ref>  (a,i,val,<ref refid="group__ai__msg_1ga52c8b1089e945e33b2d53de73c31392a" kindref="member">__AI_FILE__</ref>,<ref refid="group__ai__msg_1ga3fdf610d07884ff5735d9a6c7339f821" kindref="member">__AI_LINE__</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_array.h" line="105" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_array.h" bodystart="105" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__array_1ga03baf57ffcedb1716091bb9cd004f1f5" prot="public" static="no">
+        <name>AiArraySetArray</name>
+        <param><defname>a</defname></param>
+        <param><defname>i</defname></param>
+        <param><defname>val</defname></param>
+        <initializer><ref refid="ai__array_8h_1abb750738078e4d85b9be81a84ab56855" kindref="member">AiArraySetArrayFunc</ref>(a,i,val,<ref refid="group__ai__msg_1ga52c8b1089e945e33b2d53de73c31392a" kindref="member">__AI_FILE__</ref>,<ref refid="group__ai__msg_1ga3fdf610d07884ff5735d9a6c7339f821" kindref="member">__AI_LINE__</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_array.h" line="106" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_array.h" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group__ai__array_1ga814d36b2fd1841b1cf01d1bbf3ab24db" prot="public" static="no">
+        <type>struct <ref refid="struct_at_array" kindref="compound">AtArray</ref></type>
+        <definition>typedef struct AtArray  AtArray</definition>
+        <argsstring></argsstring>
+        <name>AtArray</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Generic array data type </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_array.h" line="39" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__ai__array_1ga3da7ceab1b84c74ab8b2691512fab390" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_at_array" kindref="compound">AtArray</ref> *</type>
+        <definition>AtArray* AiArray</definition>
+        <argsstring>(AtUInt32 nelements, AtByte nkeys, AtByte type,...)</argsstring>
+        <name>AiArray</name>
+        <param>
+          <type><ref refid="group__ai__types_1ga5e008e3afa9393ab65d66796de249df9" kindref="member">AtUInt32</ref></type>
+          <declname>nelements</declname>
+        </param>
+        <param>
+          <type><ref refid="group__ai__types_1ga41f7f394ad3ef67901cce4d05bdabf89" kindref="member">AtByte</ref></type>
+          <declname>nkeys</declname>
+        </param>
+        <param>
+          <type><ref refid="group__ai__types_1ga41f7f394ad3ef67901cce4d05bdabf89" kindref="member">AtByte</ref></type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>...</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_array.h" line="41" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__array_1ga661c0a175910ecbc9606ffd298ce2f9b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_at_array" kindref="compound">AtArray</ref> *</type>
+        <definition>AtArray* AiArrayAllocate</definition>
+        <argsstring>(AtUInt32 nelements, AtByte nkeys, AtByte type)</argsstring>
+        <name>AiArrayAllocate</name>
+        <param>
+          <type><ref refid="group__ai__types_1ga5e008e3afa9393ab65d66796de249df9" kindref="member">AtUInt32</ref></type>
+          <declname>nelements</declname>
+        </param>
+        <param>
+          <type><ref refid="group__ai__types_1ga41f7f394ad3ef67901cce4d05bdabf89" kindref="member">AtByte</ref></type>
+          <declname>nkeys</declname>
+        </param>
+        <param>
+          <type><ref refid="group__ai__types_1ga41f7f394ad3ef67901cce4d05bdabf89" kindref="member">AtByte</ref></type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_array.h" line="42" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__array_1gae1555c746260f1212398b0fbcd23a91f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiArrayDestroy</definition>
+        <argsstring>(AtArray *array)</argsstring>
+        <name>AiArrayDestroy</name>
+        <param>
+          <type><ref refid="struct_at_array" kindref="compound">AtArray</ref> *</type>
+          <declname>array</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_array.h" line="43" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__array_1ga1312510dc6535122a76e975ad04e0705" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_at_array" kindref="compound">AtArray</ref> *</type>
+        <definition>AtArray* AiArrayConvert</definition>
+        <argsstring>(AtUInt32 nelements, AtByte nkeys, AtByte type, const void *data)</argsstring>
+        <name>AiArrayConvert</name>
+        <param>
+          <type><ref refid="group__ai__types_1ga5e008e3afa9393ab65d66796de249df9" kindref="member">AtUInt32</ref></type>
+          <declname>nelements</declname>
+        </param>
+        <param>
+          <type><ref refid="group__ai__types_1ga41f7f394ad3ef67901cce4d05bdabf89" kindref="member">AtByte</ref></type>
+          <declname>nkeys</declname>
+        </param>
+        <param>
+          <type><ref refid="group__ai__types_1ga41f7f394ad3ef67901cce4d05bdabf89" kindref="member">AtByte</ref></type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>const void *</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_array.h" line="44" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__array_1ga4fbdb79ecacc7b4feecb9173749363c5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_at_array" kindref="compound">AtArray</ref> *</type>
+        <definition>AtArray* AiArrayModify</definition>
+        <argsstring>(AtArray *array, AtUInt32 nelements, AtByte nkeys, AtByte type,...)</argsstring>
+        <name>AiArrayModify</name>
+        <param>
+          <type><ref refid="struct_at_array" kindref="compound">AtArray</ref> *</type>
+          <declname>array</declname>
+        </param>
+        <param>
+          <type><ref refid="group__ai__types_1ga5e008e3afa9393ab65d66796de249df9" kindref="member">AtUInt32</ref></type>
+          <declname>nelements</declname>
+        </param>
+        <param>
+          <type><ref refid="group__ai__types_1ga41f7f394ad3ef67901cce4d05bdabf89" kindref="member">AtByte</ref></type>
+          <declname>nkeys</declname>
+        </param>
+        <param>
+          <type><ref refid="group__ai__types_1ga41f7f394ad3ef67901cce4d05bdabf89" kindref="member">AtByte</ref></type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>...</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_array.h" line="45" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__array_1ga0f3ee2f993eb64bf27690238b20b2f62" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_at_array" kindref="compound">AtArray</ref> *</type>
+        <definition>AtArray* AiArrayCopy</definition>
+        <argsstring>(const AtArray *array)</argsstring>
+        <name>AiArrayCopy</name>
+        <param>
+          <type>const <ref refid="struct_at_array" kindref="compound">AtArray</ref> *</type>
+          <declname>array</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_array.h" line="46" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__array_1ga0c9631a7c6f6824b32bb4b985dd80f68" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiArraySetKey</definition>
+        <argsstring>(AtArray *array, AtByte key, const void *data)</argsstring>
+        <name>AiArraySetKey</name>
+        <param>
+          <type><ref refid="struct_at_array" kindref="compound">AtArray</ref> *</type>
+          <declname>array</declname>
+        </param>
+        <param>
+          <type><ref refid="group__ai__types_1ga41f7f394ad3ef67901cce4d05bdabf89" kindref="member">AtByte</ref></type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>const void *</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_array.h" line="47" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__array_1ga691de974938cf657cf9697876372a2cf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_at_point" kindref="compound">AtPoint</ref></type>
+        <definition>AtPoint AiArrayInterpolatePnt</definition>
+        <argsstring>(const AtArray *array, float time, AtUInt32 idx)</argsstring>
+        <name>AiArrayInterpolatePnt</name>
+        <param>
+          <type>const <ref refid="struct_at_array" kindref="compound">AtArray</ref> *</type>
+          <declname>array</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>time</declname>
+        </param>
+        <param>
+          <type><ref refid="group__ai__types_1ga5e008e3afa9393ab65d66796de249df9" kindref="member">AtUInt32</ref></type>
+          <declname>idx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_array.h" line="48" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__array_1gad6da9613b25f629c7b81a4daf82563a3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref></type>
+        <definition>AtVector AiArrayInterpolateVec</definition>
+        <argsstring>(const AtArray *array, float time, AtUInt32 idx)</argsstring>
+        <name>AiArrayInterpolateVec</name>
+        <param>
+          <type>const <ref refid="struct_at_array" kindref="compound">AtArray</ref> *</type>
+          <declname>array</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>time</declname>
+        </param>
+        <param>
+          <type><ref refid="group__ai__types_1ga5e008e3afa9393ab65d66796de249df9" kindref="member">AtUInt32</ref></type>
+          <declname>idx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_array.h" line="49" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__array_1ga9ce6d37fbbc8dd817abce3cba2aba31a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__ai__color_1ga03caa98eaded3f2dd0527ed284656f04" kindref="member">AtColor</ref></type>
+        <definition>AtColor AiArrayInterpolateRGB</definition>
+        <argsstring>(const AtArray *array, float time, AtUInt32 idx)</argsstring>
+        <name>AiArrayInterpolateRGB</name>
+        <param>
+          <type>const <ref refid="struct_at_array" kindref="compound">AtArray</ref> *</type>
+          <declname>array</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>time</declname>
+        </param>
+        <param>
+          <type><ref refid="group__ai__types_1ga5e008e3afa9393ab65d66796de249df9" kindref="member">AtUInt32</ref></type>
+          <declname>idx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_array.h" line="50" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__array_1ga65d15bf4639925f9d349d9d41bbc47a9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_at_r_g_b_a" kindref="compound">AtRGBA</ref></type>
+        <definition>AtRGBA AiArrayInterpolateRGBA</definition>
+        <argsstring>(const AtArray *array, float time, AtUInt32 idx)</argsstring>
+        <name>AiArrayInterpolateRGBA</name>
+        <param>
+          <type>const <ref refid="struct_at_array" kindref="compound">AtArray</ref> *</type>
+          <declname>array</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>time</declname>
+        </param>
+        <param>
+          <type><ref refid="group__ai__types_1ga5e008e3afa9393ab65d66796de249df9" kindref="member">AtUInt32</ref></type>
+          <declname>idx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_array.h" line="51" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__array_1ga73cdb133a18bf81f6739eba237eeaab2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float AiArrayInterpolateFlt</definition>
+        <argsstring>(const AtArray *array, float time, AtUInt32 idx)</argsstring>
+        <name>AiArrayInterpolateFlt</name>
+        <param>
+          <type>const <ref refid="struct_at_array" kindref="compound">AtArray</ref> *</type>
+          <declname>array</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>time</declname>
+        </param>
+        <param>
+          <type><ref refid="group__ai__types_1ga5e008e3afa9393ab65d66796de249df9" kindref="member">AtUInt32</ref></type>
+          <declname>idx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_array.h" line="52" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__array_1ga978eb3bf70f1eb5a8752a460702f9d74" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiArrayInterpolateMtx</definition>
+        <argsstring>(const AtArray *array, float time, AtUInt32 idx, AtMatrix result)</argsstring>
+        <name>AiArrayInterpolateMtx</name>
+        <param>
+          <type>const <ref refid="struct_at_array" kindref="compound">AtArray</ref> *</type>
+          <declname>array</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>time</declname>
+        </param>
+        <param>
+          <type><ref refid="group__ai__types_1ga5e008e3afa9393ab65d66796de249df9" kindref="member">AtUInt32</ref></type>
+          <declname>idx</declname>
+        </param>
+        <param>
+          <type><ref refid="group__ai__matrix_1ga239cea4f70543ed6dae0d0549d28c01c" kindref="member">AtMatrix</ref></type>
+          <declname>result</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_array.h" line="53" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>The <ref refid="struct_at_array" kindref="compound">AtArray</ref> object encapsulates an array of any of the Arnold built-in data types like <computeroutput>AI_TYPE_BYTE</computeroutput>, <computeroutput>AI_TYPE_FLOAT</computeroutput>, <computeroutput>AI_TYPE_STRING</computeroutput>, etc. Its API has easy-to-use accessor functions for reading and writing elements, and there are a number of functions for manipulating arrays (such as copying them). An <ref refid="struct_at_array" kindref="compound">AtArray</ref> is specified by the element data type, the number of motion keys in the array, and the number of elements per motion key. The data is grouped together by motion keys. </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

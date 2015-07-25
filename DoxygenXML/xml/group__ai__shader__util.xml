@@ -1,0 +1,1413 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="group__ai__shader__util" kind="group">
+    <compoundname>ai_shader_util</compoundname>
+    <title>Shader Utility API</title>
+      <sectiondef kind="user-defined">
+      <header>Coordinate Transformations</header>
+      <memberdef kind="define" id="group__ai__shader__util_1gaf94cdbe877ec107f1b36a8c2e8986def" prot="public" static="no">
+        <name>AI_WORLD_TO_OBJECT</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>World-to-object coordinate transformation </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_util.h" line="29" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_util.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__shader__util_1gad63bd87c3f5d74f268f346fb3b4f8a93" prot="public" static="no">
+        <name>AI_OBJECT_TO_WORLD</name>
+        <initializer>2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Object-to-world coordinate transformation </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_util.h" line="30" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_util.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Wireframe Types</header>
+      <memberdef kind="define" id="group__ai__shader__util_1ga3e95eeae8b6cab6a1baac3c7fc41819e" prot="public" static="no">
+        <name>AI_WIREFRAME_TRIANGLES</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Tessellated triangles </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_util.h" line="36" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_util.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__shader__util_1ga169b8934e524b156cd9a47ef76ccd1a9" prot="public" static="no">
+        <name>AI_WIREFRAME_POLYGONS</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Tessellated polygons </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_util.h" line="37" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_util.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__shader__util_1gad51055e5eee9e21546beef9641f5d5bd" prot="public" static="no">
+        <name>AI_WIREFRAME_PATCHES</name>
+        <initializer>2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Patches before subdivision </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_util.h" line="38" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_util.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Lighting Functions</header>
+      <memberdef kind="function" id="group__ai__shader__util_1ga35262b8d75f52d07f4bae12db2ebbb4f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__ai__color_1ga03caa98eaded3f2dd0527ed284656f04" kindref="member">AtColor</ref></type>
+        <definition>AtColor AiOcclusion</definition>
+        <argsstring>(const AtVector *N, const AtVector *Ng, AtShaderGlobals *sg, float mint, float maxt, float spread, float falloff, const AtSampler *sampler, AtVector *Nbent)</argsstring>
+        <name>AiOcclusion</name>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> *</type>
+          <declname>N</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> *</type>
+          <declname>Ng</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>mint</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>maxt</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>spread</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>falloff</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__sampler_1ga020c82e219b20c68a9f17662743a1999" kindref="member">AtSampler</ref> *</type>
+          <declname>sampler</declname>
+        </param>
+        <param>
+          <type><ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> *</type>
+          <declname>Nbent</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_util.h" line="44" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__util_1ga700b9c8a5c150df47e2910b77e55f3c0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__ai__color_1ga03caa98eaded3f2dd0527ed284656f04" kindref="member">AtColor</ref></type>
+        <definition>AtColor AiSelfOcclusion</definition>
+        <argsstring>(const AtVector *N, const AtVector *Ng, AtShaderGlobals *sg, float mint, float maxt, float spread, float falloff, const AtSampler *sampler, AtVector *Nbent)</argsstring>
+        <name>AiSelfOcclusion</name>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> *</type>
+          <declname>N</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> *</type>
+          <declname>Ng</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>mint</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>maxt</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>spread</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>falloff</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__sampler_1ga020c82e219b20c68a9f17662743a1999" kindref="member">AtSampler</ref> *</type>
+          <declname>sampler</declname>
+        </param>
+        <param>
+          <type><ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> *</type>
+          <declname>Nbent</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_util.h" line="45" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__util_1ga305c899535a7a2fedb561412654190ef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__ai__color_1ga03caa98eaded3f2dd0527ed284656f04" kindref="member">AtColor</ref></type>
+        <definition>AtColor AiDirectDiffuse</definition>
+        <argsstring>(const AtVector *N, AtShaderGlobals *sg)</argsstring>
+        <name>AiDirectDiffuse</name>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> *</type>
+          <declname>N</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_util.h" line="46" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__util_1ga75b961ef0f72918880179481e7b854cb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__ai__color_1ga03caa98eaded3f2dd0527ed284656f04" kindref="member">AtColor</ref></type>
+        <definition>AtColor AiHairDirectDiffuseCache</definition>
+        <argsstring>(const struct AtShaderGlobals *sg)</argsstring>
+        <name>AiHairDirectDiffuseCache</name>
+        <param>
+          <type>const struct <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_util.h" line="47" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__util_1ga1d8c16d373c5b3e886a82aeb85c1e5d1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__ai__color_1ga03caa98eaded3f2dd0527ed284656f04" kindref="member">AtColor</ref></type>
+        <definition>AtColor AiIndirectDiffuse</definition>
+        <argsstring>(const AtVector *N, AtShaderGlobals *sg)</argsstring>
+        <name>AiIndirectDiffuse</name>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> *</type>
+          <declname>N</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_util.h" line="48" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__util_1ga6729869821fcc362b94a5137b7640348" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiReflect</definition>
+        <argsstring>(const AtVector *I, const AtVector *N, AtVector *R)</argsstring>
+        <name>AiReflect</name>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> *</type>
+          <declname>I</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> *</type>
+          <declname>N</declname>
+        </param>
+        <param>
+          <type><ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> *</type>
+          <declname>R</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_util.h" line="50" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__util_1ga27e598595f92f7ac2112bcfd12ae9e2b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiReflectSafe</definition>
+        <argsstring>(const AtVector *I, const AtVector *N, const AtVector *Ng, AtVector *R)</argsstring>
+        <name>AiReflectSafe</name>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> *</type>
+          <declname>I</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> *</type>
+          <declname>N</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> *</type>
+          <declname>Ng</declname>
+        </param>
+        <param>
+          <type><ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> *</type>
+          <declname>R</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_util.h" line="51" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__util_1gab92f6e86874e8dc3a03485679cce0566" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiRefract</definition>
+        <argsstring>(const AtVector *I, const AtVector *N, AtVector *T, float n1, float n2)</argsstring>
+        <name>AiRefract</name>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> *</type>
+          <declname>I</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> *</type>
+          <declname>N</declname>
+        </param>
+        <param>
+          <type><ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> *</type>
+          <declname>T</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>n1</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>n2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_util.h" line="52" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__util_1ga4d5f33aa1dffc40deef9b57f3ab50c5c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="ai__api_8h_1a80eacd8febc412193f639f01892984c7" kindref="member">AI_CONST</ref> float</type>
+        <definition>AI_CONST float AiFresnelWeight</definition>
+        <argsstring>(AtVector N, AtVector Rd, float Krn)</argsstring>
+        <name>AiFresnelWeight</name>
+        <param>
+          <type><ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref></type>
+          <declname>N</declname>
+        </param>
+        <param>
+          <type><ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref></type>
+          <declname>Rd</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>Krn</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_util.h" line="53" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__util_1ga054934f2753e602f75dd67bc1dbdebad" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiFresnelWeightRGB</definition>
+        <argsstring>(const AtVector *N, const AtVector *Rd, const AtColor *Krn, AtColor *Kf)</argsstring>
+        <name>AiFresnelWeightRGB</name>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> *</type>
+          <declname>N</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> *</type>
+          <declname>Rd</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__color_1ga03caa98eaded3f2dd0527ed284656f04" kindref="member">AtColor</ref> *</type>
+          <declname>Krn</declname>
+        </param>
+        <param>
+          <type><ref refid="group__ai__color_1ga03caa98eaded3f2dd0527ed284656f04" kindref="member">AtColor</ref> *</type>
+          <declname>Kf</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_util.h" line="54" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__util_1ga36f4b19c0f81e6cd9c46e4d94ea4ee05" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiFaceForward</definition>
+        <argsstring>(AtVector *N, AtVector I)</argsstring>
+        <name>AiFaceForward</name>
+        <param>
+          <type><ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> *</type>
+          <declname>N</declname>
+        </param>
+        <param>
+          <type><ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref></type>
+          <declname>I</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_util.h" line="55" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__util_1gaeac039e4b2856f197c214fc142092e31" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiBuildLocalFrameShirley</definition>
+        <argsstring>(AtVector *u, AtVector *v, const AtVector *N)</argsstring>
+        <name>AiBuildLocalFrameShirley</name>
+        <param>
+          <type><ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> *</type>
+          <declname>u</declname>
+        </param>
+        <param>
+          <type><ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> *</type>
+          <declname>v</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> *</type>
+          <declname>N</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_util.h" line="56" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__util_1ga23bdbbf428285cfe4e842a71d5ad08c3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiBuildLocalFramePolar</definition>
+        <argsstring>(AtVector *u, AtVector *v, const AtVector *N)</argsstring>
+        <name>AiBuildLocalFramePolar</name>
+        <param>
+          <type><ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> *</type>
+          <declname>u</declname>
+        </param>
+        <param>
+          <type><ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> *</type>
+          <declname>v</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> *</type>
+          <declname>N</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_util.h" line="57" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Utility Helper Types</header>
+      <memberdef kind="typedef" id="group__ai__shader__util_1ga91ed48a428cd8774c8c39f4761448d07" prot="public" static="no">
+        <type>float(*</type>
+        <definition>typedef float(* AtFloatBumpEvaluator) (AtShaderGlobals *sg, void *data)</definition>
+        <argsstring>)(AtShaderGlobals *sg, void *data)</argsstring>
+        <name>AtFloatBumpEvaluator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This function pointer points to float-based bump-mapping function for use by <ref refid="group__ai__shader__util_1gae6f9e9999ad135284a65c1f77f99cd8b" kindref="member">AiShaderGlobalsEvaluateBump()</ref>.</para><para>This function would return the displacement height for the given shading context. This function would be called three times (on three different shading contexts). The returned displacements would be used to generate a triangle from which a normal is calculated.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the current shading context </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>user-defined data pointer </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>bump/displacement height for the current shading context </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_util.h" line="76" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_util.h" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Utility Functions</header>
+      <memberdef kind="function" id="group__ai__shader__util_1gacc2608bdec8007a909b1d7ffade99fb9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiShaderGlobalsGetTriangle</definition>
+        <argsstring>(const AtShaderGlobals *sg, int key, AtPoint p[3])</argsstring>
+        <name>AiShaderGlobalsGetTriangle</name>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_at_point" kindref="compound">AtPoint</ref></type>
+          <declname>p</declname>
+          <array>[3]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_util.h" line="82" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__util_1gad9a6c4bc9e35bba69502ca0d847dd10e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiShaderGlobalsGetVertexNormals</definition>
+        <argsstring>(const AtShaderGlobals *sg, int key, AtVector n[3])</argsstring>
+        <name>AiShaderGlobalsGetVertexNormals</name>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type><ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref></type>
+          <declname>n</declname>
+          <array>[3]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_util.h" line="83" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__util_1ga96a9cefdab8d44c7a61f4497e40bb571" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiShaderGlobalsGetVertexUVs</definition>
+        <argsstring>(const AtShaderGlobals *sg, AtPoint2 uv[3])</argsstring>
+        <name>AiShaderGlobalsGetVertexUVs</name>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_at_point2" kindref="compound">AtPoint2</ref></type>
+          <declname>uv</declname>
+          <array>[3]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_util.h" line="84" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__util_1ga2446579bc279bd1244b0a84e8df9678e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__ai__types_1ga5e008e3afa9393ab65d66796de249df9" kindref="member">AtUInt32</ref></type>
+        <definition>AtUInt32 AiShaderGlobalsGetPolygon</definition>
+        <argsstring>(const AtShaderGlobals *sg, int key, AtPoint *p)</argsstring>
+        <name>AiShaderGlobalsGetPolygon</name>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_at_point" kindref="compound">AtPoint</ref> *</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_util.h" line="85" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__util_1ga9e1539dc717d106cd5276de0abacac8c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiShaderGlobalsGetPositionAtTime</definition>
+        <argsstring>(const AtShaderGlobals *sg, float time, AtPoint *P, AtVector *N, AtVector *Ng, AtVector *Ns)</argsstring>
+        <name>AiShaderGlobalsGetPositionAtTime</name>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>time</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_at_point" kindref="compound">AtPoint</ref> *</type>
+          <declname>P</declname>
+        </param>
+        <param>
+          <type><ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> *</type>
+          <declname>N</declname>
+        </param>
+        <param>
+          <type><ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> *</type>
+          <declname>Ng</declname>
+        </param>
+        <param>
+          <type><ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> *</type>
+          <declname>Ns</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_util.h" line="86" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__util_1ga37e683bbc83b5ea960213d3e38e32731" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_at_point2" kindref="compound">AtPoint2</ref></type>
+        <definition>AtPoint2 AiShaderGlobalsGetPixelMotionVector</definition>
+        <argsstring>(const AtShaderGlobals *sg, float time0, float time1)</argsstring>
+        <name>AiShaderGlobalsGetPixelMotionVector</name>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>time0</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>time1</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_util.h" line="87" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__util_1gaaf988f43f41df9b5f5e61192e424eb1b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_at_b_box" kindref="compound">AtBBox</ref></type>
+        <definition>AtBBox AiShaderGlobalsGetBBoxLocal</definition>
+        <argsstring>(const AtShaderGlobals *sg)</argsstring>
+        <name>AiShaderGlobalsGetBBoxLocal</name>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_util.h" line="88" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__util_1ga3d7fbc7dd3c5f6648726cda7c2d90cb3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_at_b_box" kindref="compound">AtBBox</ref></type>
+        <definition>AtBBox AiShaderGlobalsGetBBoxWorld</definition>
+        <argsstring>(const AtShaderGlobals *sg)</argsstring>
+        <name>AiShaderGlobalsGetBBoxWorld</name>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_util.h" line="89" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__util_1ga2b9f05bec36a0df12f9957f50ddc13e9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref></type>
+        <definition>AtVector AiShaderGlobalsTransformNormal</definition>
+        <argsstring>(const AtShaderGlobals *sg, AtVector N, int space)</argsstring>
+        <name>AiShaderGlobalsTransformNormal</name>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type><ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref></type>
+          <declname>N</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>space</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_util.h" line="90" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__util_1ga44f49974c068d787289440a5097d0988" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_at_point" kindref="compound">AtPoint</ref></type>
+        <definition>AtPoint AiShaderGlobalsTransformPoint</definition>
+        <argsstring>(const AtShaderGlobals *sg, AtPoint P, int space)</argsstring>
+        <name>AiShaderGlobalsTransformPoint</name>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_at_point" kindref="compound">AtPoint</ref></type>
+          <declname>P</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>space</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_util.h" line="91" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__util_1ga9e22563c30db340c212f430a538d62fa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref></type>
+        <definition>AtVector AiShaderGlobalsTransformVector</definition>
+        <argsstring>(const AtShaderGlobals *sg, AtVector V, int space)</argsstring>
+        <name>AiShaderGlobalsTransformVector</name>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type><ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref></type>
+          <declname>V</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>space</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_util.h" line="92" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__util_1gacbd78f33c29cd4f9255d285ebd600e7c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DEPRECATED void</type>
+        <definition>DEPRECATED void AiShaderGlobalsSetTraceSet</definition>
+        <argsstring>(AtShaderGlobals *sg, const char *set, bool inclusive)</argsstring>
+        <name>AiShaderGlobalsSetTraceSet</name>
+        <param>
+          <type><ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>set</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>inclusive</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_util.h" line="94" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__util_1gafe4dcfa5438a2dc17219a78cc0d44f7f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiShaderGlobalsSetTraceSetAtString</definition>
+        <argsstring>(AtShaderGlobals *sg, const AtString set, bool inclusive)</argsstring>
+        <name>AiShaderGlobalsSetTraceSetAtString</name>
+        <param>
+          <type><ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>set</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>inclusive</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_util.h" line="95" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__util_1gaeb0c36af5dde85f66b448f72f3dc04c7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiShaderGlobalsSetTraceSet</definition>
+        <argsstring>(AtShaderGlobals *sg, const AtString set, bool inclusive)</argsstring>
+        <name>AiShaderGlobalsSetTraceSet</name>
+        <param>
+          <type><ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>set</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>inclusive</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_util.h" line="96" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_util.h" bodystart="96" bodyend="96"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__util_1ga6f91ebefc34df926de59068d237d433e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiShaderGlobalsUnsetTraceSet</definition>
+        <argsstring>(AtShaderGlobals *sg)</argsstring>
+        <name>AiShaderGlobalsUnsetTraceSet</name>
+        <param>
+          <type><ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_util.h" line="98" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__util_1ga83450358e17bb25884468231ca370cc0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void *</type>
+        <definition>void* AiShaderGlobalsQuickAlloc</definition>
+        <argsstring>(const AtShaderGlobals *sg, AtUInt32 size)</argsstring>
+        <name>AiShaderGlobalsQuickAlloc</name>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type><ref refid="group__ai__types_1ga5e008e3afa9393ab65d66796de249df9" kindref="member">AtUInt32</ref></type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_util.h" line="99" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__util_1gae6f9e9999ad135284a65c1f77f99cd8b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref></type>
+        <definition>AtVector AiShaderGlobalsEvaluateBump</definition>
+        <argsstring>(AtShaderGlobals *sg, AtFloatBumpEvaluator bump_func, void *data)</argsstring>
+        <name>AiShaderGlobalsEvaluateBump</name>
+        <param>
+          <type><ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type><ref refid="group__ai__shader__util_1ga91ed48a428cd8774c8c39f4761448d07" kindref="member">AtFloatBumpEvaluator</ref></type>
+          <declname>bump_func</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_util.h" line="100" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__util_1gae9fda49372ebc65b35173a8671ad408e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiShaderGlobalsApplyOpacity</definition>
+        <argsstring>(AtShaderGlobals *sg, AtRGB opacity)</argsstring>
+        <name>AiShaderGlobalsApplyOpacity</name>
+        <param>
+          <type><ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_at_r_g_b" kindref="compound">AtRGB</ref></type>
+          <declname>opacity</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_util.h" line="101" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__util_1gab1dabff399359a3f11b0cb443987650e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float AiShaderGlobalsEdgeLength</definition>
+        <argsstring>(const AtShaderGlobals *sg)</argsstring>
+        <name>AiShaderGlobalsEdgeLength</name>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_util.h" line="102" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__util_1ga97989276b5e172634b4977f263faf84f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float AiWireframe</definition>
+        <argsstring>(const AtShaderGlobals *sg, float line_width, bool raster_space, int edge_type)</argsstring>
+        <name>AiWireframe</name>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>line_width</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>raster_space</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>edge_type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_util.h" line="103" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__util_1ga5ead4ce8774f0c5ec5f3f95790e52e97" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiShaderGlobalsIsObjectMatte</definition>
+        <argsstring>(const AtShaderGlobals *sg)</argsstring>
+        <name>AiShaderGlobalsIsObjectMatte</name>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_util.h" line="104" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__util_1gafff74f6c5c15cb865ade849e8aba06c9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiFaceViewer</definition>
+        <argsstring>(const AtShaderGlobals *sg, AtVector &amp;n)</argsstring>
+        <name>AiFaceViewer</name>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type><ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> &amp;</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Make the surface normal face the viewer</para><para>Reverses vector sg-&gt;N if needed, in order to make it face forward with respect to viewing vector sg-&gt;Rd (not necessarily a camera ray).</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the current shading context </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">n</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>viewer-facing normal vector </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_util.h" line="115" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_util.h" bodystart="115" bodyend="118"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Camera Information</header>
+      <memberdef kind="function" id="group__ai__shader__util_1ga468cb0d8d5ac8a7463c290458d94e683" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float AiCameraGetShutterStart</definition>
+        <argsstring>()</argsstring>
+        <name>AiCameraGetShutterStart</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_util.h" line="125" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__util_1ga99042e68e243a87f9fb0afc6c7b63f29" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float AiCameraGetShutterEnd</definition>
+        <argsstring>()</argsstring>
+        <name>AiCameraGetShutterEnd</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_util.h" line="126" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__util_1ga59766a24561ae266dbd06614148aa932" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiCameraToWorldMatrix</definition>
+        <argsstring>(const AtNode *node, float time, AtMatrix out)</argsstring>
+        <name>AiCameraToWorldMatrix</name>
+        <param>
+          <type>const <ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>time</declname>
+        </param>
+        <param>
+          <type><ref refid="group__ai__matrix_1ga239cea4f70543ed6dae0d0549d28c01c" kindref="member">AtMatrix</ref></type>
+          <declname>out</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_util.h" line="127" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__util_1ga4e52c908fd81324585e5632c10135f71" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiWorldToCameraMatrix</definition>
+        <argsstring>(const AtNode *node, float time, AtMatrix out)</argsstring>
+        <name>AiWorldToCameraMatrix</name>
+        <param>
+          <type>const <ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>time</declname>
+        </param>
+        <param>
+          <type><ref refid="group__ai__matrix_1ga239cea4f70543ed6dae0d0549d28c01c" kindref="member">AtMatrix</ref></type>
+          <declname>out</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_util.h" line="128" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__util_1gae2da11b109eb28cab0ce64d3bcff515c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiWorldToScreenMatrix</definition>
+        <argsstring>(const AtNode *node, float time, AtMatrix out)</argsstring>
+        <name>AiWorldToScreenMatrix</name>
+        <param>
+          <type>const <ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>time</declname>
+        </param>
+        <param>
+          <type><ref refid="group__ai__matrix_1ga239cea4f70543ed6dae0d0549d28c01c" kindref="member">AtMatrix</ref></type>
+          <declname>out</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_util.h" line="129" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Environment Mappings</header>
+      <memberdef kind="function" id="group__ai__shader__util_1gaba78497d96d1c8c3db0e3f5fa31898f6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiMappingMirroredBall</definition>
+        <argsstring>(const AtVector *dir, float *u, float *v)</argsstring>
+        <name>AiMappingMirroredBall</name>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> *</type>
+          <declname>dir</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>u</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_util.h" line="135" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__util_1ga47dfd78c91bfb332b4cab28f97f1d09c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiMappingAngularMap</definition>
+        <argsstring>(const AtVector *dir, float *u, float *v)</argsstring>
+        <name>AiMappingAngularMap</name>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> *</type>
+          <declname>dir</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>u</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_util.h" line="136" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__util_1ga22ac4fe612d484f40d4d45ab18a3ef4f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiMappingLatLong</definition>
+        <argsstring>(const AtVector *dir, float *u, float *v)</argsstring>
+        <name>AiMappingLatLong</name>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> *</type>
+          <declname>dir</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>u</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_util.h" line="137" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__util_1ga1f41e098ace81e71e40ce76c2c669b31" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiMappingCubicMap</definition>
+        <argsstring>(const AtVector *dir, float *u, float *v)</argsstring>
+        <name>AiMappingCubicMap</name>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> *</type>
+          <declname>dir</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>u</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_util.h" line="138" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Derivatives for Environment Mappings</header>
+      <memberdef kind="function" id="group__ai__shader__util_1ga6ea16c9fb60d802bd40c568db2d74da0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiMappingMirroredBallDerivs</definition>
+        <argsstring>(const AtVector *dir, const AtVector *dDdx, const AtVector *dDdy, float *u, float *v, float *dudx, float *dudy, float *dvdx, float *dvdy)</argsstring>
+        <name>AiMappingMirroredBallDerivs</name>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> *</type>
+          <declname>dir</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> *</type>
+          <declname>dDdx</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> *</type>
+          <declname>dDdy</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>u</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>v</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>dudx</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>dudy</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>dvdx</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>dvdy</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_util.h" line="144" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__util_1gad1929b9ffbb3360d26a155292c885c5a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiMappingAngularMapDerivs</definition>
+        <argsstring>(const AtVector *dir, const AtVector *dDdx, const AtVector *dDdy, float *u, float *v, float *dudx, float *dudy, float *dvdx, float *dvdy)</argsstring>
+        <name>AiMappingAngularMapDerivs</name>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> *</type>
+          <declname>dir</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> *</type>
+          <declname>dDdx</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> *</type>
+          <declname>dDdy</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>u</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>v</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>dudx</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>dudy</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>dvdx</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>dvdy</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_util.h" line="145" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__util_1ga416f8d9cd5dcb68176ebc1bbb2b951f4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiMappingLatLongDerivs</definition>
+        <argsstring>(const AtVector *dir, const AtVector *dDdx, const AtVector *dDdy, float *u, float *v, float *dudx, float *dudy, float *dvdx, float *dvdy)</argsstring>
+        <name>AiMappingLatLongDerivs</name>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> *</type>
+          <declname>dir</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> *</type>
+          <declname>dDdx</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> *</type>
+          <declname>dDdy</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>u</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>v</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>dudx</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>dudy</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>dvdx</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>dvdy</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_util.h" line="146" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__util_1ga614425b2c2968f249bc8acb503565fa2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiMappingCubicMapDerivs</definition>
+        <argsstring>(const AtVector *dir, const AtVector *dDdx, const AtVector *dDdy, float *u, float *v, float *dudx, float *dudy, float *dvdx, float *dvdy)</argsstring>
+        <name>AiMappingCubicMapDerivs</name>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> *</type>
+          <declname>dir</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> *</type>
+          <declname>dDdx</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref> *</type>
+          <declname>dDdy</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>u</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>v</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>dudx</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>dudy</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>dvdx</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>dvdy</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_util.h" line="147" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

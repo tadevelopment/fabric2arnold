@@ -1,0 +1,633 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="ai_8h" kind="file" language="C++">
+    <compoundname>ai.h</compoundname>
+    <includes refid="ai__procedural_8h" local="yes">ai_procedural.h</includes>
+    <includes refid="ai__volume_8h" local="yes">ai_volume.h</includes>
+    <includes refid="ai__plugins_8h" local="yes">ai_plugins.h</includes>
+    <includes refid="ai__drivers_8h" local="yes">ai_drivers.h</includes>
+    <includes refid="ai__driver__utils_8h" local="yes">ai_driver_utils.h</includes>
+    <includes refid="ai__filters_8h" local="yes">ai_filters.h</includes>
+    <includes refid="ai__cameras_8h" local="yes">ai_cameras.h</includes>
+    <includes refid="ai__shaders_8h" local="yes">ai_shaders.h</includes>
+    <includes refid="ai__nodes_8h" local="yes">ai_nodes.h</includes>
+    <includes refid="ai__params_8h" local="yes">ai_params.h</includes>
+    <includes refid="ai__metadata_8h" local="yes">ai_metadata.h</includes>
+    <includes refid="ai__dotass_8h" local="yes">ai_dotass.h</includes>
+    <includes refid="ai__msg_8h" local="yes">ai_msg.h</includes>
+    <includes refid="ai__sampler_8h" local="yes">ai_sampler.h</includes>
+    <includes refid="ai__shader__aovs_8h" local="yes">ai_shader_aovs.h</includes>
+    <includes refid="ai__shader__brdf_8h" local="yes">ai_shader_brdf.h</includes>
+    <includes refid="ai__shaderglobals_8h" local="yes">ai_shaderglobals.h</includes>
+    <includes refid="ai__shader__lights_8h" local="yes">ai_shader_lights.h</includes>
+    <includes refid="ai__shader__message_8h" local="yes">ai_shader_message.h</includes>
+    <includes refid="ai__shader__radiance_8h" local="yes">ai_shader_radiance.h</includes>
+    <includes refid="ai__shader__sample_8h" local="yes">ai_shader_sample.h</includes>
+    <includes refid="ai__shader__sss_8h" local="yes">ai_shader_sss.h</includes>
+    <includes refid="ai__shader__userdef_8h" local="yes">ai_shader_userdef.h</includes>
+    <includes refid="ai__shader__parameval_8h" local="yes">ai_shader_parameval.h</includes>
+    <includes refid="ai__shader__util_8h" local="yes">ai_shader_util.h</includes>
+    <includes refid="ai__shader__volume_8h" local="yes">ai_shader_volume.h</includes>
+    <includes refid="ai__noise_8h" local="yes">ai_noise.h</includes>
+    <includes refid="ai__texture_8h" local="yes">ai_texture.h</includes>
+    <includes refid="ai__ray_8h" local="yes">ai_ray.h</includes>
+    <includes refid="ai__render_8h" local="yes">ai_render.h</includes>
+    <includes refid="ai__unit__test_8h" local="yes">ai_unit_test.h</includes>
+    <includes refid="ai__universe_8h" local="yes">ai_universe.h</includes>
+    <includes refid="ai__critsec_8h" local="yes">ai_critsec.h</includes>
+    <includes refid="ai__threads_8h" local="yes">ai_threads.h</includes>
+    <includes refid="ai__array_8h" local="yes">ai_array.h</includes>
+    <includes refid="ai__bbox_8h" local="yes">ai_bbox.h</includes>
+    <includes refid="ai__matrix_8h" local="yes">ai_matrix.h</includes>
+    <includes refid="ai__vector_8h" local="yes">ai_vector.h</includes>
+    <includes refid="ai__color_8h" local="yes">ai_color.h</includes>
+    <includes refid="ai__enum_8h" local="yes">ai_enum.h</includes>
+    <includes refid="ai__types_8h" local="yes">ai_types.h</includes>
+    <includes refid="ai__constants_8h" local="yes">ai_constants.h</includes>
+    <includes refid="ai__version_8h" local="yes">ai_version.h</includes>
+    <includes refid="ai__license_8h" local="yes">ai_license.h</includes>
+    <includes refid="ai__allocate_8h" local="yes">ai_allocate.h</includes>
+    <incdepgraph>
+      <node id="7">
+        <label>ai_constants.h</label>
+        <link refid="ai__constants_8h"/>
+      </node>
+      <node id="34">
+        <label>ai_ray.h</label>
+        <link refid="ai__ray_8h"/>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="47">
+        <label>ai_universe.h</label>
+        <link refid="ai__universe_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="50">
+        <label>ai_license.h</label>
+        <link refid="ai__license_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>ai_filters.h</label>
+        <link refid="ai__filters_8h"/>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="38">
+        <label>ai_shader_sss.h</label>
+        <link refid="ai__shader__sss_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="51">
+        <label>ai_allocate.h</label>
+        <link refid="ai__allocate_8h"/>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>ai_api.h</label>
+        <link refid="ai__api_8h"/>
+      </node>
+      <node id="17">
+        <label>ai_plugins.h</label>
+        <link refid="ai__plugins_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>cmath</label>
+      </node>
+      <node id="41">
+        <label>ai_shader_util.h</label>
+        <link refid="ai__shader__util_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+      </node>
+      <node id="35">
+        <label>ai_shader_sample.h</label>
+        <link refid="ai__shader__sample_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="28">
+        <label>ai_msg.h</label>
+        <link refid="ai__msg_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="42">
+        <label>ai_shader_volume.h</label>
+        <link refid="ai__shader__volume_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="44">
+        <label>ai_texture.h</label>
+        <link refid="ai__texture_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>ai_version.h</label>
+        <link refid="ai__version_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>ai_vector.h</label>
+        <link refid="ai__vector_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>ai_metadata.h</label>
+        <link refid="ai__metadata_8h"/>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>ai_node_entry.h</label>
+        <link refid="ai__node__entry_8h"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>ai_nodes.h</label>
+        <link refid="ai__nodes_8h"/>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>ai_dotass.h</label>
+        <link refid="ai__dotass_8h"/>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>ai_volume.h</label>
+        <link refid="ai__volume_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>ai_driver_utils.h</label>
+        <link refid="ai__driver__utils_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>ai_types.h</label>
+        <link refid="ai__types_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>ai_drivers.h</label>
+        <link refid="ai__drivers_8h"/>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="24">
+        <label>ai_cameras.h</label>
+        <link refid="ai__cameras_8h"/>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>ai_array.h</label>
+        <link refid="ai__array_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="31">
+        <label>ai_shader_brdf.h</label>
+        <link refid="ai__shader__brdf_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>ai_params.h</label>
+        <link refid="ai__params_8h"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="30">
+        <label>ai_shader_aovs.h</label>
+        <link refid="ai__shader__aovs_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="32">
+        <label>ai_shaderglobals.h</label>
+        <link refid="ai__shaderglobals_8h"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="46">
+        <label>ai_unit_test.h</label>
+        <link refid="ai__unit__test_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="39">
+        <label>ai_shader_userdef.h</label>
+        <link refid="ai__shader__userdef_8h"/>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>ai_color.h</label>
+        <link refid="ai__color_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="40">
+        <label>ai_shader_parameval.h</label>
+        <link refid="ai__shader__parameval_8h"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>math.h</label>
+      </node>
+      <node id="5">
+        <label>ai_bbox.h</label>
+        <link refid="ai__bbox_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>ai_procedural.h</label>
+        <link refid="ai__procedural_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>cstdlib</label>
+      </node>
+      <node id="37">
+        <label>ai_shader_radiance.h</label>
+        <link refid="ai__shader__radiance_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="45">
+        <label>ai_render.h</label>
+        <link refid="ai__render_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="36">
+        <label>ai_shader_message.h</label>
+        <link refid="ai__shader__message_8h"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>ai_shaders.h</label>
+        <link refid="ai__shaders_8h"/>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>ai_matrix.h</label>
+        <link refid="ai__matrix_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="33">
+        <label>ai_shader_lights.h</label>
+        <link refid="ai__shader__lights_8h"/>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+      </node>
+      <node id="43">
+        <label>ai_noise.h</label>
+        <link refid="ai__noise_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="49">
+        <label>ai_threads.h</label>
+        <link refid="ai__threads_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>ai_string.h</label>
+        <link refid="ai__string_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="48">
+        <label>ai_critsec.h</label>
+        <link refid="ai__critsec_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>ai_enum.h</label>
+        <link refid="ai__enum_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="0">
+        <label>ai.h</label>
+        <link refid="ai.h"/>
+        <childnode refid="1" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+        <childnode refid="48" relation="include">
+        </childnode>
+        <childnode refid="49" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="50" relation="include">
+        </childnode>
+        <childnode refid="51" relation="include">
+        </childnode>
+      </node>
+      <node id="29">
+        <label>ai_sampler.h</label>
+        <link refid="ai__sampler_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Uber-include file, convenient way of making the entire Arnold API available</para><para>Note that the order of includes is <emphasis>not</emphasis> random. For more information about correct include ordering conventions: <ulink url="http://www.topology.org/linux/include.html">http://www.topology.org/linux/include.html</ulink> </para>    </detaileddescription>
+    <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai.h"/>
+  </compounddef>
+</doxygen>

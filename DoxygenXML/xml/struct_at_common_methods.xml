@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="struct_at_common_methods" kind="struct" language="C++" prot="public">
+    <compoundname>AtCommonMethods</compoundname>
+    <includes refid="ai__node__entry_8h" local="no">ai_node_entry.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_at_common_methods_1a9cecd079919d75f3518bd95bfba587f1" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* AtCommonMethods::Parameters) (AtList *, AtMetaDataStore *)</definition>
+        <argsstring>)(AtList *, AtMetaDataStore *)</argsstring>
+        <name>Parameters</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_node_entry.h" line="47" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_node_entry.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_common_methods_1ab69ec7e75789e1db0f2649d21f7d9779" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* AtCommonMethods::Initialize) (AtNode *, AtParamValue *)</definition>
+        <argsstring>)(AtNode *, AtParamValue *)</argsstring>
+        <name>Initialize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_node_entry.h" line="48" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_node_entry.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_common_methods_1ab8ec9782dffb6ab432edde7b7d6abc75" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* AtCommonMethods::Update) (AtNode *, AtParamValue *)</definition>
+        <argsstring>)(AtNode *, AtParamValue *)</argsstring>
+        <name>Update</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_node_entry.h" line="49" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_node_entry.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_common_methods_1aaa96c444fd1602caac415be2f9c58479" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* AtCommonMethods::Finish) (AtNode *)</definition>
+        <argsstring>)(AtNode *)</argsstring>
+        <name>Finish</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_node_entry.h" line="50" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_node_entry.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Methods common to all nodes </para>    </detaileddescription>
+    <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_node_entry.h" line="46" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_node_entry.h" bodystart="45" bodyend="51"/>
+    <listofallmembers>
+      <member refid="struct_at_common_methods_1aaa96c444fd1602caac415be2f9c58479" prot="public" virt="non-virtual"><scope>AtCommonMethods</scope><name>Finish</name></member>
+      <member refid="struct_at_common_methods_1ab69ec7e75789e1db0f2649d21f7d9779" prot="public" virt="non-virtual"><scope>AtCommonMethods</scope><name>Initialize</name></member>
+      <member refid="struct_at_common_methods_1a9cecd079919d75f3518bd95bfba587f1" prot="public" virt="non-virtual"><scope>AtCommonMethods</scope><name>Parameters</name></member>
+      <member refid="struct_at_common_methods_1ab8ec9782dffb6ab432edde7b7d6abc75" prot="public" virt="non-virtual"><scope>AtCommonMethods</scope><name>Update</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

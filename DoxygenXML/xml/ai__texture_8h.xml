@@ -1,0 +1,610 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="ai__texture_8h" kind="file" language="C++">
+    <compoundname>ai_texture.h</compoundname>
+    <includes refid="ai__color_8h" local="yes">ai_color.h</includes>
+    <includes refid="ai__api_8h" local="yes">ai_api.h</includes>
+    <includes refid="ai__shaderglobals_8h" local="yes">ai_shaderglobals.h</includes>
+    <includedby refid="ai_8h" local="yes">ai.h</includedby>
+    <incdepgraph>
+      <node id="752">
+        <label>ai_constants.h</label>
+        <link refid="ai__constants_8h"/>
+      </node>
+      <node id="751">
+        <label>ai_api.h</label>
+        <link refid="ai__api_8h"/>
+      </node>
+      <node id="753">
+        <label>cmath</label>
+      </node>
+      <node id="748">
+        <label>ai_texture.h</label>
+        <link refid="ai_texture.h"/>
+        <childnode refid="749" relation="include">
+        </childnode>
+        <childnode refid="751" relation="include">
+        </childnode>
+        <childnode refid="755" relation="include">
+        </childnode>
+      </node>
+      <node id="759">
+        <label>ai_vector.h</label>
+        <link refid="ai__vector_8h"/>
+        <childnode refid="752" relation="include">
+        </childnode>
+        <childnode refid="750" relation="include">
+        </childnode>
+        <childnode refid="751" relation="include">
+        </childnode>
+        <childnode refid="760" relation="include">
+        </childnode>
+      </node>
+      <node id="750">
+        <label>ai_types.h</label>
+        <link refid="ai__types_8h"/>
+        <childnode refid="751" relation="include">
+        </childnode>
+        <childnode refid="752" relation="include">
+        </childnode>
+        <childnode refid="753" relation="include">
+        </childnode>
+        <childnode refid="754" relation="include">
+        </childnode>
+      </node>
+      <node id="757">
+        <label>ai_array.h</label>
+        <link refid="ai__array_8h"/>
+        <childnode refid="749" relation="include">
+        </childnode>
+        <childnode refid="758" relation="include">
+        </childnode>
+        <childnode refid="759" relation="include">
+        </childnode>
+        <childnode refid="750" relation="include">
+        </childnode>
+        <childnode refid="751" relation="include">
+        </childnode>
+      </node>
+      <node id="756">
+        <label>ai_params.h</label>
+        <link refid="ai__params_8h"/>
+        <childnode refid="757" relation="include">
+        </childnode>
+        <childnode refid="749" relation="include">
+        </childnode>
+        <childnode refid="761" relation="include">
+        </childnode>
+        <childnode refid="758" relation="include">
+        </childnode>
+        <childnode refid="759" relation="include">
+        </childnode>
+        <childnode refid="750" relation="include">
+        </childnode>
+        <childnode refid="751" relation="include">
+        </childnode>
+      </node>
+      <node id="755">
+        <label>ai_shaderglobals.h</label>
+        <link refid="ai__shaderglobals_8h"/>
+        <childnode refid="756" relation="include">
+        </childnode>
+        <childnode refid="757" relation="include">
+        </childnode>
+        <childnode refid="749" relation="include">
+        </childnode>
+        <childnode refid="758" relation="include">
+        </childnode>
+        <childnode refid="759" relation="include">
+        </childnode>
+        <childnode refid="762" relation="include">
+        </childnode>
+        <childnode refid="750" relation="include">
+        </childnode>
+        <childnode refid="751" relation="include">
+        </childnode>
+      </node>
+      <node id="749">
+        <label>ai_color.h</label>
+        <link refid="ai__color_8h"/>
+        <childnode refid="750" relation="include">
+        </childnode>
+        <childnode refid="752" relation="include">
+        </childnode>
+        <childnode refid="751" relation="include">
+        </childnode>
+      </node>
+      <node id="760">
+        <label>math.h</label>
+      </node>
+      <node id="754">
+        <label>cstdlib</label>
+      </node>
+      <node id="758">
+        <label>ai_matrix.h</label>
+        <link refid="ai__matrix_8h"/>
+        <childnode refid="759" relation="include">
+        </childnode>
+        <childnode refid="751" relation="include">
+        </childnode>
+      </node>
+      <node id="762">
+        <label>ai_string.h</label>
+        <link refid="ai__string_8h"/>
+        <childnode refid="751" relation="include">
+        </childnode>
+        <childnode refid="750" relation="include">
+        </childnode>
+      </node>
+      <node id="761">
+        <label>ai_enum.h</label>
+        <link refid="ai__enum_8h"/>
+        <childnode refid="751" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="763">
+        <label>ai_texture.h</label>
+        <link refid="ai_texture.h"/>
+        <childnode refid="764" relation="include">
+        </childnode>
+      </node>
+      <node id="764">
+        <label>ai.h</label>
+        <link refid="ai_8h"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="struct_at_texture_params" prot="public">AtTextureParams</innerclass>
+      <sectiondef kind="user-defined">
+      <header>Wrapping Modes</header>
+      <description><para>Wrap mode describes what happens when texture coordinates describe a value outside the usual [0,1] range where a texture is defined. </para></description>
+      <memberdef kind="define" id="group__ai__texture_1ga028613ac71211cca1e160a29287257ea" prot="public" static="no">
+        <name>AI_WRAP_PERIODIC</name>
+        <initializer>0x00</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>the texture repeats itself outside the [0,1] range in (s,t)-space </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_texture.h" line="26" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_texture.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__texture_1ga8f38c9fb0b5f06d27175fcb6a20d5411" prot="public" static="no">
+        <name>AI_WRAP_BLACK</name>
+        <initializer>0x01</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>return black outside the [0,1] range </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_texture.h" line="27" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_texture.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__texture_1ga02e99fcdf48971ef8bf99fbd49789847" prot="public" static="no">
+        <name>AI_WRAP_CLAMP</name>
+        <initializer>0x02</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>clamp to the closest texture edge </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_texture.h" line="28" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_texture.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__texture_1ga4c93f9a47bdeff25e59faf0c73fcaa28" prot="public" static="no">
+        <name>AI_WRAP_MIRROR</name>
+        <initializer>0x03</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>mirror the image across the boundaries </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_texture.h" line="29" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_texture.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__texture_1ga4947bfb82af9e37ef1571d3eab1eec27" prot="public" static="no">
+        <name>AI_WRAP_FILE</name>
+        <initializer>0x04</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>use the wrap mode found in the file </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_texture.h" line="30" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_texture.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Texture Look-Up/Interpolation Modes</header>
+      <description><para>The look-up mode determines how we sample within a mimap level. </para></description>
+      <memberdef kind="define" id="group__ai__texture_1ga91f77e2ec25daf7cdcd1db15cf7df013" prot="public" static="no">
+        <name>AI_TEXTURE_CLOSEST</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>force the closest texel </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_texture.h" line="39" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_texture.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__texture_1gaf02da9813b48e3c6e75d7afb6d95e8cd" prot="public" static="no">
+        <name>AI_TEXTURE_BILINEAR</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>force bilinear look-up within a mip level </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_texture.h" line="40" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_texture.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__texture_1ga8dad299037789e3f8477033aa9f24e3b" prot="public" static="no">
+        <name>AI_TEXTURE_BICUBIC</name>
+        <initializer>2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>force bicubic look-up within a mip level </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_texture.h" line="41" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_texture.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__texture_1gae19120d7ae9eee8c2178917b3b26f3cd" prot="public" static="no">
+        <name>AI_TEXTURE_SMART_BICUBIC</name>
+        <initializer>3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>bicubic when maxifying, else use bilinear look-up </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_texture.h" line="42" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_texture.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>MIP modes</header>
+      <description><para>The MIP mode determines how we sample between mipmap levels. </para></description>
+      <memberdef kind="define" id="group__ai__texture_1gad1301eceb73fd099302eb269b867e660" prot="public" static="no">
+        <name>AI_TEXTURE_MIPMODE_DEFAULT</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>use the default mode (auto-selected) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_texture.h" line="51" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_texture.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__texture_1ga7c05fd8118767beef1b465f486c1408c" prot="public" static="no">
+        <name>AI_TEXTURE_MIPMODE_NONE</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>use highest-res mip level only </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_texture.h" line="52" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_texture.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__texture_1ga72649ece750826e50cb81c4b69c3c767" prot="public" static="no">
+        <name>AI_TEXTURE_MIPMODE_ONE</name>
+        <initializer>2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>just use one mip level (closest) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_texture.h" line="53" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_texture.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__texture_1ga19e759023c17b420e9da9bc984306810" prot="public" static="no">
+        <name>AI_TEXTURE_MIPMODE_TRILINEAR</name>
+        <initializer>3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>trilinear blending of two closest mip levels </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_texture.h" line="54" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_texture.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__texture_1gad946c7507945675cfb577ddc1d8aa3f1" prot="public" static="no">
+        <name>AI_TEXTURE_MIPMODE_ANISOTROPIC</name>
+        <initializer>4</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>use two closest mip levels with anisotropic filtering </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_texture.h" line="55" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_texture.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group__ai__texture_1gadf228127958f8aea1cc8cb74677af51d" prot="public" static="no">
+        <type>struct <ref refid="struct_at_texture_params" kindref="compound">AtTextureParams</ref></type>
+        <definition>typedef struct AtTextureParams  AtTextureParams</definition>
+        <argsstring></argsstring>
+        <name>AtTextureParams</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Structure that holds all of the available texture map look-up options </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_texture.h" line="77" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__ai__texture_1ga3cdf70ab7bb6c8e183203cd593a7ed0b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiTextureParamsSetDefaults</definition>
+        <argsstring>(AtTextureParams *params)</argsstring>
+        <name>AiTextureParamsSetDefaults</name>
+        <param>
+          <type><ref refid="struct_at_texture_params" kindref="compound">AtTextureParams</ref> *</type>
+          <declname>params</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_texture.h" line="79" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__texture_1ga15e62494655eb0f0165ed1f2cf1e4fbe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_at_texture_handle" kindref="compound">AtTextureHandle</ref> *</type>
+        <definition>AtTextureHandle* AiTextureHandleCreate</definition>
+        <argsstring>(const char *filename)</argsstring>
+        <name>AiTextureHandleCreate</name>
+        <param>
+          <type>const char *</type>
+          <declname>filename</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_texture.h" line="92" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__texture_1ga0dcb66514d0e86125174fabb210dd7df" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_at_r_g_b_a" kindref="compound">AtRGBA</ref></type>
+        <definition>AtRGBA AiTextureHandleAccess</definition>
+        <argsstring>(const AtShaderGlobals *sg, AtTextureHandle *handle, const AtTextureParams *params, bool *success=NULL)</argsstring>
+        <name>AiTextureHandleAccess</name>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_at_texture_handle" kindref="compound">AtTextureHandle</ref> *</type>
+          <declname>handle</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_texture_params" kindref="compound">AtTextureParams</ref> *</type>
+          <declname>params</declname>
+        </param>
+        <param>
+          <type>bool *</type>
+          <declname>success</declname>
+          <defval><ref refid="group__ai__types_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_texture.h" line="93" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__texture_1ga6094f1e45109323770188353c9f8753c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiTextureHandleDestroy</definition>
+        <argsstring>(AtTextureHandle *handle)</argsstring>
+        <name>AiTextureHandleDestroy</name>
+        <param>
+          <type><ref refid="struct_at_texture_handle" kindref="compound">AtTextureHandle</ref> *</type>
+          <declname>handle</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_texture.h" line="94" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__texture_1ga07b633a45cabf55ec383d260d42e7132" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_at_r_g_b_a" kindref="compound">AtRGBA</ref></type>
+        <definition>AtRGBA AiTextureAccess</definition>
+        <argsstring>(const AtShaderGlobals *sg, const char *filename, const AtTextureParams *params, bool *success=NULL)</argsstring>
+        <name>AiTextureAccess</name>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>filename</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_texture_params" kindref="compound">AtTextureParams</ref> *</type>
+          <declname>params</declname>
+        </param>
+        <param>
+          <type>bool *</type>
+          <declname>success</declname>
+          <defval><ref refid="group__ai__types_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_texture.h" line="96" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__texture_1gaa661880c6ec724bd34a6681bf7473c8c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiTextureGetResolution</definition>
+        <argsstring>(const char *filename, unsigned int *width, unsigned int *height)</argsstring>
+        <name>AiTextureGetResolution</name>
+        <param>
+          <type>const char *</type>
+          <declname>filename</declname>
+        </param>
+        <param>
+          <type>unsigned int *</type>
+          <declname>width</declname>
+        </param>
+        <param>
+          <type>unsigned int *</type>
+          <declname>height</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_texture.h" line="98" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__texture_1ga8ee322475139fe837916a51732187c5d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiTextureGetNumChannels</definition>
+        <argsstring>(const char *filename, unsigned int *num_channels)</argsstring>
+        <name>AiTextureGetNumChannels</name>
+        <param>
+          <type>const char *</type>
+          <declname>filename</declname>
+        </param>
+        <param>
+          <type>unsigned int *</type>
+          <declname>num_channels</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_texture.h" line="99" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__texture_1ga24fb94182e0bc2e9ac6246d92a7c3d8f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* AiTextureGetChannelName</definition>
+        <argsstring>(const char *filename, unsigned int channel_index)</argsstring>
+        <name>AiTextureGetChannelName</name>
+        <param>
+          <type>const char *</type>
+          <declname>filename</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>channel_index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_texture.h" line="100" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__texture_1gacc51510a8a87697138f24d99b176c3fe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiTextureGetFormat</definition>
+        <argsstring>(const char *filename, unsigned int *format)</argsstring>
+        <name>AiTextureGetFormat</name>
+        <param>
+          <type>const char *</type>
+          <declname>filename</declname>
+        </param>
+        <param>
+          <type>unsigned int *</type>
+          <declname>format</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_texture.h" line="101" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__texture_1gac19a78c5bd7a3a2ae04106dfea657b8c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiTextureGetBitDepth</definition>
+        <argsstring>(const char *filename, unsigned int *bit_depth)</argsstring>
+        <name>AiTextureGetBitDepth</name>
+        <param>
+          <type>const char *</type>
+          <declname>filename</declname>
+        </param>
+        <param>
+          <type>unsigned int *</type>
+          <declname>bit_depth</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_texture.h" line="102" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__texture_1gaaa15a0af851d81f970669f0063195754" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiTextureGetMatrices</definition>
+        <argsstring>(const char *filename, AtMatrix world_to_screen, AtMatrix world_to_camera)</argsstring>
+        <name>AiTextureGetMatrices</name>
+        <param>
+          <type>const char *</type>
+          <declname>filename</declname>
+        </param>
+        <param>
+          <type><ref refid="group__ai__matrix_1ga239cea4f70543ed6dae0d0549d28c01c" kindref="member">AtMatrix</ref></type>
+          <declname>world_to_screen</declname>
+        </param>
+        <param>
+          <type><ref refid="group__ai__matrix_1ga239cea4f70543ed6dae0d0549d28c01c" kindref="member">AtMatrix</ref></type>
+          <declname>world_to_camera</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_texture.h" line="103" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__texture_1ga1585f063d8f6562c5b4878d7cba25dd0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiTextureInvalidate</definition>
+        <argsstring>(const char *filename)</argsstring>
+        <name>AiTextureInvalidate</name>
+        <param>
+          <type>const char *</type>
+          <declname>filename</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_texture.h" line="104" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Texture mapping system </para>    </detaileddescription>
+    <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_texture.h"/>
+  </compounddef>
+</doxygen>

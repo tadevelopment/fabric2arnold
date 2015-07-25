@@ -1,0 +1,428 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="ai__universe_8h" kind="file" language="C++">
+    <compoundname>ai_universe.h</compoundname>
+    <includes refid="ai__types_8h" local="yes">ai_types.h</includes>
+    <includes refid="ai__bbox_8h" local="yes">ai_bbox.h</includes>
+    <includes refid="ai__api_8h" local="yes">ai_api.h</includes>
+    <includedby refid="ai_8h" local="yes">ai.h</includedby>
+    <incdepgraph>
+      <node id="819">
+        <label>ai_constants.h</label>
+        <link refid="ai__constants_8h"/>
+      </node>
+      <node id="816">
+        <label>ai_universe.h</label>
+        <link refid="ai_universe.h"/>
+        <childnode refid="817" relation="include">
+        </childnode>
+        <childnode refid="822" relation="include">
+        </childnode>
+        <childnode refid="818" relation="include">
+        </childnode>
+      </node>
+      <node id="818">
+        <label>ai_api.h</label>
+        <link refid="ai__api_8h"/>
+      </node>
+      <node id="820">
+        <label>cmath</label>
+      </node>
+      <node id="823">
+        <label>ai_vector.h</label>
+        <link refid="ai__vector_8h"/>
+        <childnode refid="819" relation="include">
+        </childnode>
+        <childnode refid="817" relation="include">
+        </childnode>
+        <childnode refid="818" relation="include">
+        </childnode>
+        <childnode refid="824" relation="include">
+        </childnode>
+      </node>
+      <node id="817">
+        <label>ai_types.h</label>
+        <link refid="ai__types_8h"/>
+        <childnode refid="818" relation="include">
+        </childnode>
+        <childnode refid="819" relation="include">
+        </childnode>
+        <childnode refid="820" relation="include">
+        </childnode>
+        <childnode refid="821" relation="include">
+        </childnode>
+      </node>
+      <node id="824">
+        <label>math.h</label>
+      </node>
+      <node id="822">
+        <label>ai_bbox.h</label>
+        <link refid="ai__bbox_8h"/>
+        <childnode refid="823" relation="include">
+        </childnode>
+        <childnode refid="818" relation="include">
+        </childnode>
+      </node>
+      <node id="821">
+        <label>cstdlib</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="825">
+        <label>ai_universe.h</label>
+        <link refid="ai_universe.h"/>
+        <childnode refid="826" relation="include">
+        </childnode>
+      </node>
+      <node id="826">
+        <label>ai.h</label>
+        <link refid="ai_8h"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="struct_at_a_o_v_entry" prot="public">AtAOVEntry</innerclass>
+      <sectiondef kind="user-defined">
+      <header>Methods</header>
+      <memberdef kind="function" id="group__ai__universe_1ga78ec09161393f38033efee40149678de" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiUniverseIsActive</definition>
+        <argsstring>()</argsstring>
+        <name>AiUniverseIsActive</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_universe.h" line="42" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__universe_1ga7e851f8ff9bb132aca3320852dba658a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiUniverseCacheFlush</definition>
+        <argsstring>(int cache_flags)</argsstring>
+        <name>AiUniverseCacheFlush</name>
+        <param>
+          <type>int</type>
+          <declname>cache_flags</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_universe.h" line="43" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__universe_1ga3671f91ad7f07d4067aa52b22347252e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+        <definition>AtNode* AiUniverseGetOptions</definition>
+        <argsstring>()</argsstring>
+        <name>AiUniverseGetOptions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_universe.h" line="44" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__universe_1ga4c6873f97e93038341d23b51a381e267" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+        <definition>AtNode* AiUniverseGetCamera</definition>
+        <argsstring>()</argsstring>
+        <name>AiUniverseGetCamera</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_universe.h" line="45" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__universe_1ga088347636f8168174821c1401025d95b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_at_b_box" kindref="compound">AtBBox</ref></type>
+        <definition>AtBBox AiUniverseGetSceneBounds</definition>
+        <argsstring>()</argsstring>
+        <name>AiUniverseGetSceneBounds</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_universe.h" line="46" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__universe_1gaa8498b8af479a9504b6ded70cefd2efd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>AtNodeIterator *</type>
+        <definition>AtNodeIterator* AiUniverseGetNodeIterator</definition>
+        <argsstring>(unsigned int node_mask)</argsstring>
+        <name>AiUniverseGetNodeIterator</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>node_mask</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_universe.h" line="47" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__universe_1ga49c79153352ede515b64b60fff0f83f7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>AtNodeEntryIterator *</type>
+        <definition>AtNodeEntryIterator* AiUniverseGetNodeEntryIterator</definition>
+        <argsstring>(unsigned int node_mask)</argsstring>
+        <name>AiUniverseGetNodeEntryIterator</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>node_mask</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_universe.h" line="48" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__universe_1gad3a232e2026126d67783e2bb9081030b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>AtAOVIterator *</type>
+        <definition>AtAOVIterator* AiUniverseGetAOVIterator</definition>
+        <argsstring>()</argsstring>
+        <name>AiUniverseGetAOVIterator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_universe.h" line="49" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Node Iterator API</header>
+      <memberdef kind="function" id="group__ai__universe_1ga06380a55ce31a67231fa78aa1eb311de" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiNodeIteratorDestroy</definition>
+        <argsstring>(AtNodeIterator *iter)</argsstring>
+        <name>AiNodeIteratorDestroy</name>
+        <param>
+          <type>AtNodeIterator *</type>
+          <declname>iter</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_universe.h" line="55" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__universe_1ga98394639143642ae9802bb01a5a660ac" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+        <definition>AtNode* AiNodeIteratorGetNext</definition>
+        <argsstring>(AtNodeIterator *iter)</argsstring>
+        <name>AiNodeIteratorGetNext</name>
+        <param>
+          <type>AtNodeIterator *</type>
+          <declname>iter</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_universe.h" line="56" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__universe_1gaec43754d60dd9f32d01ebc917983742f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiNodeIteratorFinished</definition>
+        <argsstring>(const AtNodeIterator *iter)</argsstring>
+        <name>AiNodeIteratorFinished</name>
+        <param>
+          <type>const AtNodeIterator *</type>
+          <declname>iter</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_universe.h" line="57" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Node Entry Iterator API</header>
+      <memberdef kind="function" id="group__ai__universe_1gaff92218fe27019641a1623ffbbc418e5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiNodeEntryIteratorDestroy</definition>
+        <argsstring>(AtNodeEntryIterator *iter)</argsstring>
+        <name>AiNodeEntryIteratorDestroy</name>
+        <param>
+          <type>AtNodeEntryIterator *</type>
+          <declname>iter</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_universe.h" line="63" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__universe_1gabdcae8d8d2ec2625741af2b9b7091657" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_at_node_entry" kindref="compound">AtNodeEntry</ref> *</type>
+        <definition>AtNodeEntry* AiNodeEntryIteratorGetNext</definition>
+        <argsstring>(AtNodeEntryIterator *iter)</argsstring>
+        <name>AiNodeEntryIteratorGetNext</name>
+        <param>
+          <type>AtNodeEntryIterator *</type>
+          <declname>iter</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_universe.h" line="64" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__universe_1gac1fd91d469ca508dc820312ecb45d3f8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiNodeEntryIteratorFinished</definition>
+        <argsstring>(const AtNodeEntryIterator *iter)</argsstring>
+        <name>AiNodeEntryIteratorFinished</name>
+        <param>
+          <type>const AtNodeEntryIterator *</type>
+          <declname>iter</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_universe.h" line="65" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>AOV Iterator API</header>
+      <memberdef kind="function" id="group__ai__universe_1ga3338e1637c1ab88890e0200bd970749a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiAOVIteratorDestroy</definition>
+        <argsstring>(AtAOVIterator *iter)</argsstring>
+        <name>AiAOVIteratorDestroy</name>
+        <param>
+          <type>AtAOVIterator *</type>
+          <declname>iter</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_universe.h" line="71" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__universe_1ga855afe679208483c45a7a06432fd79b6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="struct_at_a_o_v_entry" kindref="compound">AtAOVEntry</ref> *</type>
+        <definition>const AtAOVEntry* AiAOVIteratorGetNext</definition>
+        <argsstring>(AtAOVIterator *iter)</argsstring>
+        <name>AiAOVIteratorGetNext</name>
+        <param>
+          <type>AtAOVIterator *</type>
+          <declname>iter</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_universe.h" line="72" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__universe_1ga70e7cfff1bfa655b25cd5989ad8766c5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiAOVIteratorFinished</definition>
+        <argsstring>(const AtAOVIterator *iter)</argsstring>
+        <name>AiAOVIteratorFinished</name>
+        <param>
+          <type>const AtAOVIterator *</type>
+          <declname>iter</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_universe.h" line="73" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Cache Types</header>
+      <memberdef kind="define" id="group__ai__universe_1gac5d80ecf4926d8537b9096991091f30c" prot="public" static="no">
+        <name>AI_CACHE_TEXTURE</name>
+        <initializer>0x0001</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Flushes all texturemaps </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_universe.h" line="79" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_universe.h" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__universe_1gad2d21c12060a0af8631e34ba9edcd883" prot="public" static="no">
+        <name>AI_CACHE_HAIR_DIFFUSE</name>
+        <initializer>0x0004</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Flushes hair diffuse cache </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_universe.h" line="80" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_universe.h" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__universe_1gaa96498ee6fcadca7a579a1a3cd421ed1" prot="public" static="no">
+        <name>AI_CACHE_BACKGROUND</name>
+        <initializer>0x0008</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Flushes all skydome importance tables for background </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_universe.h" line="81" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_universe.h" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__universe_1gabe3026e8e85e3a791936a581f915e9ac" prot="public" static="no">
+        <name>AI_CACHE_QUAD</name>
+        <initializer>0x0010</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Flushes all quad lights importance tables </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_universe.h" line="82" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_universe.h" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__universe_1gacc0aa9118fe67d4771c2a6fad5bdd151" prot="public" static="no">
+        <name>AI_CACHE_ALL</name>
+        <initializer>0xFFFF</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Flushes all cache types simultaneously </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_universe.h" line="83" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_universe.h" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Global entry point to the scene graph elements (options, camera, lights, etc) </para>    </detaileddescription>
+    <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_universe.h"/>
+  </compounddef>
+</doxygen>

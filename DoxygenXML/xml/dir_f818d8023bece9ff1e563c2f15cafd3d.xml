@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="dir_f818d8023bece9ff1e563c2f15cafd3d" kind="dir">
+    <compoundname>Arnold-4.2.7.5</compoundname>
+    <innerdir refid="dir_ba47928e5ca162e479a15541df81f59a">include</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/"/>
+  </compounddef>
+</doxygen>

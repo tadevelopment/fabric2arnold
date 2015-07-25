@@ -1,0 +1,131 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="ai__driver__utils_8h" kind="file" language="C++">
+    <compoundname>ai_driver_utils.h</compoundname>
+    <includes refid="ai__types_8h" local="yes">ai_types.h</includes>
+    <includes refid="ai__api_8h" local="yes">ai_api.h</includes>
+    <includedby refid="ai_8h" local="yes">ai.h</includedby>
+    <incdepgraph>
+      <node id="273">
+        <label>ai_constants.h</label>
+        <link refid="ai__constants_8h"/>
+      </node>
+      <node id="272">
+        <label>ai_api.h</label>
+        <link refid="ai__api_8h"/>
+      </node>
+      <node id="274">
+        <label>cmath</label>
+      </node>
+      <node id="270">
+        <label>ai_driver_utils.h</label>
+        <link refid="ai_driver_utils.h"/>
+        <childnode refid="271" relation="include">
+        </childnode>
+        <childnode refid="272" relation="include">
+        </childnode>
+      </node>
+      <node id="271">
+        <label>ai_types.h</label>
+        <link refid="ai__types_8h"/>
+        <childnode refid="272" relation="include">
+        </childnode>
+        <childnode refid="273" relation="include">
+        </childnode>
+        <childnode refid="274" relation="include">
+        </childnode>
+        <childnode refid="275" relation="include">
+        </childnode>
+      </node>
+      <node id="275">
+        <label>cstdlib</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="276">
+        <label>ai_driver_utils.h</label>
+        <link refid="ai_driver_utils.h"/>
+        <childnode refid="277" relation="include">
+        </childnode>
+      </node>
+      <node id="277">
+        <label>ai.h</label>
+        <link refid="ai_8h"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="user-defined">
+      <header>Quantization and Dithering</header>
+      <memberdef kind="function" id="group__ai__drivers_1ga37138b2977b30b6b320b34246caa70d8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="ai__api_8h_1a80eacd8febc412193f639f01892984c7" kindref="member">AI_CONST</ref> <ref refid="group__ai__types_1ga2c04fab5be631c65ccf66ecbd5a01788" kindref="member">AtUInt8</ref></type>
+        <definition>AI_CONST AtUInt8 AiQuantize8bit</definition>
+        <argsstring>(int x, int y, int i, float value, bool dither)</argsstring>
+        <name>AiQuantize8bit</name>
+        <param>
+          <type>int</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>i</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>dither</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_driver_utils.h" line="22" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__drivers_1gab2a78789f31c1a85eaa7cb0ef5c8a980" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="ai__api_8h_1a80eacd8febc412193f639f01892984c7" kindref="member">AI_CONST</ref> <ref refid="group__ai__types_1ga31e2774651e7b62b89c5628edfd63fa3" kindref="member">AtUInt16</ref></type>
+        <definition>AI_CONST AtUInt16 AiQuantize16bit</definition>
+        <argsstring>(int x, int y, int i, float value, bool dither)</argsstring>
+        <name>AiQuantize16bit</name>
+        <param>
+          <type>int</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>i</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>dither</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_driver_utils.h" line="23" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Basic utility functions for output drivers </para>    </detaileddescription>
+    <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_driver_utils.h"/>
+  </compounddef>
+</doxygen>

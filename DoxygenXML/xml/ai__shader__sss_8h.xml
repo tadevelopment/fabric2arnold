@@ -1,0 +1,313 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="ai__shader__sss_8h" kind="file" language="C++">
+    <compoundname>ai_shader_sss.h</compoundname>
+    <includes refid="ai__color_8h" local="yes">ai_color.h</includes>
+    <includedby refid="ai_8h" local="yes">ai.h</includedby>
+    <incdepgraph>
+      <node id="631">
+        <label>ai_constants.h</label>
+        <link refid="ai__constants_8h"/>
+      </node>
+      <node id="627">
+        <label>ai_shader_sss.h</label>
+        <link refid="ai_shader_sss.h"/>
+        <childnode refid="628" relation="include">
+        </childnode>
+      </node>
+      <node id="630">
+        <label>ai_api.h</label>
+        <link refid="ai__api_8h"/>
+      </node>
+      <node id="632">
+        <label>cmath</label>
+      </node>
+      <node id="629">
+        <label>ai_types.h</label>
+        <link refid="ai__types_8h"/>
+        <childnode refid="630" relation="include">
+        </childnode>
+        <childnode refid="631" relation="include">
+        </childnode>
+        <childnode refid="632" relation="include">
+        </childnode>
+        <childnode refid="633" relation="include">
+        </childnode>
+      </node>
+      <node id="628">
+        <label>ai_color.h</label>
+        <link refid="ai__color_8h"/>
+        <childnode refid="629" relation="include">
+        </childnode>
+        <childnode refid="631" relation="include">
+        </childnode>
+        <childnode refid="630" relation="include">
+        </childnode>
+      </node>
+      <node id="633">
+        <label>cstdlib</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="634">
+        <label>ai_shader_sss.h</label>
+        <link refid="ai_shader_sss.h"/>
+        <childnode refid="635" relation="include">
+        </childnode>
+      </node>
+      <node id="635">
+        <label>ai.h</label>
+        <link refid="ai_8h"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="struct_at_point_cloud_sample" prot="public">AtPointCloudSample</innerclass>
+      <sectiondef kind="user-defined">
+      <header>Deprecated</header>
+      <description><para>The pointcloud iterator interface will be removed in a future release. </para></description>
+      <memberdef kind="define" id="group__ai__shader__sss_1ga8ccc5b9c10edde4d85dd74ed938180ae" prot="public" static="no">
+        <name>AI_POINTCLOUD_BLUE_NOISE</name>
+        <initializer>0x00</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_sss.h" line="36" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_sss.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__shader__sss_1ga4060b5522ab4b5ab9e183994d5e6b552" prot="public" static="no">
+        <name>AI_POINTCLOUD_TRIANGLE_MIDPOINT</name>
+        <initializer>0x01</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_sss.h" line="37" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_sss.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__shader__sss_1ga562a665adaa5cc968a64391df99b8108" prot="public" static="no">
+        <name>AI_POINTCLOUD_POLYGON_MIDPOINT</name>
+        <initializer>0x02</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_sss.h" line="38" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_sss.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__sss_1ga9fc986658490a542c803d060da162350" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>AtPointCloudIterator *</type>
+        <definition>AtPointCloudIterator* AiPointCloudIteratorCreate</definition>
+        <argsstring>(const AtShaderGlobals *sg, int distribution, float spacing=0.1f)</argsstring>
+        <name>AiPointCloudIteratorCreate</name>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>distribution</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>spacing</declname>
+          <defval>0.1f</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_sss.h" line="51" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__sss_1ga1753854d580bc89024eb410c039c1c82" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiPointCloudIteratorDestroy</definition>
+        <argsstring>(AtPointCloudIterator *iter)</argsstring>
+        <name>AiPointCloudIteratorDestroy</name>
+        <param>
+          <type>AtPointCloudIterator *</type>
+          <declname>iter</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_sss.h" line="52" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__sss_1ga30c3c9bd7984834bb988eee4144601dc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_at_point_cloud_sample" kindref="compound">AtPointCloudSample</ref></type>
+        <definition>AtPointCloudSample AiPointCloudIteratorGetNext</definition>
+        <argsstring>(AtPointCloudIterator *iter)</argsstring>
+        <name>AiPointCloudIteratorGetNext</name>
+        <param>
+          <type>AtPointCloudIterator *</type>
+          <declname>iter</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_sss.h" line="53" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__sss_1ga5981e4967702d1ec42d1898002212521" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiPointCloudIteratorFinished</definition>
+        <argsstring>(const AtPointCloudIterator *iter)</argsstring>
+        <name>AiPointCloudIteratorFinished</name>
+        <param>
+          <type>const AtPointCloudIterator *</type>
+          <declname>iter</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_sss.h" line="54" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__sss_1ga9c5ee79c83b7d0ee5f1a007ee634f5e6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__ai__types_1ga5e008e3afa9393ab65d66796de249df9" kindref="member">AtUInt32</ref></type>
+        <definition>AtUInt32 AiPointCloudGetSampleCount</definition>
+        <argsstring>(const AtPointCloudIterator *iter)</argsstring>
+        <name>AiPointCloudGetSampleCount</name>
+        <param>
+          <type>const AtPointCloudIterator *</type>
+          <declname>iter</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_sss.h" line="55" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__ai__shader__sss_1gabe5d8e71d911e3b89526789113cf8b5f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__ai__color_1ga03caa98eaded3f2dd0527ed284656f04" kindref="member">AtColor</ref></type>
+        <definition>AtColor AiBSSRDFCubic</definition>
+        <argsstring>(const AtShaderGlobals *sg, const float *radius, const AtColor *weight, unsigned int num=1)</argsstring>
+        <name>AiBSSRDFCubic</name>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type>const float *</type>
+          <declname>radius</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__color_1ga03caa98eaded3f2dd0527ed284656f04" kindref="member">AtColor</ref> *</type>
+          <declname>weight</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>num</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_sss.h" line="21" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__sss_1gad02c186baa285348996c9f6cdc05597c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__ai__color_1ga03caa98eaded3f2dd0527ed284656f04" kindref="member">AtColor</ref></type>
+        <definition>AtColor AiBSSRDFGaussian</definition>
+        <argsstring>(const AtShaderGlobals *sg, const float *variance, const AtColor *weight, unsigned int num=1)</argsstring>
+        <name>AiBSSRDFGaussian</name>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type>const float *</type>
+          <declname>variance</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__ai__color_1ga03caa98eaded3f2dd0527ed284656f04" kindref="member">AtColor</ref> *</type>
+          <declname>weight</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>num</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_sss.h" line="22" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__sss_1ga4e7b97c1799b4702a7126e33dcf1f37b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__ai__color_1ga03caa98eaded3f2dd0527ed284656f04" kindref="member">AtColor</ref></type>
+        <definition>AtColor AiSSSTraceSingleScatter</definition>
+        <argsstring>(AtShaderGlobals *sg, AtColor Rd, AtColor mfp, float g, float eta)</argsstring>
+        <name>AiSSSTraceSingleScatter</name>
+        <param>
+          <type><ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type><ref refid="group__ai__color_1ga03caa98eaded3f2dd0527ed284656f04" kindref="member">AtColor</ref></type>
+          <declname>Rd</declname>
+        </param>
+        <param>
+          <type><ref refid="group__ai__color_1ga03caa98eaded3f2dd0527ed284656f04" kindref="member">AtColor</ref></type>
+          <declname>mfp</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>g</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>eta</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_sss.h" line="23" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__sss_1ga8986ccccc4ed8ba8b3a405338758180a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiShaderGlobalsFromSSS</definition>
+        <argsstring>(const AtShaderGlobals *sg)</argsstring>
+        <name>AiShaderGlobalsFromSSS</name>
+        <param>
+          <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_sss.h" line="24" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>SSS functions for shaders </para>    </detaileddescription>
+    <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_sss.h"/>
+  </compounddef>
+</doxygen>

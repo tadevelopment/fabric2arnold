@@ -1,0 +1,1390 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="ai__types_8h" kind="file" language="C++">
+    <compoundname>ai_types.h</compoundname>
+    <includes refid="ai__api_8h" local="yes">ai_api.h</includes>
+    <includes refid="ai__constants_8h" local="yes">ai_constants.h</includes>
+    <includes local="no">cmath</includes>
+    <includes local="no">cstdlib</includes>
+    <includedby refid="ai__vector_8h" local="yes">ai_vector.h</includedby>
+    <includedby refid="ai__color_8h" local="yes">ai_color.h</includedby>
+    <includedby refid="ai__array_8h" local="yes">ai_array.h</includedby>
+    <includedby refid="ai__params_8h" local="yes">ai_params.h</includedby>
+    <includedby refid="ai__plugins_8h" local="yes">ai_plugins.h</includedby>
+    <includedby refid="ai__drivers_8h" local="no">ai_drivers.h</includedby>
+    <includedby refid="ai__driver__utils_8h" local="yes">ai_driver_utils.h</includedby>
+    <includedby refid="ai__string_8h" local="yes">ai_string.h</includedby>
+    <includedby refid="ai__filters_8h" local="yes">ai_filters.h</includedby>
+    <includedby refid="ai__msg_8h" local="yes">ai_msg.h</includedby>
+    <includedby refid="ai__shader__aovs_8h" local="yes">ai_shader_aovs.h</includedby>
+    <includedby refid="ai__shaderglobals_8h" local="yes">ai_shaderglobals.h</includedby>
+    <includedby refid="ai__ray_8h" local="yes">ai_ray.h</includedby>
+    <includedby refid="ai__shader__message_8h" local="yes">ai_shader_message.h</includedby>
+    <includedby refid="ai__shader__radiance_8h" local="yes">ai_shader_radiance.h</includedby>
+    <includedby refid="ai__shader__userdef_8h" local="yes">ai_shader_userdef.h</includedby>
+    <includedby refid="ai__shader__parameval_8h" local="yes">ai_shader_parameval.h</includedby>
+    <includedby refid="ai__universe_8h" local="yes">ai_universe.h</includedby>
+    <includedby refid="ai_8h" local="yes">ai.h</includedby>
+    <incdepgraph>
+      <node id="771">
+        <label>ai_constants.h</label>
+        <link refid="ai__constants_8h"/>
+      </node>
+      <node id="770">
+        <label>ai_api.h</label>
+        <link refid="ai__api_8h"/>
+      </node>
+      <node id="772">
+        <label>cmath</label>
+      </node>
+      <node id="769">
+        <label>ai_types.h</label>
+        <link refid="ai_types.h"/>
+        <childnode refid="770" relation="include">
+        </childnode>
+        <childnode refid="771" relation="include">
+        </childnode>
+        <childnode refid="772" relation="include">
+        </childnode>
+        <childnode refid="773" relation="include">
+        </childnode>
+      </node>
+      <node id="773">
+        <label>cstdlib</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="800">
+        <label>ai_ray.h</label>
+        <link refid="ai__ray_8h"/>
+        <childnode refid="790" relation="include">
+        </childnode>
+        <childnode refid="778" relation="include">
+        </childnode>
+      </node>
+      <node id="781">
+        <label>ai_universe.h</label>
+        <link refid="ai__universe_8h"/>
+        <childnode refid="778" relation="include">
+        </childnode>
+      </node>
+      <node id="787">
+        <label>ai_filters.h</label>
+        <link refid="ai__filters_8h"/>
+        <childnode refid="778" relation="include">
+        </childnode>
+      </node>
+      <node id="806">
+        <label>ai_shader_sss.h</label>
+        <link refid="ai__shader__sss_8h"/>
+        <childnode refid="778" relation="include">
+        </childnode>
+      </node>
+      <node id="811">
+        <label>ai_allocate.h</label>
+        <link refid="ai__allocate_8h"/>
+        <childnode refid="778" relation="include">
+        </childnode>
+      </node>
+      <node id="807">
+        <label>ai_plugins.h</label>
+        <link refid="ai__plugins_8h"/>
+        <childnode refid="778" relation="include">
+        </childnode>
+      </node>
+      <node id="801">
+        <label>ai_shader_sample.h</label>
+        <link refid="ai__shader__sample_8h"/>
+        <childnode refid="800" relation="include">
+        </childnode>
+        <childnode refid="778" relation="include">
+        </childnode>
+      </node>
+      <node id="780">
+        <label>ai_shader_util.h</label>
+        <link refid="ai__shader__util_8h"/>
+        <childnode refid="778" relation="include">
+        </childnode>
+      </node>
+      <node id="810">
+        <label>ai_msg.h</label>
+        <link refid="ai__msg_8h"/>
+        <childnode refid="778" relation="include">
+        </childnode>
+        <childnode refid="811" relation="include">
+        </childnode>
+      </node>
+      <node id="803">
+        <label>ai_shader_volume.h</label>
+        <link refid="ai__shader__volume_8h"/>
+        <childnode refid="778" relation="include">
+        </childnode>
+      </node>
+      <node id="797">
+        <label>ai_texture.h</label>
+        <link refid="ai__texture_8h"/>
+        <childnode refid="778" relation="include">
+        </childnode>
+      </node>
+      <node id="775">
+        <label>ai_vector.h</label>
+        <link refid="ai__vector_8h"/>
+        <childnode refid="776" relation="include">
+        </childnode>
+        <childnode refid="782" relation="include">
+        </childnode>
+        <childnode refid="783" relation="include">
+        </childnode>
+        <childnode refid="784" relation="include">
+        </childnode>
+        <childnode refid="787" relation="include">
+        </childnode>
+        <childnode refid="788" relation="include">
+        </childnode>
+        <childnode refid="792" relation="include">
+        </childnode>
+        <childnode refid="794" relation="include">
+        </childnode>
+        <childnode refid="796" relation="include">
+        </childnode>
+        <childnode refid="795" relation="include">
+        </childnode>
+        <childnode refid="790" relation="include">
+        </childnode>
+        <childnode refid="801" relation="include">
+        </childnode>
+        <childnode refid="800" relation="include">
+        </childnode>
+        <childnode refid="798" relation="include">
+        </childnode>
+        <childnode refid="802" relation="include">
+        </childnode>
+        <childnode refid="791" relation="include">
+        </childnode>
+        <childnode refid="799" relation="include">
+        </childnode>
+        <childnode refid="780" relation="include">
+        </childnode>
+        <childnode refid="803" relation="include">
+        </childnode>
+        <childnode refid="804" relation="include">
+        </childnode>
+        <childnode refid="778" relation="include">
+        </childnode>
+      </node>
+      <node id="792">
+        <label>ai_metadata.h</label>
+        <link refid="ai__metadata_8h"/>
+        <childnode refid="778" relation="include">
+        </childnode>
+      </node>
+      <node id="785">
+        <label>ai_node_entry.h</label>
+        <link refid="ai__node__entry_8h"/>
+        <childnode refid="786" relation="include">
+        </childnode>
+        <childnode refid="792" relation="include">
+        </childnode>
+        <childnode refid="793" relation="include">
+        </childnode>
+      </node>
+      <node id="786">
+        <label>ai_nodes.h</label>
+        <link refid="ai__nodes_8h"/>
+        <childnode refid="779" relation="include">
+        </childnode>
+        <childnode refid="787" relation="include">
+        </childnode>
+        <childnode refid="788" relation="include">
+        </childnode>
+        <childnode refid="789" relation="include">
+        </childnode>
+        <childnode refid="778" relation="include">
+        </childnode>
+        <childnode refid="790" relation="include">
+        </childnode>
+        <childnode refid="791" relation="include">
+        </childnode>
+      </node>
+      <node id="793">
+        <label>ai_dotass.h</label>
+        <link refid="ai__dotass_8h"/>
+        <childnode refid="778" relation="include">
+        </childnode>
+      </node>
+      <node id="777">
+        <label>ai_volume.h</label>
+        <link refid="ai__volume_8h"/>
+        <childnode refid="778" relation="include">
+        </childnode>
+      </node>
+      <node id="808">
+        <label>ai_driver_utils.h</label>
+        <link refid="ai__driver__utils_8h"/>
+        <childnode refid="778" relation="include">
+        </childnode>
+      </node>
+      <node id="774">
+        <label>ai_types.h</label>
+        <link refid="ai_types.h"/>
+        <childnode refid="775" relation="include">
+        </childnode>
+        <childnode refid="805" relation="include">
+        </childnode>
+        <childnode refid="783" relation="include">
+        </childnode>
+        <childnode refid="784" relation="include">
+        </childnode>
+        <childnode refid="807" relation="include">
+        </childnode>
+        <childnode refid="779" relation="include">
+        </childnode>
+        <childnode refid="808" relation="include">
+        </childnode>
+        <childnode refid="809" relation="include">
+        </childnode>
+        <childnode refid="787" relation="include">
+        </childnode>
+        <childnode refid="810" relation="include">
+        </childnode>
+        <childnode refid="794" relation="include">
+        </childnode>
+        <childnode refid="795" relation="include">
+        </childnode>
+        <childnode refid="800" relation="include">
+        </childnode>
+        <childnode refid="798" relation="include">
+        </childnode>
+        <childnode refid="802" relation="include">
+        </childnode>
+        <childnode refid="791" relation="include">
+        </childnode>
+        <childnode refid="799" relation="include">
+        </childnode>
+        <childnode refid="781" relation="include">
+        </childnode>
+        <childnode refid="778" relation="include">
+        </childnode>
+      </node>
+      <node id="779">
+        <label>ai_drivers.h</label>
+        <link refid="ai__drivers_8h"/>
+        <childnode refid="778" relation="include">
+        </childnode>
+      </node>
+      <node id="788">
+        <label>ai_cameras.h</label>
+        <link refid="ai__cameras_8h"/>
+        <childnode refid="778" relation="include">
+        </childnode>
+      </node>
+      <node id="783">
+        <label>ai_array.h</label>
+        <link refid="ai__array_8h"/>
+        <childnode refid="784" relation="include">
+        </childnode>
+        <childnode refid="795" relation="include">
+        </childnode>
+        <childnode refid="798" relation="include">
+        </childnode>
+        <childnode refid="791" relation="include">
+        </childnode>
+        <childnode refid="799" relation="include">
+        </childnode>
+        <childnode refid="778" relation="include">
+        </childnode>
+      </node>
+      <node id="796">
+        <label>ai_shader_brdf.h</label>
+        <link refid="ai__shader__brdf_8h"/>
+        <childnode refid="778" relation="include">
+        </childnode>
+      </node>
+      <node id="784">
+        <label>ai_params.h</label>
+        <link refid="ai__params_8h"/>
+        <childnode refid="777" relation="include">
+        </childnode>
+        <childnode refid="785" relation="include">
+        </childnode>
+        <childnode refid="786" relation="include">
+        </childnode>
+        <childnode refid="778" relation="include">
+        </childnode>
+        <childnode refid="794" relation="include">
+        </childnode>
+        <childnode refid="795" relation="include">
+        </childnode>
+      </node>
+      <node id="794">
+        <label>ai_shader_aovs.h</label>
+        <link refid="ai__shader__aovs_8h"/>
+        <childnode refid="778" relation="include">
+        </childnode>
+      </node>
+      <node id="795">
+        <label>ai_shaderglobals.h</label>
+        <link refid="ai__shaderglobals_8h"/>
+        <childnode refid="796" relation="include">
+        </childnode>
+        <childnode refid="778" relation="include">
+        </childnode>
+        <childnode refid="790" relation="include">
+        </childnode>
+        <childnode refid="791" relation="include">
+        </childnode>
+        <childnode refid="780" relation="include">
+        </childnode>
+        <childnode refid="797" relation="include">
+        </childnode>
+      </node>
+      <node id="791">
+        <label>ai_shader_userdef.h</label>
+        <link refid="ai__shader__userdef_8h"/>
+        <childnode refid="778" relation="include">
+        </childnode>
+      </node>
+      <node id="805">
+        <label>ai_color.h</label>
+        <link refid="ai__color_8h"/>
+        <childnode refid="777" relation="include">
+        </childnode>
+        <childnode refid="783" relation="include">
+        </childnode>
+        <childnode refid="784" relation="include">
+        </childnode>
+        <childnode refid="792" relation="include">
+        </childnode>
+        <childnode refid="794" relation="include">
+        </childnode>
+        <childnode refid="796" relation="include">
+        </childnode>
+        <childnode refid="795" relation="include">
+        </childnode>
+        <childnode refid="790" relation="include">
+        </childnode>
+        <childnode refid="801" relation="include">
+        </childnode>
+        <childnode refid="798" relation="include">
+        </childnode>
+        <childnode refid="802" relation="include">
+        </childnode>
+        <childnode refid="806" relation="include">
+        </childnode>
+        <childnode refid="791" relation="include">
+        </childnode>
+        <childnode refid="799" relation="include">
+        </childnode>
+        <childnode refid="780" relation="include">
+        </childnode>
+        <childnode refid="803" relation="include">
+        </childnode>
+        <childnode refid="797" relation="include">
+        </childnode>
+        <childnode refid="778" relation="include">
+        </childnode>
+      </node>
+      <node id="799">
+        <label>ai_shader_parameval.h</label>
+        <link refid="ai__shader__parameval_8h"/>
+        <childnode refid="778" relation="include">
+        </childnode>
+      </node>
+      <node id="776">
+        <label>ai_bbox.h</label>
+        <link refid="ai__bbox_8h"/>
+        <childnode refid="777" relation="include">
+        </childnode>
+        <childnode refid="779" relation="include">
+        </childnode>
+        <childnode refid="780" relation="include">
+        </childnode>
+        <childnode refid="781" relation="include">
+        </childnode>
+        <childnode refid="778" relation="include">
+        </childnode>
+      </node>
+      <node id="802">
+        <label>ai_shader_radiance.h</label>
+        <link refid="ai__shader__radiance_8h"/>
+        <childnode refid="778" relation="include">
+        </childnode>
+      </node>
+      <node id="798">
+        <label>ai_shader_message.h</label>
+        <link refid="ai__shader__message_8h"/>
+        <childnode refid="778" relation="include">
+        </childnode>
+      </node>
+      <node id="789">
+        <label>ai_shaders.h</label>
+        <link refid="ai__shaders_8h"/>
+        <childnode refid="778" relation="include">
+        </childnode>
+      </node>
+      <node id="782">
+        <label>ai_matrix.h</label>
+        <link refid="ai__matrix_8h"/>
+        <childnode refid="783" relation="include">
+        </childnode>
+        <childnode refid="784" relation="include">
+        </childnode>
+        <childnode refid="795" relation="include">
+        </childnode>
+        <childnode refid="800" relation="include">
+        </childnode>
+        <childnode refid="791" relation="include">
+        </childnode>
+        <childnode refid="799" relation="include">
+        </childnode>
+        <childnode refid="778" relation="include">
+        </childnode>
+      </node>
+      <node id="790">
+        <label>ai_shader_lights.h</label>
+        <link refid="ai__shader__lights_8h"/>
+        <childnode refid="778" relation="include">
+        </childnode>
+      </node>
+      <node id="804">
+        <label>ai_noise.h</label>
+        <link refid="ai__noise_8h"/>
+        <childnode refid="778" relation="include">
+        </childnode>
+      </node>
+      <node id="809">
+        <label>ai_string.h</label>
+        <link refid="ai__string_8h"/>
+        <childnode refid="785" relation="include">
+        </childnode>
+        <childnode refid="786" relation="include">
+        </childnode>
+        <childnode refid="792" relation="include">
+        </childnode>
+        <childnode refid="794" relation="include">
+        </childnode>
+        <childnode refid="795" relation="include">
+        </childnode>
+        <childnode refid="800" relation="include">
+        </childnode>
+        <childnode refid="798" relation="include">
+        </childnode>
+        <childnode refid="791" relation="include">
+        </childnode>
+      </node>
+      <node id="778">
+        <label>ai.h</label>
+        <link refid="ai_8h"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group__ai__types_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" prot="public" static="no">
+        <name>NULL</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>NULL value for null pointers </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_types.h" line="30" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_types.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group__ai__types_1ga6e328a19da02c68c6a08db54df07ae6f" prot="public" static="no">
+        <type>char</type>
+        <definition>typedef char AtInt8</definition>
+        <argsstring></argsstring>
+        <name>AtInt8</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>8-bit signed integer </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_types.h" line="38" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_types.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__ai__types_1ga1073aed21520792e398147326633cd89" prot="public" static="no">
+        <type>short</type>
+        <definition>typedef short AtInt16</definition>
+        <argsstring></argsstring>
+        <name>AtInt16</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>16-bit signed integer </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_types.h" line="39" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_types.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__ai__types_1gad3b9b1a84c7a94ab8e04fe8d18b2393f" prot="public" static="no">
+        <type>int</type>
+        <definition>typedef int AtInt32</definition>
+        <argsstring></argsstring>
+        <name>AtInt32</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>32-bit signed integer </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_types.h" line="40" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_types.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__ai__types_1ga94ff728c015fcdf228576b3806184f85" prot="public" static="no">
+        <type>signed long long</type>
+        <definition>typedef signed long long AtInt64</definition>
+        <argsstring></argsstring>
+        <name>AtInt64</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>64-bit signed integer </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_types.h" line="41" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_types.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__ai__types_1ga41f7f394ad3ef67901cce4d05bdabf89" prot="public" static="no">
+        <type>unsigned char</type>
+        <definition>typedef unsigned char AtByte</definition>
+        <argsstring></argsstring>
+        <name>AtByte</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>8-bit unsigned integer (same as <ref refid="group__ai__types_1ga2c04fab5be631c65ccf66ecbd5a01788" kindref="member">AtUInt8</ref>) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_types.h" line="42" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_types.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__ai__types_1ga2c04fab5be631c65ccf66ecbd5a01788" prot="public" static="no">
+        <type>unsigned char</type>
+        <definition>typedef unsigned char AtUInt8</definition>
+        <argsstring></argsstring>
+        <name>AtUInt8</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>8-bit unsigned integer </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_types.h" line="43" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_types.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__ai__types_1ga31e2774651e7b62b89c5628edfd63fa3" prot="public" static="no">
+        <type>unsigned short</type>
+        <definition>typedef unsigned short AtUInt16</definition>
+        <argsstring></argsstring>
+        <name>AtUInt16</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>16-bit unsigned integer </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_types.h" line="44" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_types.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__ai__types_1ga5e008e3afa9393ab65d66796de249df9" prot="public" static="no">
+        <type>unsigned int</type>
+        <definition>typedef unsigned int AtUInt32</definition>
+        <argsstring></argsstring>
+        <name>AtUInt32</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>32-bit unsigned integer </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_types.h" line="45" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_types.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__ai__types_1ga736e5b867444aa696f58f647852e15e9" prot="public" static="no">
+        <type>unsigned long long</type>
+        <definition>typedef unsigned long long AtUInt64</definition>
+        <argsstring></argsstring>
+        <name>AtUInt64</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>64-bit unsigned integer </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_types.h" line="46" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_types.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__ai__types_1gaed6fe73ca42bc809c94ad55fb866ebb1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>T</type>
+        <definition>T ABS</definition>
+        <argsstring>(T a)</argsstring>
+        <name>ABS</name>
+        <param>
+          <type>T</type>
+          <declname>a</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Absolute value of &apos;a&apos; </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_types.h" line="57" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_types.h" bodystart="57" bodyend="60"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__types_1gaa02f27263b72098290740d92baf8caae" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>T</type>
+        <definition>T MIN</definition>
+        <argsstring>(T a, T b)</argsstring>
+        <name>MIN</name>
+        <param>
+          <type>T</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>T</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Minimum of &apos;a&apos; and &apos;b&apos; </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_types.h" line="73" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_types.h" bodystart="73" bodyend="76"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__types_1gae8d79459e6faf6d8d263b4c1aae7e06d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>T</type>
+        <definition>T MAX</definition>
+        <argsstring>(T a, T b)</argsstring>
+        <name>MAX</name>
+        <param>
+          <type>T</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>T</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Maximum of &apos;a&apos; and &apos;b&apos; </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_types.h" line="82" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_types.h" bodystart="82" bodyend="85"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__types_1ga4597e95f19cbad00dfd6263b0508c7e1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>T</type>
+        <definition>T MIN3</definition>
+        <argsstring>(T a, T b, T c)</argsstring>
+        <name>MIN3</name>
+        <param>
+          <type>T</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>T</type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type>T</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Minimum of three values: a, b, c </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_types.h" line="91" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_types.h" bodystart="91" bodyend="94"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__types_1gaaa8042c8ddbbe0b5ba8de2b2d0b36212" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>T</type>
+        <definition>T MAX3</definition>
+        <argsstring>(T a, T b, T c)</argsstring>
+        <name>MAX3</name>
+        <param>
+          <type>T</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>T</type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type>T</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Maximum of three values: a, b, c </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_types.h" line="100" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_types.h" bodystart="100" bodyend="103"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__types_1ga10057255f81e80554322b86c5df0bb8e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>T</type>
+        <definition>T MIN4</definition>
+        <argsstring>(T a, T b, T c, T d)</argsstring>
+        <name>MIN4</name>
+        <param>
+          <type>T</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>T</type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type>T</type>
+          <declname>c</declname>
+        </param>
+        <param>
+          <type>T</type>
+          <declname>d</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Minimum of four values: a, b, c, d </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_types.h" line="109" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_types.h" bodystart="109" bodyend="112"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__types_1ga9f0f14113da0e613890cc73f8fa2805e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>T</type>
+        <definition>T MAX4</definition>
+        <argsstring>(T a, T b, T c, T d)</argsstring>
+        <name>MAX4</name>
+        <param>
+          <type>T</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>T</type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type>T</type>
+          <declname>c</declname>
+        </param>
+        <param>
+          <type>T</type>
+          <declname>d</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Maximum of four values: a, b, c, d </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_types.h" line="118" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_types.h" bodystart="118" bodyend="121"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__types_1ga996a60cfd22920ff8fd7b728a463a248" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>T</type>
+        <definition>T SQR</definition>
+        <argsstring>(T a)</argsstring>
+        <name>SQR</name>
+        <param>
+          <type>T</type>
+          <declname>a</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Square of &apos;a&apos; </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_types.h" line="127" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_types.h" bodystart="127" bodyend="130"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__types_1ga4e209cfe0a38538b00a0209e13a80fed" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="group__ai__types_1ga94ff728c015fcdf228576b3806184f85" kindref="member">AtInt64</ref></type>
+        <definition>AtInt64 FLOOR</definition>
+        <argsstring>(T a)</argsstring>
+        <name>FLOOR</name>
+        <param>
+          <type>T</type>
+          <declname>a</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Largest integer that is smaller than or equal to &apos;a&apos; </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_types.h" line="136" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_types.h" bodystart="136" bodyend="139"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__types_1ga243b2c7c81b4b8c4b9bd93a410acd3d0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="group__ai__types_1ga94ff728c015fcdf228576b3806184f85" kindref="member">AtInt64</ref></type>
+        <definition>AtInt64 CEIL</definition>
+        <argsstring>(T a)</argsstring>
+        <name>CEIL</name>
+        <param>
+          <type>T</type>
+          <declname>a</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Smallest integer that is bigger than or equal to &apos;a&apos; </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_types.h" line="145" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_types.h" bodystart="145" bodyend="148"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__types_1ga847268bf4a0a5694251939a3477463c0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="group__ai__types_1ga94ff728c015fcdf228576b3806184f85" kindref="member">AtInt64</ref></type>
+        <definition>AtInt64 ROUND</definition>
+        <argsstring>(T a)</argsstring>
+        <name>ROUND</name>
+        <param>
+          <type>T</type>
+          <declname>a</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Round &apos;a&apos; to nearest int </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_types.h" line="154" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_types.h" bodystart="154" bodyend="157"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__types_1gabbf3de22a7349bcbed5109f8e1399fef" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>int</type>
+        <definition>int SGN</definition>
+        <argsstring>(T a)</argsstring>
+        <name>SGN</name>
+        <param>
+          <type>T</type>
+          <declname>a</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Take binary sign of &apos;a&apos; (either -1, or 1 if &gt;= 0) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_types.h" line="163" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_types.h" bodystart="163" bodyend="166"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__types_1ga7c47ab41142fb494373b0b511cfe219b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void SWAP</definition>
+        <argsstring>(T &amp;a, T &amp;b)</argsstring>
+        <name>SWAP</name>
+        <param>
+          <type>T &amp;</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>T &amp;</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Swap &apos;a&apos; and &apos;b&apos; </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_types.h" line="172" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_types.h" bodystart="172" bodyend="177"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__types_1gaa0e28edd3ae283326f084978ac72ebc1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>T</type>
+        <definition>T CLAMP</definition>
+        <argsstring>(T v, T lo, T hi)</argsstring>
+        <name>CLAMP</name>
+        <param>
+          <type>T</type>
+          <declname>v</declname>
+        </param>
+        <param>
+          <type>T</type>
+          <declname>lo</declname>
+        </param>
+        <param>
+          <type>T</type>
+          <declname>hi</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Clamp the input to the specified range </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_types.h" line="183" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_types.h" bodystart="183" bodyend="186"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__types_1ga2e3ca9a8937747f9ef81d80c8e2d65de" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>T</type>
+        <definition>T ACOS</definition>
+        <argsstring>(T x)</argsstring>
+        <name>ACOS</name>
+        <param>
+          <type>T</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Safe arc cosine of &apos;x&apos; (acos() returns NaN if x&lt;-1 or x&gt;1) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_types.h" line="192" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_types.h" bodystart="192" bodyend="195"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__types_1ga0f8e0d8b592faf7e1d9188bcd4112380" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T1</type>
+          </param>
+          <param>
+            <type>typename T2</type>
+          </param>
+        </templateparamlist>
+        <type>T1</type>
+        <definition>T1 LERP</definition>
+        <argsstring>(T2 t, T1 a, T1 b)</argsstring>
+        <name>LERP</name>
+        <param>
+          <type>T2</type>
+          <declname>t</declname>
+        </param>
+        <param>
+          <type>T1</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>T1</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Linear interpolation between &apos;a&apos; and &apos;b&apos; using &apos;t&apos; (0&lt;=t&lt;=1) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_types.h" line="201" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_types.h" bodystart="201" bodyend="204"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__types_1ga1a6c85ab4d54573c1b34f43ea47bc484" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>T</type>
+        <definition>T HERP01</definition>
+        <argsstring>(T t)</argsstring>
+        <name>HERP01</name>
+        <param>
+          <type>T</type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Hermite interpolation between 0 and 1 using &apos;t&apos; (0&lt;=t&lt;=1) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_types.h" line="210" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_types.h" bodystart="210" bodyend="213"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__types_1gad704c65f7a4a28e0b04e004990e65a97" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T1</type>
+          </param>
+          <param>
+            <type>typename T2</type>
+          </param>
+        </templateparamlist>
+        <type>T1</type>
+        <definition>T1 HERP</definition>
+        <argsstring>(T2 t, T1 a, T1 b)</argsstring>
+        <name>HERP</name>
+        <param>
+          <type>T2</type>
+          <declname>t</declname>
+        </param>
+        <param>
+          <type>T1</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>T1</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Hermite interpolation between &apos;a&apos; and &apos;b&apos; using &apos;t&apos; (0&lt;=t&lt;=1) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_types.h" line="219" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_types.h" bodystart="219" bodyend="222"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__types_1ga4e7c243759787144edb24b1282275dd2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T1</type>
+          </param>
+          <param>
+            <type>typename T2</type>
+          </param>
+        </templateparamlist>
+        <type>T1</type>
+        <definition>T1 BILERP</definition>
+        <argsstring>(T2 s, T2 t, T1 c00, T1 c10, T1 c01, T1 c11)</argsstring>
+        <name>BILERP</name>
+        <param>
+          <type>T2</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>T2</type>
+          <declname>t</declname>
+        </param>
+        <param>
+          <type>T1</type>
+          <declname>c00</declname>
+        </param>
+        <param>
+          <type>T1</type>
+          <declname>c10</declname>
+        </param>
+        <param>
+          <type>T1</type>
+          <declname>c01</declname>
+        </param>
+        <param>
+          <type>T1</type>
+          <declname>c11</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Bilinear interpolation between four float values using &apos;s&apos; and &apos;t&apos; (0&lt;=st&lt;=1) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_types.h" line="228" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_types.h" bodystart="228" bodyend="233"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__types_1ga8d786ab50731fba4d1b1355178cf33f2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T1</type>
+          </param>
+          <param>
+            <type>typename T2</type>
+          </param>
+        </templateparamlist>
+        <type>T1</type>
+        <definition>T1 BIHERP</definition>
+        <argsstring>(T2 s, T2 t, T1 c00, T1 c10, T1 c01, T1 c11)</argsstring>
+        <name>BIHERP</name>
+        <param>
+          <type>T2</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>T2</type>
+          <declname>t</declname>
+        </param>
+        <param>
+          <type>T1</type>
+          <declname>c00</declname>
+        </param>
+        <param>
+          <type>T1</type>
+          <declname>c10</declname>
+        </param>
+        <param>
+          <type>T1</type>
+          <declname>c01</declname>
+        </param>
+        <param>
+          <type>T1</type>
+          <declname>c11</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Bicubic Hermite interpolation between four float values using &apos;s&apos; and &apos;t&apos; (0&lt;=st&lt;=1) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_types.h" line="239" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_types.h" bodystart="239" bodyend="244"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__types_1ga1c6e251883b04db9f5409963623e1d37" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>T</type>
+        <definition>T BIAS</definition>
+        <argsstring>(T a, T b)</argsstring>
+        <name>BIAS</name>
+        <param>
+          <type>T</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>T</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Bias function </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_types.h" line="250" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_types.h" bodystart="250" bodyend="253"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__types_1ga49e63a647a0b747af3f2696d180ea24c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>T</type>
+        <definition>T GAIN</definition>
+        <argsstring>(T a, T g)</argsstring>
+        <name>GAIN</name>
+        <param>
+          <type>T</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>T</type>
+          <declname>g</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Gain function </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_types.h" line="259" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_types.h" bodystart="259" bodyend="262"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__types_1ga7231e0cf2cd319b26de50d9d0ba576f4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>T</type>
+        <definition>T STEP</definition>
+        <argsstring>(T x, T e)</argsstring>
+        <name>STEP</name>
+        <param>
+          <type>T</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>T</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Step function </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_types.h" line="268" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_types.h" bodystart="268" bodyend="271"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__types_1ga515108370a4f5deb5457bddf24763af0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>T</type>
+        <definition>T FILTERSTEP</definition>
+        <argsstring>(T x, T e, T w)</argsstring>
+        <name>FILTERSTEP</name>
+        <param>
+          <type>T</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>T</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type>T</type>
+          <declname>w</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Filtered-step function </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_types.h" line="277" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_types.h" bodystart="277" bodyend="280"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__types_1ga7e2e7b1b96d124894c6028bc127af8a2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>T</type>
+        <definition>T LINEARSTEP</definition>
+        <argsstring>(T lo, T hi, T t)</argsstring>
+        <name>LINEARSTEP</name>
+        <param>
+          <type>T</type>
+          <declname>lo</declname>
+        </param>
+        <param>
+          <type>T</type>
+          <declname>hi</declname>
+        </param>
+        <param>
+          <type>T</type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Linearly interpolated step from &apos;lo&apos; to &apos;hi&apos;. Returns x where (0 &lt;= x &lt;= 1). Similar to <ref refid="group__ai__types_1ga515108370a4f5deb5457bddf24763af0" kindref="member">FILTERSTEP()</ref> but slightly different mode of calling </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_types.h" line="288" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_types.h" bodystart="288" bodyend="291"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__types_1gad0c635ee64904ca0ba6726024b88ad55" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>T</type>
+        <definition>T SMOOTHSTEP</definition>
+        <argsstring>(T e0, T e1, T t)</argsstring>
+        <name>SMOOTHSTEP</name>
+        <param>
+          <type>T</type>
+          <declname>e0</declname>
+        </param>
+        <param>
+          <type>T</type>
+          <declname>e1</declname>
+        </param>
+        <param>
+          <type>T</type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>RenderMan&apos;s smoothstep() function. Returns 0 if (t &lt; e0) or 1 if (t &gt; e1) or a hermitian interpolation for (e0 &lt; t &lt; e1) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_types.h" line="299" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_types.h" bodystart="299" bodyend="302"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__types_1ga3d703967451bbb11367dc5afe35d5ee6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="ai__api_8h_1a80eacd8febc412193f639f01892984c7" kindref="member">AI_CONST</ref> bool</type>
+        <definition>AI_CONST bool AiIsFinite</definition>
+        <argsstring>(float x)</argsstring>
+        <name>AiIsFinite</name>
+        <param>
+          <type>float</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_types.h" line="304" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__types_1ga3e9ea17ba035a521018fb57eddbb2ada" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="ai__api_8h_1a80eacd8febc412193f639f01892984c7" kindref="member">AI_CONST</ref> float</type>
+        <definition>AI_CONST float fast_exp</definition>
+        <argsstring>(float x)</argsstring>
+        <name>fast_exp</name>
+        <param>
+          <type>float</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_types.h" line="306" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Basic data types and scalar operations </para>    </detaileddescription>
+    <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_types.h"/>
+  </compounddef>
+</doxygen>

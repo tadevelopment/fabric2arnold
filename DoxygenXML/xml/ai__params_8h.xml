@@ -1,0 +1,1681 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="ai__params_8h" kind="file" language="C++">
+    <compoundname>ai_params.h</compoundname>
+    <includes refid="ai__array_8h" local="yes">ai_array.h</includes>
+    <includes refid="ai__color_8h" local="yes">ai_color.h</includes>
+    <includes refid="ai__enum_8h" local="yes">ai_enum.h</includes>
+    <includes refid="ai__matrix_8h" local="yes">ai_matrix.h</includes>
+    <includes refid="ai__vector_8h" local="yes">ai_vector.h</includes>
+    <includes refid="ai__types_8h" local="yes">ai_types.h</includes>
+    <includes refid="ai__api_8h" local="yes">ai_api.h</includes>
+    <includedby refid="ai__volume_8h" local="yes">ai_volume.h</includedby>
+    <includedby refid="ai__node__entry_8h" local="yes">ai_node_entry.h</includedby>
+    <includedby refid="ai__nodes_8h" local="yes">ai_nodes.h</includedby>
+    <includedby refid="ai_8h" local="yes">ai.h</includedby>
+    <includedby refid="ai__shader__aovs_8h" local="yes">ai_shader_aovs.h</includedby>
+    <includedby refid="ai__shaderglobals_8h" local="yes">ai_shaderglobals.h</includedby>
+    <incdepgraph>
+      <node id="460">
+        <label>ai_constants.h</label>
+        <link refid="ai__constants_8h"/>
+      </node>
+      <node id="459">
+        <label>ai_api.h</label>
+        <link refid="ai__api_8h"/>
+      </node>
+      <node id="461">
+        <label>cmath</label>
+      </node>
+      <node id="464">
+        <label>ai_vector.h</label>
+        <link refid="ai__vector_8h"/>
+        <childnode refid="460" relation="include">
+        </childnode>
+        <childnode refid="458" relation="include">
+        </childnode>
+        <childnode refid="459" relation="include">
+        </childnode>
+        <childnode refid="465" relation="include">
+        </childnode>
+      </node>
+      <node id="458">
+        <label>ai_types.h</label>
+        <link refid="ai__types_8h"/>
+        <childnode refid="459" relation="include">
+        </childnode>
+        <childnode refid="460" relation="include">
+        </childnode>
+        <childnode refid="461" relation="include">
+        </childnode>
+        <childnode refid="462" relation="include">
+        </childnode>
+      </node>
+      <node id="456">
+        <label>ai_array.h</label>
+        <link refid="ai__array_8h"/>
+        <childnode refid="457" relation="include">
+        </childnode>
+        <childnode refid="463" relation="include">
+        </childnode>
+        <childnode refid="464" relation="include">
+        </childnode>
+        <childnode refid="458" relation="include">
+        </childnode>
+        <childnode refid="459" relation="include">
+        </childnode>
+      </node>
+      <node id="455">
+        <label>ai_params.h</label>
+        <link refid="ai_params.h"/>
+        <childnode refid="456" relation="include">
+        </childnode>
+        <childnode refid="457" relation="include">
+        </childnode>
+        <childnode refid="466" relation="include">
+        </childnode>
+        <childnode refid="463" relation="include">
+        </childnode>
+        <childnode refid="464" relation="include">
+        </childnode>
+        <childnode refid="458" relation="include">
+        </childnode>
+        <childnode refid="459" relation="include">
+        </childnode>
+      </node>
+      <node id="457">
+        <label>ai_color.h</label>
+        <link refid="ai__color_8h"/>
+        <childnode refid="458" relation="include">
+        </childnode>
+        <childnode refid="460" relation="include">
+        </childnode>
+        <childnode refid="459" relation="include">
+        </childnode>
+      </node>
+      <node id="465">
+        <label>math.h</label>
+      </node>
+      <node id="462">
+        <label>cstdlib</label>
+      </node>
+      <node id="463">
+        <label>ai_matrix.h</label>
+        <link refid="ai__matrix_8h"/>
+        <childnode refid="464" relation="include">
+        </childnode>
+        <childnode refid="459" relation="include">
+        </childnode>
+      </node>
+      <node id="466">
+        <label>ai_enum.h</label>
+        <link refid="ai__enum_8h"/>
+        <childnode refid="459" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="473">
+        <label>ai_filters.h</label>
+        <link refid="ai__filters_8h"/>
+        <childnode refid="469" relation="include">
+        </childnode>
+      </node>
+      <node id="483">
+        <label>ai_shader_util.h</label>
+        <link refid="ai__shader__util_8h"/>
+        <childnode refid="469" relation="include">
+        </childnode>
+      </node>
+      <node id="484">
+        <label>ai_texture.h</label>
+        <link refid="ai__texture_8h"/>
+        <childnode refid="469" relation="include">
+        </childnode>
+      </node>
+      <node id="478">
+        <label>ai_metadata.h</label>
+        <link refid="ai__metadata_8h"/>
+        <childnode refid="469" relation="include">
+        </childnode>
+      </node>
+      <node id="470">
+        <label>ai_node_entry.h</label>
+        <link refid="ai__node__entry_8h"/>
+        <childnode refid="471" relation="include">
+        </childnode>
+        <childnode refid="478" relation="include">
+        </childnode>
+        <childnode refid="479" relation="include">
+        </childnode>
+      </node>
+      <node id="471">
+        <label>ai_nodes.h</label>
+        <link refid="ai__nodes_8h"/>
+        <childnode refid="472" relation="include">
+        </childnode>
+        <childnode refid="473" relation="include">
+        </childnode>
+        <childnode refid="474" relation="include">
+        </childnode>
+        <childnode refid="475" relation="include">
+        </childnode>
+        <childnode refid="469" relation="include">
+        </childnode>
+        <childnode refid="476" relation="include">
+        </childnode>
+        <childnode refid="477" relation="include">
+        </childnode>
+      </node>
+      <node id="479">
+        <label>ai_dotass.h</label>
+        <link refid="ai__dotass_8h"/>
+        <childnode refid="469" relation="include">
+        </childnode>
+      </node>
+      <node id="468">
+        <label>ai_volume.h</label>
+        <link refid="ai__volume_8h"/>
+        <childnode refid="469" relation="include">
+        </childnode>
+      </node>
+      <node id="472">
+        <label>ai_drivers.h</label>
+        <link refid="ai__drivers_8h"/>
+        <childnode refid="469" relation="include">
+        </childnode>
+      </node>
+      <node id="474">
+        <label>ai_cameras.h</label>
+        <link refid="ai__cameras_8h"/>
+        <childnode refid="469" relation="include">
+        </childnode>
+      </node>
+      <node id="482">
+        <label>ai_shader_brdf.h</label>
+        <link refid="ai__shader__brdf_8h"/>
+        <childnode refid="469" relation="include">
+        </childnode>
+      </node>
+      <node id="467">
+        <label>ai_params.h</label>
+        <link refid="ai_params.h"/>
+        <childnode refid="468" relation="include">
+        </childnode>
+        <childnode refid="470" relation="include">
+        </childnode>
+        <childnode refid="471" relation="include">
+        </childnode>
+        <childnode refid="469" relation="include">
+        </childnode>
+        <childnode refid="480" relation="include">
+        </childnode>
+        <childnode refid="481" relation="include">
+        </childnode>
+      </node>
+      <node id="480">
+        <label>ai_shader_aovs.h</label>
+        <link refid="ai__shader__aovs_8h"/>
+        <childnode refid="469" relation="include">
+        </childnode>
+      </node>
+      <node id="481">
+        <label>ai_shaderglobals.h</label>
+        <link refid="ai__shaderglobals_8h"/>
+        <childnode refid="482" relation="include">
+        </childnode>
+        <childnode refid="469" relation="include">
+        </childnode>
+        <childnode refid="476" relation="include">
+        </childnode>
+        <childnode refid="477" relation="include">
+        </childnode>
+        <childnode refid="483" relation="include">
+        </childnode>
+        <childnode refid="484" relation="include">
+        </childnode>
+      </node>
+      <node id="477">
+        <label>ai_shader_userdef.h</label>
+        <link refid="ai__shader__userdef_8h"/>
+        <childnode refid="469" relation="include">
+        </childnode>
+      </node>
+      <node id="475">
+        <label>ai_shaders.h</label>
+        <link refid="ai__shaders_8h"/>
+        <childnode refid="469" relation="include">
+        </childnode>
+      </node>
+      <node id="476">
+        <label>ai_shader_lights.h</label>
+        <link refid="ai__shader__lights_8h"/>
+        <childnode refid="469" relation="include">
+        </childnode>
+      </node>
+      <node id="469">
+        <label>ai.h</label>
+        <link refid="ai_8h"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="union_at_param_value" prot="public">AtParamValue</innerclass>
+      <sectiondef kind="user-defined">
+      <header>Parameter Types</header>
+      <description><para>See <ref refid="union_at_param_value" kindref="compound">AtParamValue</ref> for the actual primitive data types that these macros refer to. </para></description>
+      <memberdef kind="define" id="group__ai__params_1gad6f9d8f7742d14cef0625f64e3273388" prot="public" static="no">
+        <name>AI_TYPE_BYTE</name>
+        <initializer>0x00</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Byte (an 8-bit sized unsigned integer) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" line="39" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__params_1gaba327105e284e653c6e0cf5adf1d0b90" prot="public" static="no">
+        <name>AI_TYPE_INT</name>
+        <initializer>0x01</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Integer </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" line="40" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__params_1gac8e85781bf24e3765379f3f3b5d82bb6" prot="public" static="no">
+        <name>AI_TYPE_UINT</name>
+        <initializer>0x02</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Unsigned integer </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" line="41" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__params_1gaf4302c6cecfa02f1a82e1dd6f275c393" prot="public" static="no">
+        <name>AI_TYPE_BOOLEAN</name>
+        <initializer>0x03</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Boolean (either true or false) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" line="42" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__params_1ga24544bb67a6de898f58e9ee2b50ccfed" prot="public" static="no">
+        <name>AI_TYPE_FLOAT</name>
+        <initializer>0x04</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Single-precision floating point number </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" line="43" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__params_1ga3793d7af467211e121b23a77521b9231" prot="public" static="no">
+        <name>AI_TYPE_RGB</name>
+        <initializer>0x05</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>RGB struct </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" line="44" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__params_1ga0eb686d19e7bf0c86391b1ca300cf12b" prot="public" static="no">
+        <name>AI_TYPE_RGBA</name>
+        <initializer>0x06</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>RGBA struct </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" line="45" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__params_1gaa1eb46a711262aeab869ec9c575ac860" prot="public" static="no">
+        <name>AI_TYPE_VECTOR</name>
+        <initializer>0x07</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>XYZ vector </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" line="46" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__params_1ga0fc88603b85deab29602bd2a50e86670" prot="public" static="no">
+        <name>AI_TYPE_POINT</name>
+        <initializer>0x08</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>XYZ point </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" line="47" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__params_1ga3a0becd916647a9802b83a62e6dde5da" prot="public" static="no">
+        <name>AI_TYPE_POINT2</name>
+        <initializer>0x09</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>XY point </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" line="48" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__params_1ga3ba74c0972e49a7fc034bd98dff70775" prot="public" static="no">
+        <name>AI_TYPE_STRING</name>
+        <initializer>0x0A</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>C-style character string </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" line="49" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__params_1ga6d5a46122fbb27c713772ac267c1d998" prot="public" static="no">
+        <name>AI_TYPE_POINTER</name>
+        <initializer>0x0B</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Arbitrary pointer </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" line="50" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__params_1gac94ef67af99b27db405568fd9a21a09c" prot="public" static="no">
+        <name>AI_TYPE_NODE</name>
+        <initializer>0x0C</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Pointer to an Arnold node </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" line="51" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__params_1ga69d71c45f37cd51892ac247488ccec8d" prot="public" static="no">
+        <name>AI_TYPE_ARRAY</name>
+        <initializer>0x0D</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="struct_at_array" kindref="compound">AtArray</ref> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" line="52" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__params_1ga9f9f906ec28b813cbc6984003c1d5450" prot="public" static="no">
+        <name>AI_TYPE_MATRIX</name>
+        <initializer>0x0E</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>4x4 matrix </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" line="53" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__params_1ga4b622aa2edfc0c24271cd325f7774e24" prot="public" static="no">
+        <name>AI_TYPE_ENUM</name>
+        <initializer>0x0F</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Enumeration (see <ref refid="group__ai__enum_1ga5987d638f44e43282a7fa98ada12495d" kindref="member">AtEnum</ref>) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" line="54" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__params_1ga449b89ef3593a6dacaa8e36447cee1af" prot="public" static="no">
+        <name>AI_TYPE_UNDEFINED</name>
+        <initializer>0xFF</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Undefined, you should never encounter a parameter of this type </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" line="55" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__params_1ga6e7d8649fddf78176ac8ebdeb0893a99" prot="public" static="no">
+        <name>AI_TYPE_NONE</name>
+        <initializer>0xFF</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>No type </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" line="56" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Parameter Categories for User-Data</header>
+      <memberdef kind="define" id="group__ai__params_1gaec139655c427aaa21ec7a9350dd76425" prot="public" static="no">
+        <name>AI_USERDEF_UNDEFINED</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Undefined, you should never encounter a parameter of this category </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" line="62" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__params_1gaf3fdb357464e04b1d72cac0dca0924a7" prot="public" static="no">
+        <name>AI_USERDEF_CONSTANT</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>User-defined: per-object parameter </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" line="63" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__params_1ga61d552886d3a3f7360accff7d8352113" prot="public" static="no">
+        <name>AI_USERDEF_UNIFORM</name>
+        <initializer>2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>User-defined: per-face parameter </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" line="64" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__params_1gae0b99eeaf60d17cea7f586c4f093d0c6" prot="public" static="no">
+        <name>AI_USERDEF_VARYING</name>
+        <initializer>3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>User-defined: per-vertex parameter </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" line="65" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__params_1gae03e4c4ed55a0067fe5d0f8f5ff16f44" prot="public" static="no">
+        <name>AI_USERDEF_INDEXED</name>
+        <initializer>4</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>User-defined: per-face-vertex parameter </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" line="66" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>AtParamEntry Methods</header>
+      <memberdef kind="function" id="group__ai__params_1ga57fc3965c38344edb1201da3026ea953" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* AiParamGetName</definition>
+        <argsstring>(const AtParamEntry *pentry)</argsstring>
+        <name>AiParamGetName</name>
+        <param>
+          <type>const AtParamEntry *</type>
+          <declname>pentry</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" line="101" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__params_1ga036653db8f0308f07a57d07b03cf2c8a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int AiParamGetType</definition>
+        <argsstring>(const AtParamEntry *pentry)</argsstring>
+        <name>AiParamGetType</name>
+        <param>
+          <type>const AtParamEntry *</type>
+          <declname>pentry</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" line="102" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__params_1ga84731e2b8a8e08f3e4b68d6a9c5ce6b1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="union_at_param_value" kindref="compound">AtParamValue</ref> *</type>
+        <definition>const AtParamValue* AiParamGetDefault</definition>
+        <argsstring>(const AtParamEntry *pentry)</argsstring>
+        <name>AiParamGetDefault</name>
+        <param>
+          <type>const AtParamEntry *</type>
+          <declname>pentry</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" line="103" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__params_1gad3d6ce50837f8347aaa306892e598acc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__ai__enum_1ga5987d638f44e43282a7fa98ada12495d" kindref="member">AtEnum</ref></type>
+        <definition>AtEnum AiParamGetEnum</definition>
+        <argsstring>(const AtParamEntry *pentry)</argsstring>
+        <name>AiParamGetEnum</name>
+        <param>
+          <type>const AtParamEntry *</type>
+          <declname>pentry</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" line="104" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__params_1gac589fb31bdf3ff767783be17b08ce0d5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* AiParamGetTypeName</definition>
+        <argsstring>(AtByte type)</argsstring>
+        <name>AiParamGetTypeName</name>
+        <param>
+          <type><ref refid="group__ai__types_1ga41f7f394ad3ef67901cce4d05bdabf89" kindref="member">AtByte</ref></type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" line="105" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__params_1gacbdfdc1411886a8e09086af04d92cf6c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="ai__api_8h_1a80eacd8febc412193f639f01892984c7" kindref="member">AI_CONST</ref> int</type>
+        <definition>AI_CONST int AiParamGetTypeSize</definition>
+        <argsstring>(AtByte type)</argsstring>
+        <name>AiParamGetTypeSize</name>
+        <param>
+          <type><ref refid="group__ai__types_1ga41f7f394ad3ef67901cce4d05bdabf89" kindref="member">AtByte</ref></type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" line="106" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>AtUserParamEntry Methods</header>
+      <memberdef kind="function" id="group__ai__params_1ga92c2710ff5e3c586781598b7814a11de" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* AiUserParamGetName</definition>
+        <argsstring>(const AtUserParamEntry *upentry)</argsstring>
+        <name>AiUserParamGetName</name>
+        <param>
+          <type>const AtUserParamEntry *</type>
+          <declname>upentry</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" line="121" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__params_1ga1aec245416bb01d472a6324c9b4f1c5b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int AiUserParamGetType</definition>
+        <argsstring>(const AtUserParamEntry *upentry)</argsstring>
+        <name>AiUserParamGetType</name>
+        <param>
+          <type>const AtUserParamEntry *</type>
+          <declname>upentry</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" line="122" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__params_1ga2173b04f22d855edc8a3ec25a5437c47" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int AiUserParamGetArrayType</definition>
+        <argsstring>(const AtUserParamEntry *upentry)</argsstring>
+        <name>AiUserParamGetArrayType</name>
+        <param>
+          <type>const AtUserParamEntry *</type>
+          <declname>upentry</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" line="123" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__params_1gaa8697f9b7b84738df6a6e1f328e36bc7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int AiUserParamGetCategory</definition>
+        <argsstring>(const AtUserParamEntry *upentry)</argsstring>
+        <name>AiUserParamGetCategory</name>
+        <param>
+          <type>const AtUserParamEntry *</type>
+          <declname>upentry</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" line="124" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__params_1gadf80fc6dc818bb0b3ec62de7b0e0a0fa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="ai__api_8h_1a80eacd8febc412193f639f01892984c7" kindref="member">AI_CONST</ref> int</type>
+        <definition>AI_CONST int AiUserParamGetIndex</definition>
+        <argsstring>(const AtUserParamEntry *upentry)</argsstring>
+        <name>AiUserParamGetIndex</name>
+        <param>
+          <type>const AtUserParamEntry *</type>
+          <declname>upentry</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" line="125" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Parameter Installers</header>
+      <description><para>These macros are to be called from a node&apos;s <computeroutput>node_parameters</computeroutput> method only.</para><para>There is a different macro for each supported parameter data type. For example, a shader node that implemented a typical fractal noise would declare three parameters like this: <programlisting><codeline><highlight class="normal">node_parameters</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>AiParameterInt(&quot;octaves&quot;,<sp/>3);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>AiParameterFlt(&quot;lacunarity&quot;,<sp/>1.92f);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>AiParameterBool(&quot;turbulence&quot;,<sp/>false);</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting></para><para>Please refer to <ref refid="ai__params_8h" kindref="compound">ai_params.h</ref> for a description of the functions called by these macros.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>n</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the name of the parameter that will be installed </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>default</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the default value of the new parameter (the actual number of arguments passed in depends on the parameter&apos;s data type, for example three floats for a RGB type) </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para></description>
+      <memberdef kind="define" id="group__ai__params_1gafabeb2c213d742fe647a38b511f5c81e" prot="public" static="no">
+        <name>AiParameterByte</name>
+        <param><defname>n</defname></param>
+        <param><defname>c</defname></param>
+        <initializer><ref refid="ai__params_8h_1a0d6bfd0417e9b788c214b130e5955021" kindref="member">AiNodeParamByte</ref> (params,-1,n,c);</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" line="153" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" bodystart="153" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__params_1ga73203c3268e179e71c34c986c64ac465" prot="public" static="no">
+        <name>AiParameterInt</name>
+        <param><defname>n</defname></param>
+        <param><defname>c</defname></param>
+        <initializer><ref refid="ai__params_8h_1a041ca74875720bccfe173d7626b7d891" kindref="member">AiNodeParamInt</ref>  (params,-1,n,c);</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" line="154" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" bodystart="154" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__params_1gace98d4e3f4efdf33e1e6b6e75e9204b2" prot="public" static="no">
+        <name>AiParameterUInt</name>
+        <param><defname>n</defname></param>
+        <param><defname>c</defname></param>
+        <initializer><ref refid="ai__params_8h_1abb663a13251c85d2c45fa4fb1e777549" kindref="member">AiNodeParamUInt</ref> (params,-1,n,c);</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" line="155" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" bodystart="155" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__params_1ga7ee59cb5b34ae4f984899ca828cf0853" prot="public" static="no">
+        <name>AiParameterBool</name>
+        <param><defname>n</defname></param>
+        <param><defname>c</defname></param>
+        <initializer><ref refid="ai__params_8h_1af135edd7f87d8a3faa89b9e7c6a14a06" kindref="member">AiNodeParamBool</ref> (params,-1,n,c);</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" line="156" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" bodystart="156" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__params_1ga1c39cecffd5ac36c35cd7d6e4c2456f5" prot="public" static="no">
+        <name>AiParameterFlt</name>
+        <param><defname>n</defname></param>
+        <param><defname>c</defname></param>
+        <initializer><ref refid="ai__params_8h_1a62e88fc068d43df6c67636d11759ecb9" kindref="member">AiNodeParamFlt</ref>  (params,-1,n,c);</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" line="157" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" bodystart="157" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__params_1ga31cc831d251eabcd48e2936ba036cdc7" prot="public" static="no">
+        <name>AiParameterRGB</name>
+        <param><defname>n</defname></param>
+        <param><defname>r</defname></param>
+        <param><defname>g</defname></param>
+        <param><defname>b</defname></param>
+        <initializer><ref refid="ai__params_8h_1a5131cb379ff901ee594a0f67193f97df" kindref="member">AiNodeParamRGB</ref>  (params,-1,n,r,g,b);</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" line="158" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" bodystart="158" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__params_1ga4315647865b442b7b8486b45e318764c" prot="public" static="no">
+        <name>AiParameterRGBA</name>
+        <param><defname>n</defname></param>
+        <param><defname>r</defname></param>
+        <param><defname>g</defname></param>
+        <param><defname>b</defname></param>
+        <param><defname>a</defname></param>
+        <initializer><ref refid="ai__params_8h_1a3fdee4477238cd287f98fd0ef85f2069" kindref="member">AiNodeParamRGBA</ref> (params,-1,n,r,g,b,a);</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" line="159" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" bodystart="159" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__params_1ga48ce92396a8998eea3f4609399c1262a" prot="public" static="no">
+        <name>AiParameterVec</name>
+        <param><defname>n</defname></param>
+        <param><defname>x</defname></param>
+        <param><defname>y</defname></param>
+        <param><defname>z</defname></param>
+        <initializer><ref refid="ai__params_8h_1a8e626019b9e2b15e5c9d1575ec1d8222" kindref="member">AiNodeParamVec</ref>  (params,-1,n,x,y,z);</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" line="160" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" bodystart="160" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__params_1ga2af0ce9259fae1b7c01f368271c6e54b" prot="public" static="no">
+        <name>AiParameterPnt</name>
+        <param><defname>n</defname></param>
+        <param><defname>x</defname></param>
+        <param><defname>y</defname></param>
+        <param><defname>z</defname></param>
+        <initializer><ref refid="ai__params_8h_1ab792f0987a2fd18e6e609dec0787afd8" kindref="member">AiNodeParamPnt</ref>  (params,-1,n,x,y,z);</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" line="161" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" bodystart="161" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__params_1ga42d9ffddeb911e00d873f176c3c7971c" prot="public" static="no">
+        <name>AiParameterPnt2</name>
+        <param><defname>n</defname></param>
+        <param><defname>x</defname></param>
+        <param><defname>y</defname></param>
+        <initializer><ref refid="ai__params_8h_1af14c15d9befa7212a4df602dd52e86ef" kindref="member">AiNodeParamPnt2</ref> (params,-1,n,x,y);</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" line="162" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" bodystart="162" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__params_1gac2609ff9fa5e7663d389947287b3c424" prot="public" static="no">
+        <name>AiParameterStr</name>
+        <param><defname>n</defname></param>
+        <param><defname>c</defname></param>
+        <initializer><ref refid="ai__params_8h_1aecb851e9023078257b36911edd1a3320" kindref="member">AiNodeParamStr</ref>  (params,-1,n,c);</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" line="163" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" bodystart="163" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__params_1gaa57db387d4ea4428483d7d66e431688c" prot="public" static="no">
+        <name>AiParameterPtr</name>
+        <param><defname>n</defname></param>
+        <param><defname>c</defname></param>
+        <initializer><ref refid="ai__params_8h_1af3788c71f90bf76982cdf245b9cb237f" kindref="member">AiNodeParamPtr</ref>  (params,-1,n,c);</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" line="164" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" bodystart="164" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__params_1gaf08a4201e383ffcf7fcc6fa699ec8006" prot="public" static="no">
+        <name>AiParameterNode</name>
+        <param><defname>n</defname></param>
+        <param><defname>c</defname></param>
+        <initializer><ref refid="ai__params_8h_1a2f0e4d8919a6ef84fa39d158d589f6a8" kindref="member">AiNodeParamNode</ref> (params,-1,n,c);</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" line="165" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" bodystart="165" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__params_1ga7d65ba03641c19938b202f7f46a69a15" prot="public" static="no">
+        <name>AiParameterArray</name>
+        <param><defname>n</defname></param>
+        <param><defname>c</defname></param>
+        <initializer><ref refid="ai__params_8h_1a3a3ef1bdf0b25f9729c867f68a499352" kindref="member">AiNodeParamArray</ref>(params,-1,n,c);</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" line="166" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" bodystart="166" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__params_1ga6b8f57b4e907b802b8d655f75ff8d0fb" prot="public" static="no">
+        <name>AiParameterMtx</name>
+        <param><defname>n</defname></param>
+        <param><defname>c</defname></param>
+        <initializer><ref refid="ai__params_8h_1ac53659ff83632d1da4b6f545c44e3b7f" kindref="member">AiNodeParamMtx</ref>  (params,-1,n,c);</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" line="167" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" bodystart="167" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__params_1gaeb90b360b45f7843790153a35c684efd" prot="public" static="no">
+        <name>AiParameterEnum</name>
+        <param><defname>n</defname></param>
+        <param><defname>c</defname></param>
+        <param><defname>e</defname></param>
+        <initializer><ref refid="ai__params_8h_1a84b988e410e7f545e369486d7c3c6ebf" kindref="member">AiNodeParamEnum</ref> (params,-1,n,c,e);</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" line="168" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" bodystart="168" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Deprecated</header>
+      <memberdef kind="define" id="ai__params_8h_1a2cffacc4a3b3b264de0961ad6d76210b" prot="public" static="no">
+        <name>AiParameterBYTE</name>
+        <param><defname>n</defname></param>
+        <param><defname>c</defname></param>
+        <initializer><ref refid="ai__params_8h_1a0d6bfd0417e9b788c214b130e5955021" kindref="member">AiNodeParamByte</ref> (params,-1,n,c);</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" line="177" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" bodystart="177" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ai__params_8h_1aab94a2d2b2fa5434eda77b66f522e4d1" prot="public" static="no">
+        <name>AiParameterINT</name>
+        <param><defname>n</defname></param>
+        <param><defname>c</defname></param>
+        <initializer><ref refid="ai__params_8h_1a041ca74875720bccfe173d7626b7d891" kindref="member">AiNodeParamInt</ref>  (params,-1,n,c);</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" line="178" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" bodystart="178" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ai__params_8h_1a6b502c9bf8db89882fa5c94d6cc56fe6" prot="public" static="no">
+        <name>AiParameterUINT</name>
+        <param><defname>n</defname></param>
+        <param><defname>c</defname></param>
+        <initializer><ref refid="ai__params_8h_1abb663a13251c85d2c45fa4fb1e777549" kindref="member">AiNodeParamUInt</ref> (params,-1,n,c);</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" line="179" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" bodystart="179" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ai__params_8h_1a12f735a40cf2f29975682a27304b0591" prot="public" static="no">
+        <name>AiParameterBOOL</name>
+        <param><defname>n</defname></param>
+        <param><defname>c</defname></param>
+        <initializer><ref refid="ai__params_8h_1af135edd7f87d8a3faa89b9e7c6a14a06" kindref="member">AiNodeParamBool</ref> (params,-1,n,c);</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" line="180" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" bodystart="180" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ai__params_8h_1ad28208105cfa4d8b0089871da360d679" prot="public" static="no">
+        <name>AiParameterFLT</name>
+        <param><defname>n</defname></param>
+        <param><defname>c</defname></param>
+        <initializer><ref refid="ai__params_8h_1a62e88fc068d43df6c67636d11759ecb9" kindref="member">AiNodeParamFlt</ref>  (params,-1,n,c);</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" line="181" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" bodystart="181" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ai__params_8h_1a60ee615b5190b0efb1bfc4dcb8b53821" prot="public" static="no">
+        <name>AiParameterVEC</name>
+        <param><defname>n</defname></param>
+        <param><defname>x</defname></param>
+        <param><defname>y</defname></param>
+        <param><defname>z</defname></param>
+        <initializer><ref refid="ai__params_8h_1a8e626019b9e2b15e5c9d1575ec1d8222" kindref="member">AiNodeParamVec</ref>  (params,-1,n,x,y,z);</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" line="182" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" bodystart="182" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ai__params_8h_1a0e0778255b7e8bd389ec2b9a6eb1ffae" prot="public" static="no">
+        <name>AiParameterPNT</name>
+        <param><defname>n</defname></param>
+        <param><defname>x</defname></param>
+        <param><defname>y</defname></param>
+        <param><defname>z</defname></param>
+        <initializer><ref refid="ai__params_8h_1ab792f0987a2fd18e6e609dec0787afd8" kindref="member">AiNodeParamPnt</ref>  (params,-1,n,x,y,z);</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" line="183" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" bodystart="183" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ai__params_8h_1a67ed7d818153bcb7848bf3017f9e242b" prot="public" static="no">
+        <name>AiParameterPNT2</name>
+        <param><defname>n</defname></param>
+        <param><defname>x</defname></param>
+        <param><defname>y</defname></param>
+        <initializer><ref refid="ai__params_8h_1af14c15d9befa7212a4df602dd52e86ef" kindref="member">AiNodeParamPnt2</ref> (params,-1,n,x,y);</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" line="184" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" bodystart="184" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ai__params_8h_1a027c6e585fb37ae6cf62aa39d49b40ee" prot="public" static="no">
+        <name>AiParameterSTR</name>
+        <param><defname>n</defname></param>
+        <param><defname>c</defname></param>
+        <initializer><ref refid="ai__params_8h_1aecb851e9023078257b36911edd1a3320" kindref="member">AiNodeParamStr</ref>  (params,-1,n,c);</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" line="185" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" bodystart="185" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ai__params_8h_1afccb937610dac01d4c874f0d5d066f9d" prot="public" static="no">
+        <name>AiParameterPTR</name>
+        <param><defname>n</defname></param>
+        <param><defname>c</defname></param>
+        <initializer><ref refid="ai__params_8h_1af3788c71f90bf76982cdf245b9cb237f" kindref="member">AiNodeParamPtr</ref>  (params,-1,n,c);</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" line="186" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" bodystart="186" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ai__params_8h_1af903066504c5583c454285d32c076a6e" prot="public" static="no">
+        <name>AiParameterNODE</name>
+        <param><defname>n</defname></param>
+        <param><defname>c</defname></param>
+        <initializer><ref refid="ai__params_8h_1a2f0e4d8919a6ef84fa39d158d589f6a8" kindref="member">AiNodeParamNode</ref> (params,-1,n,c);</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" line="187" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" bodystart="187" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ai__params_8h_1ae4070e735245e21700faf97ae744ba89" prot="public" static="no">
+        <name>AiParameterARRAY</name>
+        <param><defname>n</defname></param>
+        <param><defname>c</defname></param>
+        <initializer><ref refid="ai__params_8h_1a3a3ef1bdf0b25f9729c867f68a499352" kindref="member">AiNodeParamArray</ref>(params,-1,n,c);</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" line="188" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" bodystart="188" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ai__params_8h_1a6a75e5a6ac4844a8a076d645e08fe961" prot="public" static="no">
+        <name>AiParameterMTX</name>
+        <param><defname>n</defname></param>
+        <param><defname>c</defname></param>
+        <initializer><ref refid="ai__params_8h_1ac53659ff83632d1da4b6f545c44e3b7f" kindref="member">AiNodeParamMtx</ref>  (params,-1,n,c);</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" line="189" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" bodystart="189" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ai__params_8h_1a99fb182ee210ca4714ee6787d112f663" prot="public" static="no">
+        <name>AiParameterENUM</name>
+        <param><defname>n</defname></param>
+        <param><defname>c</defname></param>
+        <param><defname>e</defname></param>
+        <initializer><ref refid="ai__params_8h_1a84b988e410e7f545e369486d7c3c6ebf" kindref="member">AiNodeParamEnum</ref> (params,-1,n,c,e);</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" line="190" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" bodystart="190" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group__ai__params_1ga8f3c3a9f084a196e9dde16bae79e9383" prot="public" static="no">
+        <type>union <ref refid="union_at_param_value" kindref="compound">AtParamValue</ref></type>
+        <definition>typedef union AtParamValue  AtParamValue</definition>
+        <argsstring></argsstring>
+        <name>AtParamValue</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Actual parameter value for each supported type </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" line="87" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="ai__params_8h_1a0d6bfd0417e9b788c214b130e5955021" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiNodeParamByte</definition>
+        <argsstring>(AtList *params, int varoffset, const char *pname, AtByte pdefault)</argsstring>
+        <name>AiNodeParamByte</name>
+        <param>
+          <type>AtList *</type>
+          <declname>params</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>varoffset</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>pname</declname>
+        </param>
+        <param>
+          <type><ref refid="group__ai__types_1ga41f7f394ad3ef67901cce4d05bdabf89" kindref="member">AtByte</ref></type>
+          <declname>pdefault</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" line="195" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__params_8h_1a041ca74875720bccfe173d7626b7d891" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiNodeParamInt</definition>
+        <argsstring>(AtList *params, int varoffset, const char *pname, int pdefault)</argsstring>
+        <name>AiNodeParamInt</name>
+        <param>
+          <type>AtList *</type>
+          <declname>params</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>varoffset</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>pname</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>pdefault</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" line="196" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__params_8h_1abb663a13251c85d2c45fa4fb1e777549" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiNodeParamUInt</definition>
+        <argsstring>(AtList *params, int varoffset, const char *pname, unsigned int pdefault)</argsstring>
+        <name>AiNodeParamUInt</name>
+        <param>
+          <type>AtList *</type>
+          <declname>params</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>varoffset</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>pname</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>pdefault</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" line="197" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__params_8h_1af135edd7f87d8a3faa89b9e7c6a14a06" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiNodeParamBool</definition>
+        <argsstring>(AtList *params, int varoffset, const char *pname, bool pdefault)</argsstring>
+        <name>AiNodeParamBool</name>
+        <param>
+          <type>AtList *</type>
+          <declname>params</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>varoffset</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>pname</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>pdefault</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" line="198" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__params_8h_1a62e88fc068d43df6c67636d11759ecb9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiNodeParamFlt</definition>
+        <argsstring>(AtList *params, int varoffset, const char *pname, float pdefault)</argsstring>
+        <name>AiNodeParamFlt</name>
+        <param>
+          <type>AtList *</type>
+          <declname>params</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>varoffset</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>pname</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>pdefault</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" line="199" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__params_8h_1a5131cb379ff901ee594a0f67193f97df" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiNodeParamRGB</definition>
+        <argsstring>(AtList *params, int varoffset, const char *pname, float r, float g, float b)</argsstring>
+        <name>AiNodeParamRGB</name>
+        <param>
+          <type>AtList *</type>
+          <declname>params</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>varoffset</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>pname</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>g</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" line="200" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__params_8h_1a3fdee4477238cd287f98fd0ef85f2069" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiNodeParamRGBA</definition>
+        <argsstring>(AtList *params, int varoffset, const char *pname, float r, float g, float b, float a)</argsstring>
+        <name>AiNodeParamRGBA</name>
+        <param>
+          <type>AtList *</type>
+          <declname>params</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>varoffset</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>pname</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>g</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>a</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" line="201" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__params_8h_1a8e626019b9e2b15e5c9d1575ec1d8222" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiNodeParamVec</definition>
+        <argsstring>(AtList *params, int varoffset, const char *pname, float x, float y, float z)</argsstring>
+        <name>AiNodeParamVec</name>
+        <param>
+          <type>AtList *</type>
+          <declname>params</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>varoffset</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>pname</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>z</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" line="202" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__params_8h_1ab792f0987a2fd18e6e609dec0787afd8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiNodeParamPnt</definition>
+        <argsstring>(AtList *params, int varoffset, const char *pname, float x, float y, float z)</argsstring>
+        <name>AiNodeParamPnt</name>
+        <param>
+          <type>AtList *</type>
+          <declname>params</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>varoffset</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>pname</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>z</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" line="203" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__params_8h_1af14c15d9befa7212a4df602dd52e86ef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiNodeParamPnt2</definition>
+        <argsstring>(AtList *params, int varoffset, const char *pname, float x, float y)</argsstring>
+        <name>AiNodeParamPnt2</name>
+        <param>
+          <type>AtList *</type>
+          <declname>params</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>varoffset</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>pname</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" line="204" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__params_8h_1aecb851e9023078257b36911edd1a3320" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiNodeParamStr</definition>
+        <argsstring>(AtList *params, int varoffset, const char *pname, const char *pdefault)</argsstring>
+        <name>AiNodeParamStr</name>
+        <param>
+          <type>AtList *</type>
+          <declname>params</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>varoffset</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>pname</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>pdefault</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" line="205" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__params_8h_1af3788c71f90bf76982cdf245b9cb237f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiNodeParamPtr</definition>
+        <argsstring>(AtList *params, int varoffset, const char *pname, void *pdefault)</argsstring>
+        <name>AiNodeParamPtr</name>
+        <param>
+          <type>AtList *</type>
+          <declname>params</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>varoffset</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>pname</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>pdefault</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" line="206" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__params_8h_1a2f0e4d8919a6ef84fa39d158d589f6a8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiNodeParamNode</definition>
+        <argsstring>(AtList *params, int varoffset, const char *pname, AtNode *pdefault)</argsstring>
+        <name>AiNodeParamNode</name>
+        <param>
+          <type>AtList *</type>
+          <declname>params</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>varoffset</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>pname</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+          <declname>pdefault</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" line="207" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__params_8h_1a3a3ef1bdf0b25f9729c867f68a499352" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiNodeParamArray</definition>
+        <argsstring>(AtList *params, int varoffset, const char *pname, AtArray *pdefault)</argsstring>
+        <name>AiNodeParamArray</name>
+        <param>
+          <type>AtList *</type>
+          <declname>params</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>varoffset</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>pname</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_at_array" kindref="compound">AtArray</ref> *</type>
+          <declname>pdefault</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" line="208" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__params_8h_1ac53659ff83632d1da4b6f545c44e3b7f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiNodeParamMtx</definition>
+        <argsstring>(AtList *params, int varoffset, const char *pname, AtMatrix matrix)</argsstring>
+        <name>AiNodeParamMtx</name>
+        <param>
+          <type>AtList *</type>
+          <declname>params</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>varoffset</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>pname</declname>
+        </param>
+        <param>
+          <type><ref refid="group__ai__matrix_1ga239cea4f70543ed6dae0d0549d28c01c" kindref="member">AtMatrix</ref></type>
+          <declname>matrix</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" line="209" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__params_8h_1a84b988e410e7f545e369486d7c3c6ebf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiNodeParamEnum</definition>
+        <argsstring>(AtList *params, int varoffset, const char *pname, int pdefault, AtEnum enum_type)</argsstring>
+        <name>AiNodeParamEnum</name>
+        <param>
+          <type>AtList *</type>
+          <declname>params</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>varoffset</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>pname</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>pdefault</declname>
+        </param>
+        <param>
+          <type><ref refid="group__ai__enum_1ga5987d638f44e43282a7fa98ada12495d" kindref="member">AtEnum</ref></type>
+          <declname>enum_type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h" line="210" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Node parameters </para>    </detaileddescription>
+    <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_params.h"/>
+  </compounddef>
+</doxygen>

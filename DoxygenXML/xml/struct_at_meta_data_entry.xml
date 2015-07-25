@@ -1,0 +1,121 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="struct_at_meta_data_entry" kind="struct" language="C++" prot="public">
+    <compoundname>AtMetaDataEntry</compoundname>
+    <includes refid="ai__node__entry_8h" local="no">ai_node_entry.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_at_meta_data_entry_1afb1c62b1098b1a137a4c09444a230423" prot="public" static="no" mutable="no">
+        <type>const char *</type>
+        <definition>const char* AtMetaDataEntry::name</definition>
+        <argsstring></argsstring>
+        <name>name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_node_entry.h" line="73" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_node_entry.h" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_meta_data_entry_1ac1e3b443a52ffed4b03ae8355420a938" prot="public" static="no" mutable="no">
+        <type>const char *</type>
+        <definition>const char* AtMetaDataEntry::param</definition>
+        <argsstring></argsstring>
+        <name>param</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_node_entry.h" line="74" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_node_entry.h" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_meta_data_entry_1a6d97ac7cc37a5dc4d18eafc96f599738" prot="public" static="no" mutable="no">
+        <type><ref refid="group__ai__types_1ga41f7f394ad3ef67901cce4d05bdabf89" kindref="member">AtByte</ref></type>
+        <definition>AtByte AtMetaDataEntry::type</definition>
+        <argsstring></argsstring>
+        <name>type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_node_entry.h" line="75" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_node_entry.h" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_meta_data_entry_1ace6fe6e48a847907701ae7c80884fb09" prot="public" static="no" mutable="no">
+        <type><ref refid="union_at_param_value" kindref="compound">AtParamValue</ref></type>
+        <definition>AtParamValue AtMetaDataEntry::value</definition>
+        <argsstring></argsstring>
+        <name>value</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_node_entry.h" line="76" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_node_entry.h" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="28">
+        <label>AtParamValue</label>
+        <link refid="union_at_param_value"/>
+        <childnode refid="29" relation="usage">
+          <edgelabel>PNT</edgelabel>
+          <edgelabel>VEC</edgelabel>
+        </childnode>
+        <childnode refid="30" relation="usage">
+          <edgelabel>ARRAY</edgelabel>
+        </childnode>
+        <childnode refid="31" relation="usage">
+          <edgelabel>RGBA</edgelabel>
+        </childnode>
+        <childnode refid="32" relation="usage">
+          <edgelabel>RGB</edgelabel>
+        </childnode>
+        <childnode refid="33" relation="usage">
+          <edgelabel>PNT2</edgelabel>
+        </childnode>
+      </node>
+      <node id="29">
+        <label>AtPoint</label>
+        <link refid="struct_at_point"/>
+      </node>
+      <node id="27">
+        <label>AtMetaDataEntry</label>
+        <link refid="struct_at_meta_data_entry"/>
+        <childnode refid="28" relation="usage">
+          <edgelabel>value</edgelabel>
+        </childnode>
+      </node>
+      <node id="30">
+        <label>AtArray</label>
+        <link refid="struct_at_array"/>
+      </node>
+      <node id="32">
+        <label>AtRGB</label>
+        <link refid="struct_at_r_g_b"/>
+      </node>
+      <node id="31">
+        <label>AtRGBA</label>
+        <link refid="struct_at_r_g_b_a"/>
+      </node>
+      <node id="33">
+        <label>AtPoint2</label>
+        <link refid="struct_at_point2"/>
+      </node>
+    </collaborationgraph>
+    <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_node_entry.h" line="72" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_node_entry.h" bodystart="71" bodyend="77"/>
+    <listofallmembers>
+      <member refid="struct_at_meta_data_entry_1afb1c62b1098b1a137a4c09444a230423" prot="public" virt="non-virtual"><scope>AtMetaDataEntry</scope><name>name</name></member>
+      <member refid="struct_at_meta_data_entry_1ac1e3b443a52ffed4b03ae8355420a938" prot="public" virt="non-virtual"><scope>AtMetaDataEntry</scope><name>param</name></member>
+      <member refid="struct_at_meta_data_entry_1a6d97ac7cc37a5dc4d18eafc96f599738" prot="public" virt="non-virtual"><scope>AtMetaDataEntry</scope><name>type</name></member>
+      <member refid="struct_at_meta_data_entry_1ace6fe6e48a847907701ae7c80884fb09" prot="public" virt="non-virtual"><scope>AtMetaDataEntry</scope><name>value</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

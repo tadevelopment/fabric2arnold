@@ -1,0 +1,88 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="group__ai__shaders" kind="group">
+    <compoundname>ai_shaders</compoundname>
+    <title>Shader Nodes</title>
+    <innerclass refid="struct_at_shader_node_methods" prot="public">AtShaderNodeMethods</innerclass>
+      <sectiondef kind="user-defined">
+      <header>Node Method Declarations</header>
+      <memberdef kind="define" id="group__ai__shaders_1ga25ef1c14354b6d1be2d0e5b67cebafa6" prot="public" static="no">
+        <name>shader_evaluate</name>
+        <initializer>static void Evaluate(<ref refid="struct_at_node" kindref="compound">AtNode</ref>* node, <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref>* sg)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Evaluate Shader method declaration </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaders.h" line="47" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaders.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Node Methods</header>
+      <memberdef kind="function" id="group__ai__shaders_1gad87f14530d5af74a3fb626ee75ea49be" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiShaderEvaluate</definition>
+        <argsstring>(AtNode *node, AtShaderGlobals *sg)</argsstring>
+        <name>AiShaderEvaluate</name>
+        <param>
+          <type><ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaders.h" line="57" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group__ai__shaders_1gaa34fe65dc72b54d8e926d0a08b70463a" prot="public" static="no">
+        <type>struct <ref refid="struct_at_shader_node_methods" kindref="compound">AtShaderNodeMethods</ref></type>
+        <definition>typedef struct AtShaderNodeMethods  AtShaderNodeMethods</definition>
+        <argsstring></argsstring>
+        <name>AtShaderNodeMethods</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Shader Node methods structure </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaders.h" line="26" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group__ai__shaders_1ga576b3223a07c3a74c344cedb4932e7f6" prot="public" static="no">
+        <name>AI_SHADER_NODE_EXPORT_METHODS</name>
+        <param><defname>tag</defname></param>
+        <initializer><ref refid="group__ai__nodes_1gad84d7f2f4a9b8374cba1702e81f68a64" kindref="member">AI_INSTANCE_COMMON_METHODS</ref>                      \
+<ref refid="group__ai__shaders_1ga25ef1c14354b6d1be2d0e5b67cebafa6" kindref="member">shader_evaluate</ref>;                                \
+static <ref refid="struct_at_shader_node_methods" kindref="compound">AtShaderNodeMethods</ref> ai_shader_mtds = {   \
+   Evaluate                                     \
+};                                              \
+static <ref refid="struct_at_node_methods" kindref="compound">AtNodeMethods</ref> ai_node_mtds = {           \
+   &amp;ai_common_mtds,                             \
+   &amp;ai_shader_mtds                              \
+};                                              \
+<ref refid="struct_at_node_methods" kindref="compound">AtNodeMethods</ref>* tag = &amp;ai_node_mtds;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Shader Node methods exporter </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaders.h" line="29" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaders.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

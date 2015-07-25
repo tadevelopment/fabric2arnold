@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="struct_at_a_o_v_entry" kind="struct" language="C++" prot="public">
+    <compoundname>AtAOVEntry</compoundname>
+    <includes refid="ai__universe_8h" local="no">ai_universe.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_at_a_o_v_entry_1adbd24671b6cc4dd923f967958d5a6340" prot="public" static="no" mutable="no">
+        <type>const char *</type>
+        <definition>const char* AtAOVEntry::name</definition>
+        <argsstring></argsstring>
+        <name>name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_universe.h" line="25" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_universe.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_a_o_v_entry_1a8873487a3727bb49ecd7c3069bacba70" prot="public" static="no" mutable="no">
+        <type><ref refid="group__ai__types_1ga41f7f394ad3ef67901cce4d05bdabf89" kindref="member">AtByte</ref></type>
+        <definition>AtByte AtAOVEntry::type</definition>
+        <argsstring></argsstring>
+        <name>type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_universe.h" line="26" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_universe.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_a_o_v_entry_1a1dacfbc3b18c2510991a021cdbb912a0" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int AtAOVEntry::blend_mode</definition>
+        <argsstring></argsstring>
+        <name>blend_mode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_universe.h" line="27" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_universe.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_universe.h" line="24" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_universe.h" bodystart="23" bodyend="28"/>
+    <listofallmembers>
+      <member refid="struct_at_a_o_v_entry_1a1dacfbc3b18c2510991a021cdbb912a0" prot="public" virt="non-virtual"><scope>AtAOVEntry</scope><name>blend_mode</name></member>
+      <member refid="struct_at_a_o_v_entry_1adbd24671b6cc4dd923f967958d5a6340" prot="public" virt="non-virtual"><scope>AtAOVEntry</scope><name>name</name></member>
+      <member refid="struct_at_a_o_v_entry_1a8873487a3727bb49ecd7c3069bacba70" prot="public" virt="non-virtual"><scope>AtAOVEntry</scope><name>type</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

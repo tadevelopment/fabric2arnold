@@ -1,0 +1,380 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="struct_at_license_info" kind="struct" language="C++" prot="public">
+    <compoundname>AtLicenseInfo</compoundname>
+    <includes refid="ai__license_8h" local="no">ai_license.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_at_license_info_1a8bff90cada597d1b0b862ba7383b5178" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool AtLicenseInfo::used</definition>
+        <argsstring></argsstring>
+        <name>used</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>true if this is the license used by the current Arnold installation </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_license.h" line="28" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_license.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_license_info_1a11bd0251b939dd81ca18c1827ba00f53" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char AtLicenseInfo::name[64]</definition>
+        <argsstring>[64]</argsstring>
+        <name>name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>product name </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_license.h" line="29" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_license.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_license_info_1a17d382402dda3ed25c1a4eb19e4db238" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char AtLicenseInfo::ver[64]</definition>
+        <argsstring>[64]</argsstring>
+        <name>ver</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>product version </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_license.h" line="30" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_license.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_license_info_1a3ffd71622c2c12f320f265ba78547c82" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char AtLicenseInfo::exp[64]</definition>
+        <argsstring>[64]</argsstring>
+        <name>exp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>expiration date </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_license.h" line="31" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_license.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_license_info_1a3d67627d32b9eee1bb118bb4f70a8f8e" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char AtLicenseInfo::options[64]</definition>
+        <argsstring>[64]</argsstring>
+        <name>options</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>product options </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_license.h" line="32" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_license.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_license_info_1a8745f9a814fd4ceb8b955d1542c711bc" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int AtLicenseInfo::count</definition>
+        <argsstring></argsstring>
+        <name>count</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>license count </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_license.h" line="33" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_license.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_license_info_1a64ab136d5a5a2ee6a8e278fe5de0818f" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int AtLicenseInfo::current_inuse</definition>
+        <argsstring></argsstring>
+        <name>current_inuse</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>license count in use </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_license.h" line="34" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_license.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_license_info_1a94796fb8e87934b1757aa7c65f0cad56" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int AtLicenseInfo::current_resuse</definition>
+        <argsstring></argsstring>
+        <name>current_resuse</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>number of reservations in use </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_license.h" line="35" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_license.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_license_info_1a9e3bb76c9ae27e3c94b323ac9a48da80" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int AtLicenseInfo::hbased</definition>
+        <argsstring></argsstring>
+        <name>hbased</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>HOST-BASED count </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_license.h" line="36" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_license.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_license_info_1a99d2379426240c1c9bd98b97db677741" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int AtLicenseInfo::hold</definition>
+        <argsstring></argsstring>
+        <name>hold</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>license hold time </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_license.h" line="37" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_license.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_license_info_1a12faaf81fe61d7095a307ec099e6797b" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int AtLicenseInfo::max_roam</definition>
+        <argsstring></argsstring>
+        <name>max_roam</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>maximum roam time </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_license.h" line="38" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_license.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_license_info_1a972cc50ab431a65018ca4942fa601561" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int AtLicenseInfo::max_share</definition>
+        <argsstring></argsstring>
+        <name>max_share</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>maximum number of processes that can share this license </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_license.h" line="39" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_license.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_license_info_1aa59c971dc6ecd5537e446df2dd5e74b3" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int AtLicenseInfo::min_remove</definition>
+        <argsstring></argsstring>
+        <name>min_remove</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>minimum rlmremove time </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_license.h" line="40" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_license.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_license_info_1ad88f78df5205fd134bd1df7761519ed4" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int AtLicenseInfo::min_checkout</definition>
+        <argsstring></argsstring>
+        <name>min_checkout</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>license minimum checkout time </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_license.h" line="41" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_license.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_license_info_1ac1cba502ec04f28b927716ec539bfdaa" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int AtLicenseInfo::min_timeout</definition>
+        <argsstring></argsstring>
+        <name>min_timeout</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>minimum timeout time </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_license.h" line="42" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_license.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_license_info_1af8d8b6030bb36d87308094a578739122" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int AtLicenseInfo::nres</definition>
+        <argsstring></argsstring>
+        <name>nres</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>number of license reservations </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_license.h" line="43" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_license.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_license_info_1a8c6c407d773d61fde278a54ead123a30" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int AtLicenseInfo::num_roam_allowed</definition>
+        <argsstring></argsstring>
+        <name>num_roam_allowed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>number of roaming licenses allowed </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_license.h" line="44" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_license.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_license_info_1a08b16087d6603f1ae5708a570316445f" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int AtLicenseInfo::roaming</definition>
+        <argsstring></argsstring>
+        <name>roaming</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>number of licenses currently roaming (for roaming licenses) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_license.h" line="45" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_license.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_license_info_1ac21a70f2c23bef4ffd03aa3c596a5c58" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int AtLicenseInfo::share</definition>
+        <argsstring></argsstring>
+        <name>share</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>license share flags (share flags RLM_LA_SHARE_xxx are defined in license.h) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_license.h" line="46" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_license.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_license_info_1a61e0b82fed967b2aa0c65c71f15bbf4a" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int AtLicenseInfo::soft_limit</definition>
+        <argsstring></argsstring>
+        <name>soft_limit</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>license soft limit </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_license.h" line="47" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_license.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_license_info_1a8c69e3c6d4f6ef8035b3a547ffefd0fd" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int AtLicenseInfo::thisroam</definition>
+        <argsstring></argsstring>
+        <name>thisroam</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>1 if this license is a roaming license </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_license.h" line="48" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_license.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_license_info_1a38be6f0aa2c499a0b8112c154aeaff29" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int AtLicenseInfo::timeout</definition>
+        <argsstring></argsstring>
+        <name>timeout</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>current license timeout </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_license.h" line="49" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_license.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_license_info_1aaac5fd780d664b41bf71ae94ba8054cc" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int AtLicenseInfo::tz</definition>
+        <argsstring></argsstring>
+        <name>tz</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>license timezone specification. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_license.h" line="50" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_license.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_license_info_1aa571ed16fe3bfaad63906e221eae5a8a" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int AtLicenseInfo::tokens</definition>
+        <argsstring></argsstring>
+        <name>tokens</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>if 0, this is a normal license. If non-zero, this is a token-based license </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_license.h" line="51" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_license.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_license_info_1abedb57168baf8ee959e20612c7d58b91" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int AtLicenseInfo::type</definition>
+        <argsstring></argsstring>
+        <name>type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>license type (license type flags RLM_LA__xxx_TYPE are defined in license.h) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_license.h" line="52" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_license.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_license_info_1a69f2f822191081c0f7572f24906b2c2a" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int AtLicenseInfo::ubased</definition>
+        <argsstring></argsstring>
+        <name>ubased</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>USER_BASED count </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_license.h" line="53" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_license.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>License info structure </para>    </detaileddescription>
+    <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_license.h" line="27" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_license.h" bodystart="27" bodyend="54"/>
+    <listofallmembers>
+      <member refid="struct_at_license_info_1a8745f9a814fd4ceb8b955d1542c711bc" prot="public" virt="non-virtual"><scope>AtLicenseInfo</scope><name>count</name></member>
+      <member refid="struct_at_license_info_1a64ab136d5a5a2ee6a8e278fe5de0818f" prot="public" virt="non-virtual"><scope>AtLicenseInfo</scope><name>current_inuse</name></member>
+      <member refid="struct_at_license_info_1a94796fb8e87934b1757aa7c65f0cad56" prot="public" virt="non-virtual"><scope>AtLicenseInfo</scope><name>current_resuse</name></member>
+      <member refid="struct_at_license_info_1a3ffd71622c2c12f320f265ba78547c82" prot="public" virt="non-virtual"><scope>AtLicenseInfo</scope><name>exp</name></member>
+      <member refid="struct_at_license_info_1a9e3bb76c9ae27e3c94b323ac9a48da80" prot="public" virt="non-virtual"><scope>AtLicenseInfo</scope><name>hbased</name></member>
+      <member refid="struct_at_license_info_1a99d2379426240c1c9bd98b97db677741" prot="public" virt="non-virtual"><scope>AtLicenseInfo</scope><name>hold</name></member>
+      <member refid="struct_at_license_info_1a12faaf81fe61d7095a307ec099e6797b" prot="public" virt="non-virtual"><scope>AtLicenseInfo</scope><name>max_roam</name></member>
+      <member refid="struct_at_license_info_1a972cc50ab431a65018ca4942fa601561" prot="public" virt="non-virtual"><scope>AtLicenseInfo</scope><name>max_share</name></member>
+      <member refid="struct_at_license_info_1ad88f78df5205fd134bd1df7761519ed4" prot="public" virt="non-virtual"><scope>AtLicenseInfo</scope><name>min_checkout</name></member>
+      <member refid="struct_at_license_info_1aa59c971dc6ecd5537e446df2dd5e74b3" prot="public" virt="non-virtual"><scope>AtLicenseInfo</scope><name>min_remove</name></member>
+      <member refid="struct_at_license_info_1ac1cba502ec04f28b927716ec539bfdaa" prot="public" virt="non-virtual"><scope>AtLicenseInfo</scope><name>min_timeout</name></member>
+      <member refid="struct_at_license_info_1a11bd0251b939dd81ca18c1827ba00f53" prot="public" virt="non-virtual"><scope>AtLicenseInfo</scope><name>name</name></member>
+      <member refid="struct_at_license_info_1af8d8b6030bb36d87308094a578739122" prot="public" virt="non-virtual"><scope>AtLicenseInfo</scope><name>nres</name></member>
+      <member refid="struct_at_license_info_1a8c6c407d773d61fde278a54ead123a30" prot="public" virt="non-virtual"><scope>AtLicenseInfo</scope><name>num_roam_allowed</name></member>
+      <member refid="struct_at_license_info_1a3d67627d32b9eee1bb118bb4f70a8f8e" prot="public" virt="non-virtual"><scope>AtLicenseInfo</scope><name>options</name></member>
+      <member refid="struct_at_license_info_1a08b16087d6603f1ae5708a570316445f" prot="public" virt="non-virtual"><scope>AtLicenseInfo</scope><name>roaming</name></member>
+      <member refid="struct_at_license_info_1ac21a70f2c23bef4ffd03aa3c596a5c58" prot="public" virt="non-virtual"><scope>AtLicenseInfo</scope><name>share</name></member>
+      <member refid="struct_at_license_info_1a61e0b82fed967b2aa0c65c71f15bbf4a" prot="public" virt="non-virtual"><scope>AtLicenseInfo</scope><name>soft_limit</name></member>
+      <member refid="struct_at_license_info_1a8c69e3c6d4f6ef8035b3a547ffefd0fd" prot="public" virt="non-virtual"><scope>AtLicenseInfo</scope><name>thisroam</name></member>
+      <member refid="struct_at_license_info_1a38be6f0aa2c499a0b8112c154aeaff29" prot="public" virt="non-virtual"><scope>AtLicenseInfo</scope><name>timeout</name></member>
+      <member refid="struct_at_license_info_1aa571ed16fe3bfaad63906e221eae5a8a" prot="public" virt="non-virtual"><scope>AtLicenseInfo</scope><name>tokens</name></member>
+      <member refid="struct_at_license_info_1abedb57168baf8ee959e20612c7d58b91" prot="public" virt="non-virtual"><scope>AtLicenseInfo</scope><name>type</name></member>
+      <member refid="struct_at_license_info_1aaac5fd780d664b41bf71ae94ba8054cc" prot="public" virt="non-virtual"><scope>AtLicenseInfo</scope><name>tz</name></member>
+      <member refid="struct_at_license_info_1a69f2f822191081c0f7572f24906b2c2a" prot="public" virt="non-virtual"><scope>AtLicenseInfo</scope><name>ubased</name></member>
+      <member refid="struct_at_license_info_1a8bff90cada597d1b0b862ba7383b5178" prot="public" virt="non-virtual"><scope>AtLicenseInfo</scope><name>used</name></member>
+      <member refid="struct_at_license_info_1a17d382402dda3ed25c1a4eb19e4db238" prot="public" virt="non-virtual"><scope>AtLicenseInfo</scope><name>ver</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

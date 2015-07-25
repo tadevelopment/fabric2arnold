@@ -1,0 +1,173 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="group__ai__procedurals" kind="group">
+    <compoundname>ai_procedurals</compoundname>
+    <title>Procedural API</title>
+    <innerclass refid="struct_at_proc_vtable" prot="public">AtProcVtable</innerclass>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group__ai__procedurals_1gada0f51d3c111b02fef3cf1a9c9e6d02a" prot="public" static="no">
+        <type>int(*</type>
+        <definition>typedef int(* AtProcInit) (AtNode *node, void **user_ptr)</definition>
+        <argsstring>)(AtNode *node, void **user_ptr)</argsstring>
+        <name>AtProcInit</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Procedural init method.</para><para>This method will be called first and should perform any initialization required by your procedural. You probably want to create new nodes inside this method but you should return them through <ref refid="group__ai__procedurals_1gae4e9e4c1438b4abd859ea040c8b84f3d" kindref="member">AtProcGetNode</ref> and correctly return the number of created nodes from <ref refid="group__ai__procedurals_1ga65b46727711a0987c684d81dcd88bcca" kindref="member">AtProcNumNodes</ref>, otherwise the behavior is undefined. Alternatively, if you know ahead of time exactly how many nodes you are going to create, you can create them in <ref refid="group__ai__procedurals_1gae4e9e4c1438b4abd859ea040c8b84f3d" kindref="member">AtProcGetNode</ref> too.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>node</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>This is the procedural node itself </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">user_ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>This is a general-purpose, user-supplied data pointer that Arnold will pass along to the other procedural methods. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true upon success </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_procedural.h" line="60" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_procedural.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__ai__procedurals_1ga2b7de3a0c8d9d648a5e44496d4afadfc" prot="public" static="no">
+        <type>int(*</type>
+        <definition>typedef int(* AtProcCleanup) (void *user_ptr)</definition>
+        <argsstring>)(void *user_ptr)</argsstring>
+        <name>AtProcCleanup</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Procedural cleanup method.</para><para>This method will be called last and should perform any cleanup required by your procedural. Make sure you release any memory you allocated that is no longer needed by Arnold.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>user_ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>User data pointer, as returned from <ref refid="group__ai__procedurals_1gada0f51d3c111b02fef3cf1a9c9e6d02a" kindref="member">AtProcInit</ref> </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true upon success </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_procedural.h" line="72" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_procedural.h" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__ai__procedurals_1ga65b46727711a0987c684d81dcd88bcca" prot="public" static="no">
+        <type>int(*</type>
+        <definition>typedef int(* AtProcNumNodes) (void *user_ptr)</definition>
+        <argsstring>)(void *user_ptr)</argsstring>
+        <name>AtProcNumNodes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Procedural node count method.</para><para>This method will be called after initialization and should report the exact number of nodes to be created.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>user_ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>User data pointer, as returned from <ref refid="group__ai__procedurals_1gada0f51d3c111b02fef3cf1a9c9e6d02a" kindref="member">AtProcInit</ref> </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The number of nodes in the procedural </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_procedural.h" line="83" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_procedural.h" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__ai__procedurals_1gae4e9e4c1438b4abd859ea040c8b84f3d" prot="public" static="no">
+        <type><ref refid="struct_at_node" kindref="compound">AtNode</ref> *(*</type>
+        <definition>typedef AtNode*(* AtProcGetNode) (void *user_ptr, int i)</definition>
+        <argsstring>)(void *user_ptr, int i)</argsstring>
+        <name>AtProcGetNode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Procedural node fetching method.</para><para>This method will be called once for each node to be created (as determined by <ref refid="group__ai__procedurals_1ga65b46727711a0987c684d81dcd88bcca" kindref="member">AtProcNumNodes</ref>). Note that if you created any node in <ref refid="group__ai__procedurals_1gada0f51d3c111b02fef3cf1a9c9e6d02a" kindref="member">AtProcInit</ref>, they also should be returned here, otherwise the behaviour would be undefined.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>user_ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>User data pointer, as returned from <ref refid="group__ai__procedurals_1gada0f51d3c111b02fef3cf1a9c9e6d02a" kindref="member">AtProcInit</ref> </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>i</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Node index, in the range 0 to <ref refid="group__ai__procedurals_1ga65b46727711a0987c684d81dcd88bcca" kindref="member">AtProcNumNodes</ref> - 1 </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The i&apos;th node in the procedural </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_procedural.h" line="96" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_procedural.h" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__ai__procedurals_1ga21c4c82eb47296af6256f9264053de0c" prot="public" static="no">
+        <type>struct <ref refid="struct_at_proc_vtable" kindref="compound">AtProcVtable</ref></type>
+        <definition>typedef struct AtProcVtable  AtProcVtable</definition>
+        <argsstring></argsstring>
+        <name>AtProcVtable</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Procedural function table</para><para>This structure is used to report the function pointers that the renderer needs to call at runtime. The version field is used for runtime compatibility checking. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_procedural.h" line="111" column="1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__ai__procedurals_1ga0372ae9b272d72e26834a478a7b93dc8" prot="public" static="no">
+        <type>int(*</type>
+        <definition>typedef int(* AtProcLoader) (AtProcVtable *vtable)</definition>
+        <argsstring>)(AtProcVtable *vtable)</argsstring>
+        <name>AtProcLoader</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Procedural entry-point symbol</para><para>Procedural DSO&apos;s must define a symbol named &quot;ProcLoader&quot; of this type. It should fill in the fields of a <ref refid="struct_at_proc_vtable" kindref="compound">AtProcVtable</ref> structure.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">vtable</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>List of procedural methods to be supplied by the user </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true upon success </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_procedural.h" line="122" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_procedural.h" bodystart="122" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group__ai__procedurals_1ga92dba775121e567104a15fae1f1eac7a" prot="public" static="no">
+        <name>proc_loader</name>
+        <initializer><ref refid="group__ai__plugins_1ga95e724cd6a8385c2cea8d7fddc3a5d28" kindref="member">AI_EXPORT_LIB</ref> int ProcLoader(<ref refid="struct_at_proc_vtable" kindref="compound">AtProcVtable</ref>* vtable)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Handy shortcut for writing procedurals.</para><para>This is a shorter, alternate way to declare the <ref refid="group__ai__procedurals_1ga0372ae9b272d72e26834a478a7b93dc8" kindref="member">AtProcLoader</ref> symbol. Here is an example: <programlisting><codeline><highlight class="normal">node_loader<sp/></highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>vtable-&gt;Init<sp/><sp/><sp/><sp/><sp/>=<sp/>MyInit;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>vtable-&gt;Cleanup<sp/><sp/>=<sp/>MyCleanup;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>vtable-&gt;NumNodes<sp/>=<sp/>MyNumNodes;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>vtable-&gt;GetNode<sp/><sp/>=<sp/>MyGetNode;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>strcpy(vtable-&gt;version,<sp/>AI_VERSION);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>return<sp/>true;</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_procedural.h" line="141" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_procedural.h" bodystart="141" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This API is used to create geometry at render time. This is accomplished by providing the renderer some callback functions which are called as needed (when the procedural is hit by a ray). Procedurals should only declare geometry and perhaps shader nodes.</para><para>Note that procedurals can recursively create other procedural nodes. This allows small scene files to define huge scenes, where every piece of geometry is loaded on-demand: geometry that is not visible by the camera (or by other types of rays, e.g. reflection) will never be loaded in memory.</para><para>There is a special mode, selected by setting load_at_init=true, that will force the loading of a procedural during the initialization process. In that case, that procedural (and any other with the same setting) will be loaded serially (unless it was created from another procedural which is being created during rendering, in which case it will be executed in the current thread, possibly in parallel with others).</para><para>So, in most cases, when rendering with multiple threads, the procedurals could be expanded in parallel, depending on the circumstances of the render. Because of that, when writing a new procedural node, make sure it is properly designed to be re-entrant, and take into account any possible locks (currently, it only happens when loading .ass files from a procedural). </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,1103 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="struct_at_shader_globals" kind="struct" language="C++" prot="public">
+    <compoundname>AtShaderGlobals</compoundname>
+    <includes refid="ai__shaderglobals_8h" local="no">ai_shaderglobals.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_at_shader_globals_1a87fe27d3743b407c0df359b251b69e09" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int AtShaderGlobals::x</definition>
+        <argsstring></argsstring>
+        <name>x</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>X raster-space coordinate of this ray tree </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" line="41" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_shader_globals_1a864dda7f53bc93480da342a0b103bc0d" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int AtShaderGlobals::y</definition>
+        <argsstring></argsstring>
+        <name>y</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Y raster-space coordinate of this ray tree </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" line="42" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_shader_globals_1a38806e6ea790e44698e94658f42d13f0" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float AtShaderGlobals::sx</definition>
+        <argsstring></argsstring>
+        <name>sx</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>X image-space coordinate of this ray, in [-1,1) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" line="43" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_shader_globals_1a3a3dbb5966240aa49ec11fa0f36d655e" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float AtShaderGlobals::sy</definition>
+        <argsstring></argsstring>
+        <name>sy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Y image-space coordinate of this ray, in [-1,1) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" line="44" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_shader_globals_1ae997679f1bd3c2c79ba26f64c6bec0e3" prot="public" static="no" mutable="no">
+        <type><ref refid="group__ai__types_1ga31e2774651e7b62b89c5628edfd63fa3" kindref="member">AtUInt16</ref></type>
+        <definition>AtUInt16 AtShaderGlobals::si</definition>
+        <argsstring></argsstring>
+        <name>si</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>subpixel sample index </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" line="45" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_shader_globals_1ae07cbec53c423c043ab7332e21203cc5" prot="public" static="no" mutable="no">
+        <type><ref refid="group__ai__types_1ga31e2774651e7b62b89c5628edfd63fa3" kindref="member">AtUInt16</ref></type>
+        <definition>AtUInt16 AtShaderGlobals::i</definition>
+        <argsstring></argsstring>
+        <name>i</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>path index (or light sample index for shadow rays) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" line="46" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_shader_globals_1a3a88e631ab877909ce9055cc4e29de4f" prot="public" static="no" mutable="no">
+        <type><ref refid="group__ai__types_1ga31e2774651e7b62b89c5628edfd63fa3" kindref="member">AtUInt16</ref></type>
+        <definition>AtUInt16 AtShaderGlobals::n</definition>
+        <argsstring></argsstring>
+        <name>n</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>total number of samples to take </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" line="47" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_shader_globals_1a1a47dabb9fca54315332ccae194b47b6" prot="public" static="no" mutable="no">
+        <type><ref refid="group__ai__types_1ga31e2774651e7b62b89c5628edfd63fa3" kindref="member">AtUInt16</ref></type>
+        <definition>AtUInt16 AtShaderGlobals::Rt</definition>
+        <argsstring></argsstring>
+        <name>Rt</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>ray type </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" line="48" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_shader_globals_1a860b6d86739f7877c5308098067cecea" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float AtShaderGlobals::we</definition>
+        <argsstring></argsstring>
+        <name>we</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>sample weight </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" line="49" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_shader_globals_1a75efe221d22d86d212b74a744cb746d5" prot="public" static="no" mutable="no">
+        <type><ref refid="group__ai__types_1ga5e008e3afa9393ab65d66796de249df9" kindref="member">AtUInt32</ref></type>
+        <definition>AtUInt32 AtShaderGlobals::transp_index</definition>
+        <argsstring></argsstring>
+        <name>transp_index</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>transparency index </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" line="50" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_shader_globals_1ab3cef00e34cb25746bb519e839d6f846" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_at_point" kindref="compound">AtPoint</ref></type>
+        <definition>AtPoint AtShaderGlobals::Ro</definition>
+        <argsstring></argsstring>
+        <name>Ro</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>ray origin (typically the camera position) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" line="51" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_shader_globals_1a0ae4d1bea2c02640454b52ad2e04d478" prot="public" static="no" mutable="no">
+        <type><ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref></type>
+        <definition>AtVector AtShaderGlobals::Rd</definition>
+        <argsstring></argsstring>
+        <name>Rd</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>ray direction </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" line="52" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_shader_globals_1aa2a98b9b824aaec78bdf9eb00812d978" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double AtShaderGlobals::Rl</definition>
+        <argsstring></argsstring>
+        <name>Rl</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>ray length (|Ro-P|) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" line="53" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_shader_globals_1a1107b17e82e3155477ed1a5ece64f6f7" prot="public" static="no" mutable="no">
+        <type><ref refid="group__ai__types_1ga41f7f394ad3ef67901cce4d05bdabf89" kindref="member">AtByte</ref></type>
+        <definition>AtByte AtShaderGlobals::tid</definition>
+        <argsstring></argsstring>
+        <name>tid</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>thread ID </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" line="54" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_shader_globals_1a4c4419ef8fb33f3ca4c1ee969672aff4" prot="public" static="no" mutable="no">
+        <type><ref refid="group__ai__types_1ga41f7f394ad3ef67901cce4d05bdabf89" kindref="member">AtByte</ref></type>
+        <definition>AtByte AtShaderGlobals::Rr</definition>
+        <argsstring></argsstring>
+        <name>Rr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>recursion level for the ray that created this hit </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" line="55" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_shader_globals_1a4c9de594761d6bfdde2ed93e562c08ee" prot="public" static="no" mutable="no">
+        <type><ref refid="group__ai__types_1ga41f7f394ad3ef67901cce4d05bdabf89" kindref="member">AtByte</ref></type>
+        <definition>AtByte AtShaderGlobals::Rr_refl</definition>
+        <argsstring></argsstring>
+        <name>Rr_refl</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>ray reflection depth level </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" line="56" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_shader_globals_1a1961a4581db9add0fa8e231087f31be1" prot="public" static="no" mutable="no">
+        <type><ref refid="group__ai__types_1ga41f7f394ad3ef67901cce4d05bdabf89" kindref="member">AtByte</ref></type>
+        <definition>AtByte AtShaderGlobals::Rr_refr</definition>
+        <argsstring></argsstring>
+        <name>Rr_refr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>ray refraction depth level </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" line="57" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_shader_globals_1a7f787a4d75c3c718f4dc1b11f423229c" prot="public" static="no" mutable="no">
+        <type><ref refid="group__ai__types_1ga41f7f394ad3ef67901cce4d05bdabf89" kindref="member">AtByte</ref></type>
+        <definition>AtByte AtShaderGlobals::Rr_diff</definition>
+        <argsstring></argsstring>
+        <name>Rr_diff</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>ray diffuse depth level </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" line="58" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_shader_globals_1a8a79c17e6ed0cc0ff433265984ccee75" prot="public" static="no" mutable="no">
+        <type><ref refid="group__ai__types_1ga41f7f394ad3ef67901cce4d05bdabf89" kindref="member">AtByte</ref></type>
+        <definition>AtByte AtShaderGlobals::Rr_gloss</definition>
+        <argsstring></argsstring>
+        <name>Rr_gloss</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>ray glossy depth level </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" line="59" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_shader_globals_1a7829764b72d34ea93d7b3756d1eae791" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool AtShaderGlobals::fhemi</definition>
+        <argsstring></argsstring>
+        <name>fhemi</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>force hemispherical lighting </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" line="60" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_shader_globals_1a0e340783b8b3e43a2196868e91293b32" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float AtShaderGlobals::time</definition>
+        <argsstring></argsstring>
+        <name>time</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>absolute time, between shutter-open and shutter-close </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" line="61" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_shader_globals_1ab08826387cbe21d2d321c4e42efdc34d" prot="public" static="no" mutable="no">
+        <type><ref refid="group__ai__types_1ga5e008e3afa9393ab65d66796de249df9" kindref="member">AtUInt32</ref></type>
+        <definition>AtUInt32 AtShaderGlobals::fi</definition>
+        <argsstring></argsstring>
+        <name>fi</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>primitive ID (triangle, curve segment, etc) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" line="62" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_shader_globals_1aa51178961ab651212d7e8c6a86fe651e" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+        <definition>AtNode* AtShaderGlobals::Op</definition>
+        <argsstring></argsstring>
+        <name>Op</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>object pointer </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" line="63" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_shader_globals_1a3d7cf43aa9b50ccc93aa3da4c5b612cb" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+        <definition>AtNode* AtShaderGlobals::proc</definition>
+        <argsstring></argsstring>
+        <name>proc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>procedural object pointer (if exists) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" line="64" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_shader_globals_1a0dac8c56c8391b26f577bb6869ed45b7" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+        <definition>AtNode* AtShaderGlobals::shader</definition>
+        <argsstring></argsstring>
+        <name>shader</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>pointer to the current shader </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" line="65" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_shader_globals_1af895534453fcef35feb149654dc15fc8" prot="public" static="no" mutable="no">
+        <type>const <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+        <definition>const AtShaderGlobals* AtShaderGlobals::psg</definition>
+        <argsstring></argsstring>
+        <name>psg</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>parent shader globals (last shaded) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" line="66" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_shader_globals_1a7c694e8b5868e3608be8070ed8bae25b" prot="public" static="no" mutable="no">
+        <type>AtBucket *</type>
+        <definition>AtBucket* AtShaderGlobals::bkt</definition>
+        <argsstring></argsstring>
+        <name>bkt</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>bucket that the pixel being rendered belongs to </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" line="67" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_shader_globals_1a17d2a174833ee41291a31d75606c2202" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_at_point" kindref="compound">AtPoint</ref></type>
+        <definition>AtPoint AtShaderGlobals::Po</definition>
+        <argsstring></argsstring>
+        <name>Po</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>shading point in object-space </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" line="68" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_shader_globals_1aeb4c1244e709be9179cb35f34a2f10e9" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_at_point" kindref="compound">AtPoint</ref></type>
+        <definition>AtPoint AtShaderGlobals::P</definition>
+        <argsstring></argsstring>
+        <name>P</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>shading point in world-space </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" line="69" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_shader_globals_1a338a9fde33aad6d2199be3d47d277989" prot="public" static="no" mutable="no">
+        <type><ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref></type>
+        <definition>AtVector AtShaderGlobals::dPdx</definition>
+        <argsstring></argsstring>
+        <name>dPdx</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>surface derivative wrt screen X-axis (not normalized) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" line="70" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_shader_globals_1a005fac7c759fdee3409fb4daa9c7d9de" prot="public" static="no" mutable="no">
+        <type><ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref></type>
+        <definition>AtVector AtShaderGlobals::dPdy</definition>
+        <argsstring></argsstring>
+        <name>dPdy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>surface derivative wrt screen Y-axis (not normalized) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" line="71" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_shader_globals_1a122594224c970826e995dd9eef21690e" prot="public" static="no" mutable="no">
+        <type><ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref></type>
+        <definition>AtVector AtShaderGlobals::N</definition>
+        <argsstring></argsstring>
+        <name>N</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>shading normal </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" line="72" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_shader_globals_1adb8bd7b9ace5b7a030abc26846289e70" prot="public" static="no" mutable="no">
+        <type><ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref></type>
+        <definition>AtVector AtShaderGlobals::Nf</definition>
+        <argsstring></argsstring>
+        <name>Nf</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>face-forward shading normal </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" line="73" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_shader_globals_1a331cafbc3e4377adbb9ba00efef61b9f" prot="public" static="no" mutable="no">
+        <type><ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref></type>
+        <definition>AtVector AtShaderGlobals::Ng</definition>
+        <argsstring></argsstring>
+        <name>Ng</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>geometric normal </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" line="74" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_shader_globals_1a21a5acb0d82f3894cada9f85cd82ee07" prot="public" static="no" mutable="no">
+        <type><ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref></type>
+        <definition>AtVector AtShaderGlobals::Ngf</definition>
+        <argsstring></argsstring>
+        <name>Ngf</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>face-forward geometric normal </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" line="75" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_shader_globals_1ab1c28a0cd0500ed4c632882a98be6fad" prot="public" static="no" mutable="no">
+        <type><ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref></type>
+        <definition>AtVector AtShaderGlobals::Ns</definition>
+        <argsstring></argsstring>
+        <name>Ns</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>smoothed normal (same as N but without bump) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" line="76" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_shader_globals_1a102aacc679b6cfa6ecbf1522b76a181b" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float AtShaderGlobals::bu</definition>
+        <argsstring></argsstring>
+        <name>bu</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>barycentric coordinate (aka alpha, or u) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" line="77" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_shader_globals_1a30daa422c635aa33492fa1de529b3e61" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float AtShaderGlobals::bv</definition>
+        <argsstring></argsstring>
+        <name>bv</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>barycentric coordinate (aka beta, or v) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" line="78" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_shader_globals_1a0ef0fda53466ab8183ffdd7c46866fbd" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float AtShaderGlobals::u</definition>
+        <argsstring></argsstring>
+        <name>u</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>U surface parameter </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" line="79" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_shader_globals_1a0aa3959cd4fc487dde60391782b1a224" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float AtShaderGlobals::v</definition>
+        <argsstring></argsstring>
+        <name>v</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>V surface parameter </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" line="80" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_shader_globals_1aafeb728aa9d862af2f4dbe02e2888ca3" prot="public" static="no" mutable="no">
+        <type><ref refid="group__ai__matrix_1ga239cea4f70543ed6dae0d0549d28c01c" kindref="member">AtMatrix</ref></type>
+        <definition>AtMatrix AtShaderGlobals::M</definition>
+        <argsstring></argsstring>
+        <name>M</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>local-to-world matrix transform </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" line="81" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_shader_globals_1a951b1e11dd6cea1ea8bae553e45ddb2f" prot="public" static="no" mutable="no">
+        <type><ref refid="group__ai__matrix_1ga239cea4f70543ed6dae0d0549d28c01c" kindref="member">AtMatrix</ref></type>
+        <definition>AtMatrix AtShaderGlobals::Minv</definition>
+        <argsstring></argsstring>
+        <name>Minv</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>world-to-local matrix transform </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" line="82" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_shader_globals_1aae44362b9d88c6f4bc32a44bed7ec819" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_at_node" kindref="compound">AtNode</ref> **</type>
+        <definition>AtNode** AtShaderGlobals::lights</definition>
+        <argsstring></argsstring>
+        <name>lights</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>array of active lights at this shading context </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" line="83" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_shader_globals_1a436d37c72330b5624b0fc559ba0d229e" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+        <definition>AtNode* AtShaderGlobals::Lp</definition>
+        <argsstring></argsstring>
+        <name>Lp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>pointer to current light node </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" line="84" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_shader_globals_1a647c7b5cfbfd817822add736fcca330c" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int AtShaderGlobals::nlights</definition>
+        <argsstring></argsstring>
+        <name>nlights</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>number of active lights </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" line="85" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_shader_globals_1aaa39d216b5ce8f9a5fd19263c3b4a52a" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float AtShaderGlobals::Ldist</definition>
+        <argsstring></argsstring>
+        <name>Ldist</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>distance from P to light source </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" line="86" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_shader_globals_1a69f1789316def6b4752edc0006568bd6" prot="public" static="no" mutable="no">
+        <type><ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref></type>
+        <definition>AtVector AtShaderGlobals::Ld</definition>
+        <argsstring></argsstring>
+        <name>Ld</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>incident direction from light source </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" line="87" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_shader_globals_1abc70645471cd1ee7da94fbc1de61ce37" prot="public" static="no" mutable="no">
+        <type><ref refid="group__ai__color_1ga03caa98eaded3f2dd0527ed284656f04" kindref="member">AtColor</ref></type>
+        <definition>AtColor AtShaderGlobals::Li</definition>
+        <argsstring></argsstring>
+        <name>Li</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>incoming intensity from light source </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" line="88" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_shader_globals_1a2953b3df93929ebd97d4702526a590fb" prot="public" static="no" mutable="no">
+        <type><ref refid="group__ai__color_1ga03caa98eaded3f2dd0527ed284656f04" kindref="member">AtColor</ref></type>
+        <definition>AtColor AtShaderGlobals::Liu</definition>
+        <argsstring></argsstring>
+        <name>Liu</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>unoccluded incoming intensity from light source </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" line="89" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_shader_globals_1a724729bd4476eaaba037a8787ab49f1b" prot="public" static="no" mutable="no">
+        <type><ref refid="group__ai__color_1ga03caa98eaded3f2dd0527ed284656f04" kindref="member">AtColor</ref></type>
+        <definition>AtColor AtShaderGlobals::Lo</definition>
+        <argsstring></argsstring>
+        <name>Lo</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>shadow occlusion from light source </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" line="90" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_shader_globals_1a3b4b1962b9528152a5d830f0f443373f" prot="public" static="no" mutable="no">
+        <type><ref refid="group__ai__color_1ga03caa98eaded3f2dd0527ed284656f04" kindref="member">AtColor</ref></type>
+        <definition>AtColor AtShaderGlobals::Ci</definition>
+        <argsstring></argsstring>
+        <name>Ci</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>input color (for volume shaders) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" line="91" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_shader_globals_1aa9148bf29972509885efddf8f5429d08" prot="public" static="no" mutable="no">
+        <type><ref refid="group__ai__color_1ga03caa98eaded3f2dd0527ed284656f04" kindref="member">AtColor</ref></type>
+        <definition>AtColor AtShaderGlobals::Vo</definition>
+        <argsstring></argsstring>
+        <name>Vo</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>output volume radiance </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" line="92" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_shader_globals_1a3842f17981f54b245b83072df7659a02" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float AtShaderGlobals::area</definition>
+        <argsstring></argsstring>
+        <name>area</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>in <computeroutput>AI_CONTEXT_SURFACE</computeroutput> this is the world-space area being shaded; in <computeroutput>AI_CONTEXT_DISPLACEMENT</computeroutput> it&apos;s the average area of all un-displaced triangles shared by the current vertex </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" line="93" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_shader_globals_1afa3efce394956cb959e35019fdc57ca5" prot="public" static="no" mutable="no">
+        <type><ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref></type>
+        <definition>AtVector AtShaderGlobals::dPdu</definition>
+        <argsstring></argsstring>
+        <name>dPdu</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>surface derivative wrt U parameter (not normalized) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" line="96" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_shader_globals_1a7aa4214c957d81b8f78dd7ef9493003c" prot="public" static="no" mutable="no">
+        <type><ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref></type>
+        <definition>AtVector AtShaderGlobals::dPdv</definition>
+        <argsstring></argsstring>
+        <name>dPdv</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>surface derivative wrt V parameter (not normalized) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" line="97" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_shader_globals_1a8cdab3241cc3d4682eaa73b97693b9d4" prot="public" static="no" mutable="no">
+        <type><ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref></type>
+        <definition>AtVector AtShaderGlobals::dDdx</definition>
+        <argsstring></argsstring>
+        <name>dDdx</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>ray direction derivative wrt screen X-axis (not normalized) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" line="98" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_shader_globals_1aa4e8d407abbb7cffdbc82c84cc9905d1" prot="public" static="no" mutable="no">
+        <type><ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref></type>
+        <definition>AtVector AtShaderGlobals::dDdy</definition>
+        <argsstring></argsstring>
+        <name>dDdy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>ray direction derivative wrt screen Y-axis (not normalized) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" line="99" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" bodystart="99" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_shader_globals_1a4893b3d974dcf3377352c287dced0163" prot="public" static="no" mutable="no">
+        <type><ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref></type>
+        <definition>AtVector AtShaderGlobals::dNdx</definition>
+        <argsstring></argsstring>
+        <name>dNdx</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>derivative of surface normal with respect to X-axis </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" line="100" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" bodystart="100" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_shader_globals_1a8d0b6154e1aad502c02829ab3385c729" prot="public" static="no" mutable="no">
+        <type><ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref></type>
+        <definition>AtVector AtShaderGlobals::dNdy</definition>
+        <argsstring></argsstring>
+        <name>dNdy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>derivative of surface normal with respect to Y-axis </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" line="101" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_shader_globals_1aa532a249806ed410d25a76013d4f1657" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float AtShaderGlobals::dudx</definition>
+        <argsstring></argsstring>
+        <name>dudx</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>U derivative wrt screen X-axis (not normalized) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" line="102" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" bodystart="102" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_shader_globals_1ae69c14cd2a048a2d90dd5bfbe873cb93" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float AtShaderGlobals::dudy</definition>
+        <argsstring></argsstring>
+        <name>dudy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>U derivative wrt screen Y-axis (not normalized) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" line="103" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" bodystart="103" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_shader_globals_1a96f206df25cc4ed7ed430e5904121044" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float AtShaderGlobals::dvdx</definition>
+        <argsstring></argsstring>
+        <name>dvdx</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>V derivative wrt screen X-axis (not normalized) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" line="104" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_shader_globals_1a382103da34f16f82c903d8b1bd9cb619" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float AtShaderGlobals::dvdy</definition>
+        <argsstring></argsstring>
+        <name>dvdy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>V derivative wrt screen Y-axis (not normalized) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" line="105" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" bodystart="105" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_shader_globals_1a745d7948923fb586a13bd151cbfcdab6" prot="public" static="no" mutable="no">
+        <type><ref refid="union_at_param_value" kindref="compound">AtParamValue</ref></type>
+        <definition>AtParamValue AtShaderGlobals::out</definition>
+        <argsstring></argsstring>
+        <name>out</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>shader output </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" line="106" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_shader_globals_1a879e4f51f3ec040101a0fd408ac0fcd7" prot="public" static="no" mutable="no">
+        <type><ref refid="group__ai__color_1ga03caa98eaded3f2dd0527ed284656f04" kindref="member">AtColor</ref></type>
+        <definition>AtColor AtShaderGlobals::out_opacity</definition>
+        <argsstring></argsstring>
+        <name>out_opacity</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>output opacity (used for automatic transparency) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" line="107" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" bodystart="107" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_shader_globals_1a04d40a6465a04fef3d4ee38e094c5095" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool AtShaderGlobals::inclusive_traceset</definition>
+        <argsstring></argsstring>
+        <name>inclusive_traceset</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>is the trace-set inclusive? </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" line="108" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" bodystart="108" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_shader_globals_1a4ed1cbb13cf214870be5136836a7f4d6" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool AtShaderGlobals::skip_shadow</definition>
+        <argsstring></argsstring>
+        <name>skip_shadow</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>if true, don&apos;t trace shadow rays </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" line="109" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" bodystart="109" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_shader_globals_1a411545967fd9981559c386e7206014fb" prot="public" static="no" mutable="no">
+        <type><ref refid="group__ai__types_1ga41f7f394ad3ef67901cce4d05bdabf89" kindref="member">AtByte</ref></type>
+        <definition>AtByte AtShaderGlobals::sc</definition>
+        <argsstring></argsstring>
+        <name>sc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>type of shading context </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" line="110" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" bodystart="110" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_shader_globals_1aa2fcc43755fbe0e7c010cb407c24bcb1" prot="public" static="no" mutable="no">
+        <type><ref refid="class_at_string" kindref="compound">AtString</ref></type>
+        <definition>AtString AtShaderGlobals::traceset</definition>
+        <argsstring></argsstring>
+        <name>traceset</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>trace-set to assign to rays made from this SG </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" line="111" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_shader_globals_1aa9ee6ab169d52f692a1f0671f609ca16" prot="public" static="no" mutable="no">
+        <type>AtShaderGlobalsPrivateInfo *</type>
+        <definition>AtShaderGlobalsPrivateInfo* AtShaderGlobals::privateinfo</definition>
+        <argsstring></argsstring>
+        <name>privateinfo</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>extra information for internal use </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" line="113" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" bodystart="113" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="struct_at_shader_globals_1a60051eb09680e6368a61047171d37064" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>AtShaderGlobals::AtShaderGlobals</definition>
+        <argsstring>()</argsstring>
+        <name>AtShaderGlobals</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" line="114" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" bodystart="114" bodyend="114"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Shader globals data structure</para><para>An <ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> structure represents a <emphasis>shading</emphasis> <emphasis>context</emphasis> that holds all the information accesible to the different types of shaders. For example, after a camera ray hits the surface of an object, a shading context of type <computeroutput>AI_CONTEXT_SURFACE</computeroutput> is created that contains, amongst other things, local geometric properties such as the surface normal, the UV surface parameters, etc. </para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="82">
+        <label>AtShaderGlobals</label>
+        <link refid="struct_at_shader_globals"/>
+        <childnode refid="82" relation="usage">
+          <edgelabel>psg</edgelabel>
+        </childnode>
+        <childnode refid="83" relation="usage">
+          <edgelabel>Lp</edgelabel>
+          <edgelabel>shader</edgelabel>
+          <edgelabel>proc</edgelabel>
+          <edgelabel>lights</edgelabel>
+          <edgelabel>Op</edgelabel>
+        </childnode>
+        <childnode refid="84" relation="usage">
+          <edgelabel>dPdx</edgelabel>
+          <edgelabel>dPdy</edgelabel>
+          <edgelabel>Rd</edgelabel>
+          <edgelabel>Ns</edgelabel>
+          <edgelabel>dDdx</edgelabel>
+          <edgelabel>dDdy</edgelabel>
+          <edgelabel>Ld</edgelabel>
+          <edgelabel>Nf</edgelabel>
+          <edgelabel>Ng</edgelabel>
+          <edgelabel>Ngf</edgelabel>
+          <edgelabel>...</edgelabel>
+        </childnode>
+        <childnode refid="85" relation="usage">
+          <edgelabel>traceset</edgelabel>
+        </childnode>
+        <childnode refid="86" relation="usage">
+          <edgelabel>Lo</edgelabel>
+          <edgelabel>Liu</edgelabel>
+          <edgelabel>Ci</edgelabel>
+          <edgelabel>out_opacity</edgelabel>
+          <edgelabel>Vo</edgelabel>
+          <edgelabel>Li</edgelabel>
+        </childnode>
+        <childnode refid="87" relation="usage">
+          <edgelabel>out</edgelabel>
+        </childnode>
+      </node>
+      <node id="87">
+        <label>AtParamValue</label>
+        <link refid="union_at_param_value"/>
+        <childnode refid="84" relation="usage">
+          <edgelabel>PNT</edgelabel>
+          <edgelabel>VEC</edgelabel>
+        </childnode>
+        <childnode refid="88" relation="usage">
+          <edgelabel>ARRAY</edgelabel>
+        </childnode>
+        <childnode refid="89" relation="usage">
+          <edgelabel>RGBA</edgelabel>
+        </childnode>
+        <childnode refid="86" relation="usage">
+          <edgelabel>RGB</edgelabel>
+        </childnode>
+        <childnode refid="90" relation="usage">
+          <edgelabel>PNT2</edgelabel>
+        </childnode>
+      </node>
+      <node id="83">
+        <label>AtNode</label>
+        <link refid="struct_at_node"/>
+      </node>
+      <node id="85">
+        <label>AtString</label>
+        <link refid="class_at_string"/>
+      </node>
+      <node id="84">
+        <label>AtPoint</label>
+        <link refid="struct_at_point"/>
+      </node>
+      <node id="88">
+        <label>AtArray</label>
+        <link refid="struct_at_array"/>
+      </node>
+      <node id="86">
+        <label>AtRGB</label>
+        <link refid="struct_at_r_g_b"/>
+      </node>
+      <node id="89">
+        <label>AtRGBA</label>
+        <link refid="struct_at_r_g_b_a"/>
+      </node>
+      <node id="90">
+        <label>AtPoint2</label>
+        <link refid="struct_at_point2"/>
+      </node>
+    </collaborationgraph>
+    <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" line="40" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaderglobals.h" bodystart="40" bodyend="115"/>
+    <listofallmembers>
+      <member refid="struct_at_shader_globals_1a3842f17981f54b245b83072df7659a02" prot="public" virt="non-virtual"><scope>AtShaderGlobals</scope><name>area</name></member>
+      <member refid="struct_at_shader_globals_1a60051eb09680e6368a61047171d37064" prot="public" virt="non-virtual"><scope>AtShaderGlobals</scope><name>AtShaderGlobals</name></member>
+      <member refid="struct_at_shader_globals_1a7c694e8b5868e3608be8070ed8bae25b" prot="public" virt="non-virtual"><scope>AtShaderGlobals</scope><name>bkt</name></member>
+      <member refid="struct_at_shader_globals_1a102aacc679b6cfa6ecbf1522b76a181b" prot="public" virt="non-virtual"><scope>AtShaderGlobals</scope><name>bu</name></member>
+      <member refid="struct_at_shader_globals_1a30daa422c635aa33492fa1de529b3e61" prot="public" virt="non-virtual"><scope>AtShaderGlobals</scope><name>bv</name></member>
+      <member refid="struct_at_shader_globals_1a3b4b1962b9528152a5d830f0f443373f" prot="public" virt="non-virtual"><scope>AtShaderGlobals</scope><name>Ci</name></member>
+      <member refid="struct_at_shader_globals_1a8cdab3241cc3d4682eaa73b97693b9d4" prot="public" virt="non-virtual"><scope>AtShaderGlobals</scope><name>dDdx</name></member>
+      <member refid="struct_at_shader_globals_1aa4e8d407abbb7cffdbc82c84cc9905d1" prot="public" virt="non-virtual"><scope>AtShaderGlobals</scope><name>dDdy</name></member>
+      <member refid="struct_at_shader_globals_1a4893b3d974dcf3377352c287dced0163" prot="public" virt="non-virtual"><scope>AtShaderGlobals</scope><name>dNdx</name></member>
+      <member refid="struct_at_shader_globals_1a8d0b6154e1aad502c02829ab3385c729" prot="public" virt="non-virtual"><scope>AtShaderGlobals</scope><name>dNdy</name></member>
+      <member refid="struct_at_shader_globals_1afa3efce394956cb959e35019fdc57ca5" prot="public" virt="non-virtual"><scope>AtShaderGlobals</scope><name>dPdu</name></member>
+      <member refid="struct_at_shader_globals_1a7aa4214c957d81b8f78dd7ef9493003c" prot="public" virt="non-virtual"><scope>AtShaderGlobals</scope><name>dPdv</name></member>
+      <member refid="struct_at_shader_globals_1a338a9fde33aad6d2199be3d47d277989" prot="public" virt="non-virtual"><scope>AtShaderGlobals</scope><name>dPdx</name></member>
+      <member refid="struct_at_shader_globals_1a005fac7c759fdee3409fb4daa9c7d9de" prot="public" virt="non-virtual"><scope>AtShaderGlobals</scope><name>dPdy</name></member>
+      <member refid="struct_at_shader_globals_1aa532a249806ed410d25a76013d4f1657" prot="public" virt="non-virtual"><scope>AtShaderGlobals</scope><name>dudx</name></member>
+      <member refid="struct_at_shader_globals_1ae69c14cd2a048a2d90dd5bfbe873cb93" prot="public" virt="non-virtual"><scope>AtShaderGlobals</scope><name>dudy</name></member>
+      <member refid="struct_at_shader_globals_1a96f206df25cc4ed7ed430e5904121044" prot="public" virt="non-virtual"><scope>AtShaderGlobals</scope><name>dvdx</name></member>
+      <member refid="struct_at_shader_globals_1a382103da34f16f82c903d8b1bd9cb619" prot="public" virt="non-virtual"><scope>AtShaderGlobals</scope><name>dvdy</name></member>
+      <member refid="struct_at_shader_globals_1a7829764b72d34ea93d7b3756d1eae791" prot="public" virt="non-virtual"><scope>AtShaderGlobals</scope><name>fhemi</name></member>
+      <member refid="struct_at_shader_globals_1ab08826387cbe21d2d321c4e42efdc34d" prot="public" virt="non-virtual"><scope>AtShaderGlobals</scope><name>fi</name></member>
+      <member refid="struct_at_shader_globals_1ae07cbec53c423c043ab7332e21203cc5" prot="public" virt="non-virtual"><scope>AtShaderGlobals</scope><name>i</name></member>
+      <member refid="struct_at_shader_globals_1a04d40a6465a04fef3d4ee38e094c5095" prot="public" virt="non-virtual"><scope>AtShaderGlobals</scope><name>inclusive_traceset</name></member>
+      <member refid="struct_at_shader_globals_1a69f1789316def6b4752edc0006568bd6" prot="public" virt="non-virtual"><scope>AtShaderGlobals</scope><name>Ld</name></member>
+      <member refid="struct_at_shader_globals_1aaa39d216b5ce8f9a5fd19263c3b4a52a" prot="public" virt="non-virtual"><scope>AtShaderGlobals</scope><name>Ldist</name></member>
+      <member refid="struct_at_shader_globals_1abc70645471cd1ee7da94fbc1de61ce37" prot="public" virt="non-virtual"><scope>AtShaderGlobals</scope><name>Li</name></member>
+      <member refid="struct_at_shader_globals_1aae44362b9d88c6f4bc32a44bed7ec819" prot="public" virt="non-virtual"><scope>AtShaderGlobals</scope><name>lights</name></member>
+      <member refid="struct_at_shader_globals_1a2953b3df93929ebd97d4702526a590fb" prot="public" virt="non-virtual"><scope>AtShaderGlobals</scope><name>Liu</name></member>
+      <member refid="struct_at_shader_globals_1a724729bd4476eaaba037a8787ab49f1b" prot="public" virt="non-virtual"><scope>AtShaderGlobals</scope><name>Lo</name></member>
+      <member refid="struct_at_shader_globals_1a436d37c72330b5624b0fc559ba0d229e" prot="public" virt="non-virtual"><scope>AtShaderGlobals</scope><name>Lp</name></member>
+      <member refid="struct_at_shader_globals_1aafeb728aa9d862af2f4dbe02e2888ca3" prot="public" virt="non-virtual"><scope>AtShaderGlobals</scope><name>M</name></member>
+      <member refid="struct_at_shader_globals_1a951b1e11dd6cea1ea8bae553e45ddb2f" prot="public" virt="non-virtual"><scope>AtShaderGlobals</scope><name>Minv</name></member>
+      <member refid="struct_at_shader_globals_1a122594224c970826e995dd9eef21690e" prot="public" virt="non-virtual"><scope>AtShaderGlobals</scope><name>N</name></member>
+      <member refid="struct_at_shader_globals_1a3a88e631ab877909ce9055cc4e29de4f" prot="public" virt="non-virtual"><scope>AtShaderGlobals</scope><name>n</name></member>
+      <member refid="struct_at_shader_globals_1adb8bd7b9ace5b7a030abc26846289e70" prot="public" virt="non-virtual"><scope>AtShaderGlobals</scope><name>Nf</name></member>
+      <member refid="struct_at_shader_globals_1a331cafbc3e4377adbb9ba00efef61b9f" prot="public" virt="non-virtual"><scope>AtShaderGlobals</scope><name>Ng</name></member>
+      <member refid="struct_at_shader_globals_1a21a5acb0d82f3894cada9f85cd82ee07" prot="public" virt="non-virtual"><scope>AtShaderGlobals</scope><name>Ngf</name></member>
+      <member refid="struct_at_shader_globals_1a647c7b5cfbfd817822add736fcca330c" prot="public" virt="non-virtual"><scope>AtShaderGlobals</scope><name>nlights</name></member>
+      <member refid="struct_at_shader_globals_1ab1c28a0cd0500ed4c632882a98be6fad" prot="public" virt="non-virtual"><scope>AtShaderGlobals</scope><name>Ns</name></member>
+      <member refid="struct_at_shader_globals_1aa51178961ab651212d7e8c6a86fe651e" prot="public" virt="non-virtual"><scope>AtShaderGlobals</scope><name>Op</name></member>
+      <member refid="struct_at_shader_globals_1a745d7948923fb586a13bd151cbfcdab6" prot="public" virt="non-virtual"><scope>AtShaderGlobals</scope><name>out</name></member>
+      <member refid="struct_at_shader_globals_1a879e4f51f3ec040101a0fd408ac0fcd7" prot="public" virt="non-virtual"><scope>AtShaderGlobals</scope><name>out_opacity</name></member>
+      <member refid="struct_at_shader_globals_1aeb4c1244e709be9179cb35f34a2f10e9" prot="public" virt="non-virtual"><scope>AtShaderGlobals</scope><name>P</name></member>
+      <member refid="struct_at_shader_globals_1a17d2a174833ee41291a31d75606c2202" prot="public" virt="non-virtual"><scope>AtShaderGlobals</scope><name>Po</name></member>
+      <member refid="struct_at_shader_globals_1aa9ee6ab169d52f692a1f0671f609ca16" prot="public" virt="non-virtual"><scope>AtShaderGlobals</scope><name>privateinfo</name></member>
+      <member refid="struct_at_shader_globals_1a3d7cf43aa9b50ccc93aa3da4c5b612cb" prot="public" virt="non-virtual"><scope>AtShaderGlobals</scope><name>proc</name></member>
+      <member refid="struct_at_shader_globals_1af895534453fcef35feb149654dc15fc8" prot="public" virt="non-virtual"><scope>AtShaderGlobals</scope><name>psg</name></member>
+      <member refid="struct_at_shader_globals_1a0ae4d1bea2c02640454b52ad2e04d478" prot="public" virt="non-virtual"><scope>AtShaderGlobals</scope><name>Rd</name></member>
+      <member refid="struct_at_shader_globals_1aa2a98b9b824aaec78bdf9eb00812d978" prot="public" virt="non-virtual"><scope>AtShaderGlobals</scope><name>Rl</name></member>
+      <member refid="struct_at_shader_globals_1ab3cef00e34cb25746bb519e839d6f846" prot="public" virt="non-virtual"><scope>AtShaderGlobals</scope><name>Ro</name></member>
+      <member refid="struct_at_shader_globals_1a4c4419ef8fb33f3ca4c1ee969672aff4" prot="public" virt="non-virtual"><scope>AtShaderGlobals</scope><name>Rr</name></member>
+      <member refid="struct_at_shader_globals_1a7f787a4d75c3c718f4dc1b11f423229c" prot="public" virt="non-virtual"><scope>AtShaderGlobals</scope><name>Rr_diff</name></member>
+      <member refid="struct_at_shader_globals_1a8a79c17e6ed0cc0ff433265984ccee75" prot="public" virt="non-virtual"><scope>AtShaderGlobals</scope><name>Rr_gloss</name></member>
+      <member refid="struct_at_shader_globals_1a4c9de594761d6bfdde2ed93e562c08ee" prot="public" virt="non-virtual"><scope>AtShaderGlobals</scope><name>Rr_refl</name></member>
+      <member refid="struct_at_shader_globals_1a1961a4581db9add0fa8e231087f31be1" prot="public" virt="non-virtual"><scope>AtShaderGlobals</scope><name>Rr_refr</name></member>
+      <member refid="struct_at_shader_globals_1a1a47dabb9fca54315332ccae194b47b6" prot="public" virt="non-virtual"><scope>AtShaderGlobals</scope><name>Rt</name></member>
+      <member refid="struct_at_shader_globals_1a411545967fd9981559c386e7206014fb" prot="public" virt="non-virtual"><scope>AtShaderGlobals</scope><name>sc</name></member>
+      <member refid="struct_at_shader_globals_1a0dac8c56c8391b26f577bb6869ed45b7" prot="public" virt="non-virtual"><scope>AtShaderGlobals</scope><name>shader</name></member>
+      <member refid="struct_at_shader_globals_1ae997679f1bd3c2c79ba26f64c6bec0e3" prot="public" virt="non-virtual"><scope>AtShaderGlobals</scope><name>si</name></member>
+      <member refid="struct_at_shader_globals_1a4ed1cbb13cf214870be5136836a7f4d6" prot="public" virt="non-virtual"><scope>AtShaderGlobals</scope><name>skip_shadow</name></member>
+      <member refid="struct_at_shader_globals_1a38806e6ea790e44698e94658f42d13f0" prot="public" virt="non-virtual"><scope>AtShaderGlobals</scope><name>sx</name></member>
+      <member refid="struct_at_shader_globals_1a3a3dbb5966240aa49ec11fa0f36d655e" prot="public" virt="non-virtual"><scope>AtShaderGlobals</scope><name>sy</name></member>
+      <member refid="struct_at_shader_globals_1a1107b17e82e3155477ed1a5ece64f6f7" prot="public" virt="non-virtual"><scope>AtShaderGlobals</scope><name>tid</name></member>
+      <member refid="struct_at_shader_globals_1a0e340783b8b3e43a2196868e91293b32" prot="public" virt="non-virtual"><scope>AtShaderGlobals</scope><name>time</name></member>
+      <member refid="struct_at_shader_globals_1aa2fcc43755fbe0e7c010cb407c24bcb1" prot="public" virt="non-virtual"><scope>AtShaderGlobals</scope><name>traceset</name></member>
+      <member refid="struct_at_shader_globals_1a75efe221d22d86d212b74a744cb746d5" prot="public" virt="non-virtual"><scope>AtShaderGlobals</scope><name>transp_index</name></member>
+      <member refid="struct_at_shader_globals_1a0ef0fda53466ab8183ffdd7c46866fbd" prot="public" virt="non-virtual"><scope>AtShaderGlobals</scope><name>u</name></member>
+      <member refid="struct_at_shader_globals_1a0aa3959cd4fc487dde60391782b1a224" prot="public" virt="non-virtual"><scope>AtShaderGlobals</scope><name>v</name></member>
+      <member refid="struct_at_shader_globals_1aa9148bf29972509885efddf8f5429d08" prot="public" virt="non-virtual"><scope>AtShaderGlobals</scope><name>Vo</name></member>
+      <member refid="struct_at_shader_globals_1a860b6d86739f7877c5308098067cecea" prot="public" virt="non-virtual"><scope>AtShaderGlobals</scope><name>we</name></member>
+      <member refid="struct_at_shader_globals_1a87fe27d3743b407c0df359b251b69e09" prot="public" virt="non-virtual"><scope>AtShaderGlobals</scope><name>x</name></member>
+      <member refid="struct_at_shader_globals_1a864dda7f53bc93480da342a0b103bc0d" prot="public" virt="non-virtual"><scope>AtShaderGlobals</scope><name>y</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

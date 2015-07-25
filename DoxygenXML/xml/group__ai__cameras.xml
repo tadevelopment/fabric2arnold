@@ -1,0 +1,171 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="group__ai__cameras" kind="group">
+    <compoundname>ai_cameras</compoundname>
+    <title>Camera Nodes</title>
+    <innerclass refid="struct_at_camera_input" prot="public">AtCameraInput</innerclass>
+    <innerclass refid="struct_at_camera_output" prot="public">AtCameraOutput</innerclass>
+    <innerclass refid="struct_at_camera_node_methods" prot="public">AtCameraNodeMethods</innerclass>
+      <sectiondef kind="user-defined">
+      <header>API Methods for Camera Writers</header>
+      <memberdef kind="function" id="group__ai__cameras_1ga9565eb0c2932bb231aed2ecdf91b1f69" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiCameraInitialize</definition>
+        <argsstring>(AtNode *node, void *data)</argsstring>
+        <name>AiCameraInitialize</name>
+        <param>
+          <type><ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_cameras.h" line="65" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__cameras_1gaebcb94997193d08c2fd7ba176c4be1b0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiCameraUpdate</definition>
+        <argsstring>(AtNode *node, bool plane_distance)</argsstring>
+        <name>AiCameraUpdate</name>
+        <param>
+          <type><ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>plane_distance</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_cameras.h" line="66" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__cameras_1ga88df3fa929c647f80e81a16b78d77cb9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiCameraDestroy</definition>
+        <argsstring>(AtNode *node)</argsstring>
+        <name>AiCameraDestroy</name>
+        <param>
+          <type><ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_cameras.h" line="67" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__cameras_1gadd9cc0c546e92b678b4ebefdb2970ba6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void *</type>
+        <definition>void* AiCameraGetLocalData</definition>
+        <argsstring>(const AtNode *node)</argsstring>
+        <name>AiCameraGetLocalData</name>
+        <param>
+          <type>const <ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_cameras.h" line="68" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Node Method Declarations</header>
+      <memberdef kind="define" id="group__ai__cameras_1ga73e3082603c1a3529d4782e309079b3e" prot="public" static="no">
+        <name>camera_create_ray</name>
+        <initializer>static void CameraCreateRay(const <ref refid="struct_at_node" kindref="compound">AtNode</ref>* node, const <ref refid="struct_at_camera_input" kindref="compound">AtCameraInput</ref>* input, <ref refid="struct_at_camera_output" kindref="compound">AtCameraOutput</ref>* output, int tid)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create Camera Ray method declaration </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_cameras.h" line="77" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_cameras.h" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group__ai__cameras_1ga34f01d8bff6d641675b0ab09205f374d" prot="public" static="no">
+        <type>struct <ref refid="struct_at_camera_input" kindref="compound">AtCameraInput</ref></type>
+        <definition>typedef struct AtCameraInput  AtCameraInput</definition>
+        <argsstring></argsstring>
+        <name>AtCameraInput</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Camera ray creation inputs </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_cameras.h" line="25" column="1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__ai__cameras_1gafef57dc9d05afeb6d77e341bc87e3dfe" prot="public" static="no">
+        <type>struct <ref refid="struct_at_camera_output" kindref="compound">AtCameraOutput</ref></type>
+        <definition>typedef struct AtCameraOutput  AtCameraOutput</definition>
+        <argsstring></argsstring>
+        <name>AtCameraOutput</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Camera ray creation outputs</para><para>If the d*d* derivatives are left to their default value of zero, an accurate numerical estimate will be automatically computed for them to prevent catastrophic degradation of texture IO performance. Note that this estimate might not be as good as analytically computed derivatives but will often be good enough. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_cameras.h" line="41" column="1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__ai__cameras_1ga0ad20700f4944e2262b19bca5da47806" prot="public" static="no">
+        <type>struct <ref refid="struct_at_camera_node_methods" kindref="compound">AtCameraNodeMethods</ref></type>
+        <definition>typedef struct AtCameraNodeMethods  AtCameraNodeMethods</definition>
+        <argsstring></argsstring>
+        <name>AtCameraNodeMethods</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Camera node methods structure </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_cameras.h" line="46" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group__ai__cameras_1ga62608575c51def4424858cb23e24a404" prot="public" static="no">
+        <name>AI_CAMERA_NODE_EXPORT_METHODS</name>
+        <param><defname>tag</defname></param>
+        <initializer><ref refid="group__ai__nodes_1gad84d7f2f4a9b8374cba1702e81f68a64" kindref="member">AI_INSTANCE_COMMON_METHODS</ref>                   \
+<ref refid="group__ai__cameras_1ga73e3082603c1a3529d4782e309079b3e" kindref="member">camera_create_ray</ref>;                           \
+static <ref refid="struct_at_camera_node_methods" kindref="compound">AtCameraNodeMethods</ref> ai_cam_mtds = {   \
+   CameraCreateRay                           \
+};                                           \
+static <ref refid="struct_at_node_methods" kindref="compound">AtNodeMethods</ref> ai_node_mtds = {        \
+   &amp;ai_common_mtds,                          \
+   &amp;ai_cam_mtds                              \
+};                                           \
+<ref refid="struct_at_node_methods" kindref="compound">AtNodeMethods</ref>* tag = &amp;ai_node_mtds;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Camera node methods exporter </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_cameras.h" line="49" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_cameras.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,254 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="struct_at_texture_params" kind="struct" language="C++" prot="public">
+    <compoundname>AtTextureParams</compoundname>
+    <includes refid="ai__texture_8h" local="no">ai_texture.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_at_texture_params_1a9d1511f749fd42beac1feaca1d36fd23" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int AtTextureParams::filter</definition>
+        <argsstring></argsstring>
+        <name>filter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>texture look-up mode </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_texture.h" line="60" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_texture.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_texture_params_1a75fe340e7218f3bd6f55b2d53df18968" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int AtTextureParams::mipmap_mode</definition>
+        <argsstring></argsstring>
+        <name>mipmap_mode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>mode for mipmap blending and filtering </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_texture.h" line="61" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_texture.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_texture_params_1ae9fa26f065a5f6a00953caf8c8ad8617" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int AtTextureParams::mipmap_bias</definition>
+        <argsstring></argsstring>
+        <name>mipmap_bias</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>mipmap level bias </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_texture.h" line="62" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_texture.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_texture_params_1a9ede3056e075e055cadee4a037faa466" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool AtTextureParams::single_channel</definition>
+        <argsstring></argsstring>
+        <name>single_channel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>treat image as single channel </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_texture.h" line="63" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_texture.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_texture_params_1add538ddb77416039ded424bb2b7c8cfe" prot="public" static="no" mutable="no">
+        <type><ref refid="group__ai__types_1ga41f7f394ad3ef67901cce4d05bdabf89" kindref="member">AtByte</ref></type>
+        <definition>AtByte AtTextureParams::start_channel</definition>
+        <argsstring></argsstring>
+        <name>start_channel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>starting channel index to read from </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_texture.h" line="64" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_texture.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_texture_params_1ab0c2ee5a526fe7e37c671f590d06a640" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float AtTextureParams::fill</definition>
+        <argsstring></argsstring>
+        <name>fill</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>value for nonexistent channels (e.g. alpha) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_texture.h" line="65" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_texture.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_texture_params_1a166f95e45cf635c43c0a74a71b1f7c40" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool AtTextureParams::flip_s</definition>
+        <argsstring></argsstring>
+        <name>flip_s</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>flip S coordinate </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_texture.h" line="66" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_texture.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_texture_params_1a4ad3c9a26bd9d1956b00ab3e8a63c04c" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool AtTextureParams::flip_t</definition>
+        <argsstring></argsstring>
+        <name>flip_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>flip T coordinate </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_texture.h" line="67" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_texture.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_texture_params_1a8b5bff38677579943fe096b23e3ca4f9" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool AtTextureParams::swap_st</definition>
+        <argsstring></argsstring>
+        <name>swap_st</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>enable swapping of S and T coordinates </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_texture.h" line="68" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_texture.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_texture_params_1a51329e13bb56bdf705cb133a1dad1a16" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float AtTextureParams::scale_s</definition>
+        <argsstring></argsstring>
+        <name>scale_s</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>scale S coordinate </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_texture.h" line="69" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_texture.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_texture_params_1a24ebccecc3f4cf7164c800f937ead278" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float AtTextureParams::scale_t</definition>
+        <argsstring></argsstring>
+        <name>scale_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>scale T coordinate </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_texture.h" line="70" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_texture.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_texture_params_1a2f12da6cfdbea3f14f76be71e6e18c67" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int AtTextureParams::wrap_s</definition>
+        <argsstring></argsstring>
+        <name>wrap_s</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>wrap mode for S coordinate </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_texture.h" line="71" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_texture.h" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_texture_params_1adbdc4012f84603d3936ec5a03ae54926" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int AtTextureParams::wrap_t</definition>
+        <argsstring></argsstring>
+        <name>wrap_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>wrap mode for T coordinate </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_texture.h" line="72" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_texture.h" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_texture_params_1ae9a413aa46c4b26e12f605f1529d198c" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float AtTextureParams::width_s</definition>
+        <argsstring></argsstring>
+        <name>width_s</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>multiplicative widening of look-ups on the S axis </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_texture.h" line="73" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_texture.h" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_texture_params_1a3b8f4c2e40751e067dae0be4911a4d71" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float AtTextureParams::width_t</definition>
+        <argsstring></argsstring>
+        <name>width_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>multiplicative widening of look-ups on the T axis </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_texture.h" line="74" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_texture.h" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_texture_params_1aca523d2bce1265314cd486cc6b4127c5" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float AtTextureParams::blur_s</definition>
+        <argsstring></argsstring>
+        <name>blur_s</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>additive blur in look-ups along the S axis </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_texture.h" line="75" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_texture.h" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_texture_params_1aec66e60ce2a8188600eae94cedef3a56" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float AtTextureParams::blur_t</definition>
+        <argsstring></argsstring>
+        <name>blur_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>additive blur in look-ups along the T axis </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_texture.h" line="76" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_texture.h" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Structure that holds all of the available texture map look-up options </para>    </detaileddescription>
+    <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_texture.h" line="59" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_texture.h" bodystart="59" bodyend="77"/>
+    <listofallmembers>
+      <member refid="struct_at_texture_params_1aca523d2bce1265314cd486cc6b4127c5" prot="public" virt="non-virtual"><scope>AtTextureParams</scope><name>blur_s</name></member>
+      <member refid="struct_at_texture_params_1aec66e60ce2a8188600eae94cedef3a56" prot="public" virt="non-virtual"><scope>AtTextureParams</scope><name>blur_t</name></member>
+      <member refid="struct_at_texture_params_1ab0c2ee5a526fe7e37c671f590d06a640" prot="public" virt="non-virtual"><scope>AtTextureParams</scope><name>fill</name></member>
+      <member refid="struct_at_texture_params_1a9d1511f749fd42beac1feaca1d36fd23" prot="public" virt="non-virtual"><scope>AtTextureParams</scope><name>filter</name></member>
+      <member refid="struct_at_texture_params_1a166f95e45cf635c43c0a74a71b1f7c40" prot="public" virt="non-virtual"><scope>AtTextureParams</scope><name>flip_s</name></member>
+      <member refid="struct_at_texture_params_1a4ad3c9a26bd9d1956b00ab3e8a63c04c" prot="public" virt="non-virtual"><scope>AtTextureParams</scope><name>flip_t</name></member>
+      <member refid="struct_at_texture_params_1ae9fa26f065a5f6a00953caf8c8ad8617" prot="public" virt="non-virtual"><scope>AtTextureParams</scope><name>mipmap_bias</name></member>
+      <member refid="struct_at_texture_params_1a75fe340e7218f3bd6f55b2d53df18968" prot="public" virt="non-virtual"><scope>AtTextureParams</scope><name>mipmap_mode</name></member>
+      <member refid="struct_at_texture_params_1a51329e13bb56bdf705cb133a1dad1a16" prot="public" virt="non-virtual"><scope>AtTextureParams</scope><name>scale_s</name></member>
+      <member refid="struct_at_texture_params_1a24ebccecc3f4cf7164c800f937ead278" prot="public" virt="non-virtual"><scope>AtTextureParams</scope><name>scale_t</name></member>
+      <member refid="struct_at_texture_params_1a9ede3056e075e055cadee4a037faa466" prot="public" virt="non-virtual"><scope>AtTextureParams</scope><name>single_channel</name></member>
+      <member refid="struct_at_texture_params_1add538ddb77416039ded424bb2b7c8cfe" prot="public" virt="non-virtual"><scope>AtTextureParams</scope><name>start_channel</name></member>
+      <member refid="struct_at_texture_params_1a8b5bff38677579943fe096b23e3ca4f9" prot="public" virt="non-virtual"><scope>AtTextureParams</scope><name>swap_st</name></member>
+      <member refid="struct_at_texture_params_1ae9a413aa46c4b26e12f605f1529d198c" prot="public" virt="non-virtual"><scope>AtTextureParams</scope><name>width_s</name></member>
+      <member refid="struct_at_texture_params_1a3b8f4c2e40751e067dae0be4911a4d71" prot="public" virt="non-virtual"><scope>AtTextureParams</scope><name>width_t</name></member>
+      <member refid="struct_at_texture_params_1a2f12da6cfdbea3f14f76be71e6e18c67" prot="public" virt="non-virtual"><scope>AtTextureParams</scope><name>wrap_s</name></member>
+      <member refid="struct_at_texture_params_1adbdc4012f84603d3936ec5a03ae54926" prot="public" virt="non-virtual"><scope>AtTextureParams</scope><name>wrap_t</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

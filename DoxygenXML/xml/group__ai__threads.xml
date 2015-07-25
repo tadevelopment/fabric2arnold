@@ -1,0 +1,145 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="group__ai__threads" kind="group">
+    <compoundname>ai_threads</compoundname>
+    <title>Thread-management API</title>
+      <sectiondef kind="user-defined">
+      <header>Thread Priorities</header>
+      <memberdef kind="define" id="group__ai__threads_1ga318998856f380103e5fa39b4e011dfb2" prot="public" static="no">
+        <name>AI_PRIORITY_LOWEST</name>
+        <initializer>0x00</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>even lower priority than <computeroutput>AI_PRIORITY_LOW</computeroutput> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_threads.h" line="28" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_threads.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__threads_1ga112c54569be565d00e7dac6e61ec3d8c" prot="public" static="no">
+        <name>AI_PRIORITY_LOW</name>
+        <initializer>0x01</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>low thread priority </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_threads.h" line="29" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_threads.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__threads_1ga8b124a268e72657d42ed4d2f0555a0c9" prot="public" static="no">
+        <name>AI_PRIORITY_NORMAL</name>
+        <initializer>0x02</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>normal thread priority </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_threads.h" line="30" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_threads.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__threads_1ga919b4351dee46576dbe51d1fa398e37c" prot="public" static="no">
+        <name>AI_PRIORITY_HIGH</name>
+        <initializer>0x03</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>high thread priority </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_threads.h" line="31" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_threads.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__ai__threads_1gadd22beeefa5883f49856fdb7f09420f3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void *</type>
+        <definition>void* AiThreadCreate</definition>
+        <argsstring>(unsigned int(*fn)(void *), void *data, int priority)</argsstring>
+        <name>AiThreadCreate</name>
+        <param>
+          <type>unsigned int(*)(void *)</type>
+          <declname>fn</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>priority</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_threads.h" line="18" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__threads_1ga2752bd788f84cc97bc4a1eb40bfe9c5a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiThreadClose</definition>
+        <argsstring>(void *thread)</argsstring>
+        <name>AiThreadClose</name>
+        <param>
+          <type>void *</type>
+          <declname>thread</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_threads.h" line="19" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__threads_1ga24add085982399db9ef2fb71a0af7260" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiThreadWait</definition>
+        <argsstring>(void *thread)</argsstring>
+        <name>AiThreadWait</name>
+        <param>
+          <type>void *</type>
+          <declname>thread</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_threads.h" line="20" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__threads_1ga8a81870bec15c8d58af6578d85144164" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="ai__api_8h_1a80eacd8febc412193f639f01892984c7" kindref="member">AI_CONST</ref> void *</type>
+        <definition>AI_CONST void* AiThreadSelf</definition>
+        <argsstring>()</argsstring>
+        <name>AiThreadSelf</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_threads.h" line="21" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group__ai__threads_1ga96189b4c09833a36434ad59c38374022" prot="public" static="no">
+        <name>AI_MAX_THREADS</name>
+        <initializer>128</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>maximum number of threads </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_threads.h" line="23" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_threads.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,132 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="struct_at_camera_output" kind="struct" language="C++" prot="public">
+    <compoundname>AtCameraOutput</compoundname>
+    <includes refid="ai__cameras_8h" local="no">ai_cameras.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_at_camera_output_1ab8fb873b2729e34b55e76e6136a8be03" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_at_point" kindref="compound">AtPoint</ref></type>
+        <definition>AtPoint AtCameraOutput::origin</definition>
+        <argsstring></argsstring>
+        <name>origin</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>ray origin in camera space (required) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_cameras.h" line="36" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_cameras.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_camera_output_1a796889748f962156a71250813abb790b" prot="public" static="no" mutable="no">
+        <type><ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref></type>
+        <definition>AtVector AtCameraOutput::dir</definition>
+        <argsstring></argsstring>
+        <name>dir</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>ray direction in camera space (required) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_cameras.h" line="37" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_cameras.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_camera_output_1a93f763e8407c121ad3ab0a7f462d967d" prot="public" static="no" mutable="no">
+        <type><ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref></type>
+        <definition>AtVector AtCameraOutput::dOdx</definition>
+        <argsstring></argsstring>
+        <name>dOdx</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_cameras.h" line="38" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_cameras.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_camera_output_1a461e50f633f07b6b5a987a30bf7f2411" prot="public" static="no" mutable="no">
+        <type><ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref></type>
+        <definition>AtVector AtCameraOutput::dOdy</definition>
+        <argsstring></argsstring>
+        <name>dOdy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>derivative of the ray origin with respect to the pixel coordinates (optional - defaults to 0) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_cameras.h" line="38" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_cameras.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_camera_output_1ae8f0f8eeee6df5d90305406782cd1390" prot="public" static="no" mutable="no">
+        <type><ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref></type>
+        <definition>AtVector AtCameraOutput::dDdx</definition>
+        <argsstring></argsstring>
+        <name>dDdx</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_cameras.h" line="39" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_cameras.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_camera_output_1ab54f5ea358ee8d37542d9545d6caaf5c" prot="public" static="no" mutable="no">
+        <type><ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref></type>
+        <definition>AtVector AtCameraOutput::dDdy</definition>
+        <argsstring></argsstring>
+        <name>dDdy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>derivative of the ray direction with respect to the pixel coordinates (optional - defaults to 0) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_cameras.h" line="39" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_cameras.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_camera_output_1a007c7e9491709df1bfb2aa2af1e6b614" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float AtCameraOutput::weight</definition>
+        <argsstring></argsstring>
+        <name>weight</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>weight of this ray (used for vignetting) (optional - defaults to 1) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_cameras.h" line="40" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_cameras.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Camera ray creation outputs</para><para>If the d*d* derivatives are left to their default value of zero, an accurate numerical estimate will be automatically computed for them to prevent catastrophic degradation of texture IO performance. Note that this estimate might not be as good as analytically computed derivatives but will often be good enough. </para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="14">
+        <label>AtCameraOutput</label>
+        <link refid="struct_at_camera_output"/>
+        <childnode refid="15" relation="usage">
+          <edgelabel>dOdy</edgelabel>
+          <edgelabel>dDdx</edgelabel>
+          <edgelabel>dDdy</edgelabel>
+          <edgelabel>origin</edgelabel>
+          <edgelabel>dir</edgelabel>
+          <edgelabel>dOdx</edgelabel>
+        </childnode>
+      </node>
+      <node id="15">
+        <label>AtPoint</label>
+        <link refid="struct_at_point"/>
+      </node>
+    </collaborationgraph>
+    <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_cameras.h" line="35" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_cameras.h" bodystart="35" bodyend="41"/>
+    <listofallmembers>
+      <member refid="struct_at_camera_output_1ae8f0f8eeee6df5d90305406782cd1390" prot="public" virt="non-virtual"><scope>AtCameraOutput</scope><name>dDdx</name></member>
+      <member refid="struct_at_camera_output_1ab54f5ea358ee8d37542d9545d6caaf5c" prot="public" virt="non-virtual"><scope>AtCameraOutput</scope><name>dDdy</name></member>
+      <member refid="struct_at_camera_output_1a796889748f962156a71250813abb790b" prot="public" virt="non-virtual"><scope>AtCameraOutput</scope><name>dir</name></member>
+      <member refid="struct_at_camera_output_1a93f763e8407c121ad3ab0a7f462d967d" prot="public" virt="non-virtual"><scope>AtCameraOutput</scope><name>dOdx</name></member>
+      <member refid="struct_at_camera_output_1a461e50f633f07b6b5a987a30bf7f2411" prot="public" virt="non-virtual"><scope>AtCameraOutput</scope><name>dOdy</name></member>
+      <member refid="struct_at_camera_output_1ab8fb873b2729e34b55e76e6136a8be03" prot="public" virt="non-virtual"><scope>AtCameraOutput</scope><name>origin</name></member>
+      <member refid="struct_at_camera_output_1a007c7e9491709df1bfb2aa2af1e6b614" prot="public" virt="non-virtual"><scope>AtCameraOutput</scope><name>weight</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

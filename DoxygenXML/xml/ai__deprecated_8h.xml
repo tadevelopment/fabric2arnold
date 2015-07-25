@@ -1,0 +1,188 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="ai__deprecated_8h" kind="file" language="C++">
+    <compoundname>ai_deprecated.h</compoundname>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="ai__deprecated_8h_1a3e3f848b87983f0320adc8381f3d78f1" prot="public" static="no">
+        <name>AiGamma</name>
+        <param><defname>g</defname></param>
+        <param><defname>c</defname></param>
+        <initializer><ref refid="group__ai__color_1gac199c8c076267ab983d0fcc379ae3b7b" kindref="member">AiColorGamma</ref>(c, g);</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_deprecated.h" line="17" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_deprecated.h" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ai__deprecated_8h_1a72b3b0c8e88bb0442c2d5d793f2ae0c4" prot="public" static="no">
+        <name>AI_PNT2_ZERO</name>
+        <initializer><ref refid="group__ai__vector_1gac2572a0c3f2e4595c03a396d736dd055" kindref="member">AI_P2_ZERO</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_deprecated.h" line="19" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_deprecated.h" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ai__deprecated_8h_1ae867383ec3fa5bdd5500edd352afb97e" prot="public" static="no">
+        <name>AI_PNT2_ONE</name>
+        <initializer><ref refid="group__ai__vector_1ga15dbafda38fa3291811703326caa62a1" kindref="member">AI_P2_ONE</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_deprecated.h" line="20" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_deprecated.h" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ai__deprecated_8h_1aec321dc1beac683ff60b65608dab6c9b" prot="public" static="no">
+        <name>_name</name>
+        <initializer><ref refid="group__ai__nodes_1gaf9c675305a4fbc1058665bcf20ff39e8" kindref="member">AiNodeGetName</ref>(node)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_deprecated.h" line="23" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_deprecated.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ai__deprecated_8h_1af64d7a0bed5a4b20c283ae9928631e44" prot="public" static="no">
+        <name>AiNodeInstall</name>
+        <initializer><ref refid="group__ai__node__entry_1ga22978f9ac16bcea2514c31838c877200" kindref="member">AiNodeEntryInstall</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_deprecated.h" line="26" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_deprecated.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ai__deprecated_8h_1ae4336a1cbc857d1fd6323256dc2b56c4" prot="public" static="no">
+        <name>AiNodeUninstall</name>
+        <initializer><ref refid="group__ai__node__entry_1gac29af647f7ce056b12e28016ad5fe195" kindref="member">AiNodeEntryUninstall</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_deprecated.h" line="27" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_deprecated.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ai__deprecated_8h_1a333d9e5ba94101e2698048468f091e23" prot="public" static="no">
+        <name>AI_BUCKET_CB_FRAME_BEGIN</name>
+        <initializer>0x00</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Called at beginning of frame to set the bucket list </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_deprecated.h" line="35" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_deprecated.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ai__deprecated_8h_1a383cd00ff40d8a27446131b6e640f322" prot="public" static="no">
+        <name>AI_BUCKET_CB_FRAME_END</name>
+        <initializer>0x01</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Called when the whole frame has finished rendering </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_deprecated.h" line="36" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_deprecated.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ai__deprecated_8h_1a87374571c047d57cd03a86d8d40f91ea" prot="public" static="no">
+        <name>AI_BUCKET_CB_BUCKET_BEGIN</name>
+        <initializer>0x02</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Called at beginning of bucket to get bucket coords </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_deprecated.h" line="37" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_deprecated.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ai__deprecated_8h_1aa203669d725bc4b8b366a5787d3e85da" prot="public" static="no">
+        <name>AI_BUCKET_CB_BUCKET_END</name>
+        <initializer>0x03</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Called when bucket has finished rendering </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_deprecated.h" line="38" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_deprecated.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="ai__deprecated_8h_1a08424920574f2012e373daf777aa1401" prot="public" static="no">
+        <type>void(*</type>
+        <definition>typedef void(* AtBucketCallback) (int mode, int index, int nbuckets, const AtBucketCoords *bucket_list, AtBucketCoords *coords)</definition>
+        <argsstring>)(int mode, int index, int nbuckets, const AtBucketCoords *bucket_list, AtBucketCoords *coords)</argsstring>
+        <name>AtBucketCallback</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_deprecated.h" line="55" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_deprecated.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="ai__deprecated_8h_1a00d12b8b2c94f26e91e3f25540c8ae95" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiCameraCreateRayDeprecated</definition>
+        <argsstring>(const AtNode *node, const AtCameraInput *input, AtCameraOutput *output, int tid)</argsstring>
+        <name>AiCameraCreateRayDeprecated</name>
+        <param>
+          <type>const <ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_camera_input" kindref="compound">AtCameraInput</ref> *</type>
+          <declname>input</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_at_camera_output" kindref="compound">AtCameraOutput</ref> *</type>
+          <declname>output</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>tid</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_deprecated.h" line="33" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__deprecated_8h_1aab081e28166eefaec1a63cf03c28b030" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiRenderSetCallback</definition>
+        <argsstring>(AtBucketCallback cb)</argsstring>
+        <name>AiRenderSetCallback</name>
+        <param>
+          <type><ref refid="ai__deprecated_8h_1a08424920574f2012e373daf777aa1401" kindref="member">AtBucketCallback</ref></type>
+          <declname>cb</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_deprecated.h" line="57" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Macros for backwards compatibility only - do not include this in new code</para><para>IMPORTANT: Only include this file from .c or .cpp. Never include this in a .h file. Also, make this the <emphasis>last</emphasis> thing you include to avoid problems with system or 3rd party header files. </para>    </detaileddescription>
+    <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_deprecated.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,86 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="struct_at_node_lib" kind="struct" language="C++" prot="public">
+    <compoundname>AtNodeLib</compoundname>
+    <includes refid="ai__plugins_8h" local="no">ai_plugins.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_at_node_lib_1a195d263065ade584d094094a414c912f" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int AtNodeLib::node_type</definition>
+        <argsstring></argsstring>
+        <name>node_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>type of node (<computeroutput>AI_NODE_SHADER</computeroutput>, <computeroutput>AI_NODE_CAMERA</computeroutput>, etc) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_plugins.h" line="35" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_plugins.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_node_lib_1a37bc158ee4e102cf8e5f7ab189264ff2" prot="public" static="no" mutable="no">
+        <type><ref refid="group__ai__types_1ga41f7f394ad3ef67901cce4d05bdabf89" kindref="member">AtByte</ref></type>
+        <definition>AtByte AtNodeLib::output_type</definition>
+        <argsstring></argsstring>
+        <name>output_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>output type for shader nodes (<computeroutput>AI_TYPE_RGB</computeroutput>, etc) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_plugins.h" line="36" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_plugins.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_node_lib_1aa9d6d1c6214172d3190ff4efa126c184" prot="public" static="no" mutable="no">
+        <type>const char *</type>
+        <definition>const char* AtNodeLib::name</definition>
+        <argsstring></argsstring>
+        <name>name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>name of this plug-in node (&quot;lambert&quot;, etc) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_plugins.h" line="37" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_plugins.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_node_lib_1a5fbb9fbea87732f085a6ddcf9b58a073" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* AtNodeLib::methods</definition>
+        <argsstring></argsstring>
+        <name>methods</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>pointer to this node&apos;s methods </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_plugins.h" line="38" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_plugins.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_node_lib_1aa11da351cc8c345bad7bd57d9c192390" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char AtNodeLib::version[AI_MAXSIZE_VERSION]</definition>
+        <argsstring>[AI_MAXSIZE_VERSION]</argsstring>
+        <name>version</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Arnold version that this node was compiled against </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_plugins.h" line="39" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_plugins.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Used by dynamically-linked nodes to return node info </para>    </detaileddescription>
+    <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_plugins.h" line="34" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_plugins.h" bodystart="34" bodyend="40"/>
+    <listofallmembers>
+      <member refid="struct_at_node_lib_1a5fbb9fbea87732f085a6ddcf9b58a073" prot="public" virt="non-virtual"><scope>AtNodeLib</scope><name>methods</name></member>
+      <member refid="struct_at_node_lib_1aa9d6d1c6214172d3190ff4efa126c184" prot="public" virt="non-virtual"><scope>AtNodeLib</scope><name>name</name></member>
+      <member refid="struct_at_node_lib_1a195d263065ade584d094094a414c912f" prot="public" virt="non-virtual"><scope>AtNodeLib</scope><name>node_type</name></member>
+      <member refid="struct_at_node_lib_1a37bc158ee4e102cf8e5f7ab189264ff2" prot="public" virt="non-virtual"><scope>AtNodeLib</scope><name>output_type</name></member>
+      <member refid="struct_at_node_lib_1aa11da351cc8c345bad7bd57d9c192390" prot="public" virt="non-virtual"><scope>AtNodeLib</scope><name>version</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

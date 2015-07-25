@@ -1,0 +1,705 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="ai__shader__parameval_8h" kind="file" language="C++">
+    <compoundname>ai_shader_parameval.h</compoundname>
+    <includes refid="ai__array_8h" local="yes">ai_array.h</includes>
+    <includes refid="ai__color_8h" local="yes">ai_color.h</includes>
+    <includes refid="ai__matrix_8h" local="yes">ai_matrix.h</includes>
+    <includes refid="ai__vector_8h" local="yes">ai_vector.h</includes>
+    <includes refid="ai__types_8h" local="yes">ai_types.h</includes>
+    <includedby refid="ai_8h" local="yes">ai.h</includedby>
+    <incdepgraph>
+      <node id="595">
+        <label>ai_constants.h</label>
+        <link refid="ai__constants_8h"/>
+      </node>
+      <node id="594">
+        <label>ai_api.h</label>
+        <link refid="ai__api_8h"/>
+      </node>
+      <node id="596">
+        <label>cmath</label>
+      </node>
+      <node id="599">
+        <label>ai_vector.h</label>
+        <link refid="ai__vector_8h"/>
+        <childnode refid="595" relation="include">
+        </childnode>
+        <childnode refid="593" relation="include">
+        </childnode>
+        <childnode refid="594" relation="include">
+        </childnode>
+        <childnode refid="600" relation="include">
+        </childnode>
+      </node>
+      <node id="593">
+        <label>ai_types.h</label>
+        <link refid="ai__types_8h"/>
+        <childnode refid="594" relation="include">
+        </childnode>
+        <childnode refid="595" relation="include">
+        </childnode>
+        <childnode refid="596" relation="include">
+        </childnode>
+        <childnode refid="597" relation="include">
+        </childnode>
+      </node>
+      <node id="591">
+        <label>ai_array.h</label>
+        <link refid="ai__array_8h"/>
+        <childnode refid="592" relation="include">
+        </childnode>
+        <childnode refid="598" relation="include">
+        </childnode>
+        <childnode refid="599" relation="include">
+        </childnode>
+        <childnode refid="593" relation="include">
+        </childnode>
+        <childnode refid="594" relation="include">
+        </childnode>
+      </node>
+      <node id="592">
+        <label>ai_color.h</label>
+        <link refid="ai__color_8h"/>
+        <childnode refid="593" relation="include">
+        </childnode>
+        <childnode refid="595" relation="include">
+        </childnode>
+        <childnode refid="594" relation="include">
+        </childnode>
+      </node>
+      <node id="590">
+        <label>ai_shader_parameval.h</label>
+        <link refid="ai_shader_parameval.h"/>
+        <childnode refid="591" relation="include">
+        </childnode>
+        <childnode refid="592" relation="include">
+        </childnode>
+        <childnode refid="598" relation="include">
+        </childnode>
+        <childnode refid="599" relation="include">
+        </childnode>
+        <childnode refid="593" relation="include">
+        </childnode>
+      </node>
+      <node id="600">
+        <label>math.h</label>
+      </node>
+      <node id="597">
+        <label>cstdlib</label>
+      </node>
+      <node id="598">
+        <label>ai_matrix.h</label>
+        <link refid="ai__matrix_8h"/>
+        <childnode refid="599" relation="include">
+        </childnode>
+        <childnode refid="594" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="601">
+        <label>ai_shader_parameval.h</label>
+        <link refid="ai_shader_parameval.h"/>
+        <childnode refid="602" relation="include">
+        </childnode>
+      </node>
+      <node id="602">
+        <label>ai.h</label>
+        <link refid="ai_8h"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="user-defined">
+      <header>Parameter Evaluation Macros</header>
+      <description><para>These macros evaluate a shader parameter of a specific type.</para><para>There is a different macro for each supported parameter data type. This is the version that users will want to invoke most often since it passes the current shader globals and node by default. For example: <programlisting><codeline><highlight class="normal">enum<sp/>LambertParams<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>p_Kd,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>p_Kd_color</highlight></codeline>
+<codeline><highlight class="normal">};</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">node_parameters</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>AiParameterFlt(&quot;Kd&quot;,<sp/>0.7f);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>AiParameterRgb(&quot;Kd_color&quot;,<sp/>1,<sp/>1,<sp/>1);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>//<sp/>note<sp/>that<sp/>parameter<sp/>ordering<sp/>must<sp/>match<sp/>the<sp/>enum<sp/>above</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">shader_evaluate</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>float<sp/>kd<sp/>=<sp/>AiShaderEvalParamFlt(p_Kd);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>...</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting></para><para>Please refer to <ref refid="ai__shader__parameval_8h" kindref="compound">ai_shader_parameval.h</ref> for a description of the functions called by these macros.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Index in the shader&apos;s parameter enum list </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Parameter value of the corresponding type. If the requested type doesn&apos;t match the parameter&apos;s true type, but the types are &quot;link compatible&quot;, this query will silently perform the appropiate conversion; otherwise if the types are not compatible a value of zero (or the closest thing to 0 for the requested type, such as NULL or black) will be returned. </para></simplesect>
+</para></description>
+      <memberdef kind="define" id="group__ai__shader__parameval_1gaee8afade20c112d0f6974c1774e62907" prot="public" static="no">
+        <name>AiShaderEvalParamByte</name>
+        <param><defname>pid</defname></param>
+        <initializer><ref refid="ai__shader__parameval_8h_1a819152a73453e2e6435d62718752f61c" kindref="member">AiShaderEvalParamFuncByte</ref> (sg,node,pid)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_parameval.h" line="79" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_parameval.h" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__shader__parameval_1ga87e00756d209b955a29355f0593a1643" prot="public" static="no">
+        <name>AiShaderEvalParamInt</name>
+        <param><defname>pid</defname></param>
+        <initializer><ref refid="ai__shader__parameval_8h_1af08912319a8192b1b4a4b71518be2589" kindref="member">AiShaderEvalParamFuncInt</ref>  (sg,node,pid)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_parameval.h" line="80" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_parameval.h" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__shader__parameval_1gadada5b654749cd48e005c2fd0f54b041" prot="public" static="no">
+        <name>AiShaderEvalParamUInt</name>
+        <param><defname>pid</defname></param>
+        <initializer><ref refid="ai__shader__parameval_8h_1afdcd485d73402b86aca0842fc0975fdb" kindref="member">AiShaderEvalParamFuncUInt</ref> (sg,node,pid)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_parameval.h" line="81" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_parameval.h" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__shader__parameval_1ga9bc52f3f714b910ddb0b1d9dc85c668e" prot="public" static="no">
+        <name>AiShaderEvalParamBool</name>
+        <param><defname>pid</defname></param>
+        <initializer><ref refid="ai__shader__parameval_8h_1aaf061a9e648ad429b585063858b31b57" kindref="member">AiShaderEvalParamFuncBool</ref> (sg,node,pid)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_parameval.h" line="82" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_parameval.h" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__shader__parameval_1ga9510e92e8dc63bcf818d51b981740955" prot="public" static="no">
+        <name>AiShaderEvalParamFlt</name>
+        <param><defname>pid</defname></param>
+        <initializer><ref refid="ai__shader__parameval_8h_1a5f11008cc439a38a47bb1d7e4f15909c" kindref="member">AiShaderEvalParamFuncFlt</ref>  (sg,node,pid)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_parameval.h" line="83" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_parameval.h" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__shader__parameval_1ga93fca94c721968317a7135006d641854" prot="public" static="no">
+        <name>AiShaderEvalParamRGB</name>
+        <param><defname>pid</defname></param>
+        <initializer><ref refid="ai__shader__parameval_8h_1a170bc83303ebd2cf9e7ffaefbfe0204e" kindref="member">AiShaderEvalParamFuncRGB</ref>  (sg,node,pid)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_parameval.h" line="84" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_parameval.h" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__shader__parameval_1ga0d23b1cbcf0b9afe5ec96f5fc2c70da2" prot="public" static="no">
+        <name>AiShaderEvalParamRGBA</name>
+        <param><defname>pid</defname></param>
+        <initializer><ref refid="ai__shader__parameval_8h_1acfc794ed77d0219dd2c71b4e60fc0b51" kindref="member">AiShaderEvalParamFuncRGBA</ref> (sg,node,pid)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_parameval.h" line="85" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_parameval.h" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__shader__parameval_1gade57e2446218700877f0cd0a0c4294cc" prot="public" static="no">
+        <name>AiShaderEvalParamVec</name>
+        <param><defname>pid</defname></param>
+        <initializer><ref refid="ai__shader__parameval_8h_1ae32e4f4f65360f8f24f337a7fe50c7ed" kindref="member">AiShaderEvalParamFuncVec</ref>  (sg,node,pid)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_parameval.h" line="86" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_parameval.h" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__shader__parameval_1ga44bd838e7e9b2c034a1875965bb30ef4" prot="public" static="no">
+        <name>AiShaderEvalParamPnt</name>
+        <param><defname>pid</defname></param>
+        <initializer><ref refid="ai__shader__parameval_8h_1a49735bace44268be5de01d5288cfc317" kindref="member">AiShaderEvalParamFuncPnt</ref>  (sg,node,pid)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_parameval.h" line="87" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_parameval.h" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__shader__parameval_1gab20204a89d1983e99dcbe27539e71069" prot="public" static="no">
+        <name>AiShaderEvalParamPnt2</name>
+        <param><defname>pid</defname></param>
+        <initializer><ref refid="ai__shader__parameval_8h_1ad90530bd42570f9a84361c634afd9382" kindref="member">AiShaderEvalParamFuncPnt2</ref> (sg,node,pid)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_parameval.h" line="88" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_parameval.h" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__shader__parameval_1ga65a94ac89a323b952f6768ad3e3670f5" prot="public" static="no">
+        <name>AiShaderEvalParamStr</name>
+        <param><defname>pid</defname></param>
+        <initializer><ref refid="ai__shader__parameval_8h_1a70a1ef07851e7a8ea71d59971f5a5628" kindref="member">AiShaderEvalParamFuncStr</ref>  (sg,node,pid)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_parameval.h" line="89" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_parameval.h" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__shader__parameval_1ga49fe1146589d69940eecf10229621412" prot="public" static="no">
+        <name>AiShaderEvalParamPtr</name>
+        <param><defname>pid</defname></param>
+        <initializer><ref refid="ai__shader__parameval_8h_1ad38e717739863b9a07124f54a54fd2ff" kindref="member">AiShaderEvalParamFuncPtr</ref>  (sg,node,pid)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_parameval.h" line="90" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_parameval.h" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__shader__parameval_1ga3c433d34462380db0c39dd357bba8df6" prot="public" static="no">
+        <name>AiShaderEvalParamArray</name>
+        <param><defname>pid</defname></param>
+        <initializer><ref refid="ai__shader__parameval_8h_1aeecbeb04c8feaeedaebed15e3281f630" kindref="member">AiShaderEvalParamFuncArray</ref>(sg,node,pid)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_parameval.h" line="91" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_parameval.h" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__shader__parameval_1ga4ca288a3bd78ee0b75a4496edceaaa0c" prot="public" static="no">
+        <name>AiShaderEvalParamMtx</name>
+        <param><defname>pid</defname></param>
+        <initializer><ref refid="ai__shader__parameval_8h_1a13d005d042c529c524280d6e24d63f6c" kindref="member">AiShaderEvalParamFuncMtx</ref>  (sg,node,pid)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_parameval.h" line="92" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_parameval.h" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__shader__parameval_1gaffe5ebd74959552aa12ab38f250dccfc" prot="public" static="no">
+        <name>AiShaderEvalParamEnum</name>
+        <param><defname>pid</defname></param>
+        <initializer><ref refid="ai__shader__parameval_8h_1a0ba71a6d93eff6731ab062f34a4f37e5" kindref="member">AiShaderEvalParamFuncEnum</ref> (sg,node,pid)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_parameval.h" line="93" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_parameval.h" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="ai__shader__parameval_8h_1a819152a73453e2e6435d62718752f61c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__ai__types_1ga41f7f394ad3ef67901cce4d05bdabf89" kindref="member">AtByte</ref></type>
+        <definition>AtByte AiShaderEvalParamFuncByte</definition>
+        <argsstring>(AtShaderGlobals *sg, const AtNode *node, int pid)</argsstring>
+        <name>AiShaderEvalParamFuncByte</name>
+        <param>
+          <type><ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>pid</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_parameval.h" line="108" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__parameval_8h_1af08912319a8192b1b4a4b71518be2589" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int AiShaderEvalParamFuncInt</definition>
+        <argsstring>(AtShaderGlobals *sg, const AtNode *node, int pid)</argsstring>
+        <name>AiShaderEvalParamFuncInt</name>
+        <param>
+          <type><ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>pid</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_parameval.h" line="109" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__parameval_8h_1afdcd485d73402b86aca0842fc0975fdb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int AiShaderEvalParamFuncUInt</definition>
+        <argsstring>(AtShaderGlobals *sg, const AtNode *node, int pid)</argsstring>
+        <name>AiShaderEvalParamFuncUInt</name>
+        <param>
+          <type><ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>pid</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_parameval.h" line="110" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__parameval_8h_1aaf061a9e648ad429b585063858b31b57" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiShaderEvalParamFuncBool</definition>
+        <argsstring>(AtShaderGlobals *sg, const AtNode *node, int pid)</argsstring>
+        <name>AiShaderEvalParamFuncBool</name>
+        <param>
+          <type><ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>pid</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_parameval.h" line="111" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__parameval_8h_1a5f11008cc439a38a47bb1d7e4f15909c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float AiShaderEvalParamFuncFlt</definition>
+        <argsstring>(AtShaderGlobals *sg, const AtNode *node, int pid)</argsstring>
+        <name>AiShaderEvalParamFuncFlt</name>
+        <param>
+          <type><ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>pid</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_parameval.h" line="112" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__parameval_8h_1a170bc83303ebd2cf9e7ffaefbfe0204e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__ai__color_1ga03caa98eaded3f2dd0527ed284656f04" kindref="member">AtColor</ref></type>
+        <definition>AtColor AiShaderEvalParamFuncRGB</definition>
+        <argsstring>(AtShaderGlobals *sg, const AtNode *node, int pid)</argsstring>
+        <name>AiShaderEvalParamFuncRGB</name>
+        <param>
+          <type><ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>pid</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_parameval.h" line="113" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__parameval_8h_1acfc794ed77d0219dd2c71b4e60fc0b51" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_at_r_g_b_a" kindref="compound">AtRGBA</ref></type>
+        <definition>AtRGBA AiShaderEvalParamFuncRGBA</definition>
+        <argsstring>(AtShaderGlobals *sg, const AtNode *node, int pid)</argsstring>
+        <name>AiShaderEvalParamFuncRGBA</name>
+        <param>
+          <type><ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>pid</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_parameval.h" line="114" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__parameval_8h_1ae32e4f4f65360f8f24f337a7fe50c7ed" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref></type>
+        <definition>AtVector AiShaderEvalParamFuncVec</definition>
+        <argsstring>(AtShaderGlobals *sg, const AtNode *node, int pid)</argsstring>
+        <name>AiShaderEvalParamFuncVec</name>
+        <param>
+          <type><ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>pid</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_parameval.h" line="115" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__parameval_8h_1a49735bace44268be5de01d5288cfc317" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_at_point" kindref="compound">AtPoint</ref></type>
+        <definition>AtPoint AiShaderEvalParamFuncPnt</definition>
+        <argsstring>(AtShaderGlobals *sg, const AtNode *node, int pid)</argsstring>
+        <name>AiShaderEvalParamFuncPnt</name>
+        <param>
+          <type><ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>pid</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_parameval.h" line="116" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__parameval_8h_1ad90530bd42570f9a84361c634afd9382" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_at_point2" kindref="compound">AtPoint2</ref></type>
+        <definition>AtPoint2 AiShaderEvalParamFuncPnt2</definition>
+        <argsstring>(AtShaderGlobals *sg, const AtNode *node, int pid)</argsstring>
+        <name>AiShaderEvalParamFuncPnt2</name>
+        <param>
+          <type><ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>pid</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_parameval.h" line="117" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__parameval_8h_1a70a1ef07851e7a8ea71d59971f5a5628" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* AiShaderEvalParamFuncStr</definition>
+        <argsstring>(AtShaderGlobals *sg, const AtNode *node, int pid)</argsstring>
+        <name>AiShaderEvalParamFuncStr</name>
+        <param>
+          <type><ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>pid</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_parameval.h" line="118" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__parameval_8h_1ad38e717739863b9a07124f54a54fd2ff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void *</type>
+        <definition>void* AiShaderEvalParamFuncPtr</definition>
+        <argsstring>(AtShaderGlobals *sg, const AtNode *node, int pid)</argsstring>
+        <name>AiShaderEvalParamFuncPtr</name>
+        <param>
+          <type><ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>pid</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_parameval.h" line="119" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__parameval_8h_1aeecbeb04c8feaeedaebed15e3281f630" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_at_array" kindref="compound">AtArray</ref> *</type>
+        <definition>AtArray* AiShaderEvalParamFuncArray</definition>
+        <argsstring>(AtShaderGlobals *sg, const AtNode *node, int pid)</argsstring>
+        <name>AiShaderEvalParamFuncArray</name>
+        <param>
+          <type><ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>pid</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_parameval.h" line="120" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__parameval_8h_1a13d005d042c529c524280d6e24d63f6c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__ai__matrix_1ga239cea4f70543ed6dae0d0549d28c01c" kindref="member">AtMatrix</ref> *</type>
+        <definition>AtMatrix* AiShaderEvalParamFuncMtx</definition>
+        <argsstring>(AtShaderGlobals *sg, const AtNode *node, int pid)</argsstring>
+        <name>AiShaderEvalParamFuncMtx</name>
+        <param>
+          <type><ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>pid</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_parameval.h" line="121" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ai__shader__parameval_8h_1a0ba71a6d93eff6731ab062f34a4f37e5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int AiShaderEvalParamFuncEnum</definition>
+        <argsstring>(AtShaderGlobals *sg, const AtNode *node, int pid)</argsstring>
+        <name>AiShaderEvalParamFuncEnum</name>
+        <param>
+          <type><ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>pid</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_parameval.h" line="122" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Manual evaluation of shader inputs and their networks </para>    </detaileddescription>
+    <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_parameval.h"/>
+  </compounddef>
+</doxygen>

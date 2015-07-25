@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="struct_at_shader_node_methods" kind="struct" language="C++" prot="public">
+    <compoundname>AtShaderNodeMethods</compoundname>
+    <includes refid="ai__shaders_8h" local="no">ai_shaders.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_at_shader_node_methods_1a1a978729a11f0fbf5f88a416dba53951" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* AtShaderNodeMethods::Evaluate) (AtNode *, AtShaderGlobals *)</definition>
+        <argsstring>)(AtNode *, AtShaderGlobals *)</argsstring>
+        <name>Evaluate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaders.h" line="25" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaders.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Shader Node methods structure </para>    </detaileddescription>
+    <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaders.h" line="24" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shaders.h" bodystart="24" bodyend="26"/>
+    <listofallmembers>
+      <member refid="struct_at_shader_node_methods_1a1a978729a11f0fbf5f88a416dba53951" prot="public" virt="non-virtual"><scope>AtShaderNodeMethods</scope><name>Evaluate</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

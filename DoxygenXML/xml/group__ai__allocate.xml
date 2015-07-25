@@ -1,0 +1,164 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="group__ai__allocate" kind="group">
+    <compoundname>ai_allocate</compoundname>
+    <title>Memory Allocation API</title>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__ai__allocate_1gaf304ec4e91c2881923149a88a63514ee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void *</type>
+        <definition>void* AiMalloc_func</definition>
+        <argsstring>(size_t size, const char *file, int line, const char *func)</argsstring>
+        <name>AiMalloc_func</name>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>file</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>line</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>func</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_allocate.h" line="23" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__allocate_1ga068920df21ef4e5407775650b97cd6f9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void *</type>
+        <definition>void* AiRealloc_func</definition>
+        <argsstring>(void *addr, size_t size, const char *file, int line, const char *func)</argsstring>
+        <name>AiRealloc_func</name>
+        <param>
+          <type>void *</type>
+          <declname>addr</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>file</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>line</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>func</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_allocate.h" line="24" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__allocate_1gaee91d99bf436c09a898f7e332181eabc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiFree_func</definition>
+        <argsstring>(void *addr, const char *file, int line, const char *func)</argsstring>
+        <name>AiFree_func</name>
+        <param>
+          <type>void *</type>
+          <declname>addr</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>file</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>line</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>func</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_allocate.h" line="25" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__allocate_1gac37f35261261f5df449f699667d9a72c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiAddMemUsage</definition>
+        <argsstring>(AtInt64 size, const char *category)</argsstring>
+        <name>AiAddMemUsage</name>
+        <param>
+          <type><ref refid="group__ai__types_1ga94ff728c015fcdf228576b3806184f85" kindref="member">AtInt64</ref></type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>category</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_allocate.h" line="27" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group__ai__allocate_1ga90f40cb89a13d0925f2adb4d2416406e" prot="public" static="no">
+        <name>AiMalloc</name>
+        <param><defname>_size</defname></param>
+        <initializer><ref refid="group__ai__allocate_1gaf304ec4e91c2881923149a88a63514ee" kindref="member">AiMalloc_func</ref>(_size, <ref refid="group__ai__msg_1ga52c8b1089e945e33b2d53de73c31392a" kindref="member">__AI_FILE__</ref>, <ref refid="group__ai__msg_1ga3fdf610d07884ff5735d9a6c7339f821" kindref="member">__AI_LINE__</ref>, <ref refid="group__ai__msg_1ga76853c0849dfd8561ea8461029d611cf" kindref="member">__AI_FUNCTION__</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_allocate.h" line="19" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_allocate.h" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__allocate_1ga7ab5163416cde7beb7da8e6819c76755" prot="public" static="no">
+        <name>AiRealloc</name>
+        <param><defname>_addr</defname></param>
+        <param><defname>_size</defname></param>
+        <initializer><ref refid="group__ai__allocate_1ga068920df21ef4e5407775650b97cd6f9" kindref="member">AiRealloc_func</ref>(_addr, _size, <ref refid="group__ai__msg_1ga52c8b1089e945e33b2d53de73c31392a" kindref="member">__AI_FILE__</ref>, <ref refid="group__ai__msg_1ga3fdf610d07884ff5735d9a6c7339f821" kindref="member">__AI_LINE__</ref>, <ref refid="group__ai__msg_1ga76853c0849dfd8561ea8461029d611cf" kindref="member">__AI_FUNCTION__</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_allocate.h" line="20" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_allocate.h" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__allocate_1ga1386a098338b7c8ccc4ec67f50e8e820" prot="public" static="no">
+        <name>AiFree</name>
+        <param><defname>_addr</defname></param>
+        <initializer><ref refid="group__ai__allocate_1gaee91d99bf436c09a898f7e332181eabc" kindref="member">AiFree_func</ref>(_addr, <ref refid="group__ai__msg_1ga52c8b1089e945e33b2d53de73c31392a" kindref="member">__AI_FILE__</ref>, <ref refid="group__ai__msg_1ga3fdf610d07884ff5735d9a6c7339f821" kindref="member">__AI_LINE__</ref>, <ref refid="group__ai__msg_1ga76853c0849dfd8561ea8461029d611cf" kindref="member">__AI_FUNCTION__</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_allocate.h" line="21" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_allocate.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

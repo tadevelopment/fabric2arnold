@@ -1,0 +1,122 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="struct_at_point_cloud_sample" kind="struct" language="C++" prot="public">
+    <compoundname>AtPointCloudSample</compoundname>
+    <includes refid="ai__shader__sss_8h" local="no">ai_shader_sss.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_at_point_cloud_sample_1ae0915b853a7483a52b026d822c6fc3d7" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_at_point" kindref="compound">AtPoint</ref></type>
+        <definition>AtPoint AtPointCloudSample::pref_position</definition>
+        <argsstring></argsstring>
+        <name>pref_position</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_sss.h" line="43" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_sss.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_point_cloud_sample_1a63e7a195bcc1992e6eb5d126eb7710e0" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_at_point" kindref="compound">AtPoint</ref></type>
+        <definition>AtPoint AtPointCloudSample::world_position</definition>
+        <argsstring></argsstring>
+        <name>world_position</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_sss.h" line="44" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_sss.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_point_cloud_sample_1a9616b057d2d03202f419c1e41678ef83" prot="public" static="no" mutable="no">
+        <type><ref refid="group__ai__vector_1ga5ebd05ce268e7c95e95f8c7f4668c5c2" kindref="member">AtVector</ref></type>
+        <definition>AtVector AtPointCloudSample::normal</definition>
+        <argsstring></argsstring>
+        <name>normal</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_sss.h" line="45" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_sss.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_point_cloud_sample_1ac94ad04196aa92589ac5edae31d5f158" prot="public" static="no" mutable="no">
+        <type><ref refid="group__ai__types_1ga5e008e3afa9393ab65d66796de249df9" kindref="member">AtUInt32</ref></type>
+        <definition>AtUInt32 AtPointCloudSample::face</definition>
+        <argsstring></argsstring>
+        <name>face</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_sss.h" line="46" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_sss.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_point_cloud_sample_1a53edfd61bdcb49ad5fa8acfbd82f6c49" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_at_point2" kindref="compound">AtPoint2</ref></type>
+        <definition>AtPoint2 AtPointCloudSample::uv</definition>
+        <argsstring></argsstring>
+        <name>uv</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_sss.h" line="47" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_sss.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_at_point_cloud_sample_1a12ff49dd7b64b498969496087b88eced" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float AtPointCloudSample::area</definition>
+        <argsstring></argsstring>
+        <name>area</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_sss.h" line="48" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_sss.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="55">
+        <label>AtPointCloudSample</label>
+        <link refid="struct_at_point_cloud_sample"/>
+        <childnode refid="56" relation="usage">
+          <edgelabel>world_position</edgelabel>
+          <edgelabel>pref_position</edgelabel>
+          <edgelabel>normal</edgelabel>
+        </childnode>
+        <childnode refid="57" relation="usage">
+          <edgelabel>uv</edgelabel>
+        </childnode>
+      </node>
+      <node id="56">
+        <label>AtPoint</label>
+        <link refid="struct_at_point"/>
+      </node>
+      <node id="57">
+        <label>AtPoint2</label>
+        <link refid="struct_at_point2"/>
+      </node>
+    </collaborationgraph>
+    <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_sss.h" line="42" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_sss.h" bodystart="41" bodyend="49"/>
+    <listofallmembers>
+      <member refid="struct_at_point_cloud_sample_1a12ff49dd7b64b498969496087b88eced" prot="public" virt="non-virtual"><scope>AtPointCloudSample</scope><name>area</name></member>
+      <member refid="struct_at_point_cloud_sample_1ac94ad04196aa92589ac5edae31d5f158" prot="public" virt="non-virtual"><scope>AtPointCloudSample</scope><name>face</name></member>
+      <member refid="struct_at_point_cloud_sample_1a9616b057d2d03202f419c1e41678ef83" prot="public" virt="non-virtual"><scope>AtPointCloudSample</scope><name>normal</name></member>
+      <member refid="struct_at_point_cloud_sample_1ae0915b853a7483a52b026d822c6fc3d7" prot="public" virt="non-virtual"><scope>AtPointCloudSample</scope><name>pref_position</name></member>
+      <member refid="struct_at_point_cloud_sample_1a53edfd61bdcb49ad5fa8acfbd82f6c49" prot="public" virt="non-virtual"><scope>AtPointCloudSample</scope><name>uv</name></member>
+      <member refid="struct_at_point_cloud_sample_1a63e7a195bcc1992e6eb5d126eb7710e0" prot="public" virt="non-virtual"><scope>AtPointCloudSample</scope><name>world_position</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

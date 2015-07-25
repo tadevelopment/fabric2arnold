@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="group__ai__shader__sample" kind="group">
+    <compoundname>ai_shader_sample</compoundname>
+    <title>Screen Sample</title>
+    <innerclass refid="struct_at_scr_sample" prot="public">AtScrSample</innerclass>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group__ai__shader__sample_1ga4dbcb14ac88d5d6ece1935d1a201696f" prot="public" static="no">
+        <type>struct <ref refid="struct_at_scr_sample" kindref="compound">AtScrSample</ref></type>
+        <definition>typedef struct AtScrSample  AtScrSample</definition>
+        <argsstring></argsstring>
+        <name>AtScrSample</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Used to hold the result of <ref refid="group__ai__ray_1ga056513d98b80c330d28cd00aa13d719d" kindref="member">AiTrace()</ref> calls </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_sample.h" line="31" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

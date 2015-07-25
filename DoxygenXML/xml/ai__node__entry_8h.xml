@@ -1,0 +1,804 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="ai__node__entry_8h" kind="file" language="C++">
+    <compoundname>ai_node_entry.h</compoundname>
+    <includes refid="ai__params_8h" local="yes">ai_params.h</includes>
+    <includes refid="ai__string_8h" local="yes">ai_string.h</includes>
+    <includedby refid="ai__nodes_8h" local="yes">ai_nodes.h</includedby>
+    <includedby refid="ai__metadata_8h" local="yes">ai_metadata.h</includedby>
+    <includedby refid="ai__dotass_8h" local="yes">ai_dotass.h</includedby>
+    <incdepgraph>
+      <node id="403">
+        <label>ai_constants.h</label>
+        <link refid="ai__constants_8h"/>
+      </node>
+      <node id="402">
+        <label>ai_api.h</label>
+        <link refid="ai__api_8h"/>
+      </node>
+      <node id="404">
+        <label>cmath</label>
+      </node>
+      <node id="407">
+        <label>ai_vector.h</label>
+        <link refid="ai__vector_8h"/>
+        <childnode refid="403" relation="include">
+        </childnode>
+        <childnode refid="401" relation="include">
+        </childnode>
+        <childnode refid="402" relation="include">
+        </childnode>
+        <childnode refid="408" relation="include">
+        </childnode>
+      </node>
+      <node id="397">
+        <label>ai_node_entry.h</label>
+        <link refid="ai_node_entry.h"/>
+        <childnode refid="398" relation="include">
+        </childnode>
+        <childnode refid="410" relation="include">
+        </childnode>
+      </node>
+      <node id="401">
+        <label>ai_types.h</label>
+        <link refid="ai__types_8h"/>
+        <childnode refid="402" relation="include">
+        </childnode>
+        <childnode refid="403" relation="include">
+        </childnode>
+        <childnode refid="404" relation="include">
+        </childnode>
+        <childnode refid="405" relation="include">
+        </childnode>
+      </node>
+      <node id="399">
+        <label>ai_array.h</label>
+        <link refid="ai__array_8h"/>
+        <childnode refid="400" relation="include">
+        </childnode>
+        <childnode refid="406" relation="include">
+        </childnode>
+        <childnode refid="407" relation="include">
+        </childnode>
+        <childnode refid="401" relation="include">
+        </childnode>
+        <childnode refid="402" relation="include">
+        </childnode>
+      </node>
+      <node id="398">
+        <label>ai_params.h</label>
+        <link refid="ai__params_8h"/>
+        <childnode refid="399" relation="include">
+        </childnode>
+        <childnode refid="400" relation="include">
+        </childnode>
+        <childnode refid="409" relation="include">
+        </childnode>
+        <childnode refid="406" relation="include">
+        </childnode>
+        <childnode refid="407" relation="include">
+        </childnode>
+        <childnode refid="401" relation="include">
+        </childnode>
+        <childnode refid="402" relation="include">
+        </childnode>
+      </node>
+      <node id="400">
+        <label>ai_color.h</label>
+        <link refid="ai__color_8h"/>
+        <childnode refid="401" relation="include">
+        </childnode>
+        <childnode refid="403" relation="include">
+        </childnode>
+        <childnode refid="402" relation="include">
+        </childnode>
+      </node>
+      <node id="408">
+        <label>math.h</label>
+      </node>
+      <node id="405">
+        <label>cstdlib</label>
+      </node>
+      <node id="406">
+        <label>ai_matrix.h</label>
+        <link refid="ai__matrix_8h"/>
+        <childnode refid="407" relation="include">
+        </childnode>
+        <childnode refid="402" relation="include">
+        </childnode>
+      </node>
+      <node id="410">
+        <label>ai_string.h</label>
+        <link refid="ai__string_8h"/>
+        <childnode refid="402" relation="include">
+        </childnode>
+        <childnode refid="401" relation="include">
+        </childnode>
+      </node>
+      <node id="409">
+        <label>ai_enum.h</label>
+        <link refid="ai__enum_8h"/>
+        <childnode refid="402" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="415">
+        <label>ai_filters.h</label>
+        <link refid="ai__filters_8h"/>
+        <childnode refid="414" relation="include">
+        </childnode>
+      </node>
+      <node id="420">
+        <label>ai_metadata.h</label>
+        <link refid="ai__metadata_8h"/>
+        <childnode refid="414" relation="include">
+        </childnode>
+      </node>
+      <node id="411">
+        <label>ai_node_entry.h</label>
+        <link refid="ai_node_entry.h"/>
+        <childnode refid="412" relation="include">
+        </childnode>
+        <childnode refid="420" relation="include">
+        </childnode>
+        <childnode refid="421" relation="include">
+        </childnode>
+      </node>
+      <node id="412">
+        <label>ai_nodes.h</label>
+        <link refid="ai__nodes_8h"/>
+        <childnode refid="413" relation="include">
+        </childnode>
+        <childnode refid="415" relation="include">
+        </childnode>
+        <childnode refid="416" relation="include">
+        </childnode>
+        <childnode refid="417" relation="include">
+        </childnode>
+        <childnode refid="414" relation="include">
+        </childnode>
+        <childnode refid="418" relation="include">
+        </childnode>
+        <childnode refid="419" relation="include">
+        </childnode>
+      </node>
+      <node id="421">
+        <label>ai_dotass.h</label>
+        <link refid="ai__dotass_8h"/>
+        <childnode refid="414" relation="include">
+        </childnode>
+      </node>
+      <node id="413">
+        <label>ai_drivers.h</label>
+        <link refid="ai__drivers_8h"/>
+        <childnode refid="414" relation="include">
+        </childnode>
+      </node>
+      <node id="416">
+        <label>ai_cameras.h</label>
+        <link refid="ai__cameras_8h"/>
+        <childnode refid="414" relation="include">
+        </childnode>
+      </node>
+      <node id="419">
+        <label>ai_shader_userdef.h</label>
+        <link refid="ai__shader__userdef_8h"/>
+        <childnode refid="414" relation="include">
+        </childnode>
+      </node>
+      <node id="417">
+        <label>ai_shaders.h</label>
+        <link refid="ai__shaders_8h"/>
+        <childnode refid="414" relation="include">
+        </childnode>
+      </node>
+      <node id="418">
+        <label>ai_shader_lights.h</label>
+        <link refid="ai__shader__lights_8h"/>
+        <childnode refid="414" relation="include">
+        </childnode>
+      </node>
+      <node id="414">
+        <label>ai.h</label>
+        <link refid="ai_8h"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="struct_at_common_methods" prot="public">AtCommonMethods</innerclass>
+    <innerclass refid="struct_at_node_methods" prot="public">AtNodeMethods</innerclass>
+    <innerclass refid="struct_at_meta_data_entry" prot="public">AtMetaDataEntry</innerclass>
+      <sectiondef kind="user-defined">
+      <header>Node Types</header>
+      <memberdef kind="define" id="group__ai__node__entry_1ga2ca2a3cc668472f3d8b2a745bb28099b" prot="public" static="no">
+        <name>AI_NODE_UNDEFINED</name>
+        <initializer>0x0000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Undefined type </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_node_entry.h" line="30" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_node_entry.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__node__entry_1gabb7eae92aa44ac7b928e50b1f4e0fcb6" prot="public" static="no">
+        <name>AI_NODE_OPTIONS</name>
+        <initializer>0x0001</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Options node (following the &quot;singleton&quot; pattern, there is only one options node) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_node_entry.h" line="31" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_node_entry.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__node__entry_1ga857f664c28910030841a774bf1898d0a" prot="public" static="no">
+        <name>AI_NODE_CAMERA</name>
+        <initializer>0x0002</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Camera nodes (<computeroutput>persp_camera</computeroutput>, <computeroutput>fisheye_camera</computeroutput>, etc) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_node_entry.h" line="32" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_node_entry.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__node__entry_1gaf09bae1a8d33f8394318cd7960984b82" prot="public" static="no">
+        <name>AI_NODE_LIGHT</name>
+        <initializer>0x0004</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Light source nodes (<computeroutput>spot_light</computeroutput>, etc) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_node_entry.h" line="33" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_node_entry.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__node__entry_1ga5da98c230027a66005c322e0b72a94e6" prot="public" static="no">
+        <name>AI_NODE_SHAPE</name>
+        <initializer>0x0008</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Geometry nodes (<computeroutput>sphere</computeroutput>, <computeroutput>polymesh</computeroutput>, etc) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_node_entry.h" line="34" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_node_entry.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__node__entry_1ga76527e5c085e5bdda7de726f8f3cba9e" prot="public" static="no">
+        <name>AI_NODE_SHADER</name>
+        <initializer>0x0010</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Shader nodes (<computeroutput>lambert</computeroutput>, etc) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_node_entry.h" line="35" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_node_entry.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__node__entry_1gaaeb2a30fa9c732a4d5a04b05b248f6c8" prot="public" static="no">
+        <name>AI_NODE_OVERRIDE</name>
+        <initializer>0x0020</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>EXPERIMENTAL: override nodes support &quot;delayed parameter overrides&quot; for <computeroutput>procedural</computeroutput> nodes </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_node_entry.h" line="36" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_node_entry.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__node__entry_1ga97634759e5d4dd48e2de3b17016c4ef9" prot="public" static="no">
+        <name>AI_NODE_DRIVER</name>
+        <initializer>0x0040</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Output driver nodes (<computeroutput>driver_tiff</computeroutput>, etc) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_node_entry.h" line="37" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_node_entry.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__node__entry_1gaa0c0e7ae078b369318f1a5e93805d7d3" prot="public" static="no">
+        <name>AI_NODE_FILTER</name>
+        <initializer>0x0080</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Pixel sample filter nodes (<computeroutput>box_filter</computeroutput>, etc </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_node_entry.h" line="38" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_node_entry.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__node__entry_1gaaf029c124baf82592ee04a8a303be9d8" prot="public" static="no">
+        <name>AI_NODE_ALL</name>
+        <initializer>0xFFFF</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Bitmask including all node types, used by <ref refid="group__ai__dotass_1gaaf6a399593d4bab06b93d507217dc28e" kindref="member">AiASSWrite()</ref> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_node_entry.h" line="39" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_node_entry.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>AtNodeEntry Methods</header>
+      <memberdef kind="function" id="group__ai__node__entry_1gad0e9e06ae908d7eec03a345c2464a9ec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DEPRECATED const <ref refid="struct_at_node_entry" kindref="compound">AtNodeEntry</ref> *</type>
+        <definition>DEPRECATED const AtNodeEntry* AiNodeEntryLookUp</definition>
+        <argsstring>(const char *name)</argsstring>
+        <name>AiNodeEntryLookUp</name>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_node_entry.h" line="86" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__node__entry_1gadf54509b91148b4b4a6e8d62efc3e3b5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="struct_at_node_entry" kindref="compound">AtNodeEntry</ref> *</type>
+        <definition>const AtNodeEntry* AiNodeEntryLookUpAtString</definition>
+        <argsstring>(const AtString name)</argsstring>
+        <name>AiNodeEntryLookUpAtString</name>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_node_entry.h" line="87" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__node__entry_1ga665e2c3463ca7ccd09c1caa84a43460b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="struct_at_node_entry" kindref="compound">AtNodeEntry</ref> *</type>
+        <definition>const AtNodeEntry* AiNodeEntryLookUp</definition>
+        <argsstring>(const AtString name)</argsstring>
+        <name>AiNodeEntryLookUp</name>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_node_entry.h" line="88" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_node_entry.h" bodystart="88" bodyend="88"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__node__entry_1gae8a238487acd94dac83841c39f786996" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* AiNodeEntryGetName</definition>
+        <argsstring>(const AtNodeEntry *nentry)</argsstring>
+        <name>AiNodeEntryGetName</name>
+        <param>
+          <type>const <ref refid="struct_at_node_entry" kindref="compound">AtNodeEntry</ref> *</type>
+          <declname>nentry</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_node_entry.h" line="90" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__node__entry_1ga584d7a873964227b14c5278212b5ecec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int AiNodeEntryGetType</definition>
+        <argsstring>(const AtNodeEntry *nentry)</argsstring>
+        <name>AiNodeEntryGetType</name>
+        <param>
+          <type>const <ref refid="struct_at_node_entry" kindref="compound">AtNodeEntry</ref> *</type>
+          <declname>nentry</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_node_entry.h" line="91" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__node__entry_1ga09316958923dea401105ab02a4360bf7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* AiNodeEntryGetTypeName</definition>
+        <argsstring>(const AtNodeEntry *nentry)</argsstring>
+        <name>AiNodeEntryGetTypeName</name>
+        <param>
+          <type>const <ref refid="struct_at_node_entry" kindref="compound">AtNodeEntry</ref> *</type>
+          <declname>nentry</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_node_entry.h" line="92" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__node__entry_1gafefe7c9bbea7f20c1941be3e6686f98d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int AiNodeEntryGetOutputType</definition>
+        <argsstring>(const AtNodeEntry *nentry)</argsstring>
+        <name>AiNodeEntryGetOutputType</name>
+        <param>
+          <type>const <ref refid="struct_at_node_entry" kindref="compound">AtNodeEntry</ref> *</type>
+          <declname>nentry</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_node_entry.h" line="93" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__node__entry_1ga1135643402f011e5181954ea6525d777" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* AiNodeEntryGetFilename</definition>
+        <argsstring>(const AtNodeEntry *nentry)</argsstring>
+        <name>AiNodeEntryGetFilename</name>
+        <param>
+          <type>const <ref refid="struct_at_node_entry" kindref="compound">AtNodeEntry</ref> *</type>
+          <declname>nentry</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_node_entry.h" line="94" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__node__entry_1ga6d24f13fafdec61bf5dc452381b86ad5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* AiNodeEntryGetVersion</definition>
+        <argsstring>(const AtNodeEntry *nentry)</argsstring>
+        <name>AiNodeEntryGetVersion</name>
+        <param>
+          <type>const <ref refid="struct_at_node_entry" kindref="compound">AtNodeEntry</ref> *</type>
+          <declname>nentry</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_node_entry.h" line="95" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__node__entry_1gafcc1efd4a13f8a1d06605cdc4f4e3f6b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int AiNodeEntryGetCount</definition>
+        <argsstring>(const AtNodeEntry *nentry)</argsstring>
+        <name>AiNodeEntryGetCount</name>
+        <param>
+          <type>const <ref refid="struct_at_node_entry" kindref="compound">AtNodeEntry</ref> *</type>
+          <declname>nentry</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_node_entry.h" line="96" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__node__entry_1gad016a02c0f9f9dd375a97227907ead50" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int AiNodeEntryGetNumParams</definition>
+        <argsstring>(const AtNodeEntry *nentry)</argsstring>
+        <name>AiNodeEntryGetNumParams</name>
+        <param>
+          <type>const <ref refid="struct_at_node_entry" kindref="compound">AtNodeEntry</ref> *</type>
+          <declname>nentry</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_node_entry.h" line="97" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__node__entry_1ga1546720f41db31c8d620be6209c6841d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const AtParamEntry *</type>
+        <definition>const AtParamEntry* AiNodeEntryGetParameter</definition>
+        <argsstring>(const AtNodeEntry *nentry, int i)</argsstring>
+        <name>AiNodeEntryGetParameter</name>
+        <param>
+          <type>const <ref refid="struct_at_node_entry" kindref="compound">AtNodeEntry</ref> *</type>
+          <declname>nentry</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_node_entry.h" line="98" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__node__entry_1gabbf58dd647a6395afc96796ff1b4cc6c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DEPRECATED const AtParamEntry *</type>
+        <definition>DEPRECATED const AtParamEntry* AiNodeEntryLookUpParameter</definition>
+        <argsstring>(const AtNodeEntry *nentry, const char *param)</argsstring>
+        <name>AiNodeEntryLookUpParameter</name>
+        <param>
+          <type>const <ref refid="struct_at_node_entry" kindref="compound">AtNodeEntry</ref> *</type>
+          <declname>nentry</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>param</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_node_entry.h" line="100" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__node__entry_1ga0bc341bf92e898a62d4d2493fdc24cc3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const AtParamEntry *</type>
+        <definition>const AtParamEntry* AiNodeEntryLookUpParameterAtString</definition>
+        <argsstring>(const AtNodeEntry *nentry, const AtString param)</argsstring>
+        <name>AiNodeEntryLookUpParameterAtString</name>
+        <param>
+          <type>const <ref refid="struct_at_node_entry" kindref="compound">AtNodeEntry</ref> *</type>
+          <declname>nentry</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>param</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_node_entry.h" line="101" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__node__entry_1ga0f1cd5138704ba7a30f12518e342d1c1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>const AtParamEntry *</type>
+        <definition>const AtParamEntry* AiNodeEntryLookUpParameter</definition>
+        <argsstring>(const AtNodeEntry *nentry, const AtString param)</argsstring>
+        <name>AiNodeEntryLookUpParameter</name>
+        <param>
+          <type>const <ref refid="struct_at_node_entry" kindref="compound">AtNodeEntry</ref> *</type>
+          <declname>nentry</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_at_string" kindref="compound">AtString</ref></type>
+          <declname>param</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_node_entry.h" line="102" column="1" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_node_entry.h" bodystart="102" bodyend="102"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__node__entry_1gaa48ce16f12b31a5e8fd03c8cac3c5895" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>AtParamIterator *</type>
+        <definition>AtParamIterator* AiNodeEntryGetParamIterator</definition>
+        <argsstring>(const AtNodeEntry *nentry)</argsstring>
+        <name>AiNodeEntryGetParamIterator</name>
+        <param>
+          <type>const <ref refid="struct_at_node_entry" kindref="compound">AtNodeEntry</ref> *</type>
+          <declname>nentry</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_node_entry.h" line="104" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__node__entry_1gab82238ac95ad6ac0f06c47b9ebd3139b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>AtMetaDataIterator *</type>
+        <definition>AtMetaDataIterator* AiNodeEntryGetMetaDataIterator</definition>
+        <argsstring>(const AtNodeEntry *nentry, const char *param=NULL)</argsstring>
+        <name>AiNodeEntryGetMetaDataIterator</name>
+        <param>
+          <type>const <ref refid="struct_at_node_entry" kindref="compound">AtNodeEntry</ref> *</type>
+          <declname>nentry</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>param</declname>
+          <defval><ref refid="group__ai__types_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_node_entry.h" line="105" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__node__entry_1ga22978f9ac16bcea2514c31838c877200" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiNodeEntryInstall</definition>
+        <argsstring>(int type, AtByte output_type, const char *name, const char *filename, AtNodeMethods *methods, const char *version)</argsstring>
+        <name>AiNodeEntryInstall</name>
+        <param>
+          <type>int</type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type><ref refid="group__ai__types_1ga41f7f394ad3ef67901cce4d05bdabf89" kindref="member">AtByte</ref></type>
+          <declname>output_type</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>filename</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_at_node_methods" kindref="compound">AtNodeMethods</ref> *</type>
+          <declname>methods</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>version</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_node_entry.h" line="106" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__node__entry_1gac29af647f7ce056b12e28016ad5fe195" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiNodeEntryUninstall</definition>
+        <argsstring>(const char *name)</argsstring>
+        <name>AiNodeEntryUninstall</name>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_node_entry.h" line="107" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>AtParamIterator Methods</header>
+      <memberdef kind="function" id="group__ai__node__entry_1ga831245d5794f48d1f9f2e3fd09480a56" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiParamIteratorDestroy</definition>
+        <argsstring>(AtParamIterator *iter)</argsstring>
+        <name>AiParamIteratorDestroy</name>
+        <param>
+          <type>AtParamIterator *</type>
+          <declname>iter</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_node_entry.h" line="114" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__node__entry_1gaafb203cdf98241a507a902096494b816" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const AtParamEntry *</type>
+        <definition>const AtParamEntry* AiParamIteratorGetNext</definition>
+        <argsstring>(AtParamIterator *iter)</argsstring>
+        <name>AiParamIteratorGetNext</name>
+        <param>
+          <type>AtParamIterator *</type>
+          <declname>iter</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_node_entry.h" line="115" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__node__entry_1gad7cc20215e861610c2fb5ee293e4e47f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiParamIteratorFinished</definition>
+        <argsstring>(const AtParamIterator *iter)</argsstring>
+        <name>AiParamIteratorFinished</name>
+        <param>
+          <type>const AtParamIterator *</type>
+          <declname>iter</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_node_entry.h" line="116" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>AtMetaDataIterator Methods</header>
+      <memberdef kind="function" id="group__ai__node__entry_1ga7bc6877ef70535e5c294bedd98e32693" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiMetaDataIteratorDestroy</definition>
+        <argsstring>(AtMetaDataIterator *iter)</argsstring>
+        <name>AiMetaDataIteratorDestroy</name>
+        <param>
+          <type>AtMetaDataIterator *</type>
+          <declname>iter</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_node_entry.h" line="123" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__node__entry_1ga59bb5f4a2e8e58252626a5c5d65d00a9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="struct_at_meta_data_entry" kindref="compound">AtMetaDataEntry</ref> *</type>
+        <definition>const AtMetaDataEntry* AiMetaDataIteratorGetNext</definition>
+        <argsstring>(AtMetaDataIterator *iter)</argsstring>
+        <name>AiMetaDataIteratorGetNext</name>
+        <param>
+          <type>AtMetaDataIterator *</type>
+          <declname>iter</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_node_entry.h" line="124" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__node__entry_1ga9dcc3fd39aff0568bf23a61538a1bb40" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiMetaDataIteratorFinished</definition>
+        <argsstring>(const AtMetaDataIterator *iter)</argsstring>
+        <name>AiMetaDataIteratorFinished</name>
+        <param>
+          <type>const AtMetaDataIterator *</type>
+          <declname>iter</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_node_entry.h" line="125" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><ref refid="struct_at_node_entry" kindref="compound">AtNodeEntry</ref> type and methods </para>    </detaileddescription>
+    <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_node_entry.h"/>
+  </compounddef>
+</doxygen>

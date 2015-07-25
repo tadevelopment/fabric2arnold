@@ -1,0 +1,260 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="ai__license_8h" kind="file" language="C++">
+    <compoundname>ai_license.h</compoundname>
+    <includes refid="ai__api_8h" local="yes">ai_api.h</includes>
+    <includedby refid="ai_8h" local="yes">ai.h</includedby>
+    <incdepgraph>
+      <node id="336">
+        <label>ai_license.h</label>
+        <link refid="ai_license.h"/>
+        <childnode refid="337" relation="include">
+        </childnode>
+      </node>
+      <node id="337">
+        <label>ai_api.h</label>
+        <link refid="ai__api_8h"/>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="338">
+        <label>ai_license.h</label>
+        <link refid="ai_license.h"/>
+        <childnode refid="339" relation="include">
+        </childnode>
+      </node>
+      <node id="339">
+        <label>ai.h</label>
+        <link refid="ai_8h"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="struct_at_license_info" prot="public">AtLicenseInfo</innerclass>
+      <sectiondef kind="user-defined">
+      <header>Error Codes</header>
+      <memberdef kind="define" id="group__ai__license_1ga5109abcff0bf1b53e57dc8783e8174ea" prot="public" static="no">
+        <name>AI_LIC_SUCCESS</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>no error </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_license.h" line="59" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_license.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__license_1ga1f7cd7f00213c897339a66888e92a7bc" prot="public" static="no">
+        <name>AI_LIC_ERROR_CANTCONNECT</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>can&apos;t connect to any RLM server </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_license.h" line="60" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_license.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__license_1ga8e9144bffb40de6eaf7b01a5af4fd718" prot="public" static="no">
+        <name>AI_LIC_ERROR_INIT</name>
+        <initializer>2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>error on initialization </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_license.h" line="61" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_license.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__license_1gaec335b7599b20999dbb4bb5a73f89a93" prot="public" static="no">
+        <name>AI_LIC_ERROR_NOTFOUND</name>
+        <initializer>3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>no licenses found (expired or not loaded) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_license.h" line="62" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_license.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__license_1ga5b715f52c4c7bb2c87e91a9414a68801" prot="public" static="no">
+        <name>AI_LIC_ERROR_NOTAVAILABLE</name>
+        <initializer>4</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>no licenses available (all in use) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_license.h" line="63" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_license.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__ai__license_1ga0fec30f2881ef0ef0f461f9a8a4d3460" prot="public" static="no">
+        <name>AI_LIC_ERROR</name>
+        <initializer>-1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>generic license error </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_license.h" line="64" column="9" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_license.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group__ai__license_1gac956117a90023ec0971b8f9fce9dec75" prot="public" static="no">
+        <name>HOST_NAME_MAX</name>
+        <initializer>64</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_license.h" line="22" column="10" bodyfile="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_license.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group__ai__license_1gad8709d68ab9fa48a57279e305ecb88b3" prot="public" static="no">
+        <type>struct <ref refid="struct_at_license_info" kindref="compound">AtLicenseInfo</ref></type>
+        <definition>typedef struct AtLicenseInfo  AtLicenseInfo</definition>
+        <argsstring></argsstring>
+        <name>AtLicenseInfo</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>License info structure </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_license.h" line="54" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__ai__license_1gab0b06ffdc40fe267d7bf318574e79b88" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiLicenseSetServer</definition>
+        <argsstring>(const char *host, unsigned int port)</argsstring>
+        <name>AiLicenseSetServer</name>
+        <param>
+          <type>const char *</type>
+          <declname>host</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>port</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_license.h" line="67" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__license_1ga81967c413355c1226d5a210952211191" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiLicenseGetServer</definition>
+        <argsstring>(char *host, unsigned int &amp;port)</argsstring>
+        <name>AiLicenseGetServer</name>
+        <param>
+          <type>char *</type>
+          <declname>host</declname>
+        </param>
+        <param>
+          <type>unsigned int &amp;</type>
+          <declname>port</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_license.h" line="68" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__license_1ga4d6265ef473025521972c137119505b5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiLicenseSetAttempts</definition>
+        <argsstring>(int attempts)</argsstring>
+        <name>AiLicenseSetAttempts</name>
+        <param>
+          <type>int</type>
+          <declname>attempts</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_license.h" line="69" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__license_1ga654557caadcce5017be2ff0fd707f4b7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int AiLicenseGetAttempts</definition>
+        <argsstring>()</argsstring>
+        <name>AiLicenseGetAttempts</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_license.h" line="70" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__license_1gaa1037b9de49728d4dc8ab3416c216ba2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiLicenseSetAttemptDelay</definition>
+        <argsstring>(int msecs)</argsstring>
+        <name>AiLicenseSetAttemptDelay</name>
+        <param>
+          <type>int</type>
+          <declname>msecs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_license.h" line="71" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__license_1gab54d4313f6473a6b9c724b94dd2f13d2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int AiLicenseGetAttemptDelay</definition>
+        <argsstring>()</argsstring>
+        <name>AiLicenseGetAttemptDelay</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_license.h" line="72" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__license_1ga58bb3570ace2903e50c83306ea02db9e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int AiLicenseGetInfo</definition>
+        <argsstring>(AtLicenseInfo *&amp;licenses, unsigned int &amp;n)</argsstring>
+        <name>AiLicenseGetInfo</name>
+        <param>
+          <type><ref refid="struct_at_license_info" kindref="compound">AtLicenseInfo</ref> *&amp;</type>
+          <declname>licenses</declname>
+        </param>
+        <param>
+          <type>unsigned int &amp;</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_license.h" line="73" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Utility functions for the configuration of the licensing system </para>    </detaileddescription>
+    <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_license.h"/>
+  </compounddef>
+</doxygen>

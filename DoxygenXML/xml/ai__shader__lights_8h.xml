@@ -1,0 +1,424 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="ai__shader__lights_8h" kind="file" language="C++">
+    <compoundname>ai_shader_lights.h</compoundname>
+    <includes refid="ai__nodes_8h" local="yes">ai_nodes.h</includes>
+    <includes refid="ai__shaderglobals_8h" local="yes">ai_shaderglobals.h</includes>
+    <includes refid="ai__color_8h" local="yes">ai_color.h</includes>
+    <includes refid="ai__vector_8h" local="yes">ai_vector.h</includes>
+    <includes refid="ai__ray_8h" local="yes">ai_ray.h</includes>
+    <includedby refid="ai_8h" local="yes">ai.h</includedby>
+    <incdepgraph>
+      <node id="563">
+        <label>ai_constants.h</label>
+        <link refid="ai__constants_8h"/>
+      </node>
+      <node id="572">
+        <label>ai_ray.h</label>
+        <link refid="ai__ray_8h"/>
+        <childnode refid="573" relation="include">
+        </childnode>
+        <childnode refid="566" relation="include">
+        </childnode>
+        <childnode refid="567" relation="include">
+        </childnode>
+        <childnode refid="570" relation="include">
+        </childnode>
+        <childnode refid="561" relation="include">
+        </childnode>
+      </node>
+      <node id="562">
+        <label>ai_api.h</label>
+        <link refid="ai__api_8h"/>
+      </node>
+      <node id="564">
+        <label>cmath</label>
+      </node>
+      <node id="573">
+        <label>ai_shader_sample.h</label>
+        <link refid="ai__shader__sample_8h"/>
+        <childnode refid="560" relation="include">
+        </childnode>
+        <childnode refid="567" relation="include">
+        </childnode>
+      </node>
+      <node id="567">
+        <label>ai_vector.h</label>
+        <link refid="ai__vector_8h"/>
+        <childnode refid="563" relation="include">
+        </childnode>
+        <childnode refid="561" relation="include">
+        </childnode>
+        <childnode refid="562" relation="include">
+        </childnode>
+        <childnode refid="568" relation="include">
+        </childnode>
+      </node>
+      <node id="557">
+        <label>ai_node_entry.h</label>
+        <link refid="ai__node__entry_8h"/>
+        <childnode refid="558" relation="include">
+        </childnode>
+        <childnode refid="570" relation="include">
+        </childnode>
+      </node>
+      <node id="556">
+        <label>ai_nodes.h</label>
+        <link refid="ai__nodes_8h"/>
+        <childnode refid="557" relation="include">
+        </childnode>
+        <childnode refid="558" relation="include">
+        </childnode>
+        <childnode refid="562" relation="include">
+        </childnode>
+        <childnode refid="570" relation="include">
+        </childnode>
+      </node>
+      <node id="561">
+        <label>ai_types.h</label>
+        <link refid="ai__types_8h"/>
+        <childnode refid="562" relation="include">
+        </childnode>
+        <childnode refid="563" relation="include">
+        </childnode>
+        <childnode refid="564" relation="include">
+        </childnode>
+        <childnode refid="565" relation="include">
+        </childnode>
+      </node>
+      <node id="559">
+        <label>ai_array.h</label>
+        <link refid="ai__array_8h"/>
+        <childnode refid="560" relation="include">
+        </childnode>
+        <childnode refid="566" relation="include">
+        </childnode>
+        <childnode refid="567" relation="include">
+        </childnode>
+        <childnode refid="561" relation="include">
+        </childnode>
+        <childnode refid="562" relation="include">
+        </childnode>
+      </node>
+      <node id="558">
+        <label>ai_params.h</label>
+        <link refid="ai__params_8h"/>
+        <childnode refid="559" relation="include">
+        </childnode>
+        <childnode refid="560" relation="include">
+        </childnode>
+        <childnode refid="569" relation="include">
+        </childnode>
+        <childnode refid="566" relation="include">
+        </childnode>
+        <childnode refid="567" relation="include">
+        </childnode>
+        <childnode refid="561" relation="include">
+        </childnode>
+        <childnode refid="562" relation="include">
+        </childnode>
+      </node>
+      <node id="571">
+        <label>ai_shaderglobals.h</label>
+        <link refid="ai__shaderglobals_8h"/>
+        <childnode refid="558" relation="include">
+        </childnode>
+        <childnode refid="559" relation="include">
+        </childnode>
+        <childnode refid="560" relation="include">
+        </childnode>
+        <childnode refid="566" relation="include">
+        </childnode>
+        <childnode refid="567" relation="include">
+        </childnode>
+        <childnode refid="570" relation="include">
+        </childnode>
+        <childnode refid="561" relation="include">
+        </childnode>
+        <childnode refid="562" relation="include">
+        </childnode>
+      </node>
+      <node id="560">
+        <label>ai_color.h</label>
+        <link refid="ai__color_8h"/>
+        <childnode refid="561" relation="include">
+        </childnode>
+        <childnode refid="563" relation="include">
+        </childnode>
+        <childnode refid="562" relation="include">
+        </childnode>
+      </node>
+      <node id="568">
+        <label>math.h</label>
+      </node>
+      <node id="565">
+        <label>cstdlib</label>
+      </node>
+      <node id="566">
+        <label>ai_matrix.h</label>
+        <link refid="ai__matrix_8h"/>
+        <childnode refid="567" relation="include">
+        </childnode>
+        <childnode refid="562" relation="include">
+        </childnode>
+      </node>
+      <node id="555">
+        <label>ai_shader_lights.h</label>
+        <link refid="ai_shader_lights.h"/>
+        <childnode refid="556" relation="include">
+        </childnode>
+        <childnode refid="571" relation="include">
+        </childnode>
+        <childnode refid="560" relation="include">
+        </childnode>
+        <childnode refid="567" relation="include">
+        </childnode>
+        <childnode refid="572" relation="include">
+        </childnode>
+      </node>
+      <node id="570">
+        <label>ai_string.h</label>
+        <link refid="ai__string_8h"/>
+        <childnode refid="562" relation="include">
+        </childnode>
+        <childnode refid="561" relation="include">
+        </childnode>
+      </node>
+      <node id="569">
+        <label>ai_enum.h</label>
+        <link refid="ai__enum_8h"/>
+        <childnode refid="562" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="574">
+        <label>ai_shader_lights.h</label>
+        <link refid="ai_shader_lights.h"/>
+        <childnode refid="575" relation="include">
+        </childnode>
+      </node>
+      <node id="575">
+        <label>ai.h</label>
+        <link refid="ai_8h"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="user-defined">
+      <header>Light Loop Methods</header>
+      <description><para>This is the recommended API for looping over light source samples. </para></description>
+      <memberdef kind="function" id="group__ai__shader__lights_1ga8703deb2973da52c9ca4f9716778163b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiLightsPrepare</definition>
+        <argsstring>(AtShaderGlobals *sg)</argsstring>
+        <name>AiLightsPrepare</name>
+        <param>
+          <type><ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_lights.h" line="27" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__lights_1ga89ddeba5e013af3ff9b2ed7ea1fcc225" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiLightsGetSample</definition>
+        <argsstring>(AtShaderGlobals *sg)</argsstring>
+        <name>AiLightsGetSample</name>
+        <param>
+          <type><ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_lights.h" line="28" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__lights_1ga672ef825950cc14b625136c1e4a5a1de" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_at_r_g_b" kindref="compound">AtRGB</ref></type>
+        <definition>AtRGB AiLightsGetShadowMatte</definition>
+        <argsstring>(AtShaderGlobals *sg)</argsstring>
+        <name>AiLightsGetShadowMatte</name>
+        <param>
+          <type><ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_lights.h" line="29" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__lights_1gaaa74dceb9040b977e4bfafe547463a81" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AiLightsResetCache</definition>
+        <argsstring>(AtShaderGlobals *sg)</argsstring>
+        <name>AiLightsResetCache</name>
+        <param>
+          <type><ref refid="struct_at_shader_globals" kindref="compound">AtShaderGlobals</ref> *</type>
+          <declname>sg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_lights.h" line="30" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Light Getter Methods</header>
+      <description><para>These getters are to avoid slow AiNodeGet*() calls to access light parameters. Only the most common attributes are exposed for now. </para></description>
+      <memberdef kind="function" id="group__ai__shader__lights_1gaf98342c5a86f167c9df70b0abb2fdcef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_at_r_g_b" kindref="compound">AtRGB</ref></type>
+        <definition>AtRGB AiLightGetColor</definition>
+        <argsstring>(const AtNode *node)</argsstring>
+        <name>AiLightGetColor</name>
+        <param>
+          <type>const <ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_lights.h" line="39" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__lights_1ga878a88bfdc2d4841adbf0c3514b6f57f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float AiLightGetIntensity</definition>
+        <argsstring>(const AtNode *node)</argsstring>
+        <name>AiLightGetIntensity</name>
+        <param>
+          <type>const <ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_lights.h" line="40" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__lights_1ga5f629a6915e71459eb2fbfe1116c946f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiLightGetAffectDiffuse</definition>
+        <argsstring>(const AtNode *node)</argsstring>
+        <name>AiLightGetAffectDiffuse</name>
+        <param>
+          <type>const <ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_lights.h" line="41" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__lights_1gacbe54d55d21b20303180673098d99e76" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AiLightGetAffectSpecular</definition>
+        <argsstring>(const AtNode *node)</argsstring>
+        <name>AiLightGetAffectSpecular</name>
+        <param>
+          <type>const <ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_lights.h" line="42" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__lights_1ga7809bf09c6f761d4ab3091914a3f6ef8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float AiLightGetDiffuse</definition>
+        <argsstring>(const AtNode *node)</argsstring>
+        <name>AiLightGetDiffuse</name>
+        <param>
+          <type>const <ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_lights.h" line="43" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__lights_1ga3bee2ccaf7af147e53782f0cb7e3d70e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float AiLightGetSpecular</definition>
+        <argsstring>(const AtNode *node)</argsstring>
+        <name>AiLightGetSpecular</name>
+        <param>
+          <type>const <ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_lights.h" line="44" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__lights_1ga717d0cab26d877ff8f603ba21adaef28" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float AiLightGetSSS</definition>
+        <argsstring>(const AtNode *node)</argsstring>
+        <name>AiLightGetSSS</name>
+        <param>
+          <type>const <ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_lights.h" line="45" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__ai__shader__lights_1ga67a6e4027f799fbad8e9abd870d29f38" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float AiLightGetVolume</definition>
+        <argsstring>(const AtNode *node)</argsstring>
+        <name>AiLightGetVolume</name>
+        <param>
+          <type>const <ref refid="struct_at_node" kindref="compound">AtNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_lights.h" line="46" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Shader utilities for sampling direct lighting from light sources </para>    </detaileddescription>
+    <location file="E:/dev/Arnold SDK/Arnold-4.2.7.5/include/ai_shader_lights.h"/>
+  </compounddef>
+</doxygen>
