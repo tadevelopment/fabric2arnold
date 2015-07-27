@@ -68,7 +68,7 @@ operator entry() {
   AiArraySetStr(outputs_array, 0, "RGB RGB myfilter mydriver");
   AiNodeSetArray(options, "outputs", outputs_array);
 
-  AiASSWrite('c:\\temp\\test4.ass', AI_NODE_ALL, false, false);
+  //AiASSWrite('c:\\temp\\test4.ass', AI_NODE_ALL, false, false);
   // render the scene
   Integer result = AiRender(AI_RENDER_MODE_CAMERA);
   if (result != AI_SUCCESS)

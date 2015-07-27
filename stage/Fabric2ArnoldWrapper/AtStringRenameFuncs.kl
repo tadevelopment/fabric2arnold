@@ -51,19 +51,19 @@ function AiNodeSetVec(io AtNode node, AtString param, Float32 x, Float32 y, Floa
 function AiNodeSetPnt(io AtNode node, AtString param, Float32 x, Float32 y, Float32 z)  { AiNodeSetPntAtString(node, param, x, y, z); }
 function AiNodeSetPnt2(io AtNode node, AtString param, Float32 x, Float32 y)  { AiNodeSetPnt2AtString(node, param, x, y); }
 
-function UInt8 AiNodeGetByteA(AtNode node, AtString param) { return AiNodeGetByteAtString(node, param); }
-function SInt32 AiNodeGetIntA(AtNode node, AtString param) { return AiNodeGetIntAtString(node, param); }
-function UInt32 AiNodeGetUIntA(AtNode node, AtString param) { return AiNodeGetUIntAtString(node, param); }
-function Boolean AiNodeGetBoolA(AtNode node, AtString param) { return AiNodeGetBoolAtString(node, param); }
-function Float32 AiNodeGetFltA(AtNode node, AtString param) { return AiNodeGetFltAtString(node, param); }
-function RGB AiNodeGetRGBA(AtNode node, AtString param) { return AiNodeGetRGBAtString(node, param); }
-function Color AiNodeGetRGBAA(AtNode node, AtString param) { return AiNodeGetRGBAAtString(node, param); }
-function Vec3 AiNodeGetVecA(AtNode node, AtString param) { return AiNodeGetVecAtString(node, param); }
-function Vec3 AiNodeGetPntA(AtNode node, AtString param) { return AiNodeGetPntAtString(node, param); }
-function Vec2 AiNodeGetPnt2A(AtNode node, AtString param) { return AiNodeGetPnt2AtString(node, param); }
-function Data AiNodeGetPtrA(AtNode node, AtString param) { return AiNodeGetPtrAtString(node, param); }
-function AtArray AiNodeGetArrayA(AtNode node, AtString param) { return AiNodeGetArrayAtString(node, param); }
-function AtString AiNodeGetStrA(AtNode node, AtString param) { return AiNodeGetStrAtString(node, param); }
+function UInt8 AiNodeGetByte(AtNode node, AtString param) { return AiNodeGetByteAtString(node, param); }
+function SInt32 AiNodeGetInt(AtNode node, AtString param) { return AiNodeGetIntAtString(node, param); }
+function UInt32 AiNodeGetUInt(AtNode node, AtString param) { return AiNodeGetUIntAtString(node, param); }
+function Boolean AiNodeGetBool(AtNode node, AtString param) { return AiNodeGetBoolAtString(node, param); }
+function Float32 AiNodeGetFlt(AtNode node, AtString param) { return AiNodeGetFltAtString(node, param); }
+function RGB AiNodeGetRGB(AtNode node, AtString param) { return AiNodeGetRGBAtString(node, param); }
+function Color AiNodeGetRGBA(AtNode node, AtString param) { return AiNodeGetRGBAAtString(node, param); }
+function Vec3 AiNodeGetVec(AtNode node, AtString param) { return AiNodeGetVecAtString(node, param); }
+function Vec3 AiNodeGetPnt(AtNode node, AtString param) { return AiNodeGetPntAtString(node, param); }
+function Vec2 AiNodeGetPnt2(AtNode node, AtString param) { return AiNodeGetPnt2AtString(node, param); }
+function Data AiNodeGetPtr(AtNode node, AtString param) { return AiNodeGetPtrAtString(node, param); }
+function AtArray AiNodeGetArray(AtNode node, AtString param) { return AiNodeGetArrayAtString(node, param); }
+function AtString AiNodeGetStr(AtNode node, AtString param) { return AiNodeGetStrAtString(node, param); }
 function AiNodeGetMatrix(AtNode node, AtString param, Mat44 matrix) { AiNodeGetMatrixAtString(node, param, matrix); }
 
 

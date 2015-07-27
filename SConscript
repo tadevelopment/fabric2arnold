@@ -49,7 +49,8 @@ except:
   print "Can be one of: " + ', '.join(keys(pythonArchToFabricArch[buildOS]))
   sys.exit(1)
 
-buildType = os.environ.get('FABRIC_BUILD_TYPE', 'Release')
+buildType = os.environ.get('FABRIC_BUILD_TYPE', 'Debug')
+print("Building type: " + buildType)
 
 fabricBuildEnv = Environment(
   ENV = { 'PATH': os.environ['PATH'] },
@@ -92,6 +93,7 @@ if buildType == 'Release':
 
 if buildOS == 'Windows' and buildType == 'Debug':
   fabricBuildEnv.Append(PDB  = '${TARGET.base}.pdb')
+  fabricBuildEnv.Append(CXXFLAGS = ['/DEBUG'])
 
 if buildOS == 'Windows':
   fabricBuildEnv['ENV']['TMP'] = os.environ.get('TMP', os.environ.get('TEMP', "C:\\TEMP"))
@@ -219,7 +221,6 @@ for subType in subTypes:
 # See: http://www.scons.org/doc/HTML/scons-man.html section CCPDBFLAGS
 # 
 fabricBuildEnv['CCPDBFLAGS'] = '/Zi /Fd${TARGET}.pdb'
-fabricBuildEnv['PDB']='${TARGET.base}.pdb'
 
 def buildExtension(env, target, sources):
   env.Append(CPPPATH = [env.Dir('.')])
