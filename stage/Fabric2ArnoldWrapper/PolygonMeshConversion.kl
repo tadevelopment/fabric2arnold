@@ -1,0 +1,64 @@
+require Fabric2Arnold;
+require Geometry;
+
+
+function AtNode FabricToArnoldPolygonMesh( io PolygonMesh mesh)
+{
+  UInt32 pointCount   = mesh.pointCount();
+  UInt32 polygonCount = mesh.polygonCount();
+  UInt32 polygonPointsCount  = mesh.polygonPointsCount();
+
+  report('PointCount: ' + pointCount);
+  report('polygonCount: ' + polygonCount);
+  report('polygonPointsCount: ' + polygonPointsCount);
+
+  AtNode node = AiNode("polymesh");
+  AiNodeSetBool(node, "smoothing", true);
+
+  // Initialize arnold data structures
+  AtArray nsides = AiArrayAllocate(polygonCount, 1, AI_TYPE_INT);
+  AtArray indices  = AiArrayAllocate(polygonPointsCount,  1, AI_TYPE_INT);
+
+  // First, assign the polygon point and indices
+  UInt32 klnsides[];
+  UInt32 klindices[];
+  mesh.getTopologyCountsAndAttributeIndices(klnsides, klindices);
+  AiArraySetUInt(indices, klindices);
+  AiArraySetUInt(nsides, klnsides);
+  AiNodeSetArray(node, "nsides", nsides);
+  report('klindices.size(): ' + klindices.size());
+  report('klnsides.size(): ' + klnsides.size());
+  
+  // Set positions
+  Ref<Vec3Attribute> positions = mesh.attributes.positionsAttribute;
+  AtArray vlist = AiArrayConvert(positions.count, 1, AI_TYPE_POINT, positions.data());
+  //AtArray vlist  = AiArrayAllocate(pointCount,  1, AI_TYPE_POINT);
+  //AiArraySetPnt(vlist, positions.values);
+
+  AiNodeSetArray(node, "vlist",  vlist);
+  AiNodeSetArray(node, "vidxs",  indices);
+  //report('positions.count: ' + positions.count);
+
+  // Set normals (if exist)
+  Ref<Vec3Attribute> normals = mesh.attributes.positionsAttribute;
+  // if (normals != null)
+  // {
+  //   report('normals.count: ' + normals.count);
+  //   AtArray nlist = AiArrayConvert(normals.count, 1, AI_TYPE_POINT, normals.data());
+  //   AiNodeSetArray(node, "nlist",  nlist);
+  //   AiNodeSetArray(node, "nidxs",  indices);
+  // }
+
+  Boolean hasuv = mesh.hasUVs();
+  if(hasuv) 
+  {
+    Ref<Vec2Attribute> attrUVs = mesh.getAttribute("uvs0", Vec2Attribute);
+    AtArray uvlist = AiArrayConvert(attrUVs.count, 1, AI_TYPE_POINT2, attrUVs.data());
+    AiNodeSetArray(node, "uvlist", uvlist);
+    AiNodeSetArray(node, "uvidxs", indices);
+    report('attrUVs.count: ' + attrUVs.count);
+  }
+
+  report('Mesh Converted');
+  return node;
+}

@@ -166,7 +166,34 @@ custom_add_to_file = {
                         'String AtParamValue.asString() = "_fe_AtParamValueAsString";\n'
                         'AtArray AtParamValue.asAtArray() = "_fe_AtParamValueAsAtArray";\n',
 
-    'ai_array.h' :      'Mat44 AiArrayGetMtxFunc(AtArray a, UInt32 i) = "_fe_AiArrayGetMtxFunc";'
+    'ai_array.h' :      'Mat44 AiArrayGetMtxFunc(AtArray a, UInt32 i) = "_fe_AiArrayGetMtxFunc";\n\n'
+                        'function Boolean AiArraySetBool(io AtArray a, Boolean val[]) = "_fe_AiArraySetBoolArr";\n'
+                        'function Boolean AiArraySetByte(io AtArray a, UInt8 val[]) = "_fe_AiArraySetByteArr";\n'
+                        'function Boolean AiArraySetInt(io AtArray a, SInt32 val[]) = "_fe_AiArraySetIntArr";\n'
+                        'function Boolean AiArraySetUInt(io AtArray a, UInt32 val[]) = "_fe_AiArraySetUIntArr";\n'
+                        'function Boolean AiArraySetFlt(io AtArray a, Float32 val[]) = "_fe_AiArraySetFltArr";\n'
+                        #'function Boolean AiArraySetRGB(io AtArray a, RGB val[]) = "_fe_AiArraySetRGBArr";\n'
+                        'function Boolean AiArraySetRGBA(io AtArray a, Color val[]) = "_fe_AiArraySetRGBAArr";\n'
+                        'function Boolean AiArraySetPnt(io AtArray a, Vec3 val[]) = "_fe_AiArraySetPntArr";\n'
+                        'function Boolean AiArraySetPnt2(io AtArray a, Vec2 val[]) = "_fe_AiArraySetPnt2Arr";\n'
+                        'function Boolean AiArraySetVec(io AtArray a, Vec3 val[]) = "_fe_AiArraySetVecArr";\n\n'
+                        #'function Boolean AiArraySetMtx(io AtArray a, Mat44 val[]) = "_fe_AiArraySetMtxArr";\n'
+                        #'function Boolean AiArraySetStr(io AtArray a, String val[]) = "_fe_AiArraySetStrArr";\n'
+                        #'function Boolean AiArraySetPtr(io AtArray a, Data val[]) = "_fe_AiArraySetPtrArr";\n'
+                        'function Boolean AiArrayGetBool(io AtArray a, io Boolean val<>) = "_fe_AiArrayGetBoolArr";\n'
+                        'function Boolean AiArrayGetByte(io AtArray a, io UInt8 val<>) = "_fe_AiArrayGetByteArr";\n'
+                        'function Boolean AiArrayGetInt(io AtArray a, io SInt32 val<>) = "_fe_AiArrayGetIntArr";\n'
+                        'function Boolean AiArrayGetUInt(io AtArray a, io UInt32 val<>) = "_fe_AiArrayGetUIntArr";\n'
+                        'function Boolean AiArrayGetFlt(io AtArray a, io Float32 val<>) = "_fe_AiArrayGetFltArr";\n'
+                        #'function Boolean AiArrayGetRGB(io AtArray a, io RGB val<>) = "_fe_AiArrayGetRGBArr";\n'
+                        'function Boolean AiArrayGetRGBA(io AtArray a, io Color val<>) = "_fe_AiArrayGetRGBAArr";\n'
+                        'function Boolean AiArrayGetPnt(io AtArray a, io Vec3 val<>) = "_fe_AiArrayGetPntArr";\n'
+                        'function Boolean AiArrayGetPnt2(io AtArray a, io Vec2 val<>) = "_fe_AiArrayGetPnt2Arr";\n'
+                        'function Boolean AiArrayGetVec(io AtArray a, io Vec3 val<>) = "_fe_AiArrayGetVecArr";\n\n'
+
+                        #'function Boolean AiArrayGetMtx(io AtArray a, io Mat44 val<>) = "_fe_AiArrayGetMtxArr";\n'
+                        #'function Boolean AiArrayGetStr(io AtArray a, io String val<>) = "_fe_AiArrayGetStrArr";\n'
+                        #'function Boolean AiArrayGetPtr(io AtArray a, io Data val<>) = "_fe_AiArrayGetPtrArr";\n'
 }
 # Define this value to true to not expose inline functions
 skipInlineFunctions = True

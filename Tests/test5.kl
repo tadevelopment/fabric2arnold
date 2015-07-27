@@ -1,0 +1,28 @@
+
+require Fabric2ArnoldWrapper;
+
+operator entry() {
+  UInt64 start = getCurrentTicks();
+  AiBegin();
+
+  AiMsgSetLogFileName('c:\\temp\\arnold_log.log');
+  AiMsgSetLogFileFlags(AI_LOG_DEBUG);
+  AiMsgSetConsoleFlags(AI_LOG_DEBUG);
+
+  AiASSLoad('c:\\temp\\test4.ass', AI_NODE_ALL);
+
+  String filename = "c:\\temp\\test5.jpg";
+  AtNode driver = AiNodeLookUpByName("mydriver");
+  AiNodeSetStr(driver, "filename", filename);
+
+  // render the scene
+  Integer result = AiRender(AI_RENDER_MODE_CAMERA);
+  if (result != AI_SUCCESS)
+  {
+    report("[FabricArnold::TestSuite] Error " + String(result));
+  }
+
+  AiEnd();
+  UInt64 end = getCurrentTicks();
+  report("Elapsed time: " + getSecondsBetweenTicks(start, end) + " seconds");
+}

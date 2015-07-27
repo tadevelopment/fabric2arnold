@@ -1,0 +1,82 @@
+
+require Fabric2ArnoldWrapper;
+
+operator entry() {
+  UInt64 start = getCurrentTicks();
+  AiBegin();
+
+  String filename = "c:\\temp\\test4.jpg";
+
+  AiMsgSetLogFileName('c:\\temp\\arnold_log.log');
+  AiMsgSetLogFileFlags(AI_LOG_DEBUG);
+  AiMsgSetConsoleFlags(AI_LOG_DEBUG);
+
+  // create a teapot
+  PolygonMesh polymesh();
+  //polymesh.addCuboid(Xfo(), 10, 10, 10);
+  polymesh.addTeapot(Xfo(), 10, 10);
+
+  AtNode f2ateapot = FabricToArnoldPolygonMesh(polymesh);
+  String name = "kl_teapot";
+  AiNodeSetStr(f2ateapot, "name", name);
+
+  // create a lambert shader
+  AtNode lambert = AiNode("lambert");
+  name = "myshader";
+  AiNodeSetStr(lambert, "name", name);
+  AiNodeSetRGB(lambert, "Kd_color", 0.0, 1.0, 0.0);
+
+  // assign the f2ateapot's shader
+  AiNodeSetPtr(f2ateapot, "shader", lambert._handle);
+
+  // create a perspective camera
+  AtNode camera = AiNode("persp_camera");
+  AiNodeSetStr(camera, "name", "mycamera");
+  AiNodeSetPnt(camera, "position", 0.0, 20.0, 20.0);
+  AiNodeSetPnt(camera, "look_at", 0.0, 0.0, 0.0);
+
+  // create a point light
+  AtNode light = AiNode("point_light");
+  AiNodeSetStr(light, "name", "mylight");
+  AiNodeSetFlt(light, "exposure", 10.5);
+  AiNodeSetPnt(light, "position", 0.0, 20.0, 0.0);
+
+  // create a point light
+  AtNode light1 = AiNode("point_light");
+  AiNodeSetStr(light1, "name", "mylight_1");
+  AiNodeSetFlt(light1, "exposure", 10.5);
+  AiNodeSetPnt(light1, "position", 0.0, -20.0, 0.0);
+
+  // set render options
+  AtNode options = AiUniverseGetOptions();
+  AiNodeSetInt(options, "AA_samples", 4);
+  AiNodeSetInt(options, "xres", 320);
+  AiNodeSetInt(options, "yres", 240);
+  AiNodeSetPtr(options, "camera", camera._handle);
+
+  // create an output driver
+  AtNode driver = AiNode("driver_jpeg");
+  AiNodeSetStr(driver, "name", "mydriver");
+  AiNodeSetStr(driver, "filename", filename);
+
+  // create a gaussian filter node
+  AtNode gfilter = AiNode("gaussian_filter");
+  AiNodeSetStr(gfilter, "name", "myfilter");
+
+  // assign th driver and the filter to the outputs
+  AtArray outputs_array = AiArrayAllocate(1, 1, AI_TYPE_STRING);
+  AiArraySetStr(outputs_array, 0, "RGB RGB myfilter mydriver");
+  AiNodeSetArray(options, "outputs", outputs_array);
+
+  AiASSWrite('c:\\temp\\test4.ass', AI_NODE_ALL, false, false);
+  // render the scene
+  Integer result = AiRender(AI_RENDER_MODE_CAMERA);
+  if (result != AI_SUCCESS)
+  {
+    report("[FabricArnold::TestSuite] Error " + String(result));
+  }
+
+  AiEnd();
+  UInt64 end = getCurrentTicks();
+  report("Elapsed time: " + getSecondsBetweenTicks(start, end) + " seconds");
+}
