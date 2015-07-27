@@ -1,78 +1,52 @@
 require Fabric2Arnold;
 require Geometry;
 
+
+function attributeToAtArray(io AtNode node, io PolygonMesh mesh, GeometryAttribute attr, io GeometryAttribute outAttr, UInt8 type, String name, String indices)
+{
+  if (attr == null)
+    return;
+
+  UInt32 packedIndices[];
+  mesh.getPolygonPackedSharedAttributeValues(attr, outAttr, packedIndices);
+  
+  AtArray vlist = AiArrayConvert(outAttr.size(), 1, AI_TYPE_POINT, outAttr.data());
+  AtArray vidxs = AiArrayConvert(packedIndices.size(), 1, AI_TYPE_INT, packedIndices.data());
+  AiNodeSetArray(node, name,  vlist);
+  AiNodeSetArray(node, indices,  vidxs);
+}
+
 function AtNode FabricToArnoldPolygonMesh( io PolygonMesh mesh)
 {
-  UInt32 pointCount   = mesh.pointCount();
-  UInt32 polygonCount = mesh.polygonCount();
-  UInt32 polygonPointsCount  = mesh.polygonPointsCount();
-
-  report('PointCount: ' + pointCount);
-  report('polygonCount: ' + polygonCount);
-  report('polygonPointsCount: ' + polygonPointsCount);
-
   AtNode node = AiNode("polymesh");
   AiNodeSetBool(node, "smoothing", true);
-
-  // Initialize arnold data structures
-  //AtArray nsides = AiArrayAllocate(polygonCount, 1, AI_TYPE_INT);
-  //AtArray indices  = AiArrayAllocate(polygonPointsCount,  1, AI_TYPE_INT);
 
   // First, assign the polygon point and indices
   UInt32 klnsides[];
   UInt32 klindices[];
   mesh.getTopologyCountsAndAttributeIndices(klnsides, klindices);
-  AtArray indices = AiArrayConvert(klindices.size(), 1, AI_TYPE_INT, klindices.data());
   AtArray nsides = AiArrayConvert(klnsides.size(), 1, AI_TYPE_INT, klnsides.data());
-
-  //AiArraySetUInt(indices, klindices);
-  //AiArraySetUInt(nsides, klnsides);
   AiNodeSetArray(node, "nsides", nsides);
-  report('klindices.size(): ' + klindices.size());
-  report('klnsides.size(): ' + klnsides.size());
   
   // Set positions
-  Vec3Attribute packedPositions();
-  UInt32 packedPositionIndices[];
-  Vec3Attribute positions = mesh.attributes.positionsAttribute;
-  GeometryAttribute outValues = packedPositions;
-  mesh.getPolygonPackedSharedAttributeValues(positions, outValues, packedPositionIndices);
-  
-  AtArray vlist = AiArrayConvert(packedPositions.size(), 1, AI_TYPE_POINT, packedPositions.data());
-  AtArray vidxs = AiArrayConvert(packedPositionIndices.size(), 1, AI_TYPE_INT, packedPositionIndices.data());
-  AiNodeSetArray(node, "vlist",  vlist);
-  AiNodeSetArray(node, "vidxs",  vidxs);
-  report('packedPositions.count: ' + packedPositions.count);
-
-  // Set normals (if exist)
-  Ref<Vec3Attribute> normals = mesh.attributes.normalsAttribute;
-  if (normals != null && normals.size() > 0)
   {
-    Vec3Attribute packedNormals();
-    UInt32 packedNormalIndices[];
-    GeometryAttribute outNormals = packedNormals;
-    mesh.getPolygonPackedSharedAttributeValues(normals, outNormals, packedNormalIndices);
-    
-    AtArray nlist = AiArrayConvert(packedNormals.size(), 1, AI_TYPE_POINT, packedNormals.data());
-    AtArray nidxs = AiArrayConvert(packedNormalIndices.size(), 1, AI_TYPE_INT, packedNormalIndices.data());
-    AiNodeSetArray(node, "nlist",  nlist);
-    AiNodeSetArray(node, "nidxs",  nidxs);
-    report('' + normals.count + ' = packedNormals.count: ' + packedNormals.count);
+    Ref<Vec3Attribute> positions = mesh.attributes.positionsAttribute;
+    GeometryAttribute tempStorageP = Vec3Attribute();
+    attributeToAtArray(node, mesh, positions, tempStorageP, AI_TYPE_POINT, 'vlist', 'vidxs');
   }
 
-  Boolean hasuv = mesh.hasUVs();
-  if(hasuv) 
+  // Set normals (if exist)
+  {
+    Ref<Vec3Attribute> normals = mesh.attributes.normalsAttribute;
+    GeometryAttribute tempStorageN = Vec3Attribute();
+    attributeToAtArray(node, mesh, normals, tempStorageN, AI_TYPE_VECTOR, 'nlist', 'nidxs');
+  }
+
+  // Set UV's (if they exist)
   {
     Ref<Vec2Attribute> attrUVs = mesh.getAttribute("uvs0", Vec2Attribute);
-    Vec3Attribute packedUVs();
-    UInt32 packedUVIndices[];
-    GeometryAttribute outUVs = packedUVs;
-    mesh.getPolygonPackedSharedAttributeValues(normals, outUVs, packedUVIndices);
-
-    AtArray uvlist = AiArrayConvert(attrUVs.count, 1, AI_TYPE_POINT2, attrUVs.data());
-    AiNodeSetArray(node, "uvlist", uvlist);
-    AiNodeSetArray(node, "uvidxs", indices);
-    report('attrUVs.count: ' + attrUVs.count);
+    GeometryAttribute tempStorageUV = Vec2Attribute();
+    attributeToAtArray(node, mesh, attrUVs, tempStorageUV, AI_TYPE_POINT2, 'uvlist', 'uvidxs');
   }
 
   report('Mesh Converted');
