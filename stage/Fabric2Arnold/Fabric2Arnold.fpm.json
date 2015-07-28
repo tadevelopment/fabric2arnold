@@ -1,0 +1,23 @@
+{
+  "libs": [
+    "Fabric2Arnold"
+  ],
+  "code" : [
+    "_opaque_types.kl",
+    "ai_params.kl",
+    "ai_array.kl",
+    "ai_cameras.kl",
+    "ai_dotass.kl",
+    "ai_enum.kl",
+    "ai_license.kl",
+    "ai_metadata.kl",
+    "ai_msg.kl",
+    "ai_node_entry.kl",
+    "ai_nodes.kl",
+    "ai_render.kl",
+    "ai_plugins.kl",
+    "ai_ray.kl",
+    "ai_texture.kl",
+    "ai_universe.kl",
+  ]
+}

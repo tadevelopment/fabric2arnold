@@ -1,0 +1,24 @@
+/**
+    Runtime loading of plugin nodes 
+  
+*/
+
+require Math;
+
+/**  Used by dynamically-linked nodes to return node info 
+ */
+struct AtNodeLib {
+  SInt32 node_type; //  type of node (AI_NODE_SHADER, AI_NODE_CAMERA, etc) 
+ 
+  UInt8 output_type; //  output type for shader nodes (AI_TYPE_RGB, etc) 
+ 
+  String name; //  name of this plug-in node ("lambert", etc) 
+ 
+  Data methods; //  pointer to this node's methods 
+ 
+  String version; //  Arnold version that this node was compiled against 
+ 
+};
+
+function AiLoadPlugins(String directory) = '_fe_AiLoadPlugins';
+function AiLoadPlugin(String path) = '_fe_AiLoadPlugin';

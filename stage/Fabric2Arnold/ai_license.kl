@@ -1,0 +1,83 @@
+/**
+    Utility functions for the configuration of the licensing system 
+  
+*/
+
+require Math;
+
+/**  License info structure 
+ */
+struct AtLicenseInfo {
+  Boolean used; //  true if this is the license used by the current Arnold installation 
+ 
+  String name; //  product name 
+ 
+  String ver; //  product version 
+ 
+  String exp; //  expiration date 
+ 
+  String options; //  product options 
+ 
+  SInt32 count; //  license count 
+ 
+  SInt32 current_inuse; //  license count in use 
+ 
+  SInt32 current_resuse; //  number of reservations in use 
+ 
+  SInt32 hbased; //  HOST-BASED count 
+ 
+  SInt32 hold; //  license hold time 
+ 
+  SInt32 max_roam; //  maximum roam time 
+ 
+  SInt32 max_share; //  maximum number of processes that can share this license 
+ 
+  SInt32 min_remove; //  minimum rlmremove time 
+ 
+  SInt32 min_checkout; //  license minimum checkout time 
+ 
+  SInt32 min_timeout; //  minimum timeout time 
+ 
+  SInt32 nres; //  number of license reservations 
+ 
+  SInt32 num_roam_allowed; //  number of roaming licenses allowed 
+ 
+  SInt32 roaming; //  number of licenses currently roaming (for roaming licenses) 
+ 
+  SInt32 share; //  license share flags (share flags RLM_LA_SHARE_xxx are defined in license.h) 
+ 
+  SInt32 soft_limit; //  license soft limit 
+ 
+  SInt32 thisroam; //  1 if this license is a roaming license 
+ 
+  SInt32 timeout; //  current license timeout 
+ 
+  SInt32 tz; //  license timezone specification. 
+ 
+  SInt32 tokens; //  if 0, this is a normal license. If non-zero, this is a token-based license 
+ 
+  SInt32 type; //  license type (license type flags RLM_LA__xxx_TYPE are defined in license.h) 
+ 
+  SInt32 ubased; //  USER_BASED count 
+ 
+};
+
+/**
+Error Codes
+
+*/
+
+const Integer AI_LIC_SUCCESS = 0;	 //  no error  
+const Integer AI_LIC_ERROR_CANTCONNECT = 1;	 //  can't connect to any RLM server  
+const Integer AI_LIC_ERROR_INIT = 2;	 //  error on initialization  
+const Integer AI_LIC_ERROR_NOTFOUND = 3;	 //  no licenses found (expired or not loaded)  
+const Integer AI_LIC_ERROR_NOTAVAILABLE = 4;	 //  no licenses available (all in use)  
+const Integer AI_LIC_ERROR = -1;	 //  generic license error  
+const Integer HOST_NAME_MAX = 64;	 //  
+function Boolean AiLicenseSetServer(String host, UInt32 port) = '_fe_AiLicenseSetServer';
+function Boolean AiLicenseGetServer(io String host, io UInt32 port) = '_fe_AiLicenseGetServer';
+function AiLicenseSetAttempts(SInt32 attempts) = '_fe_AiLicenseSetAttempts';
+function UInt32 AiLicenseGetAttempts() = '_fe_AiLicenseGetAttempts';
+function AiLicenseSetAttemptDelay(SInt32 msecs) = '_fe_AiLicenseSetAttemptDelay';
+function UInt32 AiLicenseGetAttemptDelay() = '_fe_AiLicenseGetAttemptDelay';
+function SInt32 AiLicenseGetInfo(io AtLicenseInfo licenses, io UInt32 n) = '_fe_AiLicenseGetInfo';

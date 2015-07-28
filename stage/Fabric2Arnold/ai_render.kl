@@ -1,0 +1,38 @@
+/**
+    API for managing rendering sessions 
+  
+*/
+
+require Math;
+
+/**
+Rendering Modes
+
+*/
+
+const Integer AI_RENDER_MODE_CAMERA = 0x00;	 //  Render from a camera  
+const Integer AI_RENDER_MODE_FREE = 0x01;	 //  Process arbitrary ray-tracing requests, acting as a "ray server"  
+/**
+Error Codes
+
+*/
+
+const Integer AI_SUCCESS = 0x00;	 //  no error  
+const Integer AI_ABORT = 0x01;	 //  render aborted  
+const Integer AI_ERROR_WRONG_OUTPUT = 0x02;	 //  can't open output file  
+const Integer AI_ERROR_NO_CAMERA = 0x03;	 //  camera not defined  
+const Integer AI_ERROR_BAD_CAMERA = 0x04;	 //  bad camera data  
+const Integer AI_ERROR_VALIDATION = 0x05;	 //  usage not validated  
+const Integer AI_ERROR_RENDER_REGION = 0x06;	 //  invalid render region  
+const Integer AI_ERROR_OUTPUT_EXISTS = 0x07;	 //  output file already exists  
+const Integer AI_ERROR_OPENING_FILE = 0x08;	 //  can't open file  
+const Integer AI_INTERRUPT = 0x09;	 //  render interrupted by user  
+const Integer AI_ERROR_UNRENDERABLE_SCENEGRAPH = 0x0A;	 //  unrenderable scenegraph  
+const Integer AI_ERROR_NO_OUTPUTS = 0x0B;	 //  no rendering outputs  
+const Integer AI_ERROR = -1;	 //  generic error  
+function AiBegin() = '_fe_AiBegin';
+function AiEnd() = '_fe_AiEnd';
+function SInt32 AiRender(SInt32 mode/*=AI_RENDER_MODE_CAMERA*/) = '_fe_AiRender';
+function AiRenderAbort() = '_fe_AiRenderAbort';
+function AiRenderInterrupt() = '_fe_AiRenderInterrupt';
+function Boolean AiRendering() = '_fe_AiRendering';

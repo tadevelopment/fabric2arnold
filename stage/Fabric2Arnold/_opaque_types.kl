@@ -1,0 +1,94 @@
+/* 
+ * This auto-generated file contains simple wrapper
+ * structs for the opaque data-types found in Fabric2Arnold
+ *  - Do not modify this file, it will be overwritten
+ */
+
+// Aliases help us differentiate the correct
+//return type when converting KL to C++ types later
+alias String AtString;
+
+struct AtBucket {
+  Data _handle;
+};
+Boolean AtBucket.isValid() { return this._handle != Data(); }
+
+struct AtList {
+  Data _handle;
+};
+Boolean AtList.isValid() { return this._handle != Data(); }
+
+struct AtNode {
+  Data _handle;
+};
+Boolean AtNode.isValid() { return this._handle != Data(); }
+
+struct AtNodeEntry {
+  Data _handle;
+};
+Boolean AtNodeEntry.isValid() { return this._handle != Data(); }
+
+struct AtNodeMethods {
+  Data _handle;
+};
+Boolean AtNodeMethods.isValid() { return this._handle != Data(); }
+
+struct AtParamIterator {
+  Data _handle;
+};
+Boolean AtParamIterator.isValid() { return this._handle != Data(); }
+
+struct AtMetaDataIterator {
+  Data _handle;
+};
+Boolean AtMetaDataIterator.isValid() { return this._handle != Data(); }
+
+struct AtUserParamIterator {
+  Data _handle;
+};
+Boolean AtUserParamIterator.isValid() { return this._handle != Data(); }
+
+struct AtTextureHandle {
+  Data _handle;
+};
+Boolean AtTextureHandle.isValid() { return this._handle != Data(); }
+
+struct AtShaderGlobals {
+  Data _handle;
+};
+Boolean AtShaderGlobals.isValid() { return this._handle != Data(); }
+
+struct AtScrSample {
+  Data _handle;
+};
+Boolean AtScrSample.isValid() { return this._handle != Data(); }
+
+struct AtNodeIterator {
+  Data _handle;
+};
+Boolean AtNodeIterator.isValid() { return this._handle != Data(); }
+
+struct AtNodeEntryIterator {
+  Data _handle;
+};
+Boolean AtNodeEntryIterator.isValid() { return this._handle != Data(); }
+
+struct AtAOVIterator {
+  Data _handle;
+};
+Boolean AtAOVIterator.isValid() { return this._handle != Data(); }
+
+struct AtParamEntry {
+  Data _handle;
+};
+Boolean AtParamEntry.isValid() { return this._handle != Data(); }
+
+struct AtUserParamEntry {
+  Data _handle;
+};
+Boolean AtUserParamEntry.isValid() { return this._handle != Data(); }
+
+struct AtMetaDataStore {
+  Data _handle;
+};
+Boolean AtMetaDataStore.isValid() { return this._handle != Data(); }

@@ -1,0 +1,90 @@
+/**
+    Ray struct and various trace functions 
+  
+*/
+
+require Math;
+
+/**  Ray data structure 
+ */
+struct AtRay {
+  UInt16 type; //  Type of ray (AI_RAY_CAMERA, etc) 
+ 
+  UInt8 tid; //  Thread ID 
+ 
+  UInt8 level; //  Recursion level (0 for camera rays) 
+ 
+  UInt8 diff_bounces; //  Number of diffuse bounces so far 
+ 
+  UInt8 gloss_bounces; //  Number of glossy bounces so far 
+ 
+  UInt8 refl_bounces; //  Number of reflection bounces so far 
+ 
+  UInt8 refr_bounces; //  Number of refraction bounces so far 
+ 
+  SInt32 x; //  Raster-space X coordinate 
+ 
+  SInt32 y; //  Raster-space Y coordinate 
+ 
+  Float32 sx; //  Image-space X coordinate, in [-1,1) 
+ 
+  Float32 sy; //  Image-space Y coordinate, in [-1,1) 
+ 
+  Float32 px; //  Subpixel X coordinate in [0,1) 
+ 
+  Float32 py; //  Subpixel Y coordinate in [0,1) 
+ 
+  Vec3 origin; //  Ray origin 
+ 
+  Vec3 dir; //  Unit ray direction 
+ 
+  Float64 mindist; //  Minimum useful distance from the origin 
+ 
+  Float64 maxdist; //  Maximum useful distance from the origin (volatile while ray is traced) 
+ 
+  AtShaderGlobals psg; //  Parent shader globals (last shaded) 
+ 
+  Data light_source; //  For shadow rays only 
+ 
+  AtBucket bucket; //  Parent bucket 
+ 
+  Float32 weight; //  Ray weight, 1.0 for clean camera rays 
+ 
+  Float32 time; //  Time at which the ray was created, in [0,1) 
+ 
+  Vec3 dOdx; //  Partial derivative of ray origin wrt image-space X coordinate 
+ 
+  Vec3 dOdy; //  Partial derivative of ray origin wrt image-space Y coordinate 
+ 
+  Vec3 dDdx; //  Partial derivative of ray direction wrt image-space X coordinate 
+ 
+  Vec3 dDdy; //  Partial derivative of ray direction wrt image-space Y coordinate 
+ 
+  AtString traceset; //  Trace-set for this ray. 
+ 
+  Boolean inclusive_traceset; //  Is the trace-set inclusive or exclusive? 
+ 
+  UInt16 sindex; //  Sub-pixel sample index when supersampling 
+ 
+};
+
+/**
+Ray Types
+
+*/
+
+const Integer AI_RAY_UNDEFINED = 0x00;	 //  undefined type  
+const Integer AI_RAY_CAMERA = 0x01;	 //  ray originating at the camera  
+const Integer AI_RAY_SHADOW = 0x02;	 //  shadow ray towards a light source  
+const Integer AI_RAY_REFLECTED = 0x04;	 //  mirror reflection ray  
+const Integer AI_RAY_REFRACTED = 0x08;	 //  mirror refraction ray  
+const Integer AI_RAY_SUBSURFACE = 0x10;	 //  subsurface scattering probe ray  
+const Integer AI_RAY_DIFFUSE = 0x20;	 //  indirect diffuse (also known as diffuse GI) ray  
+const Integer AI_RAY_GLOSSY = 0x40;	 //  glossy/blurred reflection ray  
+const Integer AI_RAY_ALL = 0xFF;	 //  mask for all ray types  
+function AiMakeRay(io AtRay ray, UInt32 type, Vec3 origin, Vec3 dir, Float64 maxdist, AtShaderGlobals sg) = '_fe_AiMakeRay';
+function AiReflectRay(io AtRay ray, Vec3 normal, AtShaderGlobals sg) = '_fe_AiReflectRay';
+function Boolean AiRefractRay(io AtRay ray, Vec3 normal, Float32 n1, Float32 n2, AtShaderGlobals sg) = '_fe_AiRefractRay';
+function Boolean AiTrace(AtRay ray, io AtScrSample sample) = '_fe_AiTrace';
+function AiTraceBackground(AtRay ray, io AtScrSample sample) = '_fe_AiTraceBackground';
+function Boolean AiTraceProbe(AtRay ray, io AtShaderGlobals sgout) = '_fe_AiTraceProbe';
