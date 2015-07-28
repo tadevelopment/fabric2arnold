@@ -1,0 +1,32 @@
+/*
+  This file shows an example of a "skeleton" implementation for a custom
+  render target. It doesn't include render-specific code, but rather
+  shows how to use the Adaptor mechanism in combination with the SceneAssembly
+  interfaces in order to allow for a generic support of scene changes,
+  incremental updates and SceneAssembly abstraction.
+*/
+
+require SceneGraphWrappers;
+require SceneAssembly;
+require Fabric2ArnoldWrapper;
+
+// Whatever represents or holds the render state and data
+// Here, we are at the render wrapper level only;
+// probably not dependant on SceneGraph or SceneAssembly
+object ArnoldRenderer {
+  // ...
+};
+
+// ArnoldRendererContext regroups the required
+// data for updating the render state from the scene
+object ArnoldRendererContext {
+  SWContext sceneContext;
+  SWAdaptorTarget adaptorTarget;
+  ArnoldRenderer renderer;
+};
+
+const String ArnoldRendererTargetName = "ArnoldRendererTarget";
+
+interface ArnoldRendererTargetAdaptor {
+  setRenderer!( ArnoldRenderer renderer );
+};

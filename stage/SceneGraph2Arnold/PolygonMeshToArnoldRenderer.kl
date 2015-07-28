@@ -1,0 +1,37 @@
+// The PolygonMesh adaptor will be created during the update of the 
+// BaseSWGeometryInstanceAdaptor (ArnoldRendererToGeometryInstance).
+// Similar adaptors could be created for Points, Lines or custom geometry types.
+//
+// If required, each GeometryAttribute type could define their own adaptors, 
+// in which case the base class would help, but for now we'll keep it simple
+// and only setup the mesh itself.
+//
+object PolygonMeshToArnoldRenderer : BaseGeometryAdaptor, ArnoldRendererTargetAdaptor {
+  ArnoldRenderer renderer;
+  PolygonMesh mesh;
+};
+
+function PolygonMeshToArnoldRenderer() {
+  this.parent.initialize( ArnoldRendererTargetName );
+}
+
+~PolygonMeshToArnoldRenderer() {
+  report( "PolygonMeshToArnoldRenderer destroying" );
+}
+
+PolygonMeshToArnoldRenderer.setRenderer!(ArnoldRenderer renderer) {
+  this.renderer = renderer;
+}
+
+function Boolean PolygonMeshToArnoldRenderer.updateSource!( Ref<Object> source ) {
+  UInt32 versionBefore = this.getVersion();
+  this.parent.updateSource(source);
+  if( versionBefore != this.getVersion() ) {
+    this.mesh = source;
+    report( "    Updating PolygonMesh " + this.mesh.debugName
+            + "\n      pointCount = " + this.mesh.pointCount()
+            + "\n      point 0 pos = " + this.mesh.getPointPosition( 0 ) );
+  } else
+    report( "    (PolygonMesh " + this.mesh.debugName + " already up-to-date)" );
+  return true;
+}

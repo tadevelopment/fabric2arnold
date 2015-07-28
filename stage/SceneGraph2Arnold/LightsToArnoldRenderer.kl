@@ -1,0 +1,62 @@
+
+
+// Define an adaptor skeleton for SGPointLight.
+// This is a simplified hierarchy; a base one could have been defined
+// for the SGBaseLight.
+object SGPointLightToArnoldRenderer : BaseSWTransformedAdaptor, ArnoldRendererTargetAdaptor {
+  ArnoldRenderer renderer;
+  AtNode arnoldLight;
+};
+
+SGPointLightToArnoldRenderer.setRenderer!(ArnoldRenderer renderer) {
+  this.renderer = renderer;
+
+  // This function is our initialization routine, Here we create the point light
+  this.arnoldLight = AiNode("point_light");
+
+  AiNodeSetStr(light, "name", "mylight");
+}
+
+~SGPointLightToArnoldRenderer() {
+  report( this.type() + " destroying" );
+}
+
+Boolean SGPointLightToArnoldRenderer.update!(Ref<SWContext> swContext) {
+  this.parent.update( swContext );
+
+  SGPointLight sourceLight = this.sourceReference.getObjectValue();
+
+  // Note: get the SGContext from the elementRef to ensure we get the values 
+  // in the context of the right parent and frame.
+  SGContext sourceLightContext = this.sourceReference.getSGContext();
+
+  AiNodeSetStr(light, "name", "mylight");
+
+  report( "    Updating "+ sourceLight.type() + " " + this.sourceReference.getFullName()
+          + "\n      frame = " + swContext.getFrame()
+          + "\n      pos = " + sourceLight.getGlobalPosition( sourceLightContext )
+          + "\n      color = " + sourceLight.getColor( sourceLightContext )
+          + "\n      intensity = " + sourceLight.getIntensity( sourceLightContext ) );
+
+  return true;
+}
+
+// Define an adaptor skeleton for SGShadowPointLight,
+// which only adds handling of the "castShadow" parameter.
+object SGShadowPointLightToArnoldRenderer : SGPointLightToArnoldRenderer {
+};
+
+Boolean SGShadowPointLightToArnoldRenderer.update!(Ref<SWContext> swContext) {
+  this.parent.update( swContext );
+
+  SGShadowPointLight sourceLight = this.sourceReference.getObjectValue();
+
+  // Note: get the SGContext from the elementRef to ensure we get the values 
+  // in the context of the right parent and frame.
+  SGContext sourceLightContext = this.sourceReference.getSGContext();
+
+  // Just update the 'castShadow' param, base class took care of others
+  report( "      enabled shadow = " + sourceLight.castShadows( sourceLightContext ) );
+
+  return true;
+}

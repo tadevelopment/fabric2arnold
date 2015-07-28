@@ -1,0 +1,41 @@
+
+object ArnoldRendererTargetGroup : SWTargetAdaptorGroup {
+  ArnoldRendererContext renderContext;// shared
+};
+
+function ArnoldRendererTargetGroup( BaseDynamicGroup group, ArnoldRendererContext renderContext, String debugName ) {
+  this.renderContext = renderContext;
+  this.parent.init( group, renderContext.adaptorTarget, debugName );
+}
+
+// Implement specialized group element update
+function Boolean ArnoldRendererTargetGroup.updateElement!(Size index, Boolean newElement, io SWElementReference elementReference, Ref<SWContext> context) {
+  this.parent.updateElement( index, newElement, elementReference, context );
+  if( newElement ) {
+    // Finalize the initialization of our adaptor with our specific renderer
+    Ref<ArnoldRendererTargetAdaptor> renderAdaptor = this.getAdaptor( index );
+    if( renderAdaptor ) {
+      report("    Initializing new " + renderAdaptor.type() );
+      renderAdaptor.setRenderer( this.renderContext.renderer );
+    }
+  }
+  // Do the actual update
+  // This could be done in a later iteration
+  Ref<BaseSWAdaptor> adaptor = this.getAdaptor( index );
+  adaptor.update( context );
+
+  return true;//Don't bother tracking changes
+}
+
+// Element was removed from the scene: adaptors will be released
+inline ArnoldRendererTargetGroup.removedElement!(Size index) {
+  Ref<BaseSWAdaptor> adaptor = this.getAdaptor( index );
+  if( adaptor )
+    report("ArnoldRendererTargetGroup: element " + index + " removed, adaptor " + adaptor.type() + " to be released");
+  this.parent.removedElement( index );
+}
+
+// Entry point for updating the group from the current renderContext
+function ArnoldRendererTargetGroup.update!() {
+  this.parent.update( this.renderContext.sceneContext );
+}

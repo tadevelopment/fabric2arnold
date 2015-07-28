@@ -1,0 +1,69 @@
+
+// Geometry adaptor for ArnoldRenderer. This one tries to implement everything
+// only based on the SceneAssembly interfaces, so that it worke fine once
+// the SceneAssembly potentially overrides materials etc.
+//
+// Still, if one wants to keep it simple and access directly the
+// SceneGraph objects, he can try to cast 'this.sourceReference.getObjectValue()'
+// in a SGTransformed, or 'this.geometryContainerRef.getObjectValue()'
+// in a SGGeometry.
+//
+object ArnoldRendererToGeometryInstance : BaseSWGeometryInstanceAdaptor, ArnoldRendererTargetAdaptor {
+  ArnoldRenderer renderer;
+
+  // Add whatever renderer data/state is associated with this Geometry.
+  // All geometry attributes might be treated directly here, or these could
+  // use their own registered adaptor as for OGL+RTR2
+
+  // Links to scene material data; for now only check the 'color'
+  SWElementReference colorPropertyRef;
+};
+
+ArnoldRendererToGeometryInstance.setRenderer!(ArnoldRenderer renderer) {
+  this.renderer = renderer;
+}
+
+~ArnoldRendererToGeometryInstance() {
+  report( "ArnoldRendererToGeometryInstance destroying" );
+}
+
+// Helper for getting a Color sub-property
+function GetSWPropertyValue( SWElementReference owner, String paramName, io SWElementReference target, io Color color ) {
+  Object dummy = null;
+  owner.getProperty( "color", target, dummy );
+  if( target.isValid() ) {
+    // Make sure the parameter is a Color
+    Size structSize;
+    Type type;
+    target.getStorageType( structSize, type );
+    if( type == Color )
+      target.getStructValue( color.data(), UInt32( color.dataSize() ) );
+    else
+      setError("GetSWPropertyValue: parameter " + target.getFullName() + " is not a Color");
+  }
+}
+
+Boolean ArnoldRendererToGeometryInstance.update!(Ref<SWContext> swContext) {
+
+  this.parent.update( swContext );
+
+  // This will include, too, getting the material and its parameters.
+  // For now, just check if there is a 'color' parameter
+
+  // We first need to "reserve" a SWElementReference entry
+  // if not already done.
+  if( !this.colorPropertyRef.isInitialized_noSourceCheck() )
+    this.colorPropertyRef = this.allocateElementReference( swContext );
+
+  Color color;//Default to black
+  GetSWPropertyValue( this.sourceReference, "color", this.colorPropertyRef, color );
+
+  report( "    Updating geometry " + this.sourceReference.getFullName() 
+          + "\n      frame = " + swContext.getFrame()
+          + "\n      type = " + this.geometry.type()
+          + "\n      pos " + this.getGlobalTransform().translation() 
+          + "\n      bbox = " + this.getGlobalBBox()
+          + "\n      color = " + color );
+
+  return true;//Don't bother tracking changes
+}

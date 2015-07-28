@@ -1,0 +1,119 @@
+
+// This gets the geometries and lights from the SceneAssembly groups,
+// and manages their conversion to ArnoldRenderer adaptors.
+//
+// These groups (geom + lights) are arbitrary, there could be only one or others.
+//
+// The SceneAssembly can eventually include more procedural treatment
+// such as defining passes, redefining materials, merging or filtering
+// scenes, etc. This is why we want to get the elements at this level
+// instead of the SceneGraph level.
+//
+// Another advantage of using groups is that it keeps track of
+// the objects of the scene, and will incrementally add/remove/change
+// based on the changes in the scene, which could be good for updating
+// incrementally the render state when re-rendering, for example
+// when adjusting parameters of a light or material, or if
+// rendering multiple frames (can only update what is animated).
+//
+object SceneAssemblyToArnoldRenderer {
+
+  ArnoldRendererTargetGroup geometries;
+  ArnoldRendererTargetGroup lights;
+
+  ArnoldRendererContext renderContext;
+
+  CameraToArnoldRenderer camera;
+};
+
+SceneAssemblyToArnoldRenderer( SceneWrapper scene, BaseDynamicGroup sourceGeometriesGroup, BaseDynamicGroup sceneLightsGroup ) {
+  // Setup initial render context from scene
+  this.renderContext = ArnoldRendererContext();
+  this.renderContext.renderer = ArnoldRenderer();
+  this.renderContext.adaptorTarget = scene.getAdaptorTarget(ArnoldRendererTargetName);
+  this.renderContext.sceneContext = scene.createContext();
+
+  this.geometries = ArnoldRendererTargetGroup( sourceGeometriesGroup, this.renderContext, "RenderGeoms" );
+  this.lights = ArnoldRendererTargetGroup( sceneLightsGroup, this.renderContext, "RenderLights" );
+
+  this.initArnold();
+}
+
+~SceneAssemblyToArnoldRenderer() 
+{
+  AiEnd();
+}
+
+SceneAssemblyToArnoldRenderer.initArnold!()
+{
+  AiBegin();
+
+  AiMsgSetLogFileName('c:\\temp\\arnold_log.log');
+  AiMsgSetLogFileFlags(AI_LOG_DEBUG);
+  AiMsgSetConsoleFlags(AI_LOG_DEBUG);
+
+  // set render options
+  AtNode options = AiUniverseGetOptions();
+  AiNodeSetInt(options, "AA_samples", 4);
+  AiNodeSetInt(options, "xres", 320);
+  AiNodeSetInt(options, "yres", 240);
+
+  // create an output driver - this pushes renders to disk
+  AtNode driver = AiNode("driver_jpeg");
+  AiNodeSetStr(driver, "name", "mydriver");
+
+  // create a gaussian filter node
+  AtNode gfilter = AiNode("gaussian_filter");
+  AiNodeSetStr(gfilter, "name", "myfilter");
+
+  // assign th driver and the filter to the outputs
+  AtArray outputs_array = AiArrayAllocate(1, 1, AI_TYPE_STRING);
+  AiArraySetStr(outputs_array, 0, "RGB RGB myfilter mydriver");
+  AiNodeSetArray(options, "outputs", outputs_array);
+
+  this.camera = CameraToArnoldRenderer();
+}
+
+// Updates the render state to the scene, and maybe launches a render.
+// The 'context' might include a different frame, in which case only
+// the changing values might be updated if doing incremental rendering updates.
+//
+// The passed-in camera might be something else than a SGCamera,
+// for example DCC's camera. Since there's just one active camera it is
+// simpler to translate directly instead of using the adaptor mechanism.
+SceneAssemblyToArnoldRenderer.update!( SGCamera camera, SInt32 frame ) {
+  // To do: update the camera render parameters from 'camera'
+
+  this.renderContext.sceneContext.setFrame( frame );
+  this.renderContext.sceneContext.update();
+  // 'renderContext' is shared by this.geometries / this.lights
+  this.geometries.update();
+  this.lights.update();
+  this.camera.update(camera, SGContext());
+
+  // If, at some point we supported Async rendering, this call would be necessery
+  if (AiRendering())
+  {
+    AiRenderInterrupt();
+  }
+
+  String filename = "test6-" + frame + ".jpg";
+  report("Rendering: " + filename);
+
+  // Reset file output
+  String filepath = "c:\\temp\\" + filename;
+  AtNode driver = AiNodeLookUpByName("mydriver");
+  AiNodeSetStr(driver, "filename", filepath);
+
+  AiMsgSetLogFileName('c:\\temp\\arnold_log.log');
+  AiMsgSetLogFileFlags(AI_LOG_DEBUG);
+  AiMsgSetConsoleFlags(AI_LOG_DEBUG);
+
+
+  // Try launching a render
+  Integer result = AiRender(AI_RENDER_MODE_CAMERA);
+  if (result != AI_SUCCESS)
+  {
+    report("[FabricArnold::TestSuite] Error " + String(result));
+  }
+}

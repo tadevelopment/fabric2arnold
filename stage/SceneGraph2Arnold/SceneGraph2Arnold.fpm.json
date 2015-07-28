@@ -1,0 +1,12 @@
+{
+  "code" : [
+    "ArnoldRenderer.kl",
+    "ArnoldRendererTargetGroup.kl",
+    "ArnoldRendererToGeometryInstance.kl",
+    "CameraToArnoldRenderer.kl",
+    "LightsToArnoldRenderer.kl",
+    "PolygonMeshToArnoldRenderer.kl",
+    "SceneAssemblyToArnoldRenderer.kl",
+    "SceneGraph2Arnold.kl"
+  ]
+}

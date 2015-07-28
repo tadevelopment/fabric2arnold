@@ -1,0 +1,36 @@
+
+
+object CameraToArnoldRenderer {
+  AtNode arnoldCamera;
+};
+
+function CameraToArnoldRenderer() {
+
+  report("Creating Camera");
+  // create a perspective camera
+  this.arnoldCamera = AiNode("persp_camera");
+  AiNodeSetStr(this.arnoldCamera, "name", "mycamera");
+  
+  // Connect up this camera
+  AtNode options = AiUniverseGetOptions();
+  AiNodeSetPtr(options, "camera", this.arnoldCamera._handle);
+}
+
+CameraToArnoldRenderer.update!(SGCamera camera, SGContext context)
+{
+  if (camera == null)
+  {
+    setError('Null camera passed');
+    return;
+  }
+  
+  report("Update Camera");
+  Vec3 pos = camera.getGlobalPosition(context);
+  Vec3 dir = camera.getGlobalDirection(context) * camera.getFocalDistance(context);
+  Vec3 focal = pos + dir;
+
+  report("Pt: " + pos + " -> " + dir);
+
+  AiNodeSetPnt(this.arnoldCamera, "position", pos.x, pos.y, pos.z);
+  AiNodeSetPnt(this.arnoldCamera, "look_at", focal.x, focal.y, focal.z);
+}
