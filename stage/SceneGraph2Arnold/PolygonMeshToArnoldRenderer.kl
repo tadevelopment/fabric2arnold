@@ -9,10 +9,12 @@
 object PolygonMeshToArnoldRenderer : BaseGeometryAdaptor, ArnoldRendererTargetAdaptor {
   ArnoldRenderer renderer;
   PolygonMesh mesh;
+  AtNode arnoldMesh;
 };
 
 function PolygonMeshToArnoldRenderer() {
   this.parent.initialize( ArnoldRendererTargetName );
+  report('Created new PolygonMeshToArnoldRenderer');
 }
 
 ~PolygonMeshToArnoldRenderer() {
@@ -24,14 +26,22 @@ PolygonMeshToArnoldRenderer.setRenderer!(ArnoldRenderer renderer) {
 }
 
 function Boolean PolygonMeshToArnoldRenderer.updateSource!( Ref<Object> source ) {
+
   UInt32 versionBefore = this.getVersion();
   this.parent.updateSource(source);
   if( versionBefore != this.getVersion() ) {
+
     this.mesh = source;
-    report( "    Updating PolygonMesh " + this.mesh.debugName
-            + "\n      pointCount = " + this.mesh.pointCount()
-            + "\n      point 0 pos = " + this.mesh.getPointPosition( 0 ) );
-  } else
-    report( "    (PolygonMesh " + this.mesh.debugName + " already up-to-date)" );
+    report('Translated: ' +  this.mesh.debugName);
+
+    if (this.arnoldMesh.isValid()) {
+      FabricToArnoldPolygonMesh(this.mesh, this.arnoldMesh);
+    }
+    else {
+      this.arnoldMesh = FabricToArnoldPolygonMesh(this.mesh);
+      String name = this.mesh.debugName;
+      AiNodeSetStr(this.arnoldMesh, "name", name);
+    }
+  }
   return true;
 }

@@ -121,11 +121,22 @@ SceneGraph BuildTestScene() {
   return sg;
 }
 
+function SGCamera getCamera(io SceneGraph sg)
+{
+  SGCamera camera = sg.addCamera();
+  Xfo localTransform;
+  Vec3 pos = Vec3(0, -20, 5);
+  localTransform.tr = pos;
+  localTransform.ori.setFrom2Vectors(Vec3(0, 0, -1), (-pos).unit());
+  camera.setLocalTransform(localTransform, SGContext());
+  return camera;
+}
+
 operator entry() {
 
   SceneGraph sg = BuildTestScene();
 
-  SceneGraphToArnoldRenderer sgToRender( sg );
+  SceneGraphToArnoldRenderer sgToRender( sg, getCamera(sg) );
   
   // Update for frame 0
   report("\n*************** FRAME 0 values **************");

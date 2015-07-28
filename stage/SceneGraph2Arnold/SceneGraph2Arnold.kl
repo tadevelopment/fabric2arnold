@@ -11,7 +11,7 @@ object SceneGraphToArnoldRenderer {
   SceneAssemblyToArnoldRenderer sceneAssemblyToArnoldRenderer;
 };
 
-SceneGraphToArnoldRenderer( SceneGraph sg ) {
+SceneGraphToArnoldRenderer( SceneGraph sg, SGCamera camera ) {
   this.sg = sg;
   SceneGraphWrapper sgWrap(sg);
   sgWrap.setTracingVerboseLevel(3);
@@ -20,13 +20,15 @@ SceneGraphToArnoldRenderer( SceneGraph sg ) {
 
   this.sceneAssemblyToArnoldRenderer = SceneAssemblyToArnoldRenderer( sgWrap, geomInstGroup, lightGroup );
 
+  this.camera = camera;
+
   // Register our adaptors
   RegisterAdaptor( SGInstance, ArnoldRendererTargetName, ArnoldRendererToGeometryInstance );
   RegisterAdaptor( SGGeometry, ArnoldRendererTargetName, ArnoldRendererToGeometryInstance );
   RegisterAdaptor( PolygonMesh, ArnoldRendererTargetName, PolygonMeshToArnoldRenderer );
   RegisterAdaptor( SGPointLight, ArnoldRendererTargetName, SGPointLightToArnoldRenderer );
   RegisterAdaptor( SGShadowPointLight, ArnoldRendererTargetName, SGShadowPointLightToArnoldRenderer );
-
+  RegisterAdaptor( SGCamera, ArnoldRendererTargetName, CameraToArnoldRenderer );
 }
 
 SceneGraphToArnoldRenderer.update!( SInt32 frame ) {

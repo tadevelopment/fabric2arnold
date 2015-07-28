@@ -17,6 +17,14 @@ object ArnoldRendererToGeometryInstance : BaseSWGeometryInstanceAdaptor, ArnoldR
 
   // Links to scene material data; for now only check the 'color'
   SWElementReference colorPropertyRef;
+
+  // Arnold handles instancing a bit oddly.  A geometry may have
+  // instances attached, but a geo is _not_ an instance otherwise.
+  // In SG, all geo's are instances.  We need to detect if we are the
+  // first isntance to translate this geo, and if so we keep a pointer
+  // to the arnold geo, otherwise we allocate a new instance and hold
+  // a pointer to this structure instead.
+  AtNode arnoldInstance;
 };
 
 ArnoldRendererToGeometryInstance.setRenderer!(ArnoldRenderer renderer) {
@@ -47,23 +55,65 @@ Boolean ArnoldRendererToGeometryInstance.update!(Ref<SWContext> swContext) {
 
   this.parent.update( swContext );
 
+  // Get the Arnold Geometry that has been translated.
+  if (!this.arnoldInstance.isValid()) {
+    // Are we an instance or original in arnold-land?
+    PolygonMeshToArnoldRenderer geomToArnold = this.geometryAdaptor;
+    if (geomToArnold == null)
+      return false;
+
+    AtNode geomNode = geomToArnold.arnoldMesh;
+
+    // If this node does _not_ have a material assigned, it has not been instanced yet.
+    Data shaderNode = AiNodeGetPtr(geomNode, 'shader');
+    if (shaderNode == Data())
+    {
+      report("-- Createing Original --");
+      this.arnoldInstance = geomNode;
+    }
+    else 
+    {
+      report("-- Createing Instance --");
+      AtNode instanceNode = AiNode("ginstance");
+      AiNodeSetPtr( instanceNode, "node", geomNode._handle );
+
+      String name = this.sourceReference.getFullName();
+      AiNodeSetStr( instanceNode, 'name', name);
+
+      this.arnoldInstance = instanceNode;
+    }
+
+    // We are the first to take ownership of this geom
+    // create a lambert shader TODO - proper materials
+    AtNode lambert = AiNode("lambert");
+    String name = this.sourceReference.getName() + "Shader";
+    AiNodeSetStr(lambert, "name", name);
+    AiNodeSetRGB(lambert, "Kd_color", 0.0, 1.0, 0.0); // TODO
+
+    // assign the f2ateapot's shader
+    AiNodeSetPtr(this.arnoldInstance, "shader", lambert._handle);
+  }
+
+  Mat44 m = this.getGlobalTransform();
+  AiNodeSetMatrix( this.arnoldInstance, "matrix", m );
+
   // This will include, too, getting the material and its parameters.
   // For now, just check if there is a 'color' parameter
 
   // We first need to "reserve" a SWElementReference entry
   // if not already done.
-  if( !this.colorPropertyRef.isInitialized_noSourceCheck() )
-    this.colorPropertyRef = this.allocateElementReference( swContext );
+  // if( !this.colorPropertyRef.isInitialized_noSourceCheck() )
+  //   this.colorPropertyRef = this.allocateElementReference( swContext );
 
-  Color color;//Default to black
-  GetSWPropertyValue( this.sourceReference, "color", this.colorPropertyRef, color );
+  // Color color(0.0, 1.0, 0.0);//Default to green
+  // GetSWPropertyValue( this.sourceReference, "color", this.colorPropertyRef, color );
 
-  report( "    Updating geometry " + this.sourceReference.getFullName() 
-          + "\n      frame = " + swContext.getFrame()
-          + "\n      type = " + this.geometry.type()
-          + "\n      pos " + this.getGlobalTransform().translation() 
-          + "\n      bbox = " + this.getGlobalBBox()
-          + "\n      color = " + color );
+  // report( "    Updating geometry " + this.sourceReference.getFullName() 
+  //         + "\n      frame = " + swContext.getFrame()
+  //         + "\n      type = " + this.geometry.type()
+  //         + "\n      pos " + this.getGlobalTransform().translation() 
+  //         + "\n      bbox = " + this.getGlobalBBox()
+  //         + "\n      color = " + color );
 
   return true;//Don't bother tracking changes
 }

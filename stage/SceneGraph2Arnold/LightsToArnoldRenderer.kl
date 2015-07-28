@@ -14,7 +14,9 @@ SGPointLightToArnoldRenderer.setRenderer!(ArnoldRenderer renderer) {
   // This function is our initialization routine, Here we create the point light
   this.arnoldLight = AiNode("point_light");
 
-  AiNodeSetStr(light, "name", "mylight");
+  String name = this.sourceReference.getName();
+  AiNodeSetStr(this.arnoldLight, "name", name);
+  AiNodeSetFlt(this.arnoldLight, "exposure", 10.5);
 }
 
 ~SGPointLightToArnoldRenderer() {
@@ -22,6 +24,7 @@ SGPointLightToArnoldRenderer.setRenderer!(ArnoldRenderer renderer) {
 }
 
 Boolean SGPointLightToArnoldRenderer.update!(Ref<SWContext> swContext) {
+
   this.parent.update( swContext );
 
   SGPointLight sourceLight = this.sourceReference.getObjectValue();
@@ -30,13 +33,14 @@ Boolean SGPointLightToArnoldRenderer.update!(Ref<SWContext> swContext) {
   // in the context of the right parent and frame.
   SGContext sourceLightContext = this.sourceReference.getSGContext();
 
-  AiNodeSetStr(light, "name", "mylight");
-
-  report( "    Updating "+ sourceLight.type() + " " + this.sourceReference.getFullName()
-          + "\n      frame = " + swContext.getFrame()
-          + "\n      pos = " + sourceLight.getGlobalPosition( sourceLightContext )
-          + "\n      color = " + sourceLight.getColor( sourceLightContext )
-          + "\n      intensity = " + sourceLight.getIntensity( sourceLightContext ) );
+  Vec3 position = sourceLight.getGlobalPosition( sourceLightContext );
+  AiNodeSetPnt(this.arnoldLight, "position", position.x, position.y, position.z);
+  
+  // report( "    Updating "+ sourceLight.type() + " " + this.sourceReference.getFullName()
+  //         + "\n      frame = " + swContext.getFrame()
+  //         + "\n      pos = " + 
+  //         + "\n      color = " + sourceLight.getColor( sourceLightContext )
+  //         + "\n      intensity = " + sourceLight.getIntensity( sourceLightContext ) );
 
   return true;
 }

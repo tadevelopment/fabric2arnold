@@ -21,6 +21,11 @@ function AtNode FabricToArnoldPolygonMesh( io PolygonMesh mesh)
   AtNode node = AiNode("polymesh");
   AiNodeSetBool(node, "smoothing", true);
 
+  return FabricToArnoldPolygonMesh(mesh, node);
+}
+
+function AtNode FabricToArnoldPolygonMesh( io PolygonMesh mesh, io AtNode node)
+{
   // First, assign the polygon point and indices
   UInt32 klnsides[];
   UInt32 klindices[];
