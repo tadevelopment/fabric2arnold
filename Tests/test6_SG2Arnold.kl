@@ -1,0 +1,166 @@
+/*
+ *  Copyright 2010-2015 Fabric Software Inc. All rights reserved.
+ */
+
+/*
+  This file shows an example of a "skeleton" implementation for a custom
+  render target. It doesn't include render-specific code, but rather
+  shows how to use the Adaptor mechanism in combination with the SceneAssembly
+  interfaces in order to allow for a generic support of scene changes,
+  incremental updates and SceneAssembly abstraction.
+*/
+
+require SceneGraphWrappers;
+require SceneAssembly;
+require SceneGraph2Arnold;
+
+
+
+SceneGraph BuildTestScene() {
+  SceneGraph sg();
+  sg.getOrCreateHierarchyTransformsGenerator();
+
+  // Set a default color directly on the root
+  SGObjectProperty defaultColorProp = sg.root.getOrAddLocalProperty( "color", SGPropertyPropagation_default );
+  defaultColorProp.setValue( Color(1.0, 1.0, 1.0, 1.0 ) );
+
+  /////////////////////////////////////////////////////////
+  // Add a point light, created per-frame values (animated) for frames 1..10
+  SGPointLight pointLight = sg.addPointLight();
+
+  // Enable per-frame caching of color & intensity & transform (animation cache)
+  // Simpler than creating a generator for the purpose of this test...
+  SGObjectProperty prop = pointLight._getColorProperty( SGContext() );
+  prop.enableAllFramesCaching( true );
+
+  prop = pointLight._getIntensityProperty( SGContext() );
+  prop.enableAllFramesCaching( true );
+
+  prop = pointLight._getLocalTransformProperty( SGContext() );
+  prop.enableAllFramesCaching( true );
+
+  for( SInt32 frame = 0; frame < 10; ++frame ) {
+    SGContext frameContext = sg.getFrameContext( frame );
+    pointLight.setColor( Color( 0.5, 0.5, frame * 0.1f, 1.0 ), frameContext );
+    pointLight.setIntensity( frame+1, frameContext );
+    pointLight.setLocalPosition( Vec3( 5.0, 5.0, frame ), frameContext );
+  }
+  sg.root.addChild( pointLight, "ptLight", true );
+
+  /////////////////////////////////////////////////////////
+  // Add shadow point light (just animate castShadow prop)
+  SGShadowPointLight shPointLight = sg.addShadowPointLight();
+
+  // Enable per-frame caching of castShadow (animation cache)
+  prop = shPointLight._getCastShadowsProperty( SGContext() );
+  prop.enableAllFramesCaching( true );
+
+  // Frames 0..4: cast shadow = false
+  for( SInt32 frame = 0; frame < 10; ++frame )
+    shPointLight.setCastShadows( frame >= 5, sg.getFrameContext( frame ) );
+
+  shPointLight.setColor( Color( 1, 0, 0, 1.0 ), SGContext() );
+  shPointLight.setIntensity( 3.0, SGContext() );
+  shPointLight.setLocalPosition( Vec3( 7.0, 7.0, 7.0 ), SGContext() );
+
+  sg.root.addChild( shPointLight, "shPtLight", true );
+
+  /////////////////////////////////////////////////////////
+  // Create a geometry with animated topology and positions
+
+  SGGeometry animGeom = sg.addGeometry(null);
+  prop = animGeom.getGeometryProperty( SGContext() );
+  prop.enableAllFramesCaching( true );
+
+  for( SInt32 frame = 0; frame < 10; ++frame ) {
+    PolygonMesh mesh("AnimGeomMesh_"+frame, false);
+    mesh.addPlane( Xfo( Vec3( 0, frame, 0) ), frame+1, frame+1, frame+1, frame+1, true, true );
+    animGeom.setGeometry( mesh, sg.getFrameContext( frame ) );
+  }
+
+  /////////////////////////////////////////////////////////
+  // Create a static geometry
+  PolygonMesh mesh("CuboidStaticMesh");
+  mesh.addCuboid( Xfo( Vec3(0, 1, 0) ), 2, 2, 2, true, true );
+  SGGeometry staticGeom = sg.addGeometry(mesh);
+  
+  // Create a model that refers the static geometry as "owned", 
+  // but the animated geometry as shared (non-owner ref)
+  SGInstanceGroup model = sg.addInstanceGroup();
+  model.set( "staticGeom", staticGeom, true );
+
+  SGInstance animGeomInst = sg.addInstance( animGeom, Xfo( Vec3( 5.0, 0, 0 ) ), false, false );
+  model.set( "animGeomInst", animGeomInst, false );
+
+  /////////////////////////////////////////////////////////
+  // Create two instances of the model. For the 2nd one,
+  // override the color with an animated value.
+
+  SGInstance modelInstance1 = sg.addInstance( model, Xfo( Vec3( 0, 0, -10 ) ), true, false );
+  SGInstance modelInstance2 = sg.addInstance( model, Xfo( Vec3( 0, 0, 10 ) ), true, false );
+
+  sg.root.addChild( modelInstance1, "modelInst1", false );
+  sg.root.addChild( modelInstance2, "modelInst2", false );
+
+  // Add an animated color value override for modelInstance2
+  SGObject modelInstance2Obj = modelInstance2.getWrapped();
+
+  SGObjectProperty colorProp = modelInstance2Obj.getOrAddLocalProperty( "color", SGPropertyPropagation_default );
+  colorProp.enableAllFramesCaching( true );
+
+  prop = modelInstance2._getLocalTransformProperty( SGContext() );
+  prop.enableAllFramesCaching( true );
+
+  for( SInt32 frame = 0; frame < 10; ++frame ) {
+    SGContext frameContext = sg.getFrameContext( frame );
+    SGObjectProperty colorForFrame = colorProp.getContextual( frameContext );
+    colorForFrame.setValue( Color( frame * 0.1f, 1.0, 0.0, 1.0 ) );
+    modelInstance2.setLocalTransform( Xfo( Vec3( 0, frame, 10 ) ), frameContext );
+  }
+
+  return sg;
+}
+
+operator entry() {
+
+  SceneGraph sg = BuildTestScene();
+
+  SceneGraphToArnoldRenderer sgToRender( sg );
+  
+  // Update for frame 0
+  report("\n*************** FRAME 0 values **************");
+  sgToRender.update( 0 );
+
+  // Update for frame 5
+  report("\n*************** FRAME 5 values **************");
+  sgToRender.update( 5 );
+
+  ///////////////////////////////
+  // Test scene modifications
+
+  report("\n*************** FRAME 5 + removed root/ptLight & model/animGeomInst + added root/groundPlane **************");
+
+  // Remove root/ptLight
+  SGObject obj;
+  SGObjectProperty prop;
+
+  sg.getFromFullPath( "root/ptLight", obj, prop );
+  obj.deleteAllObjectInstances();
+
+  // Remove model/animGeomInst (keep model/staticGeom)
+  sg.getFromFullPath( "root/modelInst2/model", obj, prop );
+  SGContext modelContext;
+  SGInstanceGroup model = obj.getWrapper( modelContext );
+
+  SGObject animGeomInstObject = model.get( "animGeomInst", SGContext() );
+  model.remove("animGeomInst");
+
+  // Add root/ground
+  PolygonMesh mesh("groundMesh");
+  mesh.addPlane( Xfo(), 100, 100, 1, 1, true, true );
+  SGGeometry groundGeom = sg.addGeometry(mesh);
+
+  sg.root.addChild( groundGeom, "ground", true );
+
+  sgToRender.update( 5 );
+}

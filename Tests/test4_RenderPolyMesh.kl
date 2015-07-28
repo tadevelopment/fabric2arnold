@@ -13,8 +13,8 @@ operator entry() {
 
   // create a teapot
   PolygonMesh polymesh();
-  //polymesh.addCuboid(Xfo(), 10, 10, 10);
-  polymesh.addTeapot(Xfo(), 10, 10);
+  polymesh.addCuboid(Xfo(), 10, 10, 10);
+  //polymesh.addTeapot(Xfo(), 10, 10);
 
   AtNode f2ateapot = FabricToArnoldPolygonMesh(polymesh);
   String name = "kl_teapot";

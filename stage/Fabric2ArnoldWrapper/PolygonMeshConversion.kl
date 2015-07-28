@@ -42,13 +42,12 @@ function AtNode FabricToArnoldPolygonMesh( io PolygonMesh mesh)
     attributeToAtArray(node, mesh, normals, tempStorageN, AI_TYPE_VECTOR, 'nlist', 'nidxs');
   }
 
-  // Set UV's (if they exist)
-  {
+  // For some reason, enabling this option causes exceptions.  Re-enable later when we know what da ell is going on
+  // Set UV's
+/*  {
     Ref<Vec2Attribute> attrUVs = mesh.getAttribute("uvs0", Vec2Attribute);
     GeometryAttribute tempStorageUV = Vec2Attribute();
     attributeToAtArray(node, mesh, attrUVs, tempStorageUV, AI_TYPE_POINT2, 'uvlist', 'uvidxs');
-  }
-
-  report('Mesh Converted');
+  }*/
   return node;
 }
