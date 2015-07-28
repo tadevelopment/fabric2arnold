@@ -2,7 +2,7 @@
   "code" : [
     "ArnoldRenderer.kl",
     "ArnoldRendererTargetGroup.kl",
-    "ArnoldRendererToGeometryInstance.kl",
+    "GeometryInstanceToArnoldRenderer.kl",
     "CameraToArnoldRenderer.kl",
     "LightsToArnoldRenderer.kl",
     "PolygonMeshToArnoldRenderer.kl",

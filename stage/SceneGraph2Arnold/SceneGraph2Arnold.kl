@@ -23,8 +23,8 @@ SceneGraphToArnoldRenderer( SceneGraph sg, SGCamera camera ) {
   this.camera = camera;
 
   // Register our adaptors
-  RegisterAdaptor( SGInstance, ArnoldRendererTargetName, ArnoldRendererToGeometryInstance );
-  RegisterAdaptor( SGGeometry, ArnoldRendererTargetName, ArnoldRendererToGeometryInstance );
+  RegisterAdaptor( SGInstance, ArnoldRendererTargetName, GeometryInstanceToArnoldRenderer );
+  RegisterAdaptor( SGGeometry, ArnoldRendererTargetName, GeometryInstanceToArnoldRenderer );
   RegisterAdaptor( PolygonMesh, ArnoldRendererTargetName, PolygonMeshToArnoldRenderer );
   RegisterAdaptor( SGPointLight, ArnoldRendererTargetName, SGPointLightToArnoldRenderer );
   RegisterAdaptor( SGShadowPointLight, ArnoldRendererTargetName, SGShadowPointLightToArnoldRenderer );

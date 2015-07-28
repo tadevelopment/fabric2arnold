@@ -1,5 +1,5 @@
 // The PolygonMesh adaptor will be created during the update of the 
-// BaseSWGeometryInstanceAdaptor (ArnoldRendererToGeometryInstance).
+// BaseSWGeometryInstanceAdaptor (GeometryInstanceToArnoldRenderer).
 // Similar adaptors could be created for Points, Lines or custom geometry types.
 //
 // If required, each GeometryAttribute type could define their own adaptors, 

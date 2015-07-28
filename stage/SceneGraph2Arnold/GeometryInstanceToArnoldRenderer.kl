@@ -8,7 +8,7 @@
 // in a SGTransformed, or 'this.geometryContainerRef.getObjectValue()'
 // in a SGGeometry.
 //
-object ArnoldRendererToGeometryInstance : BaseSWGeometryInstanceAdaptor, ArnoldRendererTargetAdaptor {
+object GeometryInstanceToArnoldRenderer : BaseSWGeometryInstanceAdaptor, ArnoldRendererTargetAdaptor {
   ArnoldRenderer renderer;
 
   // Add whatever renderer data/state is associated with this Geometry.
@@ -27,12 +27,12 @@ object ArnoldRendererToGeometryInstance : BaseSWGeometryInstanceAdaptor, ArnoldR
   AtNode arnoldInstance;
 };
 
-ArnoldRendererToGeometryInstance.setRenderer!(ArnoldRenderer renderer) {
+GeometryInstanceToArnoldRenderer.setRenderer!(ArnoldRenderer renderer) {
   this.renderer = renderer;
 }
 
-~ArnoldRendererToGeometryInstance() {
-  report( "ArnoldRendererToGeometryInstance destroying" );
+~GeometryInstanceToArnoldRenderer() {
+  report( "GeometryInstanceToArnoldRenderer destroying" );
 }
 
 // Helper for getting a Color sub-property
@@ -51,7 +51,7 @@ function GetSWPropertyValue( SWElementReference owner, String paramName, io SWEl
   }
 }
 
-Boolean ArnoldRendererToGeometryInstance.update!(Ref<SWContext> swContext) {
+Boolean GeometryInstanceToArnoldRenderer.update!(Ref<SWContext> swContext) {
 
   this.parent.update( swContext );
 
