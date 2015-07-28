@@ -62,14 +62,22 @@ Boolean GeometryInstanceToArnoldRenderer.update!(Ref<SWContext> swContext) {
     if (geomToArnold == null)
       return false;
 
+    // Get the pointer to the Arnold version of our mesh
     AtNode geomNode = geomToArnold.arnoldMesh;
 
-    // If this node does _not_ have a material assigned, it has not been instanced yet.
-    Data shaderNode = AiNodeGetPtr(geomNode, 'shader');
-    if (shaderNode == Data())
+    // Arnold doesn't support actual instancing, instead you 
+    // can create a ginstance node to refer to an original node
+    // We resolve the difference here by checking for a value
+    // on the geometry.  If it exists, then we are not the first
+    // instance to refer to this geometry, so create a Arnold
+    // instance node and set our values (xform, mat) on that instead 
+    Boolean isInstanced = AiNodeGetBool(geomNode, 'fabric_translator');
+    if (!isInstanced) // if this is the first node to translate this geometry
     {
       report("-- Createing Original --");
       this.arnoldInstance = geomNode;
+      AiNodeDeclare(geomNode, "fabric_translator", "constant BOOL");
+      AiNodeSetBool(geomNode, 'fabric_translator', true);
     }
     else 
     {
@@ -79,7 +87,6 @@ Boolean GeometryInstanceToArnoldRenderer.update!(Ref<SWContext> swContext) {
 
       String name = this.sourceReference.getFullName();
       AiNodeSetStr( instanceNode, 'name', name);
-
       this.arnoldInstance = instanceNode;
     }
 
@@ -88,7 +95,7 @@ Boolean GeometryInstanceToArnoldRenderer.update!(Ref<SWContext> swContext) {
     AtNode lambert = AiNode("lambert");
     String name = this.sourceReference.getName() + "Shader";
     AiNodeSetStr(lambert, "name", name);
-    AiNodeSetRGB(lambert, "Kd_color", 0.0, 1.0, 0.0); // TODO
+    AiNodeSetRGB(lambert, "Kd_color", 0.0, 1.0, 0.0); // TODO - get color from somewhere.
 
     // assign the f2ateapot's shader
     AiNodeSetPtr(this.arnoldInstance, "shader", lambert._handle);
