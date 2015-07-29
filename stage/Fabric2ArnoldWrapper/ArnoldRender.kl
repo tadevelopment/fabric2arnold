@@ -1,0 +1,48 @@
+
+
+// Call this function to render out to a file.
+// This assumes that Arnold scene has been setup correctly already
+function Boolean doArnoldRenderToFile(String outFilename) {
+    // If, at some point we supported Async rendering, this call would be necessery
+  if (AiRendering())
+  {
+    AiRenderInterrupt();
+  }
+
+  // set render options
+  AtNode options = AiUniverseGetOptions();
+  AiNodeSetInt(options, "AA_samples", 4);
+  AiNodeSetInt(options, "xres", 320);
+  AiNodeSetInt(options, "yres", 240);
+
+  // For now, assume we are writing to a JPG file
+  // This could be fixed in future.
+  // Reset file output
+  AtNode driver = AiNodeLookUpByName("jpg_driver");
+  if (!driver.isValid()) {
+    // create an output driver - this pushes renders to disk
+    driver = AiNode("driver_jpeg");
+    AiNodeSetStr(driver, "name", "jpg_driver");
+
+    // create a gaussian filter node
+    AtNode gfilter = AiNode("gaussian_filter");
+    AiNodeSetStr(gfilter, "name", "myfilter");
+
+    // assign the driver and the filter to the outputs
+    AtArray outputs_array = AiArrayAllocate(1, 1, AI_TYPE_STRING);
+    AiArraySetStr(outputs_array, 0, "RGB RGB myfilter jpg_driver");
+    AiNodeSetArray(options, "outputs", outputs_array);
+  }
+
+  // Set filename we are writing out to
+  AiNodeSetStr(driver, "filename", outFilename);
+
+  // Try launching a render
+  Integer result = AiRender(AI_RENDER_MODE_CAMERA);
+  if (result != AI_SUCCESS)
+  {
+    report("[FabricArnold::TestSuite] Error " + String(result));
+    return false;
+  }
+  return true;
+}

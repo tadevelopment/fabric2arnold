@@ -69,19 +69,6 @@ SceneAssemblyToArnoldRenderer.initArnold!()
   AiNodeSetInt(options, "xres", 320);
   AiNodeSetInt(options, "yres", 240);
 
-  // create an output driver - this pushes renders to disk
-  AtNode driver = AiNode("driver_jpeg");
-  AiNodeSetStr(driver, "name", "mydriver");
-
-  // create a gaussian filter node
-  AtNode gfilter = AiNode("gaussian_filter");
-  AiNodeSetStr(gfilter, "name", "myfilter");
-
-  // assign th driver and the filter to the outputs
-  AtArray outputs_array = AiArrayAllocate(1, 1, AI_TYPE_STRING);
-  AiArraySetStr(outputs_array, 0, "RGB RGB myfilter mydriver");
-  AiNodeSetArray(options, "outputs", outputs_array);
-
   this.camera = CameraToArnoldRenderer();
 }
 
@@ -101,30 +88,4 @@ SceneAssemblyToArnoldRenderer.update!( SGCamera camera, SInt32 frame ) {
   this.geometries.update();
   this.lights.update();
   this.camera.update(camera, SGContext());
-
-  // If, at some point we supported Async rendering, this call would be necessery
-  if (AiRendering())
-  {
-    AiRenderInterrupt();
-  }
-
-  String filename = "test6-" + frame + ".jpg";
-  report("Rendering: " + filename);
-
-  // Reset file output
-  String filepath = "c:\\temp\\" + filename;
-  AtNode driver = AiNodeLookUpByName("mydriver");
-  AiNodeSetStr(driver, "filename", filepath);
-
-  AiMsgSetLogFileName('c:\\temp\\arnold_log.log');
-  AiMsgSetLogFileFlags(AI_LOG_DEBUG);
-  AiMsgSetConsoleFlags(AI_LOG_DEBUG);
-
-
-  // Try launching a render
-  //Integer result = AiRender(AI_RENDER_MODE_CAMERA);
-  //if (result != AI_SUCCESS)
- // {
- //   report("[FabricArnold::TestSuite] Error " + String(result));
-  //}
 }

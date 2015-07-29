@@ -1,6 +1,7 @@
 {
   "code" : [
     "AtStringRenameFuncs.kl",
-    "PolygonMeshConversion.kl"
+    "PolygonMeshConversion.kl",
+    "ArnoldRender.kl"
   ]
 }

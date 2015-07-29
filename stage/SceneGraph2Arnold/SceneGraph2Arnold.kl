@@ -38,3 +38,7 @@ SceneGraphToArnoldRenderer.update!( SInt32 frame ) {
   this.sg.defineCurrentFrame( this.sg.getFrameContext( frame ) );
   this.sceneAssemblyToArnoldRenderer.update( this.camera, frame );
 }
+
+Boolean SceneGraphToArnoldRenderer.doRender!(String outFilename) {
+  return doArnoldRenderToFile(outFilename);
+}
