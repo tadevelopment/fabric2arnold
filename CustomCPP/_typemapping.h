@@ -363,23 +363,23 @@ inline bool AtUInt64_to_UInt64(const AtUInt64 & from, Fabric::EDK::KL::UInt64 & 
 inline bool Mat44_to_AtMatrix(const Fabric::EDK::KL::Mat44 & from, AtMatrix & to) { 
 
 	to[0][0] = from.row0.x;
-	to[0][1] = from.row0.y;
-	to[0][2] = from.row0.z;
-	to[0][3] = from.row0.t;
+	to[1][0] = from.row0.y;
+	to[2][0] = from.row0.z;
+	to[3][0] = from.row0.t;
 
-	to[1][0] = from.row1.x;
+	to[0][1] = from.row1.x;
 	to[1][1] = from.row1.y;
-	to[1][2] = from.row1.z;
-	to[1][3] = from.row1.t;
+	to[2][1] = from.row1.z;
+	to[3][1] = from.row1.t;
 
-	to[2][0] = from.row2.x;
-	to[2][1] = from.row2.y;
+	to[0][2] = from.row2.x;
+	to[1][2] = from.row2.y;
 	to[2][2] = from.row2.z;
-	to[2][3] = from.row2.t;
+	to[3][2] = from.row2.t;
 
-	to[3][0] = from.row3.x;
-	to[3][1] = from.row3.y;
-	to[3][2] = from.row3.z;
+	to[0][3] = from.row3.x;
+	to[1][3] = from.row3.y;
+	to[2][3] = from.row3.z;
 	to[3][3] = from.row3.t;
 
   return true;
@@ -387,23 +387,23 @@ inline bool Mat44_to_AtMatrix(const Fabric::EDK::KL::Mat44 & from, AtMatrix & to
 
 inline bool AtMatrix_to_Mat44(const AtMatrix & from, Fabric::EDK::KL::Mat44 & to) {
 	to.row0.x = from[0][0];
-	to.row0.y = from[0][1];
-	to.row0.z = from[0][2];
-	to.row0.t = from[0][3];
+	to.row0.y = from[1][0];
+	to.row0.z = from[2][0];
+	to.row0.t = from[3][0];
 
-	to.row1.x = from[1][0];
+	to.row1.x = from[0][1];
 	to.row1.y = from[1][1];
-	to.row1.z = from[1][2];
-	to.row1.t = from[1][3];
+	to.row1.z = from[2][1];
+	to.row1.t = from[3][1];
 
-	to.row2.x = from[2][0];
-	to.row2.y = from[2][1];
+	to.row2.x = from[0][2];
+	to.row2.y = from[1][2];
 	to.row2.z = from[2][2];
-	to.row2.t = from[2][3];
+	to.row2.t = from[3][2];
 	
-	to.row3.x = from[3][0];
-	to.row3.y = from[3][1];
-	to.row3.z = from[3][2];
+	to.row3.x = from[0][3];
+	to.row3.y = from[1][3];
+	to.row3.z = from[2][3];
 	to.row3.t = from[3][3];
   return true; 
 }
