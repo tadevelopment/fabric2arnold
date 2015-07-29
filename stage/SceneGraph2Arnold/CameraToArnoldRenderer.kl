@@ -25,12 +25,15 @@ CameraToArnoldRenderer.update!(SGCamera camera, SGContext context)
   }
   
   report("Update Camera");
-  Vec3 pos = camera.getGlobalPosition(context);
-  Vec3 dir = camera.getGlobalDirection(context) * camera.getFocalDistance(context);
-  Vec3 focal = pos + dir;
 
-  report("Pt: " + pos + " -> " + dir);
+  Mat44 tm = camera.getGlobalTransform(context);
+  AiNodeSetMatrix(this.arnoldCamera, "matrix", tm);
+  //Vec3 pos = camera.getGlobalPosition(context);
+  //Vec3 dir = camera.getGlobalDirection(context) * camera.getFocalDistance(context);
+  //Vec3 focal = pos - dir;
 
-  AiNodeSetPnt(this.arnoldCamera, "position", pos.x, pos.y, pos.z);
-  AiNodeSetPnt(this.arnoldCamera, "look_at", focal.x, focal.y, focal.z);
+  //report("Pt: " + pos + " -> " + focal);
+
+  //AiNodeSetPnt(this.arnoldCamera, "position", pos.x, pos.y, pos.z);
+  //AiNodeSetPnt(this.arnoldCamera, "look_at", focal.x, focal.y, focal.z);
 }

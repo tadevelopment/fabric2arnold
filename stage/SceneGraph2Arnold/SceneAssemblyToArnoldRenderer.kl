@@ -41,6 +41,17 @@ SceneAssemblyToArnoldRenderer( SceneWrapper scene, BaseDynamicGroup sourceGeomet
 
 ~SceneAssemblyToArnoldRenderer() 
 {
+
+  //Integer result = AiRender(AI_RENDER_MODE_CAMERA);
+  //if (result != AI_SUCCESS)
+  //{
+  //  report("[FabricArnold::TestSuite] Error " + String(result));
+  //}
+
+  // Before we quit, write out the ass file for reference
+  String ass_file = "c:\\temp\\rtr2_out.ass";
+  AiASSWrite(ass_file, AI_NODE_ALL, false, true);
+
   AiEnd();
 }
 
@@ -111,9 +122,9 @@ SceneAssemblyToArnoldRenderer.update!( SGCamera camera, SInt32 frame ) {
 
 
   // Try launching a render
-  Integer result = AiRender(AI_RENDER_MODE_CAMERA);
-  if (result != AI_SUCCESS)
-  {
-    report("[FabricArnold::TestSuite] Error " + String(result));
-  }
+  //Integer result = AiRender(AI_RENDER_MODE_CAMERA);
+  //if (result != AI_SUCCESS)
+ // {
+ //   report("[FabricArnold::TestSuite] Error " + String(result));
+  //}
 }

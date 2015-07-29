@@ -28,6 +28,8 @@ SceneGraphToArnoldRenderer( SceneGraph sg, SGCamera camera ) {
   RegisterAdaptor( PolygonMesh, ArnoldRendererTargetName, PolygonMeshToArnoldRenderer );
   RegisterAdaptor( SGPointLight, ArnoldRendererTargetName, SGPointLightToArnoldRenderer );
   RegisterAdaptor( SGShadowPointLight, ArnoldRendererTargetName, SGShadowPointLightToArnoldRenderer );
+  RegisterAdaptor( SGDirectionalLight, ArnoldRendererTargetName, SGDirectionalLightToArnoldRenderer );
+  RegisterAdaptor( SGShadowDirectionalLight, ArnoldRendererTargetName, SGShadowDirectionalLightToArnoldRenderer );
   RegisterAdaptor( SGCamera, ArnoldRendererTargetName, CameraToArnoldRenderer );
 }
 

@@ -10,7 +10,7 @@ function attributeToAtArray(io AtNode node, io PolygonMesh mesh, GeometryAttribu
   UInt32 packedIndices[];
   mesh.getPolygonPackedSharedAttributeValues(attr, outAttr, packedIndices);
   
-  AtArray vlist = AiArrayConvert(outAttr.size(), 1, AI_TYPE_POINT, outAttr.data());
+  AtArray vlist = AiArrayConvert(outAttr.size(), 1, type, outAttr.data());
   AtArray vidxs = AiArrayConvert(packedIndices.size(), 1, AI_TYPE_INT, packedIndices.data());
   AiNodeSetArray(node, name,  vlist);
   AiNodeSetArray(node, indices,  vidxs);
@@ -32,7 +32,7 @@ function AtNode FabricToArnoldPolygonMesh( io PolygonMesh mesh, io AtNode node)
   mesh.getTopologyCountsAndAttributeIndices(klnsides, klindices);
   AtArray nsides = AiArrayConvert(klnsides.size(), 1, AI_TYPE_INT, klnsides.data());
   AiNodeSetArray(node, "nsides", nsides);
-  
+
   // Set positions
   {
     Ref<Vec3Attribute> positions = mesh.attributes.positionsAttribute;

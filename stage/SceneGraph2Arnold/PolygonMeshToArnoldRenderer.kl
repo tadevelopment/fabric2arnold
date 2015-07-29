@@ -39,8 +39,8 @@ function Boolean PolygonMeshToArnoldRenderer.updateSource!( Ref<Object> source )
     }
     else {
       this.arnoldMesh = FabricToArnoldPolygonMesh(this.mesh);
-      String name = this.mesh.debugName;
-      AiNodeSetStr(this.arnoldMesh, "name", name);
+      //String name = this.mesh.debugName;
+      //AiNodeSetStr(this.arnoldMesh, "name", name);
     }
   }
   return true;

@@ -74,28 +74,32 @@ Boolean GeometryInstanceToArnoldRenderer.update!(Ref<SWContext> swContext) {
     Boolean isInstanced = AiNodeGetBool(geomNode, 'fabric_translator');
     if (!isInstanced) // if this is the first node to translate this geometry
     {
-      report("-- Createing Original --");
       this.arnoldInstance = geomNode;
       AiNodeDeclare(geomNode, "fabric_translator", "constant BOOL");
       AiNodeSetBool(geomNode, 'fabric_translator', true);
     }
     else 
     {
-      report("-- Createing Instance --");
       AtNode instanceNode = AiNode("ginstance");
       AiNodeSetPtr( instanceNode, "node", geomNode._handle );
-
-      String name = this.sourceReference.getFullName();
-      AiNodeSetStr( instanceNode, 'name', name);
       this.arnoldInstance = instanceNode;
     }
 
+    // Names must? be unique in Arnold, so ensure our node is named appropriately
+    String instName = this.sourceReference.getName();
+    AiNodeSetStr( this.arnoldInstance, 'name', instName);
+
+
     // We are the first to take ownership of this geom
     // create a lambert shader TODO - proper materials
-    AtNode lambert = AiNode("lambert");
-    String name = this.sourceReference.getName() + "Shader";
-    AiNodeSetStr(lambert, "name", name);
-    AiNodeSetRGB(lambert, "Kd_color", 0.0, 1.0, 0.0); // TODO - get color from somewhere.
+    String mtlName = "shader" + this.sourceReference.getName();
+    AtNode lambert = AiNodeLookUpByName(mtlName);
+    if (!lambert.isValid())
+    {
+      lambert = AiNode("lambert");
+      AiNodeSetStr(lambert, "name", mtlName);
+      AiNodeSetRGB(lambert, "Kd_color", 0.0, 1.0, 0.0); // TODO - get color from somewhere.
+    }
 
     // assign the f2ateapot's shader
     AiNodeSetPtr(this.arnoldInstance, "shader", lambert._handle);

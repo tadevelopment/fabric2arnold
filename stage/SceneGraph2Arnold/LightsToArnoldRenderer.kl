@@ -1,5 +1,6 @@
 
 
+////////////////////////////////////////////////////////////////////////////////////
 // Define an adaptor skeleton for SGPointLight.
 // This is a simplified hierarchy; a base one could have been defined
 // for the SGBaseLight.
@@ -45,6 +46,7 @@ Boolean SGPointLightToArnoldRenderer.update!(Ref<SWContext> swContext) {
   return true;
 }
 
+////////////////////////////////////////////////////////////////////////////////////
 // Define an adaptor skeleton for SGShadowPointLight,
 // which only adds handling of the "castShadow" parameter.
 object SGShadowPointLightToArnoldRenderer : SGPointLightToArnoldRenderer {
@@ -63,4 +65,73 @@ Boolean SGShadowPointLightToArnoldRenderer.update!(Ref<SWContext> swContext) {
   report( "      enabled shadow = " + sourceLight.castShadows( sourceLightContext ) );
 
   return true;
+}
+
+////////////////////////////////////////////////////////////////////////////////////
+object SGDirectionalLightToArnoldRenderer : BaseSWTransformedAdaptor, ArnoldRendererTargetAdaptor {
+  ArnoldRenderer renderer;
+  AtNode arnoldLight;
+};
+
+SGDirectionalLightToArnoldRenderer.setRenderer!(ArnoldRenderer renderer) {
+  this.renderer = renderer;
+
+  // This function is our initialization routine, Here we create the point light
+  this.arnoldLight = AiNode("distant_light");
+
+  String name = this.sourceReference.getName();
+  AiNodeSetStr(this.arnoldLight, "name", name);
+  AiNodeSetFlt(this.arnoldLight, "exposure", 10.5);
+
+  AiNodeSetBool(this.arnoldLight, "cast_shadows", false);
+}
+
+~SGDirectionalLightToArnoldRenderer() {
+  report( this.type() + " destroying" );
+}
+
+Boolean SGDirectionalLightToArnoldRenderer.update!(Ref<SWContext> swContext) {
+
+  this.parent.update( swContext );
+
+  SGDirectionalLight sourceLight = this.sourceReference.getObjectValue();
+
+  // Note: get the SGContext from the elementRef to ensure we get the values 
+  // in the context of the right parent and frame.
+  SGContext sourceLightContext = this.sourceReference.getSGContext();
+
+  Vec3 direction = sourceLight.getGlobalDirection( sourceLightContext );
+
+  // Lights in Arnold fire down the -Z axis
+  //Xfo xfo;
+  //xfo.ori.setFrom2Vectors(Vec3(0, 0, -1), direction);
+  //Mat44 mtx = xfo.toMat44();
+  //AiNodeSetMatrix(this.arnoldLight, "matrix", mtx);
+
+  AiNodeSetVec(this.arnoldLight, "direction", direction.x, direction.y, direction.z);
+
+  Color color = sourceLight.getColor( sourceLightContext );
+  AiNodeSetRGB(this.arnoldLight, "color", color.r, color.g, color.b);
+
+  // report( "    Updating "+ sourceLight.type() + " " + this.sourceReference.getFullName()
+  //         + "\n      frame = " + swContext.getFrame()
+  //         + "\n      pos = " + 
+  //         + "\n      color = " + sourceLight.getColor( sourceLightContext )
+  //         + "\n      intensity = " + sourceLight.getIntensity( sourceLightContext ) );
+
+  return true;
+}
+
+////////////////////////////////////////////////////////////////////////////////////
+object SGShadowDirectionalLightToArnoldRenderer : SGDirectionalLightToArnoldRenderer {
+};
+
+~SGShadowDirectionalLightToArnoldRenderer() {
+  report( this.type() + " destroying" );
+}
+
+SGShadowDirectionalLightToArnoldRenderer.setRenderer!(ArnoldRenderer renderer) {
+  this.parent.setRenderer(renderer);
+
+  AiNodeSetBool(this.arnoldLight, "cast_shadows", true);
 }
