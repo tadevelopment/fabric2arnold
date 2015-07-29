@@ -1,9 +1,38 @@
+require FileIO;
 
+function Boolean setArnoldRenderToDisplay() {
+  AtNode driver = AiNodeLookUpByName("display_onscreen");
+  if (!driver.isValid()) {
+    // create an output driver - this pushes renders to disk
+    driver = AiNode("driver_display");
+    AiNodeSetStr(driver, "name", "display_onscreen");
+  }
 
-// Call this function to render out to a file.
-// This assumes that Arnold scene has been setup correctly already
-function Boolean doArnoldRenderToFile(String outFilename) {
-    // If, at some point we supported Async rendering, this call would be necessery
+  // create a gaussian filter node
+  AtNode gfilter = AiNodeLookUpByName("myfilter");
+  if (!gfilter.isValid())
+  {
+    gfilter = AiNode("gaussian_filter");
+    AiNodeSetStr(gfilter, "name", "myfilter");      
+  }
+
+  AtNode options = AiUniverseGetOptions();
+
+  // TODO: Move these settings elsewhere
+  AiNodeSetInt(options, "AA_samples", 4);
+  AiNodeSetInt(options, "xres", 320);
+  AiNodeSetInt(options, "yres", 240);
+
+  // assign the driver and the filter to the outputs
+  AtArray outputs_array = AiArrayAllocate(1, 1, AI_TYPE_STRING);
+  AiArraySetStr(outputs_array, 0, "RGBA RGBA myfilter display_onscreen");
+  AiNodeSetArray(options, "outputs", outputs_array);
+
+  return true;
+}
+
+function Boolean setArnoldOutFilename(String outFilename) {
+  // If, at some point we supported Async rendering, this call would be necessery
   if (AiRendering())
   {
     AiRenderInterrupt();
@@ -15,6 +44,14 @@ function Boolean doArnoldRenderToFile(String outFilename) {
   AiNodeSetInt(options, "xres", 320);
   AiNodeSetInt(options, "yres", 240);
 
+  // create a gaussian filter node
+  AtNode gfilter = AiNodeLookUpByName("myfilter");
+  if (!gfilter.isValid())
+  {
+    gfilter = AiNode("gaussian_filter");
+    AiNodeSetStr(gfilter, "name", "myfilter");      
+  }
+
   // For now, assume we are writing to a JPG file
   // This could be fixed in future.
   // Reset file output
@@ -24,18 +61,24 @@ function Boolean doArnoldRenderToFile(String outFilename) {
     driver = AiNode("driver_jpeg");
     AiNodeSetStr(driver, "name", "jpg_driver");
 
-    // create a gaussian filter node
-    AtNode gfilter = AiNode("gaussian_filter");
-    AiNodeSetStr(gfilter, "name", "myfilter");
-
     // assign the driver and the filter to the outputs
     AtArray outputs_array = AiArrayAllocate(1, 1, AI_TYPE_STRING);
-    AiArraySetStr(outputs_array, 0, "RGB RGB myfilter jpg_driver");
+    AiArraySetStr(outputs_array, 0, "RGBA RGBA myfilter jpg_driver");
     AiNodeSetArray(options, "outputs", outputs_array);
   }
 
   // Set filename we are writing out to
   AiNodeSetStr(driver, "filename", outFilename);
+
+  return true;
+}
+
+
+// Call this function to render out to a file.
+// This assumes that Arnold scene has been setup correctly already
+function Boolean doArnoldRenderToFile(String outFilename) {
+
+  setArnoldOutFilename(outFilename);
 
   // Try launching a render
   Integer result = AiRender(AI_RENDER_MODE_CAMERA);
@@ -45,4 +88,13 @@ function Boolean doArnoldRenderToFile(String outFilename) {
     return false;
   }
   return true;
+}
+
+function SInt32 doArnoldRenderToASS(String outFilename) {
+  FilePath fp(outFilename);
+  // By default, an ASS file writes to a jpg at the same location
+  String jpgFilename = fp.replaceExtension('jpg').string();
+  setArnoldOutFilename(jpgFilename);
+
+  return AiASSWrite(outFilename, AI_NODE_ALL, false, true);
 }
