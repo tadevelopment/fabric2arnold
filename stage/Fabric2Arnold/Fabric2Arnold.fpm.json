@@ -19,5 +19,6 @@
     "ai_ray.kl",
     "ai_texture.kl",
     "ai_universe.kl",
+    "_AtDisplayCallback.kl",
   ]
 }

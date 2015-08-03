@@ -10,5 +10,6 @@
 #include "Fabric2Arnold.h"
 #include "_opaque_types.h"
 #include "_typemapping.h"
+#include "_AtDisplayCallback.h"
 
 #endif
