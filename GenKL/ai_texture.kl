@@ -1,0 +1,90 @@
+/**
+    Texture mapping system 
+  
+*/
+
+require Math;
+
+/**  Structure that holds all of the available texture map look-up options 
+ */
+struct AtTextureParams {
+  SInt32 filter; //  texture look-up mode 
+ 
+  SInt32 mipmap_mode; //  mode for mipmap blending and filtering 
+ 
+  SInt32 mipmap_bias; //  mipmap level bias 
+ 
+  Boolean single_channel; //  treat image as single channel 
+ 
+  UInt8 start_channel; //  starting channel index to read from 
+ 
+  Float32 fill; //  value for nonexistent channels (e.g. alpha) 
+ 
+  Boolean flip_s; //  flip S coordinate 
+ 
+  Boolean flip_t; //  flip T coordinate 
+ 
+  Boolean swap_st; //  enable swapping of S and T coordinates 
+ 
+  Float32 scale_s; //  scale S coordinate 
+ 
+  Float32 scale_t; //  scale T coordinate 
+ 
+  SInt32 wrap_s; //  wrap mode for S coordinate 
+ 
+  SInt32 wrap_t; //  wrap mode for T coordinate 
+ 
+  Float32 width_s; //  multiplicative widening of look-ups on the S axis 
+ 
+  Float32 width_t; //  multiplicative widening of look-ups on the T axis 
+ 
+  Float32 blur_s; //  additive blur in look-ups along the S axis 
+ 
+  Float32 blur_t; //  additive blur in look-ups along the T axis 
+ 
+};
+
+/**
+Wrapping Modes
+Wrap mode describes what happens when texture coordinates describe a value outside the usual [0,1] range where a texture is defined. 
+
+*/
+
+const Integer AI_WRAP_PERIODIC = 0x00;	 //  the texture repeats itself outside the [0,1] range in (s,t)-space  
+const Integer AI_WRAP_BLACK = 0x01;	 //  return black outside the [0,1] range  
+const Integer AI_WRAP_CLAMP = 0x02;	 //  clamp to the closest texture edge  
+const Integer AI_WRAP_MIRROR = 0x03;	 //  mirror the image across the boundaries  
+const Integer AI_WRAP_FILE = 0x04;	 //  use the wrap mode found in the file  
+/**
+Texture Look-Up/Interpolation Modes
+The look-up mode determines how we sample within a mimap level. 
+
+*/
+
+const Integer AI_TEXTURE_CLOSEST = 0;	 //  force the closest texel  
+const Integer AI_TEXTURE_BILINEAR = 1;	 //  force bilinear look-up within a mip level  
+const Integer AI_TEXTURE_BICUBIC = 2;	 //  force bicubic look-up within a mip level  
+const Integer AI_TEXTURE_SMART_BICUBIC = 3;	 //  bicubic when maxifying, else use bilinear look-up  
+/**
+MIP modes
+The MIP mode determines how we sample between mipmap levels. 
+
+*/
+
+const Integer AI_TEXTURE_MIPMODE_DEFAULT = 0;	 //  use the default mode (auto-selected)  
+const Integer AI_TEXTURE_MIPMODE_NONE = 1;	 //  use highest-res mip level only  
+const Integer AI_TEXTURE_MIPMODE_ONE = 2;	 //  just use one mip level (closest)  
+const Integer AI_TEXTURE_MIPMODE_TRILINEAR = 3;	 //  trilinear blending of two closest mip levels  
+const Integer AI_TEXTURE_MIPMODE_ANISOTROPIC = 4;	 //  use two closest mip levels with anisotropic filtering  
+function AiTextureParamsSetDefaults(io AtTextureParams params) = '_fe_AiTextureParamsSetDefaults';
+function AtTextureHandle AiTextureHandleCreate(String filename) = '_fe_AiTextureHandleCreate';
+function Color AiTextureHandleAccess(AtShaderGlobals sg, io AtTextureHandle handle, AtTextureParams params, io Boolean success/*=NULL*/) = '_fe_AiTextureHandleAccess';
+function AiTextureHandleDestroy(io AtTextureHandle handle) = '_fe_AiTextureHandleDestroy';
+function Color AiTextureAccess(AtShaderGlobals sg, String filename, AtTextureParams params, io Boolean success/*=NULL*/) = '_fe_AiTextureAccess';
+function Boolean AiTextureGetResolution(String filename, io UInt32 width, io UInt32 height) = '_fe_AiTextureGetResolution';
+function Boolean AiTextureGetNumChannels(String filename, io UInt32 num_channels) = '_fe_AiTextureGetNumChannels';
+function String AiTextureGetChannelName(String filename, UInt32 channel_index) = '_fe_AiTextureGetChannelName';
+function Boolean AiTextureGetFormat(String filename, io UInt32 format) = '_fe_AiTextureGetFormat';
+function Boolean AiTextureGetBitDepth(String filename, io UInt32 bit_depth) = '_fe_AiTextureGetBitDepth';
+function Boolean AiTextureGetMatrices(String filename, Mat44 world_to_screen, Mat44 world_to_camera) = '_fe_AiTextureGetMatrices';
+function AiTextureInvalidate(String filename) = '_fe_AiTextureInvalidate';

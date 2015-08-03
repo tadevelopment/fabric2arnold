@@ -1,0 +1,84 @@
+/**
+    Generic array data type and methods 
+  
+*/
+
+require Math;
+
+/**  Generic array data type 
+ */
+struct AtArray {
+  Data data; //  raw data 
+ 
+  UInt32 nelements; //  number of elements per motion key 
+ 
+  UInt8 nkeys; //  number of motion keys 
+ 
+  UInt8 type; //  type of array 
+ 
+};
+
+Mat44 AiArrayGetMtxFunc(AtArray a, UInt32 i) = "_fe_AiArrayGetMtxFunc";
+
+function Boolean AiArraySetBool(io AtArray a, Boolean val[]) = "_fe_AiArraySetBoolArr";
+function Boolean AiArraySetByte(io AtArray a, UInt8 val[]) = "_fe_AiArraySetByteArr";
+function Boolean AiArraySetInt(io AtArray a, SInt32 val[]) = "_fe_AiArraySetIntArr";
+function Boolean AiArraySetUInt(io AtArray a, UInt32 val[]) = "_fe_AiArraySetUIntArr";
+function Boolean AiArraySetFlt(io AtArray a, Float32 val[]) = "_fe_AiArraySetFltArr";
+function Boolean AiArraySetRGBA(io AtArray a, Color val[]) = "_fe_AiArraySetRGBAArr";
+function Boolean AiArraySetPnt(io AtArray a, Vec3 val[]) = "_fe_AiArraySetPntArr";
+function Boolean AiArraySetPnt2(io AtArray a, Vec2 val[]) = "_fe_AiArraySetPnt2Arr";
+function Boolean AiArraySetVec(io AtArray a, Vec3 val[]) = "_fe_AiArraySetVecArr";
+
+function Boolean AiArrayGetBool(io AtArray a, io Boolean val<>) = "_fe_AiArrayGetBoolArr";
+function Boolean AiArrayGetByte(io AtArray a, io UInt8 val<>) = "_fe_AiArrayGetByteArr";
+function Boolean AiArrayGetInt(io AtArray a, io SInt32 val<>) = "_fe_AiArrayGetIntArr";
+function Boolean AiArrayGetUInt(io AtArray a, io UInt32 val<>) = "_fe_AiArrayGetUIntArr";
+function Boolean AiArrayGetFlt(io AtArray a, io Float32 val<>) = "_fe_AiArrayGetFltArr";
+function Boolean AiArrayGetRGBA(io AtArray a, io Color val<>) = "_fe_AiArrayGetRGBAArr";
+function Boolean AiArrayGetPnt(io AtArray a, io Vec3 val<>) = "_fe_AiArrayGetPntArr";
+function Boolean AiArrayGetPnt2(io AtArray a, io Vec2 val<>) = "_fe_AiArrayGetPnt2Arr";
+function Boolean AiArrayGetVec(io AtArray a, io Vec3 val<>) = "_fe_AiArrayGetVecArr";
+
+
+
+function AtArray AiArray(UInt32 nelements, UInt8 nkeys, UInt8 type) = '_fe_AiArray';
+function AtArray AiArrayAllocate(UInt32 nelements, UInt8 nkeys, UInt8 type) = '_fe_AiArrayAllocate';
+function AiArrayDestroy(io AtArray array) = '_fe_AiArrayDestroy';
+function AtArray AiArrayConvert(UInt32 nelements, UInt8 nkeys, UInt8 type, Data data) = '_fe_AiArrayConvert';
+function AtArray AiArrayModify(io AtArray array, UInt32 nelements, UInt8 nkeys, UInt8 type) = '_fe_AiArrayModify';
+function AtArray AiArrayCopy(AtArray array) = '_fe_AiArrayCopy';
+function Boolean AiArraySetKey(io AtArray array, UInt8 key, Data data) = '_fe_AiArraySetKey';
+function Vec3 AiArrayInterpolatePnt(AtArray array, Float32 time, UInt32 idx) = '_fe_AiArrayInterpolatePnt';
+function Vec3 AiArrayInterpolateVec(AtArray array, Float32 time, UInt32 idx) = '_fe_AiArrayInterpolateVec';
+function RGB AiArrayInterpolateRGB(AtArray array, Float32 time, UInt32 idx) = '_fe_AiArrayInterpolateRGB';
+function Color AiArrayInterpolateRGBA(AtArray array, Float32 time, UInt32 idx) = '_fe_AiArrayInterpolateRGBA';
+function Float32 AiArrayInterpolateFlt(AtArray array, Float32 time, UInt32 idx) = '_fe_AiArrayInterpolateFlt';
+function AiArrayInterpolateMtx(AtArray array, Float32 time, UInt32 idx, Mat44 result) = '_fe_AiArrayInterpolateMtx';
+function Boolean AiArrayGetBoolFunc(AtArray a, UInt32 i, String _val, SInt32 line) = '_fe_AiArrayGetBoolFunc';
+function UInt8 AiArrayGetByteFunc(AtArray a, UInt32 i, String _val, SInt32 line) = '_fe_AiArrayGetByteFunc';
+function SInt32 AiArrayGetIntFunc(AtArray a, UInt32 i, String _val, SInt32 line) = '_fe_AiArrayGetIntFunc';
+function UInt32 AiArrayGetUIntFunc(AtArray a, UInt32 i, String _val, SInt32 line) = '_fe_AiArrayGetUIntFunc';
+function Float32 AiArrayGetFltFunc(AtArray a, UInt32 i, String _val, SInt32 line) = '_fe_AiArrayGetFltFunc';
+function RGB AiArrayGetRGBFunc(AtArray a, UInt32 i, String _val, SInt32 line) = '_fe_AiArrayGetRGBFunc';
+function Color AiArrayGetRGBAFunc(AtArray a, UInt32 i, String _val, SInt32 line) = '_fe_AiArrayGetRGBAFunc';
+function Vec3 AiArrayGetPntFunc(AtArray a, UInt32 i, String _val, SInt32 line) = '_fe_AiArrayGetPntFunc';
+function Vec2 AiArrayGetPnt2Func(AtArray a, UInt32 i, String _val, SInt32 line) = '_fe_AiArrayGetPnt2Func';
+function Vec3 AiArrayGetVecFunc(AtArray a, UInt32 i, String _val, SInt32 line) = '_fe_AiArrayGetVecFunc';
+function String AiArrayGetStrFunc(AtArray a, UInt32 i, String _val, SInt32 line) = '_fe_AiArrayGetStrFunc';
+function Data AiArrayGetPtrFunc(AtArray a, UInt32 i, String _val, SInt32 line) = '_fe_AiArrayGetPtrFunc';
+function AtArray AiArrayGetArrayFunc(AtArray a, UInt32 i, String _val, SInt32 line) = '_fe_AiArrayGetArrayFunc';
+function Boolean AiArraySetBoolFunc(io AtArray a, UInt32 i, Boolean val, String _val, SInt32 line) = '_fe_AiArraySetBoolFunc';
+function Boolean AiArraySetByteFunc(io AtArray a, UInt32 i, UInt8 val, String _val, SInt32 line) = '_fe_AiArraySetByteFunc';
+function Boolean AiArraySetIntFunc(io AtArray a, UInt32 i, SInt32 val, String _val, SInt32 line) = '_fe_AiArraySetIntFunc';
+function Boolean AiArraySetUIntFunc(io AtArray a, UInt32 i, UInt32 val, String _val, SInt32 line) = '_fe_AiArraySetUIntFunc';
+function Boolean AiArraySetFltFunc(io AtArray a, UInt32 i, Float32 val, String _val, SInt32 line) = '_fe_AiArraySetFltFunc';
+function Boolean AiArraySetRGBFunc(io AtArray a, UInt32 i, RGB val, String _val, SInt32 line) = '_fe_AiArraySetRGBFunc';
+function Boolean AiArraySetRGBAFunc(io AtArray a, UInt32 i, Color val, String _val, SInt32 line) = '_fe_AiArraySetRGBAFunc';
+function Boolean AiArraySetPntFunc(io AtArray a, UInt32 i, Vec3 val, String _val, SInt32 line) = '_fe_AiArraySetPntFunc';
+function Boolean AiArraySetPnt2Func(io AtArray a, UInt32 i, Vec2 val, String _val, SInt32 line) = '_fe_AiArraySetPnt2Func';
+function Boolean AiArraySetVecFunc(io AtArray a, UInt32 i, Vec3 val, String _val, SInt32 line) = '_fe_AiArraySetVecFunc';
+function Boolean AiArraySetMtxFunc(io AtArray a, UInt32 i, Mat44 val, String _val, SInt32 line) = '_fe_AiArraySetMtxFunc';
+function Boolean AiArraySetStrFunc(io AtArray a, UInt32 i, String val, String _val, SInt32 line) = '_fe_AiArraySetStrFunc';
+function Boolean AiArraySetPtrFunc(io AtArray a, UInt32 i, io Data val, String _val, SInt32 line) = '_fe_AiArraySetPtrFunc';
+function Boolean AiArraySetArrayFunc(io AtArray a, UInt32 i, io AtArray val, String _val, SInt32 line) = '_fe_AiArraySetArrayFunc';

@@ -1,0 +1,92 @@
+/**
+    Node parameters 
+  
+*/
+
+require Math;
+
+struct AtParamValue {
+  Data param_handle;
+};
+
+UInt8 AtParamValue.asUInt8() = "_fe_AtParamValueAsUInt8";
+UInt32 AtParamValue.asUInt32() = "_fe_AtParamValueAsUInt32";
+SInt32 AtParamValue.asSInt32() = "_fe_AtParamValueAsSInt32";
+Float32 AtParamValue.asFloat32() = "_fe_AtParamValueAsFloat32";
+Vec3 AtParamValue.asVec3() = "_fe_AtParamValueAsVec3";
+Mat44 AtParamValue.asMat44() = "_fe_AtParamValueAsMat44";
+String AtParamValue.asString() = "_fe_AtParamValueAsString";
+AtArray AtParamValue.asAtArray() = "_fe_AtParamValueAsAtArray";
+
+
+/**
+Parameter Types
+See AtParamValue for the actual primitive data types that these macros refer to. 
+
+*/
+
+const Integer AI_TYPE_BYTE = 0x00;	 //  Byte (an 8-bit sized unsigned integer)  
+const Integer AI_TYPE_INT = 0x01;	 //  Integer  
+const Integer AI_TYPE_UINT = 0x02;	 //  Unsigned integer  
+const Integer AI_TYPE_BOOLEAN = 0x03;	 //  Boolean (either true or false)  
+const Integer AI_TYPE_FLOAT = 0x04;	 //  Single-precision floating point number  
+const Integer AI_TYPE_RGB = 0x05;	 //  RGB struct  
+const Integer AI_TYPE_RGBA = 0x06;	 //  RGBA struct  
+const Integer AI_TYPE_VECTOR = 0x07;	 //  XYZ vector  
+const Integer AI_TYPE_POINT = 0x08;	 //  XYZ point  
+const Integer AI_TYPE_POINT2 = 0x09;	 //  XY point  
+const Integer AI_TYPE_STRING = 0x0A;	 //  C-style character string  
+const Integer AI_TYPE_POINTER = 0x0B;	 //  Arbitrary pointer  
+const Integer AI_TYPE_NODE = 0x0C;	 //  Pointer to an Arnold node  
+const Integer AI_TYPE_ARRAY = 0x0D;	 //  AtArray  
+const Integer AI_TYPE_MATRIX = 0x0E;	 //  4x4 matrix  
+const Integer AI_TYPE_ENUM = 0x0F;	 //  Enumeration (see AtEnum)  
+const Integer AI_TYPE_UNDEFINED = 0xFF;	 //  Undefined, you should never encounter a parameter of this type  
+const Integer AI_TYPE_NONE = 0xFF;	 //  No type  
+/**
+Parameter Categories for User-Data
+
+*/
+
+const Integer AI_USERDEF_UNDEFINED = 0;	 //  Undefined, you should never encounter a parameter of this category  
+const Integer AI_USERDEF_CONSTANT = 1;	 //  User-defined: per-object parameter  
+const Integer AI_USERDEF_UNIFORM = 2;	 //  User-defined: per-face parameter  
+const Integer AI_USERDEF_VARYING = 3;	 //  User-defined: per-vertex parameter  
+const Integer AI_USERDEF_INDEXED = 4;	 //  User-defined: per-face-vertex parameter  
+/**
+AtParamEntry Methods
+
+*/
+
+function String AiParamGetName(AtParamEntry pentry) = '_fe_AiParamGetName';
+function SInt32 AiParamGetType(AtParamEntry pentry) = '_fe_AiParamGetType';
+function AtParamValue AiParamGetDefault(AtParamEntry pentry) = '_fe_AiParamGetDefault';
+function String[] AiParamGetEnum(AtParamEntry pentry) = '_fe_AiParamGetEnum';
+function String AiParamGetTypeName(UInt8 type) = '_fe_AiParamGetTypeName';
+function SInt32 AiParamGetTypeSize(UInt8 type) = '_fe_AiParamGetTypeSize';
+/**
+AtUserParamEntry Methods
+
+*/
+
+function String AiUserParamGetName(AtUserParamEntry upentry) = '_fe_AiUserParamGetName';
+function SInt32 AiUserParamGetType(AtUserParamEntry upentry) = '_fe_AiUserParamGetType';
+function SInt32 AiUserParamGetArrayType(AtUserParamEntry upentry) = '_fe_AiUserParamGetArrayType';
+function SInt32 AiUserParamGetCategory(AtUserParamEntry upentry) = '_fe_AiUserParamGetCategory';
+function SInt32 AiUserParamGetIndex(AtUserParamEntry upentry) = '_fe_AiUserParamGetIndex';
+function AiNodeParamByte(io AtList params, SInt32 varoffset, String pname, UInt8 pdefault) = '_fe_AiNodeParamByte';
+function AiNodeParamInt(io AtList params, SInt32 varoffset, String pname, SInt32 pdefault) = '_fe_AiNodeParamInt';
+function AiNodeParamUInt(io AtList params, SInt32 varoffset, String pname, UInt32 pdefault) = '_fe_AiNodeParamUInt';
+function AiNodeParamBool(io AtList params, SInt32 varoffset, String pname, Boolean pdefault) = '_fe_AiNodeParamBool';
+function AiNodeParamFlt(io AtList params, SInt32 varoffset, String pname, Float32 pdefault) = '_fe_AiNodeParamFlt';
+function AiNodeParamRGB(io AtList params, SInt32 varoffset, String pname, Float32 r, Float32 g, Float32 b) = '_fe_AiNodeParamRGB';
+function AiNodeParamRGBA(io AtList params, SInt32 varoffset, String pname, Float32 r, Float32 g, Float32 b, Float32 a) = '_fe_AiNodeParamRGBA';
+function AiNodeParamVec(io AtList params, SInt32 varoffset, String pname, Float32 x, Float32 y, Float32 z) = '_fe_AiNodeParamVec';
+function AiNodeParamPnt(io AtList params, SInt32 varoffset, String pname, Float32 x, Float32 y, Float32 z) = '_fe_AiNodeParamPnt';
+function AiNodeParamPnt2(io AtList params, SInt32 varoffset, String pname, Float32 x, Float32 y) = '_fe_AiNodeParamPnt2';
+function AiNodeParamStr(io AtList params, SInt32 varoffset, String pname, String pdefault) = '_fe_AiNodeParamStr';
+function AiNodeParamPtr(io AtList params, SInt32 varoffset, String pname, io Data pdefault) = '_fe_AiNodeParamPtr';
+function AiNodeParamNode(io AtList params, SInt32 varoffset, String pname, io AtNode pdefault) = '_fe_AiNodeParamNode';
+function AiNodeParamArray(io AtList params, SInt32 varoffset, String pname, io AtArray pdefault) = '_fe_AiNodeParamArray';
+function AiNodeParamMtx(io AtList params, SInt32 varoffset, String pname, Mat44 matrix) = '_fe_AiNodeParamMtx';
+function AiNodeParamEnum(io AtList params, SInt32 varoffset, String pname, SInt32 pdefault, String[] enum_type) = '_fe_AiNodeParamEnum';

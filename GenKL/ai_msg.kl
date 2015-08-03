@@ -1,0 +1,49 @@
+/**
+    API for logging messages of different severities - info, warnings, errors 
+  
+*/
+
+require Math;
+
+/**
+Severity Codes
+
+*/
+
+const Integer AI_SEVERITY_INFO = 0x00;	 //  regular information message  
+const Integer AI_SEVERITY_WARNING = 0x01;	 //  warning message  
+const Integer AI_SEVERITY_ERROR = 0x02;	 //  error message  
+const Integer AI_SEVERITY_FATAL = 0x03;	 //  fatal error message  
+/**
+Logging Flags
+
+*/
+
+const Integer AI_LOG_NONE = 0x0000;	 //  don't show any messages  
+const Integer AI_LOG_INFO = 0x0001;	 //  show all regular information messages  
+const Integer AI_LOG_WARNINGS = 0x0002;	 //  show warning messages  
+const Integer AI_LOG_ERRORS = 0x0004;	 //  show error messages  
+const Integer AI_LOG_DEBUG = 0x0008;	 //  show debug messages  
+const Integer AI_LOG_STATS = 0x0010;	 //  show detailed render statistics  
+const Integer AI_LOG_ASS_PARSE = 0x0020;	 //  show .ass-file parsing details  
+const Integer AI_LOG_PLUGINS = 0x0040;	 //  show details about plugins loaded  
+const Integer AI_LOG_PROGRESS = 0x0080;	 //  show progress messages at 5% increments while rendering  
+const Integer AI_LOG_NAN = 0x0100;	 //  show warnings for pixels with NaN's  
+const Integer AI_LOG_TIMESTAMP = 0x0200;	 //  prefix messages with a timestamp (elapsed time)  
+const Integer AI_LOG_BACKTRACE = 0x0400;	 //  show stack contents after abnormal program termination (SIGSEGV, etc)  
+const Integer AI_LOG_MEMORY = 0x0800;	 //  prefix messages with current memory usage  
+const Integer AI_LOG_COLOR = 0x1000;	 //  add colors to log messages based on severity  
+const Integer AI_LOG_SSS = 0x2000;	 //  show messages about sub-surface scattering pointclouds  
+function AiMsgSetLogFileName(String filename) = '_fe_AiMsgSetLogFileName';
+function AiMsgSetLogFileFlags(SInt32 flags) = '_fe_AiMsgSetLogFileFlags';
+function AiMsgSetConsoleFlags(SInt32 flags) = '_fe_AiMsgSetConsoleFlags';
+function AiMsgSetMaxWarnings(SInt32 max_warnings) = '_fe_AiMsgSetMaxWarnings';
+function AiMsgResetCallback() = '_fe_AiMsgResetCallback';
+function AiMsgInfo(String format) = '_fe_AiMsgInfo';
+function AiMsgDebug(String format) = '_fe_AiMsgDebug';
+function AiMsgWarning(String format) = '_fe_AiMsgWarning';
+function AiMsgError(String format) = '_fe_AiMsgError';
+function AiMsgFatal(String format) = '_fe_AiMsgFatal';
+function AiMsgTab(SInt32 tabinc) = '_fe_AiMsgTab';
+function UInt64 AiMsgUtilGetUsedMemory() = '_fe_AiMsgUtilGetUsedMemory';
+function UInt32 AiMsgUtilGetElapsedTime() = '_fe_AiMsgUtilGetElapsedTime';

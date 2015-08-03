@@ -1,0 +1,61 @@
+/**
+    Global entry point to the scene graph elements (options, camera, lights, etc) 
+  
+*/
+
+require Math;
+
+/**  */
+struct AtAOVEntry {
+  String name; //  
+  UInt8 type; //  
+  SInt32 blend_mode; //  
+};
+
+/**
+Methods
+
+*/
+
+function Boolean AiUniverseIsActive() = '_fe_AiUniverseIsActive';
+function Boolean AiUniverseCacheFlush(SInt32 cache_flags) = '_fe_AiUniverseCacheFlush';
+function AtNode AiUniverseGetOptions() = '_fe_AiUniverseGetOptions';
+function AtNode AiUniverseGetCamera() = '_fe_AiUniverseGetCamera';
+function Box3 AiUniverseGetSceneBounds() = '_fe_AiUniverseGetSceneBounds';
+function AtNodeIterator AiUniverseGetNodeIterator(UInt32 node_mask) = '_fe_AiUniverseGetNodeIterator';
+function AtNodeEntryIterator AiUniverseGetNodeEntryIterator(UInt32 node_mask) = '_fe_AiUniverseGetNodeEntryIterator';
+function AtAOVIterator AiUniverseGetAOVIterator() = '_fe_AiUniverseGetAOVIterator';
+/**
+Node Iterator API
+
+*/
+
+function AiNodeIteratorDestroy(io AtNodeIterator iter) = '_fe_AiNodeIteratorDestroy';
+function AtNode AiNodeIteratorGetNext(io AtNodeIterator iter) = '_fe_AiNodeIteratorGetNext';
+function Boolean AiNodeIteratorFinished(AtNodeIterator iter) = '_fe_AiNodeIteratorFinished';
+/**
+Node Entry Iterator API
+
+*/
+
+function AiNodeEntryIteratorDestroy(io AtNodeEntryIterator iter) = '_fe_AiNodeEntryIteratorDestroy';
+function AtNodeEntry AiNodeEntryIteratorGetNext(io AtNodeEntryIterator iter) = '_fe_AiNodeEntryIteratorGetNext';
+function Boolean AiNodeEntryIteratorFinished(AtNodeEntryIterator iter) = '_fe_AiNodeEntryIteratorFinished';
+/**
+AOV Iterator API
+
+*/
+
+function AiAOVIteratorDestroy(io AtAOVIterator iter) = '_fe_AiAOVIteratorDestroy';
+function AtAOVEntry AiAOVIteratorGetNext(io AtAOVIterator iter) = '_fe_AiAOVIteratorGetNext';
+function Boolean AiAOVIteratorFinished(AtAOVIterator iter) = '_fe_AiAOVIteratorFinished';
+/**
+Cache Types
+
+*/
+
+const Integer AI_CACHE_TEXTURE = 0x0001;	 //  Flushes all texturemaps  
+const Integer AI_CACHE_HAIR_DIFFUSE = 0x0004;	 //  Flushes hair diffuse cache  
+const Integer AI_CACHE_BACKGROUND = 0x0008;	 //  Flushes all skydome importance tables for background  
+const Integer AI_CACHE_QUAD = 0x0010;	 //  Flushes all quad lights importance tables  
+const Integer AI_CACHE_ALL = 0xFFFF;	 //  Flushes all cache types simultaneously  
