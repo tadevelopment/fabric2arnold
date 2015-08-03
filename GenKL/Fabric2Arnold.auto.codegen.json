@@ -263,6 +263,12 @@
             "from": "KLAtBucket_to_CPAtBucket", 
             "to": "CPAtBucket_to_KLAtBucket"
         }, 
+        "AtDisplayCallback": {
+            "ctype": "AtDisplayCallback", 
+            "from": "KlAtDisplayCallback_to_AtDisplayCallback", 
+            "methodop": ".", 
+            "to": "AtDisplayCallback_to_KLAtDisplayCallback"
+        }, 
         "AtLicenseInfo": {
             "ctype": "AtLicenseInfo*", 
             "from": "KlAtLicenseInfo_to_AtLicenseInfo", 

@@ -266,7 +266,8 @@
         "_fe_AtParamValueAsString": "  const char* f2a_result = f2aThis_->STR;\n  char_to_String(f2a_result, _result);\n", 
         "_fe_AtParamValueAsUInt32": "  AtUInt32 f2a_result = f2aThis_->UINT;\n  KL::UInt32 _result;\n  AtUInt32_to_UInt32(f2a_result, _result);\n  return _result;\n", 
         "_fe_AtParamValueAsUInt8": "  AtByte f2a_result = f2aThis_->BYTE;\n  KL::UInt8 _result;\n  AtByte_to_UInt8(f2a_result, _result);\n  return _result;\n", 
-        "_fe_AtParamValueAsVec3": "  AtVector f2a_result = f2aThis_->VEC;\n  AtPoint_to_Vec3(f2a_result, _result);\n"
+        "_fe_AtParamValueAsVec3": "  AtVector f2a_result = f2aThis_->VEC;\n  AtPoint_to_Vec3(f2a_result, _result);\n", 
+        "_fe_SetAtDisplayCallback": "  SetDisplayDriverNode(f2aDisplayDriver);\n  AiNodeSetPtr(f2aDisplayDriver, \"callback\", f2aCallback);\n"
     }, 
     "functionentry": "F2A_TRY_STATEMENT", 
     "functionexit": "F2A_CATCH_STATEMENT", 
@@ -296,6 +297,12 @@
             "ctype": "AtBucket*", 
             "from": "KLAtBucket_to_CPAtBucket", 
             "to": "CPAtBucket_to_KLAtBucket"
+        }, 
+        "AtDisplayCallback": {
+            "ctype": "AtDisplayCallback", 
+            "from": "KlAtDisplayCallback_to_AtDisplayCallback", 
+            "methodop": ".", 
+            "to": "AtDisplayCallback_to_KLAtDisplayCallback"
         }, 
         "AtLicenseInfo": {
             "ctype": "AtLicenseInfo*", 

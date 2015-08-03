@@ -6958,3 +6958,27 @@ FABRIC_EXT_EXPORT Fabric::EDK::KL::Boolean _fe_AiAOVIteratorFinished(
 
   F2A_CATCH_STATEMENT_RETURN("_fe_AiAOVIteratorFinished", )
 }
+
+// Defined at E:\dev\HordeSoftware\fabric2arnold\GenKL/\_AtDisplayCallback.kl:21:1
+FABRIC_EXT_EXPORT void _fe_SetAtDisplayCallback(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtNode >::INParam displayDriver,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtDisplayCallback >::INParam callback
+)
+{
+  F2A_TRY_STATEMENT("_fe_SetAtDisplayCallback")
+
+  AtNode* f2aDisplayDriver = NULL;
+  if(!KLAtNode_to_CPAtNode(displayDriver, f2aDisplayDriver)){
+    setError("Error in _fe_SetAtDisplayCallback. unable to convert: displayDriver");
+    return;
+  }
+  AtDisplayCallback f2aCallback;
+  if(!KlAtDisplayCallback_to_AtDisplayCallback(callback, f2aCallback)){
+    setError("Error in _fe_SetAtDisplayCallback. unable to convert: callback");
+    return;
+  }
+  SetDisplayDriverNode(f2aDisplayDriver);
+  AiNodeSetPtr(f2aDisplayDriver, "callback", f2aCallback);
+
+  F2A_CATCH_STATEMENT("_fe_SetAtDisplayCallback")
+}

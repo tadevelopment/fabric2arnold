@@ -156,6 +156,16 @@ inline bool AtString_to_String(const AtString & from, Fabric::EDK::KL::AtString 
   return true; 
 }
 
+inline bool KlAtDisplayCallback_to_AtDisplayCallback(const Fabric::EDK::KL::AtDisplayCallback & from, AtDisplayCallback & to) { 
+  #pragma message("Implement Me")
+  return true;
+}
+
+inline bool AtDisplayCallback_to_KLAtDisplayCallback(const AtDisplayCallback & from, Fabric::EDK::KL::AtDisplayCallback & to) {
+  #pragma message("Implement Me")
+  return true; 
+}
+
 inline bool Float64_to_double(const Fabric::EDK::KL::Float64 & from, double & to) { 
   #pragma message("Implement Me")
   return true;

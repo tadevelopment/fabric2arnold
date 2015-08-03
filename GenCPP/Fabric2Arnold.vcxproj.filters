@@ -11,6 +11,9 @@
 		</Filter>
 	</ItemGroup>
 	<ItemGroup>
+		<ClInclude Include="h\_AtDisplayCallback.h">
+			<Filter>Header Files</Filter>
+		</ClInclude>
 		<ClInclude Include="h\_defines.h">
 			<Filter>Header Files</Filter>
 		</ClInclude>
@@ -45,6 +48,12 @@
 			<Filter>Header Files</Filter>
 		</ClInclude>
 		<ClInclude Include="h\AtCameraOutput.h">
+			<Filter>Header Files</Filter>
+		</ClInclude>
+		<ClInclude Include="h\AtDisplayCallback.h">
+			<Filter>Header Files</Filter>
+		</ClInclude>
+		<ClInclude Include="h\AtDisplayCallback_impl.h">
 			<Filter>Header Files</Filter>
 		</ClInclude>
 		<ClInclude Include="h\AtLicenseInfo.h">
@@ -220,6 +229,9 @@
 		</ClInclude>
 	</ItemGroup>
 	<ItemGroup>
+		<ClCompile Include="cpp\_AtDisplayCallback.cpp">
+			<Filter>Source Files</Filter>
+		</ClCompile>
 		<ClCompile Include="cpp\AtParamValue_functions.cpp">
 			<Filter>Source Files</Filter>
 		</ClCompile>
