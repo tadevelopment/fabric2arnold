@@ -32,9 +32,6 @@ SceneGraphToArnoldRenderer( SceneGraph sg, SGCamera camera ) {
   RegisterAdaptor( SGDirectionalLight, ArnoldRendererTargetName, SGDirectionalLightToArnoldRenderer );
   RegisterAdaptor( SGShadowDirectionalLight, ArnoldRendererTargetName, SGShadowDirectionalLightToArnoldRenderer );
   RegisterAdaptor( SGCamera, ArnoldRendererTargetName, CameraToArnoldRenderer );
-
-  RegisterAdaptor( SGGXMaterial, ArnoldRendererTargetName, MaterialToArnoldRenderer);
-  RegisterAdaptor( SGGXTexture, ArnoldRendererTargetName, TextureToArnoldRenderer);
 }
 
 SceneGraphToArnoldRenderer.update!( SInt32 frame ) {

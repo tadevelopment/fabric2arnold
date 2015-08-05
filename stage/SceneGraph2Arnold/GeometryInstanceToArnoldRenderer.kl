@@ -37,28 +37,7 @@ GeometryInstanceToArnoldRenderer.setRenderer!(ArnoldRenderer renderer) {
 }
 
 SGObject getEntityInstanceMaterial(SGObject instance) {
-  // The SGObject referred to is the geometry, the material is the sibling
-  SGObject owner = instance.getOwnerInstance();
-  if (owner.isValid())
-  {
-    SGContext ctxt;
-    SGInstanceGroup asGroup = owner.getWrapper(ctxt);
-    if (asGroup != null)
-    {
-      Size nChildren = asGroup.getChildrenCount();
-      if (nChildren != 2)
-        throw("What the fuck is going on here? " + owner.getFullPath());
-      
-      // The 2nd child is the material
-      SGObject childObj = asGroup.getChild( 1, ctxt );
-
-      // Verify this is, indeed, a material
-      SGContext context;
-      SGGXMaterial material = childObj.getWrapper(context);
-      if (material != null)
-        return childObj;
-    }
-  }
+  // TODO
   return SGObject();
 }
 
