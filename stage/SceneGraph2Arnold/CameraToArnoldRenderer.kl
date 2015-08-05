@@ -6,7 +6,6 @@ object CameraToArnoldRenderer {
 
 function CameraToArnoldRenderer() {
 
-  report("Creating Camera");
   // create a perspective camera
   this.arnoldCamera = AiNode("persp_camera");
   AiNodeSetStr(this.arnoldCamera, "name", "mycamera");
@@ -24,16 +23,6 @@ CameraToArnoldRenderer.update!(SGCamera camera, SGContext context)
     return;
   }
   
-  report("Update Camera");
-
   Mat44 tm = camera.getGlobalTransform(context);
   AiNodeSetMatrix(this.arnoldCamera, "matrix", tm);
-  //Vec3 pos = camera.getGlobalPosition(context);
-  //Vec3 dir = camera.getGlobalDirection(context) * camera.getFocalDistance(context);
-  //Vec3 focal = pos - dir;
-
-  //report("Pt: " + pos + " -> " + focal);
-
-  //AiNodeSetPnt(this.arnoldCamera, "position", pos.x, pos.y, pos.z);
-  //AiNodeSetPnt(this.arnoldCamera, "look_at", focal.x, focal.y, focal.z);
 }

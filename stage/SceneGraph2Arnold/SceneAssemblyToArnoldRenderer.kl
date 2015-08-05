@@ -41,13 +41,6 @@ SceneAssemblyToArnoldRenderer( SceneWrapper scene, BaseDynamicGroup sourceGeomet
 
 ~SceneAssemblyToArnoldRenderer() 
 {
-
-  //Integer result = AiRender(AI_RENDER_MODE_CAMERA);
-  //if (result != AI_SUCCESS)
-  //{
-  //  report("[FabricArnold::TestSuite] Error " + String(result));
-  //}
-
   // Before we quit, write out the ass file for reference
   String ass_file = "c:\\temp\\rtr2_out.ass";
   AiASSWrite(ass_file, AI_NODE_ALL, false, true);
@@ -61,13 +54,10 @@ SceneAssemblyToArnoldRenderer.initArnold!()
 
   AiMsgSetLogFileName('c:\\temp\\arnold_log.log');
   AiMsgSetLogFileFlags(AI_LOG_DEBUG);
-  AiMsgSetConsoleFlags(AI_LOG_DEBUG);
 
   // set render options
-  AtNode options = AiUniverseGetOptions();
-  AiNodeSetInt(options, "AA_samples", 4);
-  AiNodeSetInt(options, "xres", 320);
-  AiNodeSetInt(options, "yres", 240);
+  // Load our default options file
+  AiASSLoad('F:/src/staylor_MTL-BD702/dev/tools/GXAssembly/arnold.cfg.ass', AI_NODE_ALL);
 
   this.camera = CameraToArnoldRenderer();
 }
@@ -88,4 +78,12 @@ SceneAssemblyToArnoldRenderer.update!( SGCamera camera, SInt32 frame ) {
   this.geometries.update();
   this.lights.update();
   this.camera.update(camera, SGContext());
+
+  // Add default light, just for now
+  AtNode existingNode = AiNodeLookUpByName('def_ambient');
+  if (!existingNode.isValid())
+  {
+    existingNode = AiNode("ambient_light");
+    AiNodeSetFlt(existingNode, 'intensity', 0.2);
+  }
 }

@@ -2,6 +2,8 @@
   "code" : [
     "ArnoldRenderer.kl",
     "ArnoldRendererTargetGroup.kl",
+    "TextureToArnoldRenderer.kl",
+    "MaterialToArnoldRenderer.kl",
     "GeometryInstanceToArnoldRenderer.kl",
     "CameraToArnoldRenderer.kl",
     "LightsToArnoldRenderer.kl",

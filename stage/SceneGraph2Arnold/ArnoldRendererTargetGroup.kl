@@ -15,7 +15,6 @@ function Boolean ArnoldRendererTargetGroup.updateElement!(Size index, Boolean ne
     // Finalize the initialization of our adaptor with our specific renderer
     Ref<ArnoldRendererTargetAdaptor> renderAdaptor = this.getAdaptor( index );
     if( renderAdaptor ) {
-      report("    Initializing new " + renderAdaptor.type() );
       renderAdaptor.setRenderer( this.renderContext.renderer );
     }
   }
@@ -30,8 +29,6 @@ function Boolean ArnoldRendererTargetGroup.updateElement!(Size index, Boolean ne
 // Element was removed from the scene: adaptors will be released
 inline ArnoldRendererTargetGroup.removedElement!(Size index) {
   Ref<BaseSWAdaptor> adaptor = this.getAdaptor( index );
-  if( adaptor )
-    report("ArnoldRendererTargetGroup: element " + index + " removed, adaptor " + adaptor.type() + " to be released");
   this.parent.removedElement( index );
 }
 

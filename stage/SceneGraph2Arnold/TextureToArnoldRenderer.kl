@@ -1,0 +1,53 @@
+require GamExToSceneGraph;
+
+////////////////////////////////////////////////////////////////////////////////////
+// Define an adaptor skeleton for SGPointLight.
+// This is a simplified hierarchy; a base one could have been defined
+// for the SGBaseLight.
+object TextureToArnoldRenderer : BaseSWTransformedAdaptor, ArnoldRendererTargetAdaptor {
+  ArnoldRenderer renderer;
+  AtNode arnoldTexture;
+
+  SGObject sgTexture;
+};
+
+TextureToArnoldRenderer(SGObject texture) {
+  this.sgTexture = texture;
+}
+
+TextureToArnoldRenderer.setRenderer!(ArnoldRenderer renderer) {
+  this.renderer = renderer;
+
+  // This function is our initialization routine, Here we create the material
+  SGContext context;
+  SGGXTexture sourceTexture = this.sgTexture.getWrapper(context);
+  String name = sourceTexture.getFileName().replace('.', '_');
+
+  AtNode existingNode = AiNodeLookUpByName(name);
+  if (existingNode.isValid())
+  {
+    this.arnoldTexture = existingNode;
+  }
+  else
+  {
+  	this.arnoldTexture = AiNode("image");
+	  AiNodeSetStr(this.arnoldTexture, "name", name);
+
+    
+    String texturePath = this.sgTexture.getLocalProperty('FullFiPa').getStringValue();
+    AiNodeSetStr(this.arnoldTexture, "filename", texturePath);
+  }
+}
+
+~TextureToArnoldRenderer() {
+}
+
+function AtNode TextureToArnoldRenderer.getAiNode() {
+  return this.arnoldTexture;
+}
+
+Boolean TextureToArnoldRenderer.update!(Ref<SWContext> swContext) {
+
+  this.parent.update( swContext );
+  return true;
+}

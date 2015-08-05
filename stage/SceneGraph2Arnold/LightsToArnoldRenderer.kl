@@ -1,48 +1,63 @@
 
-
 ////////////////////////////////////////////////////////////////////////////////////
-// Define an adaptor skeleton for SGPointLight.
-// This is a simplified hierarchy; a base one could have been defined
-// for the SGBaseLight.
-object SGPointLightToArnoldRenderer : BaseSWTransformedAdaptor, ArnoldRendererTargetAdaptor {
+// Define a base adaptor skeleton 
+object BaseLightToArnoldRenderer : BaseSWTransformedAdaptor, ArnoldRendererTargetAdaptor {
   ArnoldRenderer renderer;
   AtNode arnoldLight;
 };
 
-SGPointLightToArnoldRenderer.setRenderer!(ArnoldRenderer renderer) {
+function BaseLightToArnoldRenderer.setRenderer!(ArnoldRenderer renderer) {}
+
+function BaseLightToArnoldRenderer.init!(ArnoldRenderer renderer, String lightType)
+{
   this.renderer = renderer;
 
   // This function is our initialization routine, Here we create the point light
-  this.arnoldLight = AiNode("point_light");
+  this.arnoldLight = AiNode(lightType);
 
   String name = this.sourceReference.getName();
   AiNodeSetStr(this.arnoldLight, "name", name);
-  AiNodeSetFlt(this.arnoldLight, "exposure", 10.5);
 }
 
-~SGPointLightToArnoldRenderer() {
-  report( this.type() + " destroying" );
-}
-
-Boolean SGPointLightToArnoldRenderer.update!(Ref<SWContext> swContext) {
-
+function Boolean BaseLightToArnoldRenderer.update!(Ref<SWContext> swContext)
+{
   this.parent.update( swContext );
 
-  SGPointLight sourceLight = this.sourceReference.getObjectValue();
+  SGBaseLight sourceLight = this.sourceReference.getObjectValue();
 
   // Note: get the SGContext from the elementRef to ensure we get the values 
   // in the context of the right parent and frame.
   SGContext sourceLightContext = this.sourceReference.getSGContext();
 
-  Vec3 position = sourceLight.getGlobalPosition( sourceLightContext );
-  AiNodeSetPnt(this.arnoldLight, "position", position.x, position.y, position.z);
-  
-  // report( "    Updating "+ sourceLight.type() + " " + this.sourceReference.getFullName()
-  //         + "\n      frame = " + swContext.getFrame()
-  //         + "\n      pos = " + 
-  //         + "\n      color = " + sourceLight.getColor( sourceLightContext )
-  //         + "\n      intensity = " + sourceLight.getIntensity( sourceLightContext ) );
+  // Every light has a position intensity and color
+  Mat44 mtx = sourceLight.getGlobalTransform( sourceLightContext);
+  AiNodeSetMatrix(this.arnoldLight, "matrix", mtx);
 
+  Float32 intensity = sourceLight.getIntensity( sourceLightContext );
+  AiNodeSetFlt(this.arnoldLight, "intensity", intensity);
+  
+  Color color = sourceLight.getColor( sourceLightContext );
+  AiNodeSetRGB(this.arnoldLight, "color", color.r, color.g, color.b);
+
+  return true;
+}
+
+
+////////////////////////////////////////////////////////////////////////////////////
+// Define an adaptor for SGPointLight.
+object SGPointLightToArnoldRenderer : BaseLightToArnoldRenderer {
+  
+};
+
+SGPointLightToArnoldRenderer.setRenderer!(ArnoldRenderer renderer) {
+  this.init(renderer, "point_light");
+}
+
+~SGPointLightToArnoldRenderer() {
+}
+
+Boolean SGPointLightToArnoldRenderer.update!(Ref<SWContext> swContext) {
+  this.parent.update( swContext );
   return true;
 }
 
@@ -62,32 +77,26 @@ Boolean SGShadowPointLightToArnoldRenderer.update!(Ref<SWContext> swContext) {
   SGContext sourceLightContext = this.sourceReference.getSGContext();
 
   // Just update the 'castShadow' param, base class took care of others
-  report( "      enabled shadow = " + sourceLight.castShadows( sourceLightContext ) );
-
+  Boolean castShadow = sourceLight.castShadows( sourceLightContext );
+  AiNodeSetBool(this.arnoldLight, "cast_shadows", castShadow);
   return true;
 }
 
 ////////////////////////////////////////////////////////////////////////////////////
-object SGDirectionalLightToArnoldRenderer : BaseSWTransformedAdaptor, ArnoldRendererTargetAdaptor {
+object SGDirectionalLightToArnoldRenderer : BaseLightToArnoldRenderer {
   ArnoldRenderer renderer;
   AtNode arnoldLight;
 };
 
 SGDirectionalLightToArnoldRenderer.setRenderer!(ArnoldRenderer renderer) {
+  this.parent.init(renderer, "distant_light");
   this.renderer = renderer;
 
-  // This function is our initialization routine, Here we create the point light
-  this.arnoldLight = AiNode("distant_light");
-
-  String name = this.sourceReference.getName();
-  AiNodeSetStr(this.arnoldLight, "name", name);
-  AiNodeSetFlt(this.arnoldLight, "exposure", 10.5);
-
+  // by default, we don't cast shadows?
   AiNodeSetBool(this.arnoldLight, "cast_shadows", false);
 }
 
 ~SGDirectionalLightToArnoldRenderer() {
-  report( this.type() + " destroying" );
 }
 
 Boolean SGDirectionalLightToArnoldRenderer.update!(Ref<SWContext> swContext) {
@@ -99,26 +108,8 @@ Boolean SGDirectionalLightToArnoldRenderer.update!(Ref<SWContext> swContext) {
   // Note: get the SGContext from the elementRef to ensure we get the values 
   // in the context of the right parent and frame.
   SGContext sourceLightContext = this.sourceReference.getSGContext();
-
   Vec3 direction = sourceLight.getGlobalDirection( sourceLightContext );
-
-  // Lights in Arnold fire down the -Z axis
-  //Xfo xfo;
-  //xfo.ori.setFrom2Vectors(Vec3(0, 0, -1), direction);
-  //Mat44 mtx = xfo.toMat44();
-  //AiNodeSetMatrix(this.arnoldLight, "matrix", mtx);
-
   AiNodeSetVec(this.arnoldLight, "direction", direction.x, direction.y, direction.z);
-
-  Color color = sourceLight.getColor( sourceLightContext );
-  AiNodeSetRGB(this.arnoldLight, "color", color.r, color.g, color.b);
-
-  // report( "    Updating "+ sourceLight.type() + " " + this.sourceReference.getFullName()
-  //         + "\n      frame = " + swContext.getFrame()
-  //         + "\n      pos = " + 
-  //         + "\n      color = " + sourceLight.getColor( sourceLightContext )
-  //         + "\n      intensity = " + sourceLight.getIntensity( sourceLightContext ) );
-
   return true;
 }
 
@@ -127,11 +118,21 @@ object SGShadowDirectionalLightToArnoldRenderer : SGDirectionalLightToArnoldRend
 };
 
 ~SGShadowDirectionalLightToArnoldRenderer() {
-  report( this.type() + " destroying" );
 }
 
 SGShadowDirectionalLightToArnoldRenderer.setRenderer!(ArnoldRenderer renderer) {
   this.parent.setRenderer(renderer);
 
-  AiNodeSetBool(this.arnoldLight, "cast_shadows", true);
+  SGShadowDirectionalLight sourceLight = this.sourceReference.getObjectValue();
+  // Note: get the SGContext from the elementRef to ensure we get the values 
+  // in the context of the right parent and frame.
+  SGContext sourceLightContext = this.sourceReference.getSGContext();
+
+  // Just update the 'castShadow' param, base class took care of others
+  Boolean castShadow = sourceLight.castShadows( sourceLightContext );
+  AiNodeSetBool(this.arnoldLight, "cast_shadows", castShadow);
+
+  // Set some default values to improve translation
+  AiNodeSetFlt(this.arnoldLight, "angle", 2.0);
+  AiNodeSetInt(this.arnoldLight, "angle", 3);
 }

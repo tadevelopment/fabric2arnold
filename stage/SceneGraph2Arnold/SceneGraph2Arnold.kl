@@ -1,3 +1,5 @@
+require Fabric2ArnoldWrapper;
+
 // The SceneGraphToArnoldRenderer object just build the "simple" setup
 // where the SceneGraph is directly the input of the render target.
 //
@@ -14,7 +16,6 @@ object SceneGraphToArnoldRenderer {
 SceneGraphToArnoldRenderer( SceneGraph sg, SGCamera camera ) {
   this.sg = sg;
   SceneGraphWrapper sgWrap(sg);
-  sgWrap.setTracingVerboseLevel(3);
   SGInstanceQuery lightGroup = sgWrap.createInstanceQuery( "ArnoldRenderer_lightsQuery", SGBaseLightInstanceFilter() );
   SGInstanceQuery geomInstGroup = sgWrap.createInstanceQuery( "ArnoldRenderer_geomQuery", SGGeometryInstanceFilter() );
 
@@ -31,6 +32,9 @@ SceneGraphToArnoldRenderer( SceneGraph sg, SGCamera camera ) {
   RegisterAdaptor( SGDirectionalLight, ArnoldRendererTargetName, SGDirectionalLightToArnoldRenderer );
   RegisterAdaptor( SGShadowDirectionalLight, ArnoldRendererTargetName, SGShadowDirectionalLightToArnoldRenderer );
   RegisterAdaptor( SGCamera, ArnoldRendererTargetName, CameraToArnoldRenderer );
+
+  RegisterAdaptor( SGGXMaterial, ArnoldRendererTargetName, MaterialToArnoldRenderer);
+  RegisterAdaptor( SGGXTexture, ArnoldRendererTargetName, TextureToArnoldRenderer);
 }
 
 SceneGraphToArnoldRenderer.update!( SInt32 frame ) {

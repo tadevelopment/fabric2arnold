@@ -14,11 +14,9 @@ object PolygonMeshToArnoldRenderer : BaseGeometryAdaptor, ArnoldRendererTargetAd
 
 function PolygonMeshToArnoldRenderer() {
   this.parent.initialize( ArnoldRendererTargetName );
-  report('Created new PolygonMeshToArnoldRenderer');
 }
 
 ~PolygonMeshToArnoldRenderer() {
-  report( "PolygonMeshToArnoldRenderer destroying" );
 }
 
 PolygonMeshToArnoldRenderer.setRenderer!(ArnoldRenderer renderer) {
@@ -32,15 +30,12 @@ function Boolean PolygonMeshToArnoldRenderer.updateSource!( Ref<Object> source )
   if( versionBefore != this.getVersion() ) {
 
     this.mesh = source;
-    report('Translated: ' +  this.mesh.debugName);
 
     if (this.arnoldMesh.isValid()) {
       FabricToArnoldPolygonMesh(this.mesh, this.arnoldMesh);
     }
     else {
       this.arnoldMesh = FabricToArnoldPolygonMesh(this.mesh);
-      //String name = this.mesh.debugName;
-      //AiNodeSetStr(this.arnoldMesh, "name", name);
     }
   }
   return true;

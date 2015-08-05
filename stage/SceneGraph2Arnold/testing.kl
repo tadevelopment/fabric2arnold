@@ -1,0 +1,5 @@
+require SceneGraph2Arnold;
+
+operator entry() {
+	report('Hello SceneGraph2Arnold');
+}
