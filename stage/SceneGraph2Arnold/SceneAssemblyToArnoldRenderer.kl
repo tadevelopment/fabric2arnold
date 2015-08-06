@@ -41,10 +41,6 @@ SceneAssemblyToArnoldRenderer( SceneWrapper scene, BaseDynamicGroup sourceGeomet
 
 ~SceneAssemblyToArnoldRenderer() 
 {
-  // Before we quit, write out the ass file for reference
-  String ass_file = "c:\\temp\\rtr2_out.ass";
-  AiASSWrite(ass_file, AI_NODE_ALL, false, true);
-
   AiEnd();
 }
 
@@ -57,7 +53,7 @@ SceneAssemblyToArnoldRenderer.initArnold!()
 
   // set render options
   // Load our default options file
-  AiASSLoad('F:/src/staylor_MTL-BD702/dev/tools/GXAssembly/arnold.cfg.ass', AI_NODE_ALL);
+  AiASSLoad('arnold.cfg.ass', AI_NODE_ALL);
 
   this.camera = CameraToArnoldRenderer();
 }

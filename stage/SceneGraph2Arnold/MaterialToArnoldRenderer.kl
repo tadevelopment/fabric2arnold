@@ -1,5 +1,3 @@
-require GamExToSceneGraph;
-
 ////////////////////////////////////////////////////////////////////////////////////
 // Define an adaptor skeleton for SGPointLight.
 // This is a simplified hierarchy; a base one could have been defined

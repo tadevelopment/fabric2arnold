@@ -1,12 +1,9 @@
-require GamExToSceneGraph;
-
 ////////////////////////////////////////////////////////////////////////////////////
-// Define an adaptor skeleton for SGPointLight.
-// This is a simplified hierarchy; a base one could have been defined
-// for the SGBaseLight.
+// Define an adaptor skeleton for Textures.
+
 object TextureToArnoldRenderer : BaseSWTransformedAdaptor, ArnoldRendererTargetAdaptor {
   ArnoldRenderer renderer;
-  
+
   AtNode arnoldTexture;
   SGObject sgTexture;
 };
