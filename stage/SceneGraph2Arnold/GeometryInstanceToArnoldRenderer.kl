@@ -75,21 +75,22 @@ function GeometryInstanceToArnoldRenderer.createSubStuff!() {
   String instName = this.sourceReference.getName();
   AiNodeSetStr( this.arnoldInstance, 'name', instName);
 
-  // Create material (assume one exists?)
-  Ref<SGObjectWrapper> wrapper = this.sourceReference.getObjectValue();
-  SGContext instContext;
-  SGObject instObj = wrapper.getWrapped(instContext);
-  SGObject sgMaterial = getEntityInstanceMaterial(instObj);
-
-  // Create the arnold material, or default if none available
+  // Find an Arnold Material for this node
+  String cachedGeoName = instName.rightStrip(5);
+  cachedGeoName = cachedGeoName + "SG";
+  
   AtNode arnoldMaterial;
-  if (sgMaterial.isValid())
+  AtNode assGeo = AiNodeLookUpByName(cachedGeoName);
+  if (assGeo.isValid())
   {
-    this.materialAdaptor = MaterialToArnoldRenderer(sgMaterial);
-    this.materialAdaptor.setRenderer(this.renderer);
-    arnoldMaterial = this.materialAdaptor.getAiNode();
+    arnoldMaterial._handle = AiNodeGetPtr(assGeo, "shader");
+  }
+  else
+  {
+    report('Could not find material for: ' + cachedGeoName);
   }
 
+  // Create the arnold material, or default if none available
   if (!arnoldMaterial.isValid())
   {
     // We are the first to take ownership of this geom
@@ -107,6 +108,7 @@ function GeometryInstanceToArnoldRenderer.createSubStuff!() {
   // assign the f2ateapot's shader
   AiNodeSetPtr(this.arnoldInstance, "shader", arnoldMaterial._handle);
 }
+
 // Helper for getting a Color sub-property
 function GetSWPropertyValue( SWElementReference owner, String paramName, io SWElementReference target, io Color color ) {
   Object dummy = null;

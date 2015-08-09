@@ -25,6 +25,9 @@ PolygonMeshToArnoldRenderer.setRenderer!(ArnoldRenderer renderer) {
 
 function Boolean PolygonMeshToArnoldRenderer.updateSource!( Ref<Object> source ) {
 
+  //String instName = this.sourceReference.getName();
+  
+  //String arnoldName = instName.substr()
   UInt32 versionBefore = this.getVersion();
   this.parent.updateSource(source);
   if( versionBefore != this.getVersion() ) {
