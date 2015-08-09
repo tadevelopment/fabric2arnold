@@ -13,13 +13,13 @@ object SceneGraphToArnoldRenderer {
   SceneAssemblyToArnoldRenderer sceneAssemblyToArnoldRenderer;
 };
 
-SceneGraphToArnoldRenderer( SceneGraph sg, SGCamera camera ) {
+SceneGraphToArnoldRenderer( SceneGraph sg, SGCamera camera, String rootpath ) {
   this.sg = sg;
   SceneGraphWrapper sgWrap(sg);
   SGInstanceQuery lightGroup = sgWrap.createInstanceQuery( "ArnoldRenderer_lightsQuery", SGBaseLightInstanceFilter() );
   SGInstanceQuery geomInstGroup = sgWrap.createInstanceQuery( "ArnoldRenderer_geomQuery", SGGeometryInstanceFilter() );
 
-  this.sceneAssemblyToArnoldRenderer = SceneAssemblyToArnoldRenderer( sgWrap, geomInstGroup, lightGroup );
+  this.sceneAssemblyToArnoldRenderer = SceneAssemblyToArnoldRenderer( sgWrap, geomInstGroup, lightGroup, rootpath );
 
   this.camera = camera;
 

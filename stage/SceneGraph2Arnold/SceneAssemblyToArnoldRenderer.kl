@@ -26,7 +26,7 @@ object SceneAssemblyToArnoldRenderer {
   CameraToArnoldRenderer camera;
 };
 
-SceneAssemblyToArnoldRenderer( SceneWrapper scene, BaseDynamicGroup sourceGeometriesGroup, BaseDynamicGroup sceneLightsGroup ) {
+SceneAssemblyToArnoldRenderer( SceneWrapper scene, BaseDynamicGroup sourceGeometriesGroup, BaseDynamicGroup sceneLightsGroup, String rootpath ) {
   // Setup initial render context from scene
   this.renderContext = ArnoldRendererContext();
   this.renderContext.renderer = ArnoldRenderer();
@@ -36,7 +36,7 @@ SceneAssemblyToArnoldRenderer( SceneWrapper scene, BaseDynamicGroup sourceGeomet
   this.geometries = ArnoldRendererTargetGroup( sourceGeometriesGroup, this.renderContext, "RenderGeoms" );
   this.lights = ArnoldRendererTargetGroup( sceneLightsGroup, this.renderContext, "RenderLights" );
 
-  this.initArnold();
+  this.initArnold(rootpath);
 }
 
 ~SceneAssemblyToArnoldRenderer() 
@@ -44,7 +44,7 @@ SceneAssemblyToArnoldRenderer( SceneWrapper scene, BaseDynamicGroup sourceGeomet
   AiEnd();
 }
 
-SceneAssemblyToArnoldRenderer.initArnold!()
+SceneAssemblyToArnoldRenderer.initArnold!(String rootPath)
 {
   AiBegin();
 
@@ -53,7 +53,9 @@ SceneAssemblyToArnoldRenderer.initArnold!()
 
   // set render options
   // Load our default options file
-  AiASSLoad('arnold.cfg.ass', AI_NODE_ALL);
+  FilePath default_ass = FilePath(rootPath) / FilePath('arnold.cfg.ass');
+  if (default_ass.exists())
+    AiASSLoad(default_ass.string(), AI_NODE_ALL);
 
   this.camera = CameraToArnoldRenderer();
 }
@@ -74,12 +76,4 @@ SceneAssemblyToArnoldRenderer.update!( SGCamera camera, SInt32 frame ) {
   this.geometries.update();
   this.lights.update();
   this.camera.update(camera, SGContext());
-
-  // Add default light, just for now
-  AtNode existingNode = AiNodeLookUpByName('def_ambient');
-  if (!existingNode.isValid())
-  {
-    existingNode = AiNode("ambient_light");
-    AiNodeSetFlt(existingNode, 'intensity', 0.2);
-  }
 }
