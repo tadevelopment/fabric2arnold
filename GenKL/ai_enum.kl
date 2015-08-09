@@ -1,0 +1,9 @@
+/**
+    Enum data type and utility functions 
+  
+*/
+
+require Math;
+
+function SInt32 AiEnumGetValue(String[] enum_type, String string) = '_fe_AiEnumGetValue';
+function String AiEnumGetString(String[] enum_type, SInt32 index) = '_fe_AiEnumGetString';

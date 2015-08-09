@@ -1,0 +1,20 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 11
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Fabric2Arnold.vcxproj", "Fabric2Arnold.vcxproj", "{5DD24BB0-EF34-9C02-7065-BFA96202D326}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5DD24BB0-EF34-9C02-7065-BFA96202D326}.Debug|x64.ActiveCfg = Debug|x64
+		{5DD24BB0-EF34-9C02-7065-BFA96202D326}.Debug|x64.Build.0 = Debug|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
+fXEBVQlEZWJ1Z3x4NjRxAmNjb3B5X3JlZwpfcmVjb25zdHJ1Y3RvcgpxAyhjU0NvbnMuVG9vbC5t
+c3ZzCkNvbmZpZwpxBGNfX2J1aWx0aW5fXwpvYmplY3QKcQVOdFJxBn1xByhVCHBsYXRmb3JtcQhV
+A3g2NHEJVQd2YXJpYW50cQpVBURlYnVncQt1YnMu
+

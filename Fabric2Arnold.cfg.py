@@ -114,6 +114,8 @@ output_cpp_dir = 'GenCPP/cpp'
 
 # specify where custom CPP files (if any) are located
 custom_cpp_dir = 'CustomCPP'
+# specify where custom CPP files (if any) are located
+custom_KL_dir = 'CustomKL'
 
 filesToProcess = [
     'ai_params.h',

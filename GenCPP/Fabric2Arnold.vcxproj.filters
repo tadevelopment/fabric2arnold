@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<ItemGroup>
+		<Filter Include="Header Files">
+			<UniqueIdentifier>{7b42d31d-d53c-4868-8b92-ca2bc9fc052f}</UniqueIdentifier>
+			<Extensions>h;hpp;hxx;hm;inl</Extensions>
+		</Filter>
+		<Filter Include="Source Files">
+			<UniqueIdentifier>{7b42d31d-d53c-4868-8b92-ca2bc9fc052f}</UniqueIdentifier>
+			<Extensions>cpp;c;cxx;l;y;def;odl;idl;hpj;bat</Extensions>
+		</Filter>
+	</ItemGroup>
+	<ItemGroup>
+		<ClInclude Include="h\_AtDisplayCallback.h">
+			<Filter>Header Files</Filter>
+		</ClInclude>
+		<ClInclude Include="h\_defines.h">
+			<Filter>Header Files</Filter>
+		</ClInclude>
+		<ClInclude Include="h\_IncludeAll.h">
+			<Filter>Header Files</Filter>
+		</ClInclude>
+		<ClInclude Include="h\_opaque_types.h">
+			<Filter>Header Files</Filter>
+		</ClInclude>
+		<ClInclude Include="h\_typemapping.h">
+			<Filter>Header Files</Filter>
+		</ClInclude>
+		<ClInclude Include="h\aliases.h">
+			<Filter>Header Files</Filter>
+		</ClInclude>
+		<ClInclude Include="h\ARGB.h">
+			<Filter>Header Files</Filter>
+		</ClInclude>
+		<ClInclude Include="h\AtAOVEntry.h">
+			<Filter>Header Files</Filter>
+		</ClInclude>
+		<ClInclude Include="h\AtAOVIterator.h">
+			<Filter>Header Files</Filter>
+		</ClInclude>
+		<ClInclude Include="h\AtArray.h">
+			<Filter>Header Files</Filter>
+		</ClInclude>
+		<ClInclude Include="h\AtBucket.h">
+			<Filter>Header Files</Filter>
+		</ClInclude>
+		<ClInclude Include="h\AtCameraInput.h">
+			<Filter>Header Files</Filter>
+		</ClInclude>
+		<ClInclude Include="h\AtCameraOutput.h">
+			<Filter>Header Files</Filter>
+		</ClInclude>
+		<ClInclude Include="h\AtDisplayCallback.h">
+			<Filter>Header Files</Filter>
+		</ClInclude>
+		<ClInclude Include="h\AtDisplayCallback_impl.h">
+			<Filter>Header Files</Filter>
+		</ClInclude>
+		<ClInclude Include="h\AtLicenseInfo.h">
+			<Filter>Header Files</Filter>
+		</ClInclude>
+		<ClInclude Include="h\AtList.h">
+			<Filter>Header Files</Filter>
+		</ClInclude>
+		<ClInclude Include="h\AtMetaDataEntry.h">
+			<Filter>Header Files</Filter>
+		</ClInclude>
+		<ClInclude Include="h\AtMetaDataIterator.h">
+			<Filter>Header Files</Filter>
+		</ClInclude>
+		<ClInclude Include="h\AtMetaDataStore.h">
+			<Filter>Header Files</Filter>
+		</ClInclude>
+		<ClInclude Include="h\AtNode.h">
+			<Filter>Header Files</Filter>
+		</ClInclude>
+		<ClInclude Include="h\AtNodeEntry.h">
+			<Filter>Header Files</Filter>
+		</ClInclude>
+		<ClInclude Include="h\AtNodeEntryIterator.h">
+			<Filter>Header Files</Filter>
+		</ClInclude>
+		<ClInclude Include="h\AtNodeIterator.h">
+			<Filter>Header Files</Filter>
+		</ClInclude>
+		<ClInclude Include="h\AtNodeLib.h">
+			<Filter>Header Files</Filter>
+		</ClInclude>
+		<ClInclude Include="h\AtNodeMethods.h">
+			<Filter>Header Files</Filter>
+		</ClInclude>
+		<ClInclude Include="h\AtParamEntry.h">
+			<Filter>Header Files</Filter>
+		</ClInclude>
+		<ClInclude Include="h\AtParamIterator.h">
+			<Filter>Header Files</Filter>
+		</ClInclude>
+		<ClInclude Include="h\AtParamValue.h">
+			<Filter>Header Files</Filter>
+		</ClInclude>
+		<ClInclude Include="h\AtParamValue_functions.h">
+			<Filter>Header Files</Filter>
+		</ClInclude>
+		<ClInclude Include="h\AtRay.h">
+			<Filter>Header Files</Filter>
+		</ClInclude>
+		<ClInclude Include="h\AtScrSample.h">
+			<Filter>Header Files</Filter>
+		</ClInclude>
+		<ClInclude Include="h\AtShaderGlobals.h">
+			<Filter>Header Files</Filter>
+		</ClInclude>
+		<ClInclude Include="h\AtTextureHandle.h">
+			<Filter>Header Files</Filter>
+		</ClInclude>
+		<ClInclude Include="h\AtTextureParams.h">
+			<Filter>Header Files</Filter>
+		</ClInclude>
+		<ClInclude Include="h\AtUserParamEntry.h">
+			<Filter>Header Files</Filter>
+		</ClInclude>
+		<ClInclude Include="h\AtUserParamIterator.h">
+			<Filter>Header Files</Filter>
+		</ClInclude>
+		<ClInclude Include="h\Box2.h">
+			<Filter>Header Files</Filter>
+		</ClInclude>
+		<ClInclude Include="h\Box3.h">
+			<Filter>Header Files</Filter>
+		</ClInclude>
+		<ClInclude Include="h\Color.h">
+			<Filter>Header Files</Filter>
+		</ClInclude>
+		<ClInclude Include="h\Euler.h">
+			<Filter>Header Files</Filter>
+		</ClInclude>
+		<ClInclude Include="h\Euler_d.h">
+			<Filter>Header Files</Filter>
+		</ClInclude>
+		<ClInclude Include="h\Euler_i.h">
+			<Filter>Header Files</Filter>
+		</ClInclude>
+		<ClInclude Include="h\Fabric2Arnold.h">
+			<Filter>Header Files</Filter>
+		</ClInclude>
+		<ClInclude Include="h\global.h">
+			<Filter>Header Files</Filter>
+		</ClInclude>
+		<ClInclude Include="h\global_functions.h">
+			<Filter>Header Files</Filter>
+		</ClInclude>
+		<ClInclude Include="h\Mat22.h">
+			<Filter>Header Files</Filter>
+		</ClInclude>
+		<ClInclude Include="h\Mat22_d.h">
+			<Filter>Header Files</Filter>
+		</ClInclude>
+		<ClInclude Include="h\Mat22_i.h">
+			<Filter>Header Files</Filter>
+		</ClInclude>
+		<ClInclude Include="h\Mat33.h">
+			<Filter>Header Files</Filter>
+		</ClInclude>
+		<ClInclude Include="h\Mat33_d.h">
+			<Filter>Header Files</Filter>
+		</ClInclude>
+		<ClInclude Include="h\Mat33_i.h">
+			<Filter>Header Files</Filter>
+		</ClInclude>
+		<ClInclude Include="h\Mat44.h">
+			<Filter>Header Files</Filter>
+		</ClInclude>
+		<ClInclude Include="h\Mat44_d.h">
+			<Filter>Header Files</Filter>
+		</ClInclude>
+		<ClInclude Include="h\Mat44_i.h">
+			<Filter>Header Files</Filter>
+		</ClInclude>
+		<ClInclude Include="h\Quat.h">
+			<Filter>Header Files</Filter>
+		</ClInclude>
+		<ClInclude Include="h\Quat_d.h">
+			<Filter>Header Files</Filter>
+		</ClInclude>
+		<ClInclude Include="h\Quat_i.h">
+			<Filter>Header Files</Filter>
+		</ClInclude>
+		<ClInclude Include="h\Ray.h">
+			<Filter>Header Files</Filter>
+		</ClInclude>
+		<ClInclude Include="h\RGB.h">
+			<Filter>Header Files</Filter>
+		</ClInclude>
+		<ClInclude Include="h\RGBA.h">
+			<Filter>Header Files</Filter>
+		</ClInclude>
+		<ClInclude Include="h\RotationOrder.h">
+			<Filter>Header Files</Filter>
+		</ClInclude>
+		<ClInclude Include="h\Vec2.h">
+			<Filter>Header Files</Filter>
+		</ClInclude>
+		<ClInclude Include="h\Vec2_d.h">
+			<Filter>Header Files</Filter>
+		</ClInclude>
+		<ClInclude Include="h\Vec2_i.h">
+			<Filter>Header Files</Filter>
+		</ClInclude>
+		<ClInclude Include="h\Vec3.h">
+			<Filter>Header Files</Filter>
+		</ClInclude>
+		<ClInclude Include="h\Vec3_d.h">
+			<Filter>Header Files</Filter>
+		</ClInclude>
+		<ClInclude Include="h\Vec3_i.h">
+			<Filter>Header Files</Filter>
+		</ClInclude>
+		<ClInclude Include="h\Vec4.h">
+			<Filter>Header Files</Filter>
+		</ClInclude>
+		<ClInclude Include="h\Vec4_d.h">
+			<Filter>Header Files</Filter>
+		</ClInclude>
+		<ClInclude Include="h\Vec4_i.h">
+			<Filter>Header Files</Filter>
+		</ClInclude>
+		<ClInclude Include="h\Xfo.h">
+			<Filter>Header Files</Filter>
+		</ClInclude>
+	</ItemGroup>
+	<ItemGroup>
+		<ClCompile Include="cpp\_AtDisplayCallback.cpp">
+			<Filter>Source Files</Filter>
+		</ClCompile>
+		<ClCompile Include="cpp\AtParamValue_functions.cpp">
+			<Filter>Source Files</Filter>
+		</ClCompile>
+		<ClCompile Include="cpp\extension.cpp">
+			<Filter>Source Files</Filter>
+		</ClCompile>
+		<ClCompile Include="cpp\global_functions.cpp">
+			<Filter>Source Files</Filter>
+		</ClCompile>
+	</ItemGroup>
+</Project>
