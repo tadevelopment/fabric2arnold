@@ -33,6 +33,7 @@ namespace Fabric { namespace EDK { namespace KL {
   struct AtBucket;
   struct AtCameraInput;
   struct AtCameraOutput;
+  class AtDisplayCallback;
   struct AtLicenseInfo;
   struct AtList;
   struct AtMetaDataEntry;
@@ -1075,6 +1076,20 @@ struct Traits< AtAOVEntry >
   static void ConstructCopy( AtAOVEntry &lhs, AtAOVEntry const &rhs );
   static void AssignCopy( AtAOVEntry &lhs, AtAOVEntry const &rhs );
   static void Destruct( AtAOVEntry &val );
+};
+
+template<>
+struct Traits< AtDisplayCallback >
+{
+  typedef AtDisplayCallback &Result;
+  typedef AtDisplayCallback const &INParam;
+  typedef AtDisplayCallback &IOParam;
+  typedef AtDisplayCallback &OUTParam;
+  
+  static void ConstructEmpty( AtDisplayCallback &val );
+  static void ConstructCopy( AtDisplayCallback &lhs, AtDisplayCallback const &rhs );
+  static void AssignCopy( AtDisplayCallback &lhs, AtDisplayCallback const &rhs );
+  static void Destruct( AtDisplayCallback &val );
 };
 
 }}}

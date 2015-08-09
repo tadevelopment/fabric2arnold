@@ -8,7 +8,7 @@ void AtDisplayCallback_Imp(AtUInt32 x, AtUInt32 y, AtUInt32 width, AtUInt32 heig
 {
     // We need to convert the parameters to this function from C++ type to KL.
     // Luckily, all these types here convert without any extra effort on our part.
-
+    Fabric::EDK::report("You are here");
     if (_klCallack.isValid())
     {
         bool rgbaPacking = AiNodeGetBool(_shaderNode, "rgba_packing");
@@ -16,11 +16,14 @@ void AtDisplayCallback_Imp(AtUInt32 x, AtUInt32 y, AtUInt32 width, AtUInt32 heig
         Fabric::EDK::KL::ExternalArray<Fabric::EDK::KL::RGBA> rgbaBuffer;
         Fabric::EDK::KL::ExternalArray<Fabric::EDK::KL::Color> colorBuffer;
 
-        int size = width * height;
-        if (rgbaPacking)
-            rgbaBuffer = Fabric::EDK::KL::ExternalArray<Fabric::EDK::KL::RGBA>(reinterpret_cast<Fabric::EDK::KL::RGBA*>(buffer), size);
-        else
-            colorBuffer = Fabric::EDK::KL::ExternalArray<Fabric::EDK::KL::Color>(reinterpret_cast<Fabric::EDK::KL::Color*>(buffer), size);
+        if (buffer != nullptr)
+        {        
+            int size = width * height;
+            if (rgbaPacking)
+                rgbaBuffer = Fabric::EDK::KL::ExternalArray<Fabric::EDK::KL::RGBA>(reinterpret_cast<Fabric::EDK::KL::RGBA*>(buffer), size);
+            else
+                colorBuffer = Fabric::EDK::KL::ExternalArray<Fabric::EDK::KL::Color>(reinterpret_cast<Fabric::EDK::KL::Color*>(buffer), size);
+        }
 
         _klCallack.Callback(x, y, width, height, rgbaBuffer, colorBuffer, data);
     }

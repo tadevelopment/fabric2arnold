@@ -25,6 +25,8 @@
 #include "AtBucket.h"
 #include "AtCameraInput.h"
 #include "AtCameraOutput.h"
+#include "AtDisplayCallback.h"
+#include "AtDisplayCallback_impl.h"
 #include "AtLicenseInfo.h"
 #include "AtList.h"
 #include "AtMetaDataEntry.h"

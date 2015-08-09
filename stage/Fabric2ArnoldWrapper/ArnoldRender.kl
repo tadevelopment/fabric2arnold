@@ -1,6 +1,6 @@
 require FileIO;
 
-function Boolean setArnoldRenderToDisplay() {
+function Boolean setArnoldRenderToDisplay(Ref<AtDisplayCallback> callback ) {
   AtNode driver = AiNodeLookUpByName("display_onscreen");
   if (!driver.isValid()) {
     // create an output driver - this pushes renders to disk
@@ -15,13 +15,9 @@ function Boolean setArnoldRenderToDisplay() {
     gfilter = AiNode("gaussian_filter");
     AiNodeSetStr(gfilter, "name", "myfilter");      
   }
+  SetAtDisplayCallback(driver, callback);
 
   AtNode options = AiUniverseGetOptions();
-
-  // TODO: Move these settings elsewhere
-  AiNodeSetInt(options, "AA_samples", 4);
-  AiNodeSetInt(options, "xres", 320);
-  AiNodeSetInt(options, "yres", 240);
 
   // assign the driver and the filter to the outputs
   AtArray outputs_array = AiArrayAllocate(1, 1, AI_TYPE_STRING);

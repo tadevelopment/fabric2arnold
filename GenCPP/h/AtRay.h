@@ -24,7 +24,7 @@
 namespace Fabric { namespace EDK { namespace KL {
 
 // KL struct 'AtRay'
-// Defined at E:\dev\HordeSoftware\fabric2arnold\GenKL/\ai_ray.kl:10:1
+// Defined at E:\dev\HordeSoftware\DemoArnoldApp\fabric2arnold\GenKL/\ai_ray.kl:10:1
 
 struct AtRay
 {

@@ -21,7 +21,7 @@
 namespace Fabric { namespace EDK { namespace KL {
 
 // KL struct 'AtShaderGlobals'
-// Defined at E:\dev\HordeSoftware\fabric2arnold\GenKL/\_opaque_types.kl:56:1
+// Defined at E:\dev\HordeSoftware\DemoArnoldApp\fabric2arnold\GenKL/\_opaque_types.kl:56:1
 
 struct AtShaderGlobals
 {

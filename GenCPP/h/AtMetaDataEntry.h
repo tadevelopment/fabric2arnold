@@ -22,7 +22,7 @@
 namespace Fabric { namespace EDK { namespace KL {
 
 // KL struct 'AtMetaDataEntry'
-// Defined at E:\dev\HordeSoftware\fabric2arnold\GenKL/\ai_node_entry.kl:9:1
+// Defined at E:\dev\HordeSoftware\DemoArnoldApp\fabric2arnold\GenKL/\ai_node_entry.kl:9:1
 
 struct AtMetaDataEntry
 {
