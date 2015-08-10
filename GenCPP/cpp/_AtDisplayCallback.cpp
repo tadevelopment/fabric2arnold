@@ -25,7 +25,8 @@ void AtDisplayCallback_Imp(AtUInt32 x, AtUInt32 y, AtUInt32 width, AtUInt32 heig
                 colorBuffer = Fabric::EDK::KL::ExternalArray<Fabric::EDK::KL::Color>(reinterpret_cast<Fabric::EDK::KL::Color*>(buffer), size);
         }
 
-        _klCallack.Callback(x, y, width, height, rgbaBuffer, colorBuffer, data);
+        //if (buffer == nullptr)
+            _klCallack.Callback(x, y, width, height, rgbaBuffer, colorBuffer, data);
     }
 }
 

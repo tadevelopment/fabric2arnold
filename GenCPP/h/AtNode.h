@@ -21,7 +21,7 @@
 namespace Fabric { namespace EDK { namespace KL {
 
 // KL struct 'AtNode'
-// Defined at E:\dev\HordeSoftware\DemoArnoldApp\fabric2arnold\GenKL/\_opaque_types.kl:21:1
+// Defined at R:\src\HordeSoftware\demoarnoldapp\fabric2arnold\GenKL/\_opaque_types.kl:21:1
 
 struct AtNode
 {

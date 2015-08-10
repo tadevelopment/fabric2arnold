@@ -117,7 +117,7 @@ namespace Fabric { namespace EDK { namespace KL {
     Traits< ExternalArray< RGBA > >::INParam arg4,
     Traits< ExternalArray< Color > >::INParam arg5,
     Traits< Data >::INParam arg6
-    ) const
+    )
   {
     m_bits->vTableSwapPtrPtr->get()->Callback_E253B18F7761677298CCF3C32F927BFD(
       &m_bits->objectCorePtr,

@@ -1,0 +1,111 @@
+// Copyright Steven Taylor not Caroon
+require Fabric2ArnoldWrapper;
+require FabricSynchronization;
+
+object MyDisplayCallback : AtDisplayCallback {
+  Integer myNum;
+  SimpleLock _lock;
+
+  RGBA buffer[];
+
+};
+
+MyDisplayCallback() {
+  this._lock = SimpleLock('LocknKey');
+}
+
+MyDisplayCallback.Callback!(UInt32 bucketX, UInt32 bucketY, UInt32 bucketWidth, UInt32 bucketHeight, RGBA<> rgbaBuffer, Color<> colorBuffer, Data cb_data)
+{
+  //MyDisplayCallback nullinterface = null;
+  //nullinterface.Callback(0, 0, 0, 0, rgbaBuffer, colorBuffer, cb_data);
+
+  AutoLock lock(this._lock);
+
+  //if (this.myNum == 0) {
+    
+      this.myNum++;
+
+   //   this.myPath = FilePath("c:\\temp\\test3.jpg");
+  //if (rgbaBuffer.size() == 0 && colorBuffer.size() == 0) {
+  //  String f = "c:\\temp\\test.txt";
+  //  TextWriter tw(f);
+  //  tw.write('Hello, World');
+  if (rgbaBuffer.size() > 0)
+  {
+    for (Integer i = 0; i < rgbaBuffer.size(); i++)
+      this.buffer[i] = rgbaBuffer[i];
+  }
+  //}
+
+  report('Recieved callback: ' + bucketX);
+
+  // if (rgbaBuffer.size() != 0) {
+  //   report(rgbaBuffer[0]);
+  // }
+  // else if (colorBuffer.size() != 0) {
+  //   report(colorBuffer[0]);
+  // }
+  // else {
+  //   report('New Bucket started!');
+  // }
+}
+
+
+operator entry() {
+
+  //ActiveWait(15);
+
+  String filename = 'C:\\temp\\test2.jpg';
+  UInt64 start = getCurrentTicks();
+  AiBegin();
+
+  // create a sphere
+  AtNode sphere = AiNode("sphere");
+  AiNodeSetStr(sphere, "name", "mysphere");
+  AiNodeSetFlt(sphere, "radius", 5.0);
+
+  // create a lambert shader
+  AtNode lambert = AiNode("lambert");
+  AiNodeSetStr(lambert, "name", "myshader");
+  AiNodeSetRGB(lambert, "Kd_color", 0.0, 1.0, 0.0);
+
+  // assign the sphere's shader
+  AiNodeSetPtr(sphere, "shader", lambert._handle);
+
+  // create a perspective camera
+  AtNode camera = AiNode("persp_camera");
+  AiNodeSetStr(camera, "name", "mycamera");
+  AiNodeSetPnt(camera, "position", 0.0, 0.0, 20.0);
+
+  // create a point light
+  AtNode light = AiNode("point_light");
+  AiNodeSetStr(light, "name", "mylight");
+  AiNodeSetFlt(light, "exposure", 7.5);
+  AiNodeSetPnt(light, "position", 0.0, 10.0, 10.0);
+
+  // set render options
+  AtNode options = AiUniverseGetOptions();
+  AiNodeSetInt(options, "AA_samples", 1);
+  AiNodeSetInt(options, "xres", 320);
+  AiNodeSetInt(options, "yres", 240);
+  AiNodeSetPtr(options, "camera", camera._handle);
+
+  MyDisplayCallback callback();
+  setArnoldRenderToDisplay(callback);
+
+  callback.buffer.resize(320 * 240);
+  // render the scene
+  Integer result = AiRender(AI_RENDER_MODE_CAMERA);
+  if (result != AI_SUCCESS)
+  {
+    report("[FabricArnold::TestSuite] Error " + String(result));
+  }
+
+  AiEnd();
+  UInt64 end = getCurrentTicks();
+  report("Elapsed time: " + getSecondsBetweenTicks(start, end) + " seconds");
+
+  report("Buckets: " + callback.myNum);
+
+  report('RGBA ' + callback.buffer[0]);
+}

@@ -15,6 +15,7 @@
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
 		<ConfigurationType>Makefile</ConfigurationType>
 		<UseOfMfc>false</UseOfMfc>
+		<PlatformToolset>v120</PlatformToolset>
 	</PropertyGroup>
 	<Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
 	<ImportGroup Label="ExtensionSettings">
@@ -25,12 +26,12 @@
 	<PropertyGroup Label="UserMacros" />
 	<PropertyGroup>
 	<_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
-		<NMakeBuildCommandLine Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">echo Starting SCons &amp;&amp; &quot;C:\Python27\python.exe&quot; -c &quot;from os.path import join; import sys; sys.path = [ join(sys.prefix, &apos;Lib&apos;, &apos;site-packages&apos;, &apos;scons-2.3.4&apos;), join(sys.prefix, &apos;scons-2.3.4&apos;), join(sys.prefix, &apos;Lib&apos;, &apos;site-packages&apos;, &apos;scons&apos;), join(sys.prefix, &apos;scons&apos;) ] + sys.path; import SCons.Script; SCons.Script.main()&quot; -C &quot;E:\dev\HordeSoftware\DemoArnoldApp\fabric2arnold&quot; -f SConstruct &quot;E:\dev\HordeSoftware\DemoArnoldApp\fabric2arnold\Fabric2Arnold-Windows-x86_64.dll&quot;</NMakeBuildCommandLine>
-		<NMakeReBuildCommandLine Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">echo Starting SCons &amp;&amp; &quot;C:\Python27\python.exe&quot; -c &quot;from os.path import join; import sys; sys.path = [ join(sys.prefix, &apos;Lib&apos;, &apos;site-packages&apos;, &apos;scons-2.3.4&apos;), join(sys.prefix, &apos;scons-2.3.4&apos;), join(sys.prefix, &apos;Lib&apos;, &apos;site-packages&apos;, &apos;scons&apos;), join(sys.prefix, &apos;scons&apos;) ] + sys.path; import SCons.Script; SCons.Script.main()&quot; -C &quot;E:\dev\HordeSoftware\DemoArnoldApp\fabric2arnold&quot; -f SConstruct &quot;E:\dev\HordeSoftware\DemoArnoldApp\fabric2arnold\Fabric2Arnold-Windows-x86_64.dll&quot;</NMakeReBuildCommandLine>
-		<NMakeCleanCommandLine Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">echo Starting SCons &amp;&amp; &quot;C:\Python27\python.exe&quot; -c &quot;from os.path import join; import sys; sys.path = [ join(sys.prefix, &apos;Lib&apos;, &apos;site-packages&apos;, &apos;scons-2.3.4&apos;), join(sys.prefix, &apos;scons-2.3.4&apos;), join(sys.prefix, &apos;Lib&apos;, &apos;site-packages&apos;, &apos;scons&apos;), join(sys.prefix, &apos;scons&apos;) ] + sys.path; import SCons.Script; SCons.Script.main()&quot; -C &quot;E:\dev\HordeSoftware\DemoArnoldApp\fabric2arnold&quot; -f SConstruct -c &quot;E:\dev\HordeSoftware\DemoArnoldApp\fabric2arnold\Fabric2Arnold-Windows-x86_64.dll&quot;</NMakeCleanCommandLine>
-		<NMakeOutput Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:\dev\HordeSoftware\DemoArnoldApp\fabric2arnold\Fabric2Arnold-Windows-x86_64.dll</NMakeOutput>
+		<NMakeBuildCommandLine Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">echo Starting SCons &amp;&amp; &quot;C:\Python27_64\python.exe&quot; -c &quot;from os.path import join; import sys; sys.path = [ join(sys.prefix, &apos;Lib&apos;, &apos;site-packages&apos;, &apos;scons-2.3.5&apos;), join(sys.prefix, &apos;scons-2.3.5&apos;), join(sys.prefix, &apos;Lib&apos;, &apos;site-packages&apos;, &apos;scons&apos;), join(sys.prefix, &apos;scons&apos;) ] + sys.path; import SCons.Script; SCons.Script.main()&quot; -C &quot;R:\src\HordeSoftware\demoarnoldapp\fabric2arnold&quot; -f SConstruct &quot;R:\src\HordeSoftware\demoarnoldapp\fabric2arnold\Fabric2Arnold-Windows-x86_64.dll&quot;</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">echo Starting SCons &amp;&amp; &quot;C:\Python27_64\python.exe&quot; -c &quot;from os.path import join; import sys; sys.path = [ join(sys.prefix, &apos;Lib&apos;, &apos;site-packages&apos;, &apos;scons-2.3.5&apos;), join(sys.prefix, &apos;scons-2.3.5&apos;), join(sys.prefix, &apos;Lib&apos;, &apos;site-packages&apos;, &apos;scons&apos;), join(sys.prefix, &apos;scons&apos;) ] + sys.path; import SCons.Script; SCons.Script.main()&quot; -C &quot;R:\src\HordeSoftware\demoarnoldapp\fabric2arnold&quot; -f SConstruct &quot;R:\src\HordeSoftware\demoarnoldapp\fabric2arnold\Fabric2Arnold-Windows-x86_64.dll&quot;</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">echo Starting SCons &amp;&amp; &quot;C:\Python27_64\python.exe&quot; -c &quot;from os.path import join; import sys; sys.path = [ join(sys.prefix, &apos;Lib&apos;, &apos;site-packages&apos;, &apos;scons-2.3.5&apos;), join(sys.prefix, &apos;scons-2.3.5&apos;), join(sys.prefix, &apos;Lib&apos;, &apos;site-packages&apos;, &apos;scons&apos;), join(sys.prefix, &apos;scons&apos;) ] + sys.path; import SCons.Script; SCons.Script.main()&quot; -C &quot;R:\src\HordeSoftware\demoarnoldapp\fabric2arnold&quot; -f SConstruct -c &quot;R:\src\HordeSoftware\demoarnoldapp\fabric2arnold\Fabric2Arnold-Windows-x86_64.dll&quot;</NMakeCleanCommandLine>
+		<NMakeOutput Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">R:\src\HordeSoftware\demoarnoldapp\fabric2arnold\Fabric2Arnold-Windows-x86_64.dll</NMakeOutput>
 		<NMakePreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">_SCL_SECURE_NO_WARNINGS=1;_ITERATOR_DEBUG_LEVEL=0;_SECURE_SCL=0;_WIN32_WINNT=0x0600;WIN64</NMakePreprocessorDefinitions>
-		<NMakeIncludeSearchPath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:\dev\HordeSoftware\DemoArnoldApp\HApp\FabricEngine\include;E:\dev\Arnold SDK\Arnold-4.2.7.5/include;GenCPP/h;.</NMakeIncludeSearchPath>
+		<NMakeIncludeSearchPath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">R:\src\HordeSoftware\demoarnoldapp\HApp\FabricEngine\include;R:\src\ArnoldSDK\Windows 4.2.8.0/include;GenCPP/h;.</NMakeIncludeSearchPath>
 		<NMakeForcedIncludes Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(NMakeForcedIncludes)</NMakeForcedIncludes>
 		<NMakeAssemblySearchPath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(NMakeAssemblySearchPath)</NMakeAssemblySearchPath>
 		<NMakeForcedUsingAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(NMakeForcedUsingAssemblies)</NMakeForcedUsingAssemblies>
@@ -125,8 +126,8 @@
 <!-- SCons Data:
 fXEBVQlEZWJ1Z3x4NjRxAmNjb3B5X3JlZwpfcmVjb25zdHJ1Y3RvcgpxAyhjU0NvbnMuVG9vbC5t
 c3ZzCkNvbmZpZwpxBGNfX2J1aWx0aW5fXwpvYmplY3QKcQVOdFJxBn1xByhVB3ZhcmlhbnRxCFUF
-RGVidWdxCVUHY21kYXJnc3EKVQBVCHBsYXRmb3JtcQtVA3g2NHEMVQdydW5maWxlcQ1VUUU6XGRl
-dlxIb3JkZVNvZnR3YXJlXERlbW9Bcm5vbGRBcHBcZmFicmljMmFybm9sZFxGYWJyaWMyQXJub2xk
+RGVidWdxCVUHY21kYXJnc3EKVQBVCHBsYXRmb3JtcQtVA3g2NHEMVQdydW5maWxlcQ1VUVI6XHNy
+Y1xIb3JkZVNvZnR3YXJlXGRlbW9hcm5vbGRhcHBcZmFicmljMmFybm9sZFxGYWJyaWMyQXJub2xk
 LVdpbmRvd3MteDg2XzY0LmRsbHEOVQtidWlsZHRhcmdldHEPaA5VBm91dGRpcnEQVQB1YnMu
 
 fXEBKFULT3RoZXIgRmlsZXNxAl1VDUxvY2FsIEhlYWRlcnNxA11VDEhlYWRlciBGaWxlc3EEXXEF

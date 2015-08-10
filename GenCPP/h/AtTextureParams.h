@@ -21,7 +21,7 @@
 namespace Fabric { namespace EDK { namespace KL {
 
 // KL struct 'AtTextureParams'
-// Defined at E:\dev\HordeSoftware\DemoArnoldApp\fabric2arnold\GenKL/\ai_texture.kl:10:1
+// Defined at R:\src\HordeSoftware\demoarnoldapp\fabric2arnold\GenKL/\ai_texture.kl:10:1
 
 struct AtTextureParams
 {

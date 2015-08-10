@@ -21,7 +21,7 @@
 namespace Fabric { namespace EDK { namespace KL {
 
 // KL struct 'AtParamValue'
-// Defined at E:\dev\HordeSoftware\DemoArnoldApp\fabric2arnold\GenKL/\ai_params.kl:8:1
+// Defined at R:\src\HordeSoftware\demoarnoldapp\fabric2arnold\GenKL/\ai_params.kl:8:1
 
 struct AtParamValue
 {

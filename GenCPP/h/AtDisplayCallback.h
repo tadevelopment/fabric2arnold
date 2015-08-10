@@ -21,7 +21,7 @@
 namespace Fabric { namespace EDK { namespace KL {
 
 // KL interface 'AtDisplayCallback'
-// Defined at E:\dev\HordeSoftware\DemoArnoldApp\fabric2arnold\GenKL/\_AtDisplayCallback.kl:8:1
+// Defined at R:\src\HordeSoftware\demoarnoldapp\fabric2arnold\GenKL/\_AtDisplayCallback.kl:8:1
 
 class AtDisplayCallback
 {
@@ -30,7 +30,7 @@ public:
   struct VTable
   {
     void (*Callback_E253B18F7761677298CCF3C32F927BFD)(
-      ObjectCore const * const *objectCorePtr,
+      ObjectCore * const *objectCorePtr,
       Traits< UInt32 >::INParam arg0,
       Traits< UInt32 >::INParam arg1,
       Traits< UInt32 >::INParam arg2,
@@ -82,7 +82,7 @@ public:
     Traits< ExternalArray< RGBA > >::INParam arg4,
     Traits< ExternalArray< Color > >::INParam arg5,
     Traits< Data >::INParam arg6
-    ) const;
+    );
 };
 
 inline void Traits<AtDisplayCallback>::ConstructEmpty( AtDisplayCallback &val )
