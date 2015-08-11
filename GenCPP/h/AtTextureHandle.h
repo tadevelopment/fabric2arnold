@@ -21,7 +21,7 @@
 namespace Fabric { namespace EDK { namespace KL {
 
 // KL struct 'AtTextureHandle'
-// Defined at R:\src\HordeSoftware\demoarnoldapp\fabric2arnold\GenKL/\_opaque_types.kl:51:1
+// Defined at E:\dev\HordeSoftware\DemoArnoldApp\fabric2arnold\GenKL/\_opaque_types.kl:51:1
 
 struct AtTextureHandle
 {

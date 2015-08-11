@@ -27,6 +27,7 @@ void AtDisplayCallback_Imp(AtUInt32 x, AtUInt32 y, AtUInt32 width, AtUInt32 heig
 
         _klCallack.Callback(x, y, width, height, rgbaBuffer, colorBuffer, data);
     }
+    AiFree(buffer);
 }
 
 bool KlAtDisplayCallback_to_AtDisplayCallback(const Fabric::EDK::KL::AtDisplayCallback & from, AtDisplayCallback & to) 
