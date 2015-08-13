@@ -1,9 +1,11 @@
 require FileIO;
 
-function Boolean setArnoldRenderToDisplay(Ref<AtDisplayCallback> callback ) {
+/** Setup Arnold to render to the provided callback */
+function Boolean setArnoldRenderToDisplay(Ref<AtDisplayCallback> callback ) 
+{
   AtNode driver = AiNodeLookUpByName("display_onscreen");
   if (!driver.isValid()) {
-    // create an output driver - this pushes renders to disk
+    // create an output driver - this passes rendered pixels to our callback
     driver = AiNode("driver_display");
     AiNodeSetStr(driver, "name", "display_onscreen");
   }
@@ -17,9 +19,8 @@ function Boolean setArnoldRenderToDisplay(Ref<AtDisplayCallback> callback ) {
   }
   SetAtDisplayCallback(driver, callback);
 
-  AtNode options = AiUniverseGetOptions();
-
   // assign the driver and the filter to the outputs
+  AtNode options = AiUniverseGetOptions();
   AtArray outputs_array = AiArrayAllocate(1, 1, AI_TYPE_STRING);
   AiArraySetStr(outputs_array, 0, "RGBA RGBA myfilter display_onscreen");
   AiNodeSetArray(options, "outputs", outputs_array);
@@ -27,18 +28,14 @@ function Boolean setArnoldRenderToDisplay(Ref<AtDisplayCallback> callback ) {
   return true;
 }
 
-function Boolean setArnoldOutFilename(String outFilename) {
+/** Setup Arnold to render to a jpg file with path outFileName */
+function Boolean setArnoldRenderToFile(String outFilename) 
+{
   // If, at some point we supported Async rendering, this call would be necessery
   if (AiRendering())
   {
     AiRenderInterrupt();
   }
-
-  // set render options
-  AtNode options = AiUniverseGetOptions();
-  AiNodeSetInt(options, "AA_samples", 4);
-  AiNodeSetInt(options, "xres", 320);
-  AiNodeSetInt(options, "yres", 240);
 
   // create a gaussian filter node
   AtNode gfilter = AiNodeLookUpByName("myfilter");
@@ -56,41 +53,26 @@ function Boolean setArnoldOutFilename(String outFilename) {
     // create an output driver - this pushes renders to disk
     driver = AiNode("driver_jpeg");
     AiNodeSetStr(driver, "name", "jpg_driver");
-
-    // assign the driver and the filter to the outputs
-    AtArray outputs_array = AiArrayAllocate(1, 1, AI_TYPE_STRING);
-    AiArraySetStr(outputs_array, 0, "RGBA RGBA myfilter jpg_driver");
-    AiNodeSetArray(options, "outputs", outputs_array);
   }
 
   // Set filename we are writing out to
   AiNodeSetStr(driver, "filename", outFilename);
 
+  // assign the driver and the filter to the outputs
+  AtNode options = AiUniverseGetOptions();
+  AtArray outputs_array = AiArrayAllocate(1, 1, AI_TYPE_STRING);
+  AiArraySetStr(outputs_array, 0, "RGBA RGBA myfilter jpg_driver");
+  AiNodeSetArray(options, "outputs", outputs_array);
+
   return true;
 }
 
-
-// Call this function to render out to a file.
-// This assumes that Arnold scene has been setup correctly already
-function Boolean doArnoldRenderToFile(String outFilename) {
-
-  setArnoldOutFilename(outFilename);
-
-  // Try launching a render
-  Integer result = AiRender(AI_RENDER_MODE_CAMERA);
-  if (result != AI_SUCCESS)
-  {
-    report("[FabricArnold::TestSuite] Error " + String(result));
-    return false;
-  }
-  return true;
-}
-
+/** Write current Arnold scene cache to disk */
 function SInt32 doArnoldRenderToASS(String outFilename) {
   FilePath fp(outFilename);
-  // By default, an ASS file writes to a jpg at the same location
+  // By default, we set the ASS file to write a jpg
   String jpgFilename = fp.replaceExtension('jpg').string();
-  setArnoldOutFilename(jpgFilename);
+  setArnoldRenderToFile(jpgFilename);
 
   return AiASSWrite(outFilename, AI_NODE_ALL, false, true);
 }
