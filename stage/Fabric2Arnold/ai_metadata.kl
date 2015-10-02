@@ -19,6 +19,7 @@ Note that you should never pass allocated strings, as they will not be freed.
 
 */
 
+
 function AiMetaDataSetBool(io AtMetaDataStore mds, String param, String name, Boolean value) = '_fe_AiMetaDataSetBool';
 function AiMetaDataSetBoolAtString(io AtMetaDataStore mds, AtString param, AtString name, Boolean value) = '_fe_AiMetaDataSetBoolAtString';
 function AiMetaDataSetInt(io AtMetaDataStore mds, String param, String name, SInt32 value) = '_fe_AiMetaDataSetInt';
@@ -48,6 +49,7 @@ Following on the example above: constAtNodeEntry*entry=AiNodeEntryLookUp("my_sim
 
 */
 
+
 function Boolean AiMetaDataGetBoolAtString(AtNodeEntry entry, AtString param, AtString name, io Boolean value) = '_fe_AiMetaDataGetBoolAtString';
 function Boolean AiMetaDataGetIntAtString(AtNodeEntry entry, AtString param, AtString name, io SInt32 value) = '_fe_AiMetaDataGetIntAtString';
 function Boolean AiMetaDataGetFltAtString(AtNodeEntry entry, AtString param, AtString name, io Float32 value) = '_fe_AiMetaDataGetFltAtString';
@@ -65,5 +67,6 @@ Usage: constchar*metadata_file="metadata_file.mtd"; boolsuccess=AiMetaDataLoadFi
  
 
 */
+
 
 function Boolean AiMetaDataLoadFile(String filename) = '_fe_AiMetaDataLoadFile';

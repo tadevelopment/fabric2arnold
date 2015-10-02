@@ -10,12 +10,14 @@ Rendering Modes
 
 */
 
+
 const Integer AI_RENDER_MODE_CAMERA = 0x00;	 //  Render from a camera  
 const Integer AI_RENDER_MODE_FREE = 0x01;	 //  Process arbitrary ray-tracing requests, acting as a "ray server"  
 /**
 Error Codes
 
 */
+
 
 const Integer AI_SUCCESS = 0x00;	 //  no error  
 const Integer AI_ABORT = 0x01;	 //  render aborted  
@@ -30,6 +32,7 @@ const Integer AI_INTERRUPT = 0x09;	 //  render interrupted by user
 const Integer AI_ERROR_UNRENDERABLE_SCENEGRAPH = 0x0A;	 //  unrenderable scenegraph  
 const Integer AI_ERROR_NO_OUTPUTS = 0x0B;	 //  no rendering outputs  
 const Integer AI_ERROR = -1;	 //  generic error  
+
 function AiBegin() = '_fe_AiBegin';
 function AiEnd() = '_fe_AiEnd';
 function SInt32 AiRender(SInt32 mode/*=AI_RENDER_MODE_CAMERA*/) = '_fe_AiRender';

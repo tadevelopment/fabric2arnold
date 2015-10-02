@@ -25,6 +25,7 @@ See AtParamValue for the actual primitive data types that these macros refer to.
 
 */
 
+
 const Integer AI_TYPE_BYTE = 0x00;	 //  Byte (an 8-bit sized unsigned integer)  
 const Integer AI_TYPE_INT = 0x01;	 //  Integer  
 const Integer AI_TYPE_UINT = 0x02;	 //  Unsigned integer  
@@ -48,6 +49,7 @@ Parameter Categories for User-Data
 
 */
 
+
 const Integer AI_USERDEF_UNDEFINED = 0;	 //  Undefined, you should never encounter a parameter of this category  
 const Integer AI_USERDEF_CONSTANT = 1;	 //  User-defined: per-object parameter  
 const Integer AI_USERDEF_UNIFORM = 2;	 //  User-defined: per-face parameter  
@@ -57,6 +59,7 @@ const Integer AI_USERDEF_INDEXED = 4;	 //  User-defined: per-face-vertex paramet
 AtParamEntry Methods
 
 */
+
 
 function String AiParamGetName(AtParamEntry pentry) = '_fe_AiParamGetName';
 function SInt32 AiParamGetType(AtParamEntry pentry) = '_fe_AiParamGetType';
@@ -69,11 +72,13 @@ AtUserParamEntry Methods
 
 */
 
+
 function String AiUserParamGetName(AtUserParamEntry upentry) = '_fe_AiUserParamGetName';
 function SInt32 AiUserParamGetType(AtUserParamEntry upentry) = '_fe_AiUserParamGetType';
 function SInt32 AiUserParamGetArrayType(AtUserParamEntry upentry) = '_fe_AiUserParamGetArrayType';
 function SInt32 AiUserParamGetCategory(AtUserParamEntry upentry) = '_fe_AiUserParamGetCategory';
 function SInt32 AiUserParamGetIndex(AtUserParamEntry upentry) = '_fe_AiUserParamGetIndex';
+
 function AiNodeParamByte(io AtList params, SInt32 varoffset, String pname, UInt8 pdefault) = '_fe_AiNodeParamByte';
 function AiNodeParamInt(io AtList params, SInt32 varoffset, String pname, SInt32 pdefault) = '_fe_AiNodeParamInt';
 function AiNodeParamUInt(io AtList params, SInt32 varoffset, String pname, UInt32 pdefault) = '_fe_AiNodeParamUInt';

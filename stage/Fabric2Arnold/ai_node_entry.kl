@@ -7,16 +7,18 @@ require Math;
 
 /**  */
 struct AtMetaDataEntry {
-  String name; //  
-  String param; //  
-  UInt8 type; //  
-  AtParamValue value; //  
+  String name;
+  String param;
+  UInt8 type;
+  AtParamValue value;
 };
 
+//////////////////////////////////////////
 /**
 Node Types
 
 */
+
 
 const Integer AI_NODE_UNDEFINED = 0x0000;	 //  Undefined type  
 const Integer AI_NODE_OPTIONS = 0x0001;	 //  Options node (following the "singleton" pattern, there is only one options node)  
@@ -32,6 +34,7 @@ const Integer AI_NODE_ALL = 0xFFFF;	 //  Bitmask including all node types, used 
 AtNodeEntry Methods
 
 */
+
 
 function AtNodeEntry AiNodeEntryLookUpAtString(AtString name) = '_fe_AiNodeEntryLookUpAtString';
 function String AiNodeEntryGetName(AtNodeEntry nentry) = '_fe_AiNodeEntryGetName';
@@ -53,6 +56,7 @@ AtParamIterator Methods
 
 */
 
+
 function AiParamIteratorDestroy(io AtParamIterator iter) = '_fe_AiParamIteratorDestroy';
 function AtParamEntry AiParamIteratorGetNext(io AtParamIterator iter) = '_fe_AiParamIteratorGetNext';
 function Boolean AiParamIteratorFinished(AtParamIterator iter) = '_fe_AiParamIteratorFinished';
@@ -60,6 +64,7 @@ function Boolean AiParamIteratorFinished(AtParamIterator iter) = '_fe_AiParamIte
 AtMetaDataIterator Methods
 
 */
+
 
 function AiMetaDataIteratorDestroy(io AtMetaDataIterator iter) = '_fe_AiMetaDataIteratorDestroy';
 function AtMetaDataEntry AiMetaDataIteratorGetNext(io AtMetaDataIterator iter) = '_fe_AiMetaDataIteratorGetNext';

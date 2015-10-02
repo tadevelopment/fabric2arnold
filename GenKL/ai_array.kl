@@ -18,6 +18,7 @@ struct AtArray {
  
 };
 
+//////////////////////////////////////////
 Mat44 AiArrayGetMtxFunc(AtArray a, UInt32 i) = "_fe_AiArrayGetMtxFunc";
 
 function Boolean AiArraySetBool(io AtArray a, Boolean val[]) = "_fe_AiArraySetBoolArr";
@@ -39,6 +40,7 @@ function Boolean AiArrayGetRGBA(io AtArray a, io Color val<>) = "_fe_AiArrayGetR
 function Boolean AiArrayGetPnt(io AtArray a, io Vec3 val<>) = "_fe_AiArrayGetPntArr";
 function Boolean AiArrayGetPnt2(io AtArray a, io Vec2 val<>) = "_fe_AiArrayGetPnt2Arr";
 function Boolean AiArrayGetVec(io AtArray a, io Vec3 val<>) = "_fe_AiArrayGetVecArr";
+
 
 
 

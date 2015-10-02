@@ -10,6 +10,7 @@ AtNode Methods
 
 */
 
+
 function AtNode AiNodeAtString(AtString name) = '_fe_AiNodeAtString';
 function AtNode AiNodeLookUpByNameAtString(AtString name) = '_fe_AiNodeLookUpByNameAtString';
 function AiNodeReset(io AtNode node) = '_fe_AiNodeReset';
@@ -37,6 +38,7 @@ AtUserParamIterator Methods
 
 */
 
+
 function AiUserParamIteratorDestroy(io AtUserParamIterator iter) = '_fe_AiUserParamIteratorDestroy';
 function AtUserParamEntry AiUserParamIteratorGetNext(io AtUserParamIterator iter) = '_fe_AiUserParamIteratorGetNext';
 function Boolean AiUserParamIteratorFinished(AtUserParamIterator iter) = '_fe_AiUserParamIteratorFinished';
@@ -44,6 +46,7 @@ function Boolean AiUserParamIteratorFinished(AtUserParamIterator iter) = '_fe_Ai
 Parameter Writers
 
 */
+
 
 function AiNodeSetByteAtString(io AtNode node, AtString param, UInt8 val) = '_fe_AiNodeSetByteAtString';
 function AiNodeSetIntAtString(io AtNode node, AtString param, SInt32 val) = '_fe_AiNodeSetIntAtString';
@@ -64,6 +67,7 @@ function AiNodeSetAttributes(io AtNode node, String attributes) = '_fe_AiNodeSet
 Parameter Readers
 
 */
+
 
 function UInt8 AiNodeGetByteAtString(AtNode node, AtString param) = '_fe_AiNodeGetByteAtString';
 function SInt32 AiNodeGetIntAtString(AtNode node, AtString param) = '_fe_AiNodeGetIntAtString';
