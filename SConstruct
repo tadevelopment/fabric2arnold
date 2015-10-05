@@ -37,6 +37,8 @@ fabricBuildEnv.Append(LIBPATH = [
 fabricBuildEnv.Append(LIBS = [
   "ai.lib",
   ])
+  fabricBuildEnv.Append( RPATH = fabricBuildEnv.Literal('\\$$ORIGIN'))
+  #fabricBuildEnv.Append(RPATH='$ORIGIN')
 
 cppFiles = glob.glob('./GenCPP/cpp/*.cpp')
 dll = fabricBuildEnv.Extension(
