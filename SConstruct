@@ -44,7 +44,8 @@ else:
   fabricBuildEnv.Append(LIBS = [
     "libai.so",
     ])
-
+  fabricBuildEnv.Append( RPATH = fabricBuildEnv.Literal('\\$$ORIGIN'))
+  #fabricBuildEnv.Append(RPATH='$ORIGIN')
 
 cppFiles = glob.glob('GenCPP/cpp/*.cpp')
 dll = fabricBuildEnv.Extension(
