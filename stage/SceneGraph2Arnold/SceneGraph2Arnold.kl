@@ -15,7 +15,7 @@ object SceneGraphToArnoldRenderer {
 
 SceneGraphToArnoldRenderer( SceneGraph sg, SGCamera camera, String rootpath ) {
   this.sg = sg;
-  SceneGraphWrapper sgWrap(sg);
+  SGSceneWrapper sgWrap(sg);
   SGInstanceQuery lightGroup = sgWrap.createInstanceQuery( "ArnoldRenderer_lightsQuery", SGBaseLightInstanceFilter() );
   SGInstanceQuery geomInstGroup = sgWrap.createInstanceQuery( "ArnoldRenderer_geomQuery", SGGeometryInstanceFilter() );
 
