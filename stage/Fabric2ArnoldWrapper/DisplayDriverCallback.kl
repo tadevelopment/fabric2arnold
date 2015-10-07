@@ -1,0 +1,114 @@
+/****************************************************************
+ Display callback recieves and holds render data
+*/
+
+require AsyncTask;
+
+/****************************************************************
+ Display callback recieves and holds render data
+*/
+
+object DisplayDriverCallback : AtDisplayCallback {
+  // Our callback caches the render data as
+  // it is recieved from the driver
+  RGBA renderData[];
+
+  UInt32 renderWidth;
+  UInt32 renderHeight;
+};
+
+DisplayDriverCallback(UInt32 xres, UInt32 yres)
+{
+
+  this.renderData.resize(xres * yres);
+}
+
+DisplayDriverCallback.Callback!(UInt32 bucketX, UInt32 bucketY, UInt32 bucketWidth, UInt32 bucketHeight, RGBA<> rgbaBuffer, Color<> colorBuffer, Data cb_data)
+{
+  if (rgbaBuffer.size() != 0) 
+  {
+    for (UInt32 y = 0; y < bucketHeight; y++)
+    {
+      for (UInt32 x = 0; x < bucketWidth; x++)
+      {
+        UInt32 cachePixel = (bucketY + y) * this.renderWidth + (bucketX + x);
+        UInt32 bucketPixel = y * bucketWidth + x;
+        this.renderData[cachePixel] = rgbaBuffer[bucketPixel];
+      }
+    }
+  }
+  else if (colorBuffer.size() != 0) {
+    for (UInt32 y = 0; y < bucketHeight; y++)
+    {
+      for (UInt32 x = 0; x < bucketWidth; x++)
+      {
+        UInt32 cachePixel = (bucketY + y) * this.renderWidth + (bucketX + x);
+        UInt32 bucketPixel = y * bucketWidth + x;
+        this.renderData[cachePixel] = colorBuffer[bucketPixel].toRGBA();
+      }
+    }
+  }
+  else {
+    // If nothing is passed, Arnold is indicating the next region it will render
+    // Outline that region with a yellow border.
+    RGBA bucketColor(0, 255, 255, 255);
+    UInt32 pixOffset = (bucketY * this.renderWidth) + bucketX;
+    for (UInt32 x = 0; x < bucketWidth; x++)
+    {
+      this.renderData[pixOffset + x] = bucketColor;
+    }
+    this.renderData[pixOffset + this.renderWidth] = bucketColor;
+    this.renderData[pixOffset + this.renderWidth + bucketWidth - 1] = bucketColor;
+
+    pixOffset = ((bucketY + bucketHeight - 1) * this.renderWidth) + bucketX;
+    for (UInt32 x = 0; x < bucketWidth; x++)
+    {
+      this.renderData[pixOffset + x] = bucketColor;
+    }
+    this.renderData[pixOffset - this.renderWidth] = bucketColor;
+    this.renderData[pixOffset - this.renderWidth + (bucketWidth - 1)] = bucketColor;
+  }
+}
+
+function UInt64 DisplayDriverCallback.getRenderData() 
+{
+  return dataToUInt(this.renderData.data);
+}
+
+/****************************************************************
+ RenderTask enables background rendering
+*/
+object ArnoldRenderTask : AsyncTask {
+    Integer result;
+    DisplayDriverCallback renderCallback;
+};
+
+function ArnoldRenderTask(UInt32 xres, UInt32 yres, Boolean createDisplayCallback) {
+  this.result = AI_SUCCESS;
+
+  AtNode options = AiUniverseGetOptions();
+
+  AiNodeSetInt(options, "xres", xres);
+  AiNodeSetInt(options, "yres", yres);
+
+  if (createDisplayCallback)
+  {
+    DisplayDriverCallback callback(xres, yres);
+    this.renderCallback = callback;
+
+    setArnoldRenderToDisplay(callback);
+  }
+}
+
+// Do the actual render work.
+function ArnoldRenderTask.doTask!(Data data) {
+    // Try launching a render
+    this.result = AiRender(AI_RENDER_MODE_CAMERA);
+}
+
+function ArnoldRenderTask.requestCancel() { throw('Cancel not implemented'); }
+
+function UInt64 ArnoldRenderTask.getRenderData() 
+{
+  return this.renderCallback.getRenderData();
+}
