@@ -2,6 +2,7 @@
   "code" : [
     "AtStringRenameFuncs.kl",
     "PolygonMeshConversion.kl",
-    "ArnoldRender.kl"
+    "ArnoldRender.kl",
+    "DisplayDriverCallback.kl"
   ]
 }
