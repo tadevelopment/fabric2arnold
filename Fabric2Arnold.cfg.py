@@ -5,18 +5,13 @@
 # by kl2edk utility
 #
 
-cppToKLTypeMapping = {
-    'unsigned int': 'UInt32',
-    'int': 'SInt32',
-    'float': 'Float32',
-    'double': 'Float64',
-    'long long': 'SInt64',
-    'bool': 'Boolean',
-    'UINT': 'UInt32',
-    'void*': 'Data',
-    'void': '',
-    'char*': 'String',
 
+# Name of this project
+project_name = 'Fabric2Arnold'
+# Specify the root of the doxygen output directory.  This dir is relative to this file
+xml_dir = 'DoxygenXML/xml/'
+
+cppToKLTypeMapping.update( {
     'AtByte' : 'UInt8',
     'AtBBox': 'Box3',
     'AtRGB': 'RGB',
@@ -31,7 +26,7 @@ cppToKLTypeMapping = {
     'AtPoint2' : 'Vec2',
     'AtVector2' : 'Vec2',
     'AtMatrix' : 'Mat44',
-}
+} )
 
 #
 # When multiple C++ types map to a single KL
@@ -45,9 +40,9 @@ cppToKLTypeMapping = {
 # kl2edk phase
 # NOTE: The alias must be named the same as the C++ type
 #
-kl_type_aliases = {
+kl_type_aliases.update( {
     'AtString' : 'String'
-}
+} )
 
 #
 # If an SDK exposes opaque types (eg, handles) then
@@ -59,7 +54,7 @@ kl_type_aliases = {
 # with any filesToProcess, or it may be overwritten
 #
 opaque_file_name = '_opaque_types'
-opaque_type_wrappers = [
+opaque_type_wrappers += [
     'AtBucket',
     'AtList',
     'AtNode',
@@ -79,43 +74,6 @@ opaque_type_wrappers = [
     'AtMetaDataStore',
 ]
 
-#
-# We need to define a list of KL POD types
-# When generating the fn definition in kl2edk,
-# complex (non-POD) types will be passed an IO
-# parameter to set as a return value, while
-# POD types will return their value directly.
-# We need to know which is which in order to
-# correctly generate the function implementations
-#
-kl_pod_types = [
-    'UInt8',
-    'UInt16',
-    'UInt32',
-    'UInt64',
-    'SInt8',
-    'SInt16',
-    'SInt32',
-    'SInt64',
-    'Float32',
-    'Float64',
-    'Boolean',
-    'Data'
-]
-
-# Name of this project
-project_name = 'Fabric2Arnold'
-# Specify the root of the doxygen output directory.  This dir is relative to this file
-xml_dir = 'DoxygenXML/xml/'
-# Specify where the output files are written.  This dir is relative to this file
-output_dir = 'GenKL'
-output_h_dir = 'GenCPP/h'
-output_cpp_dir = 'GenCPP/cpp'
-
-# specify where custom CPP files (if any) are located
-custom_cpp_dir = 'CustomCPP'
-# specify where custom CPP files (if any) are located
-custom_KL_dir = 'CustomKL'
 
 filesToProcess = [
     'ai_params.h',
@@ -197,8 +155,6 @@ custom_add_to_file = {
                         #'function Boolean AiArrayGetStr(io AtArray a, io String val<>) = "_fe_AiArrayGetStrArr";\n'
                         #'function Boolean AiArrayGetPtr(io AtArray a, io Data val<>) = "_fe_AiArrayGetPtrArr";\n'
 }
-# Define this value to true to not expose inline functions
-skipInlineFunctions = True
 
 #####
 # The following parameters deal with creating a codegen file
@@ -206,8 +162,9 @@ skipInlineFunctions = True
 # Specify a file to be merged with the auto-generated codegen file
 # Items in this file will override the auto-generated items
 # This file should be specified relative to this file
-merge_codegen_file = "Fabric2Arnold.codegen.json"
+merge_codegen_file = project_name + ".codegen.json"
 
 # The parameter prefix is used to fill in the auto-generated
 # codegen.json file.  It is required to auto-generate function bodies
 parameter_prefix = 'f2a'
+
