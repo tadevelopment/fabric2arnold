@@ -5,6 +5,10 @@
 
 require Math;
 
+//////////////////////////////////////////////////
+//  enumerated values
+//////////////////////////////////////////////////
+//  classes 
 /**  Generic array data type 
  */
 struct AtArray {
@@ -18,6 +22,7 @@ struct AtArray {
  
 };
 
+//////////////////////////////////////////
 Mat44 AiArrayGetMtxFunc(AtArray a, UInt32 i) = "_fe_AiArrayGetMtxFunc";
 
 function Boolean AiArraySetBool(io AtArray a, Boolean val[]) = "_fe_AiArraySetBoolArr";
@@ -41,6 +46,9 @@ function Boolean AiArrayGetPnt2(io AtArray a, io Vec2 val<>) = "_fe_AiArrayGetPn
 function Boolean AiArrayGetVec(io AtArray a, io Vec3 val<>) = "_fe_AiArrayGetVecArr";
 
 
+
+//////////////////////////////////////////////////
+//  global-scope functions 
 
 function AtArray AiArray(UInt32 nelements, UInt8 nkeys, UInt8 type) = '_fe_AiArray';
 function AtArray AiArrayAllocate(UInt32 nelements, UInt8 nkeys, UInt8 type) = '_fe_AiArrayAllocate';

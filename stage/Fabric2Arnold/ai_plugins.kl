@@ -5,6 +5,10 @@
 
 require Math;
 
+//////////////////////////////////////////////////
+//  enumerated values
+//////////////////////////////////////////////////
+//  classes 
 /**  Used by dynamically-linked nodes to return node info 
  */
 struct AtNodeLib {
@@ -19,6 +23,10 @@ struct AtNodeLib {
   String version; //  Arnold version that this node was compiled against 
  
 };
+
+//////////////////////////////////////////
+//////////////////////////////////////////////////
+//  global-scope functions 
 
 function AiLoadPlugins(String directory) = '_fe_AiLoadPlugins';
 function AiLoadPlugin(String path) = '_fe_AiLoadPlugin';

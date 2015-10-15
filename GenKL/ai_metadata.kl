@@ -5,6 +5,12 @@
 
 require Math;
 
+//////////////////////////////////////////////////
+//  enumerated values
+//////////////////////////////////////////////////
+//  classes 
+//////////////////////////////////////////////////
+//  global-scope functions 
 /**
 Metadata Writing
 These functions let the author of a node attach auxiliary information about parameters or the node to the node itself. These methods may only be called inside of the node_parameters method where the parameters are declared. This function receives an opaque pointer to a AtMetaDataStore structure which will hold the results until AiEnd() is called.
@@ -18,6 +24,7 @@ Note that you should never pass allocated strings, as they will not be freed.
    
 
 */
+
 
 function AiMetaDataSetBool(io AtMetaDataStore mds, String param, String name, Boolean value) = '_fe_AiMetaDataSetBool';
 function AiMetaDataSetBoolAtString(io AtMetaDataStore mds, AtString param, AtString name, Boolean value) = '_fe_AiMetaDataSetBoolAtString';
@@ -48,6 +55,7 @@ Following on the example above: constAtNodeEntry*entry=AiNodeEntryLookUp("my_sim
 
 */
 
+
 function Boolean AiMetaDataGetBoolAtString(AtNodeEntry entry, AtString param, AtString name, io Boolean value) = '_fe_AiMetaDataGetBoolAtString';
 function Boolean AiMetaDataGetIntAtString(AtNodeEntry entry, AtString param, AtString name, io SInt32 value) = '_fe_AiMetaDataGetIntAtString';
 function Boolean AiMetaDataGetFltAtString(AtNodeEntry entry, AtString param, AtString name, io Float32 value) = '_fe_AiMetaDataGetFltAtString';
@@ -65,5 +73,6 @@ Usage: constchar*metadata_file="metadata_file.mtd"; boolsuccess=AiMetaDataLoadFi
  
 
 */
+
 
 function Boolean AiMetaDataLoadFile(String filename) = '_fe_AiMetaDataLoadFile';

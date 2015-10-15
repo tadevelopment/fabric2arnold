@@ -5,19 +5,13 @@
 
 require Math;
 
-/**
-Severity Codes
-
-*/
+//////////////////////////////////////////////////
+//  enumerated values
 
 const Integer AI_SEVERITY_INFO = 0x00;	 //  regular information message  
 const Integer AI_SEVERITY_WARNING = 0x01;	 //  warning message  
 const Integer AI_SEVERITY_ERROR = 0x02;	 //  error message  
 const Integer AI_SEVERITY_FATAL = 0x03;	 //  fatal error message  
-/**
-Logging Flags
-
-*/
 
 const Integer AI_LOG_NONE = 0x0000;	 //  don't show any messages  
 const Integer AI_LOG_INFO = 0x0001;	 //  show all regular information messages  
@@ -34,6 +28,11 @@ const Integer AI_LOG_BACKTRACE = 0x0400;	 //  show stack contents after abnormal
 const Integer AI_LOG_MEMORY = 0x0800;	 //  prefix messages with current memory usage  
 const Integer AI_LOG_COLOR = 0x1000;	 //  add colors to log messages based on severity  
 const Integer AI_LOG_SSS = 0x2000;	 //  show messages about sub-surface scattering pointclouds  
+//////////////////////////////////////////////////
+//  classes 
+//////////////////////////////////////////////////
+//  global-scope functions 
+
 function AiMsgSetLogFileName(String filename) = '_fe_AiMsgSetLogFileName';
 function AiMsgSetLogFileFlags(SInt32 flags) = '_fe_AiMsgSetLogFileFlags';
 function AiMsgSetConsoleFlags(SInt32 flags) = '_fe_AiMsgSetConsoleFlags';

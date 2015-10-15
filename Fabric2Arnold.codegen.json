@@ -58,7 +58,7 @@
   "functionbodies": {
     "_fe_AtParamValueAsUInt8"   : "  AtByte f2a_result = f2aThis_->BYTE;\n  KL::UInt8 _result;\n  AtByte_to_UInt8(f2a_result, _result);\n  return _result;\n",
     "_fe_AtParamValueAsSInt32"  : "  int f2a_result = f2aThis_->INT;\n  KL::SInt32 _result;\n  int_to_SInt32(f2a_result, _result);\n  return _result;\n",
-    "_fe_AtParamValueAsUInt32"  : "  AtUInt32 f2a_result = f2aThis_->UINT;\n  KL::UInt32 _result;\n  AtUInt32_to_UInt32(f2a_result, _result);\n  return _result;\n",
+    "_fe_AtParamValueAsUInt32"  : "  AtUInt32 f2a_result = f2aThis_->UINT;\n  KL::UInt32 _result;\n  unsigned_int_to_UInt32(f2a_result, _result);\n  return _result;\n",
     "_fe_AtParamValueAsFloat32" : "  float f2a_result = f2aThis_->FLT;\n  KL::Float32 _result;\n  float_to_Float32(f2a_result, _result);\n  return _result;\n",
     "_fe_AtParamValueAsVec3"    : "  AtVector f2a_result = f2aThis_->VEC;\n  AtPoint_to_Vec3(f2a_result, _result);\n",
     "_fe_AtParamValueAsMat44"   : "  AtMatrix_to_Mat44(*f2aThis_->pMTX, _result);\n",

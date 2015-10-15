@@ -5,6 +5,20 @@
 
 require Math;
 
+//////////////////////////////////////////////////
+//  enumerated values
+
+const Integer AI_RAY_UNDEFINED = 0x00;	 //  undefined type  
+const Integer AI_RAY_CAMERA = 0x01;	 //  ray originating at the camera  
+const Integer AI_RAY_SHADOW = 0x02;	 //  shadow ray towards a light source  
+const Integer AI_RAY_REFLECTED = 0x04;	 //  mirror reflection ray  
+const Integer AI_RAY_REFRACTED = 0x08;	 //  mirror refraction ray  
+const Integer AI_RAY_SUBSURFACE = 0x10;	 //  subsurface scattering probe ray  
+const Integer AI_RAY_DIFFUSE = 0x20;	 //  indirect diffuse (also known as diffuse GI) ray  
+const Integer AI_RAY_GLOSSY = 0x40;	 //  glossy/blurred reflection ray  
+const Integer AI_RAY_ALL = 0xFF;	 //  mask for all ray types  
+//////////////////////////////////////////////////
+//  classes 
 /**  Ray data structure 
  */
 struct AtRay {
@@ -68,20 +82,10 @@ struct AtRay {
  
 };
 
-/**
-Ray Types
+//////////////////////////////////////////
+//////////////////////////////////////////////////
+//  global-scope functions 
 
-*/
-
-const Integer AI_RAY_UNDEFINED = 0x00;	 //  undefined type  
-const Integer AI_RAY_CAMERA = 0x01;	 //  ray originating at the camera  
-const Integer AI_RAY_SHADOW = 0x02;	 //  shadow ray towards a light source  
-const Integer AI_RAY_REFLECTED = 0x04;	 //  mirror reflection ray  
-const Integer AI_RAY_REFRACTED = 0x08;	 //  mirror refraction ray  
-const Integer AI_RAY_SUBSURFACE = 0x10;	 //  subsurface scattering probe ray  
-const Integer AI_RAY_DIFFUSE = 0x20;	 //  indirect diffuse (also known as diffuse GI) ray  
-const Integer AI_RAY_GLOSSY = 0x40;	 //  glossy/blurred reflection ray  
-const Integer AI_RAY_ALL = 0xFF;	 //  mask for all ray types  
 function AiMakeRay(io AtRay ray, UInt32 type, Vec3 origin, Vec3 dir, Float64 maxdist, AtShaderGlobals sg) = '_fe_AiMakeRay';
 function AiReflectRay(io AtRay ray, Vec3 normal, AtShaderGlobals sg) = '_fe_AiReflectRay';
 function Boolean AiRefractRay(io AtRay ray, Vec3 normal, Float32 n1, Float32 n2, AtShaderGlobals sg) = '_fe_AiRefractRay';

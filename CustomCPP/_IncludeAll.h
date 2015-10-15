@@ -9,6 +9,7 @@
 #include "_defines.h"
 #include "Fabric2Arnold.h"
 #include "_opaque_types.h"
+#include "_pod_typemapping.h"
 #include "_typemapping.h"
 #include "_AtDisplayCallback.h"
 
