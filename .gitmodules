@@ -1,0 +1,3 @@
+[submodule "asynctask"]
+	path = asynctask
+	url = ../asynctask.git
