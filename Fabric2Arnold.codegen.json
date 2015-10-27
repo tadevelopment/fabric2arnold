@@ -50,7 +50,7 @@
     "AtDisplayCallback": {
         "ctype": "AtDisplayCallback",
         "from": "KlAtDisplayCallback_to_AtDisplayCallback",
-        "methodop": ".",
+        "methodop": "*",
         "to": "AtDisplayCallback_to_KLAtDisplayCallback"
     }
   },
@@ -86,7 +86,7 @@
     "_fe_AiArrayGetPnt2Arr"     : "  static_assert(sizeof(Fabric::EDK::KL::Vec2) == sizeof(AtPoint2), \"Mismatched Size\");\n  Fabric::EDK::KL::ExternalArray< Fabric::EDK::KL::Vec2 > arr(reinterpret_cast<Fabric::EDK::KL::Vec2*>(f2aA->data), f2aA->nelements);\n  val = arr;\n  bool _result = true;",
     "_fe_AiArrayGetVecArr"      : "  static_assert(sizeof(Fabric::EDK::KL::Vec3) == sizeof(AtVector), \"Mismatched Size\");\n  Fabric::EDK::KL::ExternalArray< Fabric::EDK::KL::Vec3 > arr(reinterpret_cast<Fabric::EDK::KL::Vec3*>(f2aA->data), f2aA->nelements);\n  val = arr;\n  bool _result = true;",
     "_fe_AiMetaDataGetStrAtString": "  bool f2a_result = AiMetaDataGetStrAtString(f2aEntry, f2aParam, f2aName, const_cast<const char**>(&f2aValue));\n  Fabric::EDK::KL::Boolean _result;\n  bool_to_Boolean(f2a_result, _result);\n",
-    "_fe_SetAtDisplayCallback" : "  SetDisplayDriverNode(f2aDisplayDriver);\n  AiNodeSetPtr(f2aDisplayDriver, \"callback\", f2aCallback);\n"
+    "_fe_SetAtDisplayCallback" : "  SetDisplayDriverNode(f2aDisplayDriver);\n  AiNodeSetPtr(f2aDisplayDriver, \"callback\", *(void**)(&f2aCallback));\n"
   },
   "parameterconversionstoskip": [
   ]

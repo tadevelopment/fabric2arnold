@@ -18,10 +18,6 @@
 
 namespace Fabric { namespace EDK { namespace KL {
 
-
-// KL alias 'HRESULT'
-// Defined at R:\src\HordeSoftware\Fabric2Arnold\GenKL/\_opaque_types.kl:10:1
-typedef UInt32 HRESULT;
 }}}
 
 #endif // __KL2EDK_AUTOGEN_aliases__

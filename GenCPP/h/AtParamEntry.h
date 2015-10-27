@@ -21,7 +21,7 @@
 namespace Fabric { namespace EDK { namespace KL {
 
 // KL struct 'AtParamEntry'
-// Defined at R:\src\HordeSoftware\Fabric2Arnold\GenKL/\_opaque_types.kl:82:1
+// Defined at GenKL//_opaque_types.kl:81:1
 
 struct AtParamEntry
 {

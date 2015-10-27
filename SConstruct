@@ -62,7 +62,10 @@ fpm_file = glob.glob('./GenKL/Fabric2Arnold.fpm.json')
 fabricBuildEnv.Install(stage_dir, dll)
 fabricBuildEnv.Install(stage_dir, kl_files)
 fabricBuildEnv.Install(stage_dir, fpm_file)
-fabricBuildEnv.Install(stage_dir, arnoldPath + '/bin/ai.dll')
+if platform.system() == 'Windows':
+  fabricBuildEnv.Install(stage_dir, arnoldPath + '/bin/ai.dll')
+else:
+  fabricBuildEnv.Install(stage_dir, arnoldPath + '/bin/libai.so')
 
 # set our file paths to be relative to the proj directory
 hFiles = glob.glob('./GenCPP/h/*.h')
@@ -74,11 +77,12 @@ for i in range(len(hFiles)):
   hFiles[i] = hFiles[i].replace('\\', '/')
   hFiles[i] = os.path.relpath(hFiles[i], './GenCPP')
 
-# Build a VS project to go along with this dll
-# We can use this for debugging the project later.
-fabricBuildEnv.MSVSProject(target = './GenCPP/Fabric2Arnold' + fabricBuildEnv['MSVSPROJECTSUFFIX'],
-                srcs = cppFiles,
-                incs = hFiles,
-                buildtarget = dll[0],
-                variant = 'Debug|x64')
+if platform.system() == 'Windows':
+  # Build a VS project to go along with this dll
+  # We can use this for debugging the project later.
+  fabricBuildEnv.MSVSProject(target = './GenCPP/Fabric2Arnold' + fabricBuildEnv['MSVSPROJECTSUFFIX'],
+                  srcs = cppFiles,
+                  incs = hFiles,
+                  buildtarget = dll[0],
+                  variant = 'Debug|x64')
 

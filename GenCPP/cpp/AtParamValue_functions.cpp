@@ -12,7 +12,7 @@
 using namespace Fabric::EDK;
 
 
-// Defined at R:\src\HordeSoftware\Fabric2Arnold\GenKL/\ai_params.kl:39:3
+// Defined at GenKL//ai_params.kl:39:3
 FABRIC_EXT_EXPORT Fabric::EDK::KL::UInt8 _fe_AtParamValueAsUInt8(
   Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtParamValue >::INParam this_
 )
@@ -32,7 +32,7 @@ FABRIC_EXT_EXPORT Fabric::EDK::KL::UInt8 _fe_AtParamValueAsUInt8(
   F2A_CATCH_STATEMENT_RETURN("_fe_AtParamValueAsUInt8", )
 }
 
-// Defined at R:\src\HordeSoftware\Fabric2Arnold\GenKL/\ai_params.kl:41:58
+// Defined at GenKL//ai_params.kl:41:58
 FABRIC_EXT_EXPORT Fabric::EDK::KL::UInt32 _fe_AtParamValueAsUInt32(
   Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtParamValue >::INParam this_
 )
@@ -52,7 +52,7 @@ FABRIC_EXT_EXPORT Fabric::EDK::KL::UInt32 _fe_AtParamValueAsUInt32(
   F2A_CATCH_STATEMENT_RETURN("_fe_AtParamValueAsUInt32", )
 }
 
-// Defined at R:\src\HordeSoftware\Fabric2Arnold\GenKL/\ai_params.kl:42:61
+// Defined at GenKL//ai_params.kl:42:61
 FABRIC_EXT_EXPORT Fabric::EDK::KL::SInt32 _fe_AtParamValueAsSInt32(
   Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtParamValue >::INParam this_
 )
@@ -72,7 +72,7 @@ FABRIC_EXT_EXPORT Fabric::EDK::KL::SInt32 _fe_AtParamValueAsSInt32(
   F2A_CATCH_STATEMENT_RETURN("_fe_AtParamValueAsSInt32", )
 }
 
-// Defined at R:\src\HordeSoftware\Fabric2Arnold\GenKL/\ai_params.kl:43:61
+// Defined at GenKL//ai_params.kl:43:61
 FABRIC_EXT_EXPORT Fabric::EDK::KL::Float32 _fe_AtParamValueAsFloat32(
   Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtParamValue >::INParam this_
 )
@@ -92,7 +92,7 @@ FABRIC_EXT_EXPORT Fabric::EDK::KL::Float32 _fe_AtParamValueAsFloat32(
   F2A_CATCH_STATEMENT_RETURN("_fe_AtParamValueAsFloat32", )
 }
 
-// Defined at R:\src\HordeSoftware\Fabric2Arnold\GenKL/\ai_params.kl:44:64
+// Defined at GenKL//ai_params.kl:44:64
 FABRIC_EXT_EXPORT void _fe_AtParamValueAsVec3(
   Fabric::EDK::KL::Traits< Fabric::EDK::KL::Vec3 >::Result _result,
   Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtParamValue >::INParam this_
@@ -111,7 +111,7 @@ FABRIC_EXT_EXPORT void _fe_AtParamValueAsVec3(
   F2A_CATCH_STATEMENT("_fe_AtParamValueAsVec3")
 }
 
-// Defined at R:\src\HordeSoftware\Fabric2Arnold\GenKL/\ai_params.kl:45:55
+// Defined at GenKL//ai_params.kl:45:55
 FABRIC_EXT_EXPORT void _fe_AtParamValueAsMat44(
   Fabric::EDK::KL::Traits< Fabric::EDK::KL::Mat44 >::Result _result,
   Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtParamValue >::INParam this_
@@ -129,7 +129,7 @@ FABRIC_EXT_EXPORT void _fe_AtParamValueAsMat44(
   F2A_CATCH_STATEMENT("_fe_AtParamValueAsMat44")
 }
 
-// Defined at R:\src\HordeSoftware\Fabric2Arnold\GenKL/\ai_params.kl:46:58
+// Defined at GenKL//ai_params.kl:46:58
 FABRIC_EXT_EXPORT void _fe_AtParamValueAsString(
   Fabric::EDK::KL::Traits< Fabric::EDK::KL::String >::Result _result,
   Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtParamValue >::INParam this_
@@ -148,7 +148,7 @@ FABRIC_EXT_EXPORT void _fe_AtParamValueAsString(
   F2A_CATCH_STATEMENT("_fe_AtParamValueAsString")
 }
 
-// Defined at R:\src\HordeSoftware\Fabric2Arnold\GenKL/\ai_params.kl:47:61
+// Defined at GenKL//ai_params.kl:47:61
 FABRIC_EXT_EXPORT void _fe_AtParamValueAsAtArray(
   Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtArray >::Result _result,
   Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtParamValue >::INParam this_
