@@ -5,6 +5,12 @@
 
 require Math;
 
+//////////////////////////////////////////////////
+//  enumerated values
+//////////////////////////////////////////////////
+//  classes 
+//////////////////////////////////////////////////
+//  global-scope functions 
 
 function SInt32 AiASSWrite(String filename, SInt32 mask/*=AI_NODE_ALL*/, Boolean open_procs/*=false*/, Boolean binary/*=true*/) = '_fe_AiASSWrite';
 function SInt32 AiASSLoad(String filename, SInt32 mask/*=AI_NODE_ALL*/) = '_fe_AiASSLoad';

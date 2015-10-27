@@ -5,20 +5,26 @@
 
 require Math;
 
+//////////////////////////////////////////////////
+//  enumerated values
+//////////////////////////////////////////////////
+//  classes 
+//////////////////////////////////////////////////
+//  global-scope functions 
 /**
 AtNode Methods
 
 */
 
 
-function AtNode AiNodeAtString(AtString name) = '_fe_AiNodeAtString';
-function AtNode AiNodeLookUpByNameAtString(AtString name) = '_fe_AiNodeLookUpByNameAtString';
+function AtNode AiNodeAtString(String name) = '_fe_AiNodeAtString';
+function AtNode AiNodeLookUpByNameAtString(String name) = '_fe_AiNodeLookUpByNameAtString';
 function AiNodeReset(io AtNode node) = '_fe_AiNodeReset';
 function AiNodeResetParameter(io AtNode node, String param) = '_fe_AiNodeResetParameter';
 function AtNode AiNodeClone(AtNode node) = '_fe_AiNodeClone';
 function Boolean AiNodeDestroy(io AtNode node) = '_fe_AiNodeDestroy';
 function Boolean AiNodeIs(AtNode node, String str) = '_fe_AiNodeIs';
-function Boolean AiNodeDeclareAtString(io AtNode node, AtString param, String declaration) = '_fe_AiNodeDeclareAtString';
+function Boolean AiNodeDeclareAtString(io AtNode node, String param, String declaration) = '_fe_AiNodeDeclareAtString';
 function Boolean AiNodeLink(io AtNode src, String input, io AtNode target) = '_fe_AiNodeLink';
 function Boolean AiNodeLinkOutput(io AtNode src, String output, io AtNode target, String input) = '_fe_AiNodeLinkOutput';
 function Boolean AiNodeUnlink(io AtNode node, String input) = '_fe_AiNodeUnlink';
@@ -31,7 +37,7 @@ function Data AiNodeGetLocalData(AtNode node) = '_fe_AiNodeGetLocalData';
 function AiNodeSetLocalData(io AtNode node, io Data data) = '_fe_AiNodeSetLocalData';
 function AiNodeSetDisabled(io AtNode node, Boolean disabled) = '_fe_AiNodeSetDisabled';
 function Boolean AiNodeIsDisabled(AtNode node) = '_fe_AiNodeIsDisabled';
-function AtUserParamEntry AiNodeLookUpUserParameterAtString(AtNode node, AtString param) = '_fe_AiNodeLookUpUserParameterAtString';
+function AtUserParamEntry AiNodeLookUpUserParameterAtString(AtNode node, String param) = '_fe_AiNodeLookUpUserParameterAtString';
 function AtUserParamIterator AiNodeGetUserParamIterator(AtNode node) = '_fe_AiNodeGetUserParamIterator';
 /**
 AtUserParamIterator Methods
@@ -48,20 +54,20 @@ Parameter Writers
 */
 
 
-function AiNodeSetByteAtString(io AtNode node, AtString param, UInt8 val) = '_fe_AiNodeSetByteAtString';
-function AiNodeSetIntAtString(io AtNode node, AtString param, SInt32 val) = '_fe_AiNodeSetIntAtString';
-function AiNodeSetUIntAtString(io AtNode node, AtString param, UInt32 val) = '_fe_AiNodeSetUIntAtString';
-function AiNodeSetBoolAtString(io AtNode node, AtString param, Boolean val) = '_fe_AiNodeSetBoolAtString';
-function AiNodeSetFltAtString(io AtNode node, AtString param, Float32 val) = '_fe_AiNodeSetFltAtString';
-function AiNodeSetPtrAtString(io AtNode node, AtString param, io Data val) = '_fe_AiNodeSetPtrAtString';
-function AiNodeSetArrayAtString(io AtNode node, AtString param, io AtArray val) = '_fe_AiNodeSetArrayAtString';
-function AiNodeSetMatrixAtString(io AtNode node, AtString param, Mat44 val) = '_fe_AiNodeSetMatrixAtString';
-function AiNodeSetStrAtString(io AtNode node, AtString param, AtString str) = '_fe_AiNodeSetStrAtString';
-function AiNodeSetRGBAtString(io AtNode node, AtString param, Float32 r, Float32 g, Float32 b) = '_fe_AiNodeSetRGBAtString';
-function AiNodeSetRGBAAtString(io AtNode node, AtString param, Float32 r, Float32 g, Float32 b, Float32 a) = '_fe_AiNodeSetRGBAAtString';
-function AiNodeSetVecAtString(io AtNode node, AtString param, Float32 x, Float32 y, Float32 z) = '_fe_AiNodeSetVecAtString';
-function AiNodeSetPntAtString(io AtNode node, AtString param, Float32 x, Float32 y, Float32 z) = '_fe_AiNodeSetPntAtString';
-function AiNodeSetPnt2AtString(io AtNode node, AtString param, Float32 x, Float32 y) = '_fe_AiNodeSetPnt2AtString';
+function AiNodeSetByteAtString(io AtNode node, String param, UInt8 val) = '_fe_AiNodeSetByteAtString';
+function AiNodeSetIntAtString(io AtNode node, String param, SInt32 val) = '_fe_AiNodeSetIntAtString';
+function AiNodeSetUIntAtString(io AtNode node, String param, UInt32 val) = '_fe_AiNodeSetUIntAtString';
+function AiNodeSetBoolAtString(io AtNode node, String param, Boolean val) = '_fe_AiNodeSetBoolAtString';
+function AiNodeSetFltAtString(io AtNode node, String param, Float32 val) = '_fe_AiNodeSetFltAtString';
+function AiNodeSetPtrAtString(io AtNode node, String param, io Data val) = '_fe_AiNodeSetPtrAtString';
+function AiNodeSetArrayAtString(io AtNode node, String param, io AtArray val) = '_fe_AiNodeSetArrayAtString';
+function AiNodeSetMatrixAtString(io AtNode node, String param, Mat44 val) = '_fe_AiNodeSetMatrixAtString';
+function AiNodeSetStrAtString(io AtNode node, String param, String str) = '_fe_AiNodeSetStrAtString';
+function AiNodeSetRGBAtString(io AtNode node, String param, Float32 r, Float32 g, Float32 b) = '_fe_AiNodeSetRGBAtString';
+function AiNodeSetRGBAAtString(io AtNode node, String param, Float32 r, Float32 g, Float32 b, Float32 a) = '_fe_AiNodeSetRGBAAtString';
+function AiNodeSetVecAtString(io AtNode node, String param, Float32 x, Float32 y, Float32 z) = '_fe_AiNodeSetVecAtString';
+function AiNodeSetPntAtString(io AtNode node, String param, Float32 x, Float32 y, Float32 z) = '_fe_AiNodeSetPntAtString';
+function AiNodeSetPnt2AtString(io AtNode node, String param, Float32 x, Float32 y) = '_fe_AiNodeSetPnt2AtString';
 function AiNodeSetAttributes(io AtNode node, String attributes) = '_fe_AiNodeSetAttributes';
 /**
 Parameter Readers
@@ -69,17 +75,17 @@ Parameter Readers
 */
 
 
-function UInt8 AiNodeGetByteAtString(AtNode node, AtString param) = '_fe_AiNodeGetByteAtString';
-function SInt32 AiNodeGetIntAtString(AtNode node, AtString param) = '_fe_AiNodeGetIntAtString';
-function UInt32 AiNodeGetUIntAtString(AtNode node, AtString param) = '_fe_AiNodeGetUIntAtString';
-function Boolean AiNodeGetBoolAtString(AtNode node, AtString param) = '_fe_AiNodeGetBoolAtString';
-function Float32 AiNodeGetFltAtString(AtNode node, AtString param) = '_fe_AiNodeGetFltAtString';
-function RGB AiNodeGetRGBAtString(AtNode node, AtString param) = '_fe_AiNodeGetRGBAtString';
-function Color AiNodeGetRGBAAtString(AtNode node, AtString param) = '_fe_AiNodeGetRGBAAtString';
-function Vec3 AiNodeGetVecAtString(AtNode node, AtString param) = '_fe_AiNodeGetVecAtString';
-function Vec3 AiNodeGetPntAtString(AtNode node, AtString param) = '_fe_AiNodeGetPntAtString';
-function Vec2 AiNodeGetPnt2AtString(AtNode node, AtString param) = '_fe_AiNodeGetPnt2AtString';
-function Data AiNodeGetPtrAtString(AtNode node, AtString param) = '_fe_AiNodeGetPtrAtString';
-function AtArray AiNodeGetArrayAtString(AtNode node, AtString param) = '_fe_AiNodeGetArrayAtString';
-function AtString AiNodeGetStrAtString(AtNode node, AtString param) = '_fe_AiNodeGetStrAtString';
-function AiNodeGetMatrixAtString(AtNode node, AtString param, Mat44 matrix) = '_fe_AiNodeGetMatrixAtString';
+function UInt8 AiNodeGetByteAtString(AtNode node, String param) = '_fe_AiNodeGetByteAtString';
+function SInt32 AiNodeGetIntAtString(AtNode node, String param) = '_fe_AiNodeGetIntAtString';
+function UInt32 AiNodeGetUIntAtString(AtNode node, String param) = '_fe_AiNodeGetUIntAtString';
+function Boolean AiNodeGetBoolAtString(AtNode node, String param) = '_fe_AiNodeGetBoolAtString';
+function Float32 AiNodeGetFltAtString(AtNode node, String param) = '_fe_AiNodeGetFltAtString';
+function RGB AiNodeGetRGBAtString(AtNode node, String param) = '_fe_AiNodeGetRGBAtString';
+function Color AiNodeGetRGBAAtString(AtNode node, String param) = '_fe_AiNodeGetRGBAAtString';
+function Vec3 AiNodeGetVecAtString(AtNode node, String param) = '_fe_AiNodeGetVecAtString';
+function Vec3 AiNodeGetPntAtString(AtNode node, String param) = '_fe_AiNodeGetPntAtString';
+function Vec2 AiNodeGetPnt2AtString(AtNode node, String param) = '_fe_AiNodeGetPnt2AtString';
+function Data AiNodeGetPtrAtString(AtNode node, String param) = '_fe_AiNodeGetPtrAtString';
+function AtArray AiNodeGetArrayAtString(AtNode node, String param) = '_fe_AiNodeGetArrayAtString';
+function String AiNodeGetStrAtString(AtNode node, String param) = '_fe_AiNodeGetStrAtString';
+function AiNodeGetMatrixAtString(AtNode node, String param, Mat44 matrix) = '_fe_AiNodeGetMatrixAtString';

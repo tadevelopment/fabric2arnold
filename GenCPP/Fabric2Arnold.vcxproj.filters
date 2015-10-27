@@ -20,10 +20,16 @@
 		<ClInclude Include="h\_IncludeAll.h">
 			<Filter>Header Files</Filter>
 		</ClInclude>
-		<ClInclude Include="h\_opaque_types.h">
+		<ClInclude Include="h\_typemapping.h">
 			<Filter>Header Files</Filter>
 		</ClInclude>
-		<ClInclude Include="h\_typemapping.h">
+		<ClInclude Include="h\_typemapping_class.h">
+			<Filter>Header Files</Filter>
+		</ClInclude>
+		<ClInclude Include="h\_typemapping_opaque.h">
+			<Filter>Header Files</Filter>
+		</ClInclude>
+		<ClInclude Include="h\_typemapping_pod.h">
 			<Filter>Header Files</Filter>
 		</ClInclude>
 		<ClInclude Include="h\aliases.h">

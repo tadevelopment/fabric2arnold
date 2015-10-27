@@ -5,6 +5,19 @@
 
 require Math;
 
+//////////////////////////////////////////////////
+//  enumerated values
+
+const Integer AI_LIC_SUCCESS = 0;	 //  no error  
+const Integer AI_LIC_ERROR_CANTCONNECT = 1;	 //  can't connect to any RLM server  
+const Integer AI_LIC_ERROR_INIT = 2;	 //  error on initialization  
+const Integer AI_LIC_ERROR_NOTFOUND = 3;	 //  no licenses found (expired or not loaded)  
+const Integer AI_LIC_ERROR_NOTAVAILABLE = 4;	 //  no licenses available (all in use)  
+const Integer AI_LIC_ERROR = -1;	 //  generic license error  
+
+const Integer HOST_NAME_MAX = 64;	 //  
+//////////////////////////////////////////////////
+//  classes 
 /**  License info structure 
  */
 struct AtLicenseInfo {
@@ -63,20 +76,8 @@ struct AtLicenseInfo {
 };
 
 //////////////////////////////////////////
-/**
-Error Codes
-
-*/
-
-
-const Integer AI_LIC_SUCCESS = 0;	 //  no error  
-const Integer AI_LIC_ERROR_CANTCONNECT = 1;	 //  can't connect to any RLM server  
-const Integer AI_LIC_ERROR_INIT = 2;	 //  error on initialization  
-const Integer AI_LIC_ERROR_NOTFOUND = 3;	 //  no licenses found (expired or not loaded)  
-const Integer AI_LIC_ERROR_NOTAVAILABLE = 4;	 //  no licenses available (all in use)  
-const Integer AI_LIC_ERROR = -1;	 //  generic license error  
-
-const Integer HOST_NAME_MAX = 64;	 //  
+//////////////////////////////////////////////////
+//  global-scope functions 
 
 function Boolean AiLicenseSetServer(String host, UInt32 port) = '_fe_AiLicenseSetServer';
 function Boolean AiLicenseGetServer(io String host, io UInt32 port) = '_fe_AiLicenseGetServer';

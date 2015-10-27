@@ -5,20 +5,8 @@
 
 require Math;
 
-/**  */
-struct AtMetaDataEntry {
-  String name;
-  String param;
-  UInt8 type;
-  AtParamValue value;
-};
-
-//////////////////////////////////////////
-/**
-Node Types
-
-*/
-
+//////////////////////////////////////////////////
+//  enumerated values
 
 const Integer AI_NODE_UNDEFINED = 0x0000;	 //  Undefined type  
 const Integer AI_NODE_OPTIONS = 0x0001;	 //  Options node (following the "singleton" pattern, there is only one options node)  
@@ -30,13 +18,26 @@ const Integer AI_NODE_OVERRIDE = 0x0020;	 //  EXPERIMENTAL: override nodes suppo
 const Integer AI_NODE_DRIVER = 0x0040;	 //  Output driver nodes (driver_tiff, etc)  
 const Integer AI_NODE_FILTER = 0x0080;	 //  Pixel sample filter nodes (box_filter, etc  
 const Integer AI_NODE_ALL = 0xFFFF;	 //  Bitmask including all node types, used by AiASSWrite()  
+//////////////////////////////////////////////////
+//  classes 
+/**  */
+struct AtMetaDataEntry {
+  String name;
+  String param;
+  UInt8 type;
+  AtParamValue value;
+};
+
+//////////////////////////////////////////
+//////////////////////////////////////////////////
+//  global-scope functions 
 /**
 AtNodeEntry Methods
 
 */
 
 
-function AtNodeEntry AiNodeEntryLookUpAtString(AtString name) = '_fe_AiNodeEntryLookUpAtString';
+function AtNodeEntry AiNodeEntryLookUpAtString(String name) = '_fe_AiNodeEntryLookUpAtString';
 function String AiNodeEntryGetName(AtNodeEntry nentry) = '_fe_AiNodeEntryGetName';
 function SInt32 AiNodeEntryGetType(AtNodeEntry nentry) = '_fe_AiNodeEntryGetType';
 function String AiNodeEntryGetTypeName(AtNodeEntry nentry) = '_fe_AiNodeEntryGetTypeName';
@@ -46,7 +47,7 @@ function String AiNodeEntryGetVersion(AtNodeEntry nentry) = '_fe_AiNodeEntryGetV
 function SInt32 AiNodeEntryGetCount(AtNodeEntry nentry) = '_fe_AiNodeEntryGetCount';
 function SInt32 AiNodeEntryGetNumParams(AtNodeEntry nentry) = '_fe_AiNodeEntryGetNumParams';
 function AtParamEntry AiNodeEntryGetParameter(AtNodeEntry nentry, SInt32 i) = '_fe_AiNodeEntryGetParameter';
-function AtParamEntry AiNodeEntryLookUpParameterAtString(AtNodeEntry nentry, AtString param) = '_fe_AiNodeEntryLookUpParameterAtString';
+function AtParamEntry AiNodeEntryLookUpParameterAtString(AtNodeEntry nentry, String param) = '_fe_AiNodeEntryLookUpParameterAtString';
 function AtParamIterator AiNodeEntryGetParamIterator(AtNodeEntry nentry) = '_fe_AiNodeEntryGetParamIterator';
 function AtMetaDataIterator AiNodeEntryGetMetaDataIterator(AtNodeEntry nentry, String param/*=NULL*/) = '_fe_AiNodeEntryGetMetaDataIterator';
 function AiNodeEntryInstall(SInt32 type, UInt8 output_type, String name, String filename, io AtNodeMethods methods, String version) = '_fe_AiNodeEntryInstall';

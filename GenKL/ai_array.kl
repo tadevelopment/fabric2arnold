@@ -5,6 +5,10 @@
 
 require Math;
 
+//////////////////////////////////////////////////
+//  enumerated values
+//////////////////////////////////////////////////
+//  classes 
 /**  Generic array data type 
  */
 struct AtArray {
@@ -43,6 +47,8 @@ function Boolean AiArrayGetVec(io AtArray a, io Vec3 val<>) = "_fe_AiArrayGetVec
 
 
 
+//////////////////////////////////////////////////
+//  global-scope functions 
 
 function AtArray AiArray(UInt32 nelements, UInt8 nkeys, UInt8 type) = '_fe_AiArray';
 function AtArray AiArrayAllocate(UInt32 nelements, UInt8 nkeys, UInt8 type) = '_fe_AiArrayAllocate';

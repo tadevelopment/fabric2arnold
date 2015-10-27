@@ -5,6 +5,27 @@
 
 require Math;
 
+//////////////////////////////////////////////////
+//  enumerated values
+
+const Integer AI_WRAP_PERIODIC = 0x00;	 //  the texture repeats itself outside the [0,1] range in (s,t)-space  
+const Integer AI_WRAP_BLACK = 0x01;	 //  return black outside the [0,1] range  
+const Integer AI_WRAP_CLAMP = 0x02;	 //  clamp to the closest texture edge  
+const Integer AI_WRAP_MIRROR = 0x03;	 //  mirror the image across the boundaries  
+const Integer AI_WRAP_FILE = 0x04;	 //  use the wrap mode found in the file  
+
+const Integer AI_TEXTURE_CLOSEST = 0;	 //  force the closest texel  
+const Integer AI_TEXTURE_BILINEAR = 1;	 //  force bilinear look-up within a mip level  
+const Integer AI_TEXTURE_BICUBIC = 2;	 //  force bicubic look-up within a mip level  
+const Integer AI_TEXTURE_SMART_BICUBIC = 3;	 //  bicubic when maxifying, else use bilinear look-up  
+
+const Integer AI_TEXTURE_MIPMODE_DEFAULT = 0;	 //  use the default mode (auto-selected)  
+const Integer AI_TEXTURE_MIPMODE_NONE = 1;	 //  use highest-res mip level only  
+const Integer AI_TEXTURE_MIPMODE_ONE = 2;	 //  just use one mip level (closest)  
+const Integer AI_TEXTURE_MIPMODE_TRILINEAR = 3;	 //  trilinear blending of two closest mip levels  
+const Integer AI_TEXTURE_MIPMODE_ANISOTROPIC = 4;	 //  use two closest mip levels with anisotropic filtering  
+//////////////////////////////////////////////////
+//  classes 
 /**  Structure that holds all of the available texture map look-up options 
  */
 struct AtTextureParams {
@@ -45,41 +66,8 @@ struct AtTextureParams {
 };
 
 //////////////////////////////////////////
-/**
-Wrapping Modes
-Wrap mode describes what happens when texture coordinates describe a value outside the usual [0,1] range where a texture is defined. 
-
-*/
-
-
-const Integer AI_WRAP_PERIODIC = 0x00;	 //  the texture repeats itself outside the [0,1] range in (s,t)-space  
-const Integer AI_WRAP_BLACK = 0x01;	 //  return black outside the [0,1] range  
-const Integer AI_WRAP_CLAMP = 0x02;	 //  clamp to the closest texture edge  
-const Integer AI_WRAP_MIRROR = 0x03;	 //  mirror the image across the boundaries  
-const Integer AI_WRAP_FILE = 0x04;	 //  use the wrap mode found in the file  
-/**
-Texture Look-Up/Interpolation Modes
-The look-up mode determines how we sample within a mimap level. 
-
-*/
-
-
-const Integer AI_TEXTURE_CLOSEST = 0;	 //  force the closest texel  
-const Integer AI_TEXTURE_BILINEAR = 1;	 //  force bilinear look-up within a mip level  
-const Integer AI_TEXTURE_BICUBIC = 2;	 //  force bicubic look-up within a mip level  
-const Integer AI_TEXTURE_SMART_BICUBIC = 3;	 //  bicubic when maxifying, else use bilinear look-up  
-/**
-MIP modes
-The MIP mode determines how we sample between mipmap levels. 
-
-*/
-
-
-const Integer AI_TEXTURE_MIPMODE_DEFAULT = 0;	 //  use the default mode (auto-selected)  
-const Integer AI_TEXTURE_MIPMODE_NONE = 1;	 //  use highest-res mip level only  
-const Integer AI_TEXTURE_MIPMODE_ONE = 2;	 //  just use one mip level (closest)  
-const Integer AI_TEXTURE_MIPMODE_TRILINEAR = 3;	 //  trilinear blending of two closest mip levels  
-const Integer AI_TEXTURE_MIPMODE_ANISOTROPIC = 4;	 //  use two closest mip levels with anisotropic filtering  
+//////////////////////////////////////////////////
+//  global-scope functions 
 
 function AiTextureParamsSetDefaults(io AtTextureParams params) = '_fe_AiTextureParamsSetDefaults';
 function AtTextureHandle AiTextureHandleCreate(String filename) = '_fe_AiTextureHandleCreate';

@@ -22,7 +22,7 @@
 namespace Fabric { namespace EDK { namespace KL {
 
 // KL struct 'AtCameraOutput'
-// Defined at GenKL//ai_cameras.kl:28:1
+// Defined at R:\src\HordeSoftware\Fabric2Arnold\GenKL/\ai_cameras.kl:32:1
 
 struct AtCameraOutput
 {

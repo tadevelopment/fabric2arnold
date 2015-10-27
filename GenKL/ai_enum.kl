@@ -5,6 +5,12 @@
 
 require Math;
 
+//////////////////////////////////////////////////
+//  enumerated values
+//////////////////////////////////////////////////
+//  classes 
+//////////////////////////////////////////////////
+//  global-scope functions 
 
 function SInt32 AiEnumGetValue(String[] enum_type, String string) = '_fe_AiEnumGetValue';
 function String AiEnumGetString(String[] enum_type, SInt32 index) = '_fe_AiEnumGetString';

@@ -5,6 +5,16 @@
 
 require Math;
 
+//////////////////////////////////////////////////
+//  enumerated values
+
+const Integer AI_CACHE_TEXTURE = 0x0001;	 //  Flushes all texturemaps  
+const Integer AI_CACHE_HAIR_DIFFUSE = 0x0004;	 //  Flushes hair diffuse cache  
+const Integer AI_CACHE_BACKGROUND = 0x0008;	 //  Flushes all skydome importance tables for background  
+const Integer AI_CACHE_QUAD = 0x0010;	 //  Flushes all quad lights importance tables  
+const Integer AI_CACHE_ALL = 0xFFFF;	 //  Flushes all cache types simultaneously  
+//////////////////////////////////////////////////
+//  classes 
 /**  */
 struct AtAOVEntry {
   String name;
@@ -13,6 +23,8 @@ struct AtAOVEntry {
 };
 
 //////////////////////////////////////////
+//////////////////////////////////////////////////
+//  global-scope functions 
 /**
 Methods
 
@@ -54,14 +66,3 @@ AOV Iterator API
 function AiAOVIteratorDestroy(io AtAOVIterator iter) = '_fe_AiAOVIteratorDestroy';
 function AtAOVEntry AiAOVIteratorGetNext(io AtAOVIterator iter) = '_fe_AiAOVIteratorGetNext';
 function Boolean AiAOVIteratorFinished(AtAOVIterator iter) = '_fe_AiAOVIteratorFinished';
-/**
-Cache Types
-
-*/
-
-
-const Integer AI_CACHE_TEXTURE = 0x0001;	 //  Flushes all texturemaps  
-const Integer AI_CACHE_HAIR_DIFFUSE = 0x0004;	 //  Flushes hair diffuse cache  
-const Integer AI_CACHE_BACKGROUND = 0x0008;	 //  Flushes all skydome importance tables for background  
-const Integer AI_CACHE_QUAD = 0x0010;	 //  Flushes all quad lights importance tables  
-const Integer AI_CACHE_ALL = 0xFFFF;	 //  Flushes all cache types simultaneously  

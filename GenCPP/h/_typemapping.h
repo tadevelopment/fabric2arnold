@@ -8,8 +8,8 @@
 #pragma once
 
 inline bool Vec3_to_AtPoint(const Fabric::EDK::KL::Vec3 & from, AtPoint & to);
-inline bool String_to_AtString(const Fabric::EDK::KL::AtString & from, AtString & to);
-inline bool AtString_to_String(const AtString & from, Fabric::EDK::KL::AtString & to);
+inline bool KLString_to_CPAtString(const Fabric::EDK::KL::String & from, AtString & to);
+inline bool CPAtString_to_KLString(const AtString & from, Fabric::EDK::KL::String & to);
 inline bool AtParamValue_to_KLParamValue(const AtParamValue* const & from, Fabric::EDK::KL::AtParamValue & to);
 inline bool AtPoint_to_Vec3(const AtPoint & from, Fabric::EDK::KL::Vec3 & to);
 
@@ -76,23 +76,13 @@ inline bool AtRGB_to_RGB(const AtRGB & from, Fabric::EDK::KL::RGB & to) {
   return true; 
 }
 
-inline bool Float32_to_float(const Fabric::EDK::KL::Float32 & from, float & to) { 
-	to = from;
+inline bool KLAtCameraOutput_to_CPAtCameraOutput(const Fabric::EDK::KL::AtCameraOutput & from, AtCameraOutput & to) { 
+  #pragma message("Implement Me")
   return true;
 }
 
-inline bool float_to_Float32(const float & from, Fabric::EDK::KL::Float32 & to) {
-	to = from;
-  return true; 
-}
-
-inline bool Boolean_to_bool(const Fabric::EDK::KL::Boolean & from, bool & to) { 
-	to = from;
-  return true;
-}
-
-inline bool bool_to_Boolean(const bool & from, Fabric::EDK::KL::Boolean & to) {
-	to = from;
+inline bool CPAtCameraOutput_to_KLAtCameraOutput(const AtCameraOutput & from, Fabric::EDK::KL::AtCameraOutput & to) {
+  #pragma message("Implement Me")
   return true; 
 }
 
@@ -102,16 +92,6 @@ inline bool String_to_char(const Fabric::EDK::KL::String & from, char* & to) {
 }
 
 inline bool char_to_String(const char* const & from, Fabric::EDK::KL::String & to) {
-	to = from;
-  return true; 
-}
-
-inline bool SInt64_to_long_long(const Fabric::EDK::KL::SInt64 & from, long long & to) { 
-	to = from;
-  return true;
-}
-
-inline bool long_long_to_SInt64(const long long & from, Fabric::EDK::KL::SInt64 & to) {
 	to = from;
   return true; 
 }
@@ -151,7 +131,7 @@ inline bool KlAtRay_to_AtRay(const Fabric::EDK::KL::AtRay & from, AtRay & to) {
 	Vec3_to_AtPoint(from.dDdx, to.dDdx);
 	Vec3_to_AtPoint(from.dDdy, to.dDdy);
 
-	String_to_AtString(from.traceset, to.traceset);
+	KLString_to_CPAtString(from.traceset, to.traceset);
 	to.inclusive_traceset = from.inclusive_traceset;
 	to.sindex = from.sindex;
 
@@ -189,20 +169,10 @@ inline bool AtRay_to_KLAtRay(const AtRay & from, Fabric::EDK::KL::AtRay & to) {
   AtPoint_to_Vec3(from.dDdx, to.dDdx);
   AtPoint_to_Vec3(from.dDdy, to.dDdy);
 
-  AtString_to_String(from.traceset, to.traceset);
+  CPAtString_to_KLString(from.traceset, to.traceset);
   to.inclusive_traceset = from.inclusive_traceset;
   to.sindex = from.sindex;
 
-  return true; 
-}
-
-inline bool UInt16_to_AtUInt16(const Fabric::EDK::KL::UInt16 & from, AtUInt16 & to) { 
-	to = from;
-  return true;
-}
-
-inline bool AtUInt16_to_UInt16(const AtUInt16 & from, Fabric::EDK::KL::UInt16 & to) {
-	to = from;
   return true; 
 }
 
@@ -217,26 +187,6 @@ inline bool AtMetaDataEntry_to_KLAtMetaDataEntry(const AtMetaDataEntry* const & 
 	to.type = from->type;
 
 	AtParamValue_to_KLParamValue(&from->value, to.value);
-  return true; 
-}
-
-inline bool Data_to_void(const Fabric::EDK::KL::Data & from, void* & to) { 
-	to = from;
-  return true;
-}
-
-inline bool void_to_Data(const void* const & from, Fabric::EDK::KL::Data & to) {
-	to = const_cast<void *>(from);
-  return true; 
-}
-
-inline bool UInt32_to_AtUInt32(const Fabric::EDK::KL::UInt32 & from, AtUInt32 & to) { 
-	to = from;
-  return true;
-}
-
-inline bool AtUInt32_to_UInt32(const AtUInt32 & from, Fabric::EDK::KL::UInt32 & to) {
-	to = from;
   return true; 
 }
 
@@ -262,23 +212,13 @@ inline bool AtParamValue_to_KLParamValue(const AtParamValue* const & from, Fabri
   return true; 
 }
 
-inline bool String_to_AtString(const Fabric::EDK::KL::AtString & from, AtString & to) { 
-	to = AtString(from.c_str());
+inline bool KLString_to_CPAtString(const Fabric::EDK::KL::String & from, AtString & to) { 
+  to = AtString(from.c_str());
   return true;
 }
 
-inline bool AtString_to_String(const AtString & from, Fabric::EDK::KL::AtString & to) {
-	to = from.c_str();
-  return true; 
-}
-
-inline bool Float64_to_double(const Fabric::EDK::KL::Float64 & from, double & to) { 
-	to = from;
-  return true;
-}
-
-inline bool double_to_Float64(const double & from, Fabric::EDK::KL::Float64 & to) {
-	to = from;
+inline bool CPAtString_to_KLString(const AtString & from, Fabric::EDK::KL::String & to) {
+  to = from.c_str();
   return true; 
 }
 
@@ -324,18 +264,28 @@ inline bool AtTextureParams_to_KLAtTextureParams(const AtTextureParams & from, F
   return true; 
 }
 
-inline bool UInt8_to_AtByte(const Fabric::EDK::KL::UInt8 & from, AtByte & to) { 
-	to = from;
+inline bool KLAtCameraInput_to_CPAtCameraInput(const Fabric::EDK::KL::AtCameraInput & from, AtCameraInput & to) { 
+  #pragma message("Implement Me")
   return true;
 }
 
-inline bool AtByte_to_UInt8(const AtByte & from, Fabric::EDK::KL::UInt8 & to) {
-	to = from;
+inline bool CPAtCameraInput_to_KLAtCameraInput(const AtCameraInput & from, Fabric::EDK::KL::AtCameraInput & to) {
+  #pragma message("Implement Me")
+  return true; 
+}
+
+inline bool KLAtNodeLib_to_CPAtNodeLib(const Fabric::EDK::KL::AtNodeLib & from, AtNodeLib & to) { 
+  #pragma message("Implement Me")
+  return true;
+}
+
+inline bool CPAtNodeLib_to_KLAtNodeLib(const AtNodeLib & from, Fabric::EDK::KL::AtNodeLib & to) {
+  #pragma message("Implement Me")
   return true; 
 }
 
 inline bool KlArray_to_AtArray(const Fabric::EDK::KL::AtArray & from, AtArray* & to) { 
-	to = reinterpret_cast<AtArray*>(from.data);
+  to = reinterpret_cast<AtArray*>(from.data);
   return true;
 }
 
@@ -347,16 +297,6 @@ inline bool AtArray_to_KLArray(const AtArray* const & from, Fabric::EDK::KL::AtA
 		to.nkeys = from->nkeys;
 		to.type = from->type;
 	}
-  return true; 
-}
-
-inline bool UInt64_to_AtUInt64(const Fabric::EDK::KL::UInt64 & from, AtUInt64 & to) { 
-	to = from;
-  return true;
-}
-
-inline bool AtUInt64_to_UInt64(const AtUInt64 & from, Fabric::EDK::KL::UInt64 & to) {
-	to = from;
   return true; 
 }
 
@@ -459,16 +399,6 @@ inline bool AtPoint_to_Vec3(const AtPoint & from, Fabric::EDK::KL::Vec3 & to) {
 	to.x = from.x;
 	to.y = from.y;
 	to.z = from.z;
-  return true; 
-}
-
-inline bool SInt32_to_int(const Fabric::EDK::KL::SInt32 & from, int & to) { 
-	to = from;
-  return true;
-}
-
-inline bool int_to_SInt32(const int & from, Fabric::EDK::KL::SInt32 & to) {
-	to = from;
   return true; 
 }
 

@@ -21,7 +21,7 @@
 namespace Fabric { namespace EDK { namespace KL {
 
 // KL interface 'AtDisplayCallback'
-// Defined at GenKL//_AtDisplayCallback.kl:8:1
+// Defined at R:\src\HordeSoftware\Fabric2Arnold\GenKL/\_AtDisplayCallback.kl:8:1
 
 class AtDisplayCallback
 {
