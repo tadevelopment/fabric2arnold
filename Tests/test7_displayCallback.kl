@@ -62,7 +62,7 @@ operator entry() {
   // create a sphere
   AtNode sphere = AiNode("sphere");
   AiNodeSetStr(sphere, "name", "mysphere");
-  AiNodeSetFlt(sphere, "radius", 5.0);
+  AiNodeSetFlt(sphere, "radius", 7.5);
 
   // create a lambert shader
   AtNode lambert = AiNode("lambert");
@@ -90,22 +90,25 @@ operator entry() {
   AiNodeSetInt(options, "yres", 240);
   AiNodeSetPtr(options, "camera", camera._handle);
 
-  MyDisplayCallback callback();
-  setArnoldRenderToDisplay(callback);
-
-  callback.buffer.resize(320 * 240);
-  // render the scene
-  Integer result = AiRender(AI_RENDER_MODE_CAMERA);
-  if (result != AI_SUCCESS)
   {
-    report("[FabricArnold::TestSuite] Error " + String(result));
+    MyDisplayCallback callback();
+    setArnoldRenderToDisplay(callback);
+
+    callback.buffer.resize(320 * 240);
+    // render the scene
+    Integer result = AiRender(AI_RENDER_MODE_CAMERA);
+    if (result != AI_SUCCESS)
+    {
+      report("[FabricArnold::TestSuite] Error " + String(result));
+    }
+
+    AiEnd();
+    UInt64 end = getCurrentTicks();
+    report("Elapsed time: " + getSecondsBetweenTicks(start, end) + " seconds");
+
+    report("Buckets: " + callback.myNum);
+
+    report('RGBA ' + callback.buffer[0]);
   }
-
-  AiEnd();
-  UInt64 end = getCurrentTicks();
-  report("Elapsed time: " + getSecondsBetweenTicks(start, end) + " seconds");
-
-  report("Buckets: " + callback.myNum);
-
-  report('RGBA ' + callback.buffer[0]);
+  report('Finished');
 }
