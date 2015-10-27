@@ -8,7 +8,7 @@ void AtDisplayCallback_Imp(AtUInt32 x, AtUInt32 y, AtUInt32 width, AtUInt32 heig
 {
     // We need to convert the parameters to this function from C++ type to KL.
     // Luckily, all these types here convert without any extra effort on our part.
-    if (_klCallack.isValid() && _shaderNode != nullptr)
+    if (_klCallack.klInterfaceIsValid() && _shaderNode != nullptr)
     {
         bool rgbaPacking = AiNodeGetBool(_shaderNode, "rgba_packing");
 
