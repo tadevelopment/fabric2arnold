@@ -283,7 +283,7 @@
         "AtDisplayCallback": {
             "ctype": "AtDisplayCallback", 
             "from": "KlAtDisplayCallback_to_AtDisplayCallback", 
-            "methodop": "*", 
+            "methodop": ".", 
             "to": "AtDisplayCallback_to_KLAtDisplayCallback"
         }, 
         "AtLicenseInfo": {

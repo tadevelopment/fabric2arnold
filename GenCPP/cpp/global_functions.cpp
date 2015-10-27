@@ -6978,7 +6978,7 @@ FABRIC_EXT_EXPORT void _fe_SetAtDisplayCallback(
     return;
   }
   SetDisplayDriverNode(f2aDisplayDriver);
-  AiNodeSetPtr(f2aDisplayDriver, "callback", *(void**)(&f2aCallback));
+  AiNodeSetPtr(f2aDisplayDriver, "callback", (void*)f2aCallback);
 
   F2A_CATCH_STATEMENT("_fe_SetAtDisplayCallback")
 }
