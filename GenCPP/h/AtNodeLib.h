@@ -21,7 +21,7 @@
 namespace Fabric { namespace EDK { namespace KL {
 
 // KL struct 'AtNodeLib'
-// Defined at R:\src\HordeSoftware\Fabric2Arnold\GenKL/\ai_plugins.kl:14:1
+// Defined at GenKL//ai_plugins.kl:14:1
 
 struct AtNodeLib
 {

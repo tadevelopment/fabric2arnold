@@ -21,7 +21,7 @@
 namespace Fabric { namespace EDK { namespace KL {
 
 // KL struct 'AtMetaDataIterator'
-// Defined at R:\src\HordeSoftware\Fabric2Arnold\GenKL/\_opaque_types.kl:42:1
+// Defined at GenKL//_opaque_types.kl:41:1
 
 struct AtMetaDataIterator
 {

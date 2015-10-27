@@ -4,3 +4,8 @@ Fabric2Arnold-Windows-x86_64.exp
 Fabric2Arnold.sublime-project
 Fabric2Arnold.sublime-workspace
 *.sdf
+*.lib
+*.ilk
+/Fabric2Arnold-Windows-x86_64.dll
+/Fabric2Arnold-Windows-x86_64.pdb
+/libFabric2Arnold-Linux-x86_64.so

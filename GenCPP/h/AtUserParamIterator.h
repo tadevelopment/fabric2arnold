@@ -21,7 +21,7 @@
 namespace Fabric { namespace EDK { namespace KL {
 
 // KL struct 'AtUserParamIterator'
-// Defined at R:\src\HordeSoftware\Fabric2Arnold\GenKL/\_opaque_types.kl:47:1
+// Defined at GenKL//_opaque_types.kl:46:1
 
 struct AtUserParamIterator
 {

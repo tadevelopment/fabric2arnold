@@ -21,7 +21,7 @@
 namespace Fabric { namespace EDK { namespace KL {
 
 // KL struct 'AtAOVIterator'
-// Defined at R:\src\HordeSoftware\Fabric2Arnold\GenKL/\_opaque_types.kl:77:1
+// Defined at GenKL//_opaque_types.kl:76:1
 
 struct AtAOVIterator
 {

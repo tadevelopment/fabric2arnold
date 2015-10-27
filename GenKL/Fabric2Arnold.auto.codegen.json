@@ -283,7 +283,7 @@
         "AtDisplayCallback": {
             "ctype": "AtDisplayCallback", 
             "from": "KlAtDisplayCallback_to_AtDisplayCallback", 
-            "methodop": ".", 
+            "methodop": "*", 
             "to": "AtDisplayCallback_to_KLAtDisplayCallback"
         }, 
         "AtLicenseInfo": {
@@ -453,12 +453,6 @@
             "from": "Float64_to_double", 
             "methodop": ".", 
             "to": "double_to_Float64"
-        }, 
-        "HRESULT": {
-            "ctype": "HRESULT", 
-            "from": "KLUInt32_to_CPHRESULT", 
-            "methodop": ".", 
-            "to": "CPHRESULT_to_KLUInt32"
         }, 
         "Mat44": {
             "ctype": "AtMatrix", 

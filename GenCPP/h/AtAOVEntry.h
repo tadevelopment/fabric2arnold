@@ -21,7 +21,7 @@
 namespace Fabric { namespace EDK { namespace KL {
 
 // KL struct 'AtAOVEntry'
-// Defined at R:\src\HordeSoftware\Fabric2Arnold\GenKL/\ai_universe.kl:19:1
+// Defined at GenKL//ai_universe.kl:19:1
 
 struct AtAOVEntry
 {
