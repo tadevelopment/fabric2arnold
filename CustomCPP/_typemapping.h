@@ -8,8 +8,8 @@
 #pragma once
 
 inline bool Vec3_to_AtPoint(const Fabric::EDK::KL::Vec3 & from, AtPoint & to);
-inline bool String_to_AtString(const Fabric::EDK::KL::AtString & from, AtString & to);
-inline bool AtString_to_String(const AtString & from, Fabric::EDK::KL::AtString & to);
+inline bool KLString_to_CPAtString(const Fabric::EDK::KL::String & from, AtString & to);
+inline bool CPAtString_to_KLString(const AtString & from, Fabric::EDK::KL::String & to);
 inline bool AtParamValue_to_KLParamValue(const AtParamValue* const & from, Fabric::EDK::KL::AtParamValue & to);
 inline bool AtPoint_to_Vec3(const AtPoint & from, Fabric::EDK::KL::Vec3 & to);
 
@@ -68,11 +68,20 @@ inline bool RGB_to_AtColor(const Fabric::EDK::KL::RGB & from, AtRGB & to) {
 	to.b = from.b / 256.0;
   return true;
 }
-
 inline bool AtColor_to_RGB(const AtRGB & from, Fabric::EDK::KL::RGB & to) {
 	to.r = uint8_t(from.r * 256);
 	to.g = uint8_t(from.g * 256);
 	to.b = uint8_t(from.b * 256);
+    return true;
+}
+
+inline bool KLAtCameraOutput_to_CPAtCameraOutput(const Fabric::EDK::KL::AtCameraOutput & from, AtCameraOutput & to) { 
+  #pragma message("Implement Me")
+  return true;
+}
+
+inline bool CPAtCameraOutput_to_KLAtCameraOutput(const AtCameraOutput & from, Fabric::EDK::KL::AtCameraOutput & to) {
+  #pragma message("Implement Me")
   return true; 
 }
 
@@ -121,7 +130,7 @@ inline bool KlAtRay_to_AtRay(const Fabric::EDK::KL::AtRay & from, AtRay & to) {
 	Vec3_to_AtPoint(from.dDdx, to.dDdx);
 	Vec3_to_AtPoint(from.dDdy, to.dDdy);
 
-	String_to_AtString(from.traceset, to.traceset);
+	KLString_to_CPAtString(from.traceset, to.traceset);
 	to.inclusive_traceset = from.inclusive_traceset;
 	to.sindex = from.sindex;
 
@@ -159,7 +168,7 @@ inline bool AtRay_to_KLAtRay(const AtRay & from, Fabric::EDK::KL::AtRay & to) {
   AtPoint_to_Vec3(from.dDdx, to.dDdx);
   AtPoint_to_Vec3(from.dDdy, to.dDdy);
 
-  AtString_to_String(from.traceset, to.traceset);
+  CPAtString_to_KLString(from.traceset, to.traceset);
   to.inclusive_traceset = from.inclusive_traceset;
   to.sindex = from.sindex;
 
@@ -202,13 +211,13 @@ inline bool AtParamValue_to_KLParamValue(const AtParamValue* const & from, Fabri
   return true; 
 }
 
-inline bool String_to_AtString(const Fabric::EDK::KL::AtString & from, AtString & to) { 
-	to = AtString(from.c_str());
+inline bool KLString_to_CPAtString(const Fabric::EDK::KL::String & from, AtString & to) { 
+  to = AtString(from.c_str());
   return true;
 }
 
-inline bool AtString_to_String(const AtString & from, Fabric::EDK::KL::AtString & to) {
-	to = from.c_str();
+inline bool CPAtString_to_KLString(const AtString & from, Fabric::EDK::KL::String & to) {
+  to = from.c_str();
   return true; 
 }
 
@@ -254,6 +263,26 @@ inline bool AtTextureParams_to_KLAtTextureParams(const AtTextureParams & from, F
   return true; 
 }
 
+inline bool KLAtCameraInput_to_CPAtCameraInput(const Fabric::EDK::KL::AtCameraInput & from, AtCameraInput & to) { 
+  #pragma message("Implement Me")
+  return true;
+}
+
+inline bool CPAtCameraInput_to_KLAtCameraInput(const AtCameraInput & from, Fabric::EDK::KL::AtCameraInput & to) {
+  #pragma message("Implement Me")
+  return true; 
+}
+
+inline bool KLAtNodeLib_to_CPAtNodeLib(const Fabric::EDK::KL::AtNodeLib & from, AtNodeLib & to) { 
+  #pragma message("Implement Me")
+  return true;
+}
+
+inline bool CPAtNodeLib_to_KLAtNodeLib(const AtNodeLib & from, Fabric::EDK::KL::AtNodeLib & to) {
+  #pragma message("Implement Me")
+  return true; 
+}
+
 inline bool KlArray_to_AtArray(const Fabric::EDK::KL::AtArray & from, AtArray* & to) { 
 	to = reinterpret_cast<AtArray*>(from.data);
   return true;
@@ -271,7 +300,6 @@ inline bool AtArray_to_KLArray(const AtArray* const & from, Fabric::EDK::KL::AtA
 }
 
 inline bool Mat44_to_AtMatrix(const Fabric::EDK::KL::Mat44 & from, AtMatrix & to) { 
-
 	to[0][0] = from.row0.x;
 	to[1][0] = from.row0.y;
 	to[2][0] = from.row0.z;
@@ -291,7 +319,6 @@ inline bool Mat44_to_AtMatrix(const Fabric::EDK::KL::Mat44 & from, AtMatrix & to
 	to[1][3] = from.row3.y;
 	to[2][3] = from.row3.z;
 	to[3][3] = from.row3.t;
-
   return true;
 }
 
@@ -371,3 +398,4 @@ inline bool AtPoint_to_Vec3(const AtPoint & from, Fabric::EDK::KL::Vec3 & to) {
 	to.z = from.z;
   return true; 
 }
+

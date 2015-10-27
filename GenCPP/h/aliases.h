@@ -19,12 +19,8 @@
 namespace Fabric { namespace EDK { namespace KL {
 
 
-// KL alias 'AtString'
-// Defined at R:\src\HordeSoftware\Fabric2Arnold\GenKL/\_opaque_types.kl:10:1
-typedef String AtString;
-
 // KL alias 'HRESULT'
-// Defined at R:\src\HordeSoftware\Fabric2Arnold\GenKL/\_opaque_types.kl:11:1
+// Defined at R:\src\HordeSoftware\Fabric2Arnold\GenKL/\_opaque_types.kl:10:1
 typedef UInt32 HRESULT;
 }}}
 

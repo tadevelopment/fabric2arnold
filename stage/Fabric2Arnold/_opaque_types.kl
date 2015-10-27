@@ -7,7 +7,6 @@
 require Math;
 // Aliases help us differentiate the correct
 //return type when converting KL to C++ types later
-alias String AtString;
 alias UInt32 HRESULT;
 
 struct AtBucket {

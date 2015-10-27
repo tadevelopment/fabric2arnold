@@ -3,8 +3,8 @@
         "_fe_AiAOVIteratorDestroy": "  AiAOVIteratorDestroy(f2aIter);\n", 
         "_fe_AiAOVIteratorFinished": "  bool f2a_result = AiAOVIteratorFinished(f2aIter);\n  Fabric::EDK::KL::Boolean _result;\n  bool_to_Boolean(f2a_result, _result);\n", 
         "_fe_AiAOVIteratorGetNext": "  const AtAOVEntry * f2a_result = AiAOVIteratorGetNext(f2aIter);\n  AtAOVEntry_to_KLAtAOVEntry(f2a_result, _result);", 
-        "_fe_AiASSLoad": "  int f2a_result = AiASSLoad(f2aFilename, f2aMask/*=ai_node_all*/);\n  Fabric::EDK::KL::SInt32 _result;\n  int_to_SInt32(f2a_result, _result);\n", 
-        "_fe_AiASSWrite": "  int f2a_result = AiASSWrite(f2aFilename, f2aMask/*=ai_node_all*/, f2aOpen_procs/*=false*/, f2aBinary/*=true*/);\n  Fabric::EDK::KL::SInt32 _result;\n  int_to_SInt32(f2a_result, _result);\n", 
+        "_fe_AiASSLoad": "  int f2a_result = AiASSLoad(f2aFilename, f2aMask/*=AI_NODE_ALL*/);\n  Fabric::EDK::KL::SInt32 _result;\n  int_to_SInt32(f2a_result, _result);\n", 
+        "_fe_AiASSWrite": "  int f2a_result = AiASSWrite(f2aFilename, f2aMask/*=AI_NODE_ALL*/, f2aOpen_procs/*=false*/, f2aBinary/*=true*/);\n  Fabric::EDK::KL::SInt32 _result;\n  int_to_SInt32(f2a_result, _result);\n", 
         "_fe_AiArray": "  AtArray * f2a_result = AiArray(f2aNelements, f2aNkeys, f2aType);\n  AtArray_to_KLArray(f2a_result, _result);", 
         "_fe_AiArrayAllocate": "  AtArray * f2a_result = AiArrayAllocate(f2aNelements, f2aNkeys, f2aType);\n  AtArray_to_KLArray(f2a_result, _result);", 
         "_fe_AiArrayConvert": "  AtArray * f2a_result = AiArrayConvert(f2aNelements, f2aNkeys, f2aType, f2aData);\n  AtArray_to_KLArray(f2a_result, _result);", 
@@ -110,7 +110,7 @@
         "_fe_AiNodeDestroy": "  bool f2a_result = AiNodeDestroy(f2aNode);\n  Fabric::EDK::KL::Boolean _result;\n  bool_to_Boolean(f2a_result, _result);\n", 
         "_fe_AiNodeEntryGetCount": "  int f2a_result = AiNodeEntryGetCount(f2aNentry);\n  Fabric::EDK::KL::SInt32 _result;\n  int_to_SInt32(f2a_result, _result);\n", 
         "_fe_AiNodeEntryGetFilename": "  const char * f2a_result = AiNodeEntryGetFilename(f2aNentry);\n  char_to_String(f2a_result, _result);", 
-        "_fe_AiNodeEntryGetMetaDataIterator": "  AtMetaDataIterator * f2a_result = AiNodeEntryGetMetaDataIterator(f2aNentry, f2aParam/*=null*/);\n  CPAtMetaDataIterator_to_KLAtMetaDataIterator(f2a_result, _result);", 
+        "_fe_AiNodeEntryGetMetaDataIterator": "  AtMetaDataIterator * f2a_result = AiNodeEntryGetMetaDataIterator(f2aNentry, f2aParam/*=NULL*/);\n  CPAtMetaDataIterator_to_KLAtMetaDataIterator(f2a_result, _result);", 
         "_fe_AiNodeEntryGetName": "  const char * f2a_result = AiNodeEntryGetName(f2aNentry);\n  char_to_String(f2a_result, _result);", 
         "_fe_AiNodeEntryGetNumParams": "  int f2a_result = AiNodeEntryGetNumParams(f2aNentry);\n  Fabric::EDK::KL::SInt32 _result;\n  int_to_SInt32(f2a_result, _result);\n", 
         "_fe_AiNodeEntryGetOutputType": "  int f2a_result = AiNodeEntryGetOutputType(f2aNentry);\n  Fabric::EDK::KL::SInt32 _result;\n  int_to_SInt32(f2a_result, _result);\n", 
@@ -131,7 +131,7 @@
         "_fe_AiNodeGetByteAtString": "  AtByte f2a_result = AiNodeGetByteAtString(f2aNode, f2aParam);\n  Fabric::EDK::KL::UInt8 _result;\n  AtByte_to_UInt8(f2a_result, _result);\n", 
         "_fe_AiNodeGetFltAtString": "  float f2a_result = AiNodeGetFltAtString(f2aNode, f2aParam);\n  Fabric::EDK::KL::Float32 _result;\n  float_to_Float32(f2a_result, _result);\n", 
         "_fe_AiNodeGetIntAtString": "  int f2a_result = AiNodeGetIntAtString(f2aNode, f2aParam);\n  Fabric::EDK::KL::SInt32 _result;\n  int_to_SInt32(f2a_result, _result);\n", 
-        "_fe_AiNodeGetLink": "  AtNode * f2a_result = AiNodeGetLink(f2aNode, f2aInput, &f2aComp/*=null*/);\n  CPAtNode_to_KLAtNode(f2a_result, _result);", 
+        "_fe_AiNodeGetLink": "  AtNode * f2a_result = AiNodeGetLink(f2aNode, f2aInput, &f2aComp/*=NULL*/);\n  CPAtNode_to_KLAtNode(f2a_result, _result);", 
         "_fe_AiNodeGetLocalData": "  void * f2a_result = AiNodeGetLocalData(f2aNode);\n  Fabric::EDK::KL::Data _result;\n  void_to_Data(f2a_result, _result);\n", 
         "_fe_AiNodeGetMatrixAtString": "  AiNodeGetMatrixAtString(f2aNode, f2aParam, f2aMatrix);\n", 
         "_fe_AiNodeGetName": "  const char * f2a_result = AiNodeGetName(f2aNode);\n  char_to_String(f2a_result, _result);", 
@@ -142,7 +142,7 @@
         "_fe_AiNodeGetPtrAtString": "  void * f2a_result = AiNodeGetPtrAtString(f2aNode, f2aParam);\n  Fabric::EDK::KL::Data _result;\n  void_to_Data(f2a_result, _result);\n", 
         "_fe_AiNodeGetRGBAAtString": "  AtRGBA f2a_result = AiNodeGetRGBAAtString(f2aNode, f2aParam);\n  AtRGBA_to_Color(f2a_result, _result);", 
         "_fe_AiNodeGetRGBAtString": "  AtRGB f2a_result = AiNodeGetRGBAtString(f2aNode, f2aParam);\n  AtColor_to_RGB(f2a_result, _result);", 
-        "_fe_AiNodeGetStrAtString": "  AtString f2a_result = AiNodeGetStrAtString(f2aNode, f2aParam);\n  AtString_to_String(f2a_result, _result);", 
+        "_fe_AiNodeGetStrAtString": "  AtString f2a_result = AiNodeGetStrAtString(f2aNode, f2aParam);\n  char_to_String(f2a_result, _result);", 
         "_fe_AiNodeGetUIntAtString": "  unsigned int f2a_result = AiNodeGetUIntAtString(f2aNode, f2aParam);\n  Fabric::EDK::KL::UInt32 _result;\n  unsigned_int_to_UInt32(f2a_result, _result);\n", 
         "_fe_AiNodeGetUserParamIterator": "  AtUserParamIterator * f2a_result = AiNodeGetUserParamIterator(f2aNode);\n  CPAtUserParamIterator_to_KLAtUserParamIterator(f2a_result, _result);", 
         "_fe_AiNodeGetVecAtString": "  AtVector f2a_result = AiNodeGetVecAtString(f2aNode, f2aParam);\n  AtPoint_to_Vec3(f2a_result, _result);", 
@@ -203,18 +203,18 @@
         "_fe_AiParamIteratorGetNext": "  const AtParamEntry * f2a_result = AiParamIteratorGetNext(f2aIter);\n  CPAtParamEntry_to_KLAtParamEntry(f2a_result, _result);", 
         "_fe_AiReflectRay": "  AiReflectRay(&f2aRay, &f2aNormal, f2aSg);\n", 
         "_fe_AiRefractRay": "  bool f2a_result = AiRefractRay(&f2aRay, &f2aNormal, f2aN1, f2aN2, f2aSg);\n  Fabric::EDK::KL::Boolean _result;\n  bool_to_Boolean(f2a_result, _result);\n", 
-        "_fe_AiRender": "  int f2a_result = AiRender(f2aMode/*=ai_render_mode_camera*/);\n  Fabric::EDK::KL::SInt32 _result;\n  int_to_SInt32(f2a_result, _result);\n", 
+        "_fe_AiRender": "  int f2a_result = AiRender(f2aMode/*=AI_RENDER_MODE_CAMERA*/);\n  Fabric::EDK::KL::SInt32 _result;\n  int_to_SInt32(f2a_result, _result);\n", 
         "_fe_AiRenderAbort": "  AiRenderAbort();\n", 
         "_fe_AiRenderInterrupt": "  AiRenderInterrupt();\n", 
         "_fe_AiRendering": "  bool f2a_result = AiRendering();\n  Fabric::EDK::KL::Boolean _result;\n  bool_to_Boolean(f2a_result, _result);\n", 
-        "_fe_AiTextureAccess": "  AtRGBA f2a_result = AiTextureAccess(f2aSg, f2aFilename, &f2aParams, &f2aSuccess/*=null*/);\n  AtRGBA_to_Color(f2a_result, _result);", 
+        "_fe_AiTextureAccess": "  AtRGBA f2a_result = AiTextureAccess(f2aSg, f2aFilename, &f2aParams, &f2aSuccess/*=NULL*/);\n  AtRGBA_to_Color(f2a_result, _result);", 
         "_fe_AiTextureGetBitDepth": "  bool f2a_result = AiTextureGetBitDepth(f2aFilename, &f2aBit_depth);\n  Fabric::EDK::KL::Boolean _result;\n  bool_to_Boolean(f2a_result, _result);\n", 
         "_fe_AiTextureGetChannelName": "  const char * f2a_result = AiTextureGetChannelName(f2aFilename, f2aChannel_index);\n  char_to_String(f2a_result, _result);", 
         "_fe_AiTextureGetFormat": "  bool f2a_result = AiTextureGetFormat(f2aFilename, &f2aFormat);\n  Fabric::EDK::KL::Boolean _result;\n  bool_to_Boolean(f2a_result, _result);\n", 
         "_fe_AiTextureGetMatrices": "  bool f2a_result = AiTextureGetMatrices(f2aFilename, f2aWorld_to_screen, f2aWorld_to_camera);\n  Fabric::EDK::KL::Boolean _result;\n  bool_to_Boolean(f2a_result, _result);\n", 
         "_fe_AiTextureGetNumChannels": "  bool f2a_result = AiTextureGetNumChannels(f2aFilename, &f2aNum_channels);\n  Fabric::EDK::KL::Boolean _result;\n  bool_to_Boolean(f2a_result, _result);\n", 
         "_fe_AiTextureGetResolution": "  bool f2a_result = AiTextureGetResolution(f2aFilename, &f2aWidth, &f2aHeight);\n  Fabric::EDK::KL::Boolean _result;\n  bool_to_Boolean(f2a_result, _result);\n", 
-        "_fe_AiTextureHandleAccess": "  AtRGBA f2a_result = AiTextureHandleAccess(f2aSg, f2aHandle, &f2aParams, &f2aSuccess/*=null*/);\n  AtRGBA_to_Color(f2a_result, _result);", 
+        "_fe_AiTextureHandleAccess": "  AtRGBA f2a_result = AiTextureHandleAccess(f2aSg, f2aHandle, &f2aParams, &f2aSuccess/*=NULL*/);\n  AtRGBA_to_Color(f2a_result, _result);", 
         "_fe_AiTextureHandleCreate": "  AtTextureHandle * f2a_result = AiTextureHandleCreate(f2aFilename);\n  CPAtTextureHandle_to_KLAtTextureHandle(f2a_result, _result);", 
         "_fe_AiTextureHandleDestroy": "  AiTextureHandleDestroy(f2aHandle);\n", 
         "_fe_AiTextureInvalidate": "  AiTextureInvalidate(f2aFilename);\n", 
@@ -239,6 +239,9 @@
         "_fe_AiUserParamIteratorFinished": "  bool f2a_result = AiUserParamIteratorFinished(f2aIter);\n  Fabric::EDK::KL::Boolean _result;\n  bool_to_Boolean(f2a_result, _result);\n", 
         "_fe_AiUserParamIteratorGetNext": "  const AtUserParamEntry * f2a_result = AiUserParamIteratorGetNext(f2aIter);\n  CPAtUserParamEntry_to_KLAtUserParamEntry(f2a_result, _result);"
     }, 
+    "functionentry": "f2aTRY_STATEMENT", 
+    "functionexit": "f2aCATCH_STATEMENT", 
+    "functionexitreturn": "f2aCATCH_STATEMENT_RETURN", 
     "parameterprefix": "f2a", 
     "typemapping": {
         "AtAOVEntry": {
@@ -250,6 +253,7 @@
         "AtAOVIterator": {
             "ctype": "AtAOVIterator*", 
             "from": "KLAtAOVIterator_to_CPAtAOVIterator", 
+            "methodop": "->", 
             "to": "CPAtAOVIterator_to_KLAtAOVIterator"
         }, 
         "AtArray": {
@@ -261,7 +265,20 @@
         "AtBucket": {
             "ctype": "AtBucket*", 
             "from": "KLAtBucket_to_CPAtBucket", 
+            "methodop": "->", 
             "to": "CPAtBucket_to_KLAtBucket"
+        }, 
+        "AtCameraInput": {
+            "ctype": "AtCameraInput", 
+            "from": "KLAtCameraInput_to_CPAtCameraInput", 
+            "methodop": ".", 
+            "to": "CPAtCameraInput_to_KLAtCameraInput"
+        }, 
+        "AtCameraOutput": {
+            "ctype": "AtCameraOutput", 
+            "from": "KLAtCameraOutput_to_CPAtCameraOutput", 
+            "methodop": ".", 
+            "to": "CPAtCameraOutput_to_KLAtCameraOutput"
         }, 
         "AtDisplayCallback": {
             "ctype": "AtDisplayCallback", 
@@ -278,6 +295,7 @@
         "AtList": {
             "ctype": "AtList*", 
             "from": "KLAtList_to_CPAtList", 
+            "methodop": "->", 
             "to": "CPAtList_to_KLAtList"
         }, 
         "AtMetaDataEntry": {
@@ -289,46 +307,61 @@
         "AtMetaDataIterator": {
             "ctype": "AtMetaDataIterator*", 
             "from": "KLAtMetaDataIterator_to_CPAtMetaDataIterator", 
+            "methodop": "->", 
             "to": "CPAtMetaDataIterator_to_KLAtMetaDataIterator"
         }, 
         "AtMetaDataStore": {
             "ctype": "AtMetaDataStore*", 
             "from": "KLAtMetaDataStore_to_CPAtMetaDataStore", 
+            "methodop": "->", 
             "to": "CPAtMetaDataStore_to_KLAtMetaDataStore"
         }, 
         "AtNode": {
             "ctype": "AtNode*", 
             "from": "KLAtNode_to_CPAtNode", 
+            "methodop": "->", 
             "to": "CPAtNode_to_KLAtNode"
         }, 
         "AtNodeEntry": {
             "ctype": "AtNodeEntry*", 
             "from": "KLAtNodeEntry_to_CPAtNodeEntry", 
+            "methodop": "->", 
             "to": "CPAtNodeEntry_to_KLAtNodeEntry"
         }, 
         "AtNodeEntryIterator": {
             "ctype": "AtNodeEntryIterator*", 
             "from": "KLAtNodeEntryIterator_to_CPAtNodeEntryIterator", 
+            "methodop": "->", 
             "to": "CPAtNodeEntryIterator_to_KLAtNodeEntryIterator"
         }, 
         "AtNodeIterator": {
             "ctype": "AtNodeIterator*", 
             "from": "KLAtNodeIterator_to_CPAtNodeIterator", 
+            "methodop": "->", 
             "to": "CPAtNodeIterator_to_KLAtNodeIterator"
+        }, 
+        "AtNodeLib": {
+            "ctype": "AtNodeLib", 
+            "from": "KLAtNodeLib_to_CPAtNodeLib", 
+            "methodop": ".", 
+            "to": "CPAtNodeLib_to_KLAtNodeLib"
         }, 
         "AtNodeMethods": {
             "ctype": "AtNodeMethods*", 
             "from": "KLAtNodeMethods_to_CPAtNodeMethods", 
+            "methodop": "->", 
             "to": "CPAtNodeMethods_to_KLAtNodeMethods"
         }, 
         "AtParamEntry": {
             "ctype": "AtParamEntry*", 
             "from": "KLAtParamEntry_to_CPAtParamEntry", 
+            "methodop": "->", 
             "to": "CPAtParamEntry_to_KLAtParamEntry"
         }, 
         "AtParamIterator": {
             "ctype": "AtParamIterator*", 
             "from": "KLAtParamIterator_to_CPAtParamIterator", 
+            "methodop": "->", 
             "to": "CPAtParamIterator_to_KLAtParamIterator"
         }, 
         "AtParamValue": {
@@ -346,22 +379,25 @@
         "AtScrSample": {
             "ctype": "AtScrSample*", 
             "from": "KLAtScrSample_to_CPAtScrSample", 
+            "methodop": "->", 
             "to": "CPAtScrSample_to_KLAtScrSample"
         }, 
         "AtShaderGlobals": {
             "ctype": "AtShaderGlobals*", 
             "from": "KLAtShaderGlobals_to_CPAtShaderGlobals", 
+            "methodop": "->", 
             "to": "CPAtShaderGlobals_to_KLAtShaderGlobals"
         }, 
         "AtString": {
             "ctype": "AtString", 
-            "from": "String_to_AtString", 
+            "from": "KLString_to_CPAtString", 
             "methodop": ".", 
-            "to": "AtString_to_String"
+            "to": "CPAtString_to_KLString"
         }, 
         "AtTextureHandle": {
             "ctype": "AtTextureHandle*", 
             "from": "KLAtTextureHandle_to_CPAtTextureHandle", 
+            "methodop": "->", 
             "to": "CPAtTextureHandle_to_KLAtTextureHandle"
         }, 
         "AtTextureParams": {
@@ -373,11 +409,13 @@
         "AtUserParamEntry": {
             "ctype": "AtUserParamEntry*", 
             "from": "KLAtUserParamEntry_to_CPAtUserParamEntry", 
+            "methodop": "->", 
             "to": "CPAtUserParamEntry_to_KLAtUserParamEntry"
         }, 
         "AtUserParamIterator": {
             "ctype": "AtUserParamIterator*", 
             "from": "KLAtUserParamIterator_to_CPAtUserParamIterator", 
+            "methodop": "->", 
             "to": "CPAtUserParamIterator_to_KLAtUserParamIterator"
         }, 
         "Boolean": {
@@ -418,9 +456,9 @@
         }, 
         "HRESULT": {
             "ctype": "HRESULT", 
-            "from": "UInt32_to_HRESULT", 
+            "from": "KLUInt32_to_CPHRESULT", 
             "methodop": ".", 
-            "to": "HRESULT_to_UInt32"
+            "to": "CPHRESULT_to_KLUInt32"
         }, 
         "Mat44": {
             "ctype": "AtMatrix", 
