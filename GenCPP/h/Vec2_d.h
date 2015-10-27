@@ -1,8 +1,8 @@
-#ifndef __KL2EDK_AUTOGEN_Vec3_d__
-#define __KL2EDK_AUTOGEN_Vec3_d__
+#ifndef __KL2EDK_AUTOGEN_Vec2_d__
+#define __KL2EDK_AUTOGEN_Vec2_d__
 
 #ifdef KL2EDK_INCLUDE_MESSAGES
-  #pragma message ( "Including 'Vec3_d.h'" )
+  #pragma message ( "Including 'Vec2_d.h'" )
 #endif
 
 ////////////////////////////////////////////////////////////////
@@ -20,45 +20,40 @@
 
 namespace Fabric { namespace EDK { namespace KL {
 
-// KL struct 'Vec3_d'
-// Defined at Vec3_d.kl:20:1
+// KL struct 'Vec2_d'
+// Defined at Vec2_d.kl:18:1
 
-struct Vec3_d
+struct Vec2_d
 {
-  typedef Vec3_d &Result;
-  typedef Vec3_d const &INParam;
-  typedef Vec3_d &IOParam;
-  typedef Vec3_d &OUTParam;
+  typedef Vec2_d &Result;
+  typedef Vec2_d const &INParam;
+  typedef Vec2_d &IOParam;
+  typedef Vec2_d &OUTParam;
   
   Float64 x;
   Float64 y;
-  Float64 z;
 };
 
-inline void Traits<Vec3_d>::ConstructEmpty( Vec3_d &val )
+inline void Traits<Vec2_d>::ConstructEmpty( Vec2_d &val )
 {
   Traits< Float64 >::ConstructEmpty( val.x );
   Traits< Float64 >::ConstructEmpty( val.y );
-  Traits< Float64 >::ConstructEmpty( val.z );
 }
-inline void Traits<Vec3_d>::ConstructCopy( Vec3_d &lhs, Vec3_d const &rhs )
+inline void Traits<Vec2_d>::ConstructCopy( Vec2_d &lhs, Vec2_d const &rhs )
 {
   Traits< Float64 >::ConstructCopy( lhs.x, rhs.x );
   Traits< Float64 >::ConstructCopy( lhs.y, rhs.y );
-  Traits< Float64 >::ConstructCopy( lhs.z, rhs.z );
 }
-inline void Traits<Vec3_d>::AssignCopy( Vec3_d &lhs, Vec3_d const &rhs )
+inline void Traits<Vec2_d>::AssignCopy( Vec2_d &lhs, Vec2_d const &rhs )
 {
   Traits< Float64 >::AssignCopy( lhs.x, rhs.x );
   Traits< Float64 >::AssignCopy( lhs.y, rhs.y );
-  Traits< Float64 >::AssignCopy( lhs.z, rhs.z );
 }
-inline void Traits<Vec3_d>::Destruct( Vec3_d &val )
+inline void Traits<Vec2_d>::Destruct( Vec2_d &val )
 {
-  Traits< Float64 >::Destruct( val.z );
   Traits< Float64 >::Destruct( val.y );
   Traits< Float64 >::Destruct( val.x );
 }
 }}}
 
-#endif // __KL2EDK_AUTOGEN_Vec3_d__
+#endif // __KL2EDK_AUTOGEN_Vec2_d__

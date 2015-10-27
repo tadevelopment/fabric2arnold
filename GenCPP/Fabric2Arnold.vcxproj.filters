@@ -59,6 +59,9 @@
 		<ClInclude Include="h\AtDisplayCallback.h">
 			<Filter>Header Files</Filter>
 		</ClInclude>
+		<ClInclude Include="h\AtDisplayCallback_impl.h">
+			<Filter>Header Files</Filter>
+		</ClInclude>
 		<ClInclude Include="h\AtLicenseInfo.h">
 			<Filter>Header Files</Filter>
 		</ClInclude>
@@ -137,6 +140,12 @@
 		<ClInclude Include="h\Euler.h">
 			<Filter>Header Files</Filter>
 		</ClInclude>
+		<ClInclude Include="h\Euler_d.h">
+			<Filter>Header Files</Filter>
+		</ClInclude>
+		<ClInclude Include="h\Euler_i.h">
+			<Filter>Header Files</Filter>
+		</ClInclude>
 		<ClInclude Include="h\Fabric2Arnold.h">
 			<Filter>Header Files</Filter>
 		</ClInclude>
@@ -149,13 +158,37 @@
 		<ClInclude Include="h\Mat22.h">
 			<Filter>Header Files</Filter>
 		</ClInclude>
+		<ClInclude Include="h\Mat22_d.h">
+			<Filter>Header Files</Filter>
+		</ClInclude>
+		<ClInclude Include="h\Mat22_i.h">
+			<Filter>Header Files</Filter>
+		</ClInclude>
 		<ClInclude Include="h\Mat33.h">
+			<Filter>Header Files</Filter>
+		</ClInclude>
+		<ClInclude Include="h\Mat33_d.h">
+			<Filter>Header Files</Filter>
+		</ClInclude>
+		<ClInclude Include="h\Mat33_i.h">
 			<Filter>Header Files</Filter>
 		</ClInclude>
 		<ClInclude Include="h\Mat44.h">
 			<Filter>Header Files</Filter>
 		</ClInclude>
+		<ClInclude Include="h\Mat44_d.h">
+			<Filter>Header Files</Filter>
+		</ClInclude>
+		<ClInclude Include="h\Mat44_i.h">
+			<Filter>Header Files</Filter>
+		</ClInclude>
 		<ClInclude Include="h\Quat.h">
+			<Filter>Header Files</Filter>
+		</ClInclude>
+		<ClInclude Include="h\Quat_d.h">
+			<Filter>Header Files</Filter>
+		</ClInclude>
+		<ClInclude Include="h\Quat_i.h">
 			<Filter>Header Files</Filter>
 		</ClInclude>
 		<ClInclude Include="h\Ray.h">
@@ -173,13 +206,28 @@
 		<ClInclude Include="h\Vec2.h">
 			<Filter>Header Files</Filter>
 		</ClInclude>
+		<ClInclude Include="h\Vec2_d.h">
+			<Filter>Header Files</Filter>
+		</ClInclude>
+		<ClInclude Include="h\Vec2_i.h">
+			<Filter>Header Files</Filter>
+		</ClInclude>
 		<ClInclude Include="h\Vec3.h">
 			<Filter>Header Files</Filter>
 		</ClInclude>
 		<ClInclude Include="h\Vec3_d.h">
 			<Filter>Header Files</Filter>
 		</ClInclude>
+		<ClInclude Include="h\Vec3_i.h">
+			<Filter>Header Files</Filter>
+		</ClInclude>
 		<ClInclude Include="h\Vec4.h">
+			<Filter>Header Files</Filter>
+		</ClInclude>
+		<ClInclude Include="h\Vec4_d.h">
+			<Filter>Header Files</Filter>
+		</ClInclude>
+		<ClInclude Include="h\Vec4_i.h">
 			<Filter>Header Files</Filter>
 		</ClInclude>
 		<ClInclude Include="h\Xfo.h">

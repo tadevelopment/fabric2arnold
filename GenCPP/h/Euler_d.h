@@ -1,8 +1,8 @@
-#ifndef __KL2EDK_AUTOGEN_Vec3_d__
-#define __KL2EDK_AUTOGEN_Vec3_d__
+#ifndef __KL2EDK_AUTOGEN_Euler_d__
+#define __KL2EDK_AUTOGEN_Euler_d__
 
 #ifdef KL2EDK_INCLUDE_MESSAGES
-  #pragma message ( "Including 'Vec3_d.h'" )
+  #pragma message ( "Including 'Euler_d.h'" )
 #endif
 
 ////////////////////////////////////////////////////////////////
@@ -17,48 +17,54 @@
 #endif
 
 #include "global.h"
+#include "RotationOrder.h"
 
 namespace Fabric { namespace EDK { namespace KL {
 
-// KL struct 'Vec3_d'
-// Defined at Vec3_d.kl:20:1
+// KL struct 'Euler_d'
+// Defined at Euler_d.kl:22:1
 
-struct Vec3_d
+struct Euler_d
 {
-  typedef Vec3_d &Result;
-  typedef Vec3_d const &INParam;
-  typedef Vec3_d &IOParam;
-  typedef Vec3_d &OUTParam;
+  typedef Euler_d &Result;
+  typedef Euler_d const &INParam;
+  typedef Euler_d &IOParam;
+  typedef Euler_d &OUTParam;
   
   Float64 x;
   Float64 y;
   Float64 z;
+  RotationOrder ro;
 };
 
-inline void Traits<Vec3_d>::ConstructEmpty( Vec3_d &val )
+inline void Traits<Euler_d>::ConstructEmpty( Euler_d &val )
 {
   Traits< Float64 >::ConstructEmpty( val.x );
   Traits< Float64 >::ConstructEmpty( val.y );
   Traits< Float64 >::ConstructEmpty( val.z );
+  Traits< RotationOrder >::ConstructEmpty( val.ro );
 }
-inline void Traits<Vec3_d>::ConstructCopy( Vec3_d &lhs, Vec3_d const &rhs )
+inline void Traits<Euler_d>::ConstructCopy( Euler_d &lhs, Euler_d const &rhs )
 {
   Traits< Float64 >::ConstructCopy( lhs.x, rhs.x );
   Traits< Float64 >::ConstructCopy( lhs.y, rhs.y );
   Traits< Float64 >::ConstructCopy( lhs.z, rhs.z );
+  Traits< RotationOrder >::ConstructCopy( lhs.ro, rhs.ro );
 }
-inline void Traits<Vec3_d>::AssignCopy( Vec3_d &lhs, Vec3_d const &rhs )
+inline void Traits<Euler_d>::AssignCopy( Euler_d &lhs, Euler_d const &rhs )
 {
   Traits< Float64 >::AssignCopy( lhs.x, rhs.x );
   Traits< Float64 >::AssignCopy( lhs.y, rhs.y );
   Traits< Float64 >::AssignCopy( lhs.z, rhs.z );
+  Traits< RotationOrder >::AssignCopy( lhs.ro, rhs.ro );
 }
-inline void Traits<Vec3_d>::Destruct( Vec3_d &val )
+inline void Traits<Euler_d>::Destruct( Euler_d &val )
 {
+  Traits< RotationOrder >::Destruct( val.ro );
   Traits< Float64 >::Destruct( val.z );
   Traits< Float64 >::Destruct( val.y );
   Traits< Float64 >::Destruct( val.x );
 }
 }}}
 
-#endif // __KL2EDK_AUTOGEN_Vec3_d__
+#endif // __KL2EDK_AUTOGEN_Euler_d__
