@@ -5,7 +5,6 @@
 #
 
 import os
-import imp
 
 # Load in the HApp environment
 fabric2arnoldDir = os.path.dirname(os.path.realpath(__file__))
