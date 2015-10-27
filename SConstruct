@@ -5,7 +5,7 @@
 # Copyright 2010-2015 Fabric Software Inc. All rights reserved.
 #
 
-import os, sys, glob
+import os, sys, glob, platform
 
 try:
   fabricPath = os.environ['FABRIC_DIR']
@@ -30,13 +30,21 @@ fabricBuildEnv.Append(CPPPATH = [
   'GenCPP/h'
   ])
 
-fabricBuildEnv.Append(LIBPATH = [
-  arnoldPath + "/lib",
-  ])
+if platform.system() == 'Windows':
+  fabricBuildEnv.Append(LIBPATH = [
+    arnoldPath + "/lib",
+    ])
+  fabricBuildEnv.Append(LIBS = [
+    "ai.lib",
+    ])
+else:
+  fabricBuildEnv.Append(LIBPATH = [
+    arnoldPath + "/bin",
+    ])
+  fabricBuildEnv.Append(LIBS = [
+    "libai.so",
+    ])
 
-fabricBuildEnv.Append(LIBS = [
-  "ai.lib",
-  ])
   fabricBuildEnv.Append( RPATH = fabricBuildEnv.Literal('\\$$ORIGIN'))
   #fabricBuildEnv.Append(RPATH='$ORIGIN')
 
