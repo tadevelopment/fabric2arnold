@@ -62,7 +62,7 @@ operator entry() {
   // create a sphere
   AtNode sphere = AiNode("sphere");
   AiNodeSetStr(sphere, "name", "mysphere");
-  AiNodeSetFlt(sphere, "radius", 5.0);
+  AiNodeSetFlt(sphere, "radius", 7.5);
 
   // create a lambert shader
   AtNode lambert = AiNode("lambert");

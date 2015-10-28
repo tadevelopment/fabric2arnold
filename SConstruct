@@ -55,7 +55,7 @@ dll = fabricBuildEnv.Extension(
   )
 
 # Copy relevant files into stage directory
-stage_dir = './stage/Fabric2Arnold'
+stage_dir = 'exts/Fabric2Arnold'
 kl_files = glob.glob('./GenKL/*.kl')
 fpm_file = glob.glob('./GenKL/Fabric2Arnold.fpm.json')
 

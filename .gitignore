@@ -9,3 +9,4 @@ Fabric2Arnold.sublime-workspace
 /Fabric2Arnold-Windows-x86_64.dll
 /Fabric2Arnold-Windows-x86_64.pdb
 /libFabric2Arnold-Linux-x86_64.so
+*.os
