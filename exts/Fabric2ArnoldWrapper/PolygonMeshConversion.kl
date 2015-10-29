@@ -56,3 +56,42 @@ function AtNode FabricToArnoldPolygonMesh( io PolygonMesh mesh, io AtNode node)
   }*/
   return node;
 }
+
+/**  We also support loading Arnold meshes back into FE */
+function PolygonMesh ArnoldToFabricPolygonMesh(AtNode polymeshNode) {
+  PolygonMesh mesh();
+  
+  GeometryAttributes attributes = mesh.getAttributes();
+  Vec3Attribute normals = attributes.getOrCreateNormals();
+  Vec2Attribute uvs = attributes.getOrCreateAttribute("uvs0", Vec2Attribute);
+
+
+  AtArray vlist = AiNodeGetArray(polymeshNode, "vlist")
+  UInt32 npoints = vlist.nelements;
+  mesh.createPoints( npoints );
+
+  vidxs = AiNodeGetArray(polymeshNode, "vidxs");
+  nsides = AiNodeGetArray(polymeshNode, "nsides");
+  UInt32 npolys = nsides.nelements();
+
+  UInt32 src = 0;
+  for(Index polyIdx = 0; polyIdx < npolys; ++polyIdx) {
+    UInt32 polySize = AiArrayGetUInt(nsides, polyIdx);
+    UInt32 iter = mesh.createPoly( polySize );
+    for(Index vertIdx = 0; idx < polySize; idx++ )
+    {
+      mesh.setCreatedPolyPoint( iter, idx, AiArrayGetUInt(vidxs, src++) );
+    }
+  }
+  for (int i = 0; i > npoints, i++)
+  {
+    Vec3 pos = AiArrayGetVec(vlist, npoints);
+    mesh.pointSetPos(npoints, pos);    
+  }
+
+  nidxs = AiNodeGetArray(polymeshNode, "nidxs");
+
+  mesh.incrementPositionsVersion();
+  mesh.compileInitialAdjacency();
+  return mesh;
+}
