@@ -12,7 +12,6 @@ function attributeToAtArray(io AtNode node, io PolygonMesh mesh, GeometryAttribu
   
   AtArray vlist = AiArrayConvert(outAttr.size(), 1, type, outAttr.data());
   AtArray vidxs = AiArrayConvert(packedIndices.size(), 1, AI_TYPE_INT, packedIndices.data());
-  report('NVidxs: ' + packedIndices.size());
   AiNodeSetArray(node, name,  vlist);
   AiNodeSetArray(node, indices,  vidxs);
 }
@@ -33,7 +32,6 @@ function AtNode FabricToArnoldPolygonMesh( io PolygonMesh mesh, io AtNode node)
   mesh.getTopologyCountsAndAttributeIndices(klnsides, klindices);
   AtArray nsides = AiArrayConvert(klnsides.size(), 1, AI_TYPE_INT, klnsides.data());
   AiNodeSetArray(node, "nsides", nsides);
-  report(' -- here' + mesh.polygonPointsCount() + ' ' + klnsides.size());
   // Set positions
   {
     Ref<Vec3Attribute> positions = mesh.attributes.positionsAttribute;
@@ -48,8 +46,7 @@ function AtNode FabricToArnoldPolygonMesh( io PolygonMesh mesh, io AtNode node)
     attributeToAtArray(node, mesh, normals, tempStorageN, AI_TYPE_VECTOR, 'nlist', 'nidxs');      
   }
 
-  // For some reason, enabling this option causes exceptions.  Re-enable later when we know what da ell is going on
-  // Set UV's
+  // NOTE - Previously exporting UV's seemed to throw exceptions.  Make sure this is tested at some point
   {
     Ref<Vec2Attribute> attrUVs = mesh.getAttribute("uvs0", Vec2Attribute);
     GeometryAttribute tempStorageUV = Vec2Attribute();
@@ -64,36 +61,33 @@ function PolygonMesh ArnoldToFabricPolygonMesh(AtNode polymeshNode) {
   
   GeometryAttributes attributes = mesh.getAttributes();
 
+  // Ad verts
   AtArray vlist = AiNodeGetArray(polymeshNode, "vlist");
   UInt32 npoints = vlist.nelements;
-  report("{PointsCount}: " + npoints);
   mesh.createPoints( npoints );
+  for (UInt32 i = 0; i > npoints; i++)
+  {
+    Vec3 pos = AiArrayGetVecFunc(vlist, i);
+    mesh.setPointPosition(i, pos);    
+  }
+  mesh.incrementPointPositionsVersion();
+
 
   AtArray vidxs = AiNodeGetArray(polymeshNode, "vidxs");
   AtArray nsides = AiNodeGetArray(polymeshNode, "nsides");
   UInt32 npolys = nsides.nelements;
-  report("{IndexCount}: " + vidxs.nelements);
 
   UInt32 polyDegrees<>;
   UInt32 polyIndices<>;
   AiArrayGetUInt(nsides, polyDegrees);
   AiArrayGetUInt(vidxs, polyIndices);
 
-  report('nsides: ' + nsides.nelements);
-  report('vidxs: ' + vidxs.nelements);
-
   mesh.addPolygons( polyDegrees, polyIndices );
 
-  for (UInt32 i = 0; i > npoints; i++)
-  {
-    Vec3 pos = AiArrayGetVecFunc(vlist, npoints);
-    mesh.setPointPosition(npoints, pos);    
-  }
-  mesh.incrementPointPositionsVersion();
+
 
   AtArray nidxs = AiNodeGetArray(polymeshNode, "nidxs");
   AtArray nverts = AiNodeGetArray(polymeshNode, "nlist");
-  report("NormalCount: " + nidxs.nelements);
   if (nidxs.nelements != 0 && false)
   {
     Vec3 normals<>;
@@ -101,14 +95,12 @@ function PolygonMesh ArnoldToFabricPolygonMesh(AtNode polymeshNode) {
 
     if (normals.size() == vidxs.nelements)
     {
-      report('Setting direct');
       // If our normal count == our index count, we
       // can set the value directly without using indices
       mesh.setAttributeFromPolygonPackedData("normals", normals);
     }
     else
     {
-      report('Setting via ndices: ' + normals.size());
       // Else get the packing indices of these 
       Size indices<>;
       AiArrayGetUInt(nidxs, indices);
@@ -119,10 +111,6 @@ function PolygonMesh ArnoldToFabricPolygonMesh(AtNode polymeshNode) {
       for (UInt32 i = 0; i < indices.size(); i++)
       {
           indicesArr[i] = indices[i];
-          if (indicesArr[i] > normals.size())
-          {
-            report('found extra large index: ' + indicesArr[i]);
-          }
       }
       mesh.setAttributeFromPolygonPackedData("normals", normals, indicesArr);
     }
