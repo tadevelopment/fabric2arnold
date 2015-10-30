@@ -15,6 +15,7 @@ operator entry() {
   PolygonMesh polymesh();
   polymesh.addCuboid(Xfo(), 10, 10, 10);
   //polymesh.addTeapot(Xfo(), 10, 10);
+  report(polymesh.getDesc(true));
 
   AtNode f2ateapot = FabricToArnoldPolygonMesh(polymesh);
   String name = "kl_teapot";
@@ -22,6 +23,8 @@ operator entry() {
 
   PolygonMesh arnoldMesh = ArnoldToFabricPolygonMesh(f2ateapot);
   report(arnoldMesh.getDesc(true));
+
+  doArnoldRenderToASS("C:\\src\\HordeSoftware\\Fabric2Arnold\\Tests\\test8.out");
 
   AiEnd();
 }

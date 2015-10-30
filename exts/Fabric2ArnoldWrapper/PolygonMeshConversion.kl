@@ -12,6 +12,7 @@ function attributeToAtArray(io AtNode node, io PolygonMesh mesh, GeometryAttribu
   
   AtArray vlist = AiArrayConvert(outAttr.size(), 1, type, outAttr.data());
   AtArray vidxs = AiArrayConvert(packedIndices.size(), 1, AI_TYPE_INT, packedIndices.data());
+  report('NVidxs: ' + packedIndices.size());
   AiNodeSetArray(node, name,  vlist);
   AiNodeSetArray(node, indices,  vidxs);
 }
@@ -32,7 +33,7 @@ function AtNode FabricToArnoldPolygonMesh( io PolygonMesh mesh, io AtNode node)
   mesh.getTopologyCountsAndAttributeIndices(klnsides, klindices);
   AtArray nsides = AiArrayConvert(klnsides.size(), 1, AI_TYPE_INT, klnsides.data());
   AiNodeSetArray(node, "nsides", nsides);
-
+  report(' -- here' + mesh.polygonPointsCount() + ' ' + klnsides.size());
   // Set positions
   {
     Ref<Vec3Attribute> positions = mesh.attributes.positionsAttribute;
@@ -44,16 +45,16 @@ function AtNode FabricToArnoldPolygonMesh( io PolygonMesh mesh, io AtNode node)
   {
     Ref<Vec3Attribute> normals = mesh.attributes.normalsAttribute;
     GeometryAttribute tempStorageN = Vec3Attribute();
-    attributeToAtArray(node, mesh, normals, tempStorageN, AI_TYPE_VECTOR, 'nlist', 'nidxs');
+    attributeToAtArray(node, mesh, normals, tempStorageN, AI_TYPE_VECTOR, 'nlist', 'nidxs');      
   }
 
   // For some reason, enabling this option causes exceptions.  Re-enable later when we know what da ell is going on
   // Set UV's
-/*  {
+  {
     Ref<Vec2Attribute> attrUVs = mesh.getAttribute("uvs0", Vec2Attribute);
     GeometryAttribute tempStorageUV = Vec2Attribute();
-    attributeToAtArray(node, mesh, attrUVs, tempStorageUV, AI_TYPE_POINT2, 'uvlist', 'uvidxs');
-  }*/
+    attributeToAtArray(node, mesh, attrUVs, tempStorageUV, AI_TYPE_POINT2, 'uvlist', 'uvidxs');      
+  }
   return node;
 }
 
@@ -62,8 +63,6 @@ function PolygonMesh ArnoldToFabricPolygonMesh(AtNode polymeshNode) {
   PolygonMesh mesh();
   
   GeometryAttributes attributes = mesh.getAttributes();
-  Vec2Attribute uvs = attributes.getOrCreateAttribute("uvs0", Vec2Attribute);
-
 
   AtArray vlist = AiNodeGetArray(polymeshNode, "vlist");
   UInt32 npoints = vlist.nelements;
@@ -79,7 +78,10 @@ function PolygonMesh ArnoldToFabricPolygonMesh(AtNode polymeshNode) {
   UInt32 polyIndices<>;
   AiArrayGetUInt(nsides, polyDegrees);
   AiArrayGetUInt(vidxs, polyIndices);
-  mesh.createPoints( npoints );
+
+  report('nsides: ' + nsides.nelements);
+  report('vidxs: ' + vidxs.nelements);
+
   mesh.addPolygons( polyDegrees, polyIndices );
 
   for (UInt32 i = 0; i > npoints; i++)
@@ -92,7 +94,7 @@ function PolygonMesh ArnoldToFabricPolygonMesh(AtNode polymeshNode) {
   AtArray nidxs = AiNodeGetArray(polymeshNode, "nidxs");
   AtArray nverts = AiNodeGetArray(polymeshNode, "nlist");
   report("NormalCount: " + nidxs.nelements);
-  if (nidxs.nelements != 0)
+  if (nidxs.nelements != 0 && false)
   {
     Vec3 normals<>;
     AiArrayGetVec(nverts, normals);
@@ -124,10 +126,6 @@ function PolygonMesh ArnoldToFabricPolygonMesh(AtNode polymeshNode) {
       }
       mesh.setAttributeFromPolygonPackedData("normals", normals, indicesArr);
     }
-  }
-  else
-  {
-    mesh.recomputePointNormals();
   }
   return mesh;
 }
