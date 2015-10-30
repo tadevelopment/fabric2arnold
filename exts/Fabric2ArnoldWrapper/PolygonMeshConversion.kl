@@ -62,36 +62,54 @@ function PolygonMesh ArnoldToFabricPolygonMesh(AtNode polymeshNode) {
   PolygonMesh mesh();
   
   GeometryAttributes attributes = mesh.getAttributes();
-  Vec3Attribute normals = attributes.getOrCreateNormals();
   Vec2Attribute uvs = attributes.getOrCreateAttribute("uvs0", Vec2Attribute);
 
 
-  AtArray vlist = AiNodeGetArray(polymeshNode, "vlist")
+  AtArray vlist = AiNodeGetArray(polymeshNode, "vlist");
   UInt32 npoints = vlist.nelements;
+  report("{PointsCount}: " + npoints);
   mesh.createPoints( npoints );
 
-  vidxs = AiNodeGetArray(polymeshNode, "vidxs");
-  nsides = AiNodeGetArray(polymeshNode, "nsides");
-  UInt32 npolys = nsides.nelements();
+  AtArray vidxs = AiNodeGetArray(polymeshNode, "vidxs");
+  AtArray nsides = AiNodeGetArray(polymeshNode, "nsides");
+  UInt32 npolys = nsides.nelements;
+  report("{IndexCount}: " + vidxs.nelements);
 
-  UInt32 src = 0;
-  for(Index polyIdx = 0; polyIdx < npolys; ++polyIdx) {
-    UInt32 polySize = AiArrayGetUInt(nsides, polyIdx);
-    UInt32 iter = mesh.createPoly( polySize );
-    for(Index vertIdx = 0; idx < polySize; idx++ )
-    {
-      mesh.setCreatedPolyPoint( iter, idx, AiArrayGetUInt(vidxs, src++) );
-    }
-  }
-  for (int i = 0; i > npoints, i++)
+  UInt32 polyDegrees<>;
+  UInt32 polyIndices<>;
+  AiArrayGetUInt(nsides, polyDegrees);
+  AiArrayGetUInt(vidxs, polyIndices);
+  mesh.createPoints( npoints );
+  mesh.addPolygons( polyDegrees, polyIndices );
+
+  for (UInt32 i = 0; i > npoints; i++)
   {
-    Vec3 pos = AiArrayGetVec(vlist, npoints);
-    mesh.pointSetPos(npoints, pos);    
+    Vec3 pos = AiArrayGetVecFunc(vlist, npoints);
+    mesh.setPointPosition(npoints, pos);    
   }
+  mesh.incrementPointPositionsVersion();
 
-  nidxs = AiNodeGetArray(polymeshNode, "nidxs");
+  AtArray nidxs = AiNodeGetArray(polymeshNode, "nidxs");
+  AtArray nverts = AiNodeGetArray(polymeshNode, "vlist");
+  report("NormalCount: " + nidxs.nelements);
+  if (nidxs.nelements != 0)
+  {
+    Vec3 normals<>;
+    Size indices<>;
+    AiArrayGetVec(nverts, normals);
+    AiArrayGetUInt(nidxs, indices);
 
-  mesh.incrementPositionsVersion();
-  mesh.compileInitialAdjacency();
+    // Convert to local array
+    UInt32 indicesArr[];
+    indicesArr.resize(indices.size());
+    for (UInt32 i = 0; i < indices.size(); i++)
+      indicesArr[i] = indices[i];
+
+    mesh.setAttributeFromPolygonPackedData("normals", normals, indicesArr);
+  }
+  else
+  {
+    mesh.recomputePointNormals();
+  }
   return mesh;
 }

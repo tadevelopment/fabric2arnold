@@ -21,5 +21,7 @@ operator entry() {
   AiNodeSetStr(f2ateapot, "name", name);
 
   PolygonMesh arnoldMesh = ArnoldToFabricPolygonMesh(f2ateapot);
-  report(arnoldMesh.getDesc());
+  report(arnoldMesh.getDesc(true));
+
+  AiEnd();
 }
