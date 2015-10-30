@@ -67,13 +67,11 @@ function PolygonMesh ArnoldToFabricPolygonMesh(AtNode polymeshNode) {
 
   AtArray vlist = AiNodeGetArray(polymeshNode, "vlist");
   UInt32 npoints = vlist.nelements;
-  report("{PointsCount}: " + npoints);
   mesh.createPoints( npoints );
 
   AtArray vidxs = AiNodeGetArray(polymeshNode, "vidxs");
   AtArray nsides = AiNodeGetArray(polymeshNode, "nsides");
   UInt32 npolys = nsides.nelements;
-  report("{IndexCount}: " + vidxs.nelements);
 
   UInt32 polyDegrees<>;
   UInt32 polyIndices<>;
@@ -82,16 +80,16 @@ function PolygonMesh ArnoldToFabricPolygonMesh(AtNode polymeshNode) {
   mesh.createPoints( npoints );
   mesh.addPolygons( polyDegrees, polyIndices );
 
-  for (UInt32 i = 0; i > npoints; i++)
-  {
-    Vec3 pos = AiArrayGetVecFunc(vlist, npoints);
-    mesh.setPointPosition(npoints, pos);    
+  Vec3 points<>;
+  AiArrayGetVec(vlist, points);
+  for (UInt32 i = 0; i < points.size(); i++)
+  { 
+    mesh.setPointPosition(i, points[i]);    
   }
   mesh.incrementPointPositionsVersion();
 
   AtArray nidxs = AiNodeGetArray(polymeshNode, "nidxs");
   AtArray nverts = AiNodeGetArray(polymeshNode, "nlist");
-  report("NormalCount: " + nidxs.nelements);
   if (nidxs.nelements != 0)
   {
     Vec3 normals<>;
@@ -99,14 +97,12 @@ function PolygonMesh ArnoldToFabricPolygonMesh(AtNode polymeshNode) {
 
     if (normals.size() == vidxs.nelements)
     {
-      report('Setting direct');
       // If our normal count == our index count, we
       // can set the value directly without using indices
       mesh.setAttributeFromPolygonPackedData("normals", normals);
     }
     else
     {
-      report('Setting via ndices: ' + normals.size());
       // Else get the packing indices of these 
       Size indices<>;
       AiArrayGetUInt(nidxs, indices);
@@ -117,17 +113,14 @@ function PolygonMesh ArnoldToFabricPolygonMesh(AtNode polymeshNode) {
       for (UInt32 i = 0; i < indices.size(); i++)
       {
           indicesArr[i] = indices[i];
-          if (indicesArr[i] > normals.size())
-          {
-            report('found extra large index: ' + indicesArr[i]);
-          }
       }
       mesh.setAttributeFromPolygonPackedData("normals", normals, indicesArr);
     }
   }
   else
   {
-    mesh.recomputePointNormals();
+    // Do we really want to force-create normals if not necessary?
+    //mesh.recomputePointNormals();
   }
   return mesh;
 }
