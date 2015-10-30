@@ -30,7 +30,7 @@ operator entry() {
   report("\n -- identical? -- ");
   report(desc1 == desc2);
 
-  doArnoldRenderToASS("C:\\src\\HordeSoftware\\Fabric2Arnold\\Tests\\test8.out");
+  //doArnoldRenderToASS("C:\\src\\HordeSoftware\\Fabric2Arnold\\Tests\\test8.out");
 
   AiEnd();
 }

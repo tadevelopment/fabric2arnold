@@ -64,8 +64,6 @@ function Vec2 AiNodeGetPnt2(AtNode node, String param) { return AiNodeGetPnt2AtS
 function Data AiNodeGetPtr(AtNode node, String param) { return AiNodeGetPtrAtString(node, param); }
 function AtArray AiNodeGetArray(AtNode node, String param) { return AiNodeGetArrayAtString(node, param); }
 function String AiNodeGetStr(AtNode node, String param) { return AiNodeGetStrAtString(node, param); }
-function AiNodeGetMatrix(AtNode node, String param, Mat44 matrix) { AiNodeGetMatrixAtString(node, param, matrix); }
-
 
 function Boolean AiArraySetBool(io AtArray a, UInt32 i, Boolean val)   { return AiArraySetBoolFunc(a, i, val, 'F2AWrapper', 0); }
 function Boolean AiArraySetByte(io AtArray a, UInt32 i, UInt8 val)     { return AiArraySetByteFunc(a, i, val, 'F2AWrapper', 0); }
