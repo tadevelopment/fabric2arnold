@@ -21,7 +21,6 @@
 namespace Fabric { namespace EDK { namespace KL {
 
 // KL struct 'AtAOVEntry'
-// Defined at GenKL//ai_universe.kl:19:1
 
 struct AtAOVEntry
 {

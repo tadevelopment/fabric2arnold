@@ -24,45 +24,37 @@
 #include "AtArray.h"
 
 
-// Defined at GenKL//ai_params.kl:41:1
 FABRIC_EXT_EXPORT Fabric::EDK::KL::UInt8 _fe_AtParamValueAsUInt8(
   Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtParamValue >::INParam this_
 );
 
-// Defined at GenKL//ai_params.kl:42:1
 FABRIC_EXT_EXPORT Fabric::EDK::KL::UInt32 _fe_AtParamValueAsUInt32(
   Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtParamValue >::INParam this_
 );
 
-// Defined at GenKL//ai_params.kl:43:1
 FABRIC_EXT_EXPORT Fabric::EDK::KL::SInt32 _fe_AtParamValueAsSInt32(
   Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtParamValue >::INParam this_
 );
 
-// Defined at GenKL//ai_params.kl:44:1
 FABRIC_EXT_EXPORT Fabric::EDK::KL::Float32 _fe_AtParamValueAsFloat32(
   Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtParamValue >::INParam this_
 );
 
-// Defined at GenKL//ai_params.kl:45:1
 FABRIC_EXT_EXPORT void _fe_AtParamValueAsVec3(
   Fabric::EDK::KL::Traits< Fabric::EDK::KL::Vec3 >::Result _result,
   Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtParamValue >::INParam this_
 );
 
-// Defined at GenKL//ai_params.kl:46:1
 FABRIC_EXT_EXPORT void _fe_AtParamValueAsMat44(
   Fabric::EDK::KL::Traits< Fabric::EDK::KL::Mat44 >::Result _result,
   Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtParamValue >::INParam this_
 );
 
-// Defined at GenKL//ai_params.kl:47:1
 FABRIC_EXT_EXPORT void _fe_AtParamValueAsString(
   Fabric::EDK::KL::Traits< Fabric::EDK::KL::String >::Result _result,
   Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtParamValue >::INParam this_
 );
 
-// Defined at GenKL//ai_params.kl:48:1
 FABRIC_EXT_EXPORT void _fe_AtParamValueAsAtArray(
   Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtArray >::Result _result,
   Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtParamValue >::INParam this_

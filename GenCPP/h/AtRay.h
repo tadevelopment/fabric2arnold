@@ -24,7 +24,6 @@
 namespace Fabric { namespace EDK { namespace KL {
 
 // KL struct 'AtRay'
-// Defined at GenKL//ai_ray.kl:24:1
 
 struct AtRay
 {

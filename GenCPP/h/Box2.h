@@ -22,7 +22,6 @@
 namespace Fabric { namespace EDK { namespace KL {
 
 // KL struct 'Box2'
-// Defined at Box2.kl:22:1
 
 struct Box2
 {

@@ -21,7 +21,6 @@
 namespace Fabric { namespace EDK { namespace KL {
 
 // KL struct 'RotationOrder'
-// Defined at RotationOrder.kl:19:1
 
 struct RotationOrder
 {

@@ -21,7 +21,6 @@
 namespace Fabric { namespace EDK { namespace KL {
 
 // KL struct 'Color'
-// Defined at Color.kl:22:1
 
 struct Color
 {

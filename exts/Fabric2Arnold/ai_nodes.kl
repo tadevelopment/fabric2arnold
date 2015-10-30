@@ -9,6 +9,10 @@ require Math;
 //  enumerated values
 //////////////////////////////////////////////////
 //  classes 
+Mat44 AiNodeGetMatrix(AtNode node, String param) = "_fe_AiNodeGetMatrix";
+
+
+
 //////////////////////////////////////////////////
 //  global-scope functions 
 /**
@@ -88,4 +92,3 @@ function Vec2 AiNodeGetPnt2AtString(AtNode node, String param) = '_fe_AiNodeGetP
 function Data AiNodeGetPtrAtString(AtNode node, String param) = '_fe_AiNodeGetPtrAtString';
 function AtArray AiNodeGetArrayAtString(AtNode node, String param) = '_fe_AiNodeGetArrayAtString';
 function String AiNodeGetStrAtString(AtNode node, String param) = '_fe_AiNodeGetStrAtString';
-function AiNodeGetMatrixAtString(AtNode node, String param, Mat44 matrix) = '_fe_AiNodeGetMatrixAtString';

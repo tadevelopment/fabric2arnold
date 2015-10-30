@@ -22,7 +22,6 @@
 namespace Fabric { namespace EDK { namespace KL {
 
 // KL struct 'Mat44'
-// Defined at Mat44.kl:50:1
 
 struct Mat44
 {

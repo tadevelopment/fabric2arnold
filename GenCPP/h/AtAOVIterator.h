@@ -21,7 +21,6 @@
 namespace Fabric { namespace EDK { namespace KL {
 
 // KL struct 'AtAOVIterator'
-// Defined at GenKL//_opaque_types.kl:76:1
 
 struct AtAOVIterator
 {
