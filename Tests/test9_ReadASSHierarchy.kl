@@ -59,8 +59,7 @@ function loadAssFile(String filepath, io InlineTransform rootTransform, io Inlin
       String subPath = AiNodeGetStr(node, 'dso');
       report('Referencing: ' + subPath);
 
-      Mat44 transform;
-      AiNodeGetMatrix(node, "matrix", transform);
+      Mat44 transform = AiNodeGetMatrix(node, "matrix");
       InlineTransform subRoot = StaticInlineTransform(name, transform);
       loadAssFile(subPath, subRoot, phong);
       rootTransform.addChild(subRoot);
@@ -85,8 +84,7 @@ function loadAssFile(String filepath, io InlineTransform rootTransform, io Inlin
         }
         else
         {
-          Mat44 transform;
-          AiNodeGetMatrix(node, "matrix", transform);
+          Mat44 transform = AiNodeGetMatrix(node, "matrix");
           instancedTranform.pushLocalXfo(Xfo(transform));
         }
       }
@@ -98,8 +96,7 @@ function loadAssFile(String filepath, io InlineTransform rootTransform, io Inlin
     if (AiNodeIs(node, 'polymesh'))
     {
       report(' ++ is polymesh');
-      Mat44 transform;
-      AiNodeGetMatrix(node, "matrix", transform);
+      Mat44 transform = AiNodeGetMatrix(node, "matrix");
       report("tm: "+ transform);
 
       InlineTransform meshMat = StaticInlineTransform(name, transform);
@@ -126,7 +123,7 @@ function loadAssFile(String filepath, io InlineTransform rootTransform, io Inlin
 operator entry() {
   UInt64 start = getCurrentTicks();
 
-  String filePath = "R:\\src\\NestedStandIns\\Wheels.ass";
+  String filePath = "C:\\src\\NestedStandIns\\wheels.ass";
 
   //////////////////////////////////////
 
