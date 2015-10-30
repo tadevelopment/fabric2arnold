@@ -22,7 +22,6 @@
 namespace Fabric { namespace EDK { namespace KL {
 
 // KL struct 'Quat'
-// Defined at Quat.kl:22:1
 
 struct Quat
 {

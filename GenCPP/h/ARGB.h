@@ -21,7 +21,6 @@
 namespace Fabric { namespace EDK { namespace KL {
 
 // KL struct 'ARGB'
-// Defined at ARGB.kl:17:1
 
 struct ARGB
 {

@@ -22,7 +22,6 @@
 namespace Fabric { namespace EDK { namespace KL {
 
 // KL struct 'Euler'
-// Defined at Euler.kl:20:1
 
 struct Euler
 {

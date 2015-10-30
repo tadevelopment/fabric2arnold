@@ -23,7 +23,6 @@
 namespace Fabric { namespace EDK { namespace KL {
 
 // KL interface 'AtDisplayCallback'
-// Defined at GenKL//_AtDisplayCallback.kl:8:1
 
 class AtDisplayCallback
 {

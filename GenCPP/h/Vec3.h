@@ -21,7 +21,6 @@
 namespace Fabric { namespace EDK { namespace KL {
 
 // KL struct 'Vec3'
-// Defined at Vec3.kl:18:1
 
 struct Vec3
 {

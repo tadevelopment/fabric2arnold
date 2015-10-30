@@ -21,7 +21,6 @@
 namespace Fabric { namespace EDK { namespace KL {
 
 // KL struct 'AtCameraInput'
-// Defined at GenKL//ai_cameras.kl:14:1
 
 struct AtCameraInput
 {

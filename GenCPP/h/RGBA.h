@@ -21,7 +21,6 @@
 namespace Fabric { namespace EDK { namespace KL {
 
 // KL struct 'RGBA'
-// Defined at RGBA.kl:16:1
 
 struct RGBA
 {

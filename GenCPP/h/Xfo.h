@@ -23,7 +23,6 @@
 namespace Fabric { namespace EDK { namespace KL {
 
 // KL struct 'Xfo'
-// Defined at Xfo.kl:27:1
 
 struct Xfo
 {

@@ -21,7 +21,6 @@
 namespace Fabric { namespace EDK { namespace KL {
 
 // KL struct 'AtNodeMethods'
-// Defined at GenKL//_opaque_types.kl:31:1
 
 struct AtNodeMethods
 {

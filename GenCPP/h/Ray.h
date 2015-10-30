@@ -22,7 +22,6 @@
 namespace Fabric { namespace EDK { namespace KL {
 
 // KL struct 'Ray'
-// Defined at Ray.kl:16:1
 
 struct Ray
 {

@@ -21,7 +21,6 @@
 namespace Fabric { namespace EDK { namespace KL {
 
 // KL struct 'AtBucket'
-// Defined at GenKL//_opaque_types.kl:11:1
 
 struct AtBucket
 {

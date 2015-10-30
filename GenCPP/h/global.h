@@ -79,7 +79,6 @@ namespace Fabric { namespace EDK { namespace KL {
 namespace Fabric { namespace EDK { namespace KL {
 
 // KL interface 'Object'
-// Defined at (internal)
 
 class Object
 {

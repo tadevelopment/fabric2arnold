@@ -21,7 +21,6 @@
 namespace Fabric { namespace EDK { namespace KL {
 
 // KL struct 'AtNodeLib'
-// Defined at GenKL//ai_plugins.kl:14:1
 
 struct AtNodeLib
 {
