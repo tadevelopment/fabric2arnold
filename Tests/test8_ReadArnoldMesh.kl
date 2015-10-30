@@ -13,15 +13,24 @@ operator entry() {
 
   // create a teapot
   PolygonMesh polymesh();
-  polymesh.addCuboid(Xfo(), 10, 10, 10);
-  //polymesh.addTeapot(Xfo(), 10, 10);
+  //polymesh.addCuboid(Xfo(), 10, 10, 10);
+  polymesh.addTeapot(Xfo(), 10, 10);
+  String desc1 = polymesh.getDesc(true);
+  report("Mesh: pointCount: " + polymesh.pointCount() + " polygonCount: " + polymesh.polygonCount());
 
   AtNode f2ateapot = FabricToArnoldPolygonMesh(polymesh);
   String name = "kl_teapot";
   AiNodeSetStr(f2ateapot, "name", name);
 
+  // Get the exported mesh back, and test for similarity
+  report("---");
   PolygonMesh arnoldMesh = ArnoldToFabricPolygonMesh(f2ateapot);
-  report(arnoldMesh.getDesc(true));
+  report("Mesh: pointCount: " + arnoldMesh.pointCount() + " polygonCount: " + arnoldMesh.polygonCount());
+  String desc2 = arnoldMesh.getDesc(true);
+  report("\n -- identical? -- ");
+  report(desc1 == desc2);
+
+  //doArnoldRenderToASS("C:\\src\\HordeSoftware\\Fabric2Arnold\\Tests\\test8.out");
 
   AiEnd();
 }

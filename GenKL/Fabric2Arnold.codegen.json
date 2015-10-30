@@ -154,7 +154,7 @@
         "_fe_AiNodeGetIntAtString": "  int f2a_result = AiNodeGetIntAtString(f2aNode, f2aParam);\n  Fabric::EDK::KL::SInt32 _result;\n  int_to_SInt32(f2a_result, _result);\n", 
         "_fe_AiNodeGetLink": "  AtNode * f2a_result = AiNodeGetLink(f2aNode, f2aInput, &f2aComp/*=NULL*/);\n  CPAtNode_to_KLAtNode(f2a_result, _result);", 
         "_fe_AiNodeGetLocalData": "  void * f2a_result = AiNodeGetLocalData(f2aNode);\n  Fabric::EDK::KL::Data _result;\n  void_to_Data(f2a_result, _result);\n", 
-        "_fe_AiNodeGetMatrixAtString": "  AiNodeGetMatrixAtString(f2aNode, f2aParam, f2aMatrix);\n", 
+        "_fe_AiNodeGetMatrix": "  AtMatrix f2a_result;\n  AiNodeGetMatrix(f2aNode, f2aParam, f2a_result);\n", 
         "_fe_AiNodeGetName": "  const char * f2a_result = AiNodeGetName(f2aNode);\n  char_to_String(f2a_result, _result);", 
         "_fe_AiNodeGetNodeEntry": "  const AtNodeEntry * f2a_result = AiNodeGetNodeEntry(f2aNode);\n  CPAtNodeEntry_to_KLAtNodeEntry(f2a_result, _result);", 
         "_fe_AiNodeGetParams": "  AtParamValue * f2a_result = AiNodeGetParams(f2aNode);\n  AtParamValue_to_KLParamValue(f2a_result, _result);", 
@@ -485,6 +485,12 @@
             "from": "Float64_to_double", 
             "methodop": ".", 
             "to": "double_to_Float64"
+        }, 
+        "HRESULT": {
+            "ctype": "HRESULT", 
+            "from": "KLUInt32_to_CPHRESULT", 
+            "methodop": ".", 
+            "to": "CPHRESULT_to_KLUInt32"
         }, 
         "Mat44": {
             "ctype": "AtMatrix", 

@@ -76,6 +76,16 @@ inline bool double_to_Float64(const double & from, Fabric::EDK::KL::Float64 & to
   return true; 
 }
 
+inline bool KLUInt32_to_CPHRESULT(const Fabric::EDK::KL::HRESULT & from, HRESULT & to) { 
+  to = from;
+  return true;
+}
+
+inline bool CPHRESULT_to_KLUInt32(const HRESULT & from, Fabric::EDK::KL::HRESULT & to) {
+  to = from;
+  return true; 
+}
+
 inline bool UInt8_to_AtByte(const Fabric::EDK::KL::UInt8 & from, AtByte & to) { 
   to = from;
   return true;

@@ -21,7 +21,6 @@
 namespace Fabric { namespace EDK { namespace KL {
 
 // KL struct 'AtLicenseInfo'
-// Defined at GenKL//ai_license.kl:23:1
 
 struct AtLicenseInfo
 {

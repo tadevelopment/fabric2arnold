@@ -21,7 +21,6 @@
 namespace Fabric { namespace EDK { namespace KL {
 
 // KL struct 'AtParamValue'
-// Defined at GenKL//ai_params.kl:37:1
 
 struct AtParamValue
 {

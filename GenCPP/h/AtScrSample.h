@@ -21,7 +21,6 @@
 namespace Fabric { namespace EDK { namespace KL {
 
 // KL struct 'AtScrSample'
-// Defined at GenKL//_opaque_types.kl:61:1
 
 struct AtScrSample
 {

@@ -99,7 +99,8 @@ elementsToIgnore = [
     'AiMsgSetCallback',
     'AtCommonMethods',
     'AtNodeMethods',
-    'AiArrayGetMtxFunc'
+    'AiArrayGetMtxFunc',
+    'AiNodeGetMatrixAtString'
 ]
 
 # Add extensions to be required.  Should
@@ -149,11 +150,13 @@ custom_add_to_file = {
                         'function Boolean AiArrayGetRGBA(io AtArray a, io Color val<>) = "_fe_AiArrayGetRGBAArr";\n'
                         'function Boolean AiArrayGetPnt(io AtArray a, io Vec3 val<>) = "_fe_AiArrayGetPntArr";\n'
                         'function Boolean AiArrayGetPnt2(io AtArray a, io Vec2 val<>) = "_fe_AiArrayGetPnt2Arr";\n'
-                        'function Boolean AiArrayGetVec(io AtArray a, io Vec3 val<>) = "_fe_AiArrayGetVecArr";\n\n'
+                        'function Boolean AiArrayGetVec(io AtArray a, io Vec3 val<>) = "_fe_AiArrayGetVecArr";\n\n',
 
                         #'function Boolean AiArrayGetMtx(io AtArray a, io Mat44 val<>) = "_fe_AiArrayGetMtxArr";\n'
                         #'function Boolean AiArrayGetStr(io AtArray a, io String val<>) = "_fe_AiArrayGetStrArr";\n'
                         #'function Boolean AiArrayGetPtr(io AtArray a, io Data val<>) = "_fe_AiArrayGetPtrArr";\n'
+
+    'ai_nodes.h' :      'Mat44 AiNodeGetMatrix(AtNode node, String param) = "_fe_AiNodeGetMatrix";\n\n'
 }
 
 #####

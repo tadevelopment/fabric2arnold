@@ -21,7 +21,6 @@
 namespace Fabric { namespace EDK { namespace KL {
 
 // KL struct 'AtNodeEntry'
-// Defined at GenKL//_opaque_types.kl:26:1
 
 struct AtNodeEntry
 {
