@@ -1,0 +1,27 @@
+
+require Fabric2ArnoldWrapper;
+
+operator entry() {
+  UInt64 start = getCurrentTicks();
+  AiBegin();
+
+  String filename = "c:\\temp\\test4.jpg";
+
+  AiMsgSetLogFileName('c:\\temp\\arnold_log.log');
+  AiMsgSetLogFileFlags(AI_LOG_DEBUG);
+  AiMsgSetConsoleFlags(AI_LOG_DEBUG);
+
+  // create a teapot
+  PolygonMesh polymesh();
+  polymesh.addCuboid(Xfo(), 10, 10, 10);
+  //polymesh.addTeapot(Xfo(), 10, 10);
+
+  AtNode f2ateapot = FabricToArnoldPolygonMesh(polymesh);
+  String name = "kl_teapot";
+  AiNodeSetStr(f2ateapot, "name", name);
+
+  PolygonMesh arnoldMesh = ArnoldToFabricPolygonMesh(f2ateapot);
+  report(arnoldMesh.getDesc(true));
+
+  AiEnd();
+}

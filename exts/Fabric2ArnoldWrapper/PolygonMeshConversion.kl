@@ -56,3 +56,60 @@ function AtNode FabricToArnoldPolygonMesh( io PolygonMesh mesh, io AtNode node)
   }*/
   return node;
 }
+
+/**  We also support loading Arnold meshes back into FE */
+function PolygonMesh ArnoldToFabricPolygonMesh(AtNode polymeshNode) {
+  PolygonMesh mesh();
+  
+  GeometryAttributes attributes = mesh.getAttributes();
+  Vec2Attribute uvs = attributes.getOrCreateAttribute("uvs0", Vec2Attribute);
+
+
+  AtArray vlist = AiNodeGetArray(polymeshNode, "vlist");
+  UInt32 npoints = vlist.nelements;
+  report("{PointsCount}: " + npoints);
+  mesh.createPoints( npoints );
+
+  AtArray vidxs = AiNodeGetArray(polymeshNode, "vidxs");
+  AtArray nsides = AiNodeGetArray(polymeshNode, "nsides");
+  UInt32 npolys = nsides.nelements;
+  report("{IndexCount}: " + vidxs.nelements);
+
+  UInt32 polyDegrees<>;
+  UInt32 polyIndices<>;
+  AiArrayGetUInt(nsides, polyDegrees);
+  AiArrayGetUInt(vidxs, polyIndices);
+  mesh.createPoints( npoints );
+  mesh.addPolygons( polyDegrees, polyIndices );
+
+  for (UInt32 i = 0; i > npoints; i++)
+  {
+    Vec3 pos = AiArrayGetVecFunc(vlist, npoints);
+    mesh.setPointPosition(npoints, pos);    
+  }
+  mesh.incrementPointPositionsVersion();
+
+  AtArray nidxs = AiNodeGetArray(polymeshNode, "nidxs");
+  AtArray nverts = AiNodeGetArray(polymeshNode, "vlist");
+  report("NormalCount: " + nidxs.nelements);
+  if (nidxs.nelements != 0)
+  {
+    Vec3 normals<>;
+    Size indices<>;
+    AiArrayGetVec(nverts, normals);
+    AiArrayGetUInt(nidxs, indices);
+
+    // Convert to local array
+    UInt32 indicesArr[];
+    indicesArr.resize(indices.size());
+    for (UInt32 i = 0; i < indices.size(); i++)
+      indicesArr[i] = indices[i];
+
+    mesh.setAttributeFromPolygonPackedData("normals", normals, indicesArr);
+  }
+  else
+  {
+    mesh.recomputePointNormals();
+  }
+  return mesh;
+}
