@@ -13,14 +13,15 @@ operator entry() {
 
   // create a teapot
   PolygonMesh polymesh();
-  polymesh.addCuboid(Xfo(), 10, 10, 10);
-  //polymesh.addTeapot(Xfo(), 10, 10);
+  //polymesh.addCuboid(Xfo(), 10, 10, 10);
+  polymesh.addTeapot(Xfo(), 10, 10);
   report(polymesh.getDesc(true));
 
   AtNode f2ateapot = FabricToArnoldPolygonMesh(polymesh);
   String name = "kl_teapot";
   AiNodeSetStr(f2ateapot, "name", name);
 
+  report("\n --- \n");
   PolygonMesh arnoldMesh = ArnoldToFabricPolygonMesh(f2ateapot);
   report(arnoldMesh.getDesc(true));
 
