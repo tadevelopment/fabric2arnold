@@ -1,0 +1,152 @@
+
+require Fabric2ArnoldWrapper;
+require InlineDrawing;
+
+
+function tagNewNodes(String filepath)
+{
+  // When merging in recursive files into Arnold, all nodes
+  // are merged into a single global namespace, and we
+  // cannot see where each node came from.  We need to differentiate
+  // so (for example) a recursive call doesn't try and re-process
+  // all nodes again (including it's own filepath)
+  AtNodeIterator iter = AiUniverseGetNodeIterator(AI_NODE_ALL);
+  while(!AiNodeIteratorFinished(iter))
+  {
+    AtNode node = AiNodeIteratorGetNext(iter);
+    String currTag = AiNodeGetStr(node, "f_tag");
+    if (currTag == String())
+    {
+      AiNodeDeclare(node, "f_tag", "constant STRING");
+      AiNodeSetStr(node, "f_tag", filepath);
+    }
+  }
+}
+
+function Boolean isNodeFromFile(AtNode node, String filepath)
+{
+    String currTag = AiNodeGetStr(node, "f_tag");
+    return currTag == filepath;
+}
+
+function loadAssFile(String filepath, io InlineTransform rootTransform, io InlineMaterial phong)
+{
+  report(" -----------  Importing:" + filepath);
+
+  // get the drawing singleton
+  InlineDrawing drawing = OGLInlineDrawing_GetInstance();
+
+  // Load all shapes in the file
+  AiASSLoad(filepath, AI_NODE_ALL);
+
+  // Mark all new nodes as part of this file:
+  tagNewNodes(filepath);
+  
+  AtNodeIterator iter = AiUniverseGetNodeIterator(AI_NODE_ALL);
+
+  while(!AiNodeIteratorFinished(iter))
+  {
+    AtNode node = AiNodeIteratorGetNext(iter);
+    if (!isNodeFromFile(node, filepath))
+      continue;
+
+    String name = AiNodeGetName(node);
+    report('iterating: ' + name);
+
+    if (AiNodeIs(node, 'procedural'))
+    {
+      // A procedural is simply a reference to another ASS file
+      String subPath = AiNodeGetStr(node, 'dso');
+      report('Referencing: ' + subPath);
+
+      Mat44 transform;
+      AiNodeGetMatrix(node, "matrix", transform);
+      InlineTransform subRoot = StaticInlineTransform(name, transform);
+      loadAssFile(subPath, subRoot, phong);
+      rootTransform.addChild(subRoot);
+    }
+    else if (AiNodeIs(node, 'ginstance'))
+    {
+      // An instance just renders a geo at a new location.
+      // In inline drawing that boils down to simply adding a 
+      // new local xfo to the instances InlineTransform
+      Data instanceHandle = AiNodeGetPtr(node, 'node');
+      AtNode instanceNode;
+      instanceNode._handle = instanceHandle;
+      if (instanceNode.isValid())
+      {
+        String instanceName = AiNodeGetName(instanceNode);
+
+        report('Instancing: ' + instanceName);
+        InlineTransform instancedTranform = rootTransform.getChild(instanceName);
+        if (instancedTranform == null)
+        {
+          setError('Cannot find node: ' + instanceName);
+        }
+        else
+        {
+          Mat44 transform;
+          AiNodeGetMatrix(node, "matrix", transform);
+          instancedTranform.pushLocalXfo(Xfo(transform));
+        }
+      }
+      else
+      {
+        setError('No pointer found on ' + name);
+      }
+    }
+    if (AiNodeIs(node, 'polymesh'))
+    {
+      report(' ++ is polymesh');
+      Mat44 transform;
+      AiNodeGetMatrix(node, "matrix", transform);
+      report("tm: "+ transform);
+
+      InlineTransform meshMat = StaticInlineTransform(name, transform);
+      rootTransform.addChild(meshMat);
+
+      PolygonMesh mesh = ArnoldToFabricPolygonMesh(node);
+      InlineMeshShape shape = InlineMeshShape(name, mesh);
+      drawing.registerShape(shape);
+
+      InlineInstance instance = InlineInstance(name, meshMat, shape);
+      instance.addMaterial(phong);
+
+      //InlineInstance instance = SimpleInlineInstance(name, transform, shape, phong);
+
+      // Color col;
+      // col.r = mathRandomScalar(16, i);
+      // col.g = mathRandomScalar(17, i);
+      // col.b = mathRandomScalar(18, i);
+      // instance.setInstanceUniform(InlineUniform('u_diffuseColor', col));
+    }
+  }  
+}
+
+operator entry() {
+  UInt64 start = getCurrentTicks();
+
+  String filePath = "R:\\src\\NestedStandIns\\Wheels.ass";
+
+  //////////////////////////////////////
+
+  // get the drawing singleton
+  InlineDrawing drawing = OGLInlineDrawing_GetInstance();
+
+  // Clean any existing drawing.
+  InlineTransform rootTransform = drawing.getRoot();
+  rootTransform.removeAllChildren();
+  
+  InlineShader shader = drawing.registerShader(OGLSurfaceShader());
+  InlineMaterial phong = shader.getOrCreateMaterial("phong");
+
+  AiBegin();
+
+  AiMsgSetLogFileName('c:\\temp\\arnold_log.log');
+  AiMsgSetLogFileFlags(AI_LOG_DEBUG);
+  AiMsgSetConsoleFlags(AI_LOG_DEBUG);
+
+  loadAssFile(filePath, rootTransform, phong);
+
+  AiEnd();
+}

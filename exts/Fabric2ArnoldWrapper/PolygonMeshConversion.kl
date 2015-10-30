@@ -90,22 +90,40 @@ function PolygonMesh ArnoldToFabricPolygonMesh(AtNode polymeshNode) {
   mesh.incrementPointPositionsVersion();
 
   AtArray nidxs = AiNodeGetArray(polymeshNode, "nidxs");
-  AtArray nverts = AiNodeGetArray(polymeshNode, "vlist");
+  AtArray nverts = AiNodeGetArray(polymeshNode, "nlist");
   report("NormalCount: " + nidxs.nelements);
   if (nidxs.nelements != 0)
   {
     Vec3 normals<>;
-    Size indices<>;
     AiArrayGetVec(nverts, normals);
-    AiArrayGetUInt(nidxs, indices);
 
-    // Convert to local array
-    UInt32 indicesArr[];
-    indicesArr.resize(indices.size());
-    for (UInt32 i = 0; i < indices.size(); i++)
-      indicesArr[i] = indices[i];
+    if (normals.size() == vidxs.nelements)
+    {
+      report('Setting direct');
+      // If our normal count == our index count, we
+      // can set the value directly without using indices
+      mesh.setAttributeFromPolygonPackedData("normals", normals);
+    }
+    else
+    {
+      report('Setting via ndices: ' + normals.size());
+      // Else get the packing indices of these 
+      Size indices<>;
+      AiArrayGetUInt(nidxs, indices);
 
-    mesh.setAttributeFromPolygonPackedData("normals", normals, indicesArr);
+      // Convert to local array
+      UInt32 indicesArr[];
+      indicesArr.resize(indices.size());
+      for (UInt32 i = 0; i < indices.size(); i++)
+      {
+          indicesArr[i] = indices[i];
+          if (indicesArr[i] > normals.size())
+          {
+            report('found extra large index: ' + indicesArr[i]);
+          }
+      }
+      mesh.setAttributeFromPolygonPackedData("normals", normals, indicesArr);
+    }
   }
   else
   {
