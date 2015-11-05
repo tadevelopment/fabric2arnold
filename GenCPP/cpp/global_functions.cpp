@@ -4496,7 +4496,7 @@ FABRIC_EXT_EXPORT void _fe_AiNodeGetMatrix(
   }
   AtMatrix f2a_result;
   AiNodeGetMatrix(f2aNode, f2aParam, f2a_result);
-
+  AtMatrix_to_Mat44(f2a_result, _result);
   F2A_CATCH_STATEMENT("_fe_AiNodeGetMatrix")
 }
 
