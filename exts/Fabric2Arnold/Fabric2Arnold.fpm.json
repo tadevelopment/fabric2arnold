@@ -19,6 +19,8 @@
     "ai_ray.kl",
     "ai_texture.kl",
     "ai_universe.kl",
+    "a2fPluginMgr.kl",
+    "a2fShader.kl",
     "_AtDisplayCallback.kl",
   ]
 }

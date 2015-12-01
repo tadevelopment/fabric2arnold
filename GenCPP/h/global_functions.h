@@ -1513,6 +1513,14 @@ FABRIC_EXT_EXPORT Fabric::EDK::KL::Boolean _fe_AiAOVIteratorFinished(
   Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtAOVIterator >::INParam iter
 );
 
+FABRIC_EXT_EXPORT void _fe_a2fRegisterPlugin(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::Type >::INParam kltype,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::SInt32 >::INParam type,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::UInt8 >::INParam output_type,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::String >::INParam name,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::String >::INParam filename
+);
+
 FABRIC_EXT_EXPORT void _fe_SetAtDisplayCallback(
   Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtNode >::INParam displayDriver,
   Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtDisplayCallback >::INParam callback

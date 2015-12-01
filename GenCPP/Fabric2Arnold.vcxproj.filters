@@ -32,6 +32,9 @@
 		<ClInclude Include="h\_typemapping_pod.h">
 			<Filter>Header Files</Filter>
 		</ClInclude>
+		<ClInclude Include="h\a2fPluginShader.h">
+			<Filter>Header Files</Filter>
+		</ClInclude>
 		<ClInclude Include="h\aliases.h">
 			<Filter>Header Files</Filter>
 		</ClInclude>

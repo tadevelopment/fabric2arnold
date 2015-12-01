@@ -6698,6 +6698,45 @@ FABRIC_EXT_EXPORT Fabric::EDK::KL::Boolean _fe_AiAOVIteratorFinished(
   F2A_CATCH_STATEMENT_RETURN("_fe_AiAOVIteratorFinished", )
 }
 
+FABRIC_EXT_EXPORT void _fe_a2fRegisterPlugin(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::Type >::INParam kltype,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::SInt32 >::INParam type,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::UInt8 >::INParam output_type,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::String >::INParam name,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::String >::INParam filename
+)
+{
+  F2A_TRY_STATEMENT("_fe_a2fRegisterPlugin")
+
+  int f2aType;
+  if(!SInt32_to_int(type, f2aType)){
+    setError("Error in _fe_a2fRegisterPlugin. unable to convert: type");
+    return;
+  }
+  AtByte f2aOutput_type;
+  if(!UInt8_to_AtByte(output_type, f2aOutput_type)){
+    setError("Error in _fe_a2fRegisterPlugin. unable to convert: output_type");
+    return;
+  }
+  char* f2aName = NULL;
+  if(!String_to_char(name, f2aName)){
+    setError("Error in _fe_a2fRegisterPlugin. unable to convert: name");
+    return;
+  }
+  char* f2aFilename = NULL;
+  if(!String_to_char(filename, f2aFilename)){
+    setError("Error in _fe_a2fRegisterPlugin. unable to convert: filename");
+    return;
+  }
+
+  //#pragma message("_fe_a2fRegisterPlugin is missing its implementation.")
+  _a2fPluginManager::GetInstance()->RegisterPlugin(kltype, f2aType, f2aOutput_type, f2aName, f2aFilename);
+
+  // Type 'Type' could not be converted.
+
+  F2A_CATCH_STATEMENT("_fe_a2fRegisterPlugin")
+}
+
 FABRIC_EXT_EXPORT void _fe_SetAtDisplayCallback(
   Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtNode >::INParam displayDriver,
   Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtDisplayCallback >::INParam callback

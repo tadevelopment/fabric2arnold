@@ -486,12 +486,6 @@
             "methodop": ".", 
             "to": "double_to_Float64"
         }, 
-        "HRESULT": {
-            "ctype": "HRESULT", 
-            "from": "KLUInt32_to_CPHRESULT", 
-            "methodop": ".", 
-            "to": "CPHRESULT_to_KLUInt32"
-        }, 
         "Mat44": {
             "ctype": "AtMatrix", 
             "from": "Mat44_to_AtMatrix", 

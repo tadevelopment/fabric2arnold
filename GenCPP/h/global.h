@@ -72,6 +72,7 @@ namespace Fabric { namespace EDK { namespace KL {
   struct Vec3_d;
   struct Vec4;
   struct Xfo;
+  class a2fPluginShader;
 }}}
 
 #include "aliases.h"
@@ -803,6 +804,19 @@ struct Traits< AtAOVEntry >
   static void ConstructCopy( AtAOVEntry &lhs, AtAOVEntry const &rhs );
   static void AssignCopy( AtAOVEntry &lhs, AtAOVEntry const &rhs );
   static void Destruct( AtAOVEntry &val );
+};
+
+template<>
+struct Traits< a2fPluginShader >
+{
+  typedef a2fPluginShader &Result;
+  typedef a2fPluginShader const &INParam;
+  typedef a2fPluginShader &IOParam;
+  
+  static void ConstructEmpty( a2fPluginShader &val );
+  static void ConstructCopy( a2fPluginShader &lhs, a2fPluginShader const &rhs );
+  static void AssignCopy( a2fPluginShader &lhs, a2fPluginShader const &rhs );
+  static void Destruct( a2fPluginShader &val );
 };
 
 template<>

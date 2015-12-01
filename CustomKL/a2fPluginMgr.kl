@@ -1,0 +1,13 @@
+
+/** 
+ * Register an implementation of a KL interface matching the arnold
+ * plugin node interfaces.  The kl type must inherit from an a2fPlugin interface
+ */
+
+function a2fRegisterPlugin(Type kltype, SInt32 type, UInt8 output_type, String name, String filename) = "_fe_a2fRegisterPlugin";
+
+//function a2fRegisterPlugin(Type kltype, UInt8 output_type) = "_fe_a2fRegisterPlugin"
+//{
+//    if (kltype != )
+//}
+//function a2fRegisterPlugin(Type kltype) = "_fe_a2fRegisterPlugin";

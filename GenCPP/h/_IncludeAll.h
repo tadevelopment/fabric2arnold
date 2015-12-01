@@ -20,5 +20,6 @@
 #include "_typemapping.h"
 
 #include "_AtDisplayCallback.h"
+#include "_a2fPluginManager.h"
 
 #endif

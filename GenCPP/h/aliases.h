@@ -18,9 +18,6 @@
 
 namespace Fabric { namespace EDK { namespace KL {
 
-
-// KL alias 'HRESULT'
-typedef UInt32 HRESULT;
 }}}
 
 #endif // __KL2EDK_AUTOGEN_aliases__
