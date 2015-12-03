@@ -14,7 +14,7 @@ function TestShader() {
   report("Constructed");
 }
 function ~TestShader() {
-  report("Constructed");
+  report("Destructed");
 }
 
 function TestShader.parameters(AtList list, AtMetaDataStore metadata)

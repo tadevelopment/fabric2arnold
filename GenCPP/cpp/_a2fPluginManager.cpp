@@ -2,6 +2,7 @@
 
 #include "_a2fPluginManager.h"
 
+
 AI_INSTANCE_COMMON_METHODS
 
 static Fabric::EDK::KL::ArnoldKLPluginIMgr s_mgr;
@@ -18,9 +19,6 @@ node_parameters
         Fabric::EDK::KL::AtMetaDataStore klmds;
         CPAtMetaDataStore_to_KLAtMetaDataStore(mds, klmds);
         temp_instance.parameters(klparams, klmds);
-        // Explicitly clear, as it appears the copy construct manages lifetime,
-        // but the destructor does not
-        temp_instance = Fabric::EDK::KL::a2fPluginShaderInterface();
     }
 }
 
@@ -30,39 +28,48 @@ node_initialize
     const AtNodeEntry* nodeEntry = AiNodeGetNodeEntry(node);
     const char* entryname = AiNodeEntryGetName(nodeEntry);
 
-    s_instance = s_mgr.CreateInstance(entryname);
-    if (s_instance.isValid())
+    Fabric::EDK::KL::a2fPluginShaderInterface instance = s_mgr.CreateInstance(entryname);
+    if (instance.isValid())
     {
+        // Save the pointer to the AtNode for later reference
+        // Because the C++ classes are just handles to the KL classes
+        // we need to do a full copy (not just save a pointer)
+        Fabric::EDK::KL::a2fPluginShaderInterface* pInstance = new Fabric::EDK::KL::a2fPluginShaderInterface(instance);
+        AiNodeSetLocalData(node, pInstance);
+
         Fabric::EDK::KL::AtNode klnode;
         CPAtNode_to_KLAtNode(node, klnode);
         Fabric::EDK::KL::AtParamValue klparams;
         AtParamValue_to_KLParamValue(params, klparams);
-        s_instance.initialize(klnode, klparams);
+        instance.initialize(klnode, klparams);
     }
 }
 
 //node_update
 void Update(AtNode* node, AtParamValue* params)
 {
-    if (s_instance.isValid())
+    Fabric::EDK::KL::a2fPluginShaderInterface* pInstance = reinterpret_cast<Fabric::EDK::KL::a2fPluginShaderInterface*>(AiNodeGetLocalData(node));
+    if (pInstance != nullptr && pInstance->isValid())
     {
         Fabric::EDK::KL::AtNode klnode;
         CPAtNode_to_KLAtNode(node, klnode);
         Fabric::EDK::KL::AtParamValue klparams;
         AtParamValue_to_KLParamValue(params, klparams);
-        s_instance.update(klnode, klparams);
+        pInstance->update(klnode, klparams);
     }
 }
 
 node_finish
 //void Finish(AtNode* node)
 {
-    if (s_instance.isValid())
+    Fabric::EDK::KL::a2fPluginShaderInterface* pInstance = reinterpret_cast<Fabric::EDK::KL::a2fPluginShaderInterface*>(AiNodeGetLocalData(node));
+    if (pInstance != nullptr && pInstance->isValid())
     {
         Fabric::EDK::KL::AtNode klnode;
         CPAtNode_to_KLAtNode(node, klnode);
-        s_instance.finish(klnode);
-        s_instance = Fabric::EDK::KL::a2fPluginShaderInterface();
+        pInstance->finish(klnode);
+        delete pInstance;
+        AiNodeSetLocalData(node, nullptr);
     }
 }
 
@@ -71,14 +78,15 @@ node_finish
 //shader_evaluate
 void Evaluate(AtNode* node, AtShaderGlobals* globals)
 {
-    if (s_instance.isValid())
+    Fabric::EDK::KL::a2fPluginShaderInterface* pInstance = reinterpret_cast<Fabric::EDK::KL::a2fPluginShaderInterface*>(AiNodeGetLocalData(node));
+    if (pInstance != nullptr && pInstance->isValid())
     {
         Fabric::EDK::KL::AtNode klnode;
         CPAtNode_to_KLAtNode(node, klnode);
         Fabric::EDK::KL::AtShaderGlobals klglobals;
         CPAtShaderGlobals_to_KLAtShaderGlobals(globals, klglobals);
         
-        s_instance.evaluate(klnode, klglobals);
+        pInstance->evaluate(klnode, klglobals);
         KLAtShaderGlobals_to_CPAtShaderGlobals(klglobals, globals);
     }
 }
