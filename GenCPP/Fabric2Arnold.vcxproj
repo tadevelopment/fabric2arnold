@@ -15,7 +15,7 @@
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
 		<ConfigurationType>Makefile</ConfigurationType>
 		<UseOfMfc>false</UseOfMfc>
-		<PlatformToolset>v120</PlatformToolset>
+		<PlatformToolset>v140</PlatformToolset>
 	</PropertyGroup>
 	<Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
 	<ImportGroup Label="ExtensionSettings">
@@ -26,17 +26,18 @@
 	<PropertyGroup Label="UserMacros" />
 	<PropertyGroup>
 	<_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
-		<NMakeBuildCommandLine Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">echo Starting SCons &amp;&amp; &quot;C:\Python27_64\python.exe&quot; -c &quot;from os.path import join; import sys; sys.path = [ join(sys.prefix, &apos;Lib&apos;, &apos;site-packages&apos;, &apos;scons-2.3.5&apos;), join(sys.prefix, &apos;scons-2.3.5&apos;), join(sys.prefix, &apos;Lib&apos;, &apos;site-packages&apos;, &apos;scons&apos;), join(sys.prefix, &apos;scons&apos;) ] + sys.path; import SCons.Script; SCons.Script.main()&quot; -C &quot;R:\src\HordeSoftware\Fabric2Arnold&quot; -f SConstruct &quot;R:\src\HordeSoftware\Fabric2Arnold\Fabric2Arnold-Windows-x86_64.dll&quot;</NMakeBuildCommandLine>
-		<NMakeReBuildCommandLine Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">echo Starting SCons &amp;&amp; &quot;C:\Python27_64\python.exe&quot; -c &quot;from os.path import join; import sys; sys.path = [ join(sys.prefix, &apos;Lib&apos;, &apos;site-packages&apos;, &apos;scons-2.3.5&apos;), join(sys.prefix, &apos;scons-2.3.5&apos;), join(sys.prefix, &apos;Lib&apos;, &apos;site-packages&apos;, &apos;scons&apos;), join(sys.prefix, &apos;scons&apos;) ] + sys.path; import SCons.Script; SCons.Script.main()&quot; -C &quot;R:\src\HordeSoftware\Fabric2Arnold&quot; -f SConstruct &quot;R:\src\HordeSoftware\Fabric2Arnold\Fabric2Arnold-Windows-x86_64.dll&quot;</NMakeReBuildCommandLine>
-		<NMakeCleanCommandLine Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">echo Starting SCons &amp;&amp; &quot;C:\Python27_64\python.exe&quot; -c &quot;from os.path import join; import sys; sys.path = [ join(sys.prefix, &apos;Lib&apos;, &apos;site-packages&apos;, &apos;scons-2.3.5&apos;), join(sys.prefix, &apos;scons-2.3.5&apos;), join(sys.prefix, &apos;Lib&apos;, &apos;site-packages&apos;, &apos;scons&apos;), join(sys.prefix, &apos;scons&apos;) ] + sys.path; import SCons.Script; SCons.Script.main()&quot; -C &quot;R:\src\HordeSoftware\Fabric2Arnold&quot; -f SConstruct -c &quot;R:\src\HordeSoftware\Fabric2Arnold\Fabric2Arnold-Windows-x86_64.dll&quot;</NMakeCleanCommandLine>
-		<NMakeOutput Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">R:\src\HordeSoftware\Fabric2Arnold\Fabric2Arnold-Windows-x86_64.dll</NMakeOutput>
+		<NMakeBuildCommandLine Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">echo Starting SCons &amp;&amp; &quot;C:\Python27_64\python.exe&quot; -c &quot;from os.path import join; import sys; sys.path = [ join(sys.prefix, &apos;Lib&apos;, &apos;site-packages&apos;, &apos;scons-2.4.0&apos;), join(sys.prefix, &apos;scons-2.4.0&apos;), join(sys.prefix, &apos;Lib&apos;, &apos;site-packages&apos;, &apos;scons&apos;), join(sys.prefix, &apos;scons&apos;) ] + sys.path; import SCons.Script; SCons.Script.main()&quot; -C &quot;C:\src\HordeSoftware\Fabric2Arnold&quot; -f SConstruct &quot;C:\src\HordeSoftware\Fabric2Arnold\Fabric2Arnold-Windows-x86_64.dll&quot;</NMakeBuildCommandLine>
+		<NMakeReBuildCommandLine Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">echo Starting SCons &amp;&amp; &quot;C:\Python27_64\python.exe&quot; -c &quot;from os.path import join; import sys; sys.path = [ join(sys.prefix, &apos;Lib&apos;, &apos;site-packages&apos;, &apos;scons-2.4.0&apos;), join(sys.prefix, &apos;scons-2.4.0&apos;), join(sys.prefix, &apos;Lib&apos;, &apos;site-packages&apos;, &apos;scons&apos;), join(sys.prefix, &apos;scons&apos;) ] + sys.path; import SCons.Script; SCons.Script.main()&quot; -C &quot;C:\src\HordeSoftware\Fabric2Arnold&quot; -f SConstruct &quot;C:\src\HordeSoftware\Fabric2Arnold\Fabric2Arnold-Windows-x86_64.dll&quot;</NMakeReBuildCommandLine>
+		<NMakeCleanCommandLine Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">echo Starting SCons &amp;&amp; &quot;C:\Python27_64\python.exe&quot; -c &quot;from os.path import join; import sys; sys.path = [ join(sys.prefix, &apos;Lib&apos;, &apos;site-packages&apos;, &apos;scons-2.4.0&apos;), join(sys.prefix, &apos;scons-2.4.0&apos;), join(sys.prefix, &apos;Lib&apos;, &apos;site-packages&apos;, &apos;scons&apos;), join(sys.prefix, &apos;scons&apos;) ] + sys.path; import SCons.Script; SCons.Script.main()&quot; -C &quot;C:\src\HordeSoftware\Fabric2Arnold&quot; -f SConstruct -c &quot;C:\src\HordeSoftware\Fabric2Arnold\Fabric2Arnold-Windows-x86_64.dll&quot;</NMakeCleanCommandLine>
+		<NMakeOutput Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\src\HordeSoftware\Fabric2Arnold\Fabric2Arnold-Windows-x86_64.dll</NMakeOutput>
 		<NMakePreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">_SCL_SECURE_NO_WARNINGS=1;_ITERATOR_DEBUG_LEVEL=0;_SECURE_SCL=0;_WIN32_WINNT=0x0600;WIN64</NMakePreprocessorDefinitions>
-		<NMakeIncludeSearchPath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Fabric Engine\FabricEngine-1.15.3-Windows-x86_64\include;R:\src\ArnoldSDK\Windows 4.2.8.0/include;GenCPP/h;.</NMakeIncludeSearchPath>
+		<NMakeIncludeSearchPath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\FabricEngine\FabricEngine-1.15.3-Windows-x86_64\include;C:\src\HordeSoftware\Fabric2Arnold\..\..\ArnoldSDK\Windows-4.2.10.0/include;GenCPP/h;.</NMakeIncludeSearchPath>
 		<NMakeForcedIncludes Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(NMakeForcedIncludes)</NMakeForcedIncludes>
 		<NMakeAssemblySearchPath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(NMakeAssemblySearchPath)</NMakeAssemblySearchPath>
 		<NMakeForcedUsingAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(NMakeForcedUsingAssemblies)</NMakeForcedUsingAssemblies>
 	</PropertyGroup>
 	<ItemGroup>
+		<ClInclude Include="h\_a2fPluginManager.h" />
 		<ClInclude Include="h\_AtDisplayCallback.h" />
 		<ClInclude Include="h\_defines.h" />
 		<ClInclude Include="h\_IncludeAll.h" />
@@ -45,8 +46,12 @@
 		<ClInclude Include="h\_typemapping_opaque.h" />
 		<ClInclude Include="h\_typemapping_pod.h" />
 		<ClInclude Include="h\a2fPluginShader.h" />
+		<ClInclude Include="h\a2fPluginShaderInterface.h" />
 		<ClInclude Include="h\aliases.h" />
 		<ClInclude Include="h\ARGB.h" />
+		<ClInclude Include="h\ArnoldKLPluginIMgr.h" />
+		<ClInclude Include="h\ArnoldKLPluginMgr.h" />
+		<ClInclude Include="h\ArnoldKLPluginMgr_impl.h" />
 		<ClInclude Include="h\AtAOVEntry.h" />
 		<ClInclude Include="h\AtAOVIterator.h" />
 		<ClInclude Include="h\AtArray.h" />
@@ -98,6 +103,7 @@
 		<ClInclude Include="h\Xfo.h" />
 	</ItemGroup>
 	<ItemGroup>
+		<ClCompile Include="cpp\_a2fPluginManager.cpp" />
 		<ClCompile Include="cpp\_AtDisplayCallback.cpp" />
 		<ClCompile Include="cpp\AtParamValue_functions.cpp" />
 		<ClCompile Include="cpp\extension.cpp" />
@@ -113,31 +119,34 @@
 <!-- SCons Data:
 fXEBVQlEZWJ1Z3x4NjRxAmNjb3B5X3JlZwpfcmVjb25zdHJ1Y3RvcgpxAyhjU0NvbnMuVG9vbC5t
 c3ZzCkNvbmZpZwpxBGNfX2J1aWx0aW5fXwpvYmplY3QKcQVOdFJxBn1xByhVB3ZhcmlhbnRxCFUF
-RGVidWdxCVUHY21kYXJnc3EKVQBVCHBsYXRmb3JtcQtVA3g2NHEMVQdydW5maWxlcQ1VQ1I6XHNy
+RGVidWdxCVUHY21kYXJnc3EKVQBVCHBsYXRmb3JtcQtVA3g2NHEMVQdydW5maWxlcQ1VQ0M6XHNy
 Y1xIb3JkZVNvZnR3YXJlXEZhYnJpYzJBcm5vbGRcRmFicmljMkFybm9sZC1XaW5kb3dzLXg4Nl82
 NC5kbGxxDlULYnVpbGR0YXJnZXRxD2gOVQZvdXRkaXJxEFUAdWJzLg==
 
 fXEBKFULT3RoZXIgRmlsZXNxAl1VDUxvY2FsIEhlYWRlcnNxA11VDEhlYWRlciBGaWxlc3EEXXEF
-KFUWaFxfQXREaXNwbGF5Q2FsbGJhY2suaHEGVQxoXF9kZWZpbmVzLmhxB1UPaFxfSW5jbHVkZUFs
-bC5ocQhVEGhcX3R5cGVtYXBwaW5nLmhxCVUWaFxfdHlwZW1hcHBpbmdfY2xhc3MuaHEKVRdoXF90
-eXBlbWFwcGluZ19vcGFxdWUuaHELVRRoXF90eXBlbWFwcGluZ19wb2QuaHEMVRNoXGEyZlBsdWdp
-blNoYWRlci5ocQ1VC2hcYWxpYXNlcy5ocQ5VCGhcQVJHQi5ocQ9VDmhcQXRBT1ZFbnRyeS5ocRBV
-EWhcQXRBT1ZJdGVyYXRvci5ocRFVC2hcQXRBcnJheS5ocRJVDGhcQXRCdWNrZXQuaHETVRFoXEF0
-Q2FtZXJhSW5wdXQuaHEUVRJoXEF0Q2FtZXJhT3V0cHV0LmhxFVUVaFxBdERpc3BsYXlDYWxsYmFj
-ay5ocRZVEWhcQXRMaWNlbnNlSW5mby5ocRdVCmhcQXRMaXN0LmhxGFUTaFxBdE1ldGFEYXRhRW50
-cnkuaHEZVRZoXEF0TWV0YURhdGFJdGVyYXRvci5ocRpVE2hcQXRNZXRhRGF0YVN0b3JlLmhxG1UK
-aFxBdE5vZGUuaHEcVQ9oXEF0Tm9kZUVudHJ5LmhxHVUXaFxBdE5vZGVFbnRyeUl0ZXJhdG9yLmhx
-HlUSaFxBdE5vZGVJdGVyYXRvci5ocR9VDWhcQXROb2RlTGliLmhxIFURaFxBdE5vZGVNZXRob2Rz
-LmhxIVUQaFxBdFBhcmFtRW50cnkuaHEiVRNoXEF0UGFyYW1JdGVyYXRvci5ocSNVEGhcQXRQYXJh
-bVZhbHVlLmhxJFUaaFxBdFBhcmFtVmFsdWVfZnVuY3Rpb25zLmhxJVUJaFxBdFJheS5ocSZVD2hc
-QXRTY3JTYW1wbGUuaHEnVRNoXEF0U2hhZGVyR2xvYmFscy5ocShVE2hcQXRUZXh0dXJlSGFuZGxl
-LmhxKVUTaFxBdFRleHR1cmVQYXJhbXMuaHEqVRRoXEF0VXNlclBhcmFtRW50cnkuaHErVRdoXEF0
-VXNlclBhcmFtSXRlcmF0b3IuaHEsVQhoXEJveDIuaHEtVQhoXEJveDMuaHEuVQloXENvbG9yLmhx
-L1UJaFxFdWxlci5ocTBVEWhcRmFicmljMkFybm9sZC5ocTFVCmhcZ2xvYmFsLmhxMlUUaFxnbG9i
-YWxfZnVuY3Rpb25zLmhxM1UJaFxNYXQyMi5ocTRVCWhcTWF0MzMuaHE1VQloXE1hdDQ0LmhxNlUI
-aFxRdWF0LmhxN1UHaFxSYXkuaHE4VQdoXFJHQi5ocTlVCGhcUkdCQS5ocTpVEWhcUm90YXRpb25P
-cmRlci5ocTtVCGhcVmVjMi5ocTxVCGhcVmVjMy5ocT1VCmhcVmVjM19kLmhxPlUIaFxWZWM0Lmhx
-P1UHaFxYZm8uaHFAZVUMU291cmNlIEZpbGVzcUFdcUIoVRpjcHBcX0F0RGlzcGxheUNhbGxiYWNr
-LmNwcHFDVR5jcHBcQXRQYXJhbVZhbHVlX2Z1bmN0aW9ucy5jcHBxRFURY3BwXGV4dGVuc2lvbi5j
-cHBxRVUYY3BwXGdsb2JhbF9mdW5jdGlvbnMuY3BwcUZlVQ5SZXNvdXJjZSBGaWxlc3FHXXUu
+KFUVaFxfYTJmUGx1Z2luTWFuYWdlci5ocQZVFmhcX0F0RGlzcGxheUNhbGxiYWNrLmhxB1UMaFxf
+ZGVmaW5lcy5ocQhVD2hcX0luY2x1ZGVBbGwuaHEJVRBoXF90eXBlbWFwcGluZy5ocQpVFmhcX3R5
+cGVtYXBwaW5nX2NsYXNzLmhxC1UXaFxfdHlwZW1hcHBpbmdfb3BhcXVlLmhxDFUUaFxfdHlwZW1h
+cHBpbmdfcG9kLmhxDVUTaFxhMmZQbHVnaW5TaGFkZXIuaHEOVRxoXGEyZlBsdWdpblNoYWRlcklu
+dGVyZmFjZS5ocQ9VC2hcYWxpYXNlcy5ocRBVCGhcQVJHQi5ocRFVFmhcQXJub2xkS0xQbHVnaW5J
+TWdyLmhxElUVaFxBcm5vbGRLTFBsdWdpbk1nci5ocRNVGmhcQXJub2xkS0xQbHVnaW5NZ3JfaW1w
+bC5ocRRVDmhcQXRBT1ZFbnRyeS5ocRVVEWhcQXRBT1ZJdGVyYXRvci5ocRZVC2hcQXRBcnJheS5o
+cRdVDGhcQXRCdWNrZXQuaHEYVRFoXEF0Q2FtZXJhSW5wdXQuaHEZVRJoXEF0Q2FtZXJhT3V0cHV0
+LmhxGlUVaFxBdERpc3BsYXlDYWxsYmFjay5ocRtVEWhcQXRMaWNlbnNlSW5mby5ocRxVCmhcQXRM
+aXN0LmhxHVUTaFxBdE1ldGFEYXRhRW50cnkuaHEeVRZoXEF0TWV0YURhdGFJdGVyYXRvci5ocR9V
+E2hcQXRNZXRhRGF0YVN0b3JlLmhxIFUKaFxBdE5vZGUuaHEhVQ9oXEF0Tm9kZUVudHJ5LmhxIlUX
+aFxBdE5vZGVFbnRyeUl0ZXJhdG9yLmhxI1USaFxBdE5vZGVJdGVyYXRvci5ocSRVDWhcQXROb2Rl
+TGliLmhxJVURaFxBdE5vZGVNZXRob2RzLmhxJlUQaFxBdFBhcmFtRW50cnkuaHEnVRNoXEF0UGFy
+YW1JdGVyYXRvci5ocShVEGhcQXRQYXJhbVZhbHVlLmhxKVUaaFxBdFBhcmFtVmFsdWVfZnVuY3Rp
+b25zLmhxKlUJaFxBdFJheS5ocStVD2hcQXRTY3JTYW1wbGUuaHEsVRNoXEF0U2hhZGVyR2xvYmFs
+cy5ocS1VE2hcQXRUZXh0dXJlSGFuZGxlLmhxLlUTaFxBdFRleHR1cmVQYXJhbXMuaHEvVRRoXEF0
+VXNlclBhcmFtRW50cnkuaHEwVRdoXEF0VXNlclBhcmFtSXRlcmF0b3IuaHExVQhoXEJveDIuaHEy
+VQhoXEJveDMuaHEzVQloXENvbG9yLmhxNFUJaFxFdWxlci5ocTVVEWhcRmFicmljMkFybm9sZC5o
+cTZVCmhcZ2xvYmFsLmhxN1UUaFxnbG9iYWxfZnVuY3Rpb25zLmhxOFUJaFxNYXQyMi5ocTlVCWhc
+TWF0MzMuaHE6VQloXE1hdDQ0LmhxO1UIaFxRdWF0LmhxPFUHaFxSYXkuaHE9VQdoXFJHQi5ocT5V
+CGhcUkdCQS5ocT9VEWhcUm90YXRpb25PcmRlci5ocUBVCGhcVmVjMi5ocUFVCGhcVmVjMy5ocUJV
+CmhcVmVjM19kLmhxQ1UIaFxWZWM0LmhxRFUHaFxYZm8uaHFFZVUMU291cmNlIEZpbGVzcUZdcUco
+VRljcHBcX2EyZlBsdWdpbk1hbmFnZXIuY3BwcUhVGmNwcFxfQXREaXNwbGF5Q2FsbGJhY2suY3Bw
+cUlVHmNwcFxBdFBhcmFtVmFsdWVfZnVuY3Rpb25zLmNwcHFKVRFjcHBcZXh0ZW5zaW9uLmNwcHFL
+VRhjcHBcZ2xvYmFsX2Z1bmN0aW9ucy5jcHBxTGVVDlJlc291cmNlIEZpbGVzcU1ddS4=
 -->

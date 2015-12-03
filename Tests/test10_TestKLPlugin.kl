@@ -1,0 +1,124 @@
+//
+// Copyright (c) 2014, Steven Caron <steven@steven-caron.com> All rights reserved.
+//
+// FabricArnold Extension
+
+require Fabric2ArnoldWrapper;
+
+object TestShader : a2fPluginShaderInterface
+{
+  String vvv;
+};
+
+function TestShader() {
+  report("Constructed");
+}
+function ~TestShader() {
+  report("Constructed");
+}
+
+function TestShader.parameters(AtList list, AtMetaDataStore metadata)
+{
+  report("Parameters");
+}
+function TestShader.initialize(AtNode node, AtParamValue value)
+{
+  report("Initialize");
+}
+function TestShader.update(AtNode node, AtParamValue value)
+{
+  report("Update");
+}
+function TestShader.finish(AtNode node)
+{
+  report("Finish");
+}
+function TestShader.evaluate(AtNode node, AtShaderGlobals globals)
+{
+  report("Update");
+}
+
+operator entry() {
+
+  ArnoldKLPluginMgr mgr();
+
+  String filename = 'C:\\temp\\test10.jpg';
+  UInt64 start = getCurrentTicks();
+  AiBegin();
+
+  mgr.RegisterKLPlugin(TestShader, AI_NODE_SHADER, AI_TYPE_UNDEFINED, "TestShader", "<kl-plugins>");
+
+  // create a sphere
+  AtNode sphere = AiNode("sphere");
+  AiNodeSetStr(sphere, "name", "mysphere");
+  AiNodeSetFlt(sphere, "radius", 5.0);
+
+  // create a lambert shader
+  AtNode lambert = AiNode("TestShader");
+  AiNodeSetStr(lambert, "name", "myshader");
+  AiNodeSetRGB(lambert, "Kd_color", 0.0, 1.0, 0.0);
+
+  // assign the sphere's shader
+  AiNodeSetPtr(sphere, "shader", lambert._handle);
+
+  // create a perspective camera
+  AtNode camera = AiNode("persp_camera");
+  AiNodeSetStr(camera, "name", "mycamera");
+  AiNodeSetPnt(camera, "position", 0.0, 0.0, 20.0);
+
+  // create a point light
+  AtNode light = AiNode("point_light");
+  AiNodeSetStr(light, "name", "mylight");
+  AiNodeSetFlt(light, "exposure", 7.5);
+  AiNodeSetPnt(light, "position", 0.0, 10.0, 10.0);
+
+  // set render options
+  AtNode options = AiUniverseGetOptions();
+  AiNodeSetInt(options, "AA_samples", 1);
+  AiNodeSetInt(options, "xres", 320);
+  AiNodeSetInt(options, "yres", 240);
+  AiNodeSetPtr(options, "camera", camera._handle);
+
+  // create an output driver
+  AtNode driver = AiNode("driver_jpeg");
+  AiNodeSetStr(driver, "name", "mydriver");
+  AiNodeSetStr(driver, "filename", filename);
+
+  // create a gaussian filter node
+  AtNode gfilter = AiNode("gaussian_filter");
+  AiNodeSetStr(gfilter, "name", "myfilter");
+
+  // assign th driver and the filter to the outputs
+  AtArray outputs_array = AiArrayAllocate(1, 1, AI_TYPE_STRING);
+  AiArraySetStr(outputs_array, 0, "RGB RGB myfilter mydriver");
+  AiNodeSetArray(options, "outputs", outputs_array);
+
+  // render the scene
+  Integer result = AiRender(AI_RENDER_MODE_CAMERA);
+  if (result != AI_SUCCESS)
+  {
+    report("[FabricArnold::TestSuite] Error " + String(result));
+  }
+
+  // get scene bounds doesn't work unless the render is called
+  Box3 bounds = AiUniverseGetSceneBounds();
+
+  // remove the sphere, create a box the size of the bounds
+  AiNodeDestroy(sphere);
+  AtNode box = AiNode("box");
+  AiNodeSetStr(box, "name", "mybox");
+  AiNodeSetPtr(box, "shader", lambert._handle);
+
+  AiNodeSetPnt(box, "min", bounds.min.x, bounds.min.y, bounds.min.z);
+  AiNodeSetPnt(box, "max", bounds.max.x, bounds.max.y, bounds.max.z);
+
+  // render the box now
+  result = AiRender(AI_RENDER_MODE_CAMERA);
+  if (result != AI_SUCCESS)
+  {
+    report("[FabricArnold::TestSuite] Error " + String(result));
+  }
+  AiEnd();
+  UInt64 end = getCurrentTicks();
+  report("Elapsed time: " + getSecondsBetweenTicks(start, end) + " seconds");
+}

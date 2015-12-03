@@ -46,6 +46,7 @@
 #include "AtNodeEntryIterator.h"
 #include "AtAOVIterator.h"
 #include "AtAOVEntry.h"
+#include "ArnoldKLPluginIMgr.h"
 #include "AtDisplayCallback.h"
 
 
@@ -1514,7 +1515,7 @@ FABRIC_EXT_EXPORT Fabric::EDK::KL::Boolean _fe_AiAOVIteratorFinished(
 );
 
 FABRIC_EXT_EXPORT void _fe_a2fRegisterPlugin(
-  Fabric::EDK::KL::Traits< Fabric::EDK::KL::Type >::INParam kltype,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::ArnoldKLPluginIMgr >::IOParam mgr,
   Fabric::EDK::KL::Traits< Fabric::EDK::KL::SInt32 >::INParam type,
   Fabric::EDK::KL::Traits< Fabric::EDK::KL::UInt8 >::INParam output_type,
   Fabric::EDK::KL::Traits< Fabric::EDK::KL::String >::INParam name,

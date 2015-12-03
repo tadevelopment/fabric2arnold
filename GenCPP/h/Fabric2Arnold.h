@@ -19,6 +19,9 @@
 #include "global.h"
 
 #include "ARGB.h"
+#include "ArnoldKLPluginIMgr.h"
+#include "ArnoldKLPluginMgr.h"
+#include "ArnoldKLPluginMgr_impl.h"
 #include "AtAOVEntry.h"
 #include "AtAOVIterator.h"
 #include "AtArray.h"
@@ -66,6 +69,7 @@
 #include "Vec4.h"
 #include "Xfo.h"
 #include "a2fPluginShader.h"
+#include "a2fPluginShaderInterface.h"
 #include "global_functions.h"
 
 #endif // __KL2EDK_AUTOGEN_Fabric2Arnold__

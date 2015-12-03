@@ -267,7 +267,8 @@
         "_fe_AtParamValueAsUInt32": "  AtUInt32 f2a_result = f2aThis_->UINT;\n  KL::UInt32 _result;\n  unsigned_int_to_UInt32(f2a_result, _result);\n  return _result;\n", 
         "_fe_AtParamValueAsUInt8": "  AtByte f2a_result = f2aThis_->BYTE;\n  KL::UInt8 _result;\n  AtByte_to_UInt8(f2a_result, _result);\n  return _result;\n", 
         "_fe_AtParamValueAsVec3": "  AtVector f2a_result = f2aThis_->VEC;\n  AtPoint_to_Vec3(f2a_result, _result);\n", 
-        "_fe_SetAtDisplayCallback": "  SetDisplayDriverNode(f2aDisplayDriver);\n  AiNodeSetPtr(f2aDisplayDriver, \"callback\", (void*)f2aCallback);\n"
+        "_fe_SetAtDisplayCallback": "  SetDisplayDriverNode(f2aDisplayDriver);\n  AiNodeSetPtr(f2aDisplayDriver, \"callback\", (void*)f2aCallback);\n", 
+        "_fe_a2fRegisterPlugin": "RegisterPlugin(mgr, f2aType, f2aOutput_type, f2aName, f2aFilename);"
     }, 
     "functionentry": "F2A_TRY_STATEMENT", 
     "functionexit": "F2A_CATCH_STATEMENT", 
@@ -485,6 +486,12 @@
             "from": "Float64_to_double", 
             "methodop": ".", 
             "to": "double_to_Float64"
+        }, 
+        "HRESULT": {
+            "ctype": "HRESULT", 
+            "from": "KLUInt32_to_CPHRESULT", 
+            "methodop": ".", 
+            "to": "CPHRESULT_to_KLUInt32"
         }, 
         "Mat44": {
             "ctype": "AtMatrix", 

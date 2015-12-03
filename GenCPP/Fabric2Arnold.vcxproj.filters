@@ -11,6 +11,9 @@
 		</Filter>
 	</ItemGroup>
 	<ItemGroup>
+		<ClInclude Include="h\_a2fPluginManager.h">
+			<Filter>Header Files</Filter>
+		</ClInclude>
 		<ClInclude Include="h\_AtDisplayCallback.h">
 			<Filter>Header Files</Filter>
 		</ClInclude>
@@ -35,10 +38,22 @@
 		<ClInclude Include="h\a2fPluginShader.h">
 			<Filter>Header Files</Filter>
 		</ClInclude>
+		<ClInclude Include="h\a2fPluginShaderInterface.h">
+			<Filter>Header Files</Filter>
+		</ClInclude>
 		<ClInclude Include="h\aliases.h">
 			<Filter>Header Files</Filter>
 		</ClInclude>
 		<ClInclude Include="h\ARGB.h">
+			<Filter>Header Files</Filter>
+		</ClInclude>
+		<ClInclude Include="h\ArnoldKLPluginIMgr.h">
+			<Filter>Header Files</Filter>
+		</ClInclude>
+		<ClInclude Include="h\ArnoldKLPluginMgr.h">
+			<Filter>Header Files</Filter>
+		</ClInclude>
+		<ClInclude Include="h\ArnoldKLPluginMgr_impl.h">
 			<Filter>Header Files</Filter>
 		</ClInclude>
 		<ClInclude Include="h\AtAOVEntry.h">
@@ -190,6 +205,9 @@
 		</ClInclude>
 	</ItemGroup>
 	<ItemGroup>
+		<ClCompile Include="cpp\_a2fPluginManager.cpp">
+			<Filter>Source Files</Filter>
+		</ClCompile>
 		<ClCompile Include="cpp\_AtDisplayCallback.cpp">
 			<Filter>Source Files</Filter>
 		</ClCompile>

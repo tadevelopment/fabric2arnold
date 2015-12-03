@@ -6699,7 +6699,7 @@ FABRIC_EXT_EXPORT Fabric::EDK::KL::Boolean _fe_AiAOVIteratorFinished(
 }
 
 FABRIC_EXT_EXPORT void _fe_a2fRegisterPlugin(
-  Fabric::EDK::KL::Traits< Fabric::EDK::KL::Type >::INParam kltype,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::ArnoldKLPluginIMgr >::IOParam mgr,
   Fabric::EDK::KL::Traits< Fabric::EDK::KL::SInt32 >::INParam type,
   Fabric::EDK::KL::Traits< Fabric::EDK::KL::UInt8 >::INParam output_type,
   Fabric::EDK::KL::Traits< Fabric::EDK::KL::String >::INParam name,
@@ -6728,12 +6728,7 @@ FABRIC_EXT_EXPORT void _fe_a2fRegisterPlugin(
     setError("Error in _fe_a2fRegisterPlugin. unable to convert: filename");
     return;
   }
-
-  //#pragma message("_fe_a2fRegisterPlugin is missing its implementation.")
-  _a2fPluginManager::GetInstance()->RegisterPlugin(kltype, f2aType, f2aOutput_type, f2aName, f2aFilename);
-
-  // Type 'Type' could not be converted.
-
+RegisterPlugin(mgr, f2aType, f2aOutput_type, f2aName, f2aFilename);
   F2A_CATCH_STATEMENT("_fe_a2fRegisterPlugin")
 }
 

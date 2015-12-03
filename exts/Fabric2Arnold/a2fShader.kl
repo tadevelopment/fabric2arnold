@@ -1,0 +1,17 @@
+
+
+/**
+ * This interface defines the methods required by an arnold shader
+ */
+
+
+
+interface a2fPluginShader
+{
+    parameters(AtList list, AtMetaDataStore metadata);
+    initialize(AtNode node, AtParamValue value);
+    update(AtNode node, AtParamValue value);
+    finish(AtNode node);
+
+    evaluate(AtNode node, AtShaderGlobals globals);
+};

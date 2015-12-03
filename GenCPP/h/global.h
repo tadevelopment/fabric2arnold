@@ -27,6 +27,8 @@
 namespace Fabric { namespace EDK { namespace KL {
   class Object;
   struct ARGB;
+  class ArnoldKLPluginIMgr;
+  class ArnoldKLPluginMgr;
   struct AtAOVEntry;
   struct AtAOVIterator;
   struct AtArray;
@@ -73,6 +75,7 @@ namespace Fabric { namespace EDK { namespace KL {
   struct Vec4;
   struct Xfo;
   class a2fPluginShader;
+  class a2fPluginShaderInterface;
 }}}
 
 #include "aliases.h"
@@ -804,6 +807,45 @@ struct Traits< AtAOVEntry >
   static void ConstructCopy( AtAOVEntry &lhs, AtAOVEntry const &rhs );
   static void AssignCopy( AtAOVEntry &lhs, AtAOVEntry const &rhs );
   static void Destruct( AtAOVEntry &val );
+};
+
+template<>
+struct Traits< a2fPluginShaderInterface >
+{
+  typedef a2fPluginShaderInterface &Result;
+  typedef a2fPluginShaderInterface const &INParam;
+  typedef a2fPluginShaderInterface &IOParam;
+  
+  static void ConstructEmpty( a2fPluginShaderInterface &val );
+  static void ConstructCopy( a2fPluginShaderInterface &lhs, a2fPluginShaderInterface const &rhs );
+  static void AssignCopy( a2fPluginShaderInterface &lhs, a2fPluginShaderInterface const &rhs );
+  static void Destruct( a2fPluginShaderInterface &val );
+};
+
+template<>
+struct Traits< ArnoldKLPluginIMgr >
+{
+  typedef ArnoldKLPluginIMgr &Result;
+  typedef ArnoldKLPluginIMgr const &INParam;
+  typedef ArnoldKLPluginIMgr &IOParam;
+  
+  static void ConstructEmpty( ArnoldKLPluginIMgr &val );
+  static void ConstructCopy( ArnoldKLPluginIMgr &lhs, ArnoldKLPluginIMgr const &rhs );
+  static void AssignCopy( ArnoldKLPluginIMgr &lhs, ArnoldKLPluginIMgr const &rhs );
+  static void Destruct( ArnoldKLPluginIMgr &val );
+};
+
+template<>
+struct Traits< ArnoldKLPluginMgr >
+{
+  typedef ArnoldKLPluginMgr &Result;
+  typedef ArnoldKLPluginMgr const &INParam;
+  typedef ArnoldKLPluginMgr &IOParam;
+  
+  static void ConstructEmpty( ArnoldKLPluginMgr &val );
+  static void ConstructCopy( ArnoldKLPluginMgr &lhs, ArnoldKLPluginMgr const &rhs );
+  static void AssignCopy( ArnoldKLPluginMgr &lhs, ArnoldKLPluginMgr const &rhs );
+  static void Destruct( ArnoldKLPluginMgr &val );
 };
 
 template<>
