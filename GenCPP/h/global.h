@@ -20,6 +20,7 @@
 #define FABRIC_EDK_EXT_Fabric2Arnold_DEPENDENT_EXTS \
   { \
     { "Math", 1, 0, 1, 0 }, \
+    { "Singletons", 1, 0, 0, 0 }, \
     { 0, 0, 0, 0, 0 } \
   }
 
@@ -69,6 +70,7 @@ namespace Fabric { namespace EDK { namespace KL {
   struct RGBA;
   struct Ray;
   struct RotationOrder;
+  class SingletonHandle;
   struct Vec2;
   struct Vec3;
   struct Vec3_d;
@@ -455,6 +457,19 @@ struct Traits< Xfo >
   static void ConstructCopy( Xfo &lhs, Xfo const &rhs );
   static void AssignCopy( Xfo &lhs, Xfo const &rhs );
   static void Destruct( Xfo &val );
+};
+
+template<>
+struct Traits< SingletonHandle >
+{
+  typedef SingletonHandle &Result;
+  typedef SingletonHandle const &INParam;
+  typedef SingletonHandle &IOParam;
+  
+  static void ConstructEmpty( SingletonHandle &val );
+  static void ConstructCopy( SingletonHandle &lhs, SingletonHandle const &rhs );
+  static void AssignCopy( SingletonHandle &lhs, SingletonHandle const &rhs );
+  static void Destruct( SingletonHandle &val );
 };
 
 template<>

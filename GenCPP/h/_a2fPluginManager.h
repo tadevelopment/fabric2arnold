@@ -18,4 +18,6 @@ public:
 };
 
 // Call this function to register a new KL plugin type
-extern void RegisterPlugin(Fabric::EDK::KL::ArnoldKLPluginIMgr& mgr, int type, AtByte output_type, const char* name, const char* filename);
+extern void RegisterPlugin(int type, AtByte output_type, const char* name, const char* filename);
+extern void RegisterKLMgr(Fabric::EDK::KL::ArnoldKLPluginIMgr& mgr);
+extern void ReleaseKLMgr();

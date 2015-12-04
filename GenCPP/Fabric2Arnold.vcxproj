@@ -97,6 +97,8 @@
 		<ClInclude Include="h\RGB.h" />
 		<ClInclude Include="h\RGBA.h" />
 		<ClInclude Include="h\RotationOrder.h" />
+		<ClInclude Include="h\SingletonHandle.h" />
+		<ClInclude Include="h\SingletonHandle_impl.h" />
 		<ClInclude Include="h\Vec2.h" />
 		<ClInclude Include="h\Vec3.h" />
 		<ClInclude Include="h\Vec3_d.h" />
@@ -145,9 +147,10 @@ VRRoXEF0VXNlclBhcmFtRW50cnkuaHExVRdoXEF0VXNlclBhcmFtSXRlcmF0b3IuaHEyVQhoXEJv
 eDIuaHEzVQhoXEJveDMuaHE0VQloXENvbG9yLmhxNVUJaFxFdWxlci5ocTZVEWhcRmFicmljMkFy
 bm9sZC5ocTdVCmhcZ2xvYmFsLmhxOFUUaFxnbG9iYWxfZnVuY3Rpb25zLmhxOVUJaFxNYXQyMi5o
 cTpVCWhcTWF0MzMuaHE7VQloXE1hdDQ0LmhxPFUIaFxRdWF0LmhxPVUHaFxSYXkuaHE+VQdoXFJH
-Qi5ocT9VCGhcUkdCQS5ocUBVEWhcUm90YXRpb25PcmRlci5ocUFVCGhcVmVjMi5ocUJVCGhcVmVj
-My5ocUNVCmhcVmVjM19kLmhxRFUIaFxWZWM0LmhxRVUHaFxYZm8uaHFGZVUMU291cmNlIEZpbGVz
-cUddcUgoVRljcHBcX2EyZlBsdWdpbk1hbmFnZXIuY3BwcUlVGmNwcFxfQXREaXNwbGF5Q2FsbGJh
-Y2suY3BwcUpVHmNwcFxBdFBhcmFtVmFsdWVfZnVuY3Rpb25zLmNwcHFLVRFjcHBcZXh0ZW5zaW9u
-LmNwcHFMVRhjcHBcZ2xvYmFsX2Z1bmN0aW9ucy5jcHBxTWVVDlJlc291cmNlIEZpbGVzcU5ddS4=
+Qi5ocT9VCGhcUkdCQS5ocUBVEWhcUm90YXRpb25PcmRlci5ocUFVE2hcU2luZ2xldG9uSGFuZGxl
+LmhxQlUYaFxTaW5nbGV0b25IYW5kbGVfaW1wbC5ocUNVCGhcVmVjMi5ocURVCGhcVmVjMy5ocUVV
+CmhcVmVjM19kLmhxRlUIaFxWZWM0LmhxR1UHaFxYZm8uaHFIZVUMU291cmNlIEZpbGVzcUldcUoo
+VRljcHBcX2EyZlBsdWdpbk1hbmFnZXIuY3BwcUtVGmNwcFxfQXREaXNwbGF5Q2FsbGJhY2suY3Bw
+cUxVHmNwcFxBdFBhcmFtVmFsdWVfZnVuY3Rpb25zLmNwcHFNVRFjcHBcZXh0ZW5zaW9uLmNwcHFO
+VRhjcHBcZ2xvYmFsX2Z1bmN0aW9ucy5jcHBxT2VVDlJlc291cmNlIEZpbGVzcVBddS4=
 -->

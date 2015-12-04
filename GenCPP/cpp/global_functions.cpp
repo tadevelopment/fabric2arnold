@@ -6764,7 +6764,6 @@ FABRIC_EXT_EXPORT Fabric::EDK::KL::Boolean _fe_AiTraceProbe(
 }
 
 FABRIC_EXT_EXPORT void _fe_a2fRegisterPlugin(
-  Fabric::EDK::KL::Traits< Fabric::EDK::KL::ArnoldKLPluginIMgr >::IOParam mgr,
   Fabric::EDK::KL::Traits< Fabric::EDK::KL::SInt32 >::INParam type,
   Fabric::EDK::KL::Traits< Fabric::EDK::KL::UInt8 >::INParam output_type,
   Fabric::EDK::KL::Traits< Fabric::EDK::KL::String >::INParam name,
@@ -6793,6 +6792,27 @@ FABRIC_EXT_EXPORT void _fe_a2fRegisterPlugin(
     setError("Error in _fe_a2fRegisterPlugin. unable to convert: filename");
     return;
   }
-RegisterPlugin(mgr, f2aType, f2aOutput_type, f2aName, f2aFilename);
+  RegisterPlugin(f2aType, f2aOutput_type, f2aName, f2aFilename);
   F2A_CATCH_STATEMENT("_fe_a2fRegisterPlugin")
+}
+
+FABRIC_EXT_EXPORT void _fe_a2fRegisterManager(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::ArnoldKLPluginIMgr >::IOParam mgr
+)
+{
+  F2A_TRY_STATEMENT("_fe_a2fRegisterManager")
+
+  RegisterKLMgr(mgr);
+
+  F2A_CATCH_STATEMENT("_fe_a2fRegisterManager")
+}
+
+FABRIC_EXT_EXPORT void _fe_a2fReleaseManager(
+)
+{
+  F2A_TRY_STATEMENT("_fe_a2fReleaseManager")
+
+  ReleaseKLMgr();
+
+  F2A_CATCH_STATEMENT("_fe_a2fReleaseManager")
 }

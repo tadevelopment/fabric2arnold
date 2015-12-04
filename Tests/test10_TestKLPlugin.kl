@@ -40,12 +40,11 @@ function TestShader.evaluate(AtNode node, AtShaderGlobals globals)
 
 operator entry() {
 
-  ArnoldKLPluginMgr mgr();
-
   String filename = 'C:\\temp\\test10.jpg';
   UInt64 start = getCurrentTicks();
   AiBegin();
 
+  ArnoldKLPluginMgr mgr();
   mgr.RegisterKLPlugin(TestShader, AI_NODE_SHADER, AI_TYPE_RGB, "TestShader", "<kl-plugins>");
 
   // create a sphere
@@ -119,6 +118,8 @@ operator entry() {
     report("[FabricArnold::TestSuite] Error " + String(result));
   }
   AiEnd();
+
+  mgr.ReleaseInstance();
   UInt64 end = getCurrentTicks();
   report("Elapsed time: " + getSecondsBetweenTicks(start, end) + " seconds");
 }

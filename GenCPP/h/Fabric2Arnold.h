@@ -65,6 +65,8 @@
 #include "RGBA.h"
 #include "Ray.h"
 #include "RotationOrder.h"
+#include "SingletonHandle.h"
+#include "SingletonHandle_impl.h"
 #include "Vec2.h"
 #include "Vec3.h"
 #include "Vec3_d.h"

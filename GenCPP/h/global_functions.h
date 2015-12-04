@@ -1532,11 +1532,17 @@ FABRIC_EXT_EXPORT Fabric::EDK::KL::Boolean _fe_AiTraceProbe(
 );
 
 FABRIC_EXT_EXPORT void _fe_a2fRegisterPlugin(
-  Fabric::EDK::KL::Traits< Fabric::EDK::KL::ArnoldKLPluginIMgr >::IOParam mgr,
   Fabric::EDK::KL::Traits< Fabric::EDK::KL::SInt32 >::INParam type,
   Fabric::EDK::KL::Traits< Fabric::EDK::KL::UInt8 >::INParam output_type,
   Fabric::EDK::KL::Traits< Fabric::EDK::KL::String >::INParam name,
   Fabric::EDK::KL::Traits< Fabric::EDK::KL::String >::INParam filename
+);
+
+FABRIC_EXT_EXPORT void _fe_a2fRegisterManager(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::ArnoldKLPluginIMgr >::IOParam mgr
+);
+
+FABRIC_EXT_EXPORT void _fe_a2fReleaseManager(
 );
 
 #endif // __KL2EDK_AUTOGEN_global_functions__

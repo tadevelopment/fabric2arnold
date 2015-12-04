@@ -289,7 +289,9 @@
         "_fe_AtParamValueSetVec3": "  f2aThis_->PNT = f2aVal;\n", 
         "_fe_GetParentAtShaderGlobals": "  const AtShaderGlobals* f2a_result = f2aGlobals->psg;", 
         "_fe_SetAtDisplayCallback": "  SetDisplayDriverNode(f2aDisplayDriver);\n  AiNodeSetPtr(f2aDisplayDriver, \"callback\", (void*)f2aCallback);\n", 
-        "_fe_a2fRegisterPlugin": "RegisterPlugin(mgr, f2aType, f2aOutput_type, f2aName, f2aFilename);"
+        "_fe_a2fRegisterManager": "  RegisterKLMgr(mgr);\n", 
+        "_fe_a2fRegisterPlugin": "  RegisterPlugin(f2aType, f2aOutput_type, f2aName, f2aFilename);", 
+        "_fe_a2fReleaseManager": "  ReleaseKLMgr();\n"
     }, 
     "functionentry": "F2A_TRY_STATEMENT", 
     "functionexit": "F2A_CATCH_STATEMENT", 

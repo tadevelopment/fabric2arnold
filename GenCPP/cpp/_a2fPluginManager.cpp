@@ -5,9 +5,13 @@
 
 AI_INSTANCE_COMMON_METHODS
 
+// Doing the Very Bad Thing of holding on to some static
+// vars, we need to hold on to a pointer to the KL
+// plugin manager to callback into it to create instances of
+// our plugins during render time.
 static Fabric::EDK::KL::ArnoldKLPluginIMgr s_mgr;
-static Fabric::EDK::KL::a2fPluginShaderInterface s_instance;
 static const char* s_currentlyRegisteringItem = nullptr;
+
 node_parameters
 //void Parameters(AtList* params, AtMetaDataStore* mds)
 {
@@ -92,8 +96,11 @@ void Evaluate(AtNode* node, AtShaderGlobals* globals)
 }
 
 
-void RegisterPlugin(Fabric::EDK::KL::ArnoldKLPluginIMgr& mgr, int type, AtByte output_type, const char* name, const char* filename)
+void RegisterPlugin(int type, AtByte output_type, const char* name, const char* filename)
 {
+    if (!s_mgr.isValid())
+        throw; // Irrevocably gone wrong.
+
     static AtShaderNodeMethods ai_shader_mtds = {
         Evaluate
     };
@@ -101,8 +108,17 @@ void RegisterPlugin(Fabric::EDK::KL::ArnoldKLPluginIMgr& mgr, int type, AtByte o
         &ai_common_mtds,
         &ai_shader_mtds
     };
-    s_mgr = mgr;
     s_currentlyRegisteringItem = name;
     AiNodeEntryInstall(type, output_type, name, filename, &methods, AI_VERSION);
     s_currentlyRegisteringItem = nullptr;
+}
+
+void RegisterKLMgr(Fabric::EDK::KL::ArnoldKLPluginIMgr& mgr)
+{
+    s_mgr = mgr;
+}
+
+void ReleaseKLMgr()
+{
+    s_mgr = Fabric::EDK::KL::ArnoldKLPluginIMgr();
 }

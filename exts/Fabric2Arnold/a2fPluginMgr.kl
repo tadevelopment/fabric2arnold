@@ -3,7 +3,7 @@
  * A initial Arnold plugin interface for KL
  *
  ************************************************/
-
+require Singletons;
 /**
  * The interface to be implemented
  */
@@ -35,8 +35,10 @@ interface ArnoldKLPluginIMgr
  * Register an implementation of a KL interface matching the arnold
  * plugin node interfaces.  The kl type must inherit from an a2fPlugin interface
  */
-
-function a2fPluginMgrRegisterPlugin(io ArnoldKLPluginIMgr mgr, SInt32 type, UInt8 output_type, String name, String filename) = "_fe_a2fRegisterPlugin";
+// The follwing functions are all internal, and not to be called by the casual user.
+function a2fPluginMgrRegisterPlugin(SInt32 type, UInt8 output_type, String name, String filename) = "_fe_a2fRegisterPlugin";
+function a2fPluginMgrRegisterMgr(io ArnoldKLPluginIMgr mgr) = "_fe_a2fRegisterManager";
+function a2fPluginMgrReleaseMgr() = "_fe_a2fReleaseManager";
 
 
 object ArnoldKLPluginMgr : ArnoldKLPluginIMgr
@@ -45,13 +47,41 @@ object ArnoldKLPluginMgr : ArnoldKLPluginIMgr
     Type[String] registeredPlugins;
 };
 
+private function ArnoldKLPluginMgr( )
+{
+    // Enforce only one of these bad-boys
+    if (Singleton_has("_a2fPluginMgr"))
+        throw("Cannot have more than one instance of ArnoldKLPluginMgr");
+
+    // If legally created, then set us to be the overarching manager.
+    Singleton_set("_a2fPluginMgr", this);
+
+    ArnoldKLPluginIMgr mgr = this;
+    a2fPluginMgrRegisterMgr(mgr);
+}
+
+function ArnoldKLPluginIMgr ArnoldKLPluginMgr.GetInstance() 
+{
+    ArnoldKLPluginIMgr mgr = Singleton_get("_a2fPluginMgr");
+    if (mgr == null)
+    {
+        // Creation will auto-magically register in the appropriate places.
+        mgr = ArnoldKLPluginMgr();
+    }
+    return mgr;
+}
+
+function ArnoldKLPluginMgr.ReleaseInstance()
+{
+    a2fPluginMgrReleaseMgr();
+    Singleton_remove("_a2fPluginMgr");
+}
+
 function ArnoldKLPluginMgr.RegisterKLPlugin!(Type kltype, SInt32 type, UInt8 output_type, String name, String filename)
 {
     // Save the type so we can create an instance on-demand
     this.registeredPlugins[name] = kltype;
-    // Register the plugin within Arnolds plugin system
-    ArnoldKLPluginIMgr imgr = this;
-    a2fPluginMgrRegisterPlugin(imgr, type, output_type, name, filename);
+    a2fPluginMgrRegisterPlugin(type, output_type, name, filename);
 }
 
 function a2fPluginShaderInterface ArnoldKLPluginMgr.CreateInstance(String name)

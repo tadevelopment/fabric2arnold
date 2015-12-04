@@ -191,6 +191,12 @@
 		<ClInclude Include="h\RotationOrder.h">
 			<Filter>Header Files</Filter>
 		</ClInclude>
+		<ClInclude Include="h\SingletonHandle.h">
+			<Filter>Header Files</Filter>
+		</ClInclude>
+		<ClInclude Include="h\SingletonHandle_impl.h">
+			<Filter>Header Files</Filter>
+		</ClInclude>
 		<ClInclude Include="h\Vec2.h">
 			<Filter>Header Files</Filter>
 		</ClInclude>
