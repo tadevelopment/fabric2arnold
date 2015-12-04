@@ -1,8 +1,8 @@
-#ifndef __KL2EDK_AUTOGEN_aliases__
-#define __KL2EDK_AUTOGEN_aliases__
+#ifndef __KL2EDK_AUTOGEN_AtRGBA__
+#define __KL2EDK_AUTOGEN_AtRGBA__
 
 #ifdef KL2EDK_INCLUDE_MESSAGES
-  #pragma message ( "Including 'aliases.h'" )
+  #pragma message ( "Including 'AtRGBA.h'" )
 #endif
 
 ////////////////////////////////////////////////////////////////
@@ -16,14 +16,7 @@
 # error "This file needs to be rebuilt for the current EDK version!"
 #endif
 
-namespace Fabric { namespace EDK { namespace KL {
+#include "global.h"
 
 
-// KL alias 'AtRGBA'
-typedef Color AtRGBA;
-
-// KL alias 'AtColor'
-typedef Color AtColor;
-}}}
-
-#endif // __KL2EDK_AUTOGEN_aliases__
+#endif // __KL2EDK_AUTOGEN_AtRGBA__

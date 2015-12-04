@@ -8,6 +8,8 @@ require Math;
 //////////////////////////////////////////////////
 //  enumerated values
 //////////////////////////////////////////////////
+//  overrides 
+//////////////////////////////////////////////////
 //  classes 
 //////////////////////////////////////////////////
 //  global-scope functions 
@@ -32,8 +34,8 @@ function AiMetaDataSetInt(io AtMetaDataStore mds, String param, String name, SIn
 function AiMetaDataSetIntAtString(io AtMetaDataStore mds, String param, String name, SInt32 value) = '_fe_AiMetaDataSetIntAtString';
 function AiMetaDataSetFlt(io AtMetaDataStore mds, String param, String name, Float32 value) = '_fe_AiMetaDataSetFlt';
 function AiMetaDataSetFltAtString(io AtMetaDataStore mds, String param, String name, Float32 value) = '_fe_AiMetaDataSetFltAtString';
-function AiMetaDataSetRGB(io AtMetaDataStore mds, String param, String name, RGB value) = '_fe_AiMetaDataSetRGB';
-function AiMetaDataSetRGBAtString(io AtMetaDataStore mds, String param, String name, RGB value) = '_fe_AiMetaDataSetRGBAtString';
+function AiMetaDataSetRGB(io AtMetaDataStore mds, String param, String name, AtColor value) = '_fe_AiMetaDataSetRGB';
+function AiMetaDataSetRGBAtString(io AtMetaDataStore mds, String param, String name, AtColor value) = '_fe_AiMetaDataSetRGBAtString';
 function AiMetaDataSetVec(io AtMetaDataStore mds, String param, String name, Vec3 value) = '_fe_AiMetaDataSetVec';
 function AiMetaDataSetVecAtString(io AtMetaDataStore mds, String param, String name, Vec3 value) = '_fe_AiMetaDataSetVecAtString';
 function AiMetaDataSetPnt(io AtMetaDataStore mds, String param, String name, Vec3 value) = '_fe_AiMetaDataSetPnt';
@@ -59,7 +61,7 @@ Following on the example above: constAtNodeEntry*entry=AiNodeEntryLookUp("my_sim
 function Boolean AiMetaDataGetBoolAtString(AtNodeEntry entry, String param, String name, io Boolean value) = '_fe_AiMetaDataGetBoolAtString';
 function Boolean AiMetaDataGetIntAtString(AtNodeEntry entry, String param, String name, io SInt32 value) = '_fe_AiMetaDataGetIntAtString';
 function Boolean AiMetaDataGetFltAtString(AtNodeEntry entry, String param, String name, io Float32 value) = '_fe_AiMetaDataGetFltAtString';
-function Boolean AiMetaDataGetRGBAtString(AtNodeEntry entry, String param, String name, io RGB value) = '_fe_AiMetaDataGetRGBAtString';
+function Boolean AiMetaDataGetRGBAtString(AtNodeEntry entry, String param, String name, io AtColor value) = '_fe_AiMetaDataGetRGBAtString';
 function Boolean AiMetaDataGetVecAtString(AtNodeEntry entry, String param, String name, io Vec3 value) = '_fe_AiMetaDataGetVecAtString';
 function Boolean AiMetaDataGetPntAtString(AtNodeEntry entry, String param, String name, io Vec3 value) = '_fe_AiMetaDataGetPntAtString';
 function Boolean AiMetaDataGetPnt2AtString(AtNodeEntry entry, String param, String name, io Vec2 value) = '_fe_AiMetaDataGetPnt2AtString';

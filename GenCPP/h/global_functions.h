@@ -27,7 +27,6 @@
 #include "Color.h"
 #include "Vec3.h"
 #include "Vec2.h"
-#include "RGB.h"
 #include "AtLicenseInfo.h"
 #include "AtMetaDataStore.h"
 #include "AtNodeEntry.h"
@@ -36,18 +35,18 @@
 #include "AtNodeMethods.h"
 #include "AtMetaDataEntry.h"
 #include "AtUserParamIterator.h"
-#include "AtRay.h"
-#include "AtShaderGlobals.h"
-#include "AtScrSample.h"
 #include "AtTextureParams.h"
 #include "AtTextureHandle.h"
+#include "AtShaderGlobals.h"
 #include "Box3.h"
 #include "AtNodeIterator.h"
 #include "AtNodeEntryIterator.h"
 #include "AtAOVIterator.h"
 #include "AtAOVEntry.h"
-#include "ArnoldKLPluginIMgr.h"
 #include "AtDisplayCallback.h"
+#include "AtRay.h"
+#include "AtScrSample.h"
+#include "ArnoldKLPluginIMgr.h"
 
 
 FABRIC_EXT_EXPORT void _fe_AiParamGetName(
@@ -378,7 +377,7 @@ FABRIC_EXT_EXPORT void _fe_AiArrayInterpolateVec(
 );
 
 FABRIC_EXT_EXPORT void _fe_AiArrayInterpolateRGB(
-  Fabric::EDK::KL::Traits< Fabric::EDK::KL::RGB >::Result _result,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::Color >::Result _result,
   Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtArray >::INParam array,
   Fabric::EDK::KL::Traits< Fabric::EDK::KL::Float32 >::INParam time,
   Fabric::EDK::KL::Traits< Fabric::EDK::KL::UInt32 >::INParam idx
@@ -440,7 +439,7 @@ FABRIC_EXT_EXPORT Fabric::EDK::KL::Float32 _fe_AiArrayGetFltFunc(
 );
 
 FABRIC_EXT_EXPORT void _fe_AiArrayGetRGBFunc(
-  Fabric::EDK::KL::Traits< Fabric::EDK::KL::RGB >::Result _result,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::Color >::Result _result,
   Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtArray >::INParam a,
   Fabric::EDK::KL::Traits< Fabric::EDK::KL::UInt32 >::INParam i,
   Fabric::EDK::KL::Traits< Fabric::EDK::KL::String >::INParam _val,
@@ -545,7 +544,7 @@ FABRIC_EXT_EXPORT Fabric::EDK::KL::Boolean _fe_AiArraySetFltFunc(
 FABRIC_EXT_EXPORT Fabric::EDK::KL::Boolean _fe_AiArraySetRGBFunc(
   Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtArray >::IOParam a,
   Fabric::EDK::KL::Traits< Fabric::EDK::KL::UInt32 >::INParam i,
-  Fabric::EDK::KL::Traits< Fabric::EDK::KL::RGB >::INParam val,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::Color >::INParam val,
   Fabric::EDK::KL::Traits< Fabric::EDK::KL::String >::INParam _val,
   Fabric::EDK::KL::Traits< Fabric::EDK::KL::SInt32 >::INParam line
 );
@@ -730,14 +729,14 @@ FABRIC_EXT_EXPORT void _fe_AiMetaDataSetRGB(
   Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtMetaDataStore >::IOParam mds,
   Fabric::EDK::KL::Traits< Fabric::EDK::KL::String >::INParam param,
   Fabric::EDK::KL::Traits< Fabric::EDK::KL::String >::INParam name,
-  Fabric::EDK::KL::Traits< Fabric::EDK::KL::RGB >::INParam value
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::Color >::INParam value
 );
 
 FABRIC_EXT_EXPORT void _fe_AiMetaDataSetRGBAtString(
   Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtMetaDataStore >::IOParam mds,
   Fabric::EDK::KL::Traits< Fabric::EDK::KL::String >::INParam param,
   Fabric::EDK::KL::Traits< Fabric::EDK::KL::String >::INParam name,
-  Fabric::EDK::KL::Traits< Fabric::EDK::KL::RGB >::INParam value
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::Color >::INParam value
 );
 
 FABRIC_EXT_EXPORT void _fe_AiMetaDataSetVec(
@@ -821,7 +820,7 @@ FABRIC_EXT_EXPORT Fabric::EDK::KL::Boolean _fe_AiMetaDataGetRGBAtString(
   Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtNodeEntry >::INParam entry,
   Fabric::EDK::KL::Traits< Fabric::EDK::KL::String >::INParam param,
   Fabric::EDK::KL::Traits< Fabric::EDK::KL::String >::INParam name,
-  Fabric::EDK::KL::Traits< Fabric::EDK::KL::RGB >::IOParam value
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::Color >::IOParam value
 );
 
 FABRIC_EXT_EXPORT Fabric::EDK::KL::Boolean _fe_AiMetaDataGetVecAtString(
@@ -1265,7 +1264,7 @@ FABRIC_EXT_EXPORT Fabric::EDK::KL::Float32 _fe_AiNodeGetFltAtString(
 );
 
 FABRIC_EXT_EXPORT void _fe_AiNodeGetRGBAtString(
-  Fabric::EDK::KL::Traits< Fabric::EDK::KL::RGB >::Result _result,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::Color >::Result _result,
   Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtNode >::INParam node,
   Fabric::EDK::KL::Traits< Fabric::EDK::KL::String >::INParam param
 );
@@ -1336,44 +1335,6 @@ FABRIC_EXT_EXPORT void _fe_AiLoadPlugins(
 
 FABRIC_EXT_EXPORT void _fe_AiLoadPlugin(
   Fabric::EDK::KL::Traits< Fabric::EDK::KL::String >::INParam path
-);
-
-FABRIC_EXT_EXPORT void _fe_AiMakeRay(
-  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtRay >::IOParam ray,
-  Fabric::EDK::KL::Traits< Fabric::EDK::KL::UInt32 >::INParam type,
-  Fabric::EDK::KL::Traits< Fabric::EDK::KL::Vec3 >::INParam origin,
-  Fabric::EDK::KL::Traits< Fabric::EDK::KL::Vec3 >::INParam dir,
-  Fabric::EDK::KL::Traits< Fabric::EDK::KL::Float64 >::INParam maxdist,
-  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtShaderGlobals >::INParam sg
-);
-
-FABRIC_EXT_EXPORT void _fe_AiReflectRay(
-  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtRay >::IOParam ray,
-  Fabric::EDK::KL::Traits< Fabric::EDK::KL::Vec3 >::INParam normal,
-  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtShaderGlobals >::INParam sg
-);
-
-FABRIC_EXT_EXPORT Fabric::EDK::KL::Boolean _fe_AiRefractRay(
-  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtRay >::IOParam ray,
-  Fabric::EDK::KL::Traits< Fabric::EDK::KL::Vec3 >::INParam normal,
-  Fabric::EDK::KL::Traits< Fabric::EDK::KL::Float32 >::INParam n1,
-  Fabric::EDK::KL::Traits< Fabric::EDK::KL::Float32 >::INParam n2,
-  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtShaderGlobals >::INParam sg
-);
-
-FABRIC_EXT_EXPORT Fabric::EDK::KL::Boolean _fe_AiTrace(
-  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtRay >::INParam ray,
-  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtScrSample >::IOParam sample
-);
-
-FABRIC_EXT_EXPORT void _fe_AiTraceBackground(
-  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtRay >::INParam ray,
-  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtScrSample >::IOParam sample
-);
-
-FABRIC_EXT_EXPORT Fabric::EDK::KL::Boolean _fe_AiTraceProbe(
-  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtRay >::INParam ray,
-  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtShaderGlobals >::IOParam sgout
 );
 
 FABRIC_EXT_EXPORT void _fe_AiTextureParamsSetDefaults(
@@ -1514,17 +1475,68 @@ FABRIC_EXT_EXPORT Fabric::EDK::KL::Boolean _fe_AiAOVIteratorFinished(
   Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtAOVIterator >::INParam iter
 );
 
+FABRIC_EXT_EXPORT void _fe_SetAtDisplayCallback(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtNode >::INParam displayDriver,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtDisplayCallback >::INParam callback
+);
+
+FABRIC_EXT_EXPORT void _fe_AiShaderGlobals(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtShaderGlobals >::Result _result
+);
+
+FABRIC_EXT_EXPORT void _fe_AiShaderGlobalsDestroy(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtShaderGlobals >::IOParam sg
+);
+
+FABRIC_EXT_EXPORT void _fe_GetParentAtShaderGlobals(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtShaderGlobals >::Result _result,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtShaderGlobals >::INParam globals
+);
+
+FABRIC_EXT_EXPORT void _fe_AiMakeRay(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtRay >::IOParam ray,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::UInt32 >::INParam type,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::Vec3 >::INParam origin,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::Vec3 >::INParam dir,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::Float64 >::INParam maxdist,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtShaderGlobals >::INParam sg
+);
+
+FABRIC_EXT_EXPORT void _fe_AiReflectRay(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtRay >::IOParam ray,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::Vec3 >::INParam normal,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtShaderGlobals >::INParam sg
+);
+
+FABRIC_EXT_EXPORT Fabric::EDK::KL::Boolean _fe_AiRefractRay(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtRay >::IOParam ray,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::Vec3 >::INParam normal,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::Float32 >::INParam n1,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::Float32 >::INParam n2,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtShaderGlobals >::INParam sg
+);
+
+FABRIC_EXT_EXPORT Fabric::EDK::KL::Boolean _fe_AiTrace(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtRay >::INParam ray,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtScrSample >::IOParam sample
+);
+
+FABRIC_EXT_EXPORT void _fe_AiTraceBackground(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtRay >::INParam ray,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtScrSample >::IOParam sample
+);
+
+FABRIC_EXT_EXPORT Fabric::EDK::KL::Boolean _fe_AiTraceProbe(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtRay >::INParam ray,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtShaderGlobals >::IOParam sgout
+);
+
 FABRIC_EXT_EXPORT void _fe_a2fRegisterPlugin(
   Fabric::EDK::KL::Traits< Fabric::EDK::KL::ArnoldKLPluginIMgr >::IOParam mgr,
   Fabric::EDK::KL::Traits< Fabric::EDK::KL::SInt32 >::INParam type,
   Fabric::EDK::KL::Traits< Fabric::EDK::KL::UInt8 >::INParam output_type,
   Fabric::EDK::KL::Traits< Fabric::EDK::KL::String >::INParam name,
   Fabric::EDK::KL::Traits< Fabric::EDK::KL::String >::INParam filename
-);
-
-FABRIC_EXT_EXPORT void _fe_SetAtDisplayCallback(
-  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtNode >::INParam displayDriver,
-  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtDisplayCallback >::INParam callback
 );
 
 #endif // __KL2EDK_AUTOGEN_global_functions__

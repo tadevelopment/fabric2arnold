@@ -8,7 +8,7 @@
     "AtParamValue": {
         "ctype": "AtParamValue*",
         "from": "KlParamValue_to_AtParamValue", 
-        "methodop": "->",
+        "methodop": ".",
         "to": "AtParamValue_to_KLParamValue"
     },
     "AtArray": {
@@ -52,6 +52,12 @@
         "from": "KlAtDisplayCallback_to_AtDisplayCallback",
         "methodop": ".",
         "to": "AtDisplayCallback_to_KLAtDisplayCallback"
+    },
+    "AtShaderGlobals": {
+        "ctype": "AtShaderGlobals*",
+        "from": "KlAtShaderGlobals_to_AtShaderGlobals",
+        "methodop": ".",
+        "to": "AtShaderGlobals_to_KLAtShaderGlobals"
     }
   },
 
@@ -59,12 +65,33 @@
     "_fe_AtParamValueAsUInt8"   : "  AtByte f2a_result = f2aThis_->BYTE;\n  KL::UInt8 _result;\n  AtByte_to_UInt8(f2a_result, _result);\n  return _result;\n",
     "_fe_AtParamValueAsSInt32"  : "  int f2a_result = f2aThis_->INT;\n  KL::SInt32 _result;\n  int_to_SInt32(f2a_result, _result);\n  return _result;\n",
     "_fe_AtParamValueAsUInt32"  : "  AtUInt32 f2a_result = f2aThis_->UINT;\n  KL::UInt32 _result;\n  unsigned_int_to_UInt32(f2a_result, _result);\n  return _result;\n",
+    "_fe_AtParamValueAsBoolean" : "  bool f2a_result = f2aThis_->BOOL;\n  KL::Boolean _result;\n  bool_to_Boolean(f2a_result, _result);\n  return _result;\n",
     "_fe_AtParamValueAsFloat32" : "  float f2a_result = f2aThis_->FLT;\n  KL::Float32 _result;\n  float_to_Float32(f2a_result, _result);\n  return _result;\n",
-    "_fe_AtParamValueAsVec3"    : "  AtVector f2a_result = f2aThis_->VEC;\n  AtPoint_to_Vec3(f2a_result, _result);\n",
+    "_fe_AtParamValueAsRGB"     : "  CPAtColor_to_KLColor(f2aThis_->RGB, _result);\n",
+    "_fe_AtParamValueAsRGBA"    : "  CPAtRGBA_to_KLColor(f2aThis_->RGBA, _result);\n",
+    "_fe_AtParamValueAsVec3"    : "  AtPoint_to_Vec3(f2aThis_->VEC, _result);\n",
+    "_fe_AtParamValueAsVec2"    : "  AtPoint2_to_Vec2(f2aThis_->PNT2, _result);\n",
+    "_fe_AtParamValueAsData"    : "  void* _result = f2aThis_->PTR;\n",
     "_fe_AtParamValueAsMat44"   : "  AtMatrix_to_Mat44(*f2aThis_->pMTX, _result);\n",
     "_fe_AtParamValueAsString"  : "  const char* f2a_result = f2aThis_->STR;\n  char_to_String(f2a_result, _result);\n",
     "_fe_AtParamValueAsAtArray" : "  const AtArray* parr = f2aThis_->ARRAY;\n AtArray_to_KLArray(parr, _result);\n",
+    
+    "_fe_AtParamValueSetUInt8"   : "  f2aThis_->BYTE = f2aVal;\n",
+    "_fe_AtParamValueSetSInt32"  : "  f2aThis_->INT = f2aVal;\n",
+    "_fe_AtParamValueSetUInt32"  : "  f2aThis_->UINT = f2aVal;\n",
+    "_fe_AtParamValueSetBoolean" : "  f2aThis_->BOOL = f2aVal;\n",
+    "_fe_AtParamValueSetFloat32" : "  f2aThis_->FLT = f2aVal;\n",
+    "_fe_AtParamValueSetRGB"     : "  f2aThis_->RGB = f2aVal;\n",
+    "_fe_AtParamValueSetRGBA"    : "  KLColor_to_CPAtRGBA(val, f2aThis_->RGBA);\n",
+    "_fe_AtParamValueSetVec3"    : "  f2aThis_->PNT = f2aVal;\n",
+    "_fe_AtParamValueSetVec2"    : "  f2aThis_->PNT2 = f2aVal;\n",
+    "_fe_AtParamValueSetData"    : "  f2aThis_->PTR = f2aVal;\n",
+    "_fe_AtParamValueSetMat44"   : "  Mat44_to_AtMatrix(val, *f2aThis_->pMTX);\n",
+    "_fe_AtParamValueSetString"  : "  f2aThis_->STR = f2aVal;\n",
+    "_fe_AtParamValueSetAtArray" : "  KlArray_to_AtArray(val, f2aThis_->ARRAY);\n",
+
     "_fe_AiArrayGetMtxFunc"     : "  AtMatrix mtx;\n  AiArrayGetMtx(f2aA, f2aI, mtx);\n  AtMatrix_to_Mat44(mtx, _result);\n",
+
     "_fe_AiArraySetBoolArr"     : "  uint32_t size = val.size();\n  if(size == 0) return true;\n  if (size < f2aA->nelements) return false;\n  memcpy(f2aA->data, &val[0], size * sizeof(val[0]));\n  bool _result = true;\n",
     "_fe_AiArraySetByteArr"     : "  uint32_t size = val.size();\n  if(size == 0) return true;\n  if (size < f2aA->nelements) return false;\n  memcpy(f2aA->data, &val[0], size * sizeof(val[0]));\n  bool _result = true;\n",
     "_fe_AiArraySetIntArr"      : "  uint32_t size = val.size();\n  if(size == 0) return true;\n  if (size < f2aA->nelements) return false;\n  memcpy(f2aA->data, &val[0], size * sizeof(val[0]));\n  bool _result = true;\n",
@@ -88,7 +115,10 @@
     "_fe_AiMetaDataGetStrAtString": "  bool f2a_result = AiMetaDataGetStrAtString(f2aEntry, f2aParam, f2aName, const_cast<const char**>(&f2aValue));\n  Fabric::EDK::KL::Boolean _result;\n  bool_to_Boolean(f2a_result, _result);\n",
     "_fe_SetAtDisplayCallback" : "  SetDisplayDriverNode(f2aDisplayDriver);\n  AiNodeSetPtr(f2aDisplayDriver, \"callback\", (void*)f2aCallback);\n",
     "_fe_AiNodeGetMatrix" : "  AtMatrix f2a_result;\n  AiNodeGetMatrix(f2aNode, f2aParam, f2a_result);\n  AtMatrix_to_Mat44(f2a_result, _result);",
-    "_fe_a2fRegisterPlugin" : "RegisterPlugin(mgr, f2aType, f2aOutput_type, f2aName, f2aFilename);"
+    "_fe_a2fRegisterPlugin" : "RegisterPlugin(mgr, f2aType, f2aOutput_type, f2aName, f2aFilename);",
+    "_fe_AiShaderGlobals" : "  AtShaderGlobals* f2a_result = AiShaderGlobals();",
+    "_fe_AiShaderGlobalsDestroy" : "  AiShaderGlobalsDestroy(f2aSg);",
+    "_fe_GetParentAtShaderGlobals" : "  const AtShaderGlobals* f2a_result = f2aGlobals->psg;"
   },
   "parameterconversionstoskip": [
   ]

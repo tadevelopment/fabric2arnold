@@ -8,11 +8,13 @@ require Math;
 //////////////////////////////////////////////////
 //  enumerated values
 //////////////////////////////////////////////////
-//  classes 
+//  overrides 
 Mat44 AiNodeGetMatrix(AtNode node, String param) = "_fe_AiNodeGetMatrix";
 
 
 
+//////////////////////////////////////////////////
+//  classes 
 //////////////////////////////////////////////////
 //  global-scope functions 
 /**
@@ -84,8 +86,8 @@ function SInt32 AiNodeGetIntAtString(AtNode node, String param) = '_fe_AiNodeGet
 function UInt32 AiNodeGetUIntAtString(AtNode node, String param) = '_fe_AiNodeGetUIntAtString';
 function Boolean AiNodeGetBoolAtString(AtNode node, String param) = '_fe_AiNodeGetBoolAtString';
 function Float32 AiNodeGetFltAtString(AtNode node, String param) = '_fe_AiNodeGetFltAtString';
-function RGB AiNodeGetRGBAtString(AtNode node, String param) = '_fe_AiNodeGetRGBAtString';
-function Color AiNodeGetRGBAAtString(AtNode node, String param) = '_fe_AiNodeGetRGBAAtString';
+function Color AiNodeGetRGBAtString(AtNode node, String param) = '_fe_AiNodeGetRGBAtString';
+function AtRGBA AiNodeGetRGBAAtString(AtNode node, String param) = '_fe_AiNodeGetRGBAAtString';
 function Vec3 AiNodeGetVecAtString(AtNode node, String param) = '_fe_AiNodeGetVecAtString';
 function Vec3 AiNodeGetPntAtString(AtNode node, String param) = '_fe_AiNodeGetPntAtString';
 function Vec2 AiNodeGetPnt2AtString(AtNode node, String param) = '_fe_AiNodeGetPnt2AtString';

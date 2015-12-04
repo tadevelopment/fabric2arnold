@@ -18,7 +18,9 @@
 
 #include "global.h"
 #include "AtParamValue.h"
+#include "Color.h"
 #include "Vec3.h"
+#include "Vec2.h"
 #include "Mat44.h"
 #include "AtArray.h"
 
@@ -35,12 +37,35 @@ FABRIC_EXT_EXPORT Fabric::EDK::KL::SInt32 _fe_AtParamValueAsSInt32(
   Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtParamValue >::INParam this_
 );
 
+FABRIC_EXT_EXPORT Fabric::EDK::KL::Boolean _fe_AtParamValueAsBoolean(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtParamValue >::INParam this_
+);
+
 FABRIC_EXT_EXPORT Fabric::EDK::KL::Float32 _fe_AtParamValueAsFloat32(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtParamValue >::INParam this_
+);
+
+FABRIC_EXT_EXPORT void _fe_AtParamValueAsRGB(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::Color >::Result _result,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtParamValue >::INParam this_
+);
+
+FABRIC_EXT_EXPORT void _fe_AtParamValueAsRGBA(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::Color >::Result _result,
   Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtParamValue >::INParam this_
 );
 
 FABRIC_EXT_EXPORT void _fe_AtParamValueAsVec3(
   Fabric::EDK::KL::Traits< Fabric::EDK::KL::Vec3 >::Result _result,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtParamValue >::INParam this_
+);
+
+FABRIC_EXT_EXPORT void _fe_AtParamValueAsVec2(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::Vec2 >::Result _result,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtParamValue >::INParam this_
+);
+
+FABRIC_EXT_EXPORT Fabric::EDK::KL::Data _fe_AtParamValueAsData(
   Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtParamValue >::INParam this_
 );
 
@@ -57,6 +82,66 @@ FABRIC_EXT_EXPORT void _fe_AtParamValueAsString(
 FABRIC_EXT_EXPORT void _fe_AtParamValueAsAtArray(
   Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtArray >::Result _result,
   Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtParamValue >::INParam this_
+);
+
+FABRIC_EXT_EXPORT void _fe_AtParamValueSetUInt8(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtParamValue >::INParam this_,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::UInt8 >::INParam val
+);
+
+FABRIC_EXT_EXPORT void _fe_AtParamValueSetUInt32(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtParamValue >::INParam this_,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::UInt32 >::INParam val
+);
+
+FABRIC_EXT_EXPORT void _fe_AtParamValueSetSInt32(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtParamValue >::INParam this_,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::SInt32 >::INParam val
+);
+
+FABRIC_EXT_EXPORT void _fe_AtParamValueSetFloat32(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtParamValue >::INParam this_,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::Float32 >::INParam val
+);
+
+FABRIC_EXT_EXPORT void _fe_AtParamValueSetRGB(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtParamValue >::INParam this_,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::Color >::INParam val
+);
+
+FABRIC_EXT_EXPORT void _fe_AtParamValueSetRGBA(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtParamValue >::INParam this_,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::Color >::INParam val
+);
+
+FABRIC_EXT_EXPORT void _fe_AtParamValueSetVec3(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtParamValue >::INParam this_,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::Vec3 >::INParam val
+);
+
+FABRIC_EXT_EXPORT void _fe_AtParamValueSetVec2(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtParamValue >::INParam this_,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::Vec2 >::INParam val
+);
+
+FABRIC_EXT_EXPORT void _fe_AtParamValueSetData(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtParamValue >::INParam this_,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::Data >::INParam val
+);
+
+FABRIC_EXT_EXPORT void _fe_AtParamValueSetMat44(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtParamValue >::INParam this_,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::Mat44 >::INParam val
+);
+
+FABRIC_EXT_EXPORT void _fe_AtParamValueSetString(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtParamValue >::INParam this_,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::String >::INParam val
+);
+
+FABRIC_EXT_EXPORT void _fe_AtParamValueSetAtArray(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtParamValue >::INParam this_,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtArray >::INParam val
 );
 
 #endif // __KL2EDK_AUTOGEN_AtParamValue_functions__

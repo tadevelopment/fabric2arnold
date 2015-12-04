@@ -35,7 +35,7 @@ function TestShader.finish(AtNode node)
 }
 function TestShader.evaluate(AtNode node, AtShaderGlobals globals)
 {
-  report("Update");
+  globals.out.setRGB(Color(0.0f, 1.0f, 0.0f));
 }
 
 operator entry() {
@@ -46,7 +46,7 @@ operator entry() {
   UInt64 start = getCurrentTicks();
   AiBegin();
 
-  mgr.RegisterKLPlugin(TestShader, AI_NODE_SHADER, AI_TYPE_UNDEFINED, "TestShader", "<kl-plugins>");
+  mgr.RegisterKLPlugin(TestShader, AI_NODE_SHADER, AI_TYPE_RGB, "TestShader", "<kl-plugins>");
 
   // create a sphere
   AtNode sphere = AiNode("sphere");

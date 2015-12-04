@@ -14,6 +14,8 @@ const Integer AI_CACHE_BACKGROUND = 0x0008;	 //  Flushes all skydome importance 
 const Integer AI_CACHE_QUAD = 0x0010;	 //  Flushes all quad lights importance tables  
 const Integer AI_CACHE_ALL = 0xFFFF;	 //  Flushes all cache types simultaneously  
 //////////////////////////////////////////////////
+//  overrides 
+//////////////////////////////////////////////////
 //  classes 
 /**  */
 struct AtAOVEntry {

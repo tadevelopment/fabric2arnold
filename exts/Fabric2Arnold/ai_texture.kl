@@ -25,6 +25,8 @@ const Integer AI_TEXTURE_MIPMODE_ONE = 2;	 //  just use one mip level (closest)
 const Integer AI_TEXTURE_MIPMODE_TRILINEAR = 3;	 //  trilinear blending of two closest mip levels  
 const Integer AI_TEXTURE_MIPMODE_ANISOTROPIC = 4;	 //  use two closest mip levels with anisotropic filtering  
 //////////////////////////////////////////////////
+//  overrides 
+//////////////////////////////////////////////////
 //  classes 
 /**  Structure that holds all of the available texture map look-up options 
  */
@@ -71,9 +73,9 @@ struct AtTextureParams {
 
 function AiTextureParamsSetDefaults(io AtTextureParams params) = '_fe_AiTextureParamsSetDefaults';
 function AtTextureHandle AiTextureHandleCreate(String filename) = '_fe_AiTextureHandleCreate';
-function Color AiTextureHandleAccess(AtShaderGlobals sg, io AtTextureHandle handle, AtTextureParams params, io Boolean success/*=NULL*/) = '_fe_AiTextureHandleAccess';
+function AtRGBA AiTextureHandleAccess(AtShaderGlobals sg, io AtTextureHandle handle, AtTextureParams params, io Boolean success/*=NULL*/) = '_fe_AiTextureHandleAccess';
 function AiTextureHandleDestroy(io AtTextureHandle handle) = '_fe_AiTextureHandleDestroy';
-function Color AiTextureAccess(AtShaderGlobals sg, String filename, AtTextureParams params, io Boolean success/*=NULL*/) = '_fe_AiTextureAccess';
+function AtRGBA AiTextureAccess(AtShaderGlobals sg, String filename, AtTextureParams params, io Boolean success/*=NULL*/) = '_fe_AiTextureAccess';
 function Boolean AiTextureGetResolution(String filename, io UInt32 width, io UInt32 height) = '_fe_AiTextureGetResolution';
 function Boolean AiTextureGetNumChannels(String filename, io UInt32 num_channels) = '_fe_AiTextureGetNumChannels';
 function String AiTextureGetChannelName(String filename, UInt32 channel_index) = '_fe_AiTextureGetChannelName';

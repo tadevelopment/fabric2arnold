@@ -19,6 +19,8 @@ const Integer AI_NODE_DRIVER = 0x0040;	 //  Output driver nodes (driver_tiff, et
 const Integer AI_NODE_FILTER = 0x0080;	 //  Pixel sample filter nodes (box_filter, etc  
 const Integer AI_NODE_ALL = 0xFFFF;	 //  Bitmask including all node types, used by AiASSWrite()  
 //////////////////////////////////////////////////
+//  overrides 
+//////////////////////////////////////////////////
 //  classes 
 /**  */
 struct AtMetaDataEntry {

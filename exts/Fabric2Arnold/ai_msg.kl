@@ -29,6 +29,8 @@ const Integer AI_LOG_MEMORY = 0x0800;	 //  prefix messages with current memory u
 const Integer AI_LOG_COLOR = 0x1000;	 //  add colors to log messages based on severity  
 const Integer AI_LOG_SSS = 0x2000;	 //  show messages about sub-surface scattering pointclouds  
 //////////////////////////////////////////////////
+//  overrides 
+//////////////////////////////////////////////////
 //  classes 
 //////////////////////////////////////////////////
 //  global-scope functions 

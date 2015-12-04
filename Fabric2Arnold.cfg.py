@@ -14,9 +14,7 @@ xml_dir = 'DoxygenXML/xml/'
 cppToKLTypeMapping.update( {
     'AtByte' : 'UInt8',
     'AtBBox': 'Box3',
-    'AtRGB': 'RGB',
-    'AtColor': 'RGB',
-    'AtRGBA': 'Color',
+    'AtRGB': 'Color',
     'AtEnum': 'String[]',
     'AtUInt16' : 'UInt16',
     'AtUInt32' : 'UInt32',
@@ -24,7 +22,6 @@ cppToKLTypeMapping.update( {
     'AtPoint' : 'Vec3',
     'AtVector' : 'Vec3',
     'AtPoint2' : 'Vec2',
-    'AtVector2' : 'Vec2',
     'AtMatrix' : 'Mat44',
 } )
 
@@ -41,7 +38,9 @@ cppToKLTypeMapping.update( {
 # NOTE: The alias must be named the same as the C++ type
 #
 kl_type_aliases.update( {
-    'AtString' : 'String'
+    'AtString' : 'String',
+    'AtColor' : 'Color',
+    'AtRGBA' : 'Color'
 } )
 
 #
@@ -64,7 +63,6 @@ opaque_type_wrappers += [
     'AtMetaDataIterator',
     'AtUserParamIterator',
     'AtTextureHandle',
-    'AtShaderGlobals',
     'AtScrSample',
     'AtNodeIterator',
     'AtNodeEntryIterator',
@@ -93,6 +91,14 @@ filesToProcess = [
     'ai_universe.h',
 ]
 
+# If you need to manually set any ordering, specify the files
+# in this list and they will be added to the FPM last, in ther
+# order specified here.
+fpm_enforced_order = [
+    "ai_shaderglobals.kl",
+    "ai_ray.kl",
+    "a2fPluginMgr.kl"
+]
 # Any elements named in this list will not be exported
 elementsToIgnore = [
     'AtCameraNodeMethods',
@@ -121,11 +127,29 @@ custom_add_to_file = {
                         'UInt8 AtParamValue.asUInt8() = "_fe_AtParamValueAsUInt8";\n'
                         'UInt32 AtParamValue.asUInt32() = "_fe_AtParamValueAsUInt32";\n'
                         'SInt32 AtParamValue.asSInt32() = "_fe_AtParamValueAsSInt32";\n'
+                        'Boolean AtParamValue.asBoolean() = "_fe_AtParamValueAsBoolean";\n'
                         'Float32 AtParamValue.asFloat32() = "_fe_AtParamValueAsFloat32";\n'
+                        'Color AtParamValue.asRGB() = "_fe_AtParamValueAsRGB";\n'
+                        'Color AtParamValue.asRGBA() = "_fe_AtParamValueAsRGBA";\n'
                         'Vec3 AtParamValue.asVec3() = "_fe_AtParamValueAsVec3";\n'
+                        'Vec2 AtParamValue.asVec2() = "_fe_AtParamValueAsVec2";\n'
+                        'Data AtParamValue.asData() = "_fe_AtParamValueAsData";\n'
                         'Mat44 AtParamValue.asMat44() = "_fe_AtParamValueAsMat44";\n'
                         'String AtParamValue.asString() = "_fe_AtParamValueAsString";\n'
-                        'AtArray AtParamValue.asAtArray() = "_fe_AtParamValueAsAtArray";\n',
+                        'AtArray AtParamValue.asAtArray() = "_fe_AtParamValueAsAtArray";\n'
+                        '\n'
+                        'AtParamValue.setUInt8(UInt8 val) = "_fe_AtParamValueSetUInt8";\n'
+                        'AtParamValue.setUInt32(UInt32 val) = "_fe_AtParamValueSetUInt32";\n'
+                        'AtParamValue.setSInt32(SInt32 val) = "_fe_AtParamValueSetSInt32";\n'
+                        'AtParamValue.setFloat32(Float32 val) = "_fe_AtParamValueSetFloat32";\n'
+                        'AtParamValue.setRGB(Color val) = "_fe_AtParamValueSetRGB";\n'
+                        'AtParamValue.setRGBA(Color val) = "_fe_AtParamValueSetRGBA";\n'
+                        'AtParamValue.setVec3(Vec3 val) = "_fe_AtParamValueSetVec3";\n'
+                        'AtParamValue.setVec2(Vec2 val) = "_fe_AtParamValueSetVec2";\n'
+                        'AtParamValue.setData(Data val) = "_fe_AtParamValueSetData";\n'
+                        'AtParamValue.setMat44(Mat44 val) = "_fe_AtParamValueSetMat44";\n'
+                        'AtParamValue.setString(String val) = "_fe_AtParamValueSetString";\n'
+                        'AtParamValue.setAtArray(AtArray val) = "_fe_AtParamValueSetAtArray";\n',
 
     'ai_array.h' :      'Mat44 AiArrayGetMtxFunc(AtArray a, UInt32 i) = "_fe_AiArrayGetMtxFunc";\n\n'
                         'function Boolean AiArraySetBool(io AtArray a, Boolean val[]) = "_fe_AiArraySetBoolArr";\n'
@@ -156,7 +180,7 @@ custom_add_to_file = {
                         #'function Boolean AiArrayGetStr(io AtArray a, io String val<>) = "_fe_AiArrayGetStrArr";\n'
                         #'function Boolean AiArrayGetPtr(io AtArray a, io Data val<>) = "_fe_AiArrayGetPtrArr";\n'
 
-    'ai_nodes.h' :      'Mat44 AiNodeGetMatrix(AtNode node, String param) = "_fe_AiNodeGetMatrix";\n\n'
+    'ai_nodes.h' :      'Mat44 AiNodeGetMatrix(AtNode node, String param) = "_fe_AiNodeGetMatrix";\n\n',
 }
 
 #####

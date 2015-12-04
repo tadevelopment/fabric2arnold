@@ -1,8 +1,6 @@
-
-
 /**
  * This interface defines the methods required by an arnold shader
- */
+ *
 
 
 
@@ -15,3 +13,4 @@ interface a2fPluginShader
 
     evaluate(AtNode node, AtShaderGlobals globals);
 };
+*/

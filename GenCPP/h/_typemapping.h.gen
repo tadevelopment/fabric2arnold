@@ -26,16 +26,6 @@ inline bool AtLicenseInfo_to_KLAtLicenseInfo(const AtLicenseInfo* const & from, 
   return true; 
 }
 
-inline bool RGB_to_AtColor(const Fabric::EDK::KL::RGB & from, AtColor & to) { 
-  #pragma message("Implement Me")
-  return true;
-}
-
-inline bool AtColor_to_RGB(const AtColor & from, Fabric::EDK::KL::RGB & to) {
-  #pragma message("Implement Me")
-  return true; 
-}
-
 inline bool KLAtCameraOutput_to_CPAtCameraOutput(const Fabric::EDK::KL::AtCameraOutput & from, AtCameraOutput & to) { 
   #pragma message("Implement Me")
   return true;
@@ -52,6 +42,16 @@ inline bool String_to_char(const Fabric::EDK::KL::String & from, char* & to) {
 }
 
 inline bool char_to_String(const char* const & from, Fabric::EDK::KL::String & to) {
+  #pragma message("Implement Me")
+  return true; 
+}
+
+inline bool KLColor_to_CPAtColor(const Fabric::EDK::KL::AtColor & from, AtColor & to) { 
+  #pragma message("Implement Me")
+  return true;
+}
+
+inline bool CPAtColor_to_KLColor(const AtColor & from, Fabric::EDK::KL::AtColor & to) {
   #pragma message("Implement Me")
   return true; 
 }
@@ -136,6 +136,16 @@ inline bool CPAtCameraInput_to_KLAtCameraInput(const AtCameraInput & from, Fabri
   return true; 
 }
 
+inline bool Mat44_to_AtMatrix(const Fabric::EDK::KL::Mat44 & from, AtMatrix & to) { 
+  #pragma message("Implement Me")
+  return true;
+}
+
+inline bool AtMatrix_to_Mat44(const AtMatrix & from, Fabric::EDK::KL::Mat44 & to) {
+  #pragma message("Implement Me")
+  return true; 
+}
+
 inline bool KLAtNodeLib_to_CPAtNodeLib(const Fabric::EDK::KL::AtNodeLib & from, AtNodeLib & to) { 
   #pragma message("Implement Me")
   return true;
@@ -156,22 +166,32 @@ inline bool AtArray_to_KLArray(const AtArray* const & from, Fabric::EDK::KL::AtA
   return true; 
 }
 
-inline bool Mat44_to_AtMatrix(const Fabric::EDK::KL::Mat44 & from, AtMatrix & to) { 
+inline bool KlAtShaderGlobals_to_AtShaderGlobals(const Fabric::EDK::KL::AtShaderGlobals & from, AtShaderGlobals* & to) { 
   #pragma message("Implement Me")
   return true;
 }
 
-inline bool AtMatrix_to_Mat44(const AtMatrix & from, Fabric::EDK::KL::Mat44 & to) {
+inline bool AtShaderGlobals_to_KLAtShaderGlobals(const AtShaderGlobals* const & from, Fabric::EDK::KL::AtShaderGlobals & to) {
   #pragma message("Implement Me")
   return true; 
 }
 
-inline bool Color_to_AtRGBA(const Fabric::EDK::KL::Color & from, AtRGBA & to) { 
+inline bool Color_to_AtRGB(const Fabric::EDK::KL::Color & from, AtRGB & to) { 
   #pragma message("Implement Me")
   return true;
 }
 
-inline bool AtRGBA_to_Color(const AtRGBA & from, Fabric::EDK::KL::Color & to) {
+inline bool AtRGB_to_Color(const AtRGB & from, Fabric::EDK::KL::Color & to) {
+  #pragma message("Implement Me")
+  return true; 
+}
+
+inline bool KLColor_to_CPAtRGBA(const Fabric::EDK::KL::AtRGBA & from, AtRGBA & to) { 
+  #pragma message("Implement Me")
+  return true;
+}
+
+inline bool CPAtRGBA_to_KLColor(const AtRGBA & from, Fabric::EDK::KL::AtRGBA & to) {
   #pragma message("Implement Me")
   return true; 
 }
@@ -186,12 +206,12 @@ inline bool AtAOVEntry_to_KLAtAOVEntry(const AtAOVEntry* const & from, Fabric::E
   return true; 
 }
 
-inline bool Vec2_to_AtVector2(const Fabric::EDK::KL::Vec2 & from, AtVector2 & to) { 
+inline bool Vec2_to_AtPoint2(const Fabric::EDK::KL::Vec2 & from, AtPoint2 & to) { 
   #pragma message("Implement Me")
   return true;
 }
 
-inline bool AtVector2_to_Vec2(const AtVector2 & from, Fabric::EDK::KL::Vec2 & to) {
+inline bool AtPoint2_to_Vec2(const AtPoint2 & from, Fabric::EDK::KL::Vec2 & to) {
   #pragma message("Implement Me")
   return true; 
 }

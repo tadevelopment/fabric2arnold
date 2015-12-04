@@ -28,6 +28,7 @@
 #include "AtBucket.h"
 #include "AtCameraInput.h"
 #include "AtCameraOutput.h"
+#include "AtColor.h"
 #include "AtDisplayCallback.h"
 #include "AtLicenseInfo.h"
 #include "AtList.h"
@@ -44,6 +45,7 @@
 #include "AtParamIterator.h"
 #include "AtParamValue.h"
 #include "AtParamValue_functions.h"
+#include "AtRGBA.h"
 #include "AtRay.h"
 #include "AtScrSample.h"
 #include "AtShaderGlobals.h"
@@ -68,7 +70,6 @@
 #include "Vec3_d.h"
 #include "Vec4.h"
 #include "Xfo.h"
-#include "a2fPluginShader.h"
 #include "a2fPluginShaderInterface.h"
 #include "global_functions.h"
 

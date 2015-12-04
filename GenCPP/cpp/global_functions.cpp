@@ -1490,7 +1490,7 @@ FABRIC_EXT_EXPORT void _fe_AiArrayInterpolateVec(
 }
 
 FABRIC_EXT_EXPORT void _fe_AiArrayInterpolateRGB(
-  Fabric::EDK::KL::Traits< Fabric::EDK::KL::RGB >::Result _result,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::Color >::Result _result,
   Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtArray >::INParam array,
   Fabric::EDK::KL::Traits< Fabric::EDK::KL::Float32 >::INParam time,
   Fabric::EDK::KL::Traits< Fabric::EDK::KL::UInt32 >::INParam idx
@@ -1514,7 +1514,7 @@ FABRIC_EXT_EXPORT void _fe_AiArrayInterpolateRGB(
     return;
   }
   AtColor f2a_result = AiArrayInterpolateRGB(f2aArray, f2aTime, f2aIdx);
-  AtColor_to_RGB(f2a_result, _result);
+  CPAtColor_to_KLColor(f2a_result, _result);
   F2A_CATCH_STATEMENT("_fe_AiArrayInterpolateRGB")
 }
 
@@ -1543,7 +1543,7 @@ FABRIC_EXT_EXPORT void _fe_AiArrayInterpolateRGBA(
     return;
   }
   AtRGBA f2a_result = AiArrayInterpolateRGBA(f2aArray, f2aTime, f2aIdx);
-  AtRGBA_to_Color(f2a_result, _result);
+  CPAtRGBA_to_KLColor(f2a_result, _result);
   F2A_CATCH_STATEMENT("_fe_AiArrayInterpolateRGBA")
 }
 
@@ -1792,7 +1792,7 @@ FABRIC_EXT_EXPORT Fabric::EDK::KL::Float32 _fe_AiArrayGetFltFunc(
 }
 
 FABRIC_EXT_EXPORT void _fe_AiArrayGetRGBFunc(
-  Fabric::EDK::KL::Traits< Fabric::EDK::KL::RGB >::Result _result,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::Color >::Result _result,
   Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtArray >::INParam a,
   Fabric::EDK::KL::Traits< Fabric::EDK::KL::UInt32 >::INParam i,
   Fabric::EDK::KL::Traits< Fabric::EDK::KL::String >::INParam _val,
@@ -1822,7 +1822,7 @@ FABRIC_EXT_EXPORT void _fe_AiArrayGetRGBFunc(
     return;
   }
   AtRGB f2a_result = AiArrayGetRGBFunc(f2aA, f2aI, f2a_val, f2aLine);
-  AtColor_to_RGB(f2a_result, _result);
+  AtRGB_to_Color(f2a_result, _result);
   F2A_CATCH_STATEMENT("_fe_AiArrayGetRGBFunc")
 }
 
@@ -1857,7 +1857,7 @@ FABRIC_EXT_EXPORT void _fe_AiArrayGetRGBAFunc(
     return;
   }
   AtRGBA f2a_result = AiArrayGetRGBAFunc(f2aA, f2aI, f2a_val, f2aLine);
-  AtRGBA_to_Color(f2a_result, _result);
+  CPAtRGBA_to_KLColor(f2a_result, _result);
   F2A_CATCH_STATEMENT("_fe_AiArrayGetRGBAFunc")
 }
 
@@ -1927,7 +1927,7 @@ FABRIC_EXT_EXPORT void _fe_AiArrayGetPnt2Func(
     return;
   }
   AtPoint2 f2a_result = AiArrayGetPnt2Func(f2aA, f2aI, f2a_val, f2aLine);
-  AtVector2_to_Vec2(f2a_result, _result);
+  AtPoint2_to_Vec2(f2a_result, _result);
   F2A_CATCH_STATEMENT("_fe_AiArrayGetPnt2Func")
 }
 
@@ -2290,7 +2290,7 @@ FABRIC_EXT_EXPORT Fabric::EDK::KL::Boolean _fe_AiArraySetFltFunc(
 FABRIC_EXT_EXPORT Fabric::EDK::KL::Boolean _fe_AiArraySetRGBFunc(
   Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtArray >::IOParam a,
   Fabric::EDK::KL::Traits< Fabric::EDK::KL::UInt32 >::INParam i,
-  Fabric::EDK::KL::Traits< Fabric::EDK::KL::RGB >::INParam val,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::Color >::INParam val,
   Fabric::EDK::KL::Traits< Fabric::EDK::KL::String >::INParam _val,
   Fabric::EDK::KL::Traits< Fabric::EDK::KL::SInt32 >::INParam line
 )
@@ -2307,8 +2307,8 @@ FABRIC_EXT_EXPORT Fabric::EDK::KL::Boolean _fe_AiArraySetRGBFunc(
     setError("Error in _fe_AiArraySetRGBFunc. unable to convert: i");
     return 0;
   }
-  AtColor f2aVal;
-  if(!RGB_to_AtColor(val, f2aVal)){
+  AtRGB f2aVal;
+  if(!Color_to_AtRGB(val, f2aVal)){
     setError("Error in _fe_AiArraySetRGBFunc. unable to convert: val");
     return 0;
   }
@@ -2351,7 +2351,7 @@ FABRIC_EXT_EXPORT Fabric::EDK::KL::Boolean _fe_AiArraySetRGBAFunc(
     return 0;
   }
   AtRGBA f2aVal;
-  if(!Color_to_AtRGBA(val, f2aVal)){
+  if(!KLColor_to_CPAtRGBA(val, f2aVal)){
     setError("Error in _fe_AiArraySetRGBAFunc. unable to convert: val");
     return 0;
   }
@@ -2436,8 +2436,8 @@ FABRIC_EXT_EXPORT Fabric::EDK::KL::Boolean _fe_AiArraySetPnt2Func(
     setError("Error in _fe_AiArraySetPnt2Func. unable to convert: i");
     return 0;
   }
-  AtVector2 f2aVal;
-  if(!Vec2_to_AtVector2(val, f2aVal)){
+  AtPoint2 f2aVal;
+  if(!Vec2_to_AtPoint2(val, f2aVal)){
     setError("Error in _fe_AiArraySetPnt2Func. unable to convert: val");
     return 0;
   }
@@ -3211,7 +3211,7 @@ FABRIC_EXT_EXPORT void _fe_AiMetaDataSetRGB(
   Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtMetaDataStore >::IOParam mds,
   Fabric::EDK::KL::Traits< Fabric::EDK::KL::String >::INParam param,
   Fabric::EDK::KL::Traits< Fabric::EDK::KL::String >::INParam name,
-  Fabric::EDK::KL::Traits< Fabric::EDK::KL::RGB >::INParam value
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::Color >::INParam value
 )
 {
   F2A_TRY_STATEMENT("_fe_AiMetaDataSetRGB")
@@ -3232,7 +3232,7 @@ FABRIC_EXT_EXPORT void _fe_AiMetaDataSetRGB(
     return;
   }
   AtColor f2aValue;
-  if(!RGB_to_AtColor(value, f2aValue)){
+  if(!KLColor_to_CPAtColor(value, f2aValue)){
     setError("Error in _fe_AiMetaDataSetRGB. unable to convert: value");
     return;
   }
@@ -3246,7 +3246,7 @@ FABRIC_EXT_EXPORT void _fe_AiMetaDataSetRGBAtString(
   Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtMetaDataStore >::IOParam mds,
   Fabric::EDK::KL::Traits< Fabric::EDK::KL::String >::INParam param,
   Fabric::EDK::KL::Traits< Fabric::EDK::KL::String >::INParam name,
-  Fabric::EDK::KL::Traits< Fabric::EDK::KL::RGB >::INParam value
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::Color >::INParam value
 )
 {
   F2A_TRY_STATEMENT("_fe_AiMetaDataSetRGBAtString")
@@ -3267,7 +3267,7 @@ FABRIC_EXT_EXPORT void _fe_AiMetaDataSetRGBAtString(
     return;
   }
   AtColor f2aValue;
-  if(!RGB_to_AtColor(value, f2aValue)){
+  if(!KLColor_to_CPAtColor(value, f2aValue)){
     setError("Error in _fe_AiMetaDataSetRGBAtString. unable to convert: value");
     return;
   }
@@ -3441,8 +3441,8 @@ FABRIC_EXT_EXPORT void _fe_AiMetaDataSetPnt2(
     setError("Error in _fe_AiMetaDataSetPnt2. unable to convert: name");
     return;
   }
-  AtVector2 f2aValue;
-  if(!Vec2_to_AtVector2(value, f2aValue)){
+  AtPoint2 f2aValue;
+  if(!Vec2_to_AtPoint2(value, f2aValue)){
     setError("Error in _fe_AiMetaDataSetPnt2. unable to convert: value");
     return;
   }
@@ -3476,8 +3476,8 @@ FABRIC_EXT_EXPORT void _fe_AiMetaDataSetPnt2AtString(
     setError("Error in _fe_AiMetaDataSetPnt2AtString. unable to convert: name");
     return;
   }
-  AtVector2 f2aValue;
-  if(!Vec2_to_AtVector2(value, f2aValue)){
+  AtPoint2 f2aValue;
+  if(!Vec2_to_AtPoint2(value, f2aValue)){
     setError("Error in _fe_AiMetaDataSetPnt2AtString. unable to convert: value");
     return;
   }
@@ -3672,7 +3672,7 @@ FABRIC_EXT_EXPORT Fabric::EDK::KL::Boolean _fe_AiMetaDataGetRGBAtString(
   Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtNodeEntry >::INParam entry,
   Fabric::EDK::KL::Traits< Fabric::EDK::KL::String >::INParam param,
   Fabric::EDK::KL::Traits< Fabric::EDK::KL::String >::INParam name,
-  Fabric::EDK::KL::Traits< Fabric::EDK::KL::RGB >::IOParam value
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::Color >::IOParam value
 )
 {
   F2A_TRY_STATEMENT("_fe_AiMetaDataGetRGBAtString")
@@ -3693,14 +3693,14 @@ FABRIC_EXT_EXPORT Fabric::EDK::KL::Boolean _fe_AiMetaDataGetRGBAtString(
     return 0;
   }
   AtColor f2aValue;
-  if(!RGB_to_AtColor(value, f2aValue)){
+  if(!KLColor_to_CPAtColor(value, f2aValue)){
     setError("Error in _fe_AiMetaDataGetRGBAtString. unable to convert: value");
     return 0;
   }
   bool f2a_result = AiMetaDataGetRGBAtString(f2aEntry, f2aParam, f2aName, &f2aValue);
   Fabric::EDK::KL::Boolean _result;
   bool_to_Boolean(f2a_result, _result);
-  AtColor_to_RGB(f2aValue, value);
+  CPAtColor_to_KLColor(f2aValue, value);
 
   F2A_CATCH_STATEMENT_RETURN("_fe_AiMetaDataGetRGBAtString", )
 }
@@ -3803,15 +3803,15 @@ FABRIC_EXT_EXPORT Fabric::EDK::KL::Boolean _fe_AiMetaDataGetPnt2AtString(
     setError("Error in _fe_AiMetaDataGetPnt2AtString. unable to convert: name");
     return 0;
   }
-  AtVector2 f2aValue;
-  if(!Vec2_to_AtVector2(value, f2aValue)){
+  AtPoint2 f2aValue;
+  if(!Vec2_to_AtPoint2(value, f2aValue)){
     setError("Error in _fe_AiMetaDataGetPnt2AtString. unable to convert: value");
     return 0;
   }
   bool f2a_result = AiMetaDataGetPnt2AtString(f2aEntry, f2aParam, f2aName, &f2aValue);
   Fabric::EDK::KL::Boolean _result;
   bool_to_Boolean(f2a_result, _result);
-  AtVector2_to_Vec2(f2aValue, value);
+  AtPoint2_to_Vec2(f2aValue, value);
 
   F2A_CATCH_STATEMENT_RETURN("_fe_AiMetaDataGetPnt2AtString", )
 }
@@ -5653,7 +5653,7 @@ FABRIC_EXT_EXPORT Fabric::EDK::KL::Float32 _fe_AiNodeGetFltAtString(
 }
 
 FABRIC_EXT_EXPORT void _fe_AiNodeGetRGBAtString(
-  Fabric::EDK::KL::Traits< Fabric::EDK::KL::RGB >::Result _result,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::Color >::Result _result,
   Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtNode >::INParam node,
   Fabric::EDK::KL::Traits< Fabric::EDK::KL::String >::INParam param
 )
@@ -5671,7 +5671,7 @@ FABRIC_EXT_EXPORT void _fe_AiNodeGetRGBAtString(
     return;
   }
   AtRGB f2a_result = AiNodeGetRGBAtString(f2aNode, f2aParam);
-  AtColor_to_RGB(f2a_result, _result);
+  AtRGB_to_Color(f2a_result, _result);
   F2A_CATCH_STATEMENT("_fe_AiNodeGetRGBAtString")
 }
 
@@ -5694,7 +5694,7 @@ FABRIC_EXT_EXPORT void _fe_AiNodeGetRGBAAtString(
     return;
   }
   AtRGBA f2a_result = AiNodeGetRGBAAtString(f2aNode, f2aParam);
-  AtRGBA_to_Color(f2a_result, _result);
+  CPAtRGBA_to_KLColor(f2a_result, _result);
   F2A_CATCH_STATEMENT("_fe_AiNodeGetRGBAAtString")
 }
 
@@ -5763,7 +5763,7 @@ FABRIC_EXT_EXPORT void _fe_AiNodeGetPnt2AtString(
     return;
   }
   AtPoint2 f2a_result = AiNodeGetPnt2AtString(f2aNode, f2aParam);
-  AtVector2_to_Vec2(f2a_result, _result);
+  AtPoint2_to_Vec2(f2a_result, _result);
   F2A_CATCH_STATEMENT("_fe_AiNodeGetPnt2AtString")
 }
 
@@ -5939,198 +5939,6 @@ FABRIC_EXT_EXPORT void _fe_AiLoadPlugin(
   F2A_CATCH_STATEMENT("_fe_AiLoadPlugin")
 }
 
-FABRIC_EXT_EXPORT void _fe_AiMakeRay(
-  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtRay >::IOParam ray,
-  Fabric::EDK::KL::Traits< Fabric::EDK::KL::UInt32 >::INParam type,
-  Fabric::EDK::KL::Traits< Fabric::EDK::KL::Vec3 >::INParam origin,
-  Fabric::EDK::KL::Traits< Fabric::EDK::KL::Vec3 >::INParam dir,
-  Fabric::EDK::KL::Traits< Fabric::EDK::KL::Float64 >::INParam maxdist,
-  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtShaderGlobals >::INParam sg
-)
-{
-  F2A_TRY_STATEMENT("_fe_AiMakeRay")
-
-  AtRay f2aRay;
-  if(!KlAtRay_to_AtRay(ray, f2aRay)){
-    setError("Error in _fe_AiMakeRay. unable to convert: ray");
-    return;
-  }
-  unsigned int f2aType;
-  if(!UInt32_to_unsigned_int(type, f2aType)){
-    setError("Error in _fe_AiMakeRay. unable to convert: type");
-    return;
-  }
-  AtPoint f2aOrigin;
-  if(!Vec3_to_AtPoint(origin, f2aOrigin)){
-    setError("Error in _fe_AiMakeRay. unable to convert: origin");
-    return;
-  }
-  AtPoint f2aDir;
-  if(!Vec3_to_AtPoint(dir, f2aDir)){
-    setError("Error in _fe_AiMakeRay. unable to convert: dir");
-    return;
-  }
-  double f2aMaxdist;
-  if(!Float64_to_double(maxdist, f2aMaxdist)){
-    setError("Error in _fe_AiMakeRay. unable to convert: maxdist");
-    return;
-  }
-  AtShaderGlobals* f2aSg = NULL;
-  if(!KLAtShaderGlobals_to_CPAtShaderGlobals(sg, f2aSg)){
-    setError("Error in _fe_AiMakeRay. unable to convert: sg");
-    return;
-  }
-  AiMakeRay(&f2aRay, f2aType, &f2aOrigin, &f2aDir, f2aMaxdist, f2aSg);
-  AtRay_to_KLAtRay(f2aRay, ray);
-
-  F2A_CATCH_STATEMENT("_fe_AiMakeRay")
-}
-
-FABRIC_EXT_EXPORT void _fe_AiReflectRay(
-  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtRay >::IOParam ray,
-  Fabric::EDK::KL::Traits< Fabric::EDK::KL::Vec3 >::INParam normal,
-  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtShaderGlobals >::INParam sg
-)
-{
-  F2A_TRY_STATEMENT("_fe_AiReflectRay")
-
-  AtRay f2aRay;
-  if(!KlAtRay_to_AtRay(ray, f2aRay)){
-    setError("Error in _fe_AiReflectRay. unable to convert: ray");
-    return;
-  }
-  AtPoint f2aNormal;
-  if(!Vec3_to_AtPoint(normal, f2aNormal)){
-    setError("Error in _fe_AiReflectRay. unable to convert: normal");
-    return;
-  }
-  AtShaderGlobals* f2aSg = NULL;
-  if(!KLAtShaderGlobals_to_CPAtShaderGlobals(sg, f2aSg)){
-    setError("Error in _fe_AiReflectRay. unable to convert: sg");
-    return;
-  }
-  AiReflectRay(&f2aRay, &f2aNormal, f2aSg);
-  AtRay_to_KLAtRay(f2aRay, ray);
-
-  F2A_CATCH_STATEMENT("_fe_AiReflectRay")
-}
-
-FABRIC_EXT_EXPORT Fabric::EDK::KL::Boolean _fe_AiRefractRay(
-  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtRay >::IOParam ray,
-  Fabric::EDK::KL::Traits< Fabric::EDK::KL::Vec3 >::INParam normal,
-  Fabric::EDK::KL::Traits< Fabric::EDK::KL::Float32 >::INParam n1,
-  Fabric::EDK::KL::Traits< Fabric::EDK::KL::Float32 >::INParam n2,
-  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtShaderGlobals >::INParam sg
-)
-{
-  F2A_TRY_STATEMENT("_fe_AiRefractRay")
-
-  AtRay f2aRay;
-  if(!KlAtRay_to_AtRay(ray, f2aRay)){
-    setError("Error in _fe_AiRefractRay. unable to convert: ray");
-    return 0;
-  }
-  AtPoint f2aNormal;
-  if(!Vec3_to_AtPoint(normal, f2aNormal)){
-    setError("Error in _fe_AiRefractRay. unable to convert: normal");
-    return 0;
-  }
-  float f2aN1;
-  if(!Float32_to_float(n1, f2aN1)){
-    setError("Error in _fe_AiRefractRay. unable to convert: n1");
-    return 0;
-  }
-  float f2aN2;
-  if(!Float32_to_float(n2, f2aN2)){
-    setError("Error in _fe_AiRefractRay. unable to convert: n2");
-    return 0;
-  }
-  AtShaderGlobals* f2aSg = NULL;
-  if(!KLAtShaderGlobals_to_CPAtShaderGlobals(sg, f2aSg)){
-    setError("Error in _fe_AiRefractRay. unable to convert: sg");
-    return 0;
-  }
-  bool f2a_result = AiRefractRay(&f2aRay, &f2aNormal, f2aN1, f2aN2, f2aSg);
-  Fabric::EDK::KL::Boolean _result;
-  bool_to_Boolean(f2a_result, _result);
-  AtRay_to_KLAtRay(f2aRay, ray);
-
-  F2A_CATCH_STATEMENT_RETURN("_fe_AiRefractRay", )
-}
-
-FABRIC_EXT_EXPORT Fabric::EDK::KL::Boolean _fe_AiTrace(
-  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtRay >::INParam ray,
-  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtScrSample >::IOParam sample
-)
-{
-  F2A_TRY_STATEMENT("_fe_AiTrace")
-
-  AtRay f2aRay;
-  if(!KlAtRay_to_AtRay(ray, f2aRay)){
-    setError("Error in _fe_AiTrace. unable to convert: ray");
-    return 0;
-  }
-  AtScrSample* f2aSample = NULL;
-  if(!KLAtScrSample_to_CPAtScrSample(sample, f2aSample)){
-    setError("Error in _fe_AiTrace. unable to convert: sample");
-    return 0;
-  }
-  bool f2a_result = AiTrace(&f2aRay, f2aSample);
-  Fabric::EDK::KL::Boolean _result;
-  bool_to_Boolean(f2a_result, _result);
-  CPAtScrSample_to_KLAtScrSample(f2aSample, sample);
-
-  F2A_CATCH_STATEMENT_RETURN("_fe_AiTrace", )
-}
-
-FABRIC_EXT_EXPORT void _fe_AiTraceBackground(
-  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtRay >::INParam ray,
-  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtScrSample >::IOParam sample
-)
-{
-  F2A_TRY_STATEMENT("_fe_AiTraceBackground")
-
-  AtRay f2aRay;
-  if(!KlAtRay_to_AtRay(ray, f2aRay)){
-    setError("Error in _fe_AiTraceBackground. unable to convert: ray");
-    return;
-  }
-  AtScrSample* f2aSample = NULL;
-  if(!KLAtScrSample_to_CPAtScrSample(sample, f2aSample)){
-    setError("Error in _fe_AiTraceBackground. unable to convert: sample");
-    return;
-  }
-  AiTraceBackground(&f2aRay, f2aSample);
-  CPAtScrSample_to_KLAtScrSample(f2aSample, sample);
-
-  F2A_CATCH_STATEMENT("_fe_AiTraceBackground")
-}
-
-FABRIC_EXT_EXPORT Fabric::EDK::KL::Boolean _fe_AiTraceProbe(
-  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtRay >::INParam ray,
-  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtShaderGlobals >::IOParam sgout
-)
-{
-  F2A_TRY_STATEMENT("_fe_AiTraceProbe")
-
-  AtRay f2aRay;
-  if(!KlAtRay_to_AtRay(ray, f2aRay)){
-    setError("Error in _fe_AiTraceProbe. unable to convert: ray");
-    return 0;
-  }
-  AtShaderGlobals* f2aSgout = NULL;
-  if(!KLAtShaderGlobals_to_CPAtShaderGlobals(sgout, f2aSgout)){
-    setError("Error in _fe_AiTraceProbe. unable to convert: sgout");
-    return 0;
-  }
-  bool f2a_result = AiTraceProbe(&f2aRay, f2aSgout);
-  Fabric::EDK::KL::Boolean _result;
-  bool_to_Boolean(f2a_result, _result);
-  CPAtShaderGlobals_to_KLAtShaderGlobals(f2aSgout, sgout);
-
-  F2A_CATCH_STATEMENT_RETURN("_fe_AiTraceProbe", )
-}
-
 FABRIC_EXT_EXPORT void _fe_AiTextureParamsSetDefaults(
   Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtTextureParams >::IOParam params
 )
@@ -6176,7 +5984,7 @@ FABRIC_EXT_EXPORT void _fe_AiTextureHandleAccess(
   F2A_TRY_STATEMENT("_fe_AiTextureHandleAccess")
 
   AtShaderGlobals* f2aSg = NULL;
-  if(!KLAtShaderGlobals_to_CPAtShaderGlobals(sg, f2aSg)){
+  if(!KlAtShaderGlobals_to_AtShaderGlobals(sg, f2aSg)){
     setError("Error in _fe_AiTextureHandleAccess. unable to convert: sg");
     return;
   }
@@ -6196,7 +6004,7 @@ FABRIC_EXT_EXPORT void _fe_AiTextureHandleAccess(
     return;
   }
   AtRGBA f2a_result = AiTextureHandleAccess(f2aSg, f2aHandle, &f2aParams, &f2aSuccess/*=NULL*/);
-  AtRGBA_to_Color(f2a_result, _result);  CPAtTextureHandle_to_KLAtTextureHandle(f2aHandle, handle);
+  CPAtRGBA_to_KLColor(f2a_result, _result);  CPAtTextureHandle_to_KLAtTextureHandle(f2aHandle, handle);
   bool_to_Boolean(f2aSuccess, success);
 
   F2A_CATCH_STATEMENT("_fe_AiTextureHandleAccess")
@@ -6230,7 +6038,7 @@ FABRIC_EXT_EXPORT void _fe_AiTextureAccess(
   F2A_TRY_STATEMENT("_fe_AiTextureAccess")
 
   AtShaderGlobals* f2aSg = NULL;
-  if(!KLAtShaderGlobals_to_CPAtShaderGlobals(sg, f2aSg)){
+  if(!KlAtShaderGlobals_to_AtShaderGlobals(sg, f2aSg)){
     setError("Error in _fe_AiTextureAccess. unable to convert: sg");
     return;
   }
@@ -6250,7 +6058,7 @@ FABRIC_EXT_EXPORT void _fe_AiTextureAccess(
     return;
   }
   AtRGBA f2a_result = AiTextureAccess(f2aSg, f2aFilename, &f2aParams, &f2aSuccess/*=NULL*/);
-  AtRGBA_to_Color(f2a_result, _result);  bool_to_Boolean(f2aSuccess, success);
+  CPAtRGBA_to_KLColor(f2a_result, _result);  bool_to_Boolean(f2aSuccess, success);
 
   F2A_CATCH_STATEMENT("_fe_AiTextureAccess")
 }
@@ -6698,6 +6506,263 @@ FABRIC_EXT_EXPORT Fabric::EDK::KL::Boolean _fe_AiAOVIteratorFinished(
   F2A_CATCH_STATEMENT_RETURN("_fe_AiAOVIteratorFinished", )
 }
 
+FABRIC_EXT_EXPORT void _fe_SetAtDisplayCallback(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtNode >::INParam displayDriver,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtDisplayCallback >::INParam callback
+)
+{
+  F2A_TRY_STATEMENT("_fe_SetAtDisplayCallback")
+
+  AtNode* f2aDisplayDriver = NULL;
+  if(!KLAtNode_to_CPAtNode(displayDriver, f2aDisplayDriver)){
+    setError("Error in _fe_SetAtDisplayCallback. unable to convert: displayDriver");
+    return;
+  }
+  AtDisplayCallback f2aCallback;
+  if(!KlAtDisplayCallback_to_AtDisplayCallback(callback, f2aCallback)){
+    setError("Error in _fe_SetAtDisplayCallback. unable to convert: callback");
+    return;
+  }
+  SetDisplayDriverNode(f2aDisplayDriver);
+  AiNodeSetPtr(f2aDisplayDriver, "callback", (void*)f2aCallback);
+
+  F2A_CATCH_STATEMENT("_fe_SetAtDisplayCallback")
+}
+
+FABRIC_EXT_EXPORT void _fe_AiShaderGlobals(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtShaderGlobals >::Result _result
+)
+{
+  F2A_TRY_STATEMENT("_fe_AiShaderGlobals")
+
+  AtShaderGlobals* f2a_result = AiShaderGlobals();
+  F2A_CATCH_STATEMENT("_fe_AiShaderGlobals")
+}
+
+FABRIC_EXT_EXPORT void _fe_AiShaderGlobalsDestroy(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtShaderGlobals >::IOParam sg
+)
+{
+  F2A_TRY_STATEMENT("_fe_AiShaderGlobalsDestroy")
+
+  AtShaderGlobals* f2aSg = NULL;
+  if(!KlAtShaderGlobals_to_AtShaderGlobals(sg, f2aSg)){
+    setError("Error in _fe_AiShaderGlobalsDestroy. unable to convert: sg");
+    return;
+  }
+  AiShaderGlobalsDestroy(f2aSg);  AtShaderGlobals_to_KLAtShaderGlobals(f2aSg, sg);
+
+  F2A_CATCH_STATEMENT("_fe_AiShaderGlobalsDestroy")
+}
+
+FABRIC_EXT_EXPORT void _fe_GetParentAtShaderGlobals(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtShaderGlobals >::Result _result,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtShaderGlobals >::INParam globals
+)
+{
+  F2A_TRY_STATEMENT("_fe_GetParentAtShaderGlobals")
+
+  AtShaderGlobals* f2aGlobals = NULL;
+  if(!KlAtShaderGlobals_to_AtShaderGlobals(globals, f2aGlobals)){
+    setError("Error in _fe_GetParentAtShaderGlobals. unable to convert: globals");
+    return;
+  }
+  const AtShaderGlobals* f2a_result = f2aGlobals->psg;
+  F2A_CATCH_STATEMENT("_fe_GetParentAtShaderGlobals")
+}
+
+FABRIC_EXT_EXPORT void _fe_AiMakeRay(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtRay >::IOParam ray,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::UInt32 >::INParam type,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::Vec3 >::INParam origin,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::Vec3 >::INParam dir,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::Float64 >::INParam maxdist,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtShaderGlobals >::INParam sg
+)
+{
+  F2A_TRY_STATEMENT("_fe_AiMakeRay")
+
+  AtRay f2aRay;
+  if(!KlAtRay_to_AtRay(ray, f2aRay)){
+    setError("Error in _fe_AiMakeRay. unable to convert: ray");
+    return;
+  }
+  unsigned int f2aType;
+  if(!UInt32_to_unsigned_int(type, f2aType)){
+    setError("Error in _fe_AiMakeRay. unable to convert: type");
+    return;
+  }
+  AtPoint f2aOrigin;
+  if(!Vec3_to_AtPoint(origin, f2aOrigin)){
+    setError("Error in _fe_AiMakeRay. unable to convert: origin");
+    return;
+  }
+  AtPoint f2aDir;
+  if(!Vec3_to_AtPoint(dir, f2aDir)){
+    setError("Error in _fe_AiMakeRay. unable to convert: dir");
+    return;
+  }
+  double f2aMaxdist;
+  if(!Float64_to_double(maxdist, f2aMaxdist)){
+    setError("Error in _fe_AiMakeRay. unable to convert: maxdist");
+    return;
+  }
+  AtShaderGlobals* f2aSg = NULL;
+  if(!KlAtShaderGlobals_to_AtShaderGlobals(sg, f2aSg)){
+    setError("Error in _fe_AiMakeRay. unable to convert: sg");
+    return;
+  }
+  AiMakeRay(&f2aRay, f2aType, &f2aOrigin, &f2aDir, f2aMaxdist, f2aSg);
+  AtRay_to_KLAtRay(f2aRay, ray);
+
+  F2A_CATCH_STATEMENT("_fe_AiMakeRay")
+}
+
+FABRIC_EXT_EXPORT void _fe_AiReflectRay(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtRay >::IOParam ray,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::Vec3 >::INParam normal,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtShaderGlobals >::INParam sg
+)
+{
+  F2A_TRY_STATEMENT("_fe_AiReflectRay")
+
+  AtRay f2aRay;
+  if(!KlAtRay_to_AtRay(ray, f2aRay)){
+    setError("Error in _fe_AiReflectRay. unable to convert: ray");
+    return;
+  }
+  AtPoint f2aNormal;
+  if(!Vec3_to_AtPoint(normal, f2aNormal)){
+    setError("Error in _fe_AiReflectRay. unable to convert: normal");
+    return;
+  }
+  AtShaderGlobals* f2aSg = NULL;
+  if(!KlAtShaderGlobals_to_AtShaderGlobals(sg, f2aSg)){
+    setError("Error in _fe_AiReflectRay. unable to convert: sg");
+    return;
+  }
+  AiReflectRay(&f2aRay, &f2aNormal, f2aSg);
+  AtRay_to_KLAtRay(f2aRay, ray);
+
+  F2A_CATCH_STATEMENT("_fe_AiReflectRay")
+}
+
+FABRIC_EXT_EXPORT Fabric::EDK::KL::Boolean _fe_AiRefractRay(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtRay >::IOParam ray,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::Vec3 >::INParam normal,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::Float32 >::INParam n1,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::Float32 >::INParam n2,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtShaderGlobals >::INParam sg
+)
+{
+  F2A_TRY_STATEMENT("_fe_AiRefractRay")
+
+  AtRay f2aRay;
+  if(!KlAtRay_to_AtRay(ray, f2aRay)){
+    setError("Error in _fe_AiRefractRay. unable to convert: ray");
+    return 0;
+  }
+  AtPoint f2aNormal;
+  if(!Vec3_to_AtPoint(normal, f2aNormal)){
+    setError("Error in _fe_AiRefractRay. unable to convert: normal");
+    return 0;
+  }
+  float f2aN1;
+  if(!Float32_to_float(n1, f2aN1)){
+    setError("Error in _fe_AiRefractRay. unable to convert: n1");
+    return 0;
+  }
+  float f2aN2;
+  if(!Float32_to_float(n2, f2aN2)){
+    setError("Error in _fe_AiRefractRay. unable to convert: n2");
+    return 0;
+  }
+  AtShaderGlobals* f2aSg = NULL;
+  if(!KlAtShaderGlobals_to_AtShaderGlobals(sg, f2aSg)){
+    setError("Error in _fe_AiRefractRay. unable to convert: sg");
+    return 0;
+  }
+  bool f2a_result = AiRefractRay(&f2aRay, &f2aNormal, f2aN1, f2aN2, f2aSg);
+  Fabric::EDK::KL::Boolean _result;
+  bool_to_Boolean(f2a_result, _result);
+  AtRay_to_KLAtRay(f2aRay, ray);
+
+  F2A_CATCH_STATEMENT_RETURN("_fe_AiRefractRay", )
+}
+
+FABRIC_EXT_EXPORT Fabric::EDK::KL::Boolean _fe_AiTrace(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtRay >::INParam ray,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtScrSample >::IOParam sample
+)
+{
+  F2A_TRY_STATEMENT("_fe_AiTrace")
+
+  AtRay f2aRay;
+  if(!KlAtRay_to_AtRay(ray, f2aRay)){
+    setError("Error in _fe_AiTrace. unable to convert: ray");
+    return 0;
+  }
+  AtScrSample* f2aSample = NULL;
+  if(!KLAtScrSample_to_CPAtScrSample(sample, f2aSample)){
+    setError("Error in _fe_AiTrace. unable to convert: sample");
+    return 0;
+  }
+  bool f2a_result = AiTrace(&f2aRay, f2aSample);
+  Fabric::EDK::KL::Boolean _result;
+  bool_to_Boolean(f2a_result, _result);
+  CPAtScrSample_to_KLAtScrSample(f2aSample, sample);
+
+  F2A_CATCH_STATEMENT_RETURN("_fe_AiTrace", )
+}
+
+FABRIC_EXT_EXPORT void _fe_AiTraceBackground(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtRay >::INParam ray,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtScrSample >::IOParam sample
+)
+{
+  F2A_TRY_STATEMENT("_fe_AiTraceBackground")
+
+  AtRay f2aRay;
+  if(!KlAtRay_to_AtRay(ray, f2aRay)){
+    setError("Error in _fe_AiTraceBackground. unable to convert: ray");
+    return;
+  }
+  AtScrSample* f2aSample = NULL;
+  if(!KLAtScrSample_to_CPAtScrSample(sample, f2aSample)){
+    setError("Error in _fe_AiTraceBackground. unable to convert: sample");
+    return;
+  }
+  AiTraceBackground(&f2aRay, f2aSample);
+  CPAtScrSample_to_KLAtScrSample(f2aSample, sample);
+
+  F2A_CATCH_STATEMENT("_fe_AiTraceBackground")
+}
+
+FABRIC_EXT_EXPORT Fabric::EDK::KL::Boolean _fe_AiTraceProbe(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtRay >::INParam ray,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtShaderGlobals >::IOParam sgout
+)
+{
+  F2A_TRY_STATEMENT("_fe_AiTraceProbe")
+
+  AtRay f2aRay;
+  if(!KlAtRay_to_AtRay(ray, f2aRay)){
+    setError("Error in _fe_AiTraceProbe. unable to convert: ray");
+    return 0;
+  }
+  AtShaderGlobals* f2aSgout = NULL;
+  if(!KlAtShaderGlobals_to_AtShaderGlobals(sgout, f2aSgout)){
+    setError("Error in _fe_AiTraceProbe. unable to convert: sgout");
+    return 0;
+  }
+  bool f2a_result = AiTraceProbe(&f2aRay, f2aSgout);
+  Fabric::EDK::KL::Boolean _result;
+  bool_to_Boolean(f2a_result, _result);
+  AtShaderGlobals_to_KLAtShaderGlobals(f2aSgout, sgout);
+
+  F2A_CATCH_STATEMENT_RETURN("_fe_AiTraceProbe", )
+}
+
 FABRIC_EXT_EXPORT void _fe_a2fRegisterPlugin(
   Fabric::EDK::KL::Traits< Fabric::EDK::KL::ArnoldKLPluginIMgr >::IOParam mgr,
   Fabric::EDK::KL::Traits< Fabric::EDK::KL::SInt32 >::INParam type,
@@ -6730,27 +6795,4 @@ FABRIC_EXT_EXPORT void _fe_a2fRegisterPlugin(
   }
 RegisterPlugin(mgr, f2aType, f2aOutput_type, f2aName, f2aFilename);
   F2A_CATCH_STATEMENT("_fe_a2fRegisterPlugin")
-}
-
-FABRIC_EXT_EXPORT void _fe_SetAtDisplayCallback(
-  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtNode >::INParam displayDriver,
-  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtDisplayCallback >::INParam callback
-)
-{
-  F2A_TRY_STATEMENT("_fe_SetAtDisplayCallback")
-
-  AtNode* f2aDisplayDriver = NULL;
-  if(!KLAtNode_to_CPAtNode(displayDriver, f2aDisplayDriver)){
-    setError("Error in _fe_SetAtDisplayCallback. unable to convert: displayDriver");
-    return;
-  }
-  AtDisplayCallback f2aCallback;
-  if(!KlAtDisplayCallback_to_AtDisplayCallback(callback, f2aCallback)){
-    setError("Error in _fe_SetAtDisplayCallback. unable to convert: callback");
-    return;
-  }
-  SetDisplayDriverNode(f2aDisplayDriver);
-  AiNodeSetPtr(f2aDisplayDriver, "callback", (void*)f2aCallback);
-
-  F2A_CATCH_STATEMENT("_fe_SetAtDisplayCallback")
 }

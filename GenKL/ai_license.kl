@@ -17,6 +17,8 @@ const Integer AI_LIC_ERROR = -1;	 //  generic license error
 
 const Integer HOST_NAME_MAX = 64;	 //  
 //////////////////////////////////////////////////
+//  overrides 
+//////////////////////////////////////////////////
 //  classes 
 /**  License info structure 
  */

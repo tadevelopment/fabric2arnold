@@ -35,9 +35,6 @@
 		<ClInclude Include="h\_typemapping_pod.h">
 			<Filter>Header Files</Filter>
 		</ClInclude>
-		<ClInclude Include="h\a2fPluginShader.h">
-			<Filter>Header Files</Filter>
-		</ClInclude>
 		<ClInclude Include="h\a2fPluginShaderInterface.h">
 			<Filter>Header Files</Filter>
 		</ClInclude>
@@ -72,6 +69,9 @@
 			<Filter>Header Files</Filter>
 		</ClInclude>
 		<ClInclude Include="h\AtCameraOutput.h">
+			<Filter>Header Files</Filter>
+		</ClInclude>
+		<ClInclude Include="h\AtColor.h">
 			<Filter>Header Files</Filter>
 		</ClInclude>
 		<ClInclude Include="h\AtDisplayCallback.h">
@@ -123,6 +123,9 @@
 			<Filter>Header Files</Filter>
 		</ClInclude>
 		<ClInclude Include="h\AtRay.h">
+			<Filter>Header Files</Filter>
+		</ClInclude>
+		<ClInclude Include="h\AtRGBA.h">
 			<Filter>Header Files</Filter>
 		</ClInclude>
 		<ClInclude Include="h\AtScrSample.h">

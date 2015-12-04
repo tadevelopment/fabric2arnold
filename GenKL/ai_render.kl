@@ -25,6 +25,8 @@ const Integer AI_ERROR_UNRENDERABLE_SCENEGRAPH = 0x0A;	 //  unrenderable scenegr
 const Integer AI_ERROR_NO_OUTPUTS = 0x0B;	 //  no rendering outputs  
 const Integer AI_ERROR = -1;	 //  generic error  
 //////////////////////////////////////////////////
+//  overrides 
+//////////////////////////////////////////////////
 //  classes 
 //////////////////////////////////////////////////
 //  global-scope functions 

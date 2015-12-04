@@ -13,7 +13,7 @@ E:\dev\OpusTech\fabric2arnold\stage\Fabric2Arnold\ai_metadata.kl:
 function Boolean AiMetaDataGetBool(AtNodeEntry entry, String param, String name, io Boolean value) { return AiMetaDataGetBoolAtString(entry, param, name, value); }
 function Boolean AiMetaDataGetInt(AtNodeEntry entry, String param, String name, io SInt32 value)  { return AiMetaDataGetIntAtString(entry, param, name, value); }
 function Boolean AiMetaDataGetFlt(AtNodeEntry entry, String param, String name, io Float32 value) { return AiMetaDataGetFltAtString(entry, param, name, value); }
-function Boolean AiMetaDataGetRGB(AtNodeEntry entry, String param, String name, io RGB value)     { return AiMetaDataGetRGBAtString(entry, param, name, value); }
+function Boolean AiMetaDataGetRGB(AtNodeEntry entry, String param, String name, io Color value)     { return AiMetaDataGetRGBAtString(entry, param, name, value); }
 function Boolean AiMetaDataGetVec(AtNodeEntry entry, String param, String name, io Vec3 value)    { return AiMetaDataGetVecAtString(entry, param, name, value); }
 function Boolean AiMetaDataGetPnt(AtNodeEntry entry, String param, String name, io Vec3 value)    { return AiMetaDataGetPntAtString(entry, param, name, value); }
 function Boolean AiMetaDataGetPnt2(AtNodeEntry entry, String param, String name, io Vec2 value)   { return AiMetaDataGetPnt2AtString(entry, param, name, value); }
@@ -56,7 +56,7 @@ function SInt32 AiNodeGetInt(AtNode node, String param) { return AiNodeGetIntAtS
 function UInt32 AiNodeGetUInt(AtNode node, String param) { return AiNodeGetUIntAtString(node, param); }
 function Boolean AiNodeGetBool(AtNode node, String param) { return AiNodeGetBoolAtString(node, param); }
 function Float32 AiNodeGetFlt(AtNode node, String param) { return AiNodeGetFltAtString(node, param); }
-function RGB AiNodeGetRGB(AtNode node, String param) { return AiNodeGetRGBAtString(node, param); }
+function Color AiNodeGetRGB(AtNode node, String param) { return AiNodeGetRGBAtString(node, param); }
 function Color AiNodeGetRGBA(AtNode node, String param) { return AiNodeGetRGBAAtString(node, param); }
 function Vec3 AiNodeGetVec(AtNode node, String param) { return AiNodeGetVecAtString(node, param); }
 function Vec3 AiNodeGetPnt(AtNode node, String param) { return AiNodeGetPntAtString(node, param); }
@@ -70,7 +70,7 @@ function Boolean AiArraySetByte(io AtArray a, UInt32 i, UInt8 val)     { return 
 function Boolean AiArraySetInt(io AtArray a, UInt32 i, SInt32 val)     { return AiArraySetIntFunc(a, i, val, 'F2AWrapper', 0); }
 function Boolean AiArraySetUInt(io AtArray a, UInt32 i, UInt32 val)    { return AiArraySetUIntFunc(a, i, val, 'F2AWrapper', 0); }
 function Boolean AiArraySetFlt(io AtArray a, UInt32 i, Float32 val)    { return AiArraySetFltFunc(a, i, val, 'F2AWrapper', 0); }
-function Boolean AiArraySetRGB(io AtArray a, UInt32 i, RGB val)        { return AiArraySetRGBFunc(a, i, val, 'F2AWrapper', 0); }
+function Boolean AiArraySetRGB(io AtArray a, UInt32 i, Color val)        { return AiArraySetRGBFunc(a, i, val, 'F2AWrapper', 0); }
 function Boolean AiArraySetRGBA(io AtArray a, UInt32 i, Color val)     { return AiArraySetRGBAFunc(a, i, val, 'F2AWrapper', 0); }
 function Boolean AiArraySetPnt(io AtArray a, UInt32 i, Vec3 val)       { return AiArraySetPntFunc(a, i, val, 'F2AWrapper', 0); }
 function Boolean AiArraySetPnt2(io AtArray a, UInt32 i, Vec2 val)      { return AiArraySetPnt2Func(a, i, val, 'F2AWrapper', 0); }
@@ -85,7 +85,7 @@ function UInt8 AiArrayGetByteFunc(AtArray a, UInt32 i)    { return AiArrayGetByt
 function SInt32 AiArrayGetIntFunc(AtArray a, UInt32 i)    { return AiArrayGetIntFunc(a, i, 'F2AWrapper', 0); }
 function UInt32 AiArrayGetUIntFunc(AtArray a, UInt32 i)   { return AiArrayGetUIntFunc(a, i, 'F2AWrapper', 0); }
 function Float32 AiArrayGetFltFunc(AtArray a, UInt32 i)   { return AiArrayGetFltFunc(a, i, 'F2AWrapper', 0); }
-function RGB AiArrayGetRGBFunc(AtArray a, UInt32 i)    { return AiArrayGetRGBFunc(a, i, 'F2AWrapper', 0); }
+function Color AiArrayGetRGBFunc(AtArray a, UInt32 i)    { return AiArrayGetRGBFunc(a, i, 'F2AWrapper', 0); }
 function Color AiArrayGetRGBAFunc(AtArray a, UInt32 i) { return AiArrayGetRGBAFunc(a, i, 'F2AWrapper', 0); }
 function Vec3 AiArrayGetPntFunc(AtArray a, UInt32 i)   { return AiArrayGetPntFunc(a, i, 'F2AWrapper', 0); }
 function Vec2 AiArrayGetPnt2Func(AtArray a, UInt32 i)  { return AiArrayGetPnt2Func(a, i, 'F2AWrapper', 0); }

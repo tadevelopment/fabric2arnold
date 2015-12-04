@@ -18,6 +18,8 @@ const Integer AI_RAY_DIFFUSE = 0x20;	 //  indirect diffuse (also known as diffus
 const Integer AI_RAY_GLOSSY = 0x40;	 //  glossy/blurred reflection ray  
 const Integer AI_RAY_ALL = 0xFF;	 //  mask for all ray types  
 //////////////////////////////////////////////////
+//  overrides 
+//////////////////////////////////////////////////
 //  classes 
 /**  Ray data structure 
  */

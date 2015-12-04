@@ -74,7 +74,6 @@ namespace Fabric { namespace EDK { namespace KL {
   struct Vec3_d;
   struct Vec4;
   struct Xfo;
-  class a2fPluginShader;
   class a2fPluginShaderInterface;
 }}}
 
@@ -576,19 +575,6 @@ struct Traits< AtTextureHandle >
 };
 
 template<>
-struct Traits< AtShaderGlobals >
-{
-  typedef AtShaderGlobals &Result;
-  typedef AtShaderGlobals const &INParam;
-  typedef AtShaderGlobals &IOParam;
-  
-  static void ConstructEmpty( AtShaderGlobals &val );
-  static void ConstructCopy( AtShaderGlobals &lhs, AtShaderGlobals const &rhs );
-  static void AssignCopy( AtShaderGlobals &lhs, AtShaderGlobals const &rhs );
-  static void Destruct( AtShaderGlobals &val );
-};
-
-template<>
 struct Traits< AtScrSample >
 {
   typedef AtScrSample &Result;
@@ -771,19 +757,6 @@ struct Traits< AtNodeLib >
 };
 
 template<>
-struct Traits< AtRay >
-{
-  typedef AtRay &Result;
-  typedef AtRay const &INParam;
-  typedef AtRay &IOParam;
-  
-  static void ConstructEmpty( AtRay &val );
-  static void ConstructCopy( AtRay &lhs, AtRay const &rhs );
-  static void AssignCopy( AtRay &lhs, AtRay const &rhs );
-  static void Destruct( AtRay &val );
-};
-
-template<>
 struct Traits< AtTextureParams >
 {
   typedef AtTextureParams &Result;
@@ -807,6 +780,45 @@ struct Traits< AtAOVEntry >
   static void ConstructCopy( AtAOVEntry &lhs, AtAOVEntry const &rhs );
   static void AssignCopy( AtAOVEntry &lhs, AtAOVEntry const &rhs );
   static void Destruct( AtAOVEntry &val );
+};
+
+template<>
+struct Traits< AtDisplayCallback >
+{
+  typedef AtDisplayCallback &Result;
+  typedef AtDisplayCallback const &INParam;
+  typedef AtDisplayCallback &IOParam;
+  
+  static void ConstructEmpty( AtDisplayCallback &val );
+  static void ConstructCopy( AtDisplayCallback &lhs, AtDisplayCallback const &rhs );
+  static void AssignCopy( AtDisplayCallback &lhs, AtDisplayCallback const &rhs );
+  static void Destruct( AtDisplayCallback &val );
+};
+
+template<>
+struct Traits< AtShaderGlobals >
+{
+  typedef AtShaderGlobals &Result;
+  typedef AtShaderGlobals const &INParam;
+  typedef AtShaderGlobals &IOParam;
+  
+  static void ConstructEmpty( AtShaderGlobals &val );
+  static void ConstructCopy( AtShaderGlobals &lhs, AtShaderGlobals const &rhs );
+  static void AssignCopy( AtShaderGlobals &lhs, AtShaderGlobals const &rhs );
+  static void Destruct( AtShaderGlobals &val );
+};
+
+template<>
+struct Traits< AtRay >
+{
+  typedef AtRay &Result;
+  typedef AtRay const &INParam;
+  typedef AtRay &IOParam;
+  
+  static void ConstructEmpty( AtRay &val );
+  static void ConstructCopy( AtRay &lhs, AtRay const &rhs );
+  static void AssignCopy( AtRay &lhs, AtRay const &rhs );
+  static void Destruct( AtRay &val );
 };
 
 template<>
@@ -846,32 +858,6 @@ struct Traits< ArnoldKLPluginMgr >
   static void ConstructCopy( ArnoldKLPluginMgr &lhs, ArnoldKLPluginMgr const &rhs );
   static void AssignCopy( ArnoldKLPluginMgr &lhs, ArnoldKLPluginMgr const &rhs );
   static void Destruct( ArnoldKLPluginMgr &val );
-};
-
-template<>
-struct Traits< a2fPluginShader >
-{
-  typedef a2fPluginShader &Result;
-  typedef a2fPluginShader const &INParam;
-  typedef a2fPluginShader &IOParam;
-  
-  static void ConstructEmpty( a2fPluginShader &val );
-  static void ConstructCopy( a2fPluginShader &lhs, a2fPluginShader const &rhs );
-  static void AssignCopy( a2fPluginShader &lhs, a2fPluginShader const &rhs );
-  static void Destruct( a2fPluginShader &val );
-};
-
-template<>
-struct Traits< AtDisplayCallback >
-{
-  typedef AtDisplayCallback &Result;
-  typedef AtDisplayCallback const &INParam;
-  typedef AtDisplayCallback &IOParam;
-  
-  static void ConstructEmpty( AtDisplayCallback &val );
-  static void ConstructCopy( AtDisplayCallback &lhs, AtDisplayCallback const &rhs );
-  static void AssignCopy( AtDisplayCallback &lhs, AtDisplayCallback const &rhs );
-  static void Destruct( AtDisplayCallback &val );
 };
 
 }}}

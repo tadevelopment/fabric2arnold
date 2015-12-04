@@ -7,7 +7,8 @@
 require Math;
 // Aliases help us differentiate the correct
 //return type when converting KL to C++ types later
-alias UInt32 HRESULT;
+alias Color AtRGBA;
+alias Color AtColor;
 
 struct AtBucket {
   Data _handle;
@@ -53,11 +54,6 @@ struct AtTextureHandle {
   Data _handle;
 };
 Boolean AtTextureHandle.isValid() { return this._handle != Data(); }
-
-struct AtShaderGlobals {
-  Data _handle;
-};
-Boolean AtShaderGlobals.isValid() { return this._handle != Data(); }
 
 struct AtScrSample {
   Data _handle;

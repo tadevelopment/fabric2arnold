@@ -166,13 +166,3 @@ inline bool CPAtList_to_KLAtList(const AtList* const & from, Fabric::EDK::KL::At
   return true; 
 }
 
-inline bool KLAtShaderGlobals_to_CPAtShaderGlobals(const Fabric::EDK::KL::AtShaderGlobals & from, AtShaderGlobals* & to) { 
-  to = reinterpret_cast<AtShaderGlobals*>(from._handle);
-  return true;
-}
-
-inline bool CPAtShaderGlobals_to_KLAtShaderGlobals(const AtShaderGlobals* const & from, Fabric::EDK::KL::AtShaderGlobals & to) {
-  to._handle = const_cast<AtShaderGlobals*>(from);
-  return true; 
-}
-

@@ -1,4 +1,12 @@
+/************************************************
+ *
+ * A initial Arnold plugin interface for KL
+ *
+ ************************************************/
 
+/**
+ * The interface to be implemented
+ */
 interface a2fPluginShaderInterface
 {
     parameters(AtList list, AtMetaDataStore metadata);

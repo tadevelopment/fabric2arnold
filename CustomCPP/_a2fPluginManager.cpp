@@ -84,10 +84,10 @@ void Evaluate(AtNode* node, AtShaderGlobals* globals)
         Fabric::EDK::KL::AtNode klnode;
         CPAtNode_to_KLAtNode(node, klnode);
         Fabric::EDK::KL::AtShaderGlobals klglobals;
-        CPAtShaderGlobals_to_KLAtShaderGlobals(globals, klglobals);
+        AtShaderGlobals_to_KLAtShaderGlobals(globals, klglobals);
         
         pInstance->evaluate(klnode, klglobals);
-        KLAtShaderGlobals_to_CPAtShaderGlobals(klglobals, globals);
+        KlAtShaderGlobals_to_AtShaderGlobals(klglobals, globals);
     }
 }
 

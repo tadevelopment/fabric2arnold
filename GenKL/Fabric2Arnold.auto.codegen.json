@@ -15,19 +15,19 @@
         "_fe_AiArrayGetByteFunc": "  AtByte f2a_result = AiArrayGetByteFunc(f2aA, f2aI, f2a_val, f2aLine);\n  Fabric::EDK::KL::UInt8 _result;\n  AtByte_to_UInt8(f2a_result, _result);\n", 
         "_fe_AiArrayGetFltFunc": "  float f2a_result = AiArrayGetFltFunc(f2aA, f2aI, f2a_val, f2aLine);\n  Fabric::EDK::KL::Float32 _result;\n  float_to_Float32(f2a_result, _result);\n", 
         "_fe_AiArrayGetIntFunc": "  int f2a_result = AiArrayGetIntFunc(f2aA, f2aI, f2a_val, f2aLine);\n  Fabric::EDK::KL::SInt32 _result;\n  int_to_SInt32(f2a_result, _result);\n", 
-        "_fe_AiArrayGetPnt2Func": "  AtPoint2 f2a_result = AiArrayGetPnt2Func(f2aA, f2aI, f2a_val, f2aLine);\n  AtVector2_to_Vec2(f2a_result, _result);", 
+        "_fe_AiArrayGetPnt2Func": "  AtPoint2 f2a_result = AiArrayGetPnt2Func(f2aA, f2aI, f2a_val, f2aLine);\n  AtPoint2_to_Vec2(f2a_result, _result);", 
         "_fe_AiArrayGetPntFunc": "  AtPoint f2a_result = AiArrayGetPntFunc(f2aA, f2aI, f2a_val, f2aLine);\n  AtPoint_to_Vec3(f2a_result, _result);", 
         "_fe_AiArrayGetPtrFunc": "  void * f2a_result = AiArrayGetPtrFunc(f2aA, f2aI, f2a_val, f2aLine);\n  Fabric::EDK::KL::Data _result;\n  void_to_Data(f2a_result, _result);\n", 
-        "_fe_AiArrayGetRGBAFunc": "  AtRGBA f2a_result = AiArrayGetRGBAFunc(f2aA, f2aI, f2a_val, f2aLine);\n  AtRGBA_to_Color(f2a_result, _result);", 
-        "_fe_AiArrayGetRGBFunc": "  AtRGB f2a_result = AiArrayGetRGBFunc(f2aA, f2aI, f2a_val, f2aLine);\n  AtColor_to_RGB(f2a_result, _result);", 
+        "_fe_AiArrayGetRGBAFunc": "  AtRGBA f2a_result = AiArrayGetRGBAFunc(f2aA, f2aI, f2a_val, f2aLine);\n  CPAtRGBA_to_KLColor(f2a_result, _result);", 
+        "_fe_AiArrayGetRGBFunc": "  AtRGB f2a_result = AiArrayGetRGBFunc(f2aA, f2aI, f2a_val, f2aLine);\n  AtRGB_to_Color(f2a_result, _result);", 
         "_fe_AiArrayGetStrFunc": "  const char * f2a_result = AiArrayGetStrFunc(f2aA, f2aI, f2a_val, f2aLine);\n  char_to_String(f2a_result, _result);", 
         "_fe_AiArrayGetUIntFunc": "  AtUInt32 f2a_result = AiArrayGetUIntFunc(f2aA, f2aI, f2a_val, f2aLine);\n  Fabric::EDK::KL::UInt32 _result;\n  unsigned_int_to_UInt32(f2a_result, _result);\n", 
         "_fe_AiArrayGetVecFunc": "  AtVector f2a_result = AiArrayGetVecFunc(f2aA, f2aI, f2a_val, f2aLine);\n  AtPoint_to_Vec3(f2a_result, _result);", 
         "_fe_AiArrayInterpolateFlt": "  float f2a_result = AiArrayInterpolateFlt(f2aArray, f2aTime, f2aIdx);\n  Fabric::EDK::KL::Float32 _result;\n  float_to_Float32(f2a_result, _result);\n", 
         "_fe_AiArrayInterpolateMtx": "  AiArrayInterpolateMtx(f2aArray, f2aTime, f2aIdx, f2aResult);\n", 
         "_fe_AiArrayInterpolatePnt": "  AtPoint f2a_result = AiArrayInterpolatePnt(f2aArray, f2aTime, f2aIdx);\n  AtPoint_to_Vec3(f2a_result, _result);", 
-        "_fe_AiArrayInterpolateRGB": "  AtColor f2a_result = AiArrayInterpolateRGB(f2aArray, f2aTime, f2aIdx);\n  AtColor_to_RGB(f2a_result, _result);", 
-        "_fe_AiArrayInterpolateRGBA": "  AtRGBA f2a_result = AiArrayInterpolateRGBA(f2aArray, f2aTime, f2aIdx);\n  AtRGBA_to_Color(f2a_result, _result);", 
+        "_fe_AiArrayInterpolateRGB": "  AtColor f2a_result = AiArrayInterpolateRGB(f2aArray, f2aTime, f2aIdx);\n  CPAtColor_to_KLColor(f2a_result, _result);", 
+        "_fe_AiArrayInterpolateRGBA": "  AtRGBA f2a_result = AiArrayInterpolateRGBA(f2aArray, f2aTime, f2aIdx);\n  CPAtRGBA_to_KLColor(f2a_result, _result);", 
         "_fe_AiArrayInterpolateVec": "  AtVector f2a_result = AiArrayInterpolateVec(f2aArray, f2aTime, f2aIdx);\n  AtPoint_to_Vec3(f2a_result, _result);", 
         "_fe_AiArrayModify": "  AtArray * f2a_result = AiArrayModify(f2aArray, f2aNelements, f2aNkeys, f2aType);\n  AtArray_to_KLArray(f2a_result, _result);", 
         "_fe_AiArraySetArrayFunc": "  bool f2a_result = AiArraySetArrayFunc(f2aA, f2aI, f2aVal, f2a_val, f2aLine);\n  Fabric::EDK::KL::Boolean _result;\n  bool_to_Boolean(f2a_result, _result);\n", 
@@ -136,11 +136,11 @@
         "_fe_AiNodeGetName": "  const char * f2a_result = AiNodeGetName(f2aNode);\n  char_to_String(f2a_result, _result);", 
         "_fe_AiNodeGetNodeEntry": "  const AtNodeEntry * f2a_result = AiNodeGetNodeEntry(f2aNode);\n  CPAtNodeEntry_to_KLAtNodeEntry(f2a_result, _result);", 
         "_fe_AiNodeGetParams": "  AtParamValue * f2a_result = AiNodeGetParams(f2aNode);\n  AtParamValue_to_KLParamValue(f2a_result, _result);", 
-        "_fe_AiNodeGetPnt2AtString": "  AtPoint2 f2a_result = AiNodeGetPnt2AtString(f2aNode, f2aParam);\n  AtVector2_to_Vec2(f2a_result, _result);", 
+        "_fe_AiNodeGetPnt2AtString": "  AtPoint2 f2a_result = AiNodeGetPnt2AtString(f2aNode, f2aParam);\n  AtPoint2_to_Vec2(f2a_result, _result);", 
         "_fe_AiNodeGetPntAtString": "  AtPoint f2a_result = AiNodeGetPntAtString(f2aNode, f2aParam);\n  AtPoint_to_Vec3(f2a_result, _result);", 
         "_fe_AiNodeGetPtrAtString": "  void * f2a_result = AiNodeGetPtrAtString(f2aNode, f2aParam);\n  Fabric::EDK::KL::Data _result;\n  void_to_Data(f2a_result, _result);\n", 
-        "_fe_AiNodeGetRGBAAtString": "  AtRGBA f2a_result = AiNodeGetRGBAAtString(f2aNode, f2aParam);\n  AtRGBA_to_Color(f2a_result, _result);", 
-        "_fe_AiNodeGetRGBAtString": "  AtRGB f2a_result = AiNodeGetRGBAtString(f2aNode, f2aParam);\n  AtColor_to_RGB(f2a_result, _result);", 
+        "_fe_AiNodeGetRGBAAtString": "  AtRGBA f2a_result = AiNodeGetRGBAAtString(f2aNode, f2aParam);\n  CPAtRGBA_to_KLColor(f2a_result, _result);", 
+        "_fe_AiNodeGetRGBAtString": "  AtRGB f2a_result = AiNodeGetRGBAtString(f2aNode, f2aParam);\n  AtRGB_to_Color(f2a_result, _result);", 
         "_fe_AiNodeGetStrAtString": "  AtString f2a_result = AiNodeGetStrAtString(f2aNode, f2aParam);\n  char_to_String(f2a_result, _result);", 
         "_fe_AiNodeGetUIntAtString": "  unsigned int f2a_result = AiNodeGetUIntAtString(f2aNode, f2aParam);\n  Fabric::EDK::KL::UInt32 _result;\n  unsigned_int_to_UInt32(f2a_result, _result);\n", 
         "_fe_AiNodeGetUserParamIterator": "  AtUserParamIterator * f2a_result = AiNodeGetUserParamIterator(f2aNode);\n  CPAtUserParamIterator_to_KLAtUserParamIterator(f2a_result, _result);", 
@@ -206,14 +206,14 @@
         "_fe_AiRenderAbort": "  AiRenderAbort();\n", 
         "_fe_AiRenderInterrupt": "  AiRenderInterrupt();\n", 
         "_fe_AiRendering": "  bool f2a_result = AiRendering();\n  Fabric::EDK::KL::Boolean _result;\n  bool_to_Boolean(f2a_result, _result);\n", 
-        "_fe_AiTextureAccess": "  AtRGBA f2a_result = AiTextureAccess(f2aSg, f2aFilename, &f2aParams, &f2aSuccess/*=NULL*/);\n  AtRGBA_to_Color(f2a_result, _result);", 
+        "_fe_AiTextureAccess": "  AtRGBA f2a_result = AiTextureAccess(f2aSg, f2aFilename, &f2aParams, &f2aSuccess/*=NULL*/);\n  CPAtRGBA_to_KLColor(f2a_result, _result);", 
         "_fe_AiTextureGetBitDepth": "  bool f2a_result = AiTextureGetBitDepth(f2aFilename, &f2aBit_depth);\n  Fabric::EDK::KL::Boolean _result;\n  bool_to_Boolean(f2a_result, _result);\n", 
         "_fe_AiTextureGetChannelName": "  const char * f2a_result = AiTextureGetChannelName(f2aFilename, f2aChannel_index);\n  char_to_String(f2a_result, _result);", 
         "_fe_AiTextureGetFormat": "  bool f2a_result = AiTextureGetFormat(f2aFilename, &f2aFormat);\n  Fabric::EDK::KL::Boolean _result;\n  bool_to_Boolean(f2a_result, _result);\n", 
         "_fe_AiTextureGetMatrices": "  bool f2a_result = AiTextureGetMatrices(f2aFilename, f2aWorld_to_screen, f2aWorld_to_camera);\n  Fabric::EDK::KL::Boolean _result;\n  bool_to_Boolean(f2a_result, _result);\n", 
         "_fe_AiTextureGetNumChannels": "  bool f2a_result = AiTextureGetNumChannels(f2aFilename, &f2aNum_channels);\n  Fabric::EDK::KL::Boolean _result;\n  bool_to_Boolean(f2a_result, _result);\n", 
         "_fe_AiTextureGetResolution": "  bool f2a_result = AiTextureGetResolution(f2aFilename, &f2aWidth, &f2aHeight);\n  Fabric::EDK::KL::Boolean _result;\n  bool_to_Boolean(f2a_result, _result);\n", 
-        "_fe_AiTextureHandleAccess": "  AtRGBA f2a_result = AiTextureHandleAccess(f2aSg, f2aHandle, &f2aParams, &f2aSuccess/*=NULL*/);\n  AtRGBA_to_Color(f2a_result, _result);", 
+        "_fe_AiTextureHandleAccess": "  AtRGBA f2a_result = AiTextureHandleAccess(f2aSg, f2aHandle, &f2aParams, &f2aSuccess/*=NULL*/);\n  CPAtRGBA_to_KLColor(f2a_result, _result);", 
         "_fe_AiTextureHandleCreate": "  AtTextureHandle * f2a_result = AiTextureHandleCreate(f2aFilename);\n  CPAtTextureHandle_to_KLAtTextureHandle(f2a_result, _result);", 
         "_fe_AiTextureHandleDestroy": "  AiTextureHandleDestroy(f2aHandle);\n", 
         "_fe_AiTextureInvalidate": "  AiTextureInvalidate(f2aFilename);\n", 
@@ -278,6 +278,12 @@
             "from": "KLAtCameraOutput_to_CPAtCameraOutput", 
             "methodop": ".", 
             "to": "CPAtCameraOutput_to_KLAtCameraOutput"
+        }, 
+        "AtColor": {
+            "ctype": "AtColor", 
+            "from": "KLColor_to_CPAtColor", 
+            "methodop": ".", 
+            "to": "CPAtColor_to_KLColor"
         }, 
         "AtDisplayCallback": {
             "ctype": "AtDisplayCallback", 
@@ -366,8 +372,14 @@
         "AtParamValue": {
             "ctype": "AtParamValue*", 
             "from": "KlParamValue_to_AtParamValue", 
-            "methodop": "->", 
+            "methodop": ".", 
             "to": "AtParamValue_to_KLParamValue"
+        }, 
+        "AtRGBA": {
+            "ctype": "AtRGBA", 
+            "from": "KLColor_to_CPAtRGBA", 
+            "methodop": ".", 
+            "to": "CPAtRGBA_to_KLColor"
         }, 
         "AtRay": {
             "ctype": "AtRay", 
@@ -383,9 +395,9 @@
         }, 
         "AtShaderGlobals": {
             "ctype": "AtShaderGlobals*", 
-            "from": "KLAtShaderGlobals_to_CPAtShaderGlobals", 
-            "methodop": "->", 
-            "to": "CPAtShaderGlobals_to_KLAtShaderGlobals"
+            "from": "KlAtShaderGlobals_to_AtShaderGlobals", 
+            "methodop": ".", 
+            "to": "AtShaderGlobals_to_KLAtShaderGlobals"
         }, 
         "AtString": {
             "ctype": "AtString", 
@@ -430,10 +442,10 @@
             "to": "AtBBox_to_Box3"
         }, 
         "Color": {
-            "ctype": "AtRGBA", 
-            "from": "Color_to_AtRGBA", 
+            "ctype": "AtRGB", 
+            "from": "Color_to_AtRGB", 
             "methodop": ".", 
-            "to": "AtRGBA_to_Color"
+            "to": "AtRGB_to_Color"
         }, 
         "Data": {
             "ctype": "void*", 
@@ -453,23 +465,11 @@
             "methodop": ".", 
             "to": "double_to_Float64"
         }, 
-        "HRESULT": {
-            "ctype": "HRESULT", 
-            "from": "KLUInt32_to_CPHRESULT", 
-            "methodop": ".", 
-            "to": "CPHRESULT_to_KLUInt32"
-        }, 
         "Mat44": {
             "ctype": "AtMatrix", 
             "from": "Mat44_to_AtMatrix", 
             "methodop": ".", 
             "to": "AtMatrix_to_Mat44"
-        }, 
-        "RGB": {
-            "ctype": "AtColor", 
-            "from": "RGB_to_AtColor", 
-            "methodop": ".", 
-            "to": "AtColor_to_RGB"
         }, 
         "SInt32": {
             "ctype": "int", 
@@ -520,10 +520,10 @@
             "to": "AtByte_to_UInt8"
         }, 
         "Vec2": {
-            "ctype": "AtVector2", 
-            "from": "Vec2_to_AtVector2", 
+            "ctype": "AtPoint2", 
+            "from": "Vec2_to_AtPoint2", 
             "methodop": ".", 
-            "to": "AtVector2_to_Vec2"
+            "to": "AtPoint2_to_Vec2"
         }, 
         "Vec3": {
             "ctype": "AtPoint", 

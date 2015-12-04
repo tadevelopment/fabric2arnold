@@ -33,7 +33,7 @@ const Integer AI_USERDEF_UNIFORM = 2;	 //  User-defined: per-face parameter
 const Integer AI_USERDEF_VARYING = 3;	 //  User-defined: per-vertex parameter  
 const Integer AI_USERDEF_INDEXED = 4;	 //  User-defined: per-face-vertex parameter  
 //////////////////////////////////////////////////
-//  classes 
+//  overrides 
 struct AtParamValue {
   Data param_handle;
 };
@@ -41,13 +41,33 @@ struct AtParamValue {
 UInt8 AtParamValue.asUInt8() = "_fe_AtParamValueAsUInt8";
 UInt32 AtParamValue.asUInt32() = "_fe_AtParamValueAsUInt32";
 SInt32 AtParamValue.asSInt32() = "_fe_AtParamValueAsSInt32";
+Boolean AtParamValue.asBoolean() = "_fe_AtParamValueAsBoolean";
 Float32 AtParamValue.asFloat32() = "_fe_AtParamValueAsFloat32";
+Color AtParamValue.asRGB() = "_fe_AtParamValueAsRGB";
+Color AtParamValue.asRGBA() = "_fe_AtParamValueAsRGBA";
 Vec3 AtParamValue.asVec3() = "_fe_AtParamValueAsVec3";
+Vec2 AtParamValue.asVec2() = "_fe_AtParamValueAsVec2";
+Data AtParamValue.asData() = "_fe_AtParamValueAsData";
 Mat44 AtParamValue.asMat44() = "_fe_AtParamValueAsMat44";
 String AtParamValue.asString() = "_fe_AtParamValueAsString";
 AtArray AtParamValue.asAtArray() = "_fe_AtParamValueAsAtArray";
 
+AtParamValue.setUInt8(UInt8 val) = "_fe_AtParamValueSetUInt8";
+AtParamValue.setUInt32(UInt32 val) = "_fe_AtParamValueSetUInt32";
+AtParamValue.setSInt32(SInt32 val) = "_fe_AtParamValueSetSInt32";
+AtParamValue.setFloat32(Float32 val) = "_fe_AtParamValueSetFloat32";
+AtParamValue.setRGB(Color val) = "_fe_AtParamValueSetRGB";
+AtParamValue.setRGBA(Color val) = "_fe_AtParamValueSetRGBA";
+AtParamValue.setVec3(Vec3 val) = "_fe_AtParamValueSetVec3";
+AtParamValue.setVec2(Vec2 val) = "_fe_AtParamValueSetVec2";
+AtParamValue.setData(Data val) = "_fe_AtParamValueSetData";
+AtParamValue.setMat44(Mat44 val) = "_fe_AtParamValueSetMat44";
+AtParamValue.setString(String val) = "_fe_AtParamValueSetString";
+AtParamValue.setAtArray(AtArray val) = "_fe_AtParamValueSetAtArray";
 
+
+//////////////////////////////////////////////////
+//  classes 
 //////////////////////////////////////////////////
 //  global-scope functions 
 /**

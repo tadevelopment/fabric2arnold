@@ -69,6 +69,25 @@ FABRIC_EXT_EXPORT Fabric::EDK::KL::SInt32 _fe_AtParamValueAsSInt32(
   F2A_CATCH_STATEMENT_RETURN("_fe_AtParamValueAsSInt32", )
 }
 
+FABRIC_EXT_EXPORT Fabric::EDK::KL::Boolean _fe_AtParamValueAsBoolean(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtParamValue >::INParam this_
+)
+{
+  F2A_TRY_STATEMENT("_fe_AtParamValueAsBoolean")
+
+  AtParamValue* f2aThis_ = NULL;
+  if(!KlParamValue_to_AtParamValue(this_, f2aThis_)){
+    setError("Error in _fe_AtParamValueAsBoolean. unable to convert: this_");
+    return 0;
+  }
+  bool f2a_result = f2aThis_->BOOL;
+  KL::Boolean _result;
+  bool_to_Boolean(f2a_result, _result);
+  return _result;
+
+  F2A_CATCH_STATEMENT_RETURN("_fe_AtParamValueAsBoolean", )
+}
+
 FABRIC_EXT_EXPORT Fabric::EDK::KL::Float32 _fe_AtParamValueAsFloat32(
   Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtParamValue >::INParam this_
 )
@@ -88,6 +107,40 @@ FABRIC_EXT_EXPORT Fabric::EDK::KL::Float32 _fe_AtParamValueAsFloat32(
   F2A_CATCH_STATEMENT_RETURN("_fe_AtParamValueAsFloat32", )
 }
 
+FABRIC_EXT_EXPORT void _fe_AtParamValueAsRGB(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::Color >::Result _result,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtParamValue >::INParam this_
+)
+{
+  F2A_TRY_STATEMENT("_fe_AtParamValueAsRGB")
+
+  AtParamValue* f2aThis_ = NULL;
+  if(!KlParamValue_to_AtParamValue(this_, f2aThis_)){
+    setError("Error in _fe_AtParamValueAsRGB. unable to convert: this_");
+    return;
+  }
+  CPAtColor_to_KLColor(f2aThis_->RGB, _result);
+
+  F2A_CATCH_STATEMENT("_fe_AtParamValueAsRGB")
+}
+
+FABRIC_EXT_EXPORT void _fe_AtParamValueAsRGBA(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::Color >::Result _result,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtParamValue >::INParam this_
+)
+{
+  F2A_TRY_STATEMENT("_fe_AtParamValueAsRGBA")
+
+  AtParamValue* f2aThis_ = NULL;
+  if(!KlParamValue_to_AtParamValue(this_, f2aThis_)){
+    setError("Error in _fe_AtParamValueAsRGBA. unable to convert: this_");
+    return;
+  }
+  CPAtRGBA_to_KLColor(f2aThis_->RGBA, _result);
+
+  F2A_CATCH_STATEMENT("_fe_AtParamValueAsRGBA")
+}
+
 FABRIC_EXT_EXPORT void _fe_AtParamValueAsVec3(
   Fabric::EDK::KL::Traits< Fabric::EDK::KL::Vec3 >::Result _result,
   Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtParamValue >::INParam this_
@@ -100,10 +153,42 @@ FABRIC_EXT_EXPORT void _fe_AtParamValueAsVec3(
     setError("Error in _fe_AtParamValueAsVec3. unable to convert: this_");
     return;
   }
-  AtVector f2a_result = f2aThis_->VEC;
-  AtPoint_to_Vec3(f2a_result, _result);
+  AtPoint_to_Vec3(f2aThis_->VEC, _result);
 
   F2A_CATCH_STATEMENT("_fe_AtParamValueAsVec3")
+}
+
+FABRIC_EXT_EXPORT void _fe_AtParamValueAsVec2(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::Vec2 >::Result _result,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtParamValue >::INParam this_
+)
+{
+  F2A_TRY_STATEMENT("_fe_AtParamValueAsVec2")
+
+  AtParamValue* f2aThis_ = NULL;
+  if(!KlParamValue_to_AtParamValue(this_, f2aThis_)){
+    setError("Error in _fe_AtParamValueAsVec2. unable to convert: this_");
+    return;
+  }
+  AtPoint2_to_Vec2(f2aThis_->PNT2, _result);
+
+  F2A_CATCH_STATEMENT("_fe_AtParamValueAsVec2")
+}
+
+FABRIC_EXT_EXPORT Fabric::EDK::KL::Data _fe_AtParamValueAsData(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtParamValue >::INParam this_
+)
+{
+  F2A_TRY_STATEMENT("_fe_AtParamValueAsData")
+
+  AtParamValue* f2aThis_ = NULL;
+  if(!KlParamValue_to_AtParamValue(this_, f2aThis_)){
+    setError("Error in _fe_AtParamValueAsData. unable to convert: this_");
+    return 0;
+  }
+  void* _result = f2aThis_->PTR;
+
+  F2A_CATCH_STATEMENT_RETURN("_fe_AtParamValueAsData", )
 }
 
 FABRIC_EXT_EXPORT void _fe_AtParamValueAsMat44(
@@ -157,4 +242,268 @@ FABRIC_EXT_EXPORT void _fe_AtParamValueAsAtArray(
  AtArray_to_KLArray(parr, _result);
 
   F2A_CATCH_STATEMENT("_fe_AtParamValueAsAtArray")
+}
+
+FABRIC_EXT_EXPORT void _fe_AtParamValueSetUInt8(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtParamValue >::INParam this_,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::UInt8 >::INParam val
+)
+{
+  F2A_TRY_STATEMENT("_fe_AtParamValueSetUInt8")
+
+  AtParamValue* f2aThis_ = NULL;
+  if(!KlParamValue_to_AtParamValue(this_, f2aThis_)){
+    setError("Error in _fe_AtParamValueSetUInt8. unable to convert: this_");
+    return;
+  }
+  AtByte f2aVal;
+  if(!UInt8_to_AtByte(val, f2aVal)){
+    setError("Error in _fe_AtParamValueSetUInt8. unable to convert: val");
+    return;
+  }
+  f2aThis_->BYTE = f2aVal;
+
+  F2A_CATCH_STATEMENT("_fe_AtParamValueSetUInt8")
+}
+
+FABRIC_EXT_EXPORT void _fe_AtParamValueSetUInt32(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtParamValue >::INParam this_,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::UInt32 >::INParam val
+)
+{
+  F2A_TRY_STATEMENT("_fe_AtParamValueSetUInt32")
+
+  AtParamValue* f2aThis_ = NULL;
+  if(!KlParamValue_to_AtParamValue(this_, f2aThis_)){
+    setError("Error in _fe_AtParamValueSetUInt32. unable to convert: this_");
+    return;
+  }
+  unsigned int f2aVal;
+  if(!UInt32_to_unsigned_int(val, f2aVal)){
+    setError("Error in _fe_AtParamValueSetUInt32. unable to convert: val");
+    return;
+  }
+  f2aThis_->UINT = f2aVal;
+
+  F2A_CATCH_STATEMENT("_fe_AtParamValueSetUInt32")
+}
+
+FABRIC_EXT_EXPORT void _fe_AtParamValueSetSInt32(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtParamValue >::INParam this_,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::SInt32 >::INParam val
+)
+{
+  F2A_TRY_STATEMENT("_fe_AtParamValueSetSInt32")
+
+  AtParamValue* f2aThis_ = NULL;
+  if(!KlParamValue_to_AtParamValue(this_, f2aThis_)){
+    setError("Error in _fe_AtParamValueSetSInt32. unable to convert: this_");
+    return;
+  }
+  int f2aVal;
+  if(!SInt32_to_int(val, f2aVal)){
+    setError("Error in _fe_AtParamValueSetSInt32. unable to convert: val");
+    return;
+  }
+  f2aThis_->INT = f2aVal;
+
+  F2A_CATCH_STATEMENT("_fe_AtParamValueSetSInt32")
+}
+
+FABRIC_EXT_EXPORT void _fe_AtParamValueSetFloat32(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtParamValue >::INParam this_,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::Float32 >::INParam val
+)
+{
+  F2A_TRY_STATEMENT("_fe_AtParamValueSetFloat32")
+
+  AtParamValue* f2aThis_ = NULL;
+  if(!KlParamValue_to_AtParamValue(this_, f2aThis_)){
+    setError("Error in _fe_AtParamValueSetFloat32. unable to convert: this_");
+    return;
+  }
+  float f2aVal;
+  if(!Float32_to_float(val, f2aVal)){
+    setError("Error in _fe_AtParamValueSetFloat32. unable to convert: val");
+    return;
+  }
+  f2aThis_->FLT = f2aVal;
+
+  F2A_CATCH_STATEMENT("_fe_AtParamValueSetFloat32")
+}
+
+FABRIC_EXT_EXPORT void _fe_AtParamValueSetRGB(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtParamValue >::INParam this_,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::Color >::INParam val
+)
+{
+  F2A_TRY_STATEMENT("_fe_AtParamValueSetRGB")
+
+  AtParamValue* f2aThis_ = NULL;
+  if(!KlParamValue_to_AtParamValue(this_, f2aThis_)){
+    setError("Error in _fe_AtParamValueSetRGB. unable to convert: this_");
+    return;
+  }
+  AtRGB f2aVal;
+  if(!Color_to_AtRGB(val, f2aVal)){
+    setError("Error in _fe_AtParamValueSetRGB. unable to convert: val");
+    return;
+  }
+  f2aThis_->RGB = f2aVal;
+
+  F2A_CATCH_STATEMENT("_fe_AtParamValueSetRGB")
+}
+
+FABRIC_EXT_EXPORT void _fe_AtParamValueSetRGBA(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtParamValue >::INParam this_,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::Color >::INParam val
+)
+{
+  F2A_TRY_STATEMENT("_fe_AtParamValueSetRGBA")
+
+  AtParamValue* f2aThis_ = NULL;
+  if(!KlParamValue_to_AtParamValue(this_, f2aThis_)){
+    setError("Error in _fe_AtParamValueSetRGBA. unable to convert: this_");
+    return;
+  }
+  AtRGB f2aVal;
+  if(!Color_to_AtRGB(val, f2aVal)){
+    setError("Error in _fe_AtParamValueSetRGBA. unable to convert: val");
+    return;
+  }
+  KLColor_to_CPAtRGBA(val, f2aThis_->RGBA);
+
+  F2A_CATCH_STATEMENT("_fe_AtParamValueSetRGBA")
+}
+
+FABRIC_EXT_EXPORT void _fe_AtParamValueSetVec3(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtParamValue >::INParam this_,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::Vec3 >::INParam val
+)
+{
+  F2A_TRY_STATEMENT("_fe_AtParamValueSetVec3")
+
+  AtParamValue* f2aThis_ = NULL;
+  if(!KlParamValue_to_AtParamValue(this_, f2aThis_)){
+    setError("Error in _fe_AtParamValueSetVec3. unable to convert: this_");
+    return;
+  }
+  AtPoint f2aVal;
+  if(!Vec3_to_AtPoint(val, f2aVal)){
+    setError("Error in _fe_AtParamValueSetVec3. unable to convert: val");
+    return;
+  }
+  f2aThis_->PNT = f2aVal;
+
+  F2A_CATCH_STATEMENT("_fe_AtParamValueSetVec3")
+}
+
+FABRIC_EXT_EXPORT void _fe_AtParamValueSetVec2(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtParamValue >::INParam this_,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::Vec2 >::INParam val
+)
+{
+  F2A_TRY_STATEMENT("_fe_AtParamValueSetVec2")
+
+  AtParamValue* f2aThis_ = NULL;
+  if(!KlParamValue_to_AtParamValue(this_, f2aThis_)){
+    setError("Error in _fe_AtParamValueSetVec2. unable to convert: this_");
+    return;
+  }
+  AtPoint2 f2aVal;
+  if(!Vec2_to_AtPoint2(val, f2aVal)){
+    setError("Error in _fe_AtParamValueSetVec2. unable to convert: val");
+    return;
+  }
+  f2aThis_->PNT2 = f2aVal;
+
+  F2A_CATCH_STATEMENT("_fe_AtParamValueSetVec2")
+}
+
+FABRIC_EXT_EXPORT void _fe_AtParamValueSetData(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtParamValue >::INParam this_,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::Data >::INParam val
+)
+{
+  F2A_TRY_STATEMENT("_fe_AtParamValueSetData")
+
+  AtParamValue* f2aThis_ = NULL;
+  if(!KlParamValue_to_AtParamValue(this_, f2aThis_)){
+    setError("Error in _fe_AtParamValueSetData. unable to convert: this_");
+    return;
+  }
+  void* f2aVal = NULL;
+  if(!Data_to_void(val, f2aVal)){
+    setError("Error in _fe_AtParamValueSetData. unable to convert: val");
+    return;
+  }
+  f2aThis_->PTR = f2aVal;
+
+  F2A_CATCH_STATEMENT("_fe_AtParamValueSetData")
+}
+
+FABRIC_EXT_EXPORT void _fe_AtParamValueSetMat44(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtParamValue >::INParam this_,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::Mat44 >::INParam val
+)
+{
+  F2A_TRY_STATEMENT("_fe_AtParamValueSetMat44")
+
+  AtParamValue* f2aThis_ = NULL;
+  if(!KlParamValue_to_AtParamValue(this_, f2aThis_)){
+    setError("Error in _fe_AtParamValueSetMat44. unable to convert: this_");
+    return;
+  }
+  AtMatrix f2aVal;
+  if(!Mat44_to_AtMatrix(val, f2aVal)){
+    setError("Error in _fe_AtParamValueSetMat44. unable to convert: val");
+    return;
+  }
+  Mat44_to_AtMatrix(val, *f2aThis_->pMTX);
+
+  F2A_CATCH_STATEMENT("_fe_AtParamValueSetMat44")
+}
+
+FABRIC_EXT_EXPORT void _fe_AtParamValueSetString(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtParamValue >::INParam this_,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::String >::INParam val
+)
+{
+  F2A_TRY_STATEMENT("_fe_AtParamValueSetString")
+
+  AtParamValue* f2aThis_ = NULL;
+  if(!KlParamValue_to_AtParamValue(this_, f2aThis_)){
+    setError("Error in _fe_AtParamValueSetString. unable to convert: this_");
+    return;
+  }
+  char* f2aVal = NULL;
+  if(!String_to_char(val, f2aVal)){
+    setError("Error in _fe_AtParamValueSetString. unable to convert: val");
+    return;
+  }
+  f2aThis_->STR = f2aVal;
+
+  F2A_CATCH_STATEMENT("_fe_AtParamValueSetString")
+}
+
+FABRIC_EXT_EXPORT void _fe_AtParamValueSetAtArray(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtParamValue >::INParam this_,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtArray >::INParam val
+)
+{
+  F2A_TRY_STATEMENT("_fe_AtParamValueSetAtArray")
+
+  AtParamValue* f2aThis_ = NULL;
+  if(!KlParamValue_to_AtParamValue(this_, f2aThis_)){
+    setError("Error in _fe_AtParamValueSetAtArray. unable to convert: this_");
+    return;
+  }
+  AtArray* f2aVal = NULL;
+  if(!KlArray_to_AtArray(val, f2aVal)){
+    setError("Error in _fe_AtParamValueSetAtArray. unable to convert: val");
+    return;
+  }
+  KlArray_to_AtArray(val, f2aThis_->ARRAY);
+
+  F2A_CATCH_STATEMENT("_fe_AtParamValueSetAtArray")
 }
