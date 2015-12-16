@@ -1,8 +1,8 @@
-#ifndef __KL2EDK_AUTOGEN_a2fPluginShaderInterface__
-#define __KL2EDK_AUTOGEN_a2fPluginShaderInterface__
+#ifndef __KL2EDK_AUTOGEN_a2fPluginBase__
+#define __KL2EDK_AUTOGEN_a2fPluginBase__
 
 #ifdef KL2EDK_INCLUDE_MESSAGES
-  #pragma message ( "Including 'a2fPluginShaderInterface.h'" )
+  #pragma message ( "Including 'a2fPluginBase.h'" )
 #endif
 
 ////////////////////////////////////////////////////////////////
@@ -21,13 +21,12 @@
 #include "AtMetaDataStore.h"
 #include "AtNode.h"
 #include "AtParamValue.h"
-#include "AtShaderGlobals.h"
 
 namespace Fabric { namespace EDK { namespace KL {
 
-// KL interface 'a2fPluginShaderInterface'
+// KL interface 'a2fPluginBase'
 
-class a2fPluginShaderInterface
+class a2fPluginBase
 {
 public:
   
@@ -52,11 +51,6 @@ public:
       ObjectCore const * const *objectCorePtr,
       Traits< AtNode >::INParam node
       );
-    void (*evaluate_21255CEE1AF4E92C9AB84F73EAFAB2FB)(
-      ObjectCore const * const *objectCorePtr,
-      Traits< AtNode >::INParam node,
-      Traits< AtShaderGlobals >::INParam globals
-      );
   };
   
   struct Bits
@@ -67,20 +61,20 @@ public:
   
 protected:
   
-  friend struct Traits< a2fPluginShaderInterface >;
+  friend struct Traits< a2fPluginBase >;
   
-  static void ConstructEmpty( a2fPluginShaderInterface *self )
+  static void ConstructEmpty( a2fPluginBase *self )
   {
     self->m_bits = 0;
   }
   
-  static void ConstructCopy( a2fPluginShaderInterface *self, a2fPluginShaderInterface const *other )
+  static void ConstructCopy( a2fPluginBase *self, a2fPluginBase const *other )
   {
     if ( (self->m_bits = other->m_bits) )
       AtomicUInt32Increment( &self->m_bits->objectCorePtr->refCount );
   }
   
-  static void AssignCopy( a2fPluginShaderInterface *self, a2fPluginShaderInterface const *other )
+  static void AssignCopy( a2fPluginBase *self, a2fPluginBase const *other )
   {
     if ( self->m_bits != other->m_bits )
     {
@@ -89,7 +83,7 @@ protected:
     }
   }
   
-  static void Destruct( a2fPluginShaderInterface *self )
+  static void Destruct( a2fPluginBase *self )
   {
     if ( self->m_bits
       && AtomicUInt32DecrementAndGetValue( &self->m_bits->objectCorePtr->refCount ) == 0 )
@@ -102,27 +96,27 @@ protected:
   
 public: 
   
-  typedef a2fPluginShaderInterface &Result;
-  typedef a2fPluginShaderInterface const &INParam;
-  typedef a2fPluginShaderInterface &IOParam;
+  typedef a2fPluginBase &Result;
+  typedef a2fPluginBase const &INParam;
+  typedef a2fPluginBase &IOParam;
   
-  a2fPluginShaderInterface()
+  a2fPluginBase()
   {
     ConstructEmpty( this );
   }
   
-  a2fPluginShaderInterface( a2fPluginShaderInterface const &that )
+  a2fPluginBase( a2fPluginBase const &that )
   {
     ConstructCopy( this, &that );
   }
   
-  a2fPluginShaderInterface &operator =( a2fPluginShaderInterface const &that )
+  a2fPluginBase &operator =( a2fPluginBase const &that )
   {
     AssignCopy( this, &that );
     return *this;
   }
   
-  ~a2fPluginShaderInterface()
+  ~a2fPluginBase()
   {
     Destruct( this );
   }
@@ -205,37 +199,25 @@ public:
       node
       );
   }
-  
-  void evaluate(
-    Traits< AtNode >::INParam node,
-    Traits< AtShaderGlobals >::INParam globals
-    ) const
-  {
-    m_bits->vTableSwapPtrPtr->get()->evaluate_21255CEE1AF4E92C9AB84F73EAFAB2FB(
-      &m_bits->objectCorePtr,
-      node,
-      globals
-      );
-  }
 };
 
-inline void Traits<a2fPluginShaderInterface>::ConstructEmpty( a2fPluginShaderInterface &val )
+inline void Traits<a2fPluginBase>::ConstructEmpty( a2fPluginBase &val )
 {
-  a2fPluginShaderInterface::ConstructEmpty( &val );
+  a2fPluginBase::ConstructEmpty( &val );
 }
-inline void Traits<a2fPluginShaderInterface>::ConstructCopy( a2fPluginShaderInterface &lhs, a2fPluginShaderInterface const &rhs )
+inline void Traits<a2fPluginBase>::ConstructCopy( a2fPluginBase &lhs, a2fPluginBase const &rhs )
 {
-  a2fPluginShaderInterface::ConstructCopy( &lhs, &rhs );
+  a2fPluginBase::ConstructCopy( &lhs, &rhs );
 }
-inline void Traits<a2fPluginShaderInterface>::AssignCopy( a2fPluginShaderInterface &lhs, a2fPluginShaderInterface const &rhs )
+inline void Traits<a2fPluginBase>::AssignCopy( a2fPluginBase &lhs, a2fPluginBase const &rhs )
 {
-  a2fPluginShaderInterface::AssignCopy( &lhs, &rhs );
+  a2fPluginBase::AssignCopy( &lhs, &rhs );
 }
-inline void Traits<a2fPluginShaderInterface>::Destruct( a2fPluginShaderInterface &val )
+inline void Traits<a2fPluginBase>::Destruct( a2fPluginBase &val )
 {
-  a2fPluginShaderInterface::Destruct( &val );
+  a2fPluginBase::Destruct( &val );
 }
 
 }}}
 
-#endif // __KL2EDK_AUTOGEN_a2fPluginShaderInterface__
+#endif // __KL2EDK_AUTOGEN_a2fPluginBase__

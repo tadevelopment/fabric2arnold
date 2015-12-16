@@ -1,16 +1,27 @@
 /**
  * This interface defines the methods required by an arnold shader
  *
+*/
 
 
-
-interface a2fPluginShader
+/**
+ * The BasePlugin interface defines a set of functions common to every plugin
+ * Every plugin must derive from this interface
+ */
+interface a2fPluginBase
 {
     parameters(AtList list, AtMetaDataStore metadata);
     initialize(AtNode node, AtParamValue value);
     update(AtNode node, AtParamValue value);
     finish(AtNode node);
+};
 
+
+/**
+ * The shader interface implements the functionality necessary for
+ * an arnold shader.  Derive from both BasePlugin and this class to implement one.
+ */
+interface a2fPluginShader
+{
     evaluate(AtNode node, AtShaderGlobals globals);
 };
-*/

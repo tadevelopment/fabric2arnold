@@ -97,6 +97,7 @@ filesToProcess = [
 fpm_enforced_order = [
     "ai_shaderglobals.kl",
     "ai_ray.kl",
+    "a2fShader.kl",
     "a2fPluginMgr.kl"
 ]
 # Any elements named in this list will not be exported

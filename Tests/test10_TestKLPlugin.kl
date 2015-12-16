@@ -5,7 +5,7 @@
 
 require Fabric2ArnoldWrapper;
 
-object TestShader : a2fPluginShaderInterface
+object TestShader : a2fPluginBase, a2fPluginShader
 {
   String vvv;
 };
@@ -35,7 +35,7 @@ function TestShader.finish(AtNode node)
 }
 function TestShader.evaluate(AtNode node, AtShaderGlobals globals)
 {
-  globals.out.setRGB(Color(0.0f, 1.0f, 0.0f));
+  globals.out.setRGB(Color(1.0f, 0.0f, 0.0f));
 }
 
 operator entry() {

@@ -76,7 +76,8 @@ namespace Fabric { namespace EDK { namespace KL {
   struct Vec3_d;
   struct Vec4;
   struct Xfo;
-  class a2fPluginShaderInterface;
+  class a2fPluginBase;
+  class a2fPluginShader;
 }}}
 
 #include "aliases.h"
@@ -837,16 +838,29 @@ struct Traits< AtRay >
 };
 
 template<>
-struct Traits< a2fPluginShaderInterface >
+struct Traits< a2fPluginBase >
 {
-  typedef a2fPluginShaderInterface &Result;
-  typedef a2fPluginShaderInterface const &INParam;
-  typedef a2fPluginShaderInterface &IOParam;
+  typedef a2fPluginBase &Result;
+  typedef a2fPluginBase const &INParam;
+  typedef a2fPluginBase &IOParam;
   
-  static void ConstructEmpty( a2fPluginShaderInterface &val );
-  static void ConstructCopy( a2fPluginShaderInterface &lhs, a2fPluginShaderInterface const &rhs );
-  static void AssignCopy( a2fPluginShaderInterface &lhs, a2fPluginShaderInterface const &rhs );
-  static void Destruct( a2fPluginShaderInterface &val );
+  static void ConstructEmpty( a2fPluginBase &val );
+  static void ConstructCopy( a2fPluginBase &lhs, a2fPluginBase const &rhs );
+  static void AssignCopy( a2fPluginBase &lhs, a2fPluginBase const &rhs );
+  static void Destruct( a2fPluginBase &val );
+};
+
+template<>
+struct Traits< a2fPluginShader >
+{
+  typedef a2fPluginShader &Result;
+  typedef a2fPluginShader const &INParam;
+  typedef a2fPluginShader &IOParam;
+  
+  static void ConstructEmpty( a2fPluginShader &val );
+  static void ConstructCopy( a2fPluginShader &lhs, a2fPluginShader const &rhs );
+  static void AssignCopy( a2fPluginShader &lhs, a2fPluginShader const &rhs );
+  static void Destruct( a2fPluginShader &val );
 };
 
 template<>

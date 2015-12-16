@@ -7,16 +7,15 @@ require Singletons;
 /**
  * The interface to be implemented
  */
-interface a2fPluginShaderInterface
-{
-    parameters(AtList list, AtMetaDataStore metadata);
-    initialize(AtNode node, AtParamValue value);
-    update(AtNode node, AtParamValue value);
-    finish(AtNode node);
+// interface a2fPluginShaderInterface
+// {
+//     parameters(AtList list, AtMetaDataStore metadata);
+//     initialize(AtNode node, AtParamValue value);
+//     update(AtNode node, AtParamValue value);
+//     finish(AtNode node);
 
-    evaluate(AtNode node, AtShaderGlobals globals);
-};
-
+//     evaluate(AtNode node, AtShaderGlobals globals);
+// };
 
 /** 
  * We define an interface to the plugin mgr so kl2edk generates
@@ -28,7 +27,10 @@ interface ArnoldKLPluginIMgr
     RegisterKLPlugin!(Type kltype, SInt32 type, UInt8 output_type, String name, String filename);
 
     // This function is called by the C++ API to generate an instance of one of the plugins
-    a2fPluginShaderInterface CreateInstance(String name);
+    a2fPluginBase CreateInstance(String name);
+
+    // Because we can't cast in C++ between KL types, we expose functions here to handle it.
+    a2fPluginShader CastToShader(a2fPluginBase instance);
 };
 
 /** 
@@ -84,9 +86,15 @@ function ArnoldKLPluginMgr.RegisterKLPlugin!(Type kltype, SInt32 type, UInt8 out
     a2fPluginMgrRegisterPlugin(type, output_type, name, filename);
 }
 
-function a2fPluginShaderInterface ArnoldKLPluginMgr.CreateInstance(String name)
+function a2fPluginBase ArnoldKLPluginMgr.CreateInstance(String name)
 {
     if (this.registeredPlugins.has(name))
         return this.registeredPlugins[name].createNew();
     return null;
+}
+
+// Cast base to shader.
+a2fPluginShader ArnoldKLPluginMgr.CastToShader(a2fPluginBase instance)
+{
+    return instance;
 }

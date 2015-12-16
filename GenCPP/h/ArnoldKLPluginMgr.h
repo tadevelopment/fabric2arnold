@@ -84,8 +84,12 @@ public:
     Traits< String >::INParam filename
     );
   
-  a2fPluginShaderInterface CreateInstance(
+  a2fPluginBase CreateInstance(
     Traits< String >::INParam name
+    ) const;
+  
+  a2fPluginShader CastToShader(
+    Traits< a2fPluginBase >::INParam instance
     ) const;
 };
 

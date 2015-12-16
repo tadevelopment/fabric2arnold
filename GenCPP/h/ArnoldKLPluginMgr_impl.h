@@ -198,16 +198,30 @@ namespace Fabric { namespace EDK { namespace KL {
       );
   }
   
-  inline a2fPluginShaderInterface ArnoldKLPluginMgr::CreateInstance(
+  inline a2fPluginBase ArnoldKLPluginMgr::CreateInstance(
     Traits< String >::INParam name
     ) const
   {
-    a2fPluginShaderInterface _result;
+    a2fPluginBase _result;
     ObjectCore const *objectCorePtr = &static_cast<ArnoldKLPluginMgr::Bits *>( m_bits )->__objectCore;
-    static_cast<ArnoldKLPluginMgr::Bits *>( m_bits )->__interfaceArnoldKLPluginIMgrBits.vTableSwapPtrPtr->get()->CreateInstance_F8E7C74E9EA833C62A6FEB78807A4EFD(
+    static_cast<ArnoldKLPluginMgr::Bits *>( m_bits )->__interfaceArnoldKLPluginIMgrBits.vTableSwapPtrPtr->get()->CreateInstance_773E5E5E62015AD2910DFDAB2A02C783(
       _result,
       &objectCorePtr,
       name
+      );
+    return _result;
+  }
+  
+  inline a2fPluginShader ArnoldKLPluginMgr::CastToShader(
+    Traits< a2fPluginBase >::INParam instance
+    ) const
+  {
+    a2fPluginShader _result;
+    ObjectCore const *objectCorePtr = &static_cast<ArnoldKLPluginMgr::Bits *>( m_bits )->__objectCore;
+    static_cast<ArnoldKLPluginMgr::Bits *>( m_bits )->__interfaceArnoldKLPluginIMgrBits.vTableSwapPtrPtr->get()->CastToShader_06C73D3783B3F9939383B0F5BA0C3FC4(
+      _result,
+      &objectCorePtr,
+      instance
       );
     return _result;
   }

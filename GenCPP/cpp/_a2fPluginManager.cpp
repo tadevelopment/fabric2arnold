@@ -15,7 +15,7 @@ static const char* s_currentlyRegisteringItem = nullptr;
 node_parameters
 //void Parameters(AtList* params, AtMetaDataStore* mds)
 {
-    Fabric::EDK::KL::a2fPluginShaderInterface temp_instance = s_mgr.CreateInstance(s_currentlyRegisteringItem);
+    Fabric::EDK::KL::a2fPluginBase temp_instance = s_mgr.CreateInstance(s_currentlyRegisteringItem);
     if (temp_instance.isValid())
     {
         Fabric::EDK::KL::AtList klparams;
@@ -32,13 +32,13 @@ node_initialize
     const AtNodeEntry* nodeEntry = AiNodeGetNodeEntry(node);
     const char* entryname = AiNodeEntryGetName(nodeEntry);
 
-    Fabric::EDK::KL::a2fPluginShaderInterface instance = s_mgr.CreateInstance(entryname);
+    Fabric::EDK::KL::a2fPluginBase instance = s_mgr.CreateInstance(entryname);
     if (instance.isValid())
     {
         // Save the pointer to the AtNode for later reference
         // Because the C++ classes are just handles to the KL classes
         // we need to do a full copy (not just save a pointer)
-        Fabric::EDK::KL::a2fPluginShaderInterface* pInstance = new Fabric::EDK::KL::a2fPluginShaderInterface(instance);
+        Fabric::EDK::KL::a2fPluginBase* pInstance = new Fabric::EDK::KL::a2fPluginBase(instance);
         AiNodeSetLocalData(node, pInstance);
 
         Fabric::EDK::KL::AtNode klnode;
@@ -52,7 +52,7 @@ node_initialize
 //node_update
 void Update(AtNode* node, AtParamValue* params)
 {
-    Fabric::EDK::KL::a2fPluginShaderInterface* pInstance = reinterpret_cast<Fabric::EDK::KL::a2fPluginShaderInterface*>(AiNodeGetLocalData(node));
+    Fabric::EDK::KL::a2fPluginBase* pInstance = reinterpret_cast<Fabric::EDK::KL::a2fPluginBase*>(AiNodeGetLocalData(node));
     if (pInstance != nullptr && pInstance->isValid())
     {
         Fabric::EDK::KL::AtNode klnode;
@@ -66,7 +66,7 @@ void Update(AtNode* node, AtParamValue* params)
 node_finish
 //void Finish(AtNode* node)
 {
-    Fabric::EDK::KL::a2fPluginShaderInterface* pInstance = reinterpret_cast<Fabric::EDK::KL::a2fPluginShaderInterface*>(AiNodeGetLocalData(node));
+    Fabric::EDK::KL::a2fPluginBase* pInstance = reinterpret_cast<Fabric::EDK::KL::a2fPluginBase*>(AiNodeGetLocalData(node));
     if (pInstance != nullptr && pInstance->isValid())
     {
         Fabric::EDK::KL::AtNode klnode;
@@ -82,16 +82,20 @@ node_finish
 //shader_evaluate
 void Evaluate(AtNode* node, AtShaderGlobals* globals)
 {
-    Fabric::EDK::KL::a2fPluginShaderInterface* pInstance = reinterpret_cast<Fabric::EDK::KL::a2fPluginShaderInterface*>(AiNodeGetLocalData(node));
+    Fabric::EDK::KL::a2fPluginBase* pInstance = reinterpret_cast<Fabric::EDK::KL::a2fPluginBase*>(AiNodeGetLocalData(node));
     if (pInstance != nullptr && pInstance->isValid())
     {
-        Fabric::EDK::KL::AtNode klnode;
-        CPAtNode_to_KLAtNode(node, klnode);
-        Fabric::EDK::KL::AtShaderGlobals klglobals;
-        AtShaderGlobals_to_KLAtShaderGlobals(globals, klglobals);
-        
-        pInstance->evaluate(klnode, klglobals);
-        KlAtShaderGlobals_to_AtShaderGlobals(klglobals, globals);
+        Fabric::EDK::KL::a2fPluginShader asShader = s_mgr.CastToShader(*pInstance);
+        if (asShader.isValid())
+        {
+            Fabric::EDK::KL::AtNode klnode;
+            CPAtNode_to_KLAtNode(node, klnode);
+            Fabric::EDK::KL::AtShaderGlobals klglobals;
+            AtShaderGlobals_to_KLAtShaderGlobals(globals, klglobals);
+            
+            asShader.evaluate(klnode, klglobals);
+            KlAtShaderGlobals_to_AtShaderGlobals(klglobals, globals);            
+        }
     }
 }
 

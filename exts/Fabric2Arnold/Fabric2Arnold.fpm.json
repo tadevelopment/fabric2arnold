@@ -18,10 +18,10 @@
     "ai_plugins.kl",
     "ai_texture.kl",
     "ai_universe.kl",
-    "a2fShader.kl",
     "_AtDisplayCallback.kl",
     "ai_shaderglobals.kl",
     "ai_ray.kl",
+    "a2fShader.kl",
     "a2fPluginMgr.kl",
   ]
 }

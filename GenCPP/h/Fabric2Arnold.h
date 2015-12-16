@@ -72,7 +72,8 @@
 #include "Vec3_d.h"
 #include "Vec4.h"
 #include "Xfo.h"
-#include "a2fPluginShaderInterface.h"
+#include "a2fPluginBase.h"
+#include "a2fPluginShader.h"
 #include "global_functions.h"
 
 #endif // __KL2EDK_AUTOGEN_Fabric2Arnold__

@@ -17,7 +17,8 @@
 #endif
 
 #include "global.h"
-#include "a2fPluginShaderInterface.h"
+#include "a2fPluginBase.h"
+#include "a2fPluginShader.h"
 
 namespace Fabric { namespace EDK { namespace KL {
 
@@ -37,10 +38,15 @@ public:
       Traits< String >::INParam name,
       Traits< String >::INParam filename
       );
-    void (*CreateInstance_F8E7C74E9EA833C62A6FEB78807A4EFD)(
-      Traits< a2fPluginShaderInterface >::Result _result,
+    void (*CreateInstance_773E5E5E62015AD2910DFDAB2A02C783)(
+      Traits< a2fPluginBase >::Result _result,
       ObjectCore const * const *objectCorePtr,
       Traits< String >::INParam name
+      );
+    void (*CastToShader_06C73D3783B3F9939383B0F5BA0C3FC4)(
+      Traits< a2fPluginShader >::Result _result,
+      ObjectCore const * const *objectCorePtr,
+      Traits< a2fPluginBase >::INParam instance
       );
   };
   
@@ -163,15 +169,28 @@ public:
       );
   }
   
-  a2fPluginShaderInterface CreateInstance(
+  a2fPluginBase CreateInstance(
     Traits< String >::INParam name
     ) const
   {
-    a2fPluginShaderInterface _result;
-    m_bits->vTableSwapPtrPtr->get()->CreateInstance_F8E7C74E9EA833C62A6FEB78807A4EFD(
+    a2fPluginBase _result;
+    m_bits->vTableSwapPtrPtr->get()->CreateInstance_773E5E5E62015AD2910DFDAB2A02C783(
       _result,
       &m_bits->objectCorePtr,
       name
+      );
+    return _result;
+  }
+  
+  a2fPluginShader CastToShader(
+    Traits< a2fPluginBase >::INParam instance
+    ) const
+  {
+    a2fPluginShader _result;
+    m_bits->vTableSwapPtrPtr->get()->CastToShader_06C73D3783B3F9939383B0F5BA0C3FC4(
+      _result,
+      &m_bits->objectCorePtr,
+      instance
       );
     return _result;
   }
