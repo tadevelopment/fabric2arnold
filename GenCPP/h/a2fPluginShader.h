@@ -30,10 +30,10 @@ public:
   
   struct VTable
   {
-    void (*evaluate_21255CEE1AF4E92C9AB84F73EAFAB2FB)(
+    void (*evaluate_937A87AF235DA72F6BE2196B022CF3A7)(
       ObjectCore const * const *objectCorePtr,
-      Traits< AtNode >::INParam node,
-      Traits< AtShaderGlobals >::INParam globals
+      Traits< AtNode >::IOParam node,
+      Traits< AtShaderGlobals >::IOParam globals
       );
   };
   
@@ -139,11 +139,11 @@ public:
   
   
   void evaluate(
-    Traits< AtNode >::INParam node,
-    Traits< AtShaderGlobals >::INParam globals
+    Traits< AtNode >::IOParam node,
+    Traits< AtShaderGlobals >::IOParam globals
     ) const
   {
-    m_bits->vTableSwapPtrPtr->get()->evaluate_21255CEE1AF4E92C9AB84F73EAFAB2FB(
+    m_bits->vTableSwapPtrPtr->get()->evaluate_937A87AF235DA72F6BE2196B022CF3A7(
       &m_bits->objectCorePtr,
       node,
       globals

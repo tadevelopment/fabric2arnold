@@ -1475,6 +1475,104 @@ FABRIC_EXT_EXPORT Fabric::EDK::KL::Boolean _fe_AiAOVIteratorFinished(
   Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtAOVIterator >::INParam iter
 );
 
+FABRIC_EXT_EXPORT Fabric::EDK::KL::UInt8 _fe_AiShaderEvalParamFuncByte(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtShaderGlobals >::IOParam sg,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtNode >::INParam node,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::SInt32 >::INParam pid
+);
+
+FABRIC_EXT_EXPORT Fabric::EDK::KL::SInt32 _fe_AiShaderEvalParamFuncInt(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtShaderGlobals >::IOParam sg,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtNode >::INParam node,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::SInt32 >::INParam pid
+);
+
+FABRIC_EXT_EXPORT Fabric::EDK::KL::UInt32 _fe_AiShaderEvalParamFuncUInt(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtShaderGlobals >::IOParam sg,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtNode >::INParam node,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::SInt32 >::INParam pid
+);
+
+FABRIC_EXT_EXPORT Fabric::EDK::KL::Boolean _fe_AiShaderEvalParamFuncBool(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtShaderGlobals >::IOParam sg,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtNode >::INParam node,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::SInt32 >::INParam pid
+);
+
+FABRIC_EXT_EXPORT Fabric::EDK::KL::Float32 _fe_AiShaderEvalParamFuncFlt(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtShaderGlobals >::IOParam sg,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtNode >::INParam node,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::SInt32 >::INParam pid
+);
+
+FABRIC_EXT_EXPORT void _fe_AiShaderEvalParamFuncRGB(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::Color >::Result _result,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtShaderGlobals >::IOParam sg,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtNode >::INParam node,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::SInt32 >::INParam pid
+);
+
+FABRIC_EXT_EXPORT void _fe_AiShaderEvalParamFuncRGBA(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::Color >::Result _result,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtShaderGlobals >::IOParam sg,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtNode >::INParam node,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::SInt32 >::INParam pid
+);
+
+FABRIC_EXT_EXPORT void _fe_AiShaderEvalParamFuncVec(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::Vec3 >::Result _result,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtShaderGlobals >::IOParam sg,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtNode >::INParam node,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::SInt32 >::INParam pid
+);
+
+FABRIC_EXT_EXPORT void _fe_AiShaderEvalParamFuncPnt(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::Vec3 >::Result _result,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtShaderGlobals >::IOParam sg,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtNode >::INParam node,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::SInt32 >::INParam pid
+);
+
+FABRIC_EXT_EXPORT void _fe_AiShaderEvalParamFuncPnt2(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::Vec2 >::Result _result,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtShaderGlobals >::IOParam sg,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtNode >::INParam node,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::SInt32 >::INParam pid
+);
+
+FABRIC_EXT_EXPORT void _fe_AiShaderEvalParamFuncStr(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::String >::Result _result,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtShaderGlobals >::IOParam sg,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtNode >::INParam node,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::SInt32 >::INParam pid
+);
+
+FABRIC_EXT_EXPORT Fabric::EDK::KL::Data _fe_AiShaderEvalParamFuncPtr(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtShaderGlobals >::IOParam sg,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtNode >::INParam node,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::SInt32 >::INParam pid
+);
+
+FABRIC_EXT_EXPORT void _fe_AiShaderEvalParamFuncArray(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtArray >::Result _result,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtShaderGlobals >::IOParam sg,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtNode >::INParam node,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::SInt32 >::INParam pid
+);
+
+FABRIC_EXT_EXPORT void _fe_AiShaderEvalParamFuncMtx(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::Mat44 >::Result _result,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtShaderGlobals >::IOParam sg,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtNode >::INParam node,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::SInt32 >::INParam pid
+);
+
+FABRIC_EXT_EXPORT Fabric::EDK::KL::SInt32 _fe_AiShaderEvalParamFuncEnum(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtShaderGlobals >::IOParam sg,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtNode >::INParam node,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::SInt32 >::INParam pid
+);
+
 FABRIC_EXT_EXPORT void _fe_SetAtDisplayCallback(
   Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtNode >::INParam displayDriver,
   Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtDisplayCallback >::INParam callback

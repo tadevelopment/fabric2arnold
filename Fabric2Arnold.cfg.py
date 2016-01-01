@@ -89,6 +89,7 @@ filesToProcess = [
     'ai_ray.h',
     'ai_texture.h',
     'ai_universe.h',
+    'ai_shader_parameval.h'
 ]
 
 # If you need to manually set any ordering, specify the files

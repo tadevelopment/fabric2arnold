@@ -32,24 +32,24 @@ public:
   
   struct VTable
   {
-    void (*parameters_190DD5E40486B4F00CBDA955117A6BF9)(
+    void (*parameters_1F388E0768F7A7207FCCC24F5AE59936)(
       ObjectCore const * const *objectCorePtr,
-      Traits< AtList >::INParam list,
-      Traits< AtMetaDataStore >::INParam metadata
+      Traits< AtList >::IOParam list,
+      Traits< AtMetaDataStore >::IOParam metadata
       );
-    void (*initialize_768E677B52B652FE39CFA9576E6EF96E)(
+    void (*initialize_17AE8523DC66DB0F1469BAE1C26B4BBC)(
       ObjectCore const * const *objectCorePtr,
-      Traits< AtNode >::INParam node,
-      Traits< AtParamValue >::INParam value
+      Traits< AtNode >::IOParam node,
+      Traits< AtParamValue >::IOParam value
       );
-    void (*update_B4D5A255F30F6D51C3292E530E9BC8C5)(
+    void (*update_EA7524D5A615AD89E2885946AF25AAED)(
       ObjectCore const * const *objectCorePtr,
-      Traits< AtNode >::INParam node,
-      Traits< AtParamValue >::INParam value
+      Traits< AtNode >::IOParam node,
+      Traits< AtParamValue >::IOParam value
       );
-    void (*finish_530482127119E2FE8EE7D5C046A63A8E)(
+    void (*finish_5998BBCD548026336476C84EA1A30F4D)(
       ObjectCore const * const *objectCorePtr,
-      Traits< AtNode >::INParam node
+      Traits< AtNode >::IOParam node
       );
   };
   
@@ -155,11 +155,11 @@ public:
   
   
   void parameters(
-    Traits< AtList >::INParam list,
-    Traits< AtMetaDataStore >::INParam metadata
+    Traits< AtList >::IOParam list,
+    Traits< AtMetaDataStore >::IOParam metadata
     ) const
   {
-    m_bits->vTableSwapPtrPtr->get()->parameters_190DD5E40486B4F00CBDA955117A6BF9(
+    m_bits->vTableSwapPtrPtr->get()->parameters_1F388E0768F7A7207FCCC24F5AE59936(
       &m_bits->objectCorePtr,
       list,
       metadata
@@ -167,11 +167,11 @@ public:
   }
   
   void initialize(
-    Traits< AtNode >::INParam node,
-    Traits< AtParamValue >::INParam value
+    Traits< AtNode >::IOParam node,
+    Traits< AtParamValue >::IOParam value
     ) const
   {
-    m_bits->vTableSwapPtrPtr->get()->initialize_768E677B52B652FE39CFA9576E6EF96E(
+    m_bits->vTableSwapPtrPtr->get()->initialize_17AE8523DC66DB0F1469BAE1C26B4BBC(
       &m_bits->objectCorePtr,
       node,
       value
@@ -179,11 +179,11 @@ public:
   }
   
   void update(
-    Traits< AtNode >::INParam node,
-    Traits< AtParamValue >::INParam value
+    Traits< AtNode >::IOParam node,
+    Traits< AtParamValue >::IOParam value
     ) const
   {
-    m_bits->vTableSwapPtrPtr->get()->update_B4D5A255F30F6D51C3292E530E9BC8C5(
+    m_bits->vTableSwapPtrPtr->get()->update_EA7524D5A615AD89E2885946AF25AAED(
       &m_bits->objectCorePtr,
       node,
       value
@@ -191,10 +191,10 @@ public:
   }
   
   void finish(
-    Traits< AtNode >::INParam node
+    Traits< AtNode >::IOParam node
     ) const
   {
-    m_bits->vTableSwapPtrPtr->get()->finish_530482127119E2FE8EE7D5C046A63A8E(
+    m_bits->vTableSwapPtrPtr->get()->finish_5998BBCD548026336476C84EA1A30F4D(
       &m_bits->objectCorePtr,
       node
       );

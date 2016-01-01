@@ -120,7 +120,9 @@
     "_fe_a2fReleaseManager"     : "  ReleaseKLMgr();\n",
     "_fe_AiShaderGlobals"       : "  AtShaderGlobals* f2a_result = AiShaderGlobals();",
     "_fe_AiShaderGlobalsDestroy" : "  AiShaderGlobalsDestroy(f2aSg);",
-    "_fe_GetParentAtShaderGlobals" : "  const AtShaderGlobals* f2a_result = f2aGlobals->psg;"
+    "_fe_GetParentAtShaderGlobals" : "  const AtShaderGlobals* f2a_result = f2aGlobals->psg;",
+
+    "_fe_AiShaderEvalParamFuncMtx": "  AtMatrix * f2a_result = AiShaderEvalParamFuncMtx(f2aSg, f2aNode, f2aPid);\n  AtMatrix_to_Mat44(*f2a_result, _result);"
   },
   "parameterconversionstoskip": [
   ]

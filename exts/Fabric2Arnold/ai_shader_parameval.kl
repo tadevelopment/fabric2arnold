@@ -1,0 +1,31 @@
+/**
+    Manual evaluation of shader inputs and their networks 
+  
+*/
+
+require Math;
+
+//////////////////////////////////////////////////
+//  enumerated values
+//////////////////////////////////////////////////
+//  overrides 
+//////////////////////////////////////////////////
+//  classes 
+//////////////////////////////////////////////////
+//  global-scope functions 
+
+function UInt8 AiShaderEvalParamFuncByte(io AtShaderGlobals sg, AtNode node, SInt32 pid) = '_fe_AiShaderEvalParamFuncByte';
+function SInt32 AiShaderEvalParamFuncInt(io AtShaderGlobals sg, AtNode node, SInt32 pid) = '_fe_AiShaderEvalParamFuncInt';
+function UInt32 AiShaderEvalParamFuncUInt(io AtShaderGlobals sg, AtNode node, SInt32 pid) = '_fe_AiShaderEvalParamFuncUInt';
+function Boolean AiShaderEvalParamFuncBool(io AtShaderGlobals sg, AtNode node, SInt32 pid) = '_fe_AiShaderEvalParamFuncBool';
+function Float32 AiShaderEvalParamFuncFlt(io AtShaderGlobals sg, AtNode node, SInt32 pid) = '_fe_AiShaderEvalParamFuncFlt';
+function AtColor AiShaderEvalParamFuncRGB(io AtShaderGlobals sg, AtNode node, SInt32 pid) = '_fe_AiShaderEvalParamFuncRGB';
+function AtRGBA AiShaderEvalParamFuncRGBA(io AtShaderGlobals sg, AtNode node, SInt32 pid) = '_fe_AiShaderEvalParamFuncRGBA';
+function Vec3 AiShaderEvalParamFuncVec(io AtShaderGlobals sg, AtNode node, SInt32 pid) = '_fe_AiShaderEvalParamFuncVec';
+function Vec3 AiShaderEvalParamFuncPnt(io AtShaderGlobals sg, AtNode node, SInt32 pid) = '_fe_AiShaderEvalParamFuncPnt';
+function Vec2 AiShaderEvalParamFuncPnt2(io AtShaderGlobals sg, AtNode node, SInt32 pid) = '_fe_AiShaderEvalParamFuncPnt2';
+function String AiShaderEvalParamFuncStr(io AtShaderGlobals sg, AtNode node, SInt32 pid) = '_fe_AiShaderEvalParamFuncStr';
+function Data AiShaderEvalParamFuncPtr(io AtShaderGlobals sg, AtNode node, SInt32 pid) = '_fe_AiShaderEvalParamFuncPtr';
+function AtArray AiShaderEvalParamFuncArray(io AtShaderGlobals sg, AtNode node, SInt32 pid) = '_fe_AiShaderEvalParamFuncArray';
+function Mat44 AiShaderEvalParamFuncMtx(io AtShaderGlobals sg, AtNode node, SInt32 pid) = '_fe_AiShaderEvalParamFuncMtx';
+function SInt32 AiShaderEvalParamFuncEnum(io AtShaderGlobals sg, AtNode node, SInt32 pid) = '_fe_AiShaderEvalParamFuncEnum';

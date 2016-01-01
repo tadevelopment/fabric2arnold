@@ -18,6 +18,7 @@
     "ai_plugins.kl",
     "ai_texture.kl",
     "ai_universe.kl",
+    "ai_shader_parameval.kl",
     "_AtDisplayCallback.kl",
     "ai_shaderglobals.kl",
     "ai_ray.kl",

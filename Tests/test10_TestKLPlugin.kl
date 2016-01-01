@@ -5,9 +5,11 @@
 
 require Fabric2ArnoldWrapper;
 
+const UInt32 p_color = 0;
+const UInt32 p_do_mod_color = 1;
+
 object TestShader : a2fPluginBase, a2fPluginShader
 {
-  String vvv;
 };
 
 function TestShader() {
@@ -17,48 +19,78 @@ function ~TestShader() {
   report("Destructed");
 }
 
-function TestShader.parameters(AtList list, AtMetaDataStore metadata)
+function TestShader.parameters(io AtList list, io AtMetaDataStore metadata)
 {
+  // this classes parameter
+  // NOTE - This class instance will _not_ be persisted, so don't
+  // attempt to set data members here
+  // NOTE - The parameters must be registered in order, 
+  // otherwise they don't work or something.
+  AiNodeParamRGB(list, p_color, "test_color", 1.0f, 0.0f, 0.0f);
+  AiNodeParamBool(list, p_do_mod_color, "mod_color", false);
   report("Parameters");
 }
-function TestShader.initialize(AtNode node, AtParamValue value)
+function TestShader.initialize(io AtNode node, io AtParamValue value)
 {
   report("Initialize");
 }
-function TestShader.update(AtNode node, AtParamValue value)
+function TestShader.update(io AtNode node, io AtParamValue value)
 {
   report("Update");
 }
-function TestShader.finish(AtNode node)
+function TestShader.finish(io AtNode node)
 {
   report("Finish");
 }
-function TestShader.evaluate(AtNode node, AtShaderGlobals globals)
+function TestShader.evaluate(io AtNode node, io AtShaderGlobals globals)
 {
-  globals.out.setRGB(Color(1.0f, 0.0f, 0.0f));
+  Color color = AiShaderEvalParamFuncRGB(globals, node, p_color);
+  if (AiShaderEvalParamFuncBool(globals, node, p_do_mod_color))
+  {
+    Float32 mod = globals.N.dot(globals.rd);
+    if (mod < 0)
+      color *= -mod;
+    else
+      color *= mod;
+  }
+  globals.out.setRGB(color); //Color(1.0f, 0.0, 0.0)); //color);    
 }
 
-operator entry() {
+/////////////////////////////////////////////////////////
 
-  String filename = 'C:\\temp\\test10.jpg';
+operator entry() {
   UInt64 start = getCurrentTicks();
   AiBegin();
 
   ArnoldKLPluginMgr mgr();
   mgr.RegisterKLPlugin(TestShader, AI_NODE_SHADER, AI_TYPE_RGB, "TestShader", "<kl-plugins>");
 
-  // create a sphere
-  AtNode sphere = AiNode("sphere");
-  AiNodeSetStr(sphere, "name", "mysphere");
-  AiNodeSetFlt(sphere, "radius", 5.0);
+  //////////////////////////////////////////////////////////
+  // create a sphere1
+  AtNode sphere1 = AiNode("sphere");
+  AiNodeSetStr(sphere1, "name", "mysphere1");
+  AiNodeSetFlt(sphere1, "radius", 5.0);
+  AiNodeSetPnt(sphere1, "center", -5.0, 0, 0);
+  // create a greenTestShader shader
+  AtNode greenTestShader = AiNode("TestShader");
+  AiNodeSetStr(greenTestShader, "name", "myshader1");
+  AiNodeSetRGB(greenTestShader, "test_color", 0.0, 1.0, 0.0);
+  // assign the sphere1's shader
+  AiNodeSetPtr(sphere1, "shader", greenTestShader._handle);
+  //////////////////////////////////////////////////////////
 
-  // create a lambert shader
-  AtNode lambert = AiNode("TestShader");
-  AiNodeSetStr(lambert, "name", "myshader");
-  AiNodeSetRGB(lambert, "Kd_color", 0.0, 1.0, 0.0);
-
-  // assign the sphere's shader
-  AiNodeSetPtr(sphere, "shader", lambert._handle);
+  AtNode sphere2 = AiNode("sphere");
+  AiNodeSetStr(sphere2, "name", "mysphere2");
+  AiNodeSetFlt(sphere2, "radius", 5.0);
+  AiNodeSetPnt(sphere2, "center", 5.0, 0, 0);
+  // create a blueTestShader shader
+  AtNode blueTestShader = AiNode("TestShader");
+  AiNodeSetStr(blueTestShader, "name", "myshader2");
+  AiNodeSetRGB(blueTestShader, "test_color", 1.0, 0.0, 1.0);
+  AiNodeSetBool(blueTestShader, "mod_color", true);
+  // assign the sphere2's shader
+  AiNodeSetPtr(sphere2, "shader", blueTestShader._handle);
+  //////////////////////////////////////////////////////////
 
   // create a perspective camera
   AtNode camera = AiNode("persp_camera");
@@ -81,6 +113,7 @@ operator entry() {
   // create an output driver
   AtNode driver = AiNode("driver_jpeg");
   AiNodeSetStr(driver, "name", "mydriver");
+  String filename = 'C:\\temp\\test10_a.jpg';
   AiNodeSetStr(driver, "filename", filename);
 
   // create a gaussian filter node
@@ -102,14 +135,18 @@ operator entry() {
   // get scene bounds doesn't work unless the render is called
   Box3 bounds = AiUniverseGetSceneBounds();
 
-  // remove the sphere, create a box the size of the bounds
-  AiNodeDestroy(sphere);
+  // remove the sphere1, create a box the size of the bounds
+  AiNodeDestroy(sphere1);
   AtNode box = AiNode("box");
   AiNodeSetStr(box, "name", "mybox");
-  AiNodeSetPtr(box, "shader", lambert._handle);
+  AiNodeSetPtr(box, "shader", greenTestShader._handle);
 
-  AiNodeSetPnt(box, "min", bounds.min.x, bounds.min.y, bounds.min.z);
-  AiNodeSetPnt(box, "max", bounds.max.x, bounds.max.y, bounds.max.z);
+  AiNodeSetPnt(box, "min", -3, -3, -3);
+  AiNodeSetPnt(box, "max", 3, 3, 3);
+
+  filename = 'C:\\temp\\test10_b.jpg';
+  AiNodeSetStr(driver, "filename", filename);
+
 
   // render the box now
   result = AiRender(AI_RENDER_MODE_CAMERA);
@@ -117,6 +154,10 @@ operator entry() {
   {
     report("[FabricArnold::TestSuite] Error " + String(result));
   }
+
+  // Finally, render to an ASS file
+  doArnoldRenderToASS("c:\\temp\\test10_a.ass");
+
   AiEnd();
 
   mgr.ReleaseInstance();

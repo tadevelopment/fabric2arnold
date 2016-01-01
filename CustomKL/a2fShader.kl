@@ -10,10 +10,10 @@
  */
 interface a2fPluginBase
 {
-    parameters(AtList list, AtMetaDataStore metadata);
-    initialize(AtNode node, AtParamValue value);
-    update(AtNode node, AtParamValue value);
-    finish(AtNode node);
+    parameters(io AtList list, io AtMetaDataStore metadata);
+    initialize(io AtNode node, io AtParamValue value);
+    update(io AtNode node, io AtParamValue value);
+    finish(io AtNode node);
 };
 
 
@@ -23,5 +23,5 @@ interface a2fPluginBase
  */
 interface a2fPluginShader
 {
-    evaluate(AtNode node, AtShaderGlobals globals);
+    evaluate(io AtNode node, io AtShaderGlobals globals);
 };

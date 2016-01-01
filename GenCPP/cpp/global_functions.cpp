@@ -6506,6 +6506,463 @@ FABRIC_EXT_EXPORT Fabric::EDK::KL::Boolean _fe_AiAOVIteratorFinished(
   F2A_CATCH_STATEMENT_RETURN("_fe_AiAOVIteratorFinished", )
 }
 
+FABRIC_EXT_EXPORT Fabric::EDK::KL::UInt8 _fe_AiShaderEvalParamFuncByte(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtShaderGlobals >::IOParam sg,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtNode >::INParam node,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::SInt32 >::INParam pid
+)
+{
+  F2A_TRY_STATEMENT("_fe_AiShaderEvalParamFuncByte")
+
+  AtShaderGlobals* f2aSg = NULL;
+  if(!KlAtShaderGlobals_to_AtShaderGlobals(sg, f2aSg)){
+    setError("Error in _fe_AiShaderEvalParamFuncByte. unable to convert: sg");
+    return 0;
+  }
+  AtNode* f2aNode = NULL;
+  if(!KLAtNode_to_CPAtNode(node, f2aNode)){
+    setError("Error in _fe_AiShaderEvalParamFuncByte. unable to convert: node");
+    return 0;
+  }
+  int f2aPid;
+  if(!SInt32_to_int(pid, f2aPid)){
+    setError("Error in _fe_AiShaderEvalParamFuncByte. unable to convert: pid");
+    return 0;
+  }
+  AtByte f2a_result = AiShaderEvalParamFuncByte(f2aSg, f2aNode, f2aPid);
+  Fabric::EDK::KL::UInt8 _result;
+  AtByte_to_UInt8(f2a_result, _result);
+  AtShaderGlobals_to_KLAtShaderGlobals(f2aSg, sg);
+
+  F2A_CATCH_STATEMENT_RETURN("_fe_AiShaderEvalParamFuncByte", )
+}
+
+FABRIC_EXT_EXPORT Fabric::EDK::KL::SInt32 _fe_AiShaderEvalParamFuncInt(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtShaderGlobals >::IOParam sg,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtNode >::INParam node,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::SInt32 >::INParam pid
+)
+{
+  F2A_TRY_STATEMENT("_fe_AiShaderEvalParamFuncInt")
+
+  AtShaderGlobals* f2aSg = NULL;
+  if(!KlAtShaderGlobals_to_AtShaderGlobals(sg, f2aSg)){
+    setError("Error in _fe_AiShaderEvalParamFuncInt. unable to convert: sg");
+    return 0;
+  }
+  AtNode* f2aNode = NULL;
+  if(!KLAtNode_to_CPAtNode(node, f2aNode)){
+    setError("Error in _fe_AiShaderEvalParamFuncInt. unable to convert: node");
+    return 0;
+  }
+  int f2aPid;
+  if(!SInt32_to_int(pid, f2aPid)){
+    setError("Error in _fe_AiShaderEvalParamFuncInt. unable to convert: pid");
+    return 0;
+  }
+  int f2a_result = AiShaderEvalParamFuncInt(f2aSg, f2aNode, f2aPid);
+  Fabric::EDK::KL::SInt32 _result;
+  int_to_SInt32(f2a_result, _result);
+  AtShaderGlobals_to_KLAtShaderGlobals(f2aSg, sg);
+
+  F2A_CATCH_STATEMENT_RETURN("_fe_AiShaderEvalParamFuncInt", )
+}
+
+FABRIC_EXT_EXPORT Fabric::EDK::KL::UInt32 _fe_AiShaderEvalParamFuncUInt(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtShaderGlobals >::IOParam sg,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtNode >::INParam node,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::SInt32 >::INParam pid
+)
+{
+  F2A_TRY_STATEMENT("_fe_AiShaderEvalParamFuncUInt")
+
+  AtShaderGlobals* f2aSg = NULL;
+  if(!KlAtShaderGlobals_to_AtShaderGlobals(sg, f2aSg)){
+    setError("Error in _fe_AiShaderEvalParamFuncUInt. unable to convert: sg");
+    return 0;
+  }
+  AtNode* f2aNode = NULL;
+  if(!KLAtNode_to_CPAtNode(node, f2aNode)){
+    setError("Error in _fe_AiShaderEvalParamFuncUInt. unable to convert: node");
+    return 0;
+  }
+  int f2aPid;
+  if(!SInt32_to_int(pid, f2aPid)){
+    setError("Error in _fe_AiShaderEvalParamFuncUInt. unable to convert: pid");
+    return 0;
+  }
+  unsigned int f2a_result = AiShaderEvalParamFuncUInt(f2aSg, f2aNode, f2aPid);
+  Fabric::EDK::KL::UInt32 _result;
+  unsigned_int_to_UInt32(f2a_result, _result);
+  AtShaderGlobals_to_KLAtShaderGlobals(f2aSg, sg);
+
+  F2A_CATCH_STATEMENT_RETURN("_fe_AiShaderEvalParamFuncUInt", )
+}
+
+FABRIC_EXT_EXPORT Fabric::EDK::KL::Boolean _fe_AiShaderEvalParamFuncBool(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtShaderGlobals >::IOParam sg,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtNode >::INParam node,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::SInt32 >::INParam pid
+)
+{
+  F2A_TRY_STATEMENT("_fe_AiShaderEvalParamFuncBool")
+
+  AtShaderGlobals* f2aSg = NULL;
+  if(!KlAtShaderGlobals_to_AtShaderGlobals(sg, f2aSg)){
+    setError("Error in _fe_AiShaderEvalParamFuncBool. unable to convert: sg");
+    return 0;
+  }
+  AtNode* f2aNode = NULL;
+  if(!KLAtNode_to_CPAtNode(node, f2aNode)){
+    setError("Error in _fe_AiShaderEvalParamFuncBool. unable to convert: node");
+    return 0;
+  }
+  int f2aPid;
+  if(!SInt32_to_int(pid, f2aPid)){
+    setError("Error in _fe_AiShaderEvalParamFuncBool. unable to convert: pid");
+    return 0;
+  }
+  bool f2a_result = AiShaderEvalParamFuncBool(f2aSg, f2aNode, f2aPid);
+  Fabric::EDK::KL::Boolean _result;
+  bool_to_Boolean(f2a_result, _result);
+  AtShaderGlobals_to_KLAtShaderGlobals(f2aSg, sg);
+
+  F2A_CATCH_STATEMENT_RETURN("_fe_AiShaderEvalParamFuncBool", )
+}
+
+FABRIC_EXT_EXPORT Fabric::EDK::KL::Float32 _fe_AiShaderEvalParamFuncFlt(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtShaderGlobals >::IOParam sg,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtNode >::INParam node,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::SInt32 >::INParam pid
+)
+{
+  F2A_TRY_STATEMENT("_fe_AiShaderEvalParamFuncFlt")
+
+  AtShaderGlobals* f2aSg = NULL;
+  if(!KlAtShaderGlobals_to_AtShaderGlobals(sg, f2aSg)){
+    setError("Error in _fe_AiShaderEvalParamFuncFlt. unable to convert: sg");
+    return 0;
+  }
+  AtNode* f2aNode = NULL;
+  if(!KLAtNode_to_CPAtNode(node, f2aNode)){
+    setError("Error in _fe_AiShaderEvalParamFuncFlt. unable to convert: node");
+    return 0;
+  }
+  int f2aPid;
+  if(!SInt32_to_int(pid, f2aPid)){
+    setError("Error in _fe_AiShaderEvalParamFuncFlt. unable to convert: pid");
+    return 0;
+  }
+  float f2a_result = AiShaderEvalParamFuncFlt(f2aSg, f2aNode, f2aPid);
+  Fabric::EDK::KL::Float32 _result;
+  float_to_Float32(f2a_result, _result);
+  AtShaderGlobals_to_KLAtShaderGlobals(f2aSg, sg);
+
+  F2A_CATCH_STATEMENT_RETURN("_fe_AiShaderEvalParamFuncFlt", )
+}
+
+FABRIC_EXT_EXPORT void _fe_AiShaderEvalParamFuncRGB(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::Color >::Result _result,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtShaderGlobals >::IOParam sg,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtNode >::INParam node,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::SInt32 >::INParam pid
+)
+{
+  F2A_TRY_STATEMENT("_fe_AiShaderEvalParamFuncRGB")
+
+  AtShaderGlobals* f2aSg = NULL;
+  if(!KlAtShaderGlobals_to_AtShaderGlobals(sg, f2aSg)){
+    setError("Error in _fe_AiShaderEvalParamFuncRGB. unable to convert: sg");
+    return;
+  }
+  AtNode* f2aNode = NULL;
+  if(!KLAtNode_to_CPAtNode(node, f2aNode)){
+    setError("Error in _fe_AiShaderEvalParamFuncRGB. unable to convert: node");
+    return;
+  }
+  int f2aPid;
+  if(!SInt32_to_int(pid, f2aPid)){
+    setError("Error in _fe_AiShaderEvalParamFuncRGB. unable to convert: pid");
+    return;
+  }
+  AtColor f2a_result = AiShaderEvalParamFuncRGB(f2aSg, f2aNode, f2aPid);
+  CPAtColor_to_KLColor(f2a_result, _result);  AtShaderGlobals_to_KLAtShaderGlobals(f2aSg, sg);
+
+  F2A_CATCH_STATEMENT("_fe_AiShaderEvalParamFuncRGB")
+}
+
+FABRIC_EXT_EXPORT void _fe_AiShaderEvalParamFuncRGBA(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::Color >::Result _result,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtShaderGlobals >::IOParam sg,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtNode >::INParam node,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::SInt32 >::INParam pid
+)
+{
+  F2A_TRY_STATEMENT("_fe_AiShaderEvalParamFuncRGBA")
+
+  AtShaderGlobals* f2aSg = NULL;
+  if(!KlAtShaderGlobals_to_AtShaderGlobals(sg, f2aSg)){
+    setError("Error in _fe_AiShaderEvalParamFuncRGBA. unable to convert: sg");
+    return;
+  }
+  AtNode* f2aNode = NULL;
+  if(!KLAtNode_to_CPAtNode(node, f2aNode)){
+    setError("Error in _fe_AiShaderEvalParamFuncRGBA. unable to convert: node");
+    return;
+  }
+  int f2aPid;
+  if(!SInt32_to_int(pid, f2aPid)){
+    setError("Error in _fe_AiShaderEvalParamFuncRGBA. unable to convert: pid");
+    return;
+  }
+  AtRGBA f2a_result = AiShaderEvalParamFuncRGBA(f2aSg, f2aNode, f2aPid);
+  CPAtRGBA_to_KLColor(f2a_result, _result);  AtShaderGlobals_to_KLAtShaderGlobals(f2aSg, sg);
+
+  F2A_CATCH_STATEMENT("_fe_AiShaderEvalParamFuncRGBA")
+}
+
+FABRIC_EXT_EXPORT void _fe_AiShaderEvalParamFuncVec(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::Vec3 >::Result _result,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtShaderGlobals >::IOParam sg,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtNode >::INParam node,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::SInt32 >::INParam pid
+)
+{
+  F2A_TRY_STATEMENT("_fe_AiShaderEvalParamFuncVec")
+
+  AtShaderGlobals* f2aSg = NULL;
+  if(!KlAtShaderGlobals_to_AtShaderGlobals(sg, f2aSg)){
+    setError("Error in _fe_AiShaderEvalParamFuncVec. unable to convert: sg");
+    return;
+  }
+  AtNode* f2aNode = NULL;
+  if(!KLAtNode_to_CPAtNode(node, f2aNode)){
+    setError("Error in _fe_AiShaderEvalParamFuncVec. unable to convert: node");
+    return;
+  }
+  int f2aPid;
+  if(!SInt32_to_int(pid, f2aPid)){
+    setError("Error in _fe_AiShaderEvalParamFuncVec. unable to convert: pid");
+    return;
+  }
+  AtVector f2a_result = AiShaderEvalParamFuncVec(f2aSg, f2aNode, f2aPid);
+  AtPoint_to_Vec3(f2a_result, _result);  AtShaderGlobals_to_KLAtShaderGlobals(f2aSg, sg);
+
+  F2A_CATCH_STATEMENT("_fe_AiShaderEvalParamFuncVec")
+}
+
+FABRIC_EXT_EXPORT void _fe_AiShaderEvalParamFuncPnt(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::Vec3 >::Result _result,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtShaderGlobals >::IOParam sg,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtNode >::INParam node,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::SInt32 >::INParam pid
+)
+{
+  F2A_TRY_STATEMENT("_fe_AiShaderEvalParamFuncPnt")
+
+  AtShaderGlobals* f2aSg = NULL;
+  if(!KlAtShaderGlobals_to_AtShaderGlobals(sg, f2aSg)){
+    setError("Error in _fe_AiShaderEvalParamFuncPnt. unable to convert: sg");
+    return;
+  }
+  AtNode* f2aNode = NULL;
+  if(!KLAtNode_to_CPAtNode(node, f2aNode)){
+    setError("Error in _fe_AiShaderEvalParamFuncPnt. unable to convert: node");
+    return;
+  }
+  int f2aPid;
+  if(!SInt32_to_int(pid, f2aPid)){
+    setError("Error in _fe_AiShaderEvalParamFuncPnt. unable to convert: pid");
+    return;
+  }
+  AtPoint f2a_result = AiShaderEvalParamFuncPnt(f2aSg, f2aNode, f2aPid);
+  AtPoint_to_Vec3(f2a_result, _result);  AtShaderGlobals_to_KLAtShaderGlobals(f2aSg, sg);
+
+  F2A_CATCH_STATEMENT("_fe_AiShaderEvalParamFuncPnt")
+}
+
+FABRIC_EXT_EXPORT void _fe_AiShaderEvalParamFuncPnt2(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::Vec2 >::Result _result,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtShaderGlobals >::IOParam sg,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtNode >::INParam node,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::SInt32 >::INParam pid
+)
+{
+  F2A_TRY_STATEMENT("_fe_AiShaderEvalParamFuncPnt2")
+
+  AtShaderGlobals* f2aSg = NULL;
+  if(!KlAtShaderGlobals_to_AtShaderGlobals(sg, f2aSg)){
+    setError("Error in _fe_AiShaderEvalParamFuncPnt2. unable to convert: sg");
+    return;
+  }
+  AtNode* f2aNode = NULL;
+  if(!KLAtNode_to_CPAtNode(node, f2aNode)){
+    setError("Error in _fe_AiShaderEvalParamFuncPnt2. unable to convert: node");
+    return;
+  }
+  int f2aPid;
+  if(!SInt32_to_int(pid, f2aPid)){
+    setError("Error in _fe_AiShaderEvalParamFuncPnt2. unable to convert: pid");
+    return;
+  }
+  AtPoint2 f2a_result = AiShaderEvalParamFuncPnt2(f2aSg, f2aNode, f2aPid);
+  AtPoint2_to_Vec2(f2a_result, _result);  AtShaderGlobals_to_KLAtShaderGlobals(f2aSg, sg);
+
+  F2A_CATCH_STATEMENT("_fe_AiShaderEvalParamFuncPnt2")
+}
+
+FABRIC_EXT_EXPORT void _fe_AiShaderEvalParamFuncStr(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::String >::Result _result,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtShaderGlobals >::IOParam sg,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtNode >::INParam node,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::SInt32 >::INParam pid
+)
+{
+  F2A_TRY_STATEMENT("_fe_AiShaderEvalParamFuncStr")
+
+  AtShaderGlobals* f2aSg = NULL;
+  if(!KlAtShaderGlobals_to_AtShaderGlobals(sg, f2aSg)){
+    setError("Error in _fe_AiShaderEvalParamFuncStr. unable to convert: sg");
+    return;
+  }
+  AtNode* f2aNode = NULL;
+  if(!KLAtNode_to_CPAtNode(node, f2aNode)){
+    setError("Error in _fe_AiShaderEvalParamFuncStr. unable to convert: node");
+    return;
+  }
+  int f2aPid;
+  if(!SInt32_to_int(pid, f2aPid)){
+    setError("Error in _fe_AiShaderEvalParamFuncStr. unable to convert: pid");
+    return;
+  }
+  const char * f2a_result = AiShaderEvalParamFuncStr(f2aSg, f2aNode, f2aPid);
+  char_to_String(f2a_result, _result);  AtShaderGlobals_to_KLAtShaderGlobals(f2aSg, sg);
+
+  F2A_CATCH_STATEMENT("_fe_AiShaderEvalParamFuncStr")
+}
+
+FABRIC_EXT_EXPORT Fabric::EDK::KL::Data _fe_AiShaderEvalParamFuncPtr(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtShaderGlobals >::IOParam sg,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtNode >::INParam node,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::SInt32 >::INParam pid
+)
+{
+  F2A_TRY_STATEMENT("_fe_AiShaderEvalParamFuncPtr")
+
+  AtShaderGlobals* f2aSg = NULL;
+  if(!KlAtShaderGlobals_to_AtShaderGlobals(sg, f2aSg)){
+    setError("Error in _fe_AiShaderEvalParamFuncPtr. unable to convert: sg");
+    return 0;
+  }
+  AtNode* f2aNode = NULL;
+  if(!KLAtNode_to_CPAtNode(node, f2aNode)){
+    setError("Error in _fe_AiShaderEvalParamFuncPtr. unable to convert: node");
+    return 0;
+  }
+  int f2aPid;
+  if(!SInt32_to_int(pid, f2aPid)){
+    setError("Error in _fe_AiShaderEvalParamFuncPtr. unable to convert: pid");
+    return 0;
+  }
+  void * f2a_result = AiShaderEvalParamFuncPtr(f2aSg, f2aNode, f2aPid);
+  Fabric::EDK::KL::Data _result;
+  void_to_Data(f2a_result, _result);
+  AtShaderGlobals_to_KLAtShaderGlobals(f2aSg, sg);
+
+  F2A_CATCH_STATEMENT_RETURN("_fe_AiShaderEvalParamFuncPtr", )
+}
+
+FABRIC_EXT_EXPORT void _fe_AiShaderEvalParamFuncArray(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtArray >::Result _result,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtShaderGlobals >::IOParam sg,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtNode >::INParam node,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::SInt32 >::INParam pid
+)
+{
+  F2A_TRY_STATEMENT("_fe_AiShaderEvalParamFuncArray")
+
+  AtShaderGlobals* f2aSg = NULL;
+  if(!KlAtShaderGlobals_to_AtShaderGlobals(sg, f2aSg)){
+    setError("Error in _fe_AiShaderEvalParamFuncArray. unable to convert: sg");
+    return;
+  }
+  AtNode* f2aNode = NULL;
+  if(!KLAtNode_to_CPAtNode(node, f2aNode)){
+    setError("Error in _fe_AiShaderEvalParamFuncArray. unable to convert: node");
+    return;
+  }
+  int f2aPid;
+  if(!SInt32_to_int(pid, f2aPid)){
+    setError("Error in _fe_AiShaderEvalParamFuncArray. unable to convert: pid");
+    return;
+  }
+  AtArray * f2a_result = AiShaderEvalParamFuncArray(f2aSg, f2aNode, f2aPid);
+  AtArray_to_KLArray(f2a_result, _result);  AtShaderGlobals_to_KLAtShaderGlobals(f2aSg, sg);
+
+  F2A_CATCH_STATEMENT("_fe_AiShaderEvalParamFuncArray")
+}
+
+FABRIC_EXT_EXPORT void _fe_AiShaderEvalParamFuncMtx(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::Mat44 >::Result _result,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtShaderGlobals >::IOParam sg,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtNode >::INParam node,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::SInt32 >::INParam pid
+)
+{
+  F2A_TRY_STATEMENT("_fe_AiShaderEvalParamFuncMtx")
+
+  AtShaderGlobals* f2aSg = NULL;
+  if(!KlAtShaderGlobals_to_AtShaderGlobals(sg, f2aSg)){
+    setError("Error in _fe_AiShaderEvalParamFuncMtx. unable to convert: sg");
+    return;
+  }
+  AtNode* f2aNode = NULL;
+  if(!KLAtNode_to_CPAtNode(node, f2aNode)){
+    setError("Error in _fe_AiShaderEvalParamFuncMtx. unable to convert: node");
+    return;
+  }
+  int f2aPid;
+  if(!SInt32_to_int(pid, f2aPid)){
+    setError("Error in _fe_AiShaderEvalParamFuncMtx. unable to convert: pid");
+    return;
+  }
+  AtMatrix * f2a_result = AiShaderEvalParamFuncMtx(f2aSg, f2aNode, f2aPid);
+  AtMatrix_to_Mat44(*f2a_result, _result);  AtShaderGlobals_to_KLAtShaderGlobals(f2aSg, sg);
+
+  F2A_CATCH_STATEMENT("_fe_AiShaderEvalParamFuncMtx")
+}
+
+FABRIC_EXT_EXPORT Fabric::EDK::KL::SInt32 _fe_AiShaderEvalParamFuncEnum(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtShaderGlobals >::IOParam sg,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtNode >::INParam node,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::SInt32 >::INParam pid
+)
+{
+  F2A_TRY_STATEMENT("_fe_AiShaderEvalParamFuncEnum")
+
+  AtShaderGlobals* f2aSg = NULL;
+  if(!KlAtShaderGlobals_to_AtShaderGlobals(sg, f2aSg)){
+    setError("Error in _fe_AiShaderEvalParamFuncEnum. unable to convert: sg");
+    return 0;
+  }
+  AtNode* f2aNode = NULL;
+  if(!KLAtNode_to_CPAtNode(node, f2aNode)){
+    setError("Error in _fe_AiShaderEvalParamFuncEnum. unable to convert: node");
+    return 0;
+  }
+  int f2aPid;
+  if(!SInt32_to_int(pid, f2aPid)){
+    setError("Error in _fe_AiShaderEvalParamFuncEnum. unable to convert: pid");
+    return 0;
+  }
+  int f2a_result = AiShaderEvalParamFuncEnum(f2aSg, f2aNode, f2aPid);
+  Fabric::EDK::KL::SInt32 _result;
+  int_to_SInt32(f2a_result, _result);
+  AtShaderGlobals_to_KLAtShaderGlobals(f2aSg, sg);
+
+  F2A_CATCH_STATEMENT_RETURN("_fe_AiShaderEvalParamFuncEnum", )
+}
+
 FABRIC_EXT_EXPORT void _fe_SetAtDisplayCallback(
   Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtNode >::INParam displayDriver,
   Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtDisplayCallback >::INParam callback
