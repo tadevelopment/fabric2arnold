@@ -7190,7 +7190,7 @@ FABRIC_EXT_EXPORT void _fe_AiFindDriverType(
 FABRIC_EXT_EXPORT void _fe_AiFilterInitialize(
   Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtNode >::IOParam node,
   Fabric::EDK::KL::Traits< Fabric::EDK::KL::Boolean >::INParam requires_depth,
-  Fabric::EDK::KL::Traits< Fabric::EDK::KL::String >::INParam required_aovs,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::VariableArray< Fabric::EDK::KL::String > >::INParam required_aovs,
   Fabric::EDK::KL::Traits< Fabric::EDK::KL::Data >::IOParam data
 )
 {
@@ -7206,17 +7206,17 @@ FABRIC_EXT_EXPORT void _fe_AiFilterInitialize(
     setError("Error in _fe_AiFilterInitialize. unable to convert: requires_depth");
     return;
   }
-  char* f2aRequired_aovs = NULL;
-  if(!String_to_char(required_aovs, f2aRequired_aovs)){
-    setError("Error in _fe_AiFilterInitialize. unable to convert: required_aovs");
-    return;
-  }
   void* f2aData = NULL;
   if(!Data_to_void(data, f2aData)){
     setError("Error in _fe_AiFilterInitialize. unable to convert: data");
     return;
   }
-  AiFilterInitialize(f2aNode, f2aRequires_depth, &f2aRequired_aovs, f2aData);
+  const char** req_aovs;
+  int nreq = required_aovs.size();
+  req_aovs = reinterpret_cast<const char**>(alloca( nreq + 1 ));
+  for (int i = 0; i < nreq; i++) { req_aovs[i] = required_aovs[i].c_str(); }
+  req_aovs[nreq] = NULL;
+  AiFilterInitialize(f2aNode, f2aRequires_depth, req_aovs, f2aData);
   CPAtNode_to_KLAtNode(f2aNode, node);
   void_to_Data(f2aData, data);
 

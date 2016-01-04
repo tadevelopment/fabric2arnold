@@ -89,3 +89,13 @@ struct AtMetaDataStore {
   Data _handle;
 };
 Boolean AtMetaDataStore.isValid() { return this._handle != Data(); }
+
+struct AtOutputIterator {
+  Data _handle;
+};
+Boolean AtOutputIterator.isValid() { return this._handle != Data(); }
+
+struct AtAOVSampleIterator {
+  Data _handle;
+};
+Boolean AtAOVSampleIterator.isValid() { return this._handle != Data(); }

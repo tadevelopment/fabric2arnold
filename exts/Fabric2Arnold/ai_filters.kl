@@ -9,6 +9,9 @@ require Math;
 //  enumerated values
 //////////////////////////////////////////////////
 //  overrides 
+function AiFilterInitialize(io AtNode node, Boolean requires_depth, String required_aovs[], io Data data) = "_fe_AiFilterInitialize";
+
+
 //////////////////////////////////////////////////
 //  classes 
 //////////////////////////////////////////////////
@@ -19,7 +22,6 @@ API Methods for Filter Writers
 */
 
 
-function AiFilterInitialize(io AtNode node, Boolean requires_depth, String required_aovs, io Data data) = '_fe_AiFilterInitialize';
 function AiFilterUpdate(io AtNode node, Float32 width) = '_fe_AiFilterUpdate';
 function AiFilterDestroy(io AtNode node) = '_fe_AiFilterDestroy';
 function Data AiFilterGetLocalData(AtNode node) = '_fe_AiFilterGetLocalData';

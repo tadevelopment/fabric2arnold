@@ -38,6 +38,9 @@
 		<ClInclude Include="h\a2fPluginBase.h">
 			<Filter>Header Files</Filter>
 		</ClInclude>
+		<ClInclude Include="h\a2fPluginDriver.h">
+			<Filter>Header Files</Filter>
+		</ClInclude>
 		<ClInclude Include="h\a2fPluginShader.h">
 			<Filter>Header Files</Filter>
 		</ClInclude>
@@ -60,6 +63,9 @@
 			<Filter>Header Files</Filter>
 		</ClInclude>
 		<ClInclude Include="h\AtAOVIterator.h">
+			<Filter>Header Files</Filter>
+		</ClInclude>
+		<ClInclude Include="h\AtAOVSampleIterator.h">
 			<Filter>Header Files</Filter>
 		</ClInclude>
 		<ClInclude Include="h\AtArray.h">
@@ -111,6 +117,9 @@
 			<Filter>Header Files</Filter>
 		</ClInclude>
 		<ClInclude Include="h\AtNodeMethods.h">
+			<Filter>Header Files</Filter>
+		</ClInclude>
+		<ClInclude Include="h\AtOutputIterator.h">
 			<Filter>Header Files</Filter>
 		</ClInclude>
 		<ClInclude Include="h\AtParamEntry.h">

@@ -111,6 +111,7 @@ fpm_enforced_order = [
     "a2fPlugins.kl",
     "a2fPluginMgr.kl"
 ]
+
 # Any elements named in this list will not be exported
 elementsToIgnore = [
     'AtCameraNodeMethods',
@@ -123,7 +124,8 @@ elementsToIgnore = [
     'AiNodeGetMatrixAtString',
     'AiRawDriverInitialize',
     'AiDriverExtension',
-    'AiOutputIteratorGetNext'
+    'AiOutputIteratorGetNext',
+    'AiFilterInitialize'
 ]
 
 # Add extensions to be required.  Should
@@ -201,7 +203,9 @@ custom_add_to_file = {
 
     'ai_drivers.h' :    'function AiRawDriverInitialize(io AtNode node, String required_aovs[], Boolean requires_depth, io Data data) = "_fe_AiRawDriverInitialize";\n'
                         'function String[] AiDriverExtension(AtNodeEntry node_entry) = "_fe_AiDriverExtension";\n'
-                        'function Boolean AiOutputIteratorGetNext(io AtOutputIterator iter, io String output_name, io SInt32 pixel_type, io Data bucket_data) = "_fe_AiOutputIteratorGetNext";'
+                        'function Boolean AiOutputIteratorGetNext(io AtOutputIterator iter, io String output_name, io SInt32 pixel_type, io Data bucket_data) = "_fe_AiOutputIteratorGetNext";',
+
+    'ai_filters.h' :    'function AiFilterInitialize(io AtNode node, Boolean requires_depth, String required_aovs[], io Data data) = "_fe_AiFilterInitialize";\n'
 }
 
 #####

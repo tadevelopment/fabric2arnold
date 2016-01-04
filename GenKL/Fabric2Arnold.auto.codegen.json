@@ -86,7 +86,6 @@
         "_fe_AiEnumGetValue": "  int f2a_result = AiEnumGetValue(f2aEnum_type, f2aString);\n  Fabric::EDK::KL::SInt32 _result;\n  int_to_SInt32(f2a_result, _result);\n", 
         "_fe_AiFilterDestroy": "  AiFilterDestroy(f2aNode);\n", 
         "_fe_AiFilterGetLocalData": "  void * f2a_result = AiFilterGetLocalData(f2aNode);\n  Fabric::EDK::KL::Data _result;\n  void_to_Data(f2a_result, _result);\n", 
-        "_fe_AiFilterInitialize": "  AiFilterInitialize(f2aNode, f2aRequires_depth, &f2aRequired_aovs, f2aData);\n", 
         "_fe_AiFilterUpdate": "  AiFilterUpdate(f2aNode, f2aWidth);\n", 
         "_fe_AiFindDriverType": "  const AtNodeEntry * f2a_result = AiFindDriverType(f2aExtension);\n  CPAtNodeEntry_to_KLAtNodeEntry(f2a_result, _result);", 
         "_fe_AiLicenseGetAttemptDelay": "  unsigned int f2a_result = AiLicenseGetAttemptDelay();\n  Fabric::EDK::KL::UInt32 _result;\n  unsigned_int_to_UInt32(f2a_result, _result);\n", 

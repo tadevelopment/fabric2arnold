@@ -1625,7 +1625,7 @@ FABRIC_EXT_EXPORT void _fe_AiFindDriverType(
 FABRIC_EXT_EXPORT void _fe_AiFilterInitialize(
   Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtNode >::IOParam node,
   Fabric::EDK::KL::Traits< Fabric::EDK::KL::Boolean >::INParam requires_depth,
-  Fabric::EDK::KL::Traits< Fabric::EDK::KL::String >::INParam required_aovs,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::VariableArray< Fabric::EDK::KL::String > >::INParam required_aovs,
   Fabric::EDK::KL::Traits< Fabric::EDK::KL::Data >::IOParam data
 );
 

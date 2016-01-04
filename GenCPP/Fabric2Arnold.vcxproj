@@ -31,7 +31,7 @@
 		<NMakeCleanCommandLine Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">echo Starting SCons &amp;&amp; &quot;C:\Python27_64\python.exe&quot; -c &quot;from os.path import join; import sys; sys.path = [ join(sys.prefix, &apos;Lib&apos;, &apos;site-packages&apos;, &apos;scons-2.4.1&apos;), join(sys.prefix, &apos;scons-2.4.1&apos;), join(sys.prefix, &apos;Lib&apos;, &apos;site-packages&apos;, &apos;scons&apos;), join(sys.prefix, &apos;scons&apos;) ] + sys.path; import SCons.Script; SCons.Script.main()&quot; -C &quot;R:\src\TADevelopment\Fabric2Arnold&quot; -f SConstruct -c &quot;R:\src\TADevelopment\Fabric2Arnold\Fabric2Arnold-Windows-x86_64.dll&quot;</NMakeCleanCommandLine>
 		<NMakeOutput Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">R:\src\TADevelopment\Fabric2Arnold\Fabric2Arnold-Windows-x86_64.dll</NMakeOutput>
 		<NMakePreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NDEBUG;_SCL_SECURE_NO_WARNINGS=1;_ITERATOR_DEBUG_LEVEL=0;_SECURE_SCL=0;_WIN32_WINNT=0x0600;WIN64</NMakePreprocessorDefinitions>
-		<NMakeIncludeSearchPath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\External\FabricEngine-1.15.3-Windows-x86_64\include;r:\src\TADevelopment\Fabric2Arnold\..\..\ArnoldSDK\Windows-4.2.10.0/include;GenCPP/h;.</NMakeIncludeSearchPath>
+		<NMakeIncludeSearchPath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\External\FabricEngine-1.15.3-Windows-x86_64\include;R:\src\TADevelopment\Fabric2Arnold\..\..\ArnoldSDK\Windows-4.2.10.0/include;GenCPP/h;.</NMakeIncludeSearchPath>
 		<NMakeForcedIncludes Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(NMakeForcedIncludes)</NMakeForcedIncludes>
 		<NMakeAssemblySearchPath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(NMakeAssemblySearchPath)</NMakeAssemblySearchPath>
 		<NMakeForcedUsingAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(NMakeForcedUsingAssemblies)</NMakeForcedUsingAssemblies>
@@ -46,6 +46,7 @@
 		<ClInclude Include="h\_typemapping_opaque.h" />
 		<ClInclude Include="h\_typemapping_pod.h" />
 		<ClInclude Include="h\a2fPluginBase.h" />
+		<ClInclude Include="h\a2fPluginDriver.h" />
 		<ClInclude Include="h\a2fPluginShader.h" />
 		<ClInclude Include="h\aliases.h" />
 		<ClInclude Include="h\ARGB.h" />
@@ -54,6 +55,7 @@
 		<ClInclude Include="h\ArnoldKLPluginMgr_impl.h" />
 		<ClInclude Include="h\AtAOVEntry.h" />
 		<ClInclude Include="h\AtAOVIterator.h" />
+		<ClInclude Include="h\AtAOVSampleIterator.h" />
 		<ClInclude Include="h\AtArray.h" />
 		<ClInclude Include="h\AtBucket.h" />
 		<ClInclude Include="h\AtCameraInput.h" />
@@ -71,6 +73,7 @@
 		<ClInclude Include="h\AtNodeIterator.h" />
 		<ClInclude Include="h\AtNodeLib.h" />
 		<ClInclude Include="h\AtNodeMethods.h" />
+		<ClInclude Include="h\AtOutputIterator.h" />
 		<ClInclude Include="h\AtParamEntry.h" />
 		<ClInclude Include="h\AtParamIterator.h" />
 		<ClInclude Include="h\AtParamValue.h" />
@@ -131,28 +134,29 @@ fXEBKFULT3RoZXIgRmlsZXNxAl1VDUxvY2FsIEhlYWRlcnNxA11VDEhlYWRlciBGaWxlc3EEXXEF
 KFUVaFxfYTJmUGx1Z2luTWFuYWdlci5ocQZVFmhcX0F0RGlzcGxheUNhbGxiYWNrLmhxB1UMaFxf
 ZGVmaW5lcy5ocQhVD2hcX0luY2x1ZGVBbGwuaHEJVRBoXF90eXBlbWFwcGluZy5ocQpVFmhcX3R5
 cGVtYXBwaW5nX2NsYXNzLmhxC1UXaFxfdHlwZW1hcHBpbmdfb3BhcXVlLmhxDFUUaFxfdHlwZW1h
-cHBpbmdfcG9kLmhxDVURaFxhMmZQbHVnaW5CYXNlLmhxDlUTaFxhMmZQbHVnaW5TaGFkZXIuaHEP
-VQtoXGFsaWFzZXMuaHEQVQhoXEFSR0IuaHERVRZoXEFybm9sZEtMUGx1Z2luSU1nci5ocRJVFWhc
-QXJub2xkS0xQbHVnaW5NZ3IuaHETVRpoXEFybm9sZEtMUGx1Z2luTWdyX2ltcGwuaHEUVQ5oXEF0
-QU9WRW50cnkuaHEVVRFoXEF0QU9WSXRlcmF0b3IuaHEWVQtoXEF0QXJyYXkuaHEXVQxoXEF0QnVj
-a2V0LmhxGFURaFxBdENhbWVyYUlucHV0LmhxGVUSaFxBdENhbWVyYU91dHB1dC5ocRpVC2hcQXRD
-b2xvci5ocRtVFWhcQXREaXNwbGF5Q2FsbGJhY2suaHEcVRFoXEF0TGljZW5zZUluZm8uaHEdVQpo
-XEF0TGlzdC5ocR5VE2hcQXRNZXRhRGF0YUVudHJ5LmhxH1UWaFxBdE1ldGFEYXRhSXRlcmF0b3Iu
-aHEgVRNoXEF0TWV0YURhdGFTdG9yZS5ocSFVCmhcQXROb2RlLmhxIlUPaFxBdE5vZGVFbnRyeS5o
-cSNVF2hcQXROb2RlRW50cnlJdGVyYXRvci5ocSRVEmhcQXROb2RlSXRlcmF0b3IuaHElVQ1oXEF0
-Tm9kZUxpYi5ocSZVEWhcQXROb2RlTWV0aG9kcy5ocSdVEGhcQXRQYXJhbUVudHJ5LmhxKFUTaFxB
-dFBhcmFtSXRlcmF0b3IuaHEpVRBoXEF0UGFyYW1WYWx1ZS5ocSpVGmhcQXRQYXJhbVZhbHVlX2Z1
-bmN0aW9ucy5ocStVCWhcQXRSYXkuaHEsVQpoXEF0UkdCQS5ocS1VD2hcQXRTY3JTYW1wbGUuaHEu
-VRNoXEF0U2hhZGVyR2xvYmFscy5ocS9VE2hcQXRUZXh0dXJlSGFuZGxlLmhxMFUTaFxBdFRleHR1
-cmVQYXJhbXMuaHExVRRoXEF0VXNlclBhcmFtRW50cnkuaHEyVRdoXEF0VXNlclBhcmFtSXRlcmF0
-b3IuaHEzVQhoXEJveDIuaHE0VQhoXEJveDMuaHE1VQloXENvbG9yLmhxNlUJaFxFdWxlci5ocTdV
-EWhcRmFicmljMkFybm9sZC5ocThVCmhcZ2xvYmFsLmhxOVUUaFxnbG9iYWxfZnVuY3Rpb25zLmhx
-OlUJaFxNYXQyMi5ocTtVCWhcTWF0MzMuaHE8VQloXE1hdDQ0LmhxPVUIaFxRdWF0LmhxPlUHaFxS
-YXkuaHE/VQdoXFJHQi5ocUBVCGhcUkdCQS5ocUFVEWhcUm90YXRpb25PcmRlci5ocUJVE2hcU2lu
-Z2xldG9uSGFuZGxlLmhxQ1UYaFxTaW5nbGV0b25IYW5kbGVfaW1wbC5ocURVCGhcVmVjMi5ocUVV
-CGhcVmVjMy5ocUZVCmhcVmVjM19kLmhxR1UIaFxWZWM0LmhxSFUHaFxYZm8uaHFJZVUMU291cmNl
-IEZpbGVzcUpdcUsoVRljcHBcX2EyZlBsdWdpbk1hbmFnZXIuY3BwcUxVGmNwcFxfQXREaXNwbGF5
-Q2FsbGJhY2suY3BwcU1VHmNwcFxBdFBhcmFtVmFsdWVfZnVuY3Rpb25zLmNwcHFOVRFjcHBcZXh0
-ZW5zaW9uLmNwcHFPVRhjcHBcZ2xvYmFsX2Z1bmN0aW9ucy5jcHBxUGVVDlJlc291cmNlIEZpbGVz
-cVFddS4=
+cHBpbmdfcG9kLmhxDVURaFxhMmZQbHVnaW5CYXNlLmhxDlUTaFxhMmZQbHVnaW5Ecml2ZXIuaHEP
+VRNoXGEyZlBsdWdpblNoYWRlci5ocRBVC2hcYWxpYXNlcy5ocRFVCGhcQVJHQi5ocRJVFmhcQXJu
+b2xkS0xQbHVnaW5JTWdyLmhxE1UVaFxBcm5vbGRLTFBsdWdpbk1nci5ocRRVGmhcQXJub2xkS0xQ
+bHVnaW5NZ3JfaW1wbC5ocRVVDmhcQXRBT1ZFbnRyeS5ocRZVEWhcQXRBT1ZJdGVyYXRvci5ocRdV
+F2hcQXRBT1ZTYW1wbGVJdGVyYXRvci5ocRhVC2hcQXRBcnJheS5ocRlVDGhcQXRCdWNrZXQuaHEa
+VRFoXEF0Q2FtZXJhSW5wdXQuaHEbVRJoXEF0Q2FtZXJhT3V0cHV0LmhxHFULaFxBdENvbG9yLmhx
+HVUVaFxBdERpc3BsYXlDYWxsYmFjay5ocR5VEWhcQXRMaWNlbnNlSW5mby5ocR9VCmhcQXRMaXN0
+LmhxIFUTaFxBdE1ldGFEYXRhRW50cnkuaHEhVRZoXEF0TWV0YURhdGFJdGVyYXRvci5ocSJVE2hc
+QXRNZXRhRGF0YVN0b3JlLmhxI1UKaFxBdE5vZGUuaHEkVQ9oXEF0Tm9kZUVudHJ5LmhxJVUXaFxB
+dE5vZGVFbnRyeUl0ZXJhdG9yLmhxJlUSaFxBdE5vZGVJdGVyYXRvci5ocSdVDWhcQXROb2RlTGli
+LmhxKFURaFxBdE5vZGVNZXRob2RzLmhxKVUUaFxBdE91dHB1dEl0ZXJhdG9yLmhxKlUQaFxBdFBh
+cmFtRW50cnkuaHErVRNoXEF0UGFyYW1JdGVyYXRvci5ocSxVEGhcQXRQYXJhbVZhbHVlLmhxLVUa
+aFxBdFBhcmFtVmFsdWVfZnVuY3Rpb25zLmhxLlUJaFxBdFJheS5ocS9VCmhcQXRSR0JBLmhxMFUP
+aFxBdFNjclNhbXBsZS5ocTFVE2hcQXRTaGFkZXJHbG9iYWxzLmhxMlUTaFxBdFRleHR1cmVIYW5k
+bGUuaHEzVRNoXEF0VGV4dHVyZVBhcmFtcy5ocTRVFGhcQXRVc2VyUGFyYW1FbnRyeS5ocTVVF2hc
+QXRVc2VyUGFyYW1JdGVyYXRvci5ocTZVCGhcQm94Mi5ocTdVCGhcQm94My5ocThVCWhcQ29sb3Iu
+aHE5VQloXEV1bGVyLmhxOlURaFxGYWJyaWMyQXJub2xkLmhxO1UKaFxnbG9iYWwuaHE8VRRoXGds
+b2JhbF9mdW5jdGlvbnMuaHE9VQloXE1hdDIyLmhxPlUJaFxNYXQzMy5ocT9VCWhcTWF0NDQuaHFA
+VQhoXFF1YXQuaHFBVQdoXFJheS5ocUJVB2hcUkdCLmhxQ1UIaFxSR0JBLmhxRFURaFxSb3RhdGlv
+bk9yZGVyLmhxRVUTaFxTaW5nbGV0b25IYW5kbGUuaHFGVRhoXFNpbmdsZXRvbkhhbmRsZV9pbXBs
+LmhxR1UIaFxWZWMyLmhxSFUIaFxWZWMzLmhxSVUKaFxWZWMzX2QuaHFKVQhoXFZlYzQuaHFLVQdo
+XFhmby5ocUxlVQxTb3VyY2UgRmlsZXNxTV1xTihVGWNwcFxfYTJmUGx1Z2luTWFuYWdlci5jcHBx
+T1UaY3BwXF9BdERpc3BsYXlDYWxsYmFjay5jcHBxUFUeY3BwXEF0UGFyYW1WYWx1ZV9mdW5jdGlv
+bnMuY3BwcVFVEWNwcFxleHRlbnNpb24uY3BwcVJVGGNwcFxnbG9iYWxfZnVuY3Rpb25zLmNwcHFT
+ZVUOUmVzb3VyY2UgRmlsZXNxVF11Lg==
 -->
