@@ -24,6 +24,7 @@
 #include "ArnoldKLPluginMgr_impl.h"
 #include "AtAOVEntry.h"
 #include "AtAOVIterator.h"
+#include "AtAOVSampleIterator.h"
 #include "AtArray.h"
 #include "AtBucket.h"
 #include "AtCameraInput.h"
@@ -41,6 +42,7 @@
 #include "AtNodeIterator.h"
 #include "AtNodeLib.h"
 #include "AtNodeMethods.h"
+#include "AtOutputIterator.h"
 #include "AtParamEntry.h"
 #include "AtParamIterator.h"
 #include "AtParamValue.h"
@@ -73,6 +75,7 @@
 #include "Vec4.h"
 #include "Xfo.h"
 #include "a2fPluginBase.h"
+#include "a2fPluginDriver.h"
 #include "a2fPluginShader.h"
 #include "global_functions.h"
 

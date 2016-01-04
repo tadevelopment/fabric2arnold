@@ -38,7 +38,7 @@ public:
       Traits< AtMetaDataStore >::IOParam metadata
       );
     void (*initialize_17AE8523DC66DB0F1469BAE1C26B4BBC)(
-      ObjectCore const * const *objectCorePtr,
+      ObjectCore * const *objectCorePtr,
       Traits< AtNode >::IOParam node,
       Traits< AtParamValue >::IOParam value
       );
@@ -48,7 +48,7 @@ public:
       Traits< AtParamValue >::IOParam value
       );
     void (*finish_5998BBCD548026336476C84EA1A30F4D)(
-      ObjectCore const * const *objectCorePtr,
+      ObjectCore * const *objectCorePtr,
       Traits< AtNode >::IOParam node
       );
   };
@@ -169,7 +169,7 @@ public:
   void initialize(
     Traits< AtNode >::IOParam node,
     Traits< AtParamValue >::IOParam value
-    ) const
+    )
   {
     m_bits->vTableSwapPtrPtr->get()->initialize_17AE8523DC66DB0F1469BAE1C26B4BBC(
       &m_bits->objectCorePtr,
@@ -192,7 +192,7 @@ public:
   
   void finish(
     Traits< AtNode >::IOParam node
-    ) const
+    )
   {
     m_bits->vTableSwapPtrPtr->get()->finish_5998BBCD548026336476C84EA1A30F4D(
       &m_bits->objectCorePtr,

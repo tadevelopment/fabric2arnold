@@ -122,9 +122,14 @@
     "_fe_AiShaderGlobalsDestroy" : "  AiShaderGlobalsDestroy(f2aSg);",
     "_fe_GetParentAtShaderGlobals" : "  const AtShaderGlobals* f2a_result = f2aGlobals->psg;",
 
-    "_fe_AiShaderEvalParamFuncMtx": "  AtMatrix * f2a_result = AiShaderEvalParamFuncMtx(f2aSg, f2aNode, f2aPid);\n  AtMatrix_to_Mat44(*f2a_result, _result);"
+    "_fe_AiShaderEvalParamFuncMtx": "  AtMatrix * f2a_result = AiShaderEvalParamFuncMtx(f2aSg, f2aNode, f2aPid);\n  AtMatrix_to_Mat44(*f2a_result, _result);",
+
+    "_fe_AiRawDriverInitialize" : "  const char** req_aovs;\n  int nreq = required_aovs.size();\n  req_aovs = reinterpret_cast<const char**>(alloca( nreq + 1 ));\n  for (int i = 0; i < nreq; i++) { req_aovs[i] = required_aovs[i].c_str(); }\n  req_aovs[nreq] = NULL;\n  AiRawDriverInitialize( f2aNode, req_aovs, f2aRequires_depth, f2aData );",
+    "_fe_AiDriverExtension"     : "  const char ** f2a_result = AiDriverExtension(f2aNode_entry);\n  while (*f2a_result) {\n    Fabric::EDK::KL::String s;\n    char_to_String( *f2a_result, s );\n    _result.push_back( s );\n  }",
+    "_fe_AiOutputIteratorGetNext" : "  bool f2a_result = AiOutputIteratorGetNext(f2aIter, (const char**)&f2aOutput_name, &f2aPixel_type, (const void**)&f2aBucket_data );\n  Fabric::EDK::KL::Boolean _result = f2a_result;\n"
   },
   "parameterconversionstoskip": [
+    "_fe_AiRawDriverInitialize.required_aovs"
   ]
 }
 

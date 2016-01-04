@@ -19,6 +19,8 @@
     "ai_texture.kl",
     "ai_universe.kl",
     "ai_shader_parameval.kl",
+    "ai_drivers.kl",
+    "ai_filters.kl",
     "_AtDisplayCallback.kl",
     "ai_shaderglobals.kl",
     "ai_ray.kl",

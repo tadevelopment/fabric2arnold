@@ -1,0 +1,31 @@
+/**
+    API for writing AOV driver nodes 
+  
+*/
+
+require Math;
+
+//////////////////////////////////////////////////
+//  enumerated values
+//////////////////////////////////////////////////
+//  overrides 
+function AiRawDriverInitialize(io AtNode node, String required_aovs[], Boolean requires_depth, io Data data) = "_fe_AiRawDriverInitialize";
+function String[] AiDriverExtension(AtNodeEntry node_entry) = "_fe_AiDriverExtension";
+function Boolean AiOutputIteratorGetNext(io AtOutputIterator iter, io String output_name, io SInt32 pixel_type, io Data bucket_data) = "_fe_AiOutputIteratorGetNext";
+
+//////////////////////////////////////////////////
+//  classes 
+//////////////////////////////////////////////////
+//  global-scope functions 
+/**
+API for Driver Writers
+
+*/
+
+
+function AiDriverInitialize(io AtNode node, Boolean supports_multiple_outputs, io Data data) = '_fe_AiDriverInitialize';
+function AiDriverDestroy(io AtNode node) = '_fe_AiDriverDestroy';
+function Data AiDriverGetLocalData(AtNode node) = '_fe_AiDriverGetLocalData';
+function AiDriverGetMatrices(io Mat44 world_to_camera, io Mat44 world_to_screen) = '_fe_AiDriverGetMatrices';
+function AiOutputIteratorReset(io AtOutputIterator iter) = '_fe_AiOutputIteratorReset';
+function AtNodeEntry AiFindDriverType(String extension) = '_fe_AiFindDriverType';

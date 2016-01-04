@@ -108,5 +108,5 @@ function AiNodeParamStr(io AtList params, SInt32 varoffset, String pname, String
 function AiNodeParamPtr(io AtList params, SInt32 varoffset, String pname, io Data pdefault) = '_fe_AiNodeParamPtr';
 function AiNodeParamNode(io AtList params, SInt32 varoffset, String pname, io AtNode pdefault) = '_fe_AiNodeParamNode';
 function AiNodeParamArray(io AtList params, SInt32 varoffset, String pname, io AtArray pdefault) = '_fe_AiNodeParamArray';
-function AiNodeParamMtx(io AtList params, SInt32 varoffset, String pname, Mat44 matrix) = '_fe_AiNodeParamMtx';
+function AiNodeParamMtx(io AtList params, SInt32 varoffset, String pname, io Mat44 matrix) = '_fe_AiNodeParamMtx';
 function AiNodeParamEnum(io AtList params, SInt32 varoffset, String pname, SInt32 pdefault, String[] enum_type) = '_fe_AiNodeParamEnum';

@@ -30,7 +30,7 @@ function TestShader.parameters(io AtList list, io AtMetaDataStore metadata)
   AiNodeParamBool(list, p_do_mod_color, "mod_color", false);
   report("Parameters");
 }
-function TestShader.initialize(io AtNode node, io AtParamValue value)
+function TestShader.initialize!(io AtNode node, io AtParamValue value)
 {
   report("Initialize");
 }
@@ -38,7 +38,7 @@ function TestShader.update(io AtNode node, io AtParamValue value)
 {
   report("Update");
 }
-function TestShader.finish(io AtNode node)
+function TestShader.finish!(io AtNode node)
 {
   report("Finish");
 }

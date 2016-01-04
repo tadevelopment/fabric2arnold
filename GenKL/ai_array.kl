@@ -64,7 +64,7 @@ function Vec3 AiArrayInterpolateVec(AtArray array, Float32 time, UInt32 idx) = '
 function AtColor AiArrayInterpolateRGB(AtArray array, Float32 time, UInt32 idx) = '_fe_AiArrayInterpolateRGB';
 function AtRGBA AiArrayInterpolateRGBA(AtArray array, Float32 time, UInt32 idx) = '_fe_AiArrayInterpolateRGBA';
 function Float32 AiArrayInterpolateFlt(AtArray array, Float32 time, UInt32 idx) = '_fe_AiArrayInterpolateFlt';
-function AiArrayInterpolateMtx(AtArray array, Float32 time, UInt32 idx, Mat44 result) = '_fe_AiArrayInterpolateMtx';
+function AiArrayInterpolateMtx(AtArray array, Float32 time, UInt32 idx, io Mat44 result) = '_fe_AiArrayInterpolateMtx';
 function Boolean AiArrayGetBoolFunc(AtArray a, UInt32 i, String _val, SInt32 line) = '_fe_AiArrayGetBoolFunc';
 function UInt8 AiArrayGetByteFunc(AtArray a, UInt32 i, String _val, SInt32 line) = '_fe_AiArrayGetByteFunc';
 function SInt32 AiArrayGetIntFunc(AtArray a, UInt32 i, String _val, SInt32 line) = '_fe_AiArrayGetIntFunc';
@@ -88,7 +88,7 @@ function Boolean AiArraySetRGBAFunc(io AtArray a, UInt32 i, AtRGBA val, String _
 function Boolean AiArraySetPntFunc(io AtArray a, UInt32 i, Vec3 val, String _val, SInt32 line) = '_fe_AiArraySetPntFunc';
 function Boolean AiArraySetPnt2Func(io AtArray a, UInt32 i, Vec2 val, String _val, SInt32 line) = '_fe_AiArraySetPnt2Func';
 function Boolean AiArraySetVecFunc(io AtArray a, UInt32 i, Vec3 val, String _val, SInt32 line) = '_fe_AiArraySetVecFunc';
-function Boolean AiArraySetMtxFunc(io AtArray a, UInt32 i, Mat44 val, String _val, SInt32 line) = '_fe_AiArraySetMtxFunc';
+function Boolean AiArraySetMtxFunc(io AtArray a, UInt32 i, io Mat44 val, String _val, SInt32 line) = '_fe_AiArraySetMtxFunc';
 function Boolean AiArraySetStrFunc(io AtArray a, UInt32 i, String val, String _val, SInt32 line) = '_fe_AiArraySetStrFunc';
 function Boolean AiArraySetPtrFunc(io AtArray a, UInt32 i, io Data val, String _val, SInt32 line) = '_fe_AiArraySetPtrFunc';
 function Boolean AiArraySetArrayFunc(io AtArray a, UInt32 i, io AtArray val, String _val, SInt32 line) = '_fe_AiArraySetArrayFunc';

@@ -43,6 +43,8 @@
 #include "AtNodeEntryIterator.h"
 #include "AtAOVIterator.h"
 #include "AtAOVEntry.h"
+#include "AtOutputIterator.h"
+#include "AtAOVSampleIterator.h"
 #include "AtDisplayCallback.h"
 #include "AtRay.h"
 #include "AtScrSample.h"
@@ -210,7 +212,7 @@ FABRIC_EXT_EXPORT void _fe_AiNodeParamMtx(
   Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtList >::IOParam params,
   Fabric::EDK::KL::Traits< Fabric::EDK::KL::SInt32 >::INParam varoffset,
   Fabric::EDK::KL::Traits< Fabric::EDK::KL::String >::INParam pname,
-  Fabric::EDK::KL::Traits< Fabric::EDK::KL::Mat44 >::INParam matrix
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::Mat44 >::IOParam matrix
 );
 
 FABRIC_EXT_EXPORT void _fe_AiNodeParamEnum(
@@ -400,7 +402,7 @@ FABRIC_EXT_EXPORT void _fe_AiArrayInterpolateMtx(
   Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtArray >::INParam array,
   Fabric::EDK::KL::Traits< Fabric::EDK::KL::Float32 >::INParam time,
   Fabric::EDK::KL::Traits< Fabric::EDK::KL::UInt32 >::INParam idx,
-  Fabric::EDK::KL::Traits< Fabric::EDK::KL::Mat44 >::INParam result
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::Mat44 >::IOParam result
 );
 
 FABRIC_EXT_EXPORT Fabric::EDK::KL::Boolean _fe_AiArrayGetBoolFunc(
@@ -584,7 +586,7 @@ FABRIC_EXT_EXPORT Fabric::EDK::KL::Boolean _fe_AiArraySetVecFunc(
 FABRIC_EXT_EXPORT Fabric::EDK::KL::Boolean _fe_AiArraySetMtxFunc(
   Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtArray >::IOParam a,
   Fabric::EDK::KL::Traits< Fabric::EDK::KL::UInt32 >::INParam i,
-  Fabric::EDK::KL::Traits< Fabric::EDK::KL::Mat44 >::INParam val,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::Mat44 >::IOParam val,
   Fabric::EDK::KL::Traits< Fabric::EDK::KL::String >::INParam _val,
   Fabric::EDK::KL::Traits< Fabric::EDK::KL::SInt32 >::INParam line
 );
@@ -1184,7 +1186,7 @@ FABRIC_EXT_EXPORT void _fe_AiNodeSetArrayAtString(
 FABRIC_EXT_EXPORT void _fe_AiNodeSetMatrixAtString(
   Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtNode >::IOParam node,
   Fabric::EDK::KL::Traits< Fabric::EDK::KL::String >::INParam param,
-  Fabric::EDK::KL::Traits< Fabric::EDK::KL::Mat44 >::INParam val
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::Mat44 >::IOParam val
 );
 
 FABRIC_EXT_EXPORT void _fe_AiNodeSetStrAtString(
@@ -1395,8 +1397,8 @@ FABRIC_EXT_EXPORT Fabric::EDK::KL::Boolean _fe_AiTextureGetBitDepth(
 
 FABRIC_EXT_EXPORT Fabric::EDK::KL::Boolean _fe_AiTextureGetMatrices(
   Fabric::EDK::KL::Traits< Fabric::EDK::KL::String >::INParam filename,
-  Fabric::EDK::KL::Traits< Fabric::EDK::KL::Mat44 >::INParam world_to_screen,
-  Fabric::EDK::KL::Traits< Fabric::EDK::KL::Mat44 >::INParam world_to_camera
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::Mat44 >::IOParam world_to_screen,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::Mat44 >::IOParam world_to_camera
 );
 
 FABRIC_EXT_EXPORT void _fe_AiTextureInvalidate(
@@ -1571,6 +1573,205 @@ FABRIC_EXT_EXPORT Fabric::EDK::KL::SInt32 _fe_AiShaderEvalParamFuncEnum(
   Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtShaderGlobals >::IOParam sg,
   Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtNode >::INParam node,
   Fabric::EDK::KL::Traits< Fabric::EDK::KL::SInt32 >::INParam pid
+);
+
+FABRIC_EXT_EXPORT void _fe_AiRawDriverInitialize(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtNode >::IOParam node,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::VariableArray< Fabric::EDK::KL::String > >::INParam required_aovs,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::Boolean >::INParam requires_depth,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::Data >::IOParam data
+);
+
+FABRIC_EXT_EXPORT void _fe_AiDriverExtension(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::VariableArray< Fabric::EDK::KL::String > >::Result _result,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtNodeEntry >::INParam node_entry
+);
+
+FABRIC_EXT_EXPORT Fabric::EDK::KL::Boolean _fe_AiOutputIteratorGetNext(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtOutputIterator >::IOParam iter,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::String >::IOParam output_name,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::SInt32 >::IOParam pixel_type,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::Data >::IOParam bucket_data
+);
+
+FABRIC_EXT_EXPORT void _fe_AiDriverInitialize(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtNode >::IOParam node,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::Boolean >::INParam supports_multiple_outputs,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::Data >::IOParam data
+);
+
+FABRIC_EXT_EXPORT void _fe_AiDriverDestroy(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtNode >::IOParam node
+);
+
+FABRIC_EXT_EXPORT Fabric::EDK::KL::Data _fe_AiDriverGetLocalData(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtNode >::INParam node
+);
+
+FABRIC_EXT_EXPORT void _fe_AiDriverGetMatrices(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::Mat44 >::IOParam world_to_camera,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::Mat44 >::IOParam world_to_screen
+);
+
+FABRIC_EXT_EXPORT void _fe_AiOutputIteratorReset(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtOutputIterator >::IOParam iter
+);
+
+FABRIC_EXT_EXPORT void _fe_AiFindDriverType(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtNodeEntry >::Result _result,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::String >::INParam extension
+);
+
+FABRIC_EXT_EXPORT void _fe_AiFilterInitialize(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtNode >::IOParam node,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::Boolean >::INParam requires_depth,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::String >::INParam required_aovs,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::Data >::IOParam data
+);
+
+FABRIC_EXT_EXPORT void _fe_AiFilterUpdate(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtNode >::IOParam node,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::Float32 >::INParam width
+);
+
+FABRIC_EXT_EXPORT void _fe_AiFilterDestroy(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtNode >::IOParam node
+);
+
+FABRIC_EXT_EXPORT Fabric::EDK::KL::Data _fe_AiFilterGetLocalData(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtNode >::INParam node
+);
+
+FABRIC_EXT_EXPORT void _fe_AiAOVSampleIteratorInitPixel(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtAOVSampleIterator >::IOParam iter,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::SInt32 >::INParam x,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::SInt32 >::INParam y
+);
+
+FABRIC_EXT_EXPORT void _fe_AiAOVSampleIteratorReset(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtAOVSampleIterator >::IOParam iter
+);
+
+FABRIC_EXT_EXPORT Fabric::EDK::KL::Boolean _fe_AiAOVSampleIteratorGetNext(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtAOVSampleIterator >::IOParam iter
+);
+
+FABRIC_EXT_EXPORT Fabric::EDK::KL::Boolean _fe_AiAOVSampleIteratorGetNextDepth(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtAOVSampleIterator >::IOParam iter
+);
+
+FABRIC_EXT_EXPORT void _fe_AiAOVSampleIteratorGetOffset(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::Vec2 >::Result _result,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtAOVSampleIterator >::INParam iter
+);
+
+FABRIC_EXT_EXPORT Fabric::EDK::KL::Float32 _fe_AiAOVSampleIteratorGetInvDensity(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtAOVSampleIterator >::INParam iter
+);
+
+FABRIC_EXT_EXPORT Fabric::EDK::KL::SInt32 _fe_AiAOVSampleIteratorGetDepth(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtAOVSampleIterator >::INParam iter
+);
+
+FABRIC_EXT_EXPORT Fabric::EDK::KL::Boolean _fe_AiAOVSampleIteratorHasValue(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtAOVSampleIterator >::INParam iter
+);
+
+FABRIC_EXT_EXPORT Fabric::EDK::KL::Boolean _fe_AiAOVSampleIteratorHasAOVValue(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtAOVSampleIterator >::INParam iter,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::String >::INParam name,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::UInt8 >::INParam type
+);
+
+FABRIC_EXT_EXPORT Fabric::EDK::KL::Boolean _fe_AiAOVSampleIteratorGetBool(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtAOVSampleIterator >::INParam iter
+);
+
+FABRIC_EXT_EXPORT Fabric::EDK::KL::SInt32 _fe_AiAOVSampleIteratorGetInt(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtAOVSampleIterator >::INParam iter
+);
+
+FABRIC_EXT_EXPORT Fabric::EDK::KL::Float32 _fe_AiAOVSampleIteratorGetFlt(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtAOVSampleIterator >::INParam iter
+);
+
+FABRIC_EXT_EXPORT void _fe_AiAOVSampleIteratorGetRGB(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::Color >::Result _result,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtAOVSampleIterator >::INParam iter
+);
+
+FABRIC_EXT_EXPORT void _fe_AiAOVSampleIteratorGetRGBA(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::Color >::Result _result,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtAOVSampleIterator >::INParam iter
+);
+
+FABRIC_EXT_EXPORT void _fe_AiAOVSampleIteratorGetVec(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::Vec3 >::Result _result,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtAOVSampleIterator >::INParam iter
+);
+
+FABRIC_EXT_EXPORT void _fe_AiAOVSampleIteratorGetPnt(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::Vec3 >::Result _result,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtAOVSampleIterator >::INParam iter
+);
+
+FABRIC_EXT_EXPORT void _fe_AiAOVSampleIteratorGetPnt2(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::Vec2 >::Result _result,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtAOVSampleIterator >::INParam iter
+);
+
+FABRIC_EXT_EXPORT Fabric::EDK::KL::Data _fe_AiAOVSampleIteratorGetPtr(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtAOVSampleIterator >::INParam iter
+);
+
+FABRIC_EXT_EXPORT Fabric::EDK::KL::Boolean _fe_AiAOVSampleIteratorGetAOVBoolAtString(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtAOVSampleIterator >::INParam iter,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::String >::INParam name
+);
+
+FABRIC_EXT_EXPORT Fabric::EDK::KL::SInt32 _fe_AiAOVSampleIteratorGetAOVIntAtString(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtAOVSampleIterator >::INParam iter,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::String >::INParam name
+);
+
+FABRIC_EXT_EXPORT Fabric::EDK::KL::Float32 _fe_AiAOVSampleIteratorGetAOVFltAtString(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtAOVSampleIterator >::INParam iter,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::String >::INParam name
+);
+
+FABRIC_EXT_EXPORT void _fe_AiAOVSampleIteratorGetAOVRGBAtString(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::Color >::Result _result,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtAOVSampleIterator >::INParam iter,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::String >::INParam name
+);
+
+FABRIC_EXT_EXPORT void _fe_AiAOVSampleIteratorGetAOVRGBAAtString(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::Color >::Result _result,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtAOVSampleIterator >::INParam iter,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::String >::INParam name
+);
+
+FABRIC_EXT_EXPORT void _fe_AiAOVSampleIteratorGetAOVVecAtString(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::Vec3 >::Result _result,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtAOVSampleIterator >::INParam iter,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::String >::INParam name
+);
+
+FABRIC_EXT_EXPORT void _fe_AiAOVSampleIteratorGetAOVPntAtString(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::Vec3 >::Result _result,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtAOVSampleIterator >::INParam iter,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::String >::INParam name
+);
+
+FABRIC_EXT_EXPORT void _fe_AiAOVSampleIteratorGetAOVPnt2AtString(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::Vec2 >::Result _result,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtAOVSampleIterator >::INParam iter,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::String >::INParam name
+);
+
+FABRIC_EXT_EXPORT Fabric::EDK::KL::Data _fe_AiAOVSampleIteratorGetAOVPtrAtString(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtAOVSampleIterator >::INParam iter,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::String >::INParam name
 );
 
 FABRIC_EXT_EXPORT void _fe_SetAtDisplayCallback(

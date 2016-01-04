@@ -81,5 +81,5 @@ function Boolean AiTextureGetNumChannels(String filename, io UInt32 num_channels
 function String AiTextureGetChannelName(String filename, UInt32 channel_index) = '_fe_AiTextureGetChannelName';
 function Boolean AiTextureGetFormat(String filename, io UInt32 format) = '_fe_AiTextureGetFormat';
 function Boolean AiTextureGetBitDepth(String filename, io UInt32 bit_depth) = '_fe_AiTextureGetBitDepth';
-function Boolean AiTextureGetMatrices(String filename, Mat44 world_to_screen, Mat44 world_to_camera) = '_fe_AiTextureGetMatrices';
+function Boolean AiTextureGetMatrices(String filename, io Mat44 world_to_screen, io Mat44 world_to_camera) = '_fe_AiTextureGetMatrices';
 function AiTextureInvalidate(String filename) = '_fe_AiTextureInvalidate';

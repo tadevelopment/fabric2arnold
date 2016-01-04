@@ -32,6 +32,7 @@ namespace Fabric { namespace EDK { namespace KL {
   class ArnoldKLPluginMgr;
   struct AtAOVEntry;
   struct AtAOVIterator;
+  struct AtAOVSampleIterator;
   struct AtArray;
   struct AtBucket;
   struct AtCameraInput;
@@ -48,6 +49,7 @@ namespace Fabric { namespace EDK { namespace KL {
   struct AtNodeIterator;
   struct AtNodeLib;
   struct AtNodeMethods;
+  struct AtOutputIterator;
   struct AtParamEntry;
   struct AtParamIterator;
   struct AtParamValue;
@@ -77,6 +79,7 @@ namespace Fabric { namespace EDK { namespace KL {
   struct Vec4;
   struct Xfo;
   class a2fPluginBase;
+  class a2fPluginDriver;
   class a2fPluginShader;
 }}}
 
@@ -682,6 +685,32 @@ struct Traits< AtMetaDataStore >
 };
 
 template<>
+struct Traits< AtOutputIterator >
+{
+  typedef AtOutputIterator &Result;
+  typedef AtOutputIterator const &INParam;
+  typedef AtOutputIterator &IOParam;
+  
+  static void ConstructEmpty( AtOutputIterator &val );
+  static void ConstructCopy( AtOutputIterator &lhs, AtOutputIterator const &rhs );
+  static void AssignCopy( AtOutputIterator &lhs, AtOutputIterator const &rhs );
+  static void Destruct( AtOutputIterator &val );
+};
+
+template<>
+struct Traits< AtAOVSampleIterator >
+{
+  typedef AtAOVSampleIterator &Result;
+  typedef AtAOVSampleIterator const &INParam;
+  typedef AtAOVSampleIterator &IOParam;
+  
+  static void ConstructEmpty( AtAOVSampleIterator &val );
+  static void ConstructCopy( AtAOVSampleIterator &lhs, AtAOVSampleIterator const &rhs );
+  static void AssignCopy( AtAOVSampleIterator &lhs, AtAOVSampleIterator const &rhs );
+  static void Destruct( AtAOVSampleIterator &val );
+};
+
+template<>
 struct Traits< AtParamValue >
 {
   typedef AtParamValue &Result;
@@ -861,6 +890,19 @@ struct Traits< a2fPluginShader >
   static void ConstructCopy( a2fPluginShader &lhs, a2fPluginShader const &rhs );
   static void AssignCopy( a2fPluginShader &lhs, a2fPluginShader const &rhs );
   static void Destruct( a2fPluginShader &val );
+};
+
+template<>
+struct Traits< a2fPluginDriver >
+{
+  typedef a2fPluginDriver &Result;
+  typedef a2fPluginDriver const &INParam;
+  typedef a2fPluginDriver &IOParam;
+  
+  static void ConstructEmpty( a2fPluginDriver &val );
+  static void ConstructCopy( a2fPluginDriver &lhs, a2fPluginDriver const &rhs );
+  static void AssignCopy( a2fPluginDriver &lhs, a2fPluginDriver const &rhs );
+  static void Destruct( a2fPluginDriver &val );
 };
 
 template<>

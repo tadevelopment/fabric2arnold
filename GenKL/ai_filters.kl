@@ -1,0 +1,70 @@
+/**
+    API for writing pixel-filtering nodes 
+  
+*/
+
+require Math;
+
+//////////////////////////////////////////////////
+//  enumerated values
+//////////////////////////////////////////////////
+//  overrides 
+//////////////////////////////////////////////////
+//  classes 
+//////////////////////////////////////////////////
+//  global-scope functions 
+/**
+API Methods for Filter Writers
+
+*/
+
+
+function AiFilterInitialize(io AtNode node, Boolean requires_depth, String required_aovs, io Data data) = '_fe_AiFilterInitialize';
+function AiFilterUpdate(io AtNode node, Float32 width) = '_fe_AiFilterUpdate';
+function AiFilterDestroy(io AtNode node) = '_fe_AiFilterDestroy';
+function Data AiFilterGetLocalData(AtNode node) = '_fe_AiFilterGetLocalData';
+/**
+API Methods to Loop over Samples
+
+*/
+
+
+function AiAOVSampleIteratorInitPixel(io AtAOVSampleIterator iter, SInt32 x, SInt32 y) = '_fe_AiAOVSampleIteratorInitPixel';
+function AiAOVSampleIteratorReset(io AtAOVSampleIterator iter) = '_fe_AiAOVSampleIteratorReset';
+function Boolean AiAOVSampleIteratorGetNext(io AtAOVSampleIterator iter) = '_fe_AiAOVSampleIteratorGetNext';
+function Boolean AiAOVSampleIteratorGetNextDepth(io AtAOVSampleIterator iter) = '_fe_AiAOVSampleIteratorGetNextDepth';
+function Vec2 AiAOVSampleIteratorGetOffset(AtAOVSampleIterator iter) = '_fe_AiAOVSampleIteratorGetOffset';
+function Float32 AiAOVSampleIteratorGetInvDensity(AtAOVSampleIterator iter) = '_fe_AiAOVSampleIteratorGetInvDensity';
+function SInt32 AiAOVSampleIteratorGetDepth(AtAOVSampleIterator iter) = '_fe_AiAOVSampleIteratorGetDepth';
+function Boolean AiAOVSampleIteratorHasValue(AtAOVSampleIterator iter) = '_fe_AiAOVSampleIteratorHasValue';
+function Boolean AiAOVSampleIteratorHasAOVValue(AtAOVSampleIterator iter, String name, UInt8 type) = '_fe_AiAOVSampleIteratorHasAOVValue';
+/**
+API Methods to Get Sample Value from Iterator
+
+*/
+
+
+function Boolean AiAOVSampleIteratorGetBool(AtAOVSampleIterator iter) = '_fe_AiAOVSampleIteratorGetBool';
+function SInt32 AiAOVSampleIteratorGetInt(AtAOVSampleIterator iter) = '_fe_AiAOVSampleIteratorGetInt';
+function Float32 AiAOVSampleIteratorGetFlt(AtAOVSampleIterator iter) = '_fe_AiAOVSampleIteratorGetFlt';
+function Color AiAOVSampleIteratorGetRGB(AtAOVSampleIterator iter) = '_fe_AiAOVSampleIteratorGetRGB';
+function AtRGBA AiAOVSampleIteratorGetRGBA(AtAOVSampleIterator iter) = '_fe_AiAOVSampleIteratorGetRGBA';
+function Vec3 AiAOVSampleIteratorGetVec(AtAOVSampleIterator iter) = '_fe_AiAOVSampleIteratorGetVec';
+function Vec3 AiAOVSampleIteratorGetPnt(AtAOVSampleIterator iter) = '_fe_AiAOVSampleIteratorGetPnt';
+function Vec2 AiAOVSampleIteratorGetPnt2(AtAOVSampleIterator iter) = '_fe_AiAOVSampleIteratorGetPnt2';
+function Data AiAOVSampleIteratorGetPtr(AtAOVSampleIterator iter) = '_fe_AiAOVSampleIteratorGetPtr';
+/**
+API Methods to Get Sample Value from Iterator for an Arbitrary AOV
+
+*/
+
+
+function Boolean AiAOVSampleIteratorGetAOVBoolAtString(AtAOVSampleIterator iter, String name) = '_fe_AiAOVSampleIteratorGetAOVBoolAtString';
+function SInt32 AiAOVSampleIteratorGetAOVIntAtString(AtAOVSampleIterator iter, String name) = '_fe_AiAOVSampleIteratorGetAOVIntAtString';
+function Float32 AiAOVSampleIteratorGetAOVFltAtString(AtAOVSampleIterator iter, String name) = '_fe_AiAOVSampleIteratorGetAOVFltAtString';
+function Color AiAOVSampleIteratorGetAOVRGBAtString(AtAOVSampleIterator iter, String name) = '_fe_AiAOVSampleIteratorGetAOVRGBAtString';
+function AtRGBA AiAOVSampleIteratorGetAOVRGBAAtString(AtAOVSampleIterator iter, String name) = '_fe_AiAOVSampleIteratorGetAOVRGBAAtString';
+function Vec3 AiAOVSampleIteratorGetAOVVecAtString(AtAOVSampleIterator iter, String name) = '_fe_AiAOVSampleIteratorGetAOVVecAtString';
+function Vec3 AiAOVSampleIteratorGetAOVPntAtString(AtAOVSampleIterator iter, String name) = '_fe_AiAOVSampleIteratorGetAOVPntAtString';
+function Vec2 AiAOVSampleIteratorGetAOVPnt2AtString(AtAOVSampleIterator iter, String name) = '_fe_AiAOVSampleIteratorGetAOVPnt2AtString';
+function Data AiAOVSampleIteratorGetAOVPtrAtString(AtAOVSampleIterator iter, String name) = '_fe_AiAOVSampleIteratorGetAOVPtrAtString';

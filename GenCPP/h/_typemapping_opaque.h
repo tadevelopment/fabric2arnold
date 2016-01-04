@@ -16,6 +16,16 @@ inline bool CPAtUserParamIterator_to_KLAtUserParamIterator(const AtUserParamIter
   return true; 
 }
 
+inline bool KLAtAOVSampleIterator_to_CPAtAOVSampleIterator(const Fabric::EDK::KL::AtAOVSampleIterator & from, AtAOVSampleIterator* & to) { 
+  to = reinterpret_cast<AtAOVSampleIterator*>(from._handle);
+  return true;
+}
+
+inline bool CPAtAOVSampleIterator_to_KLAtAOVSampleIterator(const AtAOVSampleIterator* const & from, Fabric::EDK::KL::AtAOVSampleIterator & to) {
+  to._handle = const_cast<AtAOVSampleIterator*>(from);
+  return true; 
+}
+
 inline bool KLAtBucket_to_CPAtBucket(const Fabric::EDK::KL::AtBucket & from, AtBucket* & to) { 
   to = reinterpret_cast<AtBucket*>(from._handle);
   return true;
@@ -53,6 +63,16 @@ inline bool KLAtNodeEntry_to_CPAtNodeEntry(const Fabric::EDK::KL::AtNodeEntry & 
 
 inline bool CPAtNodeEntry_to_KLAtNodeEntry(const AtNodeEntry* const & from, Fabric::EDK::KL::AtNodeEntry & to) {
   to._handle = const_cast<AtNodeEntry*>(from);
+  return true; 
+}
+
+inline bool KLAtOutputIterator_to_CPAtOutputIterator(const Fabric::EDK::KL::AtOutputIterator & from, AtOutputIterator* & to) { 
+  to = reinterpret_cast<AtOutputIterator*>(from._handle);
+  return true;
+}
+
+inline bool CPAtOutputIterator_to_KLAtOutputIterator(const AtOutputIterator* const & from, Fabric::EDK::KL::AtOutputIterator & to) {
+  to._handle = const_cast<AtOutputIterator*>(from);
   return true; 
 }
 

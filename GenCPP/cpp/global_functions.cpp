@@ -762,7 +762,7 @@ FABRIC_EXT_EXPORT void _fe_AiNodeParamMtx(
   Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtList >::IOParam params,
   Fabric::EDK::KL::Traits< Fabric::EDK::KL::SInt32 >::INParam varoffset,
   Fabric::EDK::KL::Traits< Fabric::EDK::KL::String >::INParam pname,
-  Fabric::EDK::KL::Traits< Fabric::EDK::KL::Mat44 >::INParam matrix
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::Mat44 >::IOParam matrix
 )
 {
   F2A_TRY_STATEMENT("_fe_AiNodeParamMtx")
@@ -789,6 +789,7 @@ FABRIC_EXT_EXPORT void _fe_AiNodeParamMtx(
   }
   AiNodeParamMtx(f2aParams, f2aVaroffset, f2aPname, f2aMatrix);
   CPAtList_to_KLAtList(f2aParams, params);
+  AtMatrix_to_Mat44(f2aMatrix, matrix);
 
   F2A_CATCH_STATEMENT("_fe_AiNodeParamMtx")
 }
@@ -1581,7 +1582,7 @@ FABRIC_EXT_EXPORT void _fe_AiArrayInterpolateMtx(
   Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtArray >::INParam array,
   Fabric::EDK::KL::Traits< Fabric::EDK::KL::Float32 >::INParam time,
   Fabric::EDK::KL::Traits< Fabric::EDK::KL::UInt32 >::INParam idx,
-  Fabric::EDK::KL::Traits< Fabric::EDK::KL::Mat44 >::INParam result
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::Mat44 >::IOParam result
 )
 {
   F2A_TRY_STATEMENT("_fe_AiArrayInterpolateMtx")
@@ -1607,6 +1608,7 @@ FABRIC_EXT_EXPORT void _fe_AiArrayInterpolateMtx(
     return;
   }
   AiArrayInterpolateMtx(f2aArray, f2aTime, f2aIdx, f2aResult);
+  AtMatrix_to_Mat44(f2aResult, result);
 
   F2A_CATCH_STATEMENT("_fe_AiArrayInterpolateMtx")
 }
@@ -2505,7 +2507,7 @@ FABRIC_EXT_EXPORT Fabric::EDK::KL::Boolean _fe_AiArraySetVecFunc(
 FABRIC_EXT_EXPORT Fabric::EDK::KL::Boolean _fe_AiArraySetMtxFunc(
   Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtArray >::IOParam a,
   Fabric::EDK::KL::Traits< Fabric::EDK::KL::UInt32 >::INParam i,
-  Fabric::EDK::KL::Traits< Fabric::EDK::KL::Mat44 >::INParam val,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::Mat44 >::IOParam val,
   Fabric::EDK::KL::Traits< Fabric::EDK::KL::String >::INParam _val,
   Fabric::EDK::KL::Traits< Fabric::EDK::KL::SInt32 >::INParam line
 )
@@ -2541,6 +2543,7 @@ FABRIC_EXT_EXPORT Fabric::EDK::KL::Boolean _fe_AiArraySetMtxFunc(
   Fabric::EDK::KL::Boolean _result;
   bool_to_Boolean(f2a_result, _result);
   AtArray_to_KLArray(f2aA, a);
+  AtMatrix_to_Mat44(f2aVal, val);
 
   F2A_CATCH_STATEMENT_RETURN("_fe_AiArraySetMtxFunc", )
 }
@@ -5249,7 +5252,7 @@ FABRIC_EXT_EXPORT void _fe_AiNodeSetArrayAtString(
 FABRIC_EXT_EXPORT void _fe_AiNodeSetMatrixAtString(
   Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtNode >::IOParam node,
   Fabric::EDK::KL::Traits< Fabric::EDK::KL::String >::INParam param,
-  Fabric::EDK::KL::Traits< Fabric::EDK::KL::Mat44 >::INParam val
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::Mat44 >::IOParam val
 )
 {
   F2A_TRY_STATEMENT("_fe_AiNodeSetMatrixAtString")
@@ -5271,6 +5274,7 @@ FABRIC_EXT_EXPORT void _fe_AiNodeSetMatrixAtString(
   }
   AiNodeSetMatrixAtString(f2aNode, f2aParam, f2aVal);
   CPAtNode_to_KLAtNode(f2aNode, node);
+  AtMatrix_to_Mat44(f2aVal, val);
 
   F2A_CATCH_STATEMENT("_fe_AiNodeSetMatrixAtString")
 }
@@ -6195,8 +6199,8 @@ FABRIC_EXT_EXPORT Fabric::EDK::KL::Boolean _fe_AiTextureGetBitDepth(
 
 FABRIC_EXT_EXPORT Fabric::EDK::KL::Boolean _fe_AiTextureGetMatrices(
   Fabric::EDK::KL::Traits< Fabric::EDK::KL::String >::INParam filename,
-  Fabric::EDK::KL::Traits< Fabric::EDK::KL::Mat44 >::INParam world_to_screen,
-  Fabric::EDK::KL::Traits< Fabric::EDK::KL::Mat44 >::INParam world_to_camera
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::Mat44 >::IOParam world_to_screen,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::Mat44 >::IOParam world_to_camera
 )
 {
   F2A_TRY_STATEMENT("_fe_AiTextureGetMatrices")
@@ -6219,6 +6223,8 @@ FABRIC_EXT_EXPORT Fabric::EDK::KL::Boolean _fe_AiTextureGetMatrices(
   bool f2a_result = AiTextureGetMatrices(f2aFilename, f2aWorld_to_screen, f2aWorld_to_camera);
   Fabric::EDK::KL::Boolean _result;
   bool_to_Boolean(f2a_result, _result);
+  AtMatrix_to_Mat44(f2aWorld_to_screen, world_to_screen);
+  AtMatrix_to_Mat44(f2aWorld_to_camera, world_to_camera);
 
   F2A_CATCH_STATEMENT_RETURN("_fe_AiTextureGetMatrices", )
 }
@@ -6961,6 +6967,871 @@ FABRIC_EXT_EXPORT Fabric::EDK::KL::SInt32 _fe_AiShaderEvalParamFuncEnum(
   AtShaderGlobals_to_KLAtShaderGlobals(f2aSg, sg);
 
   F2A_CATCH_STATEMENT_RETURN("_fe_AiShaderEvalParamFuncEnum", )
+}
+
+FABRIC_EXT_EXPORT void _fe_AiRawDriverInitialize(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtNode >::IOParam node,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::VariableArray< Fabric::EDK::KL::String > >::INParam required_aovs,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::Boolean >::INParam requires_depth,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::Data >::IOParam data
+)
+{
+  F2A_TRY_STATEMENT("_fe_AiRawDriverInitialize")
+
+  AtNode* f2aNode = NULL;
+  if(!KLAtNode_to_CPAtNode(node, f2aNode)){
+    setError("Error in _fe_AiRawDriverInitialize. unable to convert: node");
+    return;
+  }
+  bool f2aRequires_depth;
+  if(!Boolean_to_bool(requires_depth, f2aRequires_depth)){
+    setError("Error in _fe_AiRawDriverInitialize. unable to convert: requires_depth");
+    return;
+  }
+  void* f2aData = NULL;
+  if(!Data_to_void(data, f2aData)){
+    setError("Error in _fe_AiRawDriverInitialize. unable to convert: data");
+    return;
+  }
+  const char** req_aovs;
+  int nreq = required_aovs.size();
+  req_aovs = reinterpret_cast<const char**>(alloca( nreq + 1 ));
+  for (int i = 0; i < nreq; i++) { req_aovs[i] = required_aovs[i].c_str(); }
+  req_aovs[nreq] = NULL;
+  AiRawDriverInitialize( f2aNode, req_aovs, f2aRequires_depth, f2aData );  CPAtNode_to_KLAtNode(f2aNode, node);
+  void_to_Data(f2aData, data);
+
+  F2A_CATCH_STATEMENT("_fe_AiRawDriverInitialize")
+}
+
+FABRIC_EXT_EXPORT void _fe_AiDriverExtension(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::VariableArray< Fabric::EDK::KL::String > >::Result _result,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtNodeEntry >::INParam node_entry
+)
+{
+  F2A_TRY_STATEMENT("_fe_AiDriverExtension")
+
+  AtNodeEntry* f2aNode_entry = NULL;
+  if(!KLAtNodeEntry_to_CPAtNodeEntry(node_entry, f2aNode_entry)){
+    setError("Error in _fe_AiDriverExtension. unable to convert: node_entry");
+    return;
+  }
+  const char ** f2a_result = AiDriverExtension(f2aNode_entry);
+  while (*f2a_result) {
+    Fabric::EDK::KL::String s;
+    char_to_String( *f2a_result, s );
+    _result.push_back( s );
+  }
+  F2A_CATCH_STATEMENT("_fe_AiDriverExtension")
+}
+
+FABRIC_EXT_EXPORT Fabric::EDK::KL::Boolean _fe_AiOutputIteratorGetNext(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtOutputIterator >::IOParam iter,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::String >::IOParam output_name,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::SInt32 >::IOParam pixel_type,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::Data >::IOParam bucket_data
+)
+{
+  F2A_TRY_STATEMENT("_fe_AiOutputIteratorGetNext")
+
+  AtOutputIterator* f2aIter = NULL;
+  if(!KLAtOutputIterator_to_CPAtOutputIterator(iter, f2aIter)){
+    setError("Error in _fe_AiOutputIteratorGetNext. unable to convert: iter");
+    return 0;
+  }
+  char* f2aOutput_name = NULL;
+  if(!String_to_char(output_name, f2aOutput_name)){
+    setError("Error in _fe_AiOutputIteratorGetNext. unable to convert: output_name");
+    return 0;
+  }
+  int f2aPixel_type;
+  if(!SInt32_to_int(pixel_type, f2aPixel_type)){
+    setError("Error in _fe_AiOutputIteratorGetNext. unable to convert: pixel_type");
+    return 0;
+  }
+  void* f2aBucket_data = NULL;
+  if(!Data_to_void(bucket_data, f2aBucket_data)){
+    setError("Error in _fe_AiOutputIteratorGetNext. unable to convert: bucket_data");
+    return 0;
+  }
+  bool f2a_result = AiOutputIteratorGetNext(f2aIter, (const char**)&f2aOutput_name, &f2aPixel_type, (const void**)&f2aBucket_data );
+  Fabric::EDK::KL::Boolean _result = f2a_result;
+  CPAtOutputIterator_to_KLAtOutputIterator(f2aIter, iter);
+  char_to_String(f2aOutput_name, output_name);
+  int_to_SInt32(f2aPixel_type, pixel_type);
+  void_to_Data(f2aBucket_data, bucket_data);
+
+  F2A_CATCH_STATEMENT_RETURN("_fe_AiOutputIteratorGetNext", )
+}
+
+FABRIC_EXT_EXPORT void _fe_AiDriverInitialize(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtNode >::IOParam node,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::Boolean >::INParam supports_multiple_outputs,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::Data >::IOParam data
+)
+{
+  F2A_TRY_STATEMENT("_fe_AiDriverInitialize")
+
+  AtNode* f2aNode = NULL;
+  if(!KLAtNode_to_CPAtNode(node, f2aNode)){
+    setError("Error in _fe_AiDriverInitialize. unable to convert: node");
+    return;
+  }
+  bool f2aSupports_multiple_outputs;
+  if(!Boolean_to_bool(supports_multiple_outputs, f2aSupports_multiple_outputs)){
+    setError("Error in _fe_AiDriverInitialize. unable to convert: supports_multiple_outputs");
+    return;
+  }
+  void* f2aData = NULL;
+  if(!Data_to_void(data, f2aData)){
+    setError("Error in _fe_AiDriverInitialize. unable to convert: data");
+    return;
+  }
+  AiDriverInitialize(f2aNode, f2aSupports_multiple_outputs, f2aData);
+  CPAtNode_to_KLAtNode(f2aNode, node);
+  void_to_Data(f2aData, data);
+
+  F2A_CATCH_STATEMENT("_fe_AiDriverInitialize")
+}
+
+FABRIC_EXT_EXPORT void _fe_AiDriverDestroy(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtNode >::IOParam node
+)
+{
+  F2A_TRY_STATEMENT("_fe_AiDriverDestroy")
+
+  AtNode* f2aNode = NULL;
+  if(!KLAtNode_to_CPAtNode(node, f2aNode)){
+    setError("Error in _fe_AiDriverDestroy. unable to convert: node");
+    return;
+  }
+  AiDriverDestroy(f2aNode);
+  CPAtNode_to_KLAtNode(f2aNode, node);
+
+  F2A_CATCH_STATEMENT("_fe_AiDriverDestroy")
+}
+
+FABRIC_EXT_EXPORT Fabric::EDK::KL::Data _fe_AiDriverGetLocalData(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtNode >::INParam node
+)
+{
+  F2A_TRY_STATEMENT("_fe_AiDriverGetLocalData")
+
+  AtNode* f2aNode = NULL;
+  if(!KLAtNode_to_CPAtNode(node, f2aNode)){
+    setError("Error in _fe_AiDriverGetLocalData. unable to convert: node");
+    return 0;
+  }
+  void * f2a_result = AiDriverGetLocalData(f2aNode);
+  Fabric::EDK::KL::Data _result;
+  void_to_Data(f2a_result, _result);
+
+  F2A_CATCH_STATEMENT_RETURN("_fe_AiDriverGetLocalData", )
+}
+
+FABRIC_EXT_EXPORT void _fe_AiDriverGetMatrices(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::Mat44 >::IOParam world_to_camera,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::Mat44 >::IOParam world_to_screen
+)
+{
+  F2A_TRY_STATEMENT("_fe_AiDriverGetMatrices")
+
+  AtMatrix f2aWorld_to_camera;
+  if(!Mat44_to_AtMatrix(world_to_camera, f2aWorld_to_camera)){
+    setError("Error in _fe_AiDriverGetMatrices. unable to convert: world_to_camera");
+    return;
+  }
+  AtMatrix f2aWorld_to_screen;
+  if(!Mat44_to_AtMatrix(world_to_screen, f2aWorld_to_screen)){
+    setError("Error in _fe_AiDriverGetMatrices. unable to convert: world_to_screen");
+    return;
+  }
+  AiDriverGetMatrices(f2aWorld_to_camera, f2aWorld_to_screen);
+  AtMatrix_to_Mat44(f2aWorld_to_camera, world_to_camera);
+  AtMatrix_to_Mat44(f2aWorld_to_screen, world_to_screen);
+
+  F2A_CATCH_STATEMENT("_fe_AiDriverGetMatrices")
+}
+
+FABRIC_EXT_EXPORT void _fe_AiOutputIteratorReset(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtOutputIterator >::IOParam iter
+)
+{
+  F2A_TRY_STATEMENT("_fe_AiOutputIteratorReset")
+
+  AtOutputIterator* f2aIter = NULL;
+  if(!KLAtOutputIterator_to_CPAtOutputIterator(iter, f2aIter)){
+    setError("Error in _fe_AiOutputIteratorReset. unable to convert: iter");
+    return;
+  }
+  AiOutputIteratorReset(f2aIter);
+  CPAtOutputIterator_to_KLAtOutputIterator(f2aIter, iter);
+
+  F2A_CATCH_STATEMENT("_fe_AiOutputIteratorReset")
+}
+
+FABRIC_EXT_EXPORT void _fe_AiFindDriverType(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtNodeEntry >::Result _result,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::String >::INParam extension
+)
+{
+  F2A_TRY_STATEMENT("_fe_AiFindDriverType")
+
+  char* f2aExtension = NULL;
+  if(!String_to_char(extension, f2aExtension)){
+    setError("Error in _fe_AiFindDriverType. unable to convert: extension");
+    return;
+  }
+  const AtNodeEntry * f2a_result = AiFindDriverType(f2aExtension);
+  CPAtNodeEntry_to_KLAtNodeEntry(f2a_result, _result);
+  F2A_CATCH_STATEMENT("_fe_AiFindDriverType")
+}
+
+FABRIC_EXT_EXPORT void _fe_AiFilterInitialize(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtNode >::IOParam node,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::Boolean >::INParam requires_depth,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::String >::INParam required_aovs,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::Data >::IOParam data
+)
+{
+  F2A_TRY_STATEMENT("_fe_AiFilterInitialize")
+
+  AtNode* f2aNode = NULL;
+  if(!KLAtNode_to_CPAtNode(node, f2aNode)){
+    setError("Error in _fe_AiFilterInitialize. unable to convert: node");
+    return;
+  }
+  bool f2aRequires_depth;
+  if(!Boolean_to_bool(requires_depth, f2aRequires_depth)){
+    setError("Error in _fe_AiFilterInitialize. unable to convert: requires_depth");
+    return;
+  }
+  char* f2aRequired_aovs = NULL;
+  if(!String_to_char(required_aovs, f2aRequired_aovs)){
+    setError("Error in _fe_AiFilterInitialize. unable to convert: required_aovs");
+    return;
+  }
+  void* f2aData = NULL;
+  if(!Data_to_void(data, f2aData)){
+    setError("Error in _fe_AiFilterInitialize. unable to convert: data");
+    return;
+  }
+  AiFilterInitialize(f2aNode, f2aRequires_depth, &f2aRequired_aovs, f2aData);
+  CPAtNode_to_KLAtNode(f2aNode, node);
+  void_to_Data(f2aData, data);
+
+  F2A_CATCH_STATEMENT("_fe_AiFilterInitialize")
+}
+
+FABRIC_EXT_EXPORT void _fe_AiFilterUpdate(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtNode >::IOParam node,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::Float32 >::INParam width
+)
+{
+  F2A_TRY_STATEMENT("_fe_AiFilterUpdate")
+
+  AtNode* f2aNode = NULL;
+  if(!KLAtNode_to_CPAtNode(node, f2aNode)){
+    setError("Error in _fe_AiFilterUpdate. unable to convert: node");
+    return;
+  }
+  float f2aWidth;
+  if(!Float32_to_float(width, f2aWidth)){
+    setError("Error in _fe_AiFilterUpdate. unable to convert: width");
+    return;
+  }
+  AiFilterUpdate(f2aNode, f2aWidth);
+  CPAtNode_to_KLAtNode(f2aNode, node);
+
+  F2A_CATCH_STATEMENT("_fe_AiFilterUpdate")
+}
+
+FABRIC_EXT_EXPORT void _fe_AiFilterDestroy(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtNode >::IOParam node
+)
+{
+  F2A_TRY_STATEMENT("_fe_AiFilterDestroy")
+
+  AtNode* f2aNode = NULL;
+  if(!KLAtNode_to_CPAtNode(node, f2aNode)){
+    setError("Error in _fe_AiFilterDestroy. unable to convert: node");
+    return;
+  }
+  AiFilterDestroy(f2aNode);
+  CPAtNode_to_KLAtNode(f2aNode, node);
+
+  F2A_CATCH_STATEMENT("_fe_AiFilterDestroy")
+}
+
+FABRIC_EXT_EXPORT Fabric::EDK::KL::Data _fe_AiFilterGetLocalData(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtNode >::INParam node
+)
+{
+  F2A_TRY_STATEMENT("_fe_AiFilterGetLocalData")
+
+  AtNode* f2aNode = NULL;
+  if(!KLAtNode_to_CPAtNode(node, f2aNode)){
+    setError("Error in _fe_AiFilterGetLocalData. unable to convert: node");
+    return 0;
+  }
+  void * f2a_result = AiFilterGetLocalData(f2aNode);
+  Fabric::EDK::KL::Data _result;
+  void_to_Data(f2a_result, _result);
+
+  F2A_CATCH_STATEMENT_RETURN("_fe_AiFilterGetLocalData", )
+}
+
+FABRIC_EXT_EXPORT void _fe_AiAOVSampleIteratorInitPixel(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtAOVSampleIterator >::IOParam iter,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::SInt32 >::INParam x,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::SInt32 >::INParam y
+)
+{
+  F2A_TRY_STATEMENT("_fe_AiAOVSampleIteratorInitPixel")
+
+  AtAOVSampleIterator* f2aIter = NULL;
+  if(!KLAtAOVSampleIterator_to_CPAtAOVSampleIterator(iter, f2aIter)){
+    setError("Error in _fe_AiAOVSampleIteratorInitPixel. unable to convert: iter");
+    return;
+  }
+  int f2aX;
+  if(!SInt32_to_int(x, f2aX)){
+    setError("Error in _fe_AiAOVSampleIteratorInitPixel. unable to convert: x");
+    return;
+  }
+  int f2aY;
+  if(!SInt32_to_int(y, f2aY)){
+    setError("Error in _fe_AiAOVSampleIteratorInitPixel. unable to convert: y");
+    return;
+  }
+  AiAOVSampleIteratorInitPixel(f2aIter, f2aX, f2aY);
+  CPAtAOVSampleIterator_to_KLAtAOVSampleIterator(f2aIter, iter);
+
+  F2A_CATCH_STATEMENT("_fe_AiAOVSampleIteratorInitPixel")
+}
+
+FABRIC_EXT_EXPORT void _fe_AiAOVSampleIteratorReset(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtAOVSampleIterator >::IOParam iter
+)
+{
+  F2A_TRY_STATEMENT("_fe_AiAOVSampleIteratorReset")
+
+  AtAOVSampleIterator* f2aIter = NULL;
+  if(!KLAtAOVSampleIterator_to_CPAtAOVSampleIterator(iter, f2aIter)){
+    setError("Error in _fe_AiAOVSampleIteratorReset. unable to convert: iter");
+    return;
+  }
+  AiAOVSampleIteratorReset(f2aIter);
+  CPAtAOVSampleIterator_to_KLAtAOVSampleIterator(f2aIter, iter);
+
+  F2A_CATCH_STATEMENT("_fe_AiAOVSampleIteratorReset")
+}
+
+FABRIC_EXT_EXPORT Fabric::EDK::KL::Boolean _fe_AiAOVSampleIteratorGetNext(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtAOVSampleIterator >::IOParam iter
+)
+{
+  F2A_TRY_STATEMENT("_fe_AiAOVSampleIteratorGetNext")
+
+  AtAOVSampleIterator* f2aIter = NULL;
+  if(!KLAtAOVSampleIterator_to_CPAtAOVSampleIterator(iter, f2aIter)){
+    setError("Error in _fe_AiAOVSampleIteratorGetNext. unable to convert: iter");
+    return 0;
+  }
+  bool f2a_result = AiAOVSampleIteratorGetNext(f2aIter);
+  Fabric::EDK::KL::Boolean _result;
+  bool_to_Boolean(f2a_result, _result);
+  CPAtAOVSampleIterator_to_KLAtAOVSampleIterator(f2aIter, iter);
+
+  F2A_CATCH_STATEMENT_RETURN("_fe_AiAOVSampleIteratorGetNext", )
+}
+
+FABRIC_EXT_EXPORT Fabric::EDK::KL::Boolean _fe_AiAOVSampleIteratorGetNextDepth(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtAOVSampleIterator >::IOParam iter
+)
+{
+  F2A_TRY_STATEMENT("_fe_AiAOVSampleIteratorGetNextDepth")
+
+  AtAOVSampleIterator* f2aIter = NULL;
+  if(!KLAtAOVSampleIterator_to_CPAtAOVSampleIterator(iter, f2aIter)){
+    setError("Error in _fe_AiAOVSampleIteratorGetNextDepth. unable to convert: iter");
+    return 0;
+  }
+  bool f2a_result = AiAOVSampleIteratorGetNextDepth(f2aIter);
+  Fabric::EDK::KL::Boolean _result;
+  bool_to_Boolean(f2a_result, _result);
+  CPAtAOVSampleIterator_to_KLAtAOVSampleIterator(f2aIter, iter);
+
+  F2A_CATCH_STATEMENT_RETURN("_fe_AiAOVSampleIteratorGetNextDepth", )
+}
+
+FABRIC_EXT_EXPORT void _fe_AiAOVSampleIteratorGetOffset(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::Vec2 >::Result _result,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtAOVSampleIterator >::INParam iter
+)
+{
+  F2A_TRY_STATEMENT("_fe_AiAOVSampleIteratorGetOffset")
+
+  AtAOVSampleIterator* f2aIter = NULL;
+  if(!KLAtAOVSampleIterator_to_CPAtAOVSampleIterator(iter, f2aIter)){
+    setError("Error in _fe_AiAOVSampleIteratorGetOffset. unable to convert: iter");
+    return;
+  }
+  AtPoint2 f2a_result = AiAOVSampleIteratorGetOffset(f2aIter);
+  AtPoint2_to_Vec2(f2a_result, _result);
+  F2A_CATCH_STATEMENT("_fe_AiAOVSampleIteratorGetOffset")
+}
+
+FABRIC_EXT_EXPORT Fabric::EDK::KL::Float32 _fe_AiAOVSampleIteratorGetInvDensity(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtAOVSampleIterator >::INParam iter
+)
+{
+  F2A_TRY_STATEMENT("_fe_AiAOVSampleIteratorGetInvDensity")
+
+  AtAOVSampleIterator* f2aIter = NULL;
+  if(!KLAtAOVSampleIterator_to_CPAtAOVSampleIterator(iter, f2aIter)){
+    setError("Error in _fe_AiAOVSampleIteratorGetInvDensity. unable to convert: iter");
+    return 0;
+  }
+  float f2a_result = AiAOVSampleIteratorGetInvDensity(f2aIter);
+  Fabric::EDK::KL::Float32 _result;
+  float_to_Float32(f2a_result, _result);
+
+  F2A_CATCH_STATEMENT_RETURN("_fe_AiAOVSampleIteratorGetInvDensity", )
+}
+
+FABRIC_EXT_EXPORT Fabric::EDK::KL::SInt32 _fe_AiAOVSampleIteratorGetDepth(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtAOVSampleIterator >::INParam iter
+)
+{
+  F2A_TRY_STATEMENT("_fe_AiAOVSampleIteratorGetDepth")
+
+  AtAOVSampleIterator* f2aIter = NULL;
+  if(!KLAtAOVSampleIterator_to_CPAtAOVSampleIterator(iter, f2aIter)){
+    setError("Error in _fe_AiAOVSampleIteratorGetDepth. unable to convert: iter");
+    return 0;
+  }
+  int f2a_result = AiAOVSampleIteratorGetDepth(f2aIter);
+  Fabric::EDK::KL::SInt32 _result;
+  int_to_SInt32(f2a_result, _result);
+
+  F2A_CATCH_STATEMENT_RETURN("_fe_AiAOVSampleIteratorGetDepth", )
+}
+
+FABRIC_EXT_EXPORT Fabric::EDK::KL::Boolean _fe_AiAOVSampleIteratorHasValue(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtAOVSampleIterator >::INParam iter
+)
+{
+  F2A_TRY_STATEMENT("_fe_AiAOVSampleIteratorHasValue")
+
+  AtAOVSampleIterator* f2aIter = NULL;
+  if(!KLAtAOVSampleIterator_to_CPAtAOVSampleIterator(iter, f2aIter)){
+    setError("Error in _fe_AiAOVSampleIteratorHasValue. unable to convert: iter");
+    return 0;
+  }
+  bool f2a_result = AiAOVSampleIteratorHasValue(f2aIter);
+  Fabric::EDK::KL::Boolean _result;
+  bool_to_Boolean(f2a_result, _result);
+
+  F2A_CATCH_STATEMENT_RETURN("_fe_AiAOVSampleIteratorHasValue", )
+}
+
+FABRIC_EXT_EXPORT Fabric::EDK::KL::Boolean _fe_AiAOVSampleIteratorHasAOVValue(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtAOVSampleIterator >::INParam iter,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::String >::INParam name,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::UInt8 >::INParam type
+)
+{
+  F2A_TRY_STATEMENT("_fe_AiAOVSampleIteratorHasAOVValue")
+
+  AtAOVSampleIterator* f2aIter = NULL;
+  if(!KLAtAOVSampleIterator_to_CPAtAOVSampleIterator(iter, f2aIter)){
+    setError("Error in _fe_AiAOVSampleIteratorHasAOVValue. unable to convert: iter");
+    return 0;
+  }
+  char* f2aName = NULL;
+  if(!String_to_char(name, f2aName)){
+    setError("Error in _fe_AiAOVSampleIteratorHasAOVValue. unable to convert: name");
+    return 0;
+  }
+  AtByte f2aType;
+  if(!UInt8_to_AtByte(type, f2aType)){
+    setError("Error in _fe_AiAOVSampleIteratorHasAOVValue. unable to convert: type");
+    return 0;
+  }
+  bool f2a_result = AiAOVSampleIteratorHasAOVValue(f2aIter, f2aName, f2aType);
+  Fabric::EDK::KL::Boolean _result;
+  bool_to_Boolean(f2a_result, _result);
+
+  F2A_CATCH_STATEMENT_RETURN("_fe_AiAOVSampleIteratorHasAOVValue", )
+}
+
+FABRIC_EXT_EXPORT Fabric::EDK::KL::Boolean _fe_AiAOVSampleIteratorGetBool(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtAOVSampleIterator >::INParam iter
+)
+{
+  F2A_TRY_STATEMENT("_fe_AiAOVSampleIteratorGetBool")
+
+  AtAOVSampleIterator* f2aIter = NULL;
+  if(!KLAtAOVSampleIterator_to_CPAtAOVSampleIterator(iter, f2aIter)){
+    setError("Error in _fe_AiAOVSampleIteratorGetBool. unable to convert: iter");
+    return 0;
+  }
+  bool f2a_result = AiAOVSampleIteratorGetBool(f2aIter);
+  Fabric::EDK::KL::Boolean _result;
+  bool_to_Boolean(f2a_result, _result);
+
+  F2A_CATCH_STATEMENT_RETURN("_fe_AiAOVSampleIteratorGetBool", )
+}
+
+FABRIC_EXT_EXPORT Fabric::EDK::KL::SInt32 _fe_AiAOVSampleIteratorGetInt(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtAOVSampleIterator >::INParam iter
+)
+{
+  F2A_TRY_STATEMENT("_fe_AiAOVSampleIteratorGetInt")
+
+  AtAOVSampleIterator* f2aIter = NULL;
+  if(!KLAtAOVSampleIterator_to_CPAtAOVSampleIterator(iter, f2aIter)){
+    setError("Error in _fe_AiAOVSampleIteratorGetInt. unable to convert: iter");
+    return 0;
+  }
+  int f2a_result = AiAOVSampleIteratorGetInt(f2aIter);
+  Fabric::EDK::KL::SInt32 _result;
+  int_to_SInt32(f2a_result, _result);
+
+  F2A_CATCH_STATEMENT_RETURN("_fe_AiAOVSampleIteratorGetInt", )
+}
+
+FABRIC_EXT_EXPORT Fabric::EDK::KL::Float32 _fe_AiAOVSampleIteratorGetFlt(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtAOVSampleIterator >::INParam iter
+)
+{
+  F2A_TRY_STATEMENT("_fe_AiAOVSampleIteratorGetFlt")
+
+  AtAOVSampleIterator* f2aIter = NULL;
+  if(!KLAtAOVSampleIterator_to_CPAtAOVSampleIterator(iter, f2aIter)){
+    setError("Error in _fe_AiAOVSampleIteratorGetFlt. unable to convert: iter");
+    return 0;
+  }
+  float f2a_result = AiAOVSampleIteratorGetFlt(f2aIter);
+  Fabric::EDK::KL::Float32 _result;
+  float_to_Float32(f2a_result, _result);
+
+  F2A_CATCH_STATEMENT_RETURN("_fe_AiAOVSampleIteratorGetFlt", )
+}
+
+FABRIC_EXT_EXPORT void _fe_AiAOVSampleIteratorGetRGB(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::Color >::Result _result,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtAOVSampleIterator >::INParam iter
+)
+{
+  F2A_TRY_STATEMENT("_fe_AiAOVSampleIteratorGetRGB")
+
+  AtAOVSampleIterator* f2aIter = NULL;
+  if(!KLAtAOVSampleIterator_to_CPAtAOVSampleIterator(iter, f2aIter)){
+    setError("Error in _fe_AiAOVSampleIteratorGetRGB. unable to convert: iter");
+    return;
+  }
+  AtRGB f2a_result = AiAOVSampleIteratorGetRGB(f2aIter);
+  AtRGB_to_Color(f2a_result, _result);
+  F2A_CATCH_STATEMENT("_fe_AiAOVSampleIteratorGetRGB")
+}
+
+FABRIC_EXT_EXPORT void _fe_AiAOVSampleIteratorGetRGBA(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::Color >::Result _result,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtAOVSampleIterator >::INParam iter
+)
+{
+  F2A_TRY_STATEMENT("_fe_AiAOVSampleIteratorGetRGBA")
+
+  AtAOVSampleIterator* f2aIter = NULL;
+  if(!KLAtAOVSampleIterator_to_CPAtAOVSampleIterator(iter, f2aIter)){
+    setError("Error in _fe_AiAOVSampleIteratorGetRGBA. unable to convert: iter");
+    return;
+  }
+  AtRGBA f2a_result = AiAOVSampleIteratorGetRGBA(f2aIter);
+  CPAtRGBA_to_KLColor(f2a_result, _result);
+  F2A_CATCH_STATEMENT("_fe_AiAOVSampleIteratorGetRGBA")
+}
+
+FABRIC_EXT_EXPORT void _fe_AiAOVSampleIteratorGetVec(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::Vec3 >::Result _result,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtAOVSampleIterator >::INParam iter
+)
+{
+  F2A_TRY_STATEMENT("_fe_AiAOVSampleIteratorGetVec")
+
+  AtAOVSampleIterator* f2aIter = NULL;
+  if(!KLAtAOVSampleIterator_to_CPAtAOVSampleIterator(iter, f2aIter)){
+    setError("Error in _fe_AiAOVSampleIteratorGetVec. unable to convert: iter");
+    return;
+  }
+  AtVector f2a_result = AiAOVSampleIteratorGetVec(f2aIter);
+  AtPoint_to_Vec3(f2a_result, _result);
+  F2A_CATCH_STATEMENT("_fe_AiAOVSampleIteratorGetVec")
+}
+
+FABRIC_EXT_EXPORT void _fe_AiAOVSampleIteratorGetPnt(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::Vec3 >::Result _result,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtAOVSampleIterator >::INParam iter
+)
+{
+  F2A_TRY_STATEMENT("_fe_AiAOVSampleIteratorGetPnt")
+
+  AtAOVSampleIterator* f2aIter = NULL;
+  if(!KLAtAOVSampleIterator_to_CPAtAOVSampleIterator(iter, f2aIter)){
+    setError("Error in _fe_AiAOVSampleIteratorGetPnt. unable to convert: iter");
+    return;
+  }
+  AtPoint f2a_result = AiAOVSampleIteratorGetPnt(f2aIter);
+  AtPoint_to_Vec3(f2a_result, _result);
+  F2A_CATCH_STATEMENT("_fe_AiAOVSampleIteratorGetPnt")
+}
+
+FABRIC_EXT_EXPORT void _fe_AiAOVSampleIteratorGetPnt2(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::Vec2 >::Result _result,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtAOVSampleIterator >::INParam iter
+)
+{
+  F2A_TRY_STATEMENT("_fe_AiAOVSampleIteratorGetPnt2")
+
+  AtAOVSampleIterator* f2aIter = NULL;
+  if(!KLAtAOVSampleIterator_to_CPAtAOVSampleIterator(iter, f2aIter)){
+    setError("Error in _fe_AiAOVSampleIteratorGetPnt2. unable to convert: iter");
+    return;
+  }
+  AtPoint2 f2a_result = AiAOVSampleIteratorGetPnt2(f2aIter);
+  AtPoint2_to_Vec2(f2a_result, _result);
+  F2A_CATCH_STATEMENT("_fe_AiAOVSampleIteratorGetPnt2")
+}
+
+FABRIC_EXT_EXPORT Fabric::EDK::KL::Data _fe_AiAOVSampleIteratorGetPtr(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtAOVSampleIterator >::INParam iter
+)
+{
+  F2A_TRY_STATEMENT("_fe_AiAOVSampleIteratorGetPtr")
+
+  AtAOVSampleIterator* f2aIter = NULL;
+  if(!KLAtAOVSampleIterator_to_CPAtAOVSampleIterator(iter, f2aIter)){
+    setError("Error in _fe_AiAOVSampleIteratorGetPtr. unable to convert: iter");
+    return 0;
+  }
+  const void * f2a_result = AiAOVSampleIteratorGetPtr(f2aIter);
+  Fabric::EDK::KL::Data _result;
+  void_to_Data(f2a_result, _result);
+
+  F2A_CATCH_STATEMENT_RETURN("_fe_AiAOVSampleIteratorGetPtr", )
+}
+
+FABRIC_EXT_EXPORT Fabric::EDK::KL::Boolean _fe_AiAOVSampleIteratorGetAOVBoolAtString(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtAOVSampleIterator >::INParam iter,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::String >::INParam name
+)
+{
+  F2A_TRY_STATEMENT("_fe_AiAOVSampleIteratorGetAOVBoolAtString")
+
+  AtAOVSampleIterator* f2aIter = NULL;
+  if(!KLAtAOVSampleIterator_to_CPAtAOVSampleIterator(iter, f2aIter)){
+    setError("Error in _fe_AiAOVSampleIteratorGetAOVBoolAtString. unable to convert: iter");
+    return 0;
+  }
+  AtString f2aName;
+  if(!KLString_to_CPAtString(name, f2aName)){
+    setError("Error in _fe_AiAOVSampleIteratorGetAOVBoolAtString. unable to convert: name");
+    return 0;
+  }
+  bool f2a_result = AiAOVSampleIteratorGetAOVBoolAtString(f2aIter, f2aName);
+  Fabric::EDK::KL::Boolean _result;
+  bool_to_Boolean(f2a_result, _result);
+
+  F2A_CATCH_STATEMENT_RETURN("_fe_AiAOVSampleIteratorGetAOVBoolAtString", )
+}
+
+FABRIC_EXT_EXPORT Fabric::EDK::KL::SInt32 _fe_AiAOVSampleIteratorGetAOVIntAtString(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtAOVSampleIterator >::INParam iter,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::String >::INParam name
+)
+{
+  F2A_TRY_STATEMENT("_fe_AiAOVSampleIteratorGetAOVIntAtString")
+
+  AtAOVSampleIterator* f2aIter = NULL;
+  if(!KLAtAOVSampleIterator_to_CPAtAOVSampleIterator(iter, f2aIter)){
+    setError("Error in _fe_AiAOVSampleIteratorGetAOVIntAtString. unable to convert: iter");
+    return 0;
+  }
+  AtString f2aName;
+  if(!KLString_to_CPAtString(name, f2aName)){
+    setError("Error in _fe_AiAOVSampleIteratorGetAOVIntAtString. unable to convert: name");
+    return 0;
+  }
+  int f2a_result = AiAOVSampleIteratorGetAOVIntAtString(f2aIter, f2aName);
+  Fabric::EDK::KL::SInt32 _result;
+  int_to_SInt32(f2a_result, _result);
+
+  F2A_CATCH_STATEMENT_RETURN("_fe_AiAOVSampleIteratorGetAOVIntAtString", )
+}
+
+FABRIC_EXT_EXPORT Fabric::EDK::KL::Float32 _fe_AiAOVSampleIteratorGetAOVFltAtString(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtAOVSampleIterator >::INParam iter,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::String >::INParam name
+)
+{
+  F2A_TRY_STATEMENT("_fe_AiAOVSampleIteratorGetAOVFltAtString")
+
+  AtAOVSampleIterator* f2aIter = NULL;
+  if(!KLAtAOVSampleIterator_to_CPAtAOVSampleIterator(iter, f2aIter)){
+    setError("Error in _fe_AiAOVSampleIteratorGetAOVFltAtString. unable to convert: iter");
+    return 0;
+  }
+  AtString f2aName;
+  if(!KLString_to_CPAtString(name, f2aName)){
+    setError("Error in _fe_AiAOVSampleIteratorGetAOVFltAtString. unable to convert: name");
+    return 0;
+  }
+  float f2a_result = AiAOVSampleIteratorGetAOVFltAtString(f2aIter, f2aName);
+  Fabric::EDK::KL::Float32 _result;
+  float_to_Float32(f2a_result, _result);
+
+  F2A_CATCH_STATEMENT_RETURN("_fe_AiAOVSampleIteratorGetAOVFltAtString", )
+}
+
+FABRIC_EXT_EXPORT void _fe_AiAOVSampleIteratorGetAOVRGBAtString(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::Color >::Result _result,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtAOVSampleIterator >::INParam iter,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::String >::INParam name
+)
+{
+  F2A_TRY_STATEMENT("_fe_AiAOVSampleIteratorGetAOVRGBAtString")
+
+  AtAOVSampleIterator* f2aIter = NULL;
+  if(!KLAtAOVSampleIterator_to_CPAtAOVSampleIterator(iter, f2aIter)){
+    setError("Error in _fe_AiAOVSampleIteratorGetAOVRGBAtString. unable to convert: iter");
+    return;
+  }
+  AtString f2aName;
+  if(!KLString_to_CPAtString(name, f2aName)){
+    setError("Error in _fe_AiAOVSampleIteratorGetAOVRGBAtString. unable to convert: name");
+    return;
+  }
+  AtRGB f2a_result = AiAOVSampleIteratorGetAOVRGBAtString(f2aIter, f2aName);
+  AtRGB_to_Color(f2a_result, _result);
+  F2A_CATCH_STATEMENT("_fe_AiAOVSampleIteratorGetAOVRGBAtString")
+}
+
+FABRIC_EXT_EXPORT void _fe_AiAOVSampleIteratorGetAOVRGBAAtString(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::Color >::Result _result,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtAOVSampleIterator >::INParam iter,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::String >::INParam name
+)
+{
+  F2A_TRY_STATEMENT("_fe_AiAOVSampleIteratorGetAOVRGBAAtString")
+
+  AtAOVSampleIterator* f2aIter = NULL;
+  if(!KLAtAOVSampleIterator_to_CPAtAOVSampleIterator(iter, f2aIter)){
+    setError("Error in _fe_AiAOVSampleIteratorGetAOVRGBAAtString. unable to convert: iter");
+    return;
+  }
+  AtString f2aName;
+  if(!KLString_to_CPAtString(name, f2aName)){
+    setError("Error in _fe_AiAOVSampleIteratorGetAOVRGBAAtString. unable to convert: name");
+    return;
+  }
+  AtRGBA f2a_result = AiAOVSampleIteratorGetAOVRGBAAtString(f2aIter, f2aName);
+  CPAtRGBA_to_KLColor(f2a_result, _result);
+  F2A_CATCH_STATEMENT("_fe_AiAOVSampleIteratorGetAOVRGBAAtString")
+}
+
+FABRIC_EXT_EXPORT void _fe_AiAOVSampleIteratorGetAOVVecAtString(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::Vec3 >::Result _result,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtAOVSampleIterator >::INParam iter,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::String >::INParam name
+)
+{
+  F2A_TRY_STATEMENT("_fe_AiAOVSampleIteratorGetAOVVecAtString")
+
+  AtAOVSampleIterator* f2aIter = NULL;
+  if(!KLAtAOVSampleIterator_to_CPAtAOVSampleIterator(iter, f2aIter)){
+    setError("Error in _fe_AiAOVSampleIteratorGetAOVVecAtString. unable to convert: iter");
+    return;
+  }
+  AtString f2aName;
+  if(!KLString_to_CPAtString(name, f2aName)){
+    setError("Error in _fe_AiAOVSampleIteratorGetAOVVecAtString. unable to convert: name");
+    return;
+  }
+  AtVector f2a_result = AiAOVSampleIteratorGetAOVVecAtString(f2aIter, f2aName);
+  AtPoint_to_Vec3(f2a_result, _result);
+  F2A_CATCH_STATEMENT("_fe_AiAOVSampleIteratorGetAOVVecAtString")
+}
+
+FABRIC_EXT_EXPORT void _fe_AiAOVSampleIteratorGetAOVPntAtString(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::Vec3 >::Result _result,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtAOVSampleIterator >::INParam iter,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::String >::INParam name
+)
+{
+  F2A_TRY_STATEMENT("_fe_AiAOVSampleIteratorGetAOVPntAtString")
+
+  AtAOVSampleIterator* f2aIter = NULL;
+  if(!KLAtAOVSampleIterator_to_CPAtAOVSampleIterator(iter, f2aIter)){
+    setError("Error in _fe_AiAOVSampleIteratorGetAOVPntAtString. unable to convert: iter");
+    return;
+  }
+  AtString f2aName;
+  if(!KLString_to_CPAtString(name, f2aName)){
+    setError("Error in _fe_AiAOVSampleIteratorGetAOVPntAtString. unable to convert: name");
+    return;
+  }
+  AtPoint f2a_result = AiAOVSampleIteratorGetAOVPntAtString(f2aIter, f2aName);
+  AtPoint_to_Vec3(f2a_result, _result);
+  F2A_CATCH_STATEMENT("_fe_AiAOVSampleIteratorGetAOVPntAtString")
+}
+
+FABRIC_EXT_EXPORT void _fe_AiAOVSampleIteratorGetAOVPnt2AtString(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::Vec2 >::Result _result,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtAOVSampleIterator >::INParam iter,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::String >::INParam name
+)
+{
+  F2A_TRY_STATEMENT("_fe_AiAOVSampleIteratorGetAOVPnt2AtString")
+
+  AtAOVSampleIterator* f2aIter = NULL;
+  if(!KLAtAOVSampleIterator_to_CPAtAOVSampleIterator(iter, f2aIter)){
+    setError("Error in _fe_AiAOVSampleIteratorGetAOVPnt2AtString. unable to convert: iter");
+    return;
+  }
+  AtString f2aName;
+  if(!KLString_to_CPAtString(name, f2aName)){
+    setError("Error in _fe_AiAOVSampleIteratorGetAOVPnt2AtString. unable to convert: name");
+    return;
+  }
+  AtPoint2 f2a_result = AiAOVSampleIteratorGetAOVPnt2AtString(f2aIter, f2aName);
+  AtPoint2_to_Vec2(f2a_result, _result);
+  F2A_CATCH_STATEMENT("_fe_AiAOVSampleIteratorGetAOVPnt2AtString")
+}
+
+FABRIC_EXT_EXPORT Fabric::EDK::KL::Data _fe_AiAOVSampleIteratorGetAOVPtrAtString(
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::AtAOVSampleIterator >::INParam iter,
+  Fabric::EDK::KL::Traits< Fabric::EDK::KL::String >::INParam name
+)
+{
+  F2A_TRY_STATEMENT("_fe_AiAOVSampleIteratorGetAOVPtrAtString")
+
+  AtAOVSampleIterator* f2aIter = NULL;
+  if(!KLAtAOVSampleIterator_to_CPAtAOVSampleIterator(iter, f2aIter)){
+    setError("Error in _fe_AiAOVSampleIteratorGetAOVPtrAtString. unable to convert: iter");
+    return 0;
+  }
+  AtString f2aName;
+  if(!KLString_to_CPAtString(name, f2aName)){
+    setError("Error in _fe_AiAOVSampleIteratorGetAOVPtrAtString. unable to convert: name");
+    return 0;
+  }
+  const void * f2a_result = AiAOVSampleIteratorGetAOVPtrAtString(f2aIter, f2aName);
+  Fabric::EDK::KL::Data _result;
+  void_to_Data(f2a_result, _result);
+
+  F2A_CATCH_STATEMENT_RETURN("_fe_AiAOVSampleIteratorGetAOVPtrAtString", )
 }
 
 FABRIC_EXT_EXPORT void _fe_SetAtDisplayCallback(

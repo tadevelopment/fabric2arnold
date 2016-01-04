@@ -6,14 +6,14 @@
 
 /**
  * The BasePlugin interface defines a set of functions common to every plugin
- * Every plugin must derive from this interface
+ * Every plugin must derive from this interface, and one of the specializations below
  */
 interface a2fPluginBase
 {
     parameters(io AtList list, io AtMetaDataStore metadata);
-    initialize(io AtNode node, io AtParamValue value);
+    initialize!(io AtNode node, io AtParamValue value);
     update(io AtNode node, io AtParamValue value);
-    finish(io AtNode node);
+    finish!(io AtNode node);
 };
 
 
@@ -24,4 +24,128 @@ interface a2fPluginBase
 interface a2fPluginShader
 {
     evaluate(io AtNode node, io AtShaderGlobals globals);
+};
+
+/** 
+ *  Arnold supports pluggable output-file writers called "drivers".
+ *  This output driver mechanism provides a pluggable architecture for
+ *  writing output image files using Arnold's built-in AOV pipeline.
+ *  It is also possible to write to arbitrary devices, such as a window
+ *  display.
+ *
+ *  AOVs (Arbitrary Output Values) are organized into "layers", with each
+ *  layer having a particular type (such as FLOAT or RGBA).
+ *
+ *  Drivers receive AOVs one bucket at a time which is perfectly
+ *  suited to image-formats that are tiled.  An iterator allows the
+ *  driver to iterate through all the AOV layers contained in the
+ *  bucket.
+ */
+interface a2fPluginDriver
+{
+    /** 
+     *  Can the driver handle buckets of pixels of the specified type? This function
+     *  is not called for raw mode drivers.
+     *
+     *  \return true if the driver can write pixels of the given type
+     */
+    Boolean DriverSupportsPixelType(AtNode node, UInt8 type);
+
+    /** 
+     *  \return  an array of filename extensions which this driver
+     *           is capable of writing.  For example, a 'jpeg' driver might return
+     *           the following array:  { "jpeg", "jpg" }
+     */
+    String[] DriverExtension();
+
+    /** 
+     * This function is called before rendering starts and can make any preparations
+     * the driver needs, like opening a file or allocating memory. The list of connected
+     * outputs is passed in using an output iterator.
+     *
+     * \param node             pointer to the driver node itself
+     * \param iterator         output iterator for outputs connected to this driver
+     * \param display_window   this is a 2D bounding box for the actual resolution
+     * \param data_window      this is the actual region of pixels that will be rendered
+     * \param bucket_size      maximum width in pixels of a bucket
+     */
+    DriverOpen(io AtNode node, io AtOutputIterator iterator, Box2 display_window, Box2 data_window, SInt32 bucket_size);
+
+    /** 
+     * This function is called to determine if a bucket will be rendered. It can be used
+     * to continue work on partial images without re-rendering already present buckets.
+     *
+     * \param node             pointer to the driver node itself
+     * \param bucket_xo        x coordinate of the bucket (upper-left)
+     * \param bucket_yo        y coordinate of the bucket (upper-left)
+     * \param bucket_size_x    width of the bucket in pixels
+     * \param bucket_size_y    height of the bucket in pixels
+     * \param tid              thread ID that will render this bucket
+     *
+     *  \return                true if the bucket needs to be rendered,
+     *                         false if the bucket can be skipped
+     */
+    Boolean DriverNeedsBucket(io AtNode node, SInt32 bucket_xo, SInt32 bucket_yo, SInt32 bucket_size_x, SInt32 bucket_size_y, SInt32 tid);
+  
+    /**
+     * This function is called before a bucket is rendered. It can be used to display
+     * bucket corners for interactive rendering drivers to show which buckets are being
+     * processed, for example. The renderer locks around this function so the contained
+     * code is not required to be thread safe. The bucket size may be smaller than what
+     * was given to \c driver_open because buckets are clamped to the edge of the render
+     * region.
+     *
+     * \param node             pointer to the driver node itself
+     * \param bucket_xo        x coordinate of the bucket (upper-left)
+     * \param bucket_yo        y coordinate of the bucket (upper-left)
+     * \param bucket_size_x    width of the bucket in pixels
+     * \param bucket_size_y    height of the bucket in pixels
+     * \param tid              thread ID that will render this bucket
+     */
+    DriverPrepareBucket(io AtNode node, SInt32 bucket_xo, SInt32 bucket_yo, SInt32 bucket_size_x, SInt32 bucket_size_y, SInt32 tid);
+
+    /**
+     * This function is called after a bucket has been rendered, but before it is written out.
+     * It provides the rendered pixels of each output to the driver, or the raw AOV samples if
+     * this is a raw driver. The renderer does not lock around this function, to allow for
+     * lengthy bucket preprocessing to happen in parallel. The contained code should not require
+     * any thread synchornization. The bucket size may be smaller than what was given to
+     * driver_open because buckets are clamped to the edge of the render region.
+     *
+     * \param node             pointer to the driver node itself
+     * \param iterator         output iterator (loops over connected outputs for regular drivers)
+     * \param sample_iterator  raw AOV sample iterator (loops over connected AOVs for raw drivers)
+     * \param bucket_xo        x coordinate of the bucket (upper-left)
+     * \param bucket_yo        y coordinate of the bucket (upper-left)
+     * \param bucket_size_x    width of the bucket in pixels
+     * \param bucket_size_y    height of the bucket in pixels
+     * \param tid              thread ID that rendered this bucket
+     */
+    DriverProcessBucket(io AtNode node, io AtOutputIterator iterator, io AtAOVSampleIterator sample_iterator, SInt32 bucket_xo, SInt32 bucket_yo, SInt32 bucket_size_x, SInt32 bucket_size_y, SInt32 tid);
+
+    /**
+     * This function is called after a bucket has been rendered. It provides the rendered
+     * pixels of each output to the driver, or the raw AOV samples if this is a raw driver.
+     * The renderer locks around this function so the contained code is not required to
+     * be thread safe. The bucket size may be smaller than what was given to \c driver_open
+     * because buckets are clamped to the edge of the render region.
+     *
+     * \param node             pointer to the driver node itself
+     * \param iterator         output iterator (loops over connected outputs for regular drivers)
+     * \param sample_iterator  raw AOV sample iterator (loops over connected AOVs for raw drivers)
+     * \param bucket_xo        x coordinate of the bucket (upper-left)
+     * \param bucket_yo        y coordinate of the bucket (upper-left)
+     * \param bucket_size_x    width of the bucket in pixels
+     * \param bucket_size_y    height of the bucket in pixels
+     */
+    DriverWriteBucket(io AtNode node, io AtOutputIterator iterator, io AtAOVSampleIterator sample_iterator, SInt32 bucket_xo, SInt32 bucket_yo, SInt32 bucket_size_x, SInt32 bucket_size_y);
+
+    /** 
+     * This function is called after the image has finished rendering. It is responsible
+     * for any final tasks such as flushing or closing open files.
+     *
+     * \param node             pointer to the driver node itself
+     * \param iterator         output iterator (loops over connected outputs for regular drivers)
+     */
+    DriverClose(io AtNode node, io AtOutputIterator iterator);
 };

@@ -43,6 +43,12 @@ kl_type_aliases.update( {
     'AtRGBA' : 'Color'
 } )
 
+# AtMatrix is defined as float[4][4],
+# so should always be treated as a pointer
+force_io_types += [
+    'AtMatrix'
+]
+
 #
 # If an SDK exposes opaque types (eg, handles) then
 # the only interaction KL can have with these objects
@@ -70,6 +76,8 @@ opaque_type_wrappers += [
     'AtParamEntry',
     'AtUserParamEntry',
     'AtMetaDataStore',
+    'AtOutputIterator',
+    'AtAOVSampleIterator'
 ]
 
 
@@ -89,7 +97,9 @@ filesToProcess = [
     'ai_ray.h',
     'ai_texture.h',
     'ai_universe.h',
-    'ai_shader_parameval.h'
+    'ai_shader_parameval.h',
+    'ai_drivers.h',
+    'ai_filters.h'
 ]
 
 # If you need to manually set any ordering, specify the files
@@ -107,8 +117,13 @@ elementsToIgnore = [
     'AiMsgSetCallback',
     'AtCommonMethods',
     'AtNodeMethods',
+    'AtDriverNodeMethods',
+    'AtFilterNodeMethods',
     'AiArrayGetMtxFunc',
-    'AiNodeGetMatrixAtString'
+    'AiNodeGetMatrixAtString',
+    'AiRawDriverInitialize',
+    'AiDriverExtension',
+    'AiOutputIteratorGetNext'
 ]
 
 # Add extensions to be required.  Should
@@ -183,6 +198,10 @@ custom_add_to_file = {
                         #'function Boolean AiArrayGetPtr(io AtArray a, io Data val<>) = "_fe_AiArrayGetPtrArr";\n'
 
     'ai_nodes.h' :      'Mat44 AiNodeGetMatrix(AtNode node, String param) = "_fe_AiNodeGetMatrix";\n\n',
+
+    'ai_drivers.h' :    'function AiRawDriverInitialize(io AtNode node, String required_aovs[], Boolean requires_depth, io Data data) = "_fe_AiRawDriverInitialize";\n'
+                        'function String[] AiDriverExtension(AtNodeEntry node_entry) = "_fe_AiDriverExtension";\n'
+                        'function Boolean AiOutputIteratorGetNext(io AtOutputIterator iter, io String output_name, io SInt32 pixel_type, io Data bucket_data) = "_fe_AiOutputIteratorGetNext";'
 }
 
 #####
