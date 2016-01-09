@@ -43,7 +43,7 @@ function AiNodeSetBool(io AtNode node, String param, Boolean val)  { AiNodeSetBo
 function AiNodeSetFlt(io AtNode node, String param, Float32 val)  { AiNodeSetFltAtString(node, param, val); }
 function AiNodeSetPtr(io AtNode node, String param, io Data val)  { AiNodeSetPtrAtString(node, param, val); }
 function AiNodeSetArray(io AtNode node, String param, io AtArray val)  { AiNodeSetArrayAtString(node, param, val); }
-function AiNodeSetMatrix(io AtNode node, String param, Mat44 val)  { AiNodeSetMatrixAtString(node, param, val); }
+function AiNodeSetMatrix(io AtNode node, String param, io Mat44 val)  { AiNodeSetMatrixAtString(node, param, val); }
 function AiNodeSetStr(io AtNode node, String param, String str)  { AiNodeSetStrAtString(node, param, str); }
 function AiNodeSetRGB(io AtNode node, String param, Float32 r, Float32 g, Float32 b)  { AiNodeSetRGBAtString(node, param, r, g, b); }
 function AiNodeSetRGBA(io AtNode node, String param, Float32 r, Float32 g, Float32 b, Float32 a)  { AiNodeSetRGBAAtString(node, param, r, g, b, a); }
@@ -75,7 +75,7 @@ function Boolean AiArraySetRGBA(io AtArray a, UInt32 i, Color val)     { return 
 function Boolean AiArraySetPnt(io AtArray a, UInt32 i, Vec3 val)       { return AiArraySetPntFunc(a, i, val, 'F2AWrapper', 0); }
 function Boolean AiArraySetPnt2(io AtArray a, UInt32 i, Vec2 val)      { return AiArraySetPnt2Func(a, i, val, 'F2AWrapper', 0); }
 function Boolean AiArraySetVec(io AtArray a, UInt32 i, Vec3 val)       { return AiArraySetVecFunc(a, i, val, 'F2AWrapper', 0); }
-function Boolean AiArraySetMtx(io AtArray a, UInt32 i, Mat44 val)      { return AiArraySetMtxFunc(a, i, val, 'F2AWrapper', 0); }
+function Boolean AiArraySetMtx(io AtArray a, UInt32 i, io Mat44 val)   { return AiArraySetMtxFunc(a, i, val, 'F2AWrapper', 0); }
 function Boolean AiArraySetStr(io AtArray a, UInt32 i, String val)     { return AiArraySetStrFunc(a, i, val, 'F2AWrapper', 0); }
 function Boolean AiArraySetPtr(io AtArray a, UInt32 i, io Data val)       { return AiArraySetPtrFunc(a, i, val, 'F2AWrapper', 0); }
 function Boolean AiArraySetArray(io AtArray a, UInt32 i, io AtArray val)  { return AiArraySetArrayFunc(a, i, val, 'F2AWrapper', 0); }
