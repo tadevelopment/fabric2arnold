@@ -475,6 +475,22 @@ inline bool AtMetaDataEntry_to_KLAtMetaDataEntry(const AtMetaDataEntry* const & 
   return true; 
 }
 
+inline bool Box2_to_AtBBox2(const Fabric::EDK::KL::Box2 & from, AtBBox2 & to) { 
+  to.maxx = from.max.x;
+  to.maxy = from.max.y;
+  to.minx = from.min.x;
+  to.miny = from.min.y;
+  return true;
+}
+
+inline bool AtBBox2_to_Box2(const AtBBox2 & from, Fabric::EDK::KL::Box2 & to) {
+  to.max.x = from.maxx;
+  to.max.y = from.maxy;
+  to.min.x = from.minx;
+  to.min.y = from.miny;
+  return true; 
+}
+
 inline bool Box3_to_AtBBox(const Fabric::EDK::KL::Box3 & from, AtBBox & to) { 
 	Vec3_to_AtPoint(from.max, to.max);
 	Vec3_to_AtPoint(from.min, to.min);

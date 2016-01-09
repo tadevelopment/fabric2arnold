@@ -91,6 +91,10 @@ public:
   a2fPluginShader CastToShader(
     Traits< a2fPluginBase >::INParam instance
     ) const;
+  
+  a2fPluginDriver CastToDriver(
+    Traits< a2fPluginBase >::INParam instance
+    ) const;
 };
 
 inline void Traits<ArnoldKLPluginMgr>::ConstructEmpty( ArnoldKLPluginMgr &val )

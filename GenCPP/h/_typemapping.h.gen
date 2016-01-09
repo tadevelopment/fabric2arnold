@@ -86,12 +86,12 @@ inline bool AtBBox_to_Box3(const AtBBox & from, Fabric::EDK::KL::Box3 & to) {
   return true; 
 }
 
-inline bool KlParamValue_to_AtParamValue(const Fabric::EDK::KL::AtParamValue & from, AtParamValue* & to) { 
+inline bool Box2_to_AtBBox2(const Fabric::EDK::KL::Box2 & from, AtBBox2 & to) { 
   #pragma message("Implement Me")
   return true;
 }
 
-inline bool AtParamValue_to_KLParamValue(const AtParamValue* const & from, Fabric::EDK::KL::AtParamValue & to) {
+inline bool AtBBox2_to_Box2(const AtBBox2 & from, Fabric::EDK::KL::Box2 & to) {
   #pragma message("Implement Me")
   return true; 
 }
@@ -132,6 +132,16 @@ inline bool KLAtCameraInput_to_CPAtCameraInput(const Fabric::EDK::KL::AtCameraIn
 }
 
 inline bool CPAtCameraInput_to_KLAtCameraInput(const AtCameraInput & from, Fabric::EDK::KL::AtCameraInput & to) {
+  #pragma message("Implement Me")
+  return true; 
+}
+
+inline bool KlParamValue_to_AtParamValue(const Fabric::EDK::KL::AtParamValue & from, AtParamValue* & to) { 
+  #pragma message("Implement Me")
+  return true;
+}
+
+inline bool AtParamValue_to_KLParamValue(const AtParamValue* const & from, Fabric::EDK::KL::AtParamValue & to) {
   #pragma message("Implement Me")
   return true; 
 }

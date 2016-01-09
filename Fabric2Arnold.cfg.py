@@ -14,6 +14,7 @@ xml_dir = 'DoxygenXML/xml/'
 cppToKLTypeMapping.update( {
     'AtByte' : 'UInt8',
     'AtBBox': 'Box3',
+    'AtBBox2': 'Box2',
     'AtRGB': 'Color',
     'AtEnum': 'String[]',
     'AtUInt16' : 'UInt16',

@@ -26,6 +26,7 @@ interface a2fPluginShader
     evaluate(io AtNode node, io AtShaderGlobals globals);
 };
 
+
 /** 
  *  Arnold supports pluggable output-file writers called "drivers".
  *  This output driver mechanism provides a pluggable architecture for

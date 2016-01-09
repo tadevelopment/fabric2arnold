@@ -31,6 +31,7 @@ interface ArnoldKLPluginIMgr
 
     // Because we can't cast in C++ between KL types, we expose functions here to handle it.
     a2fPluginShader CastToShader(a2fPluginBase instance);
+    a2fPluginDriver CastToDriver(a2fPluginBase instance);
 };
 
 /** 
@@ -93,8 +94,11 @@ function a2fPluginBase ArnoldKLPluginMgr.CreateInstance(String name)
     return null;
 }
 
-// Cast base to shader.
-a2fPluginShader ArnoldKLPluginMgr.CastToShader(a2fPluginBase instance)
-{
-    return instance;
-}
+// Cast base to specialized type
+// These functions are meant to be called
+// from C++ to allow casting because the 
+// C++ types are unrelated and cannot be 
+// cast directly too
+a2fPluginShader ArnoldKLPluginMgr.CastToShader(a2fPluginBase instance) { return instance; }
+a2fPluginDriver ArnoldKLPluginMgr.CastToDriver(a2fPluginBase instance) { return instance; }
+

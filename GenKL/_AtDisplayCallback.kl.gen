@@ -1,0 +1,21 @@
+/** 
+  This file demonstrates a simple method for implementing
+  callbacks from C++ to KL.  It implements an (undocumented)
+  callback for the Arnold display driver that recieves RGB 
+  data from Arnold when rendering.
+*/
+
+interface AtDisplayCallback {
+    //
+    // typedef void (*AtDisplayCallback)(AtUInt32 x, AtUInt32 y, AtUInt32 width, AtUInt32 height, void* buffer, void* data);
+    // \param rgbaBuffer - if valid, This parameter packed RGBA pixel values.
+    // \param colorBuffer - if valid, this parameter holds Color pixel values.  
+    //                      Either this buffer or rgbaBuffer should be valid.  If 
+    //                      both values are 0 then it indicates a bucket is being started.
+    // \param cp_data - an optional data pointer, can be set by AiNodeSetPtr(driver, 'cb_data', ...);
+    //
+    Callback!(UInt32 bucketX, UInt32 bucketY, UInt32 bucketWidth, UInt32 bucketHeight, RGBA<> rgbaBuffer, Color<> colorBuffer, Data cb_data);
+};
+
+// Declare a function we can implement in C++ to 
+function SetAtDisplayCallback(AtNode displayDriver, AtDisplayCallback callback) = '_fe_SetAtDisplayCallback';

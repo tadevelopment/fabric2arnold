@@ -19,6 +19,7 @@
 #include "global.h"
 #include "a2fPluginBase.h"
 #include "a2fPluginShader.h"
+#include "a2fPluginDriver.h"
 
 namespace Fabric { namespace EDK { namespace KL {
 
@@ -45,6 +46,11 @@ public:
       );
     void (*CastToShader_06C73D3783B3F9939383B0F5BA0C3FC4)(
       Traits< a2fPluginShader >::Result _result,
+      ObjectCore const * const *objectCorePtr,
+      Traits< a2fPluginBase >::INParam instance
+      );
+    void (*CastToDriver_CC187BF1744B1218F61038535342D30D)(
+      Traits< a2fPluginDriver >::Result _result,
       ObjectCore const * const *objectCorePtr,
       Traits< a2fPluginBase >::INParam instance
       );
@@ -188,6 +194,19 @@ public:
   {
     a2fPluginShader _result;
     m_bits->vTableSwapPtrPtr->get()->CastToShader_06C73D3783B3F9939383B0F5BA0C3FC4(
+      _result,
+      &m_bits->objectCorePtr,
+      instance
+      );
+    return _result;
+  }
+  
+  a2fPluginDriver CastToDriver(
+    Traits< a2fPluginBase >::INParam instance
+    ) const
+  {
+    a2fPluginDriver _result;
+    m_bits->vTableSwapPtrPtr->get()->CastToDriver_CC187BF1744B1218F61038535342D30D(
       _result,
       &m_bits->objectCorePtr,
       instance

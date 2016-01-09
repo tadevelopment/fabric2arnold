@@ -225,6 +225,20 @@ namespace Fabric { namespace EDK { namespace KL {
       );
     return _result;
   }
+  
+  inline a2fPluginDriver ArnoldKLPluginMgr::CastToDriver(
+    Traits< a2fPluginBase >::INParam instance
+    ) const
+  {
+    a2fPluginDriver _result;
+    ObjectCore const *objectCorePtr = &static_cast<ArnoldKLPluginMgr::Bits *>( m_bits )->__objectCore;
+    static_cast<ArnoldKLPluginMgr::Bits *>( m_bits )->__interfaceArnoldKLPluginIMgrBits.vTableSwapPtrPtr->get()->CastToDriver_CC187BF1744B1218F61038535342D30D(
+      _result,
+      &objectCorePtr,
+      instance
+      );
+    return _result;
+  }
 
 }}}
 

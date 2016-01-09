@@ -498,6 +498,12 @@
             "methodop": ".", 
             "to": "bool_to_Boolean"
         }, 
+        "Box2": {
+            "ctype": "AtBBox2", 
+            "from": "Box2_to_AtBBox2", 
+            "methodop": ".", 
+            "to": "AtBBox2_to_Box2"
+        }, 
         "Box3": {
             "ctype": "AtBBox", 
             "from": "Box3_to_AtBBox", 

@@ -1,0 +1,180 @@
+/**
+    Shader globals struct, methods and macros 
+  File moved to custom folder to tweak AtShaderGlobals
+*/
+
+require Math;
+
+//////////////////////////////////////////////////
+//  enumerated values
+
+const Integer AI_CONTEXT_SURFACE = 0x00;	 //  for ray-surface intersections  
+const Integer AI_CONTEXT_VOLUME = 0x01;	 //  for volume points during ray-marching  
+const Integer AI_CONTEXT_BACKGROUND = 0x02;	 //  for rays that don't hit any geometry  
+const Integer AI_CONTEXT_DISPLACEMENT = 0x03;	 //  for each vertex to be displaced  
+//////////////////////////////////////////////////
+//  classes 
+/**  Shader globals data structure
+An AtShaderGlobals structure represents a shading context that holds all the information accesible to the different types of shaders. For example, after a camera ray hits the surface of an object, a shading context of type AI_CONTEXT_SURFACE is created that contains, amongst other things, local geometric properties such as the surface normal, the UV surface parameters, etc. 
+ */
+struct AtShaderGlobals {
+  // Although this is a struct, it is allocated/released
+  // exclusively by the system, therefore we need to hold
+  // on to the handle of the original item.
+  Data _handle;
+
+  SInt32 x; //  X raster-space coordinate of this ray tree 
+ 
+  SInt32 y; //  Y raster-space coordinate of this ray tree 
+ 
+  Float32 sx; //  X image-space coordinate of this ray, in [-1,1) 
+ 
+  Float32 sy; //  Y image-space coordinate of this ray, in [-1,1) 
+ 
+  UInt16 si; //  subpixel sample index 
+ 
+  UInt16 i; //  path index (or light sample index for shadow rays) 
+ 
+  UInt16 n; //  total number of samples to take 
+ 
+  UInt16 rt; //  ray type 
+ 
+  Float32 we; //  sample weight 
+ 
+  UInt32 transp_index; //  transparency index 
+ 
+  Vec3 ro; //  ray origin (typically the camera position) 
+ 
+  Vec3 rd; //  ray direction 
+ 
+  Float64 rl; //  ray length (|Ro-P|) 
+ 
+  UInt8 tid; //  thread ID 
+ 
+  UInt8 rr; //  recursion level for the ray that created this hit 
+ 
+  UInt8 rr_refl; //  ray reflection depth level 
+ 
+  UInt8 rr_refr; //  ray refraction depth level 
+ 
+  UInt8 rr_diff; //  ray diffuse depth level 
+ 
+  UInt8 rr_gloss; //  ray glossy depth level 
+ 
+  Boolean fhemi; //  force hemispherical lighting 
+ 
+  Float32 time; //  absolute time, between shutter-open and shutter-close 
+ 
+  UInt32 fi; //  primitive ID (triangle, curve segment, etc) 
+ 
+  AtNode op; //  object pointer 
+ 
+  AtNode proc; //  procedural object pointer (if exists) 
+ 
+  AtNode shader; //  pointer to the current shader 
+ 
+  // We cannot recursively add structs together in KL
+  // so this parameter needs to be accessed specially via
+  // GetParentAtShaderGlobals
+  //AtShaderGlobals psg; //  parent shader globals (last shaded) 
+ 
+  AtBucket bkt; //  bucket that the pixel being rendered belongs to 
+ 
+  Vec3 po; //  shading point in object-space 
+ 
+  Vec3 p; //  shading point in world-space 
+ 
+  Vec3 dPdx; //  surface derivative wrt screen X-axis (not normalized) 
+ 
+  Vec3 dPdy; //  surface derivative wrt screen Y-axis (not normalized) 
+ 
+  Vec3 N; //  shading normal 
+ 
+  Vec3 nf; //  face-forward shading normal 
+ 
+  Vec3 ng; //  geometric normal 
+ 
+  Vec3 ngf; //  face-forward geometric normal 
+ 
+  Vec3 ns; //  smoothed normal (same as N but without bump) 
+ 
+  Float32 bu; //  barycentric coordinate (aka alpha, or u) 
+ 
+  Float32 bv; //  barycentric coordinate (aka beta, or v) 
+ 
+  Float32 u; //  U surface parameter 
+ 
+  Float32 v; //  V surface parameter 
+ 
+  Mat44 m; //  local-to-world matrix transform 
+ 
+  Mat44 minv; //  world-to-local matrix transform 
+ 
+  AtNode lights[]; //  array of active lights at this shading context 
+ 
+  AtNode lp; //  pointer to current light node 
+ 
+  Float32 ldist; //  distance from P to light source 
+ 
+  Vec3 ld; //  incident direction from light source 
+ 
+  Color li; //  incoming intensity from light source 
+ 
+  Color liu; //  unoccluded incoming intensity from light source 
+ 
+  Color lo; //  shadow occlusion from light source 
+ 
+  Color ci; //  input color (for volume shaders) 
+ 
+  Color vo; //  output volume radiance 
+ 
+  Float32 area; //  in AI_CONTEXT_SURFACE this is the world-space area being shaded; in AI_CONTEXT_DISPLACEMENT it's the average area of all un-displaced triangles shared by the current vertex 
+ 
+  Vec3 dPdu; //  surface derivative wrt U parameter (not normalized) 
+ 
+  Vec3 dPdv; //  surface derivative wrt V parameter (not normalized) 
+ 
+  Vec3 dDdx; //  ray direction derivative wrt screen X-axis (not normalized) 
+ 
+  Vec3 dDdy; //  ray direction derivative wrt screen Y-axis (not normalized) 
+ 
+  Vec3 dNdx; //  derivative of surface normal with respect to X-axis 
+ 
+  Vec3 dNdy; //  derivative of surface normal with respect to Y-axis 
+ 
+  Float32 dudx; //  U derivative wrt screen X-axis (not normalized) 
+ 
+  Float32 dudy; //  U derivative wrt screen Y-axis (not normalized) 
+ 
+  Float32 dvdx; //  V derivative wrt screen X-axis (not normalized) 
+ 
+  Float32 dvdy; //  V derivative wrt screen Y-axis (not normalized) 
+ 
+  AtParamValue out; //  shader output 
+ 
+  Color out_opacity; //  output opacity (used for automatic transparency) 
+ 
+  Boolean inclusive_traceset; //  is the trace-set inclusive? 
+ 
+  Boolean skip_shadow; //  if true, don't trace shadow rays 
+ 
+  UInt8 sc; //  type of shading context 
+ 
+  String traceset; //  trace-set to assign to rays made from this SG 
+};
+
+//////////////////////////////////////////
+//////////////////////////////////////////////////
+//  global-scope functions 
+
+function AtShaderGlobals AiShaderGlobals() = '_fe_AiShaderGlobals';
+function AiShaderGlobalsDestroy(io AtShaderGlobals sg) = '_fe_AiShaderGlobalsDestroy';
+
+// We add an additional function to this class to allow
+// recursively getting the parent shader globals.  We couldnt
+// implement this directly in KL (by adding a parent member
+// to the AtShaderGlobals class) because that would require
+// creating new instances of the KL::AtShaderGlobals in CPP,
+// which is (AFAIK) not possible
+function AtShaderGlobals GetParentAtShaderGlobals(AtShaderGlobals globals) = '_fe_GetParentAtShaderGlobals';
+
