@@ -2,6 +2,7 @@
 
 #include "_a2fPluginManager.h"
 #include <assert.h>
+#include <map>
 
 
 AI_INSTANCE_COMMON_METHODS
@@ -117,11 +118,19 @@ inline Fabric::EDK::KL::a2fPluginDriver GetKLDriver( const AtNode* node )
   return (pInstance != nullptr && pInstance->isValid()) ? s_mgr.CastToDriver( *pInstance ) : Fabric::EDK::KL::a2fPluginDriver();
 }
 
+// TODO: We have no safe way of knowing which
+// plugin is calling DriverExtension.  It appears 
+// that the function is called after SupportsPixelType.
+// Validate (somehow) that the following hack-job
+// is safe for arbitrary driver types.
+std::map<AtNode*, const char**> s_driver_extns;
+static const AtNode* s_LastQueriedDriver = NULL;
 static bool DriverSupportsPixelType( const AtNode* node, AtByte pixel_type )
 {
   Fabric::EDK::KL::a2fPluginDriver asDriver = GetKLDriver( node );
   if (asDriver.isValid())
   {
+    s_LastQueriedDriver = node; // Cache this pointer for DriverExtension below
     Fabric::EDK::KL::AtNode klnode;
     CPAtNode_to_KLAtNode( node, klnode );
     return asDriver.DriverSupportsPixelType( klnode, pixel_type );
@@ -131,17 +140,18 @@ static bool DriverSupportsPixelType( const AtNode* node, AtByte pixel_type )
 
 static const char** DriverExtension()
 {
-  Fabric::EDK::KL::a2fPluginBase temp_instance = s_mgr.CreateInstance( s_currentlyRegisteringItem );
-  if (temp_instance.isValid())
+  // In a flagrant disregard for threading safety, we use a 
+  // static variable to cache the return value
+  // from KL.
+  static const char** s_storage = NULL;
+  if (s_LastQueriedDriver == NULL)
+    return s_storage;
+
+  Fabric::EDK::KL::a2fPluginDriver asDriver = GetKLDriver( s_LastQueriedDriver );
+  if (asDriver.isValid())
   {
-    Fabric::EDK::KL::a2fPluginDriver asShader = s_mgr.CastToDriver( temp_instance );
-    Fabric::EDK::KL::VariableArray< Fabric::EDK::KL::String > extns = asShader.DriverExtension();
+    Fabric::EDK::KL::VariableArray< Fabric::EDK::KL::String > extns = asDriver.DriverExtension();
 
-
-    // In a flagrant disregard for threading safety, we use a 
-    // static variable to cache the return value
-    // from KL.
-    static const char** s_storage = NULL;
     // Convert strings to static-const-char variation.
     // Release any existing returned types.  These values
     // are stored in a NULL-terminated list
@@ -158,14 +168,14 @@ static const char** DriverExtension()
     for (int i = 0; i < n_strings; i++)
     {
       const char* str = extns[i].data();
-      size_t len = extns[i].length();
+      size_t len = extns[i].length() + 1;
       char* newstr = new char[len];
       memcpy( newstr, str, len );
       s_storage[i] = newstr;
     }
-    return s_storage;
+    s_LastQueriedDriver = NULL;
   }
-  return nullptr;
+  return s_storage;
 }
 
 static void DriverOpen( AtNode* node, AtOutputIterator* iterator, AtBBox2 display_window, AtBBox2 data_window, int bucket_size )

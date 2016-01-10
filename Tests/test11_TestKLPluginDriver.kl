@@ -1,8 +1,3 @@
-//
-// Copyright (c) 2014, Steven Caron <steven@steven-caron.com> All rights reserved.
-//
-// FabricArnold Extension
-
 require Fabric2ArnoldWrapper;
 
 /*
@@ -189,7 +184,7 @@ operator entry() {
 
   // assign th driver and the filter to the outputs
   AtArray outputs_array = AiArrayAllocate(1, 1, AI_TYPE_STRING);
-  AiArraySetStr(outputs_array, 0, "RGB pointer myfilter mydriver");
+  AiArraySetStr(outputs_array, 0, "RGB RGB myfilter mydriver");
   AiNodeSetArray(options, "outputs", outputs_array);
 
   // Finally, render to an ASS file
