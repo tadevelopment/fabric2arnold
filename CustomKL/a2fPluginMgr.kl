@@ -43,6 +43,19 @@ function a2fPluginMgrRegisterPlugin(SInt32 type, UInt8 output_type, String name,
 function a2fPluginMgrRegisterMgr(io ArnoldKLPluginIMgr mgr) = "_fe_a2fRegisterManager";
 function a2fPluginMgrReleaseMgr() = "_fe_a2fReleaseManager";
 
+function ArnoldKLPluginIMgr AcquireArnoldKLPluginMgr()
+{
+    if (Singleton_has("_a2fPluginMgr"))
+        return Singleton_get("_a2fPluginMgr");
+    return ArnoldKLPluginMgr();
+}
+
+function ReleaseArnoldKLPluginMgr()
+{
+    a2fPluginMgrReleaseMgr();
+    Singleton_remove("_a2fPluginMgr");
+}
+
 
 object ArnoldKLPluginMgr : ArnoldKLPluginIMgr
 {

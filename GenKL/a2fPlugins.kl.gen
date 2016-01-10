@@ -70,7 +70,7 @@ interface a2fPluginDriver
      * \param data_window      this is the actual region of pixels that will be rendered
      * \param bucket_size      maximum width in pixels of a bucket
      */
-    DriverOpen(io AtNode node, io AtOutputIterator iterator, Box2 display_window, Box2 data_window, SInt32 bucket_size);
+    DriverOpen!(io AtNode node, io AtOutputIterator iterator, Box2 display_window, Box2 data_window, SInt32 bucket_size);
 
     /** 
      * This function is called to determine if a bucket will be rendered. It can be used
@@ -103,7 +103,7 @@ interface a2fPluginDriver
      * \param bucket_size_y    height of the bucket in pixels
      * \param tid              thread ID that will render this bucket
      */
-    DriverPrepareBucket(io AtNode node, SInt32 bucket_xo, SInt32 bucket_yo, SInt32 bucket_size_x, SInt32 bucket_size_y, SInt32 tid);
+    DriverPrepareBucket!(io AtNode node, SInt32 bucket_xo, SInt32 bucket_yo, SInt32 bucket_size_x, SInt32 bucket_size_y, SInt32 tid);
 
     /**
      * This function is called after a bucket has been rendered, but before it is written out.
@@ -122,7 +122,7 @@ interface a2fPluginDriver
      * \param bucket_size_y    height of the bucket in pixels
      * \param tid              thread ID that rendered this bucket
      */
-    DriverProcessBucket(io AtNode node, io AtOutputIterator iterator, io AtAOVSampleIterator sample_iterator, SInt32 bucket_xo, SInt32 bucket_yo, SInt32 bucket_size_x, SInt32 bucket_size_y, SInt32 tid);
+    DriverProcessBucket!(io AtNode node, io AtOutputIterator iterator, io AtAOVSampleIterator sample_iterator, SInt32 bucket_xo, SInt32 bucket_yo, SInt32 bucket_size_x, SInt32 bucket_size_y, SInt32 tid);
 
     /**
      * This function is called after a bucket has been rendered. It provides the rendered
@@ -139,7 +139,7 @@ interface a2fPluginDriver
      * \param bucket_size_x    width of the bucket in pixels
      * \param bucket_size_y    height of the bucket in pixels
      */
-    DriverWriteBucket(io AtNode node, io AtOutputIterator iterator, io AtAOVSampleIterator sample_iterator, SInt32 bucket_xo, SInt32 bucket_yo, SInt32 bucket_size_x, SInt32 bucket_size_y);
+    DriverWriteBucket!(io AtNode node, io AtOutputIterator iterator, io AtAOVSampleIterator sample_iterator, SInt32 bucket_xo, SInt32 bucket_yo, SInt32 bucket_size_x, SInt32 bucket_size_y);
 
     /** 
      * This function is called after the image has finished rendering. It is responsible
@@ -148,5 +148,5 @@ interface a2fPluginDriver
      * \param node             pointer to the driver node itself
      * \param iterator         output iterator (loops over connected outputs for regular drivers)
      */
-    DriverClose(io AtNode node, io AtOutputIterator iterator);
+    DriverClose!(io AtNode node, io AtOutputIterator iterator);
 };

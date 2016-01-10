@@ -62,7 +62,7 @@ operator entry() {
   UInt64 start = getCurrentTicks();
   AiBegin();
 
-  ArnoldKLPluginMgr mgr();
+  ArnoldKLPluginIMgr mgr = AcquireArnoldKLPluginMgr();
   mgr.RegisterKLPlugin(TestShader, AI_NODE_SHADER, AI_TYPE_RGB, "TestShader", "<kl-plugins>");
 
   //////////////////////////////////////////////////////////
@@ -158,9 +158,9 @@ operator entry() {
   // Finally, render to an ASS file
   doArnoldRenderToASS("c:\\temp\\test10_a.ass");
 
+  ReleaseArnoldKLPluginMgr();
   AiEnd();
 
-  mgr.ReleaseInstance();
   UInt64 end = getCurrentTicks();
   report("Elapsed time: " + getSecondsBetweenTicks(start, end) + " seconds");
 }

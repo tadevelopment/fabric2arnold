@@ -1,0 +1,212 @@
+//
+// Copyright (c) 2014, Steven Caron <steven@steven-caron.com> All rights reserved.
+//
+// FabricArnold Extension
+
+require Fabric2ArnoldWrapper;
+
+/*
+ * The following test driver is directly copied from https://support.solidangle.com/display/ARP/Writing+a+driver
+ * This driver will write to a file a list of all the objects in a pointer AOV
+ */
+const String s_filename = "filename";
+const String s_name = "name";
+object TestDriver : a2fPluginBase, a2fPluginDriver
+{
+  AtNode nodenames[String];
+  SimpleLock _lock;
+};
+
+TestDriver()
+{
+    this._lock = SimpleLock('LocknKey');
+}
+
+///////////////////////////////////////////////////////////////
+// Base functions 
+
+function TestDriver.parameters(io AtList list, io AtMetaDataStore metadata)
+{
+  report("Parameters");
+  AiNodeParamStr(list, -1, s_filename, "objects.txt");
+}
+ 
+function TestDriver.initialize!(io AtNode node, io AtParamValue value)
+{
+  report("Initialize");
+
+  // initialize the driver
+  Data empty();
+  AiDriverInitialize(node, false, empty);
+}
+
+function TestDriver.update(io AtNode node, io AtParamValue value)
+{ 
+  report("Update");
+}
+function TestDriver.finish!(io AtNode node)
+{
+   AiDriverDestroy(node);
+}
+
+///////////////////////////////////////////////////////////////
+// Driver functions 
+function Boolean TestDriver.DriverNeedsBucket(io AtNode node, SInt32 bucket_xo, SInt32 bucket_yo, SInt32 bucket_size_x, SInt32 bucket_size_y, SInt32 tid)
+{
+  report("DriverNeedsBucket");
+  return true;
+}
+ 
+function TestDriver.DriverProcessBucket!(io AtNode node, io AtOutputIterator iterator, io AtAOVSampleIterator sample_iterator, SInt32 bucket_xo, SInt32 bucket_yo, SInt32 bucket_size_x, SInt32 bucket_size_y, SInt32 tid)
+{
+  report("DriverProcessBucket");
+}
+ 
+
+function Boolean TestDriver.DriverSupportsPixelType(AtNode node, UInt8 type)
+{
+  report("DriverSupportsPixelType");
+  // this driver will only support pointer formats
+  return type == AI_TYPE_POINTER || type == AI_TYPE_NODE;
+}
+ 
+function TestDriver.DriverOpen!(io AtNode node, io AtOutputIterator iterator, Box2 display_window, Box2 data_window, SInt32 bucket_size)
+{
+  report("DriverOpen");
+  // this driver is unusual and happens to do all the writing at the end, so this function is
+  // empty.
+}
+ 
+function String[] TestDriver.DriverExtension()
+{
+  report("DriverExtension");
+
+  // We support "txt" files only
+  String res[];
+  res.push("txt");
+  return res;
+}
+ 
+function TestDriver.DriverPrepareBucket!(io AtNode node, SInt32 bucket_xo, SInt32 bucket_yo, SInt32 bucket_size_x, SInt32 bucket_size_y, SInt32 tid)
+{
+  report("DriverPrepareBucket");
+}
+ 
+function TestDriver.DriverWriteBucket!(io AtNode node, io AtOutputIterator iterator, io AtAOVSampleIterator sample_iterator, SInt32 bucket_xo, SInt32 bucket_yo, SInt32 bucket_size_x, SInt32 bucket_size_y)
+{
+  report("DriverWriteBucket");
+  Data bucket_data;
+  String empty();
+  SInt32 none;
+
+  // This is a threaded callback, but we write to a shared
+  // resource (this.names) that is not thread safe
+  AutoLock lock(this._lock);
+
+   // Iterate over all the AOVs hooked up to this driver
+   while (AiOutputIteratorGetNext(iterator, empty, none, bucket_data))
+   {
+      UInt64 data_as_uint = dataToUInt(bucket_data);
+
+      for (SInt32 y = 0; y < bucket_size_y; y++)
+      {
+         for (SInt32 x = 0; x < bucket_size_x; x++)
+         {
+            // Get source bucket coordinates for pixel
+            SInt32 sidx = y * bucket_size_x + x;
+            // Because of driver_supports_pixel_type, we know pixel is a
+            // pointer to an AtNode.
+            Data incr_data = uintToData(data_as_uint + sidx);
+            AtNode pixel_node;
+            pixel_node._handle = incr_data;
+            String name = AiNodeGetStr(pixel_node, s_name);
+            this.nodenames[name] = pixel_node;
+         }
+      }
+   }
+}
+ 
+function TestDriver.DriverClose!(io AtNode node, io AtOutputIterator iterator)
+{
+  report("DriverClose");
+   // DriverPtrStruct *driver = (DriverPtrStruct *)AiDriverGetLocalData(node);
+   // std::ofstream myfile(AiNodeGetStr(node, ASTR::filename));
+   // for (auto &i : driver->names)
+   //    myfile << i.first << ":\t " <<i.second << std::endl;
+   // myfile.close();
+}
+ 
+
+
+operator entry() {
+
+  String filename = "C:\\temp\\objects.txt";
+  UInt64 start = getCurrentTicks();
+  AiBegin();
+
+  ArnoldKLPluginIMgr mgr = AcquireArnoldKLPluginMgr();
+  mgr.RegisterKLPlugin(TestDriver, AI_NODE_DRIVER, AI_TYPE_UNDEFINED, "TestDriver", "<kl-plugins>");
+
+  // create a sphere
+  AtNode sphere = AiNode("sphere");
+  AiNodeSetStr(sphere, "name", "mysphere");
+  AiNodeSetFlt(sphere, "radius", 5.0);
+
+  // create a lambert shader
+  AtNode lambert = AiNode("lambert");
+  AiNodeSetStr(lambert, "name", "myshader");
+  AiNodeSetRGB(lambert, "Kd_color", 0.0, 1.0, 0.0);
+
+  // assign the sphere's shader
+  AiNodeSetPtr(sphere, "shader", lambert._handle);
+
+  // create a perspective camera
+  AtNode camera = AiNode("persp_camera");
+  AiNodeSetStr(camera, "name", "mycamera");
+  AiNodeSetPnt(camera, "position", 0.0, 0.0, 20.0);
+
+  // create a point light
+  AtNode light = AiNode("point_light");
+  AiNodeSetStr(light, "name", "mylight");
+  AiNodeSetFlt(light, "exposure", 7.5);
+  AiNodeSetPnt(light, "position", 0.0, 10.0, 10.0);
+
+  // set render options
+  AtNode options = AiUniverseGetOptions();
+  AiNodeSetInt(options, "AA_samples", 1);
+  AiNodeSetInt(options, "xres", 320);
+  AiNodeSetInt(options, "yres", 240);
+  AiNodeSetPtr(options, "camera", camera._handle);
+
+  // create an output driver
+  AtNode driver = AiNode("TestDriver");
+  AiNodeSetStr(driver, "name", "mydriver");
+  AiNodeSetStr(driver, "filename", filename);
+
+  // create a gaussian filter node
+  AtNode gfilter = AiNode("gaussian_filter");
+  AiNodeSetStr(gfilter, "name", "myfilter");
+
+  // assign th driver and the filter to the outputs
+  AtArray outputs_array = AiArrayAllocate(1, 1, AI_TYPE_STRING);
+  AiArraySetStr(outputs_array, 0, "RGB pointer myfilter mydriver");
+  AiNodeSetArray(options, "outputs", outputs_array);
+
+  // Finally, render to an ASS file
+  //doArnoldRenderToASS("c:\\temp\\test11.ass");
+  //AiASSWrite("c:\\temp\\test11.ass", AI_NODE_ALL, false, true);
+
+  // render the scene
+  report("  -- Beginning Render -- ");
+  Integer result = AiRender(AI_RENDER_MODE_CAMERA);
+  if (result != AI_SUCCESS)
+  {
+    report("[FabricArnold::TestSuite] Error " + String(result));
+  }
+
+  ReleaseArnoldKLPluginMgr();
+  AiEnd();
+
+  UInt64 end = getCurrentTicks();
+  report("Elapsed time: " + getSecondsBetweenTicks(start, end) + " seconds");
+}

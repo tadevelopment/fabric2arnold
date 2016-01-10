@@ -1,6 +1,7 @@
 #include "_IncludeAll.h"
 
 #include "_a2fPluginManager.h"
+#include <assert.h>
 
 
 AI_INSTANCE_COMMON_METHODS
@@ -11,48 +12,56 @@ AI_INSTANCE_COMMON_METHODS
 // our plugins during render time.
 static Fabric::EDK::KL::ArnoldKLPluginIMgr s_mgr;
 static const char* s_currentlyRegisteringItem = nullptr;
+const char* s_klptr = "__klptr";
 
 node_parameters
 //void Parameters(AtList* params, AtMetaDataStore* mds)
 {
-    Fabric::EDK::KL::a2fPluginBase temp_instance = s_mgr.CreateInstance( s_currentlyRegisteringItem );
-    if (temp_instance.isValid())
-    {
-        Fabric::EDK::KL::AtList klparams;
-        CPAtList_to_KLAtList( params, klparams );
-        Fabric::EDK::KL::AtMetaDataStore klmds;
-        CPAtMetaDataStore_to_KLAtMetaDataStore( mds, klmds );
-        temp_instance.parameters( klparams, klmds );
-    }
+  Fabric::EDK::KL::a2fPluginBase temp_instance = s_mgr.CreateInstance( s_currentlyRegisteringItem );
+  if (temp_instance.isValid())
+  {
+    Fabric::EDK::KL::AtList klparams;
+    CPAtList_to_KLAtList( params, klparams );
+    Fabric::EDK::KL::AtMetaDataStore klmds;
+    CPAtMetaDataStore_to_KLAtMetaDataStore( mds, klmds );
+    temp_instance.parameters( klparams, klmds );
+  }
 }
 
+//static Fabric::EDK::KL::a2fPluginBase* pInstance = NULL;
 node_initialize
 //void Initialize(AtNode* node, AtParamValue* params)
 {
-    const AtNodeEntry* nodeEntry = AiNodeGetNodeEntry( node );
-    const char* entryname = AiNodeEntryGetName( nodeEntry );
+  const AtNodeEntry* nodeEntry = AiNodeGetNodeEntry( node );
+  const char* entryname = AiNodeEntryGetName( nodeEntry );
 
-    Fabric::EDK::KL::a2fPluginBase instance = s_mgr.CreateInstance( entryname );
-    if (instance.isValid())
-    {
-      // Save the pointer to the AtNode for later reference
-      // Because the C++ classes are just handles to the KL classes
-      // we need to do a full copy (not just save a pointer)
-      Fabric::EDK::KL::a2fPluginBase* pInstance = new Fabric::EDK::KL::a2fPluginBase( instance );
-      AiNodeSetLocalData( node, pInstance );
+  Fabric::EDK::KL::a2fPluginBase instance = s_mgr.CreateInstance( entryname );
+  if (instance.isValid())
+  {
+    // Save the pointer to the AtNode for later reference
+    // Because the C++ classes are just handles to the KL classes
+    // we need to do a full copy (not just save a pointer)
+    Fabric::EDK::KL::a2fPluginBase* pInstance = new Fabric::EDK::KL::a2fPluginBase( instance );
 
-      Fabric::EDK::KL::AtNode klnode;
-      CPAtNode_to_KLAtNode( node, klnode );
-      Fabric::EDK::KL::AtParamValue klparams;
-      AtParamValue_to_KLParamValue( params, klparams );
-      instance.initialize( klnode, klparams );
+    // We cache our pointer on a user-parameter.
+    // We cannot use LocalData, as Arnold seems to
+    // use local data already for some plugin types (drivers)
+    bool res = AiNodeDeclare( node, s_klptr, "constant POINTER" );
+    assert( res );
+    AiNodeSetPtr( node, s_klptr, pInstance );
+    
+    Fabric::EDK::KL::AtNode klnode;
+    CPAtNode_to_KLAtNode( node, klnode );
+    Fabric::EDK::KL::AtParamValue klparams;
+    AtParamValue_to_KLParamValue( params, klparams );
+    instance.initialize( klnode, klparams );
   }
 }
 
 //node_update
 void Update( AtNode* node, AtParamValue* params )
 {
-  Fabric::EDK::KL::a2fPluginBase* pInstance = reinterpret_cast<Fabric::EDK::KL::a2fPluginBase*>(AiNodeGetLocalData( node ));
+  Fabric::EDK::KL::a2fPluginBase* pInstance = reinterpret_cast<Fabric::EDK::KL::a2fPluginBase*>(AiNodeGetPtr( node, s_klptr ));
   if (pInstance != nullptr && pInstance->isValid())
   {
     Fabric::EDK::KL::AtNode klnode;
@@ -66,15 +75,15 @@ void Update( AtNode* node, AtParamValue* params )
 node_finish
 //void Finish(AtNode* node)
 {
-    Fabric::EDK::KL::a2fPluginBase* pInstance = reinterpret_cast<Fabric::EDK::KL::a2fPluginBase*>(AiNodeGetLocalData( node ));
-    if (pInstance != nullptr && pInstance->isValid())
-    {
-        Fabric::EDK::KL::AtNode klnode;
-        CPAtNode_to_KLAtNode( node, klnode );
-        pInstance->finish( klnode );
-        delete pInstance;
-        AiNodeSetLocalData( node, nullptr );
-    }
+  Fabric::EDK::KL::a2fPluginBase* pInstance = reinterpret_cast<Fabric::EDK::KL::a2fPluginBase*>(AiNodeGetPtr( node, s_klptr ));
+  if (pInstance != nullptr && pInstance->isValid())
+  {
+    Fabric::EDK::KL::AtNode klnode;
+    CPAtNode_to_KLAtNode( node, klnode );
+    pInstance->finish( klnode );
+    delete pInstance;
+    AiNodeSetLocalData( node, nullptr );
+  }
 }
 
 //////////////////////////////////////////////////////////////
@@ -82,7 +91,7 @@ node_finish
 //shader_evaluate
 void Evaluate( AtNode* node, AtShaderGlobals* globals )
 {
-  Fabric::EDK::KL::a2fPluginBase* pInstance = reinterpret_cast<Fabric::EDK::KL::a2fPluginBase*>(AiNodeGetLocalData( node ));
+  Fabric::EDK::KL::a2fPluginBase* pInstance = reinterpret_cast<Fabric::EDK::KL::a2fPluginBase*>(AiNodeGetPtr( node, s_klptr ));
   if (pInstance != nullptr && pInstance->isValid())
   {
     Fabric::EDK::KL::a2fPluginShader asShader = s_mgr.CastToShader( *pInstance );
@@ -104,8 +113,8 @@ void Evaluate( AtNode* node, AtShaderGlobals* globals )
 
 inline Fabric::EDK::KL::a2fPluginDriver GetKLDriver( const AtNode* node )
 {
-  Fabric::EDK::KL::a2fPluginBase* pInstance = reinterpret_cast<Fabric::EDK::KL::a2fPluginBase*>(AiNodeGetLocalData( node ));
-  return (pInstance == nullptr && pInstance->isValid()) ? s_mgr.CastToDriver( *pInstance ) : Fabric::EDK::KL::a2fPluginDriver();
+  Fabric::EDK::KL::a2fPluginBase* pInstance = reinterpret_cast<Fabric::EDK::KL::a2fPluginBase*>(AiNodeGetPtr( node, s_klptr ));
+  return (pInstance != nullptr && pInstance->isValid()) ? s_mgr.CastToDriver( *pInstance ) : Fabric::EDK::KL::a2fPluginDriver();
 }
 
 static bool DriverSupportsPixelType( const AtNode* node, AtByte pixel_type )
@@ -184,14 +193,18 @@ static bool DriverNeedsBucket( AtNode* node, int bucket_xo, int bucket_yo, int b
   {
     Fabric::EDK::KL::AtNode klnode;
     CPAtNode_to_KLAtNode( node, klnode );
-    asDriver.DriverNeedsBucket( klnode, bucket_xo, bucket_yo, bucket_size_x, bucket_size_y, tid );
+    return asDriver.DriverNeedsBucket( klnode, bucket_xo, bucket_yo, bucket_size_x, bucket_size_y, tid );
   }
+  return false;
 }
 static void DriverPrepareBucket( AtNode* node, int bucket_xo, int bucket_yo, int bucket_size_x, int bucket_size_y, int tid )
 {
   Fabric::EDK::KL::a2fPluginDriver asDriver = GetKLDriver( node );
   if (asDriver.isValid())
   {
+    Fabric::EDK::KL::AtNode klnode;
+    CPAtNode_to_KLAtNode( node, klnode );
+    asDriver.DriverPrepareBucket( klnode, bucket_xo, bucket_yo, bucket_size_x, bucket_size_y, tid );
   }
 }
 static void DriverProcessBucket( AtNode* node, AtOutputIterator* iterator, AtAOVSampleIterator* sample_iterator, int bucket_xo, int bucket_yo, int bucket_size_x, int bucket_size_y, int tid )
@@ -242,13 +255,45 @@ void RegisterPlugin( int type, AtByte output_type, const char* name, const char*
   if (!s_mgr.isValid())
     throw; // Irrevocably gone wrong.
 
-  static AtShaderNodeMethods ai_shader_mtds = {
-      Evaluate
-  };
+  void* plugin_methods;
+  switch (type)
+  {
+    case AI_NODE_SHADER:
+    {
+      static AtShaderNodeMethods ai_shader_mtds = {
+        Evaluate
+      };
+      plugin_methods = &ai_shader_mtds;
+      break;
+    }
+    case AI_NODE_DRIVER:
+    {
+      static AtDriverNodeMethods ai_driver_mtds = {
+        DriverSupportsPixelType,
+        DriverExtension,
+        DriverOpen,
+        DriverNeedsBucket,
+        DriverPrepareBucket,
+        DriverProcessBucket,
+        DriverWriteBucket,
+        DriverClose
+      };
+      plugin_methods = &ai_driver_mtds;
+      break;
+    }
+    default:
+    {
+      assert( 0 && "Unknown Type passed to RegisterPlugin" );
+      return; // WE cannot register an unknown type
+    }
+  }
+
+  // Register plugin as combo of base and extended methods.
   static AtNodeMethods methods{
       &ai_common_mtds,
-      &ai_shader_mtds
+      plugin_methods
   };
+
   s_currentlyRegisteringItem = name;
   AiNodeEntryInstall( type, output_type, name, filename, &methods, AI_VERSION );
   s_currentlyRegisteringItem = nullptr;

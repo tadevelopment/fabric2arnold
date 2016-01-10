@@ -42,7 +42,7 @@ public:
       ObjectCore const * const *objectCorePtr
       );
     void (*DriverOpen_8534A500502E740BE352B84EA1EA7FF5)(
-      ObjectCore const * const *objectCorePtr,
+      ObjectCore * const *objectCorePtr,
       Traits< AtNode >::IOParam node,
       Traits< AtOutputIterator >::IOParam iterator,
       Traits< Box2 >::INParam display_window,
@@ -59,7 +59,7 @@ public:
       Traits< SInt32 >::INParam tid
       );
     void (*DriverPrepareBucket_AC1A6F5269D9B2841432ABBED0800069)(
-      ObjectCore const * const *objectCorePtr,
+      ObjectCore * const *objectCorePtr,
       Traits< AtNode >::IOParam node,
       Traits< SInt32 >::INParam bucket_xo,
       Traits< SInt32 >::INParam bucket_yo,
@@ -68,7 +68,7 @@ public:
       Traits< SInt32 >::INParam tid
       );
     void (*DriverProcessBucket_46C32C972B452C0BD88426D4DC154CED)(
-      ObjectCore const * const *objectCorePtr,
+      ObjectCore * const *objectCorePtr,
       Traits< AtNode >::IOParam node,
       Traits< AtOutputIterator >::IOParam iterator,
       Traits< AtAOVSampleIterator >::IOParam sample_iterator,
@@ -79,7 +79,7 @@ public:
       Traits< SInt32 >::INParam tid
       );
     void (*DriverWriteBucket_C677E5B6B1E033561E1AC96999B49017)(
-      ObjectCore const * const *objectCorePtr,
+      ObjectCore * const *objectCorePtr,
       Traits< AtNode >::IOParam node,
       Traits< AtOutputIterator >::IOParam iterator,
       Traits< AtAOVSampleIterator >::IOParam sample_iterator,
@@ -89,7 +89,7 @@ public:
       Traits< SInt32 >::INParam bucket_size_y
       );
     void (*DriverClose_169C657A109CC95C71C5D9047222A633)(
-      ObjectCore const * const *objectCorePtr,
+      ObjectCore * const *objectCorePtr,
       Traits< AtNode >::IOParam node,
       Traits< AtOutputIterator >::IOParam iterator
       );
@@ -227,7 +227,7 @@ public:
     Traits< Box2 >::INParam display_window,
     Traits< Box2 >::INParam data_window,
     Traits< SInt32 >::INParam bucket_size
-    ) const
+    )
   {
     m_bits->vTableSwapPtrPtr->get()->DriverOpen_8534A500502E740BE352B84EA1EA7FF5(
       &m_bits->objectCorePtr,
@@ -268,7 +268,7 @@ public:
     Traits< SInt32 >::INParam bucket_size_x,
     Traits< SInt32 >::INParam bucket_size_y,
     Traits< SInt32 >::INParam tid
-    ) const
+    )
   {
     m_bits->vTableSwapPtrPtr->get()->DriverPrepareBucket_AC1A6F5269D9B2841432ABBED0800069(
       &m_bits->objectCorePtr,
@@ -290,7 +290,7 @@ public:
     Traits< SInt32 >::INParam bucket_size_x,
     Traits< SInt32 >::INParam bucket_size_y,
     Traits< SInt32 >::INParam tid
-    ) const
+    )
   {
     m_bits->vTableSwapPtrPtr->get()->DriverProcessBucket_46C32C972B452C0BD88426D4DC154CED(
       &m_bits->objectCorePtr,
@@ -313,7 +313,7 @@ public:
     Traits< SInt32 >::INParam bucket_yo,
     Traits< SInt32 >::INParam bucket_size_x,
     Traits< SInt32 >::INParam bucket_size_y
-    ) const
+    )
   {
     m_bits->vTableSwapPtrPtr->get()->DriverWriteBucket_C677E5B6B1E033561E1AC96999B49017(
       &m_bits->objectCorePtr,
@@ -330,7 +330,7 @@ public:
   void DriverClose(
     Traits< AtNode >::IOParam node,
     Traits< AtOutputIterator >::IOParam iterator
-    ) const
+    )
   {
     m_bits->vTableSwapPtrPtr->get()->DriverClose_169C657A109CC95C71C5D9047222A633(
       &m_bits->objectCorePtr,
